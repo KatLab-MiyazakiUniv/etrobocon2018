@@ -7,7 +7,7 @@
 #include "RightNormalCourse.h"
 
 RightNormalCourse::RightNormalCourse(){
-    lineTracerWalker.isLeftsideLine(false);
+    lineTracerWalker.isLeftsideLine(true);
     status = old_status = RightStatus::STRAIGHT;
 }
 
@@ -19,7 +19,7 @@ bool RightNormalCourse::runNormalCourse(){
             break;
         
         case RightStatus::SLOW:
-            lineTracerWalker.speedControl.setPid ( 2.0, 2.0, 0.024, 30.0 );
+            lineTracerWalker.speedControl.setPid ( 2.0, 2.0, 0.024, 2.0 );
             lineTracerWalker.turnControl.setPid ( 2.0, 0.5, 0.048, CENTER_BRIGHTNESS );
             break;
 
@@ -51,13 +51,13 @@ bool RightNormalCourse::runNormalCourse(){
 bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR){
     distanse_total = distance.getDistanceTotal(countL, countR);
     old_status = status;
-    if(distanse_total < 3240)status = RightStatus::STRAIGHT;
-    else if(distanse_total < 7500)status = RightStatus::CURVE_RIGHT;
-    else if(distanse_total < 9200)status = RightStatus::CURVE_LEFT_SHORT;
-    else if(distanse_total < 10800)status = RightStatus::CURVE_LEFT;
-    else if(distanse_total < 12800)status = RightStatus::CURVE_RIGHT;
-    else if(distanse_total < 15400)status = RightStatus::STRAIGHT;
-    else if(distanse_total < 17200)status = RightStatus::CURVE_LEFT_SHORT_SLOW;
+    if(distanse_total < 3240)status = RightStatus::SLOW;
+    else if(distanse_total < 7500)status = RightStatus::SLOW;
+    else if(distanse_total < 9200)status = RightStatus::SLOW;
+    else if(distanse_total < 10800)status = RightStatus::SLOW;
+    else if(distanse_total < 12800)status = RightStatus::SLOW;
+    else if(distanse_total < 15400)status = RightStatus::SLOW;
+    else if(distanse_total < 17200)status = RightStatus::SLOW;
     //else if(distanse_total < 17000)status = RightStatus::SLOW;
     
     else status = RightStatus::STOP;
