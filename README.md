@@ -16,7 +16,7 @@
 
 `etrobocon2018/`ディレクトリ内で、以下を実行してください。
 
-```bash:etrobocon2018
+```bash
 cd str
 docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/src korosuke613/etrobo-docker bash
 613/etrobo-docker bash
@@ -24,7 +24,7 @@ docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/src korosuke613/etrobo-dock
 
 すると、`root@dacad950866e:/home/hrp2/sdk/workspace#`見たいなシェルに入ります。
 
-```bash:workspace
+```bash
 cd src
 ./makeSpecial.sh
 ```
