@@ -1,6 +1,7 @@
 # etrobocon2018
 
 # Make方法
+`etrobocon2018/`ディレクトリ内で、以下を実行してください。
 
 ```bash:etrobocon2018
 cd str
