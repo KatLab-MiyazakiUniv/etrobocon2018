@@ -16,8 +16,8 @@ LeftNormalCourse::LeftNormalCourse():
 bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int8_t light_value){
     switch(status){
         case LeftStatus::STRAIGHT: 
-            lineTracerWalker.speedControl.setPid ( 2.0, 4.8, 0.024, 150.0 );
-            lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.048, CENTER_BRIGHTNESS );
+            lineTracerWalker.speedControl.setPid ( 2.0, 1.0, 0.8, 150.0 );
+            lineTracerWalker.turnControl.setPid ( 4.0, 1.0, 0.48, CENTER_BRIGHTNESS );
             lineTracerWalker.runLine(countL, countR, light_value);
             break;
 
