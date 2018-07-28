@@ -38,8 +38,8 @@ void EtRobocon2018::start(int bluetooth_command) {
   ui.inputFirstCode();
   firstCode = ui.getFirstCode();
 #endif
-  ui.setBrightness(colorSensor, light_white, "white");
-  ui.setBrightness(colorSensor, light_black, "black");
+  ui.setBrightnessWithColor(colorSensor, light_white, "white");
+  ui.setBrightnessWithColor(colorSensor, light_black, "black");
   target_brightness = (light_black + light_white) / 2;
   char msg[32];
   sprintf(msg, "Brightness W:%d, B:%d, T:%d", light_white, light_black, target_brightness);
