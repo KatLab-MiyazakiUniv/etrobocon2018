@@ -13,7 +13,7 @@ LeftNormalCourse::LeftNormalCourse():
     status = old_status = LeftStatus::STRAIGHT;
 }
 
-bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int8_t light_value, int8_t target_brightness){
+bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int16_t light_value, int16_t target_brightness){
     switch(status){
         case LeftStatus::STRAIGHT: 
             lineTracerWalker.speedControl.setPid ( 17.0, 1.0, 0.1, 180.0 );

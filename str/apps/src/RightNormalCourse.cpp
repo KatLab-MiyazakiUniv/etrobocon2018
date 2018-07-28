@@ -11,7 +11,7 @@ RightNormalCourse::RightNormalCourse(){
     status = old_status = RightStatus::STRAIGHT;
 }
 
-bool RightNormalCourse::runNormalCourse(int8_t target_brightness){
+bool RightNormalCourse::runNormalCourse(int16_t target_brightness){
     switch(status){
         case RightStatus::STRAIGHT:
             lineTracerWalker.speedControl.setPid ( 17.0, 1.0, 0.1, 180.0 );

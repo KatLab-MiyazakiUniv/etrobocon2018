@@ -20,7 +20,7 @@ void LeftCourse::setFirstCode( int32_t code ) {
 /**
  * Lコースの走行範囲の切り替えを行う
  */
-void LeftCourse::run(int8_t brightness){
+void LeftCourse::run(int16_t brightness){
 	runNormalCourse(brightness);
   
     msg_f("Finished NormalArea", 3);
@@ -35,18 +35,21 @@ void LeftCourse::run(int8_t brightness){
     
 }
 
-void LeftCourse::runNormalCourse(int8_t brightness){
+void LeftCourse::runNormalCourse(int16_t brightness){
     char msg[32];
 
     LeftNormalCourse normalCourse;
     bool isNormalCourse;
     // NormalCourseを抜けるまでループする
     while ( 1 ) {
-        sprintf ( msg, "LightValue: %d, Target: %d", colorSensor.getBrightness(), brightness);
-        msg_f ( msg, 4 ) ;
         sl.update(walker.get_count_L(), walker.get_count_R());
+        rgb_raw_t rgb;
+        colorSensor.getRawColor(rgb);
+        int16_t luminance = 0.298912 * rgb.r + 0.586611 * rgb.g + 0.114478 * rgb.b;
+        sprintf ( msg, "LightValue: %d, Target: %d", luminance, brightness);
+        msg_f ( msg, 4 ) ;
         if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R())) ev3_speaker_play_tone (NOTE_FS6, 100);
-        isNormalCourse = normalCourse.runNormalCourse(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness(), brightness);
+        isNormalCourse = normalCourse.runNormalCourse(walker.get_count_L(), walker.get_count_R(), luminance, brightness);
 
         if(normalCourse.lineTracerWalker.getForward() < 0){
             walker.run(0, 0);

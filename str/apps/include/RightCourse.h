@@ -43,9 +43,9 @@ public:
 	/** コンストラクタ。センサ類の初期化を行う **/
 	RightCourse();
 	/** 各エリアの処理を呼び出す **/
-	void run(int8_t brightness);
+	void run(int16_t brightness);
 	/** NormalCourseエリアの処理 **/
-    void runNormalCourse(int8_t brightness);
+    void runNormalCourse(int16_t brightness);
 	/** Shinkansenエリアの処理 */
 	void runShinkansen();
 private:

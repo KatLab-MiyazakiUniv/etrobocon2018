@@ -33,9 +33,9 @@ public:
     void setFirstCode( int32_t );
 
 	/** 各エリアの処理を呼び出す */
-	void run(int8_t brightness);
+	void run(int16_t brightness);
 	/** NormalCourseエリアの処理 */
-    void runNormalCourse(int8_t brightness);
+    void runNormalCourse(int16_t brightness);
     /**
      * ブロック並べを行う。
      * PuzzleFieldクラスに依存する。
