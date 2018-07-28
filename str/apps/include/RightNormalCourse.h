@@ -21,7 +21,8 @@ enum struct RightStatus {
     STOP,
     SLOW,
     CURVE_LEFT_SHORT_SLOW,
-    ACCELERATE
+    ACCELERATE,
+    MIDDLE_SPEED
 };
 
 /**
