@@ -26,7 +26,7 @@ bool RightNormalCourse::runNormalCourse(){
             break;
 
         case RightStatus::SLOW:
-            lineTracerWalker.speedControl.setPid ( 2.0, 1.0, 0.1, 40.0 );
+            lineTracerWalker.speedControl.setPid ( 12.0, 1.0, 0.1, 40.0 );
             lineTracerWalker.turnControl.setPid ( 4.0, 2.0, 1.0, CENTER_BRIGHTNESS - 5);
             break;
         
@@ -73,9 +73,9 @@ bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR){
     if(distanse_total < 2500)status = RightStatus::STRAIGHT;
     else if(distanse_total < 8550)status = RightStatus::MIDDLE_SPEED;
     else if (distanse_total < 11750)status = RightStatus::ACCELERATE;
-    else if(distanse_total < 18000)status = RightStatus::STRAIGHT;
-    else if(distanse_total < 18300)status = RightStatus::SLOW;
-    else if(distanse_total < 19300)status = RightStatus::SLOW;
+    else if(distanse_total < 13000)status = RightStatus::SLOW;
+    //else if(distanse_total < 18700)status = RightStatus::SLOW;
+    //else if(distanse_total < 19300)status = RightStatus::SLOW;
     //else if(distanse_total < 15400)status = RightStatus::SLOW;
     //else if(distanse_total < 17200)status = RightStatus::SLOW;
     //else if(distanse_total < 17000)status = RightStatus::SLOW;
