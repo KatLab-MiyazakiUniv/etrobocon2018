@@ -14,6 +14,7 @@ void UserInterface::setBrightness(ColorSensor& colorSensor, int8_t& brightness,
     auto tmp_brightness = colorSensor.getBrightness();
     // ENTERボタンが押されたらループを抜ける
     if (ev3_button_is_pressed(ENTER_BUTTON)) {
+      ev3_speaker_play_tone(1000, 100);
       brightness = tmp_brightness;
       break;
     }

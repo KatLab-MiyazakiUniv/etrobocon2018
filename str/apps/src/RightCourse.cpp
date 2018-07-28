@@ -14,8 +14,8 @@ RightCourse::RightCourse():
 /**
  *Rコースの走行範囲の切り替えを行う
  */
-void RightCourse::run(){
-	runNormalCourse();
+void RightCourse::run(int8_t brightness){
+	runNormalCourse(brightness);
     runShinkansen();
 	//Park
 }
@@ -23,14 +23,14 @@ void RightCourse::run(){
 void RightCourse::runShinkansen(){
 }
 
-void RightCourse::runNormalCourse(){
+void RightCourse::runNormalCourse(int8_t brightness){
 	RightNormalCourse normalCourse;
     bool isNormalCourse;
     // NormalCourseを抜けるまでループする
 	while ( 1 ) {
         sl.update(walker.get_count_L(), walker.get_count_R());
         if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R())) ev3_speaker_play_tone (NOTE_FS6, 100);
-        isNormalCourse = normalCourse.runNormalCourse();
+        isNormalCourse = normalCourse.runNormalCourse(brightness);
         normalCourse.lineTracerWalker.runLine(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
         
         if(normalCourse.lineTracerWalker.getForward() < 0){
