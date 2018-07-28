@@ -11,6 +11,11 @@ RightNormalCourse::RightNormalCourse(){
     status = old_status = RightStatus::STRAIGHT;
 }
 
+/*
+*ここの値を変更して色々調整する（微分が一番重要、積分も入れないとズレていく！？）
+* マイナス値は入れないほうがいい
+*lineTracerWalker.speedControl.setPid ( 2.0, 4.8, 0.024, 速度mm/s );
+*/
 bool RightNormalCourse::runNormalCourse(){
     switch(status){
         case RightStatus::STRAIGHT:
@@ -60,6 +65,8 @@ bool RightNormalCourse::runNormalCourse(){
     return true;
 }
 
+/*用変更*/
+/*ここは調整が必要*/
 bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR){
     distanse_total = distance.getDistanceTotal(countL, countR);
     old_status = status;
