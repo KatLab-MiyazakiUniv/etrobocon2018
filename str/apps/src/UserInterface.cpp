@@ -11,17 +11,23 @@ void UserInterface::setBrightness(ColorSensor& colorSensor, int8_t& brightness,
   char msg[32];
   tslp_tsk(500);
   while (1) {
-    auto tmp_brightness = colorSensor.getBrightness();
     // ENTERボタンが押されたらループを抜ける
     if (ev3_button_is_pressed(ENTER_BUTTON)) {
       ev3_speaker_play_tone(1000, 100);
-      brightness = tmp_brightness;
       break;
     }
     sprintf(msg, "%s LightValue: %d", str, colorSensor.getBrightness());
     msg_f(msg, 7);
     tslp_tsk(4);
   }
+  int16_t mean_brightness = 0;
+  int8_t times = 10;
+  for (int8_t i = 0; i < times; i++) {
+    mean_brightness += colorSensor.getBrightness();
+    tslp_tsk(4);
+  }
+  ev3_speaker_play_tone(2000, 100);
+  brightness = mean_brightness / times;
 }
 
 void UserInterface::inputFirstCode() {
