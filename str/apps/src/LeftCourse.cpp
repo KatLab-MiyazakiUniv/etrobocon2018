@@ -20,8 +20,8 @@ void LeftCourse::setFirstCode( int32_t code ) {
 /**
  * Lコースの走行範囲の切り替えを行う
  */
-void LeftCourse::run(){
-	runNormalCourse();
+void LeftCourse::run(int8_t brightness){
+	runNormalCourse(brightness);
   
     msg_f("Finished NormalArea", 3);
   
@@ -35,7 +35,7 @@ void LeftCourse::run(){
     
 }
 
-void LeftCourse::runNormalCourse(){
+void LeftCourse::runNormalCourse(int8_t brightness){
     char msg[32];
 
     LeftNormalCourse normalCourse;
@@ -46,7 +46,7 @@ void LeftCourse::runNormalCourse(){
         msg_f ( msg, 4 ) ;
         sl.update(walker.get_count_L(), walker.get_count_R());
         if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R())) ev3_speaker_play_tone (NOTE_FS6, 100);
-        isNormalCourse = normalCourse.runNormalCourse(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
+        isNormalCourse = normalCourse.runNormalCourse(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness(), brightness);
 
         if(normalCourse.lineTracerWalker.getForward() < 0){
             walker.run(0, 0);

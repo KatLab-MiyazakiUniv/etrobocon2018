@@ -13,23 +13,23 @@ LeftNormalCourse::LeftNormalCourse():
     status = old_status = LeftStatus::STRAIGHT;
 }
 
-bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int8_t light_value){
+bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int8_t light_value, int8_t target_brightness){
     switch(status){
         case LeftStatus::STRAIGHT: 
             lineTracerWalker.speedControl.setPid ( 2.0, 4.8, 0.024, 180.0 );
-            lineTracerWalker.turnControl.setPid ( 3.0, 1.0, 0.5, CENTER_BRIGHTNESS );
+            lineTracerWalker.turnControl.setPid ( 3.0, 1.0, 0.5, target_brightness );
             lineTracerWalker.runLine(countL, countR, light_value);
             break;
 
         case LeftStatus::STRAIGHT_SLOW: 
             lineTracerWalker.speedControl.setPid ( 2.0, 2.0, 0.024, 0.0 );
-            lineTracerWalker.turnControl.setPid ( 3.0, 1.0, 0.5, CENTER_BRIGHTNESS );
+            lineTracerWalker.turnControl.setPid ( 3.0, 1.0, 0.5, target_brightness );
             lineTracerWalker.runLine(countL, countR, light_value);            
             break;
 
         case LeftStatus::NEUTRAL:
             lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.08, 70.0 );
-            lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.048, CENTER_BRIGHTNESS - 5.0 );
+            lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.048, target_brightness - 5.0 );
             lineTracerWalker.runLine(countL, countR, light_value);            
             break;
 
@@ -43,26 +43,26 @@ bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int8_t li
 
         case LeftStatus::EDGE_RESET:
             lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.08, 10.0 );
-            lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.048, CENTER_BRIGHTNESS - 5.0 );
+            lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.048, target_brightness - 5.0 );
             lineTracerWalker.runLine(countL, countR, light_value);            
             break;
 
         case LeftStatus::CURVE_RIGHT: 
             lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.08, 80.0 );
-            lineTracerWalker.turnControl.setPid ( 4.0, 2.0, 0.1, CENTER_BRIGHTNESS + 5.0 );
+            lineTracerWalker.turnControl.setPid ( 4.0, 2.0, 0.1, target_brightness + 5.0 );
             //lineTracerWalker.turnControl.setPid ( 4.0, 2.0, 0.096, 40.0 );
             lineTracerWalker.runLine(countL, countR, light_value);            
             break;
 
         case LeftStatus::CURVE_LEFT_SHORT: 
             lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.1, 100.0 );
-            lineTracerWalker.turnControl.setPid ( 2.0, 0.5, 0.048, CENTER_BRIGHTNESS - 5.0 );
+            lineTracerWalker.turnControl.setPid ( 2.0, 0.5, 0.048, target_brightness - 5.0 );
             lineTracerWalker.runLine(countL, countR, light_value);            
             break;
 
         case LeftStatus::CURVE_LEFT: 
             lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.1, 100.0 );
-            lineTracerWalker.turnControl.setPid ( 4.0, 2.0, 0.096, CENTER_BRIGHTNESS - 5.0 ); 
+            lineTracerWalker.turnControl.setPid ( 4.0, 2.0, 0.096, target_brightness - 5.0 ); 
             lineTracerWalker.runLine(countL, countR, light_value);            
             break;
 

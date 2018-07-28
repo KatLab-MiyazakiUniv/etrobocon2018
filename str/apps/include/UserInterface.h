@@ -15,10 +15,13 @@
 #ifndef __USER_INTERFACE__
 #define __USER_INTERFACE__
 
-#include "FirstCode.h"
 #include "ev3api.h"
+#include "ColorSensor.h"
+#include "FirstCode.h"
 #include "util.h"
+#include <string>
 
+using namespace ev3api;
 
 /*! @class UserInterface UserInterface.h "UserInterface.h"
  * @brief 走行体が走り出す前にユーザが入力するインターフェースを提供するクラス
@@ -31,6 +34,7 @@ public:
      * UPボタンとDOWNボタンで数字の大小を選択し、RightボタンとLeftボタンで変更する数字の桁数を選択する。
      */
     void inputFirstCode();
+    void setBrightness(ColorSensor& colorSensor, int8_t& brightness, const char* str);
 
     /**
      * 初期位置コードを返す。

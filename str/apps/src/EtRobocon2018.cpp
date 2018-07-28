@@ -25,7 +25,8 @@
  */
 
 EtRobocon2018::EtRobocon2018():
-    touchSensor( PORT_1 )
+    touchSensor( PORT_1 ),
+    colorSensor( PORT_3 )
 {
     light_white = 20;
     light_black = 0;
@@ -40,6 +41,9 @@ void EtRobocon2018::start( int bluetooth_command )
     ui.inputFirstCode();
     firstCode = ui.getFirstCode();
 #endif
+    ui.setBrightness(colorSensor, light_black, "black");
+    ui.setBrightness(colorSensor, light_white, "white");
+
     ev3_led_set_color(LED_ORANGE);
     waitStarter( bluetooth_command );
 
@@ -51,12 +55,12 @@ void EtRobocon2018::start( int bluetooth_command )
 void EtRobocon2018::loop()
 {
 // Rコースを走らせるときは1, Lコースを走らせるときは0
-
+auto brightness = (light_black + light_white) / 2.0;
 #ifdef IS_RIGHT_COURSE
-    rightCourse.run();
+rightCourse.run();
 #else
     leftCourse.setFirstCode( firstCode );
-    leftCourse.run();
+    leftCourse.run(brightness);
 #endif
 
 }

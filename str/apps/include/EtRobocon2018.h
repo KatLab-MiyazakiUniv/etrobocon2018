@@ -13,6 +13,7 @@
 #include "settings.h"
 #include "ev3api.h"
 #include "TouchSensor.h"
+#include "ColorSensor.h"
 #include "SonarAlert.h"
 #include "Emoter.h"
 #include "UserInterface.h"
@@ -41,11 +42,12 @@ private:
     int8_t light_white;
     int8_t light_black;
     int32_t firstCode;
+    ColorSensor colorSensor;
+    UserInterface ui;
 
 #ifdef IS_RIGHT_COURSE
     RightCourse rightCourse;
 #else
-    UserInterface ui;
     LeftCourse leftCourse;  
 #endif  
 
