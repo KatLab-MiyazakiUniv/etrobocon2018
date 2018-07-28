@@ -1,2 +1,4 @@
 {
+    "cmake.configureOnOpen": false,
+    "files.eol": "\n"
 }

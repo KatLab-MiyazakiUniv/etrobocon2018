@@ -35,7 +35,7 @@ public:
     * 走行場所でのPID値を設定する 
     * @return Goalしたかどうか
     */
-   	bool runNormalCourse () ;
+   	bool runNormalCourse (int16_t target_brightness) ;
     
     /**
     * 現在の走行場所の状態を設定する
