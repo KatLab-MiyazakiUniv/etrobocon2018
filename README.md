@@ -19,7 +19,6 @@
 ```bash
 cd str
 docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/src korosuke613/etrobo-docker bash
-613/etrobo-docker bash
 ```
 
 すると、`root@dacad950866e:/home/hrp2/sdk/workspace#`見たいなシェルに入ります。
