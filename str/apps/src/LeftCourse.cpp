@@ -42,7 +42,7 @@ void LeftCourse::runNormalCourse(int8_t brightness){
     bool isNormalCourse;
     // NormalCourseを抜けるまでループする
     while ( 1 ) {
-        sprintf ( msg, "LightValue: %d", colorSensor.getBrightness());
+        sprintf ( msg, "LightValue: %d, Target: %d", colorSensor.getBrightness(), brightness);
         msg_f ( msg, 4 ) ;
         sl.update(walker.get_count_L(), walker.get_count_R());
         if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R())) ev3_speaker_play_tone (NOTE_FS6, 100);
