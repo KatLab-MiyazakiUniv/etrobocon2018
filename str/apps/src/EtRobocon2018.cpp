@@ -27,8 +27,6 @@
 
 EtRobocon2018::EtRobocon2018() : touchSensor(PORT_1), colorSensor(PORT_3)
 {
-  light_white = 20;
-  light_black = 0;
   /** TODO Courseクラスに移す */
   ev3_speaker_set_volume(100);
 }
