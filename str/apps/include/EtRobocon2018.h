@@ -26,6 +26,7 @@ using namespace ev3api;
  * main的なクラス
  */
 class EtRobocon2018 {
+  //
  public:
   /** コンストラクタ。各センサー等の初期化を行う */
   EtRobocon2018();

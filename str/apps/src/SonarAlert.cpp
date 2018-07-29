@@ -1,24 +1,24 @@
 #include "SonarAlert.h"
 
-SonarAlert::SonarAlert( int secPerCycle )
+SonarAlert::SonarAlert(int secPerCycle)
 {
-    timeCounter = 0;
-    sonarSensor = new SonarSensor( PORT_2 );
-    this->secPerCycle = secPerCycle;
+  timeCounter = 0;
+  sonarSensor = new SonarSensor(PORT_2);
+  this->secPerCycle = secPerCycle;
 }
 
 // Testコード用
-SonarAlert::SonarAlert( int distanceBorder, int secPerCycle, SonarSensor& sensor):
-    SONAR_ALERT_DISTANCE( distanceBorder )
+SonarAlert::SonarAlert(int distanceBorder, int secPerCycle, SonarSensor& sensor)
+  : SONAR_ALERT_DISTANCE(distanceBorder)
 {
-    timeCounter = 0;
-    sonarSensor = &sensor;
-    this->secPerCycle = secPerCycle;
+  timeCounter = 0;
+  sonarSensor = &sensor;
+  this->secPerCycle = secPerCycle;
 }
 
 SonarAlert::~SonarAlert()
 {
-    // delete sonarSensor;
+  // delete sonarSensor;
 }
 
 /**
@@ -29,22 +29,17 @@ SonarAlert::~SonarAlert()
  */
 int SonarAlert::detectBarrier()
 {
-    timeCounter++;
-    int alert = 0;
+  timeCounter++;
+  int alert = 0;
 
-    if( timeCounter == 40/secPerCycle )
-    {
-        if( sonarSensor->getDistance() <= SONAR_ALERT_DISTANCE
-                && 0 <= sonarSensor->getDistance() )
-        {
-            alert = 1;
-        }
-        else
-        {
-            alert = 0;
-        }
-        timeCounter = 0;
+  if(timeCounter == 40 / secPerCycle) {
+    if(sonarSensor->getDistance() <= SONAR_ALERT_DISTANCE && 0 <= sonarSensor->getDistance()) {
+      alert = 1;
+    } else {
+      alert = 0;
     }
+    timeCounter = 0;
+  }
 
-    return alert;
+  return alert;
 }
