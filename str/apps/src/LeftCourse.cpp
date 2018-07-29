@@ -50,7 +50,7 @@ void LeftCourse::runNormalCourse(int16_t brightness)
     rgb_raw_t rgb;
     colorSensor.getRawColor(rgb);
     int16_t luminance = 0.298912 * rgb.r + 0.586611 * rgb.g + 0.114478 * rgb.b;
-    sprintf(msg, "LightValue: %d, Target: %d", luminance, brightness);
+    sprintf(msg, "Brightness: %d, Target: %d", luminance, brightness);
     msg_f(msg, 4);
     if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R()))
       ev3_speaker_play_tone(NOTE_FS6, 100);
