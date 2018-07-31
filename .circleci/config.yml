@@ -12,7 +12,7 @@ jobs:
           name: move str directory and cd src
           command: |
             mv str /home/hrp2/sdk/workspace/
-            mv -T /home/hrp2/sdk/workspace/str/ /home/hrp2/sdk/workspace/src/ 
+            mv -T /home/hrp2/sdk/workspace/str/ /home/hrp2/sdk/workspace/src/
 
       - run:
           name: makeRight
@@ -22,5 +22,5 @@ jobs:
       - run:
           name: makeLeft
           command: |
-            cd /home/hrp2/sdk/workspace/src/ 
+            cd /home/hrp2/sdk/workspace/src/
             ./makeLeft.sh
