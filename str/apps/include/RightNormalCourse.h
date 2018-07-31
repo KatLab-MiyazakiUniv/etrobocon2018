@@ -8,7 +8,6 @@
 #define __RIGHTNORMALCOURSE__
 
 #include "NormalCourse.h"
-#include "settings.h"
 
 /**
  * 走行場所の状態を保持する列挙型

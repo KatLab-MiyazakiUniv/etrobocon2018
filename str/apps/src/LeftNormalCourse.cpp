@@ -39,7 +39,7 @@ bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int16_t l
       lineTracerWalker.setTurn(-2);
       lineTracerWalker.isLeftsideLine(false);
       time_count++;
-      if(light_value > CENTER_BRIGHTNESS && time_count > 125) isChangedEdge = true;
+      if(light_value > target_brightness && time_count > 125) isChangedEdge = true;
       break;
 
     case LeftStatus::NEUTRAL:
