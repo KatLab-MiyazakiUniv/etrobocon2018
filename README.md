@@ -1,5 +1,9 @@
 # etrobocon2018
 
+ようこそ
+
+このページは[片山研究所モデルベース開発推進事業部](http://earth.cs.miyazaki-u.ac.jp "http://earth.cs.miyazaki-u.ac.jp")が開発している、ETロボコン2018デベロッパー部門アドバンスドコースのソースコードのリポジトリです。
+
 ## Make方法
 
 `etrobocon2018/`ディレクトリ内で、以下を実行してください。
