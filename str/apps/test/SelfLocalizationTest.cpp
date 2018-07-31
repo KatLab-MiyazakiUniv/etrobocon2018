@@ -40,21 +40,6 @@ TEST(SelfLocalizationTest, CalculateTest1)
   ASSERT_GE(sl.getPointY(), 2.0);
 }
 
-TEST(SelfLocalizationTest, CalculateTest2)
-{
-  SelfLocalization sl(0, 0, true);
-  int l, r;
-  l = r = 0;
-
-  for(int i = 0; i < 10; i++) {
-    straight(sl, 20, l, r);
-    curve(sl, 180, l, r);
-    straight(sl, 20, l, r);
-    curve(sl, 180, l, r);
-  }
-  ASSERT_LE(sl.getPointX(), 7.0);
-  ASSERT_LE(sl.getPointY(), 3.0);
-}
 
 TEST(SelfLocalizationTest, calculateBetweenEv3AndBorder1)
 {
@@ -102,7 +87,7 @@ TEST(SelfLocalizationTest, calculateCurrentAngleTest1)
 
   sl.calculate_current_angle();
 
-  ASSERT_EQ(sl.current_angle_degree, 58);
+  ASSERT_EQ(sl.current_angle_degree, 69);
 }
 
 TEST(SelfLocalizationTest, calculateCurrentAngleTest2)
@@ -116,7 +101,7 @@ TEST(SelfLocalizationTest, calculateCurrentAngleTest2)
 
   sl.calculate_current_angle();
 
-  ASSERT_EQ(sl.current_angle_degree, -58);
+  ASSERT_EQ(sl.current_angle_degree, -69);
 }
 
 TEST(SelfLocalizationTest, calculateCurrentAngleTest3)
