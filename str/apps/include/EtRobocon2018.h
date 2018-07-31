@@ -18,7 +18,6 @@
 #include "TouchSensor.h"
 #include "UserInterface.h"
 #include "ev3api.h"
-#include "settings.h"
 
 using namespace ev3api;
 
