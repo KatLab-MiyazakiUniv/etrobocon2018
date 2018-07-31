@@ -1,4 +1,6 @@
-sudo: required
+dist: trusty
+sudo: false
+language: cpp
 
 service:
   - docker
