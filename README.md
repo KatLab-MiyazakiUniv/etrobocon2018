@@ -15,7 +15,7 @@ makeには、[ETrobo-Docker](https://github.com/korosuke613/ETrobo-Docker)を利
 `etrobocon2018/str`ディレクトリ内で、以下を実行してください。
 
 ```bash
-docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/src korosuke613/etrobo-docker makeSpecial
+docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/product korosuke613/etrobo-docker makeSpecial
 ```
 
 makeが成功すると、`etrobocon2018/str`ディレクトリ内に、２つの実行ファイル`app_left`, `app_right`が生成されます。
@@ -33,12 +33,12 @@ app_right      ev3-api        makeRight.sh
 Rコースのみビルドしたい場合は以下を実行してください。
 
 ```bash
-docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/src korosuke613/etrobo-docker makeRight
+docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/product korosuke613/etrobo-docker makeRight
 ```
 
 ### Lコースのみビルドしたい場合
 Lコースのみビルドしたい場合は以下を実行してください。
 
 ```bash
-docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/src korosuke613/etrobo-docker makeLeft
+docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/product korosuke613/etrobo-docker makeLeft
 ```
