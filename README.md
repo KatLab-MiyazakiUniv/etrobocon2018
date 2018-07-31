@@ -1,42 +1,41 @@
 # etrobocon2018
 
-## コミット方法
+ようこそ
 
-まず、このリポジトリをForkしましょう。
-
-そしたら、こういった画面になります。数秒待ちましょう。
-
-待つと、このような画面になります。
-
-これでForkはできました。
-現在、こういった状況です。
-
+このページは[片山研究所モデルベース開発推進事業部](http://earth.cs.miyazaki-u.ac.jp "http://earth.cs.miyazaki-u.ac.jp")が開発している、ETロボコン2018デベロッパー部門アドバンスドコースのソースコードのリポジトリです。
 
 ## Make方法
 
-`etrobocon2018/`ディレクトリ内で、以下を実行してください。
+makeには、[ETrobo-Docker](https://github.com/korosuke613/ETrobo-Docker)を利用しています。
+
+
+`etrobocon2018/str`ディレクトリ内で、以下を実行してください。
 
 ```bash
-cd str
-docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/src korosuke613/etrobo-docker bash
+docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/src korosuke613/etrobo-docker makeSpecial
 ```
 
-すると、`root@dacad950866e:/home/hrp2/sdk/workspace#`見たいなシェルに入ります。
+makeが成功すると、`etrobocon2018/str`ディレクトリ内に、２つの実行ファイル`app_left`, `app_right`が生成されます。
 
 ```bash
-cd src
-./makeSpecial.sh
+-> % ls
+Makefile.inc   app.cpp        app_left       apps
+makeLeft.sh    makeSpecial.sh app.cfg        app.h
+app_right      ev3-api        makeRight.sh
 ```
 
-`makeSpecial.sh`を`/home/hrp2/sdk/workspace/src`にて実行すると、同ディレクトリ内に、２つの実行ファイル`app_left`, `app_right`が生成されます。
+`app_left`が、Lコースの走行プログラムです。`app_right`が、Rコースの走行プログラムです。
+
+### Rコースのみビルドしたい場合
+Rコースのみビルドしたい場合は以下を実行してください。
 
 ```bash
-root@dacad950866e:/home/hrp2/sdk/workspace/src# ls
-Makefile.inc  app.h      apps         makeRight.sh
-app.cfg       app_left   ev3-api      makeSpecial.sh
-app.cpp       app_right  makeLeft.sh
+docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/src korosuke613/etrobo-docker makeRight
 ```
 
-`app_left`が、Lコースの走行プログラムです。
+### Lコースのみビルドしたい場合
+Lコースのみビルドしたい場合は以下を実行してください。
 
-`app_right`がRコースの走行プログラムです。
+```bash
+docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/src korosuke613/etrobo-docker makeLeft
+```
