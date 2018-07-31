@@ -1,0 +1,12 @@
+sudo: required
+
+service:
+  - docker
+
+script:
+ - cd str
+ - docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/src korosuke613/etrobo-docker makeRight
+ - docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/src korosuke613/etrobo-docker makeLeft
+
+notifications:
+  email: false
