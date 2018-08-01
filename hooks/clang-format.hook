@@ -1,11 +1,20 @@
-#!/ bin / bash
+#!/bin/bash
 
-STYLE = $(git config-- get hooks.clangformat.style) if[-n "${STYLE}"];
-then STYLEARG = "-style=${STYLE}" else STYLEARG = "" fi
+STYLE=$(git config --get hooks.clangformat.style)
+if [ -n "${STYLE}" ] ; then
+  STYLEARG="-style=${STYLE}"
+else
+  STYLEARG=""
+fi
 
-format_file()
-{
-  file = "${1}" clang - format - i ${ STYLEARG } ${ 1 } git add $ { 1 }
+format_file() {
+  file="${1}"
+  if [[ ${1} == *".cpp" ]]; then
+    clang-format -i ${STYLEARG} ${1}
+  elif [[ ${1} == *".h" ]]; then
+    clang-format -i ${STYLEARG} ${1}
+  fi
+  git add ${1}
 }
 
 case "${1}" in

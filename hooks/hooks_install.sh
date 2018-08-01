@@ -1,3 +1,4 @@
-#!/ bin / bash
+#!/bin/bash
 
-chmod 755 hooks_install.hook cp hooks_install.sh../.git / hooks / pre - commit
+chmod 755 clang-format.hook 
+cp clang-format.hook ../.git/hooks/pre-commit
