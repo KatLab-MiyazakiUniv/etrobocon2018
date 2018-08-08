@@ -20,25 +20,27 @@ RightNormalCourse::RightNormalCourse()
 bool RightNormalCourse::runNormalCourse(int16_t target_brightness){
     switch(status){
         case RightStatus::STRAIGHT:
-            lineTracerWalker.speedControl.setPid ( 6.0, 1.0, 1.0, 200.0 );
-            lineTracerWalker.turnControl.setPid ( 4.0, 2.0, 1.0, CENTER_BRIGHTNESS );
+            lineTracerWalker.speedControl.setPid(17.0, 1.0, 0.1, 200.0);
+            lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);       
+            break;
 
         case RightStatus::SLOW:
-            lineTracerWalker.speedControl.setPid ( 12.0, 1.0, 0.1, 40.0 );
-            lineTracerWalker.turnControl.setPid ( 4.0, 2.0, 1.0, CENTER_BRIGHTNESS - 5);
+            lineTracerWalker.speedControl.setPid ( 2.0, 1.0, 0.1, 100.0 );
+            lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.1, target_brightness );
             break;
         
         case RightStatus::CURVE_RIGHT:
-            lineTracerWalker.speedControl.setPid ( 2.0, 0.5, 1.2, 100.0 );
-            lineTracerWalker.turnControl.setPid ( 11.0, 0.5, 2.5, target_brightness );
+            lineTracerWalker.speedControl.setPid ( 2.0, 1.0, 0.1, 130.0 );
+            lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.08, target_brightness - 15.0);
             break;
 
+        /*
         case RightStatus::CURVE_LEFT_SHORT: 
             lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.1, 110.0 );
             lineTracerWalker.turnControl.setPid ( 2.0, 0.5, 0.048, target_brightness - 5.0 );
             break;
         case RightStatus::CURVE_LEFT_SHORT_SLOW: 
-            lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.1, 30.0 );
+            lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.1, 40.0 );
             lineTracerWalker.turnControl.setPid ( 2.0, 0.5, 0.048, target_brightness - 5.0 );
             break;
         case RightStatus::CURVE_LEFT: 
@@ -46,15 +48,20 @@ bool RightNormalCourse::runNormalCourse(int16_t target_brightness){
             lineTracerWalker.turnControl.setPid ( 4.0, 2.0, 0.096, target_brightness - 5.0 );
             break;
         
-        case RightStatus::ACCELERATE: /* p値を大きくしてみただけ */
+        case RightStatus::ACCELERATE:
             lineTracerWalker.speedControl.setPid ( 12.0, 5.0, 0.1, 200.0 );
-            lineTracerWalker.turnControl.setPid ( 9.0, 4.0, 2.0, CENTER_BRIGHTNESS);
+            lineTracerWalker.turnControl.setPid ( 9.0, 4.0, 2.0, target_brightness);
+            break;
+        */
+        case RightStatus::MIDDLE_SPEED:
+            lineTracerWalker.speedControl.setPid ( 2.0, 1.0, 0.1, 130.0 );
+            lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.1, target_brightness );
             break;
 
-        case RightStatus::MIDDLE_SPEED:
-            lineTracerWalker.speedControl.setPid ( 2.0, 1.0, 0.1, 100.0 );
-            lineTracerWalker.turnControl.setPid ( 7.0, 3.2, 0.7, CENTER_BRIGHTNESS );
-            break;
+        case RightStatus::SLOW_DOWN:
+          lineTracerWalker.speedControl.setPid ( 10.0, 1.0, 0.1, 150.0 );
+          lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.1, target_brightness );
+          break;
 
         case RightStatus::STOP: stop(); break;
         default: stop();
@@ -68,9 +75,13 @@ bool RightNormalCourse::runNormalCourse(int16_t target_brightness){
 bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR){
     distanse_total = distance.getDistanceTotal(countL, countR);
     old_status = status;
-    if(distanse_total < 2500)status = RightStatus::STRAIGHT;
-    else if(distanse_total < 8550)status = RightStatus::MIDDLE_SPEED;
-    else if (distanse_total < 11750)status = RightStatus::ACCELERATE;
+    if(distanse_total < 2000)status = RightStatus::STRAIGHT;
+    //if(distanse_total < 5000)status = RightStatus::SLOW;    
+    else if(distanse_total < 2500)status =RightStatus::SLOW_DOWN;
+    else if(distanse_total < 5000)status = RightStatus::MIDDLE_SPEED;
+    else if(distanse_total < 7000)status = RightStatus::SLOW;
+    else if(distanse_total < 8600)status = RightStatus::CURVE_RIGHT;
+    else if (distanse_total < 11750)status = RightStatus::STRAIGHT;
     else if(distanse_total < 13000)status = RightStatus::SLOW;/*この数値でゴールに到達するかは未検証*/
     //else if(distanse_total < 18700)status = RightStatus::SLOW;
     //else if(distanse_total < 19300)status = RightStatus::SLOW;
