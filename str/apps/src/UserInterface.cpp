@@ -6,16 +6,13 @@
 
 #include "UserInterface.h"
 
-void UserInterface::setBrightness(ColorSensor &colorSensor, int8_t &brightness,
-                                  const char *str)
+void UserInterface::setBrightness(ColorSensor& colorSensor, int8_t& brightness, const char* str)
 {
   char msg[32];
   tslp_tsk(500);
-  while (1)
-  {
+  while(1) {
     // ENTERボタンが押されたらループを抜ける
-    if (ev3_button_is_pressed(ENTER_BUTTON))
-    {
+    if(ev3_button_is_pressed(ENTER_BUTTON)) {
       ev3_speaker_play_tone(1000, 100);
       break;
     }
@@ -25,8 +22,7 @@ void UserInterface::setBrightness(ColorSensor &colorSensor, int8_t &brightness,
   }
   int16_t mean_brightness = 0;
   int8_t times = 10;
-  for (int8_t i = 0; i < times; i++)
-  {
+  for(int8_t i = 0; i < times; i++) {
     mean_brightness += colorSensor.getBrightness();
     tslp_tsk(4);
   }
@@ -34,18 +30,16 @@ void UserInterface::setBrightness(ColorSensor &colorSensor, int8_t &brightness,
   brightness = mean_brightness / times;
 }
 
-void UserInterface::setBrightnessWithColor(ColorSensor &colorSensor, int16_t &brightness,
-                                           const char *str)
+void UserInterface::setBrightnessWithColor(ColorSensor& colorSensor, int16_t& brightness,
+                                           const char* str)
 {
   char msg[32];
   tslp_tsk(500);
   rgb_raw_t rgb;
 
-  while (1)
-  {
+  while(1) {
     // ENTERボタンが押されたらループを抜ける
-    if (ev3_button_is_pressed(ENTER_BUTTON))
-    {
+    if(ev3_button_is_pressed(ENTER_BUTTON)) {
       ev3_speaker_play_tone(1000, 100);
       break;
     }
@@ -59,8 +53,7 @@ void UserInterface::setBrightnessWithColor(ColorSensor &colorSensor, int16_t &br
   }
   int16_t mean_brightness = 0;
   int8_t times = 10;
-  for (int8_t i = 0; i < times; i++)
-  {
+  for(int8_t i = 0; i < times; i++) {
     colorSensor.getRawColor(rgb);
     mean_brightness += 0.298912 * rgb.r + 0.586611 * rgb.g + 0.114478 * rgb.b;
     tslp_tsk(4);
@@ -88,32 +81,26 @@ void UserInterface::inputFirstCode()
   ev3_speaker_play_tone(200, 500);
 
   // 初期位置コードを入力
-  while (1)
-  {
+  while(1) {
     // ENTERボタンが押されたらループを抜ける
-    if (ev3_button_is_pressed(ENTER_BUTTON))
-    {
+    if(ev3_button_is_pressed(ENTER_BUTTON)) {
       isChangedFirstCode = true;
       break;
     }
 
-    if (ev3_button_is_pressed(UP_BUTTON))
-    {
+    if(ev3_button_is_pressed(UP_BUTTON)) {
       firstCode.upDigit(digit);
       isChangedFirstCode = true;
     }
-    if (ev3_button_is_pressed(DOWN_BUTTON))
-    {
+    if(ev3_button_is_pressed(DOWN_BUTTON)) {
       firstCode.downDigit(digit);
       isChangedFirstCode = true;
     }
-    if (ev3_button_is_pressed(RIGHT_BUTTON))
-    {
+    if(ev3_button_is_pressed(RIGHT_BUTTON)) {
       firstCode.changeRightDigit();
       isChangedFirstCode = true;
     }
-    if (ev3_button_is_pressed(LEFT_BUTTON))
-    {
+    if(ev3_button_is_pressed(LEFT_BUTTON)) {
       firstCode.changeLeftDigit();
       isChangedFirstCode = true;
     }
@@ -121,8 +108,7 @@ void UserInterface::inputFirstCode()
     digit = firstCode.getDigit();
 
     // ボタンが押された時に限り画面表示を変更する
-    if (isChangedFirstCode)
-    {
+    if(isChangedFirstCode) {
       ev3_speaker_play_tone(1000, 100);
       sprintf(firstCodeText, "%05ld", firstCode.getFirstCode());
       msg_f(firstCodeText, 5);
@@ -135,42 +121,33 @@ void UserInterface::inputFirstCode()
   }
 
   // 終了
-  sprintf(firstCodeText, "Input first code for <%05ld>.",
-          firstCode.getFirstCode());
+  sprintf(firstCodeText, "Input first code for <%05ld>.", firstCode.getFirstCode());
   msg_f(firstCodeText, 4);
   ev3_speaker_play_tone(1500, 50);
   tslp_tsk(100);
   ev3_speaker_play_tone(1500, 50);
 }
 
-int32_t UserInterface::getFirstCode() { return firstCode.getFirstCode(); }
+int32_t UserInterface::getFirstCode()
+{
+  return firstCode.getFirstCode();
+}
 
-char *UserInterface::getCurrentDigitText(int8_t currentDigit)
+char* UserInterface::getCurrentDigitText(int8_t currentDigit)
 {
   static char text[32];
 
-  if (currentDigit == 1)
-  {
+  if(currentDigit == 1) {
     sprintf(text, "    -");
-  }
-  else if (currentDigit == 2)
-  {
+  } else if(currentDigit == 2) {
     sprintf(text, "   - ");
-  }
-  else if (currentDigit == 3)
-  {
+  } else if(currentDigit == 3) {
     sprintf(text, "  -  ");
-  }
-  else if (currentDigit == 4)
-  {
+  } else if(currentDigit == 4) {
     sprintf(text, " -   ");
-  }
-  else if (currentDigit == 5)
-  {
+  } else if(currentDigit == 5) {
     sprintf(text, "-    ");
-  }
-  else
-  {
+  } else {
     // もし1桁から5桁以外を選択している場合
     sprintf(text, "-----");
   }

@@ -1,14 +1,14 @@
 #ifndef __WALKER__
 #define __WALKER__
 
-#include "Motor.h"
 #include "Clock.h"
+#include "Motor.h"
 #include "util.h"
 
 using namespace ev3api;
 
 class Walker {
-public:
+ public:
   Walker();
   void stop();
   void run(int8_t pwm, int8_t turn);
@@ -22,12 +22,11 @@ public:
   void reset();
   void setBrakeMotor(bool brake);
 
-private:
+ private:
   Motor leftWheel;
   Motor rightWheel;
   Clock clock;
-  int8_t leftRight = 1; // 1 -> 右, -1 -> 左
+  int8_t leftRight = 1;  // 1 -> 右, -1 -> 左
 };
-
 
 #endif

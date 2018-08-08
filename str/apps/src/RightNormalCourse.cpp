@@ -6,9 +6,10 @@
 
 #include "RightNormalCourse.h"
 
-RightNormalCourse::RightNormalCourse(){
-    lineTracerWalker.isLeftsideLine(true);
-    status = old_status = RightStatus::STRAIGHT;
+RightNormalCourse::RightNormalCourse()
+{
+  lineTracerWalker.isLeftsideLine(true);
+  status = old_status = RightStatus::STRAIGHT;
 }
 
 /*
@@ -82,6 +83,7 @@ bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR){
     return false;
 }
 
-int RightNormalCourse::getStatus(){
-    return (int)status;
+int RightNormalCourse::getStatus()
+{
+  return (int)status;
 }

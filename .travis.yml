@@ -1,0 +1,23 @@
+dist: trusty
+sudo: require
+language: none
+
+service:
+ - docker
+
+before_install:
+ - sudo apt-get install lcov
+
+script:
+ - cd str
+ - docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/product korosuke613/etrobo-docker makeRight
+ - docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/product korosuke613/etrobo-docker makeLeft
+ - cd ..
+ - docker run --rm -it -v $PWD:/home/hrp2/sdk/workspace/str korosuke613/etrobo-docker /home/hrp2/sdk/workspace/str/install.sh
+
+after_success:
+ - pip install --user codecov
+ - codecov -t c5592368-cd84-46fc-8f63-00ff7a8fcd25
+
+notifications:
+  email: false
