@@ -34,6 +34,7 @@ void BasicWalker::goStraight ( int32_t target_forward, int32_t distance ) {
 		walker.run ( forward, 0 ) ;
 		tslp_tsk ( 4 ) ;
 	}
+    walker.run(0,0);
 }
 
 void BasicWalker::backStraight ( int32_t target_forward, int32_t distance ) {

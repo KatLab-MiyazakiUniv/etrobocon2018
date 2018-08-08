@@ -24,7 +24,7 @@ private:
 	Clock clock ;
 	Walker walker ;
 	SpeedControl speedControl ;
-	int8_t forward ;
+	int32_t forward ;
 	int32_t leftReverseValue ;
 	int32_t rightReverseValue ;
 	double p_value ;
