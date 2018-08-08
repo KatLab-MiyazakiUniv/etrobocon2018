@@ -37,3 +37,5 @@ cmake-build-debug/
 
 app_*
 appsの*
+
+.DS_Store
