@@ -12,20 +12,6 @@ LeftNormalCourse::LeftNormalCourse() : isChangedEdge(false), time_count(0)
   status = old_status = LeftStatus::STRAIGHT;
 }
 
-<<<<<<< HEAD
-bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int16_t light_value, int16_t target_brightness){
-    switch(status){
-        case LeftStatus::STRAIGHT: 
-<<<<<<< HEAD
-            lineTracerWalker.speedControl.setPid ( 2.0, 1.0, 0.8, 150.0 );
-            lineTracerWalker.turnControl.setPid ( 4.0, 1.0, 0.48, CENTER_BRIGHTNESS );
-=======
-            lineTracerWalker.speedControl.setPid ( 17.0, 1.0, 0.1, 180.0 );
-            lineTracerWalker.turnControl.setPid ( 4.0, 1.0, 0.8, target_brightness );
->>>>>>> upstream/master
-            lineTracerWalker.runLine(countL, countR, light_value);
-            break;
-=======
 bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int16_t light_value,
                                        int16_t target_brightness)
 {
@@ -35,7 +21,6 @@ bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int16_t l
       lineTracerWalker.turnControl.setPid(4.0, 1.0, 0.8, target_brightness);
       lineTracerWalker.runLine(countL, countR, light_value);
       break;
->>>>>>> upstream/master
 
     case LeftStatus::EDGE_CHANGE:
       lineTracerWalker.speedControl.setPid(6.0, 1.0, 0.5, 110.0);
