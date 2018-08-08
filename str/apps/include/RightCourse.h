@@ -13,6 +13,7 @@
 #include "SelfLocalization.h"
 #include "SonarSensor.h"
 #include "Walker.h"
+#include "Parking.h"
 #include "ev3api.h"
 #include "util.h"
 
@@ -48,6 +49,7 @@ class RightCourse {
   void runNormalCourse(int16_t brightness);
   /** Shinkansenエリアの処理 */
   void runShinkansen();
+  void runParking();
 
  private:
   LineTracerWalker lineTracer;

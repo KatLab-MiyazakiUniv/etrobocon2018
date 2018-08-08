@@ -15,12 +15,17 @@ RightCourse::RightCourse()
  */
 void RightCourse::run(int16_t brightness)
 {
-  runNormalCourse(brightness);
-  runShinkansen();
-  // Park
+  //runNormalCourse(brightness);
+  //runShinkansen();
+  runParking();
 }
 
 void RightCourse::runShinkansen() {}
+
+void RightCourse::runParking(){
+  Parking parking;
+  parking.runParallel();
+}
 
 void RightCourse::runNormalCourse(int16_t brightness)
 {
