@@ -36,3 +36,14 @@ void Worker::tslpTsk(int8_t time)
 {
   tslp_tsk(time);
 }
+
+void Worker::printDisplay(int8_t row, const char* format, ...)
+{
+  va_list arg;
+
+  va_start(arg, format);
+  vsprintf(msg, format, arg);
+  va_end(arg);
+
+  msg_f(msg, row);
+}

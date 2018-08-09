@@ -6,6 +6,7 @@
 #include "Motor.h"
 #include "TouchSensor.h"
 #include "ev3api.h"
+#include <stdarg.h>
 
 /*
  * touch_sensor = EV3_PORT_1;
@@ -20,6 +21,9 @@
  */
 
 using namespace ev3api;
+
+extern void init_f(const char* str);
+extern void msg_f(const char* str, int32_t line);
 
 class Worker {
  public:
@@ -47,8 +51,10 @@ class Worker {
   void speakerPlayTone(uint16_t frequency, int32_t duration);
   bool buttonIsPressedBack();
   void tslpTsk(int8_t time);  // 4msec周期起動
+  void printDisplay(int8_t row, const char* format, ...);
 
  private:
   rgb_raw_t rgb;
+  char msg[32];
 };
 #endif
