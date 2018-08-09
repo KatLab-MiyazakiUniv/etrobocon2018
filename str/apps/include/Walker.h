@@ -1,15 +1,12 @@
 #ifndef __WALKER__
 #define __WALKER__
 
-#include "Clock.h"
-#include "Motor.h"
-#include "util.h"
-
-using namespace ev3api;
+#include "Worker.h"
 
 class Walker {
  public:
-  Walker();
+  Walker() = default;
+  explicit Walker(Worker& worker_) : worker(worker_) { reset(); }
   void stop();
   void run(int8_t pwm, int8_t turn);
   int edgeChange();
@@ -23,9 +20,7 @@ class Walker {
   void setBrakeMotor(bool brake);
 
  private:
-  Motor leftWheel;
-  Motor rightWheel;
-  Clock clock;
+  Worker worker;
   int8_t leftRight = 1;  // 1 -> 右, -1 -> 左
 };
 

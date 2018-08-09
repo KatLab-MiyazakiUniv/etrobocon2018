@@ -22,7 +22,7 @@ class LeftCourse {
   /** コンストラクタ。センサ類の初期化を行う */
   LeftCourse() = default;
   explicit LeftCourse(Worker& worker_)
-    : sl(walker.get_count_L(), walker.get_count_R(), true), worker(worker_)
+    : walker(worker_), sl(walker.get_count_L(), walker.get_count_R(), true), worker(worker_)
   {
   }
 
