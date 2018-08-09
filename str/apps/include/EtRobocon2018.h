@@ -35,7 +35,6 @@ class EtRobocon2018 {
   int16_t light_black;
   int16_t target_brightness;
   int32_t firstCode;
-  UserInterface ui;
 };
 
 #endif

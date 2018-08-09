@@ -15,27 +15,25 @@
 #ifndef __USER_INTERFACE__
 #define __USER_INTERFACE__
 
-#include "ColorSensor.h"
 #include "FirstCode.h"
-#include "ev3api.h"
-#include "util.h"
+#include "Worker.h"
 #include <string>
-
-using namespace ev3api;
 
 /*! @class UserInterface UserInterface.h "UserInterface.h"
  * @brief 走行体が走り出す前にユーザが入力するインターフェースを提供するクラス
  */
 class UserInterface {
  public:
+  UserInterface() = default;
+  explicit UserInterface(Worker& worker_) : worker(worker_) {}
   /**
    * 初期位置コードを入力する。
    * whileループに入っており、ENTERボタンを押すまでループを抜けることはない。
    * UPボタンとDOWNボタンで数字の大小を選択し、RightボタンとLeftボタンで変更する数字の桁数を選択する。
    */
   void inputFirstCode();
-  void setBrightness(ColorSensor& colorSensor, int8_t& brightness, const char* str);
-  void setBrightnessWithColor(ColorSensor& colorSensor, int16_t& brightness, const char* str);
+  void setBrightness(int8_t& brightness, const char* str);
+  void setBrightnessWithColor(int16_t& brightness, const char* str);
   /**
    * 初期位置コードを返す。
    * FirstCodeクラスに依存する。
@@ -45,6 +43,7 @@ class UserInterface {
   int32_t getFirstCode();
 
  private:
+  Worker worker;
   /**
    * 現在操作している初期位置コードの桁数に応じたカーソルの場所を示すテキストを取得する。
    * inputFirstCodeメンバ関数の桁数や文字の大きさに依存する。

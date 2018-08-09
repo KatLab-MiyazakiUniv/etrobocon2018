@@ -25,6 +25,26 @@ bool Worker::buttonIsPressedBack()
   return ev3_button_is_pressed(BACK_BUTTON);
 }
 
+bool Worker::buttonIsPressedEnter()
+{
+  return ev3_button_is_pressed(ENTER_BUTTON);
+}
+bool Worker::buttonIsPressedUp()
+{
+  return ev3_button_is_pressed(UP_BUTTON);
+}
+bool Worker::buttonIsPressedDown()
+{
+  return ev3_button_is_pressed(DOWN_BUTTON);
+}
+bool Worker::buttonIsPressedRight()
+{
+  return ev3_button_is_pressed(RIGHT_BUTTON);
+}
+bool Worker::buttonIsPressedLeft()
+{
+  return ev3_button_is_pressed(LEFT_BUTTON);
+}
 int16_t Worker::getBrightness()
 {
   colorSensor.getRawColor(rgb);
@@ -32,7 +52,7 @@ int16_t Worker::getBrightness()
   return luminance;
 }
 
-void Worker::tslpTsk(int8_t time)
+void Worker::tslpTsk(int16_t time)
 {
   tslp_tsk(time);
 }

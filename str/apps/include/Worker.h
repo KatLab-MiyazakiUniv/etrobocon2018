@@ -50,7 +50,12 @@ class Worker {
   int16_t getBrightness();
   void speakerPlayTone(uint16_t frequency, int32_t duration);
   bool buttonIsPressedBack();
-  void tslpTsk(int8_t time);  // 4msec周期起動
+  bool buttonIsPressedUp();
+  bool buttonIsPressedDown();
+  bool buttonIsPressedRight();
+  bool buttonIsPressedLeft();
+  bool buttonIsPressedEnter();
+  void tslpTsk(int16_t time);  // 4msec周期起動
   void printDisplay(int8_t row, const char* format, ...);
 
  private:

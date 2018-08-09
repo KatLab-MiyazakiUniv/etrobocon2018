@@ -33,17 +33,17 @@ EtRobocon2018::EtRobocon2018()
 
 void EtRobocon2018::start(int bluetooth_command)
 {
+  UserInterface ui{ worker };
 #ifdef IS_RIGHT_COURSE
 #else
   ui.inputFirstCode();
   firstCode = ui.getFirstCode();
 #endif
-  ui.setBrightnessWithColor(worker.colorSensor, light_white, "white");
-  ui.setBrightnessWithColor(worker.colorSensor, light_black, "black");
+  ui.setBrightnessWithColor(light_white, "white");
+  ui.setBrightnessWithColor(light_black, "black");
   target_brightness = (light_black + light_white) / 2;
-  char msg[32];
-  sprintf(msg, "Brightness W:%d, B:%d, T:%d", light_white, light_black, target_brightness);
-  // msg_f(msg, 7);
+  worker.printDisplay(7, "Brightness W:%d, B:%d, T:%d", light_white, light_black,
+                      target_brightness);
   worker.ledSetColorOrange();
   waitStarter(bluetooth_command);
   worker.ledSetColorGreen();
