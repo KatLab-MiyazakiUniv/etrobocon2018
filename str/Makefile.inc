@@ -34,7 +34,6 @@ endif
 SRCLANG := c++
 
 APPL_DIR += $(mkfile_path)apps
-APPL_DIR += $(mkfile_path)apps/explorer
 
 INCLUDES += -I$(mkfile_path)apps 
 
