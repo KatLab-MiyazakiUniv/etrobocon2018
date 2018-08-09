@@ -15,6 +15,7 @@ SelfLocalization.o \
 Emoter.o \
 NormalCourse.o \
 FirstCode.o \
+Worker.o \
 
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \
