@@ -3,8 +3,8 @@ cd str/str
 
 mv apps/include/Worker.h apps/include/Worker.h.bak
 mv apps/src/Worker.cpp apps/src/Worker.cpp.bak
-cp apps/test/Worker.h apps/include/Worker.h
-cp apps/test/Worker.cpp apps/src/Worker.cpp
+cp apps/test/MockWorker.h apps/include/Worker.h
+cp apps/test/MockWorker.cpp apps/src/Worker.cpp
 
 cd ../
 mkdir build
