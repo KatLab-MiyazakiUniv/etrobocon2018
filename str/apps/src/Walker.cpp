@@ -27,7 +27,7 @@ void Walker::stop()
   worker.rightWheel.reset();
 }
 
-void Walker::run(int8_t pwm, int8_t turn)
+void Walker::run(std::int8_t pwm, std::int8_t turn)
 {
   worker.printDisplay(1, "running...");
   setBrakeMotor(false);
@@ -46,12 +46,12 @@ void Walker::setBrakeMotor(bool brake)
   worker.rightWheel.setBrake(brake);
 }
 
-int32_t Walker::get_count_L()
+std::int32_t Walker::get_count_L()
 {
   return worker.leftWheel.getCount();
 }
 
-int32_t Walker::get_count_R()
+std::int32_t Walker::get_count_R()
 {
   return worker.rightWheel.getCount();
 }
@@ -74,7 +74,7 @@ int Walker::edgeChange()
 /*
  * 車輪の回転角分だけ進む
  */
-void Walker::moveAngle(int8_t pwm, int angle)
+void Walker::moveAngle(std::int8_t pwm, int angle)
 {
   worker.leftWheel.reset();
   worker.rightWheel.reset();

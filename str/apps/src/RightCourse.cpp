@@ -41,7 +41,7 @@ void RightCourse::runNormalCourse(int16_t brightness)
       walker.run(0, 0);
       break;
     }
-    if(ev3_button_is_pressed(BACK_BUTTON)) {
+    if(worker.buttonIsPressedBack()) {
       walker.run(0, 0);
       break;
     }

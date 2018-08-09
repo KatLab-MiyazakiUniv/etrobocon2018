@@ -11,7 +11,7 @@ void UserInterface::setBrightness(int8_t& brightness, const char* str)
   worker.tslpTsk(500);
   while(1) {
     // ENTERボタンが押されたらループを抜ける
-    if(ev3_button_is_pressed(ENTER_BUTTON)) {
+    if(worker.buttonIsPressedEnter()) {
       worker.speakerPlayTone(1000, 100);
       break;
     }
@@ -34,7 +34,7 @@ void UserInterface::setBrightnessWithColor(int16_t& brightness, const char* str)
 
   while(1) {
     // ENTERボタンが押されたらループを抜ける
-    if(ev3_button_is_pressed(ENTER_BUTTON)) {
+    if(worker.buttonIsPressedEnter()) {
       worker.speakerPlayTone(1000, 100);
       break;
     }

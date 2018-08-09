@@ -2,18 +2,19 @@
 #define __WALKER__
 
 #include "Worker.h"
+#include <cstdint>
 
 class Walker {
  public:
   Walker() = default;
   explicit Walker(Worker& worker_) : worker(worker_) { reset(); }
   void stop();
-  void run(int8_t pwm, int8_t turn);
+  void run(std::int8_t pwm, std::int8_t turn);
   int edgeChange();
-  void moveAngle(int8_t pwm, int angle);
+  void moveAngle(std::int8_t pwm, int angle);
   void angleChange(int angle, int rotation);
-  int32_t get_count_L();
-  int32_t get_count_R();
+  std::int32_t get_count_L();
+  std::int32_t get_count_R();
   void init();
   void terminate();
   void reset();
@@ -21,7 +22,7 @@ class Walker {
 
  private:
   Worker worker;
-  int8_t leftRight = 1;  // 1 -> 右, -1 -> 左
+  std::int8_t leftRight = 1;  // 1 -> 右, -1 -> 左
 };
 
 #endif

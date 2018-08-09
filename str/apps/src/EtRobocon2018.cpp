@@ -74,10 +74,10 @@ void EtRobocon2018::waitStarter(int bluetooth_command)
     }
 
     if(worker.touchSensor.isPressed() == 1) {
-      tslp_tsk(500);
+      worker.tslpTsk(500);
       break; /* タッチセンサが押された */
     }
 
-    tslp_tsk(10); /* 10msecウェイト */
+    worker.tslpTsk(10); /* 10msecウェイト */
   }
 }
