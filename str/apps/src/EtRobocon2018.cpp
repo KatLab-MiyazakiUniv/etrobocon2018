@@ -56,7 +56,7 @@ void EtRobocon2018::loop()
   // Rコースを走らせるときは1, Lコースを走らせるときは0
   auto brightness = target_brightness;
 #ifdef IS_RIGHT_COURSE
-  RightCourse rightCourse;
+  RightCourse rightCourse{ worker };
   rightCourse.run(brightness);
 #else
   LeftCourse leftCourse{ worker };
