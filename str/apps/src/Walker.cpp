@@ -1,75 +1,70 @@
 #include "Walker.h"
 
-Walker::Walker() : leftWheel(PORT_C), rightWheel(PORT_B)
-{
-  reset();
-}
-
 void Walker::init()
 {
-  init_f("Walker");
+  // init_f("Walker");
 }
 
 void Walker::terminate()
 {
-  msg_f("Stopped.", 1);
-  leftWheel.stop();
-  rightWheel.stop();
+  worker.printDisplay(1, "Stopped.");
+  worker.leftWheel.stop();
+  worker.rightWheel.stop();
 }
 
 void Walker::reset()
 {
-  leftWheel.reset();
-  rightWheel.reset();
+  worker.leftWheel.reset();
+  worker.rightWheel.reset();
 }
 
 void Walker::stop()
 {
   run(0, 0);
 
-  msg_f("stopping...", 1);
-  leftWheel.reset();
-  rightWheel.reset();
+  worker.printDisplay(1, "stopping...");
+  worker.leftWheel.reset();
+  worker.rightWheel.reset();
 }
 
-void Walker::run(int8_t pwm, int8_t turn)
+void Walker::run(std::int8_t pwm, std::int8_t turn)
 {
-  msg_f("running...", 1);
+  worker.printDisplay(1, "running...");
   setBrakeMotor(false);
   /* left = p-t, right = p+t -> 右 */
   /* left = p+t, right = p-t -> 左 */
   // pwmは int型の -100 ~ 100
-  leftWheel.setPWM(pwm - turn);
-  rightWheel.setPWM(pwm + turn);
+  worker.leftWheel.setPWM(pwm - turn);
+  worker.rightWheel.setPWM(pwm + turn);
 }
 
 void Walker::setBrakeMotor(bool brake)
 {
   // 0でフロート
   // 1でブレーク
-  leftWheel.setBrake(brake);
-  rightWheel.setBrake(brake);
+  worker.leftWheel.setBrake(brake);
+  worker.rightWheel.setBrake(brake);
 }
 
-int32_t Walker::get_count_L()
+std::int32_t Walker::get_count_L()
 {
-  return leftWheel.getCount();
+  return worker.leftWheel.getCount();
 }
 
-int32_t Walker::get_count_R()
+std::int32_t Walker::get_count_R()
 {
-  return rightWheel.getCount();
+  return worker.rightWheel.getCount();
 }
 
 int Walker::edgeChange()
 {
   if(leftRight == 1) {
     run(10, 5);
-    clock.sleep(10);
+    worker.clock.sleep(10);
     leftRight = -1;
   } else {
     run(10, 5);
-    clock.sleep(10);
+    worker.clock.sleep(10);
     leftRight = 1;
   }
 
@@ -79,21 +74,21 @@ int Walker::edgeChange()
 /*
  * 車輪の回転角分だけ進む
  */
-void Walker::moveAngle(int8_t pwm, int angle)
+void Walker::moveAngle(std::int8_t pwm, int angle)
 {
-  leftWheel.reset();
-  rightWheel.reset();
+  worker.leftWheel.reset();
+  worker.rightWheel.reset();
 
-  leftWheel.setPWM(pwm);
-  rightWheel.setPWM(pwm);
+  worker.leftWheel.setPWM(pwm);
+  worker.rightWheel.setPWM(pwm);
 
   while(1) {
-    if(leftWheel.getCount() >= angle && rightWheel.getCount() >= angle) break;
-    clock.sleep(4);
+    if(worker.leftWheel.getCount() >= angle && worker.rightWheel.getCount() >= angle) break;
+    worker.clock.sleep(4);
   }
 
-  leftWheel.reset();
-  rightWheel.reset();
+  worker.leftWheel.reset();
+  worker.rightWheel.reset();
 }
 
 /*
@@ -135,22 +130,22 @@ void Walker::angleChange(int angle, int rotation)
     angle /= 45;
   }
 
-  defaultAngleL = leftWheel.getCount();
+  defaultAngleL = worker.leftWheel.getCount();
 
   while(1) {
     run(0, 10 * rotation);
     if(rotation >= 0) {
-      if(leftWheel.getCount() - defaultAngleL < -dAngle * angle * rotation
-         || leftWheel.getCount() - defaultAngleL > dAngle * angle * rotation) {
+      if(worker.leftWheel.getCount() - defaultAngleL < -dAngle * angle * rotation
+         || worker.leftWheel.getCount() - defaultAngleL > dAngle * angle * rotation) {
         break;
       }
     } else {
-      if(leftWheel.getCount() - defaultAngleL > -dAngle * angle * rotation
-         || leftWheel.getCount() - defaultAngleL < dAngle * angle * rotation) {
+      if(worker.leftWheel.getCount() - defaultAngleL > -dAngle * angle * rotation
+         || worker.leftWheel.getCount() - defaultAngleL < dAngle * angle * rotation) {
         break;
       }
     }
-    clock.sleep(4);
+    worker.clock.sleep(4);
   }
   stop();
 }
