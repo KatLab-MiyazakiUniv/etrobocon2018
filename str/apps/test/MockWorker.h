@@ -1,5 +1,5 @@
-#ifndef __WORKER__
-#define __WORKER__
+#ifndef __CONTROLLER__
+#define __CONTROLLER__
 
 /*
  * touch_sensor = EV3_PORT_1;
@@ -37,7 +37,7 @@ class ColorSensor {
   int getBrightness() { return 0; }
 };
 
-class Worker {
+class Controller {
  public:
   Clock clock;
   Motor rightWheel;
@@ -46,7 +46,7 @@ class Worker {
   ColorSensor colorSensor;
 
   int noteFs6 = 0;
-  Worker() {}
+  Controller() {}
   void speakerSetVolume(int volume){};
   void ledSetColorOrange(){};
   void ledSetColorGreen(){};
