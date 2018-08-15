@@ -1,17 +1,7 @@
 #ifndef __WORKER__
 #define __WORKER__
 
-/*
- * touch_sensor = EV3_PORT_1;
- * sonar_sensor = EV3_PORT_2;
- * color_sensor = EV3_PORT_3;
- * gyro_sensor  = EV3_PORT_4;
- *
- * left_motor   = EV3_PORT_C;
- * right_motor  = EV3_PORT_B;
- * lift_motor   = EV3_PORT_A;
- * tail_motor   = EV3_PORT_D;
- */
+#include <cstdlib>
 
 class Motor {
  public:
@@ -34,7 +24,8 @@ class TouchSensor {
 
 class ColorSensor {
  public:
-  int getBrightness() { return 0; }
+  int getBrightness() { return brightness; }
+  int brightness = 0;
 };
 
 class Worker {
@@ -50,15 +41,39 @@ class Worker {
   void speakerSetVolume(int volume){};
   void ledSetColorOrange(){};
   void ledSetColorGreen(){};
-  int getBrightness() { return 0; };
+  int getBrightness() { return brightness; };
   void speakerPlayTone(int frequency, int duration){};
-  bool buttonIsPressedBack() { return false; };
+  bool buttonIsPressedBack()
+  {
+    counter++;
+    if(counter >= countLimit) {
+      return true;
+    }
+    return false;
+  };
   bool buttonIsPressedUp() { return false; };
   bool buttonIsPressedDown() { return false; };
   bool buttonIsPressedRight() { return false; };
   bool buttonIsPressedLeft() { return false; };
-  bool buttonIsPressedEnter() { return false; };
-  void tslpTsk(int time){};  // 4msec周期起動
+  bool buttonIsPressedEnter()
+  {
+    static int counter = 0;
+    counter++;
+    if(counter >= 10) {
+      return true;
+    }
+    return false;
+  };
+  void tslpTsk(int time)
+  {
+    exitCounter++;
+    if(exitCounter > exitCountLimit) std::exit(1);
+  };  // 4msec周期起動
   void printDisplay(int row, const char* format, ...){};
+  int countLimit = 100;
+  int counter = 0;
+  int exitCounter = 0;
+  int exitCountLimit = 1000;
+  int brightness = 0;
 };
 #endif

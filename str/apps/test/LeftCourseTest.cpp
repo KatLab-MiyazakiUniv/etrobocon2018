@@ -11,8 +11,14 @@ $ g++-7 LeftCourseTest.cpp ../src/LeftCourse.cpp gtest_main.o gtest-all.o -I../i
 #include "Worker.h"
 #include <gtest/gtest.h>
 
-TEST(LeftCourseTest, CreateTest)
-{
+class LeftCourseTest : public ::testing::Test {
+ protected:
+  virtual void SetUp() {}
   Worker worker;
   LeftCourse lc{ worker };
+};
+
+TEST_F(LeftCourseTest, runTest)
+{
+  lc.run(30);
 }
