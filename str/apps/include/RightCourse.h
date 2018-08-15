@@ -7,11 +7,11 @@
 #ifndef __RIGHT_COURSE__
 #define __RIGHT_COURSE__
 
+#include "Controller.h"
 #include "Distance.h"
 #include "RightNormalCourse.h"
 #include "SelfLocalization.h"
 #include "Walker.h"
-#include "Worker.h"
 
 /**
  * 走行場所の状態を保持する列挙型
@@ -37,8 +37,10 @@ class RightCourse {
  public:
   /** コンストラクタ。センサ類の初期化を行う **/
   RightCourse() = default;
-  explicit RightCourse(Worker& worker_)
-    : walker(worker_), sl(walker.get_count_L(), walker.get_count_R(), true), worker(worker_)
+  explicit RightCourse(Controller& controller_)
+    : walker(controller_),
+      sl(walker.get_count_L(), walker.get_count_R(), true),
+      controller(controller_)
   {
   } /** 各エリアの処理を呼び出す **/
   void run(int16_t brightness);
@@ -51,7 +53,7 @@ class RightCourse {
   LineTracerWalker lineTracer;
   Walker walker;
   SelfLocalization sl;
-  Worker worker;
+  Controller controller;
 };
 
 #endif

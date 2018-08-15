@@ -1,13 +1,13 @@
 #ifndef __WALKER__
 #define __WALKER__
 
-#include "Worker.h"
+#include "Controller.h"
 #include <cstdint>
 
 class Walker {
  public:
   Walker() = default;
-  explicit Walker(Worker& worker_) : worker(worker_) { reset(); }
+  explicit Walker(Controller& controller_) : controller(controller_) { reset(); }
   void stop();
   void run(std::int8_t pwm, std::int8_t turn);
   int edgeChange();
@@ -21,7 +21,7 @@ class Walker {
   void setBrakeMotor(bool brake);
 
  private:
-  Worker worker;
+  Controller controller;
   std::int8_t leftRight = 1;  // 1 -> 右, -1 -> 左
 };
 

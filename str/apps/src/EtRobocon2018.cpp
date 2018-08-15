@@ -28,12 +28,12 @@
 EtRobocon2018::EtRobocon2018()
 {
   /** TODO Courseクラスに移す */
-  worker.speakerSetVolume(100);
+  controller.speakerSetVolume(100);
 }
 
 void EtRobocon2018::start(int bluetooth_command)
 {
-  UserInterface ui{ worker };
+  UserInterface ui{ controller };
 #ifdef IS_RIGHT_COURSE
 #else
   ui.inputFirstCode();
@@ -42,11 +42,11 @@ void EtRobocon2018::start(int bluetooth_command)
   ui.setBrightnessWithColor(light_white, "white");
   ui.setBrightnessWithColor(light_black, "black");
   target_brightness = (light_black + light_white) / 2;
-  worker.printDisplay(7, "Brightness W:%d, B:%d, T:%d", light_white, light_black,
-                      target_brightness);
-  worker.ledSetColorOrange();
+  controller.printDisplay(7, "Brightness W:%d, B:%d, T:%d", light_white, light_black,
+                          target_brightness);
+  controller.ledSetColorOrange();
   waitStarter(bluetooth_command);
-  worker.ledSetColorGreen();
+  controller.ledSetColorGreen();
 
   loop();
 }
@@ -56,10 +56,10 @@ void EtRobocon2018::loop()
   // Rコースを走らせるときは1, Lコースを走らせるときは0
   auto brightness = target_brightness;
 #ifdef IS_RIGHT_COURSE
-  RightCourse rightCourse{ worker };
+  RightCourse rightCourse{ controller };
   rightCourse.run(brightness);
 #else
-  LeftCourse leftCourse{ worker };
+  LeftCourse leftCourse{ controller };
   leftCourse.setFirstCode(firstCode);
   leftCourse.run(brightness);
 #endif
@@ -73,11 +73,11 @@ void EtRobocon2018::waitStarter(int bluetooth_command)
       break; /* リモートスタート */
     }
 
-    if(worker.touchSensor.isPressed() == 1) {
-      worker.tslpTsk(500);
+    if(controller.touchSensor.isPressed() == 1) {
+      controller.tslpTsk(500);
       break; /* タッチセンサが押された */
     }
 
-    worker.tslpTsk(10); /* 10msecウェイト */
+    controller.tslpTsk(10); /* 10msecウェイト */
   }
 }
