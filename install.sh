@@ -1,10 +1,10 @@
 #!/bin/bash
 cd str/str
 
-mv apps/include/Worker.h apps/include/Worker.h.bak
-mv apps/src/Worker.cpp apps/src/Worker.cpp.bak
-cp apps/test/MockWorker.h apps/include/Worker.h
-cp apps/test/MockWorker.cpp apps/src/Worker.cpp
+mv apps/include/Controller.h apps/include/Controller.h.bak
+mv apps/src/Controller.cpp apps/src/Controller.cpp.bak
+cp apps/test/MockController.h apps/include/Controller.h
+cp apps/test/MockController.cpp apps/src/Controller.cpp
 
 cd ../
 mkdir build
@@ -14,6 +14,6 @@ cmake --build .
 ctest -VV
 
 cd ../str
-mv -f apps/include/Worker.h.bak apps/include/Worker.h
-mv -f apps/src/Worker.cpp.bak apps/src/Worker.cpp
+mv -f apps/include/Controller.h.bak apps/include/Controller.h
+mv -f apps/src/Controller.cpp.bak apps/src/Controller.cpp
 

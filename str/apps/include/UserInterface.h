@@ -15,8 +15,8 @@
 #ifndef __USER_INTERFACE__
 #define __USER_INTERFACE__
 
+#include "Controller.h"
 #include "FirstCode.h"
-#include "Worker.h"
 #include <string>
 
 /*! @class UserInterface UserInterface.h "UserInterface.h"
@@ -25,7 +25,7 @@
 class UserInterface {
  public:
   UserInterface() = default;
-  explicit UserInterface(Worker& worker_) : worker(worker_) {}
+  explicit UserInterface(Controller& controller_) : controller(controller_) {}
   /**
    * 初期位置コードを入力する。
    * whileループに入っており、ENTERボタンを押すまでループを抜けることはない。
@@ -43,7 +43,7 @@ class UserInterface {
   int32_t getFirstCode();
 
  private:
-  Worker worker;
+  Controller controller;
   /**
    * 現在操作している初期位置コードの桁数に応じたカーソルの場所を示すテキストを取得する。
    * inputFirstCodeメンバ関数の桁数や文字の大きさに依存する。

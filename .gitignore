@@ -38,3 +38,5 @@ cmake-build-debug/
 app_*
 appsの*
 auto_build.sh
+
+*.dSYM/
