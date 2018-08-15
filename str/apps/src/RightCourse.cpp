@@ -24,10 +24,10 @@ void RightCourse::runNormalCourse(int16_t brightness)
   // NormalCourseを抜けるまでループする
   while(1) {
     sl.update(walker.get_count_L(), walker.get_count_R());
-    auto luminance = worker.getBrightness();
-    worker.printDisplay(4, "Brightness: %d, Target: %d", luminance, brightness);
+    auto luminance = controller.getBrightness();
+    controller.printDisplay(4, "Brightness: %d, Target: %d", luminance, brightness);
     if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R()))
-      worker.speakerPlayTone(worker.noteFs6, 100);
+      controller.speakerPlayTone(controller.noteFs6, 100);
     isNormalCourse = normalCourse.runNormalCourse(brightness);
     normalCourse.lineTracerWalker.runLine(walker.get_count_L(), walker.get_count_R(), luminance);
 
@@ -41,11 +41,11 @@ void RightCourse::runNormalCourse(int16_t brightness)
       walker.run(0, 0);
       break;
     }
-    if(worker.buttonIsPressedBack()) {
+    if(controller.buttonIsPressedBack()) {
       walker.run(0, 0);
       break;
     }
 
-    worker.tslpTsk(4);  // 4msec周期起動
+    controller.tslpTsk(4);  // 4msec周期起動
   }
 }

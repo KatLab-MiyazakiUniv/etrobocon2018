@@ -10,10 +10,10 @@
 //変更してもいけない
 //#define IS_RIGHT_COURSE
 
+#include "Controller.h"
 #include "LeftCourse.h"
 #include "RightCourse.h"
 #include "UserInterface.h"
-#include "Worker.h"
 
 /**
  * main的なクラス
@@ -30,7 +30,7 @@ class EtRobocon2018 {
   void loop();
 
  private:
-  Worker worker;
+  Controller controller;
   int16_t light_white;
   int16_t light_black;
   int16_t target_brightness;

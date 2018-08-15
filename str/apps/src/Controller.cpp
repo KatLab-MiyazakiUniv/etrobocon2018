@@ -1,63 +1,63 @@
-#include "Worker.h"
+#include "Controller.h"
 
-void Worker::speakerSetVolume(uint8_t volume)
+void Controller::speakerSetVolume(uint8_t volume)
 {
   ev3_speaker_set_volume(volume);
 }
 
-void Worker::speakerPlayTone(uint16_t frequency, int32_t duration)
+void Controller::speakerPlayTone(uint16_t frequency, int32_t duration)
 {
   ev3_speaker_play_tone(frequency, duration);
 }
 
-void Worker::ledSetColorOrange()
+void Controller::ledSetColorOrange()
 {
   ev3_led_set_color(LED_ORANGE);
 }
 
-void Worker::ledSetColorGreen()
+void Controller::ledSetColorGreen()
 {
   ev3_led_set_color(LED_GREEN);
 }
 
-bool Worker::buttonIsPressedBack()
+bool Controller::buttonIsPressedBack()
 {
   return ev3_button_is_pressed(BACK_BUTTON);
 }
 
-bool Worker::buttonIsPressedEnter()
+bool Controller::buttonIsPressedEnter()
 {
   return ev3_button_is_pressed(ENTER_BUTTON);
 }
-bool Worker::buttonIsPressedUp()
+bool Controller::buttonIsPressedUp()
 {
   return ev3_button_is_pressed(UP_BUTTON);
 }
-bool Worker::buttonIsPressedDown()
+bool Controller::buttonIsPressedDown()
 {
   return ev3_button_is_pressed(DOWN_BUTTON);
 }
-bool Worker::buttonIsPressedRight()
+bool Controller::buttonIsPressedRight()
 {
   return ev3_button_is_pressed(RIGHT_BUTTON);
 }
-bool Worker::buttonIsPressedLeft()
+bool Controller::buttonIsPressedLeft()
 {
   return ev3_button_is_pressed(LEFT_BUTTON);
 }
-int16_t Worker::getBrightness()
+int16_t Controller::getBrightness()
 {
   colorSensor.getRawColor(rgb);
   int16_t luminance = 0.298912 * rgb.r + 0.586611 * rgb.g + 0.114478 * rgb.b;
   return luminance;
 }
 
-void Worker::tslpTsk(int16_t time)
+void Controller::tslpTsk(int16_t time)
 {
   tslp_tsk(time);
 }
 
-void Worker::printDisplay(int8_t row, const char* format, ...)
+void Controller::printDisplay(int8_t row, const char* format, ...)
 {
   va_list arg;
 
