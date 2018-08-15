@@ -1,5 +1,5 @@
-#ifndef __WORKER__
-#define __WORKER__
+#ifndef __CONTROLLER__
+#define __CONTROLLER__
 
 #include "Clock.h"
 #include "ColorSensor.h"
@@ -25,9 +25,9 @@ using namespace ev3api;
 extern void init_f(const char* str);
 extern void msg_f(const char* str, int32_t line);
 
-class Worker {
+class Controller {
  public:
-  Worker()
+  Controller()
     : touchSensor(PORT_1),
       colorSensor(PORT_3),
       liftMotor(PORT_A),

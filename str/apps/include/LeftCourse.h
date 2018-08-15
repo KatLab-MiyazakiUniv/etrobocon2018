@@ -9,10 +9,10 @@
 
 #define IS_SHORT_CUT 0
 
+#include "Controller.h"
 #include "LeftNormalCourse.h"
 #include "SelfLocalization.h"
 #include "Walker.h"
-#include "Worker.h"
 
 /**
  * Lコースを走らせるときに呼び出されるクラス
@@ -21,8 +21,10 @@ class LeftCourse {
  public:
   /** コンストラクタ。センサ類の初期化を行う */
   LeftCourse() = default;
-  explicit LeftCourse(Worker& worker_)
-    : walker(worker_), sl(walker.get_count_L(), walker.get_count_R(), true), worker(worker_)
+  explicit LeftCourse(Controller& controller_)
+    : walker(controller_),
+      sl(walker.get_count_L(), walker.get_count_R(), true),
+      controller(controller_)
   {
   }
 
@@ -54,7 +56,8 @@ class LeftCourse {
   Walker walker;
   /** 自己位置推定 インスタンス 初期化*/
   SelfLocalization sl;
-  Worker worker;
+  Controller controller;
+
   /**
    * UserInterfaceの初期位置コードを記録する。
    * ブロック並べに用いる。
