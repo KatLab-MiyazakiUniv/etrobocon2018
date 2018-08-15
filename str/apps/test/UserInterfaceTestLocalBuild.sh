@@ -7,7 +7,7 @@ cp apps/test/MockWorker.h apps/include/Worker.h
 cp apps/test/MockWorker.cpp apps/src/Worker.cpp
 
 cd apps/test
-g++-8 -g -O0 —gtest_break_on_failure UserInterfaceTest.cpp ../src/UserInterface.cpp ../src/FirstCode.cpp gtest_main.o gtest-all.o -I../include -I/Users/Futa/googletest/googletest/include
+g++-8 -g -O0 UserInterfaceTest.cpp ../src/UserInterface.cpp ../src/FirstCode.cpp gtest_main.o gtest-all.o -I../include -I/Users/Futa/googletest/googletest/include
 
 cd ../../
 mv -f apps/include/Worker.h.bak apps/include/Worker.h
