@@ -8,14 +8,14 @@ $ g++-7 LeftCourseTest.cpp ../src/LeftCourse.cpp gtest_main.o gtest-all.o -I../i
 */
 
 #include "LeftCourse.h"  // このヘッダファイルのcppファイルをテスト
-#include "Worker.h"
+#include "Controller.h"
 #include <gtest/gtest.h>
 
 class LeftCourseTest : public ::testing::Test {
  protected:
   virtual void SetUp() {}
-  Worker worker;
-  LeftCourse lc{ worker };
+  Controller controller;
+  LeftCourse lc{ controller };
 };
 
 TEST_F(LeftCourseTest, runTest)

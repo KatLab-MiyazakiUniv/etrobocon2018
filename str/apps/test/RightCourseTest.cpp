@@ -8,14 +8,14 @@ $ g++-7 RightCourseTest.cpp ../src/RightCourse.cpp gtest_main.o gtest-all.o -I..
 */
 
 #include "RightCourse.h"  // このヘッダファイルのcppファイルをテスト
-#include "Worker.h"
+#include "Controller.h"
 #include <gtest/gtest.h>
 
 class RightCourseTest : public ::testing::Test {
  protected:
   virtual void SetUp() {}
-  Worker worker;
-  RightCourse rc{ worker };
+  Controller controller;
+  RightCourse rc{ controller };
 };
 
 TEST_F(RightCourseTest, runTest)

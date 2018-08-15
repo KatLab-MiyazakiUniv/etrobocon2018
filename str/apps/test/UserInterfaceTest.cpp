@@ -27,25 +27,25 @@ $ ./UserInterfaceTestLocalBuild.sh
 */
 
 #include "UserInterface.h"  // このヘッダファイルのcppファイルをテスト
-#include "Worker.h"
+#include "Controller.h"
 #include <cstdint>
 #include <gtest/gtest.h>
 
 class UserInterfaceTest : public ::testing::Test {
  protected:
-  virtual void SetUp() { setWorkerBrightness(brightness); }
-  Worker worker;
+  virtual void SetUp() { setControllerBrightness(brightness); }
+  Controller controller;
   int brightness = 100;
-  void setWorkerBrightness(int brightness)
+  void setControllerBrightness(int brightness)
   {
-    worker.brightness = brightness;
-    worker.colorSensor.brightness = brightness;
+    controller.brightness = brightness;
+    controller.colorSensor.brightness = brightness;
   }
 };
 
 TEST_F(UserInterfaceTest, setBrightnessWithColorTest)
 {
-  UserInterface ui{ worker };
+  UserInterface ui{ controller };
   std::int16_t resultBrightness;
   ui.setBrightnessWithColor(resultBrightness, "test");
   ASSERT_EQ(resultBrightness, brightness);
@@ -53,7 +53,7 @@ TEST_F(UserInterfaceTest, setBrightnessWithColorTest)
 
 TEST_F(UserInterfaceTest, setBrightnessTest)
 {
-  UserInterface ui{ worker };
+  UserInterface ui{ controller };
   std::int8_t resultBrightness;
   ui.setBrightness(resultBrightness, "test");
   ASSERT_EQ(resultBrightness, brightness);
