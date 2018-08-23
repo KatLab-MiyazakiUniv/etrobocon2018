@@ -64,55 +64,6 @@ bool RightNormalCourse::runNormalCourse(int16_t target_brightness){
             lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.1, target_brightness );
             break;
 
-        /*
-        case RightStatus::STRAIGHT:
-            lineTracerWalker.speedControl.setPid(17.0, 1.0, 0.1, 200.0);
-            lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);       
-            break;
-
-        case RightStatus::SLOW:
-            lineTracerWalker.speedControl.setPid ( 2.0, 1.0, 0.1, 100.0 );
-            lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.14, target_brightness - 5.0);
-            break;
-        
-        case RightStatus::CURVE_RIGHT:
-            lineTracerWalker.speedControl.setPid ( 2.0, 1.0, 0.1, 100.0 );
-            lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.14, target_brightness - 5.0);
-            break;
-
-
-        case RightStatus::MIDDLE_SPEED:
-            lineTracerWalker.speedControl.setPid ( 2.0, 1.0, 0.12, 150.0 );
-            lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.1, target_brightness );
-            break;
-
-        case RightStatus::SLOW_DOWN:
-          lineTracerWalker.speedControl.setPid ( 10.0, 1.0, 0.1, 150.0 );
-          lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.1, target_brightness );
-          break;
-
-        
-        case RightStatus::CURVE_LEFT_SHORT: 
-            lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.1, 110.0 );
-            lineTracerWalker.turnControl.setPid ( 2.0, 0.5, 0.048, target_brightness - 5.0 );
-            break;
-
-        case RightStatus::CURVE_LEFT_SHORT_SLOW: 
-            lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.1, 40.0 );
-            lineTracerWalker.turnControl.setPid ( 2.0, 0.5, 0.048, target_brightness - 5.0 );
-            break;
-
-        case RightStatus::CURVE_LEFT: 
-            lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.1, 100.0 );
-            lineTracerWalker.turnControl.setPid ( 4.0, 2.0, 0.096, target_brightness - 5.0 );
-            break;
-        
-        case RightStatus::ACCELERATE:
-            lineTracerWalker.speedControl.setPid ( 12.0, 5.0, 0.1, 200.0 );
-            lineTracerWalker.turnControl.setPid ( 9.0, 4.0, 2.0, target_brightness);
-            break;
-        */
-
         case RightStatus::STOP: stop(); break;
         default: stop();
     }
