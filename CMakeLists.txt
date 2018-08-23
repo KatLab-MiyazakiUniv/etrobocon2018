@@ -56,6 +56,7 @@ file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${SOURCE_DIR}/LeftCourse.cpp
     ${SOURCE_DIR}/EtRobocon2018.cpp
     ${SOURCE_DIR}/UserInterface.cpp
+    ${SOURCE_DIR}/Lifter.cpp
     )
 add_library(${PROJECT_LIB_NAME} ${SRC_FILES})
 

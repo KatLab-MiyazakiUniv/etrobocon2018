@@ -33,6 +33,7 @@ class Controller {
   Clock clock;
   Motor rightWheel;
   Motor leftWheel;
+  Motor liftMotor;
   TouchSensor touchSensor;
   ColorSensor colorSensor;
 
