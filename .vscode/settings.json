@@ -5,6 +5,7 @@
     "clang-format.executable": "clang-format",
     "C_Cpp.clang_format_path": "${workspaceRoot}/.clang-format",
     "files.associations": {
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "cstdint": "cpp"
     }
 }
