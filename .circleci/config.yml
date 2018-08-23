@@ -11,7 +11,7 @@ jobs:
       - run:
           name: move str directory and cd product
           command: |
-            mv str /home/hrp2/sdk/workspace/
+            cp -r str /home/hrp2/sdk/workspace/
             mv -T /home/hrp2/sdk/workspace/str/ /home/hrp2/sdk/workspace/product/
 
       - run:
@@ -24,3 +24,11 @@ jobs:
           command: |
             cd /home/hrp2/sdk/workspace/product/
             ./makeLeft.sh
+
+      - run:
+          name: gtest
+          command: |
+            cp -r /home/build /home/hrp2/sdk/workspace/
+            mv -T /home/hrp2/sdk/workspace/build/ /home/hrp2/sdk/workspace/str/
+            cd /home/hrp2/sdk/workspace/
+            ./str/install.sh

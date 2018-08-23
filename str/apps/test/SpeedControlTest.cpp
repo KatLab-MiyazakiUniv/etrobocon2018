@@ -54,10 +54,9 @@ class test_SpeedControl : public SpeedControl {
 TEST(SpeedControlTest, calcDistance4msTest1)
 {
   test_SpeedControl sp;
-  int value, l;
+  int value;
   float circle;
 
-  l = 0;
   circle = 2 * 3.14 * 81;
   value = sp.calcDistance4ms(0, 0);
   value += sp.calcDistance4ms(90, 90);

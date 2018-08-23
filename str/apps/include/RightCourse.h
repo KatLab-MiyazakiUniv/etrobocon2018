@@ -7,16 +7,11 @@
 #ifndef __RIGHT_COURSE__
 #define __RIGHT_COURSE__
 
-#include "ColorSensor.h"
+#include "Controller.h"
 #include "Distance.h"
 #include "RightNormalCourse.h"
 #include "SelfLocalization.h"
-#include "SonarSensor.h"
 #include "Walker.h"
-#include "ev3api.h"
-#include "util.h"
-
-using namespace ev3api;
 
 /**
  * 走行場所の状態を保持する列挙型
@@ -41,8 +36,13 @@ enum struct ShinkansenStatus {
 class RightCourse {
  public:
   /** コンストラクタ。センサ類の初期化を行う **/
-  RightCourse();
-  /** 各エリアの処理を呼び出す **/
+  RightCourse() = default;
+  explicit RightCourse(Controller& controller_)
+    : walker(controller_),
+      sl(walker.get_count_L(), walker.get_count_R(), true),
+      controller(controller_)
+  {
+  } /** 各エリアの処理を呼び出す **/
   void run(int16_t brightness);
   /** NormalCourseエリアの処理 **/
   void runNormalCourse(int16_t brightness);
@@ -52,9 +52,8 @@ class RightCourse {
  private:
   LineTracerWalker lineTracer;
   Walker walker;
-  ColorSensor colorSensor;
-  SonarSensor sonarSensor;
   SelfLocalization sl;
+  Controller controller;
 };
 
 #endif

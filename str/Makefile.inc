@@ -15,6 +15,7 @@ SelfLocalization.o \
 Emoter.o \
 NormalCourse.o \
 FirstCode.o \
+Controller.o \
 
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \
@@ -33,7 +34,6 @@ endif
 SRCLANG := c++
 
 APPL_DIR += $(mkfile_path)apps
-APPL_DIR += $(mkfile_path)apps/explorer
 
 INCLUDES += -I$(mkfile_path)apps 
 
