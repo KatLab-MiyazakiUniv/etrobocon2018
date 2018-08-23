@@ -14,3 +14,11 @@ TEST(RightNormalCourseTest, CreateTest)
 {
   RightNormalCourse rnc;
 }
+
+TEST(RightNormalCourseTest, runTest)
+{
+  RightNormalCourse rnc;
+  for(int i=0; i < 13000; i++){
+    rnc.lineTracerWalker.runLine(i, i, 30);
+  }
+}
