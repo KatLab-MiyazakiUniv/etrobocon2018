@@ -47,9 +47,8 @@ class RightCourse {
   void run(int16_t brightness);
   /** NormalCourseエリアの処理 **/
   void runNormalCourse(int16_t brightness);
-  /** Shinkansenエリアの処理 */
-  void runShinkansen();
-  void runParking();
+  
+  void runParking(int16_t brightness,LineTracerWalker lineTracer);
 
  private:
   LineTracerWalker lineTracer;

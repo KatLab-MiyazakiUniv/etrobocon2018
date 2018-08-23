@@ -27,14 +27,14 @@ public:
      * 実行開始時にBasicWalkerクラスのインスタンスを生成し、
      * goStraightメンバ関数とspinメンバ関数に依存する。
      */
-    void runParallel();
+    void runParpendicular(int16_t target_brightness,LineTracerWalker lineTracer);
 
     /**
      * 直角駐車を実行する。
      * 実行開始時にBasicWalkerクラスのインスタンスを生成し、
      * goStraightメンバ関数とspinメンバ関数に依存する。
      */
-    void runParpendicular();
+//void runParpendicular();
 
     /**
      * 3秒間待機する。

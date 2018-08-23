@@ -15,16 +15,16 @@ RightCourse::RightCourse()
  */
 void RightCourse::run(int16_t brightness)
 {
+  LineTracerWalker lineTracer;
   //runNormalCourse(brightness);
   //runShinkansen();
-  runParking();
+  runParking(brightness,lineTracer);
 }
 
-void RightCourse::runShinkansen() {}
 
-void RightCourse::runParking(){
+void RightCourse::runParking(int16_t brightness,LineTracerWalker lineTracer){
   Parking parking;
-  parking.runParallel();
+  parking.Parpendicular(brightness,lineTracer);
 }
 
 void RightCourse::runNormalCourse(int16_t brightness)
