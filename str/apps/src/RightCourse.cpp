@@ -24,7 +24,7 @@ void RightCourse::run(int16_t brightness)
 
 void RightCourse::runParking(int16_t brightness,LineTracerWalker lineTracer){
   Parking parking;
-  parking.Parpendicular(brightness,lineTracer);
+  parking.runParpendicular(brightness,lineTracer);
 }
 
 void RightCourse::runNormalCourse(int16_t brightness)

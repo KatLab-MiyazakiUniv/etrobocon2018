@@ -10,6 +10,8 @@
 #include "LineTracerWalker.h"
 #include "Walker.h"
 #include "ColorSensor.h"
+#include "SpeedControl.h"
+#include "ev3api.h"
 
 /*! @class Parking Parking.h "Parking.h"
  *  @brief 駐車クラス
@@ -34,7 +36,7 @@ public:
      * 実行開始時にBasicWalkerクラスのインスタンスを生成し、
      * goStraightメンバ関数とspinメンバ関数に依存する。
      */
-//void runParpendicular();
+   void runParallelrun();
 
     /**
      * 3秒間待機する。
@@ -46,6 +48,7 @@ public:
 
 private:
     ColorSensor colorSensor;
+    Walker walker;
 };
 
 
