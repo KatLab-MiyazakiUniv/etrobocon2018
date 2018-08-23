@@ -18,7 +18,8 @@ TEST(RightNormalCourseTest, CreateTest)
 TEST(RightNormalCourseTest, runTest)
 {
   RightNormalCourse rnc;
-  for(int i=0; i < 13000; i++){
-    rnc.lineTracerWalker.runLine(i, i, 30);
+  for(int i = 0; i < 13000; i++) {
+    rnc.statusCheck(i, i);
+    rnc.runNormalCourse(30);
   }
 }
