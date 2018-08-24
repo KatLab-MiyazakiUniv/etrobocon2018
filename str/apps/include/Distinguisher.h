@@ -28,17 +28,17 @@ class Distinguisher {
   double distanceColor(Rgb target_color);
   double last_distance = 0.0;
   double threshold_distance = 400;
+  Rgb raw_color = { Color::NONE, 0, 0, 0 };
 
  private:
   Controller controller;
   Color color = Color::NONE;
-  Rgb raw_color = { Color::NONE, 0, 0, 0 };
-  const Rgb RED = { Color::RED, 255, 0, 0 };
-  const Rgb BLUE = { Color::BLUE, 0, 0, 255 };
-  const Rgb GREEN = { Color::GREEN, 0, 255, 0 };
-  const Rgb YELLOW = { Color::YELLOW, 255, 255, 0 };
-  const Rgb BLACK = { Color::BLACK, 0, 0, 0 };
-  const Rgb WHITE = { Color::WHITE, 255, 255, 255 };
+  const Rgb RED = { Color::RED, 112, 13, 9 };
+  const Rgb BLUE = { Color::BLUE, 18, 47, 50 };
+  const Rgb GREEN = { Color::GREEN, 24, 77, 13 };
+  const Rgb YELLOW = { Color::YELLOW, 116, 120, 15 };
+  const Rgb BLACK = { Color::BLACK, 14, 19, 5 };
+  const Rgb WHITE = { Color::WHITE, 128, 158, 93 };
 };
 
 #endif
