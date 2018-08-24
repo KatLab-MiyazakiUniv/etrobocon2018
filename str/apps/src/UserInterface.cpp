@@ -6,101 +6,92 @@
 
 #include "UserInterface.h"
 
-void UserInterface::setBrightness(ColorSensor& colorSensor, int8_t& brightness, const char* str)
+void UserInterface::setBrightness(int8_t& brightness, const char* str)
 {
-  char msg[32];
-  tslp_tsk(500);
+  controller.tslpTsk(500);
   while(1) {
     // ENTERボタンが押されたらループを抜ける
-    if(ev3_button_is_pressed(ENTER_BUTTON)) {
-      ev3_speaker_play_tone(1000, 100);
+    if(controller.buttonIsPressedEnter()) {
+      controller.speakerPlayTone(1000, 100);
       break;
     }
-    sprintf(msg, "%s LightValue: %d", str, colorSensor.getBrightness());
-    msg_f(msg, 7);
-    tslp_tsk(4);
+    controller.printDisplay(7, "%s LightValue: %d", str, controller.colorSensor.getBrightness());
+    controller.tslpTsk(4);
   }
   int16_t mean_brightness = 0;
   int8_t times = 10;
   for(int8_t i = 0; i < times; i++) {
-    mean_brightness += colorSensor.getBrightness();
-    tslp_tsk(4);
+    mean_brightness += controller.colorSensor.getBrightness();
+    controller.tslpTsk(4);
   }
-  ev3_speaker_play_tone(2000, 100);
+  controller.speakerPlayTone(2000, 100);
   brightness = mean_brightness / times;
 }
 
-void UserInterface::setBrightnessWithColor(ColorSensor& colorSensor, int16_t& brightness,
-                                           const char* str)
+void UserInterface::setBrightnessWithColor(int16_t& brightness, const char* str)
 {
-  char msg[32];
-  tslp_tsk(500);
-  rgb_raw_t rgb;
+  controller.tslpTsk(500);
 
   while(1) {
     // ENTERボタンが押されたらループを抜ける
-    if(ev3_button_is_pressed(ENTER_BUTTON)) {
-      ev3_speaker_play_tone(1000, 100);
+    if(controller.buttonIsPressedEnter()) {
+      controller.speakerPlayTone(1000, 100);
       break;
     }
-    colorSensor.getRawColor(rgb);
-    int16_t luminance = 0.298912 * rgb.r + 0.586611 * rgb.g + 0.114478 * rgb.b;
-    sprintf(msg, "%s LightValue: %d", str, luminance);
-    msg_f(msg, 7);
-    sprintf(msg, "RGB R:%3d G:%3d B:%3d", rgb.r, rgb.g, rgb.b);
-    msg_f(msg, 8);
-    tslp_tsk(4);
+    int16_t luminance = controller.getBrightness();
+    controller.printDisplay(7, "%s LightValue: %d", str, luminance);
+    // sprintf(msg, "RGB R:%3d G:%3d B:%3d", rgb.r, rgb.g, rgb.b);
+    // msg_f(msg, 8);
+    controller.tslpTsk(4);
   }
   int16_t mean_brightness = 0;
   int8_t times = 10;
   for(int8_t i = 0; i < times; i++) {
-    colorSensor.getRawColor(rgb);
-    mean_brightness += 0.298912 * rgb.r + 0.586611 * rgb.g + 0.114478 * rgb.b;
-    tslp_tsk(4);
+    mean_brightness += controller.getBrightness();
+    controller.tslpTsk(4);
   }
-  ev3_speaker_play_tone(2000, 100);
+  controller.speakerPlayTone(2000, 100);
   brightness = mean_brightness / times;
 }
 
 void UserInterface::inputFirstCode()
 {
-  char firstCodeText[32];
   int digit = 0;
   bool isChangedFirstCode = false;
 
   // 初期位置コードを入力してください
-  msg_f("Please set first code", 4);
+  controller.printDisplay(4, "Please set first code");
 
   // 初期位置コードの初期値と操作している桁数の初期位置を表示する
-  sprintf(firstCodeText, "%05ld", firstCode.getFirstCode());
-  msg_f(firstCodeText, 5);
-  digit = firstCode.getDigit();
-  msg_f(getCurrentDigitText(digit), 6);
+  controller.printDisplay(5, "%05ld", firstCode.getFirstCode());
 
-  ev3_speaker_set_volume(20);
-  ev3_speaker_play_tone(200, 500);
+  digit = firstCode.getDigit();
+  controller.printDisplay(6, getCurrentDigitText(digit));
+
+  controller.speakerSetVolume(20);
+  controller.speakerPlayTone(200, 500);
 
   // 初期位置コードを入力
   while(1) {
     // ENTERボタンが押されたらループを抜ける
-    if(ev3_button_is_pressed(ENTER_BUTTON)) {
+    if(controller.buttonIsPressedEnter()) {
       isChangedFirstCode = true;
       break;
     }
 
-    if(ev3_button_is_pressed(UP_BUTTON)) {
+    if(controller.buttonIsPressedUp()) {
       firstCode.upDigit(digit);
       isChangedFirstCode = true;
     }
-    if(ev3_button_is_pressed(DOWN_BUTTON)) {
+    if(controller.buttonIsPressedDown()) {
       firstCode.downDigit(digit);
       isChangedFirstCode = true;
     }
-    if(ev3_button_is_pressed(RIGHT_BUTTON)) {
+    if(controller.buttonIsPressedRight()) {
       firstCode.changeRightDigit();
       isChangedFirstCode = true;
     }
-    if(ev3_button_is_pressed(LEFT_BUTTON)) {
+    if(controller.buttonIsPressedLeft()) {
       firstCode.changeLeftDigit();
       isChangedFirstCode = true;
     }
@@ -109,23 +100,22 @@ void UserInterface::inputFirstCode()
 
     // ボタンが押された時に限り画面表示を変更する
     if(isChangedFirstCode) {
-      ev3_speaker_play_tone(1000, 100);
-      sprintf(firstCodeText, "%05ld", firstCode.getFirstCode());
-      msg_f(firstCodeText, 5);
-      msg_f(getCurrentDigitText(digit), 6);
-      tslp_tsk(500);
+      controller.speakerPlayTone(1000, 100);
+      controller.printDisplay(5, "%05ld", firstCode.getFirstCode());
+      controller.printDisplay(6, getCurrentDigitText(digit));
+      controller.tslpTsk(500);
     }
 
     isChangedFirstCode = false;
-    tslp_tsk(4);
+    controller.tslpTsk(4);
   }
 
   // 終了
-  sprintf(firstCodeText, "Input first code for <%05ld>.", firstCode.getFirstCode());
-  msg_f(firstCodeText, 4);
-  ev3_speaker_play_tone(1500, 50);
-  tslp_tsk(100);
-  ev3_speaker_play_tone(1500, 50);
+  controller.printDisplay(4, "Input first code for <%05ld>.", firstCode.getFirstCode());
+
+  controller.speakerPlayTone(1500, 50);
+  controller.tslpTsk(100);
+  controller.speakerPlayTone(1500, 50);
 }
 
 int32_t UserInterface::getFirstCode()

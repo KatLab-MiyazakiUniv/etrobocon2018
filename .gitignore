@@ -39,3 +39,6 @@ app_*
 appsの*
 
 .DS_Store
+auto_build.sh
+
+*.dSYM/

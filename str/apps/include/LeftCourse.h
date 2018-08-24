@@ -9,12 +9,10 @@
 
 #define IS_SHORT_CUT 0
 
-#include "ColorSensor.h"
+#include "Controller.h"
 #include "LeftNormalCourse.h"
 #include "SelfLocalization.h"
 #include "Walker.h"
-
-using namespace ev3api;
 
 /**
  * Lコースを走らせるときに呼び出されるクラス
@@ -22,7 +20,13 @@ using namespace ev3api;
 class LeftCourse {
  public:
   /** コンストラクタ。センサ類の初期化を行う */
-  LeftCourse();
+  LeftCourse() = default;
+  explicit LeftCourse(Controller& controller_)
+    : walker(controller_),
+      sl(walker.get_count_L(), walker.get_count_R(), true),
+      controller(controller_)
+  {
+  }
 
   /**
    * このクラスのインスタンスを保持しているインスタンスまたはメンバ関数が、
@@ -50,9 +54,10 @@ class LeftCourse {
 
  private:
   Walker walker;
-  ColorSensor colorSensor;
   /** 自己位置推定 インスタンス 初期化*/
   SelfLocalization sl;
+  Controller controller;
+
   /**
    * UserInterfaceの初期位置コードを記録する。
    * ブロック並べに用いる。
