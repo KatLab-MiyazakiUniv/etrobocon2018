@@ -57,6 +57,7 @@ class Controller {
   bool buttonIsPressedEnter();
   void tslpTsk(int16_t time);  // 4msec周期起動
   void printDisplay(int8_t row, const char* format, ...);
+  void getRawColor(uint16_t& r, uint16_t& g, uint16_t& b);
 
  private:
   rgb_raw_t rgb;
