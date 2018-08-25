@@ -16,7 +16,8 @@ Emoter.o \
 NormalCourse.o \
 FirstCode.o \
 Controller.o \
-Lifter.o
+Lifter.o \
+Distinguisher.o
 
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \
