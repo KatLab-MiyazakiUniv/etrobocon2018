@@ -19,7 +19,6 @@ class Distinguisher {
   friend class DistinguisherTest;
 
  public:
-  Distinguisher() = default;
   explicit Distinguisher(Controller controller_) : controller(controller_) {}
   Color getColor();
   Color distingishColor();
