@@ -22,7 +22,7 @@ class LifterTest : public ::testing::Test {
   Lifter lifter{ controller };
 
   std::int32_t getDefaultCount() { return lifter.default_count; }
-  void addDefaultCount(int count) { lifter.default_count += count; }
+  void addDefaultCount(int count) { lifter.default_count -= count; }
 
   std::int32_t getCount() { return lifter.controller.liftMotor.getCount(); }
 };
@@ -87,14 +87,30 @@ TEST_F(LifterTest, liftUpTest2)
 
 TEST_F(LifterTest, liftDownTest1)
 {
-  lifter.liftUp(-90);
-  ASSERT_LE(lifter.getCurrentAngle(), -93);
-  ASSERT_GE(lifter.getCurrentAngle(), -90);
+  lifter.liftDown(90);
+  ASSERT_GE(lifter.getCurrentAngle(), -93);
+  ASSERT_LE(lifter.getCurrentAngle(), -90);
 }
 
 TEST_F(LifterTest, liftDownTest2)
 {
-  lifter.liftUp(-45);
-  ASSERT_LE(lifter.getCurrentAngle(), -48);
-  ASSERT_GE(lifter.getCurrentAngle(), -45);
+  lifter.liftDown(45);
+  ASSERT_GE(lifter.getCurrentAngle(), -48);
+  ASSERT_LE(lifter.getCurrentAngle(), -45);
+}
+
+TEST_F(LifterTest, defaultSetTest1)
+{
+  lifter.liftUp(90);
+  ASSERT_GE(lifter.getCurrentAngle(), 90);
+  lifter.defaultSet();
+  ASSERT_GE(lifter.getCurrentAngle(), -2);
+  ASSERT_LE(lifter.getCurrentAngle(), 2);
+}
+
+TEST_F(LifterTest, defaultSetTest2)
+{
+  lifter.defaultSet();
+  ASSERT_GE(lifter.getCurrentAngle(), -2);
+  ASSERT_LE(lifter.getCurrentAngle(), 2);
 }

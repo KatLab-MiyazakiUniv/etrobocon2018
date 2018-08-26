@@ -16,7 +16,7 @@ void Lifter::reset()
 std::int8_t Lifter::getCurrentAngle()
 {
   std::int32_t current_angle = controller.liftMotor.getCount();
-  return default_count - current_angle;
+  return current_angle - default_count;
 }
 
 std::int8_t Lifter::limitPwm(std::int8_t pwm)
@@ -30,7 +30,7 @@ std::int8_t Lifter::limitPwm(std::int8_t pwm)
   }
 }
 
-void Lifter::liftUp(std::int8_t angle, std::int8_t pwm)
+void Lifter::liftUp(std::uint8_t angle, std::int8_t pwm)
 {
   while(1) {
     if(getCurrentAngle() > angle) {
@@ -42,10 +42,10 @@ void Lifter::liftUp(std::int8_t angle, std::int8_t pwm)
   controller.liftMotor.setPWM(0);
 }
 
-void Lifter::liftDown(std::int8_t angle, std::int8_t pwm)
+void Lifter::liftDown(std::uint8_t angle, std::int8_t pwm)
 {
   while(1) {
-    if(getCurrentAngle() < angle) {
+    if(getCurrentAngle() < -angle) {
       break;
     }
     controller.liftMotor.setPWM(-limitPwm(pwm));
@@ -54,23 +54,17 @@ void Lifter::liftDown(std::int8_t angle, std::int8_t pwm)
   controller.liftMotor.setPWM(0);
 }
 
-void Lifter::changeDefault(int angle)
-{
-  Lifter::defaultSet(angle);
-  Lifter::reset();
-}
-
 void Lifter::defaultSet(std::int8_t pwm)
 {
   std::int8_t sign;
-  if(getCurrentAngle() > 0) {
+  if(getCurrentAngle() < 0) {
     sign = 1;
   } else {
     sign = -1;
   }
 
   while(1) {
-    if((sign == 1 && getCurrentAngle() > default_count) || (sign == -1 && getCurrentAngle() < default_count)) {
+    if((sign == 1 && getCurrentAngle() >= 0) || (sign == -1 && getCurrentAngle() <= 0)) {
       break;
     }
     controller.liftMotor.setPWM(sign * limitPwm(pwm));
