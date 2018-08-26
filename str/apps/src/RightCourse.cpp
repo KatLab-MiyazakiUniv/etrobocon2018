@@ -8,18 +8,18 @@
 /**
  *Rコースの走行範囲の切り替えを行う
  */
-void RightCourse::run(int16_t brightness)
+void RightCourse::run(int16_t brightness,int16_t black,int16_t white)
 {
   LineTracerWalker lineTracer;
   //runNormalCourse(brightness);
   //runShinkansen();
-  runParking(brightness,lineTracer);
+  runParking(brightness,lineTracer,black,white);
 }
 
 
-void RightCourse::runParking(int16_t brightness,LineTracerWalker lineTracer){
+void RightCourse::runParking(int16_t brightness,LineTracerWalker lineTracer,int16_t black,int16_t white){
   Parking parking;
-  parking.runParpendicular(brightness,lineTracer);
+  parking.runParpendicular(brightness,lineTracer,black,white);
 }
 
 void RightCourse::runNormalCourse(int16_t brightness)

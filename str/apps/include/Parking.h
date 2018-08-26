@@ -29,7 +29,7 @@ public:
      * 実行開始時にBasicWalkerクラスのインスタンスを生成し、
      * goStraightメンバ関数とspinメンバ関数に依存する。
      */
-    void runParpendicular(int16_t target_brightness,LineTracerWalker lineTracer);
+    void runParpendicular(int16_t target_brightness,LineTracerWalker lineTracer,int16_t black,int16_t white);
 
     /**
      * 直角駐車を実行する。
