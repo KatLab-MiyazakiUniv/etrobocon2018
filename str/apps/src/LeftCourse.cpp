@@ -42,12 +42,8 @@ void LeftCourse::runNormalCourse(int16_t brightness)
     isNormalCourse = normalCourse.runNormalCourse(walker.get_count_L(), walker.get_count_R(),
                                                   luminance, brightness);
 
-    if(normalCourse.lineTracerWalker.getForward() < 0) {
-      walker.run(0, 0);
-    } else {
-      walker.run(normalCourse.lineTracerWalker.getForward(),
-                 normalCourse.lineTracerWalker.getTurn());
-    }
+    normalCourse.runOrStop(walker);
+
     if(!isNormalCourse) {
       walker.run(0, 0);
       break;

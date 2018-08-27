@@ -8,18 +8,18 @@
 /**
  *Rコースの走行範囲の切り替えを行う
  */
-void RightCourse::run(int16_t brightness,int16_t black,int16_t white)
+void RightCourse::run(int16_t brightness, int16_t black, int16_t white)
 {
   LineTracerWalker lineTracer;
-  //runNormalCourse(brightness);
-  //runShinkansen();
-  runParking(brightness,lineTracer,black,white);
+  runNormalCourse(brightness);
+  runParking(brightness, lineTracer, black, white);
 }
 
-
-void RightCourse::runParking(int16_t brightness,LineTracerWalker lineTracer,int16_t black,int16_t white){
-  Parking parking;
-  parking.runParpendicular(brightness,lineTracer,black,white);
+void RightCourse::runParking(int16_t brightness, LineTracerWalker lineTracer, int16_t black,
+                             int16_t white)
+{
+  Parking parking{ controller };
+  parking.runParpendicular(brightness, lineTracer, black, white);
 }
 
 void RightCourse::runNormalCourse(int16_t brightness)
@@ -36,12 +36,7 @@ void RightCourse::runNormalCourse(int16_t brightness)
     isNormalCourse = normalCourse.runNormalCourse(brightness);
     normalCourse.lineTracerWalker.runLine(walker.get_count_L(), walker.get_count_R(), luminance);
 
-    if(normalCourse.lineTracerWalker.getForward() < 0) {
-      walker.run(0, 0);
-    } else {
-      walker.run(normalCourse.lineTracerWalker.getForward(),
-                 normalCourse.lineTracerWalker.getTurn());
-    }
+    normalCourse.runOrStop(walker);
     if(!isNormalCourse) {
       walker.run(0, 0);
       break;
