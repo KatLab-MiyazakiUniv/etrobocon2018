@@ -6,16 +6,14 @@
 
 #include "Parking.h"
 
-Parking::Parking() : colorSensor(PORT_3) {}
-
 void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineTracer,
                                int16_t black, int16_t white)
 {
-  BasicWalker basicWalker;
+  BasicWalker basicWalker{ controller };
 
-  msg_f("Do ParallelParking...", 0);
+  controller.printDisplay(0, "Do ParallelParking...");
   basicWalker.setPidWithoutTarget(17.0, 1.0, 0.1);
-  basicWalker.goStraight_b(30, 1000, target_brightness, colorSensor);
+  basicWalker.goStraight_b(30, 1000, target_brightness);
 
   basicWalker.spin(basicWalker.SPIN_LEFT, 44);
 
@@ -24,10 +22,7 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
   //ライントレース開始
   int count = 0;
   while(1) {
-    rgb_raw_t rgb;
-    colorSensor.getRawColor(rgb);
-    int16_t now_brightness = 0;
-    now_brightness = 0.298912 * rgb.r + 0.586611 * rgb.g + 0.114478 * rgb.b;
+    int16_t now_brightness = controller.getBrightness();
     lineTracer.speedControl.setPid(17.0, 1.0, 0.1, 20.0);
     lineTracer.turnControl.setPid(4.0, 1.0, 0.8, target_brightness);
 
@@ -37,7 +32,7 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
     } else {
       walker.run(lineTracer.getForward(), lineTracer.getTurn());
     }
-    if(ev3_button_is_pressed(BACK_BUTTON)) {
+    if(controller.buttonIsPressedBack()) {
       walker.run(0, 0);
       break;
     }
@@ -61,7 +56,7 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
       waitThreeTimes();
       break;
     }
-    tslp_tsk(4);
+    controller.tslpTsk(4);
   }  // whileのおわり
   // basicWalker.goStraight( 30, 600 );
   // basicWalker.spin( basicWalker.SPIN_RIGHT, 90 );
@@ -69,14 +64,14 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
 
   basicWalker.setPidWithoutTarget(17.0, 1.0, 0.1);
   basicWalker.reset();
-  basicWalker.goStraight(30, 350, target_brightness, colorSensor);
+  basicWalker.goStraight(30, 350, target_brightness);
 }
 
 void Parking::runParallelrun()
 {
-  BasicWalker basicWalker;
+  BasicWalker basicWalker{ controller };
 
-  msg_f("Do ParpendicularParking...", 0);
+  controller.printDisplay(0, "Do ParpendicularParking...");
 
   basicWalker.reset();
   basicWalker.setPidWithoutTarget(4.0, 2.0, 0.02);
@@ -87,7 +82,7 @@ void Parking::runParallelrun()
 
   basicWalker.spin(basicWalker.SPIN_RIGHT, 90);
   basicWalker.reset();
-  tslp_tsk(100);
+  controller.tslpTsk(100);
 
   // basicWalker.goStraight( 150, 550 );
   basicWalker.setPidWithoutTarget(1.0, 2.0, 0.02);
@@ -100,11 +95,11 @@ void Parking::runParallelrun()
 void Parking::waitThreeTimes()
 {
   walker.run(0, 0);
-  ev3_speaker_play_tone(NOTE_FS4, 100);
-  tslp_tsk(1000);
-  ev3_speaker_play_tone(NOTE_FS4, 100);
-  tslp_tsk(1000);
-  ev3_speaker_play_tone(NOTE_FS4, 100);
-  tslp_tsk(1000);
-  ev3_speaker_play_tone(NOTE_FS5, 800);
+  controller.speakerPlayTone(controller.noteFs4, 100);
+  controller.tslpTsk(1000);
+  controller.speakerPlayTone(controller.noteFs4, 100);
+  controller.tslpTsk(1000);
+  controller.speakerPlayTone(controller.noteFs4, 100);
+  controller.tslpTsk(1000);
+  controller.speakerPlayTone(controller.noteFs4, 800);
 }
