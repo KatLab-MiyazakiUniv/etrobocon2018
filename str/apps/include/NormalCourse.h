@@ -3,10 +3,12 @@
 
 #include "Distance.h"
 #include "LineTracerWalker.h"
+#include "Walker.h"
 
 class NormalCourse {
  public:
   void stop();
+  void runOrStop(Walker& walker);
   LineTracerWalker lineTracerWalker;
 
  protected:
