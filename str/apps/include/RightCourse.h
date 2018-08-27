@@ -9,11 +9,10 @@
 
 #include "Controller.h"
 #include "Distance.h"
+#include "Parking.h"
 #include "RightNormalCourse.h"
 #include "SelfLocalization.h"
 #include "Walker.h"
-#include "Parking.h"
-
 
 /**
  * 走行場所の状態を保持する列挙型
@@ -45,11 +44,11 @@ class RightCourse {
       controller(controller_)
   {
   } /** 各エリアの処理を呼び出す **/
-  void run(int16_t brightness, int16_t black,int16_t white);
+  void run(int16_t brightness, int16_t black, int16_t white);
   /** NormalCourseエリアの処理 **/
   void runNormalCourse(int16_t brightness);
-  
-  void runParking(int16_t brightness,LineTracerWalker lineTracer,int16_t black,int16_t white);
+
+  void runParking(int16_t brightness, LineTracerWalker lineTracer, int16_t black, int16_t white);
 
  private:
   LineTracerWalker lineTracer;

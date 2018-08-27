@@ -20,5 +20,5 @@ class RightCourseTest : public ::testing::Test {
 
 TEST_F(RightCourseTest, runTest)
 {
-  rc.run(30);
+  rc.run(30, 0, 100);
 }
