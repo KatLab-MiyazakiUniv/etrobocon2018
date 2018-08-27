@@ -7,8 +7,13 @@
 
 class Motor {
  public:
-  int getCount() { return 0; };
-  void setPWM(int pwm){};
+  double count = 0.0;
+  int getCount() { return static_cast<int>(count); };
+  void setPWM(int pwm)
+  {
+    count += pwm * 0.05;
+    //std::cout << count << std::endl;
+  };
   void stop(){};
   void reset(){};
   void setBrake(bool isBrake){};

@@ -10,36 +10,65 @@ void Lifter::reset()
 {
   controller.liftMotor.reset();
   controller.liftMotor.setBrake(true);
-  controller.liftMotor.setBrake(false);
+  default_count = controller.liftMotor.getCount();
 }
 
-void Lifter::liftUp()
+std::int8_t Lifter::getCurrentAngle()
 {
-  controller.liftMotor.setPWM(20);
-  controller.clock.sleep(1000);
-  controller.liftMotor.setBrake(true);
+  std::int32_t current_angle = controller.liftMotor.getCount();
+  return current_angle - default_count;
 }
 
-void Lifter::liftDown()
+std::int8_t Lifter::limitPwm(std::int8_t pwm)
 {
-  controller.liftMotor.setPWM(-20);
-  controller.clock.sleep(1000);
-  controller.liftMotor.setBrake(true);
+  if(pwm > 100) {
+    return 100;
+  } else if(pwm < 1) {
+    return pwm = 1;
+  } else {
+    return pwm;
+  }
 }
 
-void Lifter::changeDefault(int angle)
+void Lifter::liftUp(std::uint8_t angle, std::int8_t pwm)
 {
-  Lifter::defaultSet(angle);
-  Lifter::reset();
-}
-
-void Lifter::defaultSet(int angle)
-{
-  int i = 0;
-  for(i = 0; i < 300; i++) {
-    controller.liftMotor.setPWM(-((controller.liftMotor.getCount() - angle) % 360));
-    controller.clock.sleep(1);
+  while(1) {
+    if(getCurrentAngle() > angle) {
+      break;
+    }
+    controller.liftMotor.setPWM(limitPwm(pwm));
+    controller.tslpTsk(4);
   }
   controller.liftMotor.setPWM(0);
-  controller.liftMotor.setBrake(true);
+}
+
+void Lifter::liftDown(std::uint8_t angle, std::int8_t pwm)
+{
+  while(1) {
+    if(getCurrentAngle() < -angle) {
+      break;
+    }
+    controller.liftMotor.setPWM(-limitPwm(pwm));
+    controller.tslpTsk(4);
+  }
+  controller.liftMotor.setPWM(0);
+}
+
+void Lifter::defaultSet(std::int8_t pwm)
+{
+  std::int8_t sign;
+  if(getCurrentAngle() < 0) {
+    sign = 1;
+  } else {
+    sign = -1;
+  }
+
+  while(1) {
+    if((sign == 1 && getCurrentAngle() >= 0) || (sign == -1 && getCurrentAngle() <= 0)) {
+      break;
+    }
+    controller.liftMotor.setPWM(sign * limitPwm(pwm));
+    controller.tslpTsk(4);
+  }
+  controller.liftMotor.setPWM(0);
 }
