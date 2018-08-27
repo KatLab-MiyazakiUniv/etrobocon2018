@@ -1,9 +1,5 @@
 {
-        "cmake.configureOnOpen": false,
         "files.eol": "\n",
-        "editor.formatOnSave": true,
-        "clang-format.executable": "clang-format",
-        "C_Cpp.clang_format_path": "${workspaceRoot}/.clang-format",
         "files.associations": {
                 "type_traits": "cpp",
                 "__config": "cpp",
@@ -18,6 +14,7 @@
                 "cstdint": "cpp",
                 "functional": "cpp",
                 "tuple": "cpp",
-                "utility": "cpp"
+                "utility": "cpp",
+                "random": "cpp"
         }
 }

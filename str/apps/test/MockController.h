@@ -1,12 +1,19 @@
 #ifndef __CONTROLLER__
 #define __CONTROLLER__
 
+#include <cstdint>
 #include <cstdlib>
+#include <iostream>
 
 class Motor {
  public:
-  int getCount() { return 0; };
-  void setPWM(int pwm){};
+  double count = 0.0;
+  int getCount() { return static_cast<int>(count); };
+  void setPWM(int pwm)
+  {
+    count += pwm * 0.05;
+    //std::cout << count << std::endl;
+  };
   void stop(){};
   void reset(){};
   void setBrake(bool isBrake){};
@@ -33,11 +40,12 @@ class Controller {
   Clock clock;
   Motor rightWheel;
   Motor leftWheel;
+  Motor liftMotor;
   TouchSensor touchSensor;
   ColorSensor colorSensor;
 
   int noteFs6 = 0;
-  Controller() {}
+  Controller() { mock_r = mock_g = mock_b = 0; }
   void speakerSetVolume(int volume){};
   void ledSetColorOrange(){};
   void ledSetColorGreen(){};
@@ -50,6 +58,14 @@ class Controller {
       return true;
     }
     return false;
+  };
+  void getRawColor(std::uint16_t& r, std::uint16_t& g, std::uint16_t& b)
+  {
+    r = mock_r;
+    g = mock_g;
+    b = mock_b;
+
+    return;
   };
   bool buttonIsPressedUp() { return false; };
   bool buttonIsPressedDown() { return false; };
@@ -75,5 +91,12 @@ class Controller {
   int exitCounter = 0;
   int exitCountLimit = 1000;
   int brightness = 0;
+  std::uint16_t mock_r, mock_g, mock_b;
+  void setMockRgb(std::uint16_t r, std::uint16_t g, std::uint16_t b)
+  {
+    mock_r = r;
+    mock_g = g;
+    mock_b = b;
+  }
 };
 #endif
