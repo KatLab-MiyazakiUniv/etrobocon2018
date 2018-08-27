@@ -12,7 +12,7 @@ class Motor {
   void setPWM(int pwm)
   {
     count += pwm * 0.05;
-    //std::cout << count << std::endl;
+    // std::cout << count << std::endl;
   };
   void stop(){};
   void reset(){};
@@ -45,6 +45,7 @@ class Controller {
   ColorSensor colorSensor;
 
   int noteFs6 = 0;
+  int noteFs4 = 0;
   Controller() { mock_r = mock_g = mock_b = 0; }
   void speakerSetVolume(int volume){};
   void ledSetColorOrange(){};

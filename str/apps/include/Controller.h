@@ -37,6 +37,7 @@ class Controller {
   {
   }
   uint16_t noteFs6 = NOTE_FS6;
+  uint16_t noteFs4 = NOTE_FS4;
   TouchSensor touchSensor;
   ColorSensor colorSensor;
   Motor liftMotor;
