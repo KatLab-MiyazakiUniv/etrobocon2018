@@ -1,3 +1,9 @@
+/**
+ * @file Distinguisher.h
+ * @brief 走行体のカラーセンサを用いて、RGB情報より色を推定するクラス。
+ * @author Futa HIRAKOBA
+ */
+
 #ifndef __DISTINGUISHER_H__
 #define __DISTINGUISHER_H__
 
