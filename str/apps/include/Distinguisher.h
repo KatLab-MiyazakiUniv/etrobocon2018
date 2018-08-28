@@ -19,7 +19,7 @@ class Distinguisher {
   friend class DistinguisherTest;
 
  public:
-  explicit Distinguisher(Controller controller_) : controller(controller_) {}
+  explicit Distinguisher(Controller& controller_) : controller(controller_) {}
   Color getColor();
   Color distingishColor();
   void setRawColor2Rgb();
