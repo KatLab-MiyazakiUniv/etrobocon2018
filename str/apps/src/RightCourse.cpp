@@ -11,7 +11,7 @@
 void RightCourse::run(int16_t brightness, int16_t black, int16_t white)
 {
   LineTracerWalker lineTracer;
-  runNormalCourse(brightness);
+ // runNormalCourse(brightness);
   runParking(brightness, lineTracer, black, white);
 }
 

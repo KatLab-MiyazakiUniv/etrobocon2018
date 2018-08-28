@@ -35,7 +35,7 @@ void BasicWalker::goStraight_b(int32_t target_forward, int32_t distance, int16_t
     //リアルタイムで色を値を取得
     int16_t now_brightness = controller.getBrightness();
 
-    if(now_brightness < 20) {
+    if(now_brightness < 15) {
       walker.run(0, 0);
       controller.speakerPlayTone(controller.noteFs4, 100);  //音で確認.
       break;
