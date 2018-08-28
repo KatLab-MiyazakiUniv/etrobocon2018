@@ -10,17 +10,20 @@ $ g++-7 NormalCourseTest.cpp ../src/NormalCourse.cpp gtest_main.o gtest-all.o -I
 #include "NormalCourse.h"  // このヘッダファイルのcppファイルをテスト
 #include <gtest/gtest.h>
 
-class NormalCourseTest : public ::testing::Test {
-  friend class NormalCourse;
+namespace etrobocon2018_test {
 
- protected:
-  virtual void SetUp() {}
-  NormalCourse nc;
-};
+  class NormalCourseTest : public ::testing::Test {
+    friend class NormalCourse;
 
-TEST_F(NormalCourseTest, stopTest)
-{
-  nc.stop();
-  int forword = nc.lineTracerWalker.getForward();
-  ASSERT_EQ(forword, 0);
-}
+   protected:
+    virtual void SetUp() {}
+    NormalCourse nc;
+  };
+
+  TEST_F(NormalCourseTest, stopTest)
+  {
+    nc.stop();
+    int forword = nc.lineTracerWalker.getForward();
+    ASSERT_EQ(forword, 0);
+  }
+}  // namespace etrobocon2018_test

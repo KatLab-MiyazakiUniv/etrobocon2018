@@ -4,10 +4,12 @@
 #include "Controller.h"
 #include <cstdint>
 
-class LifterTest;
+namespace etrobocon2018_test {
+  class LifterTest;
+}
 
 class Lifter {
-  friend class LifterTest;
+  friend class etrobocon2018_test::LifterTest;
 
  public:
   explicit Lifter(Controller& controller_) : controller(controller_) { reset(); }

@@ -19,25 +19,27 @@ struct Rgb {
   std::uint16_t b;
 };
 
-class DistinguisherTest;
+namespace etrobocon2018_test {
+  class DistinguisherTest;
+}
 
 class Distinguisher {
-  friend class DistinguisherTest;
+  friend class etrobocon2018_test::DistinguisherTest;
 
  public:
   explicit Distinguisher(Controller& controller_) : controller(controller_) {}
   Color getColor();
-  Color distingishColor();
-  void setRawColor2Rgb();
-  void judgement(const Rgb& rgb, double& min);
-  double distanceColor(Rgb target_color);
   double last_distance = 0.0;
   double threshold_distance = 400;
-  Rgb raw_color = { Color::NONE, 0, 0, 0 };
 
  private:
   Controller controller;
   Color color = Color::NONE;
+  Color distingishColor();
+  void setRawColor2Rgb();
+  void judgement(const Rgb& rgb, double& min);
+  double distanceColor(Rgb target_color);
+  Rgb raw_color = { Color::NONE, 0, 0, 0 };
   const Rgb RED = { Color::RED, 112, 13, 9 };
   const Rgb BLUE = { Color::BLUE, 18, 47, 50 };
   const Rgb GREEN = { Color::GREEN, 24, 77, 13 };
