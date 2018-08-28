@@ -12,6 +12,9 @@
 
 enum struct Color { NONE, BLACK, WHITE, RED, BLUE, YELLOW, GREEN };
 
+/*! @class Rgb Distinguisher.h "Distinguisher.h"
+ *  @brief 色とRGB情報を保持するクラス。
+ */
 struct Rgb {
   Color color;
   std::uint16_t r;
@@ -23,13 +26,25 @@ namespace etrobocon2018_test {
   class DistinguisherTest;
 }
 
+/*! @class Distinguisher Distinguisher.h "Distinguisher.h"
+ *  @brief 走行体のカラーセンサを用いて、RGB情報より色を推定するクラス。
+ */
 class Distinguisher {
   friend class etrobocon2018_test::DistinguisherTest;
 
  public:
+  /** コンストラクタ
+   * @param controller_ ev3apiを持つControllerクラス。 */
   explicit Distinguisher(Controller& controller_) : controller(controller_) {}
+
+  /** カラーセンサ先の色を取得する。
+   * @return 色 */
   Color getColor();
+
+  /** 最後にgetColorした際の色距離 */
   double last_distance = 0.0;
+
+  /** getColorする際の最低限必要な色距離 */
   double threshold_distance = 400;
 
  private:

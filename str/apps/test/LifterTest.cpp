@@ -25,7 +25,7 @@ namespace etrobocon2018_test {
 
     std::int32_t getDefaultCount() { return lifter.default_count; }
     void addDefaultCount(int count) { lifter.default_count -= count; }
-
+    std::int8_t limitPwm(std::int8_t pwm) { return lifter.limitPwm(pwm); }
     std::int32_t getCount() { return lifter.controller.liftMotor.getCount(); }
   };
 
@@ -41,30 +41,30 @@ namespace etrobocon2018_test {
 
   TEST_F(LifterTest, limitPwmTest1)
   {
-    ASSERT_EQ(lifter.limitPwm(99), 99);
-    ASSERT_EQ(lifter.limitPwm(100), 100);
-    ASSERT_EQ(lifter.limitPwm(101), 100);
+    ASSERT_EQ(limitPwm(99), 99);
+    ASSERT_EQ(limitPwm(100), 100);
+    ASSERT_EQ(limitPwm(101), 100);
   }
 
   TEST_F(LifterTest, limitPwmTest2)
   {
-    ASSERT_EQ(lifter.limitPwm(2), 2);
-    ASSERT_EQ(lifter.limitPwm(1), 1);
-    ASSERT_EQ(lifter.limitPwm(0), 1);
+    ASSERT_EQ(limitPwm(2), 2);
+    ASSERT_EQ(limitPwm(1), 1);
+    ASSERT_EQ(limitPwm(0), 1);
   }
 
   TEST_F(LifterTest, limitPwmTest3)
   {
-    ASSERT_EQ(lifter.limitPwm(-100), 1);
-    ASSERT_EQ(lifter.limitPwm(-50), 1);
-    ASSERT_EQ(lifter.limitPwm(-1), 1);
+    ASSERT_EQ(limitPwm(-100), 1);
+    ASSERT_EQ(limitPwm(-50), 1);
+    ASSERT_EQ(limitPwm(-1), 1);
   }
 
   TEST_F(LifterTest, limitPwmTest4)
   {
-    ASSERT_EQ(lifter.limitPwm(10), 10);
-    ASSERT_EQ(lifter.limitPwm(50), 50);
-    ASSERT_EQ(lifter.limitPwm(80), 80);
+    ASSERT_EQ(limitPwm(10), 10);
+    ASSERT_EQ(limitPwm(50), 50);
+    ASSERT_EQ(limitPwm(80), 80);
   }
 
   TEST_F(LifterTest, liftUpTest1)
