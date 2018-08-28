@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/KatLab-MiyazakiUniv/etrobocon2018.svg?branch=master)](https://travis-ci.org/KatLab-MiyazakiUniv/etrobocon2018) [![CircleCI](https://circleci.com/gh/KatLab-MiyazakiUniv/etrobocon2018/tree/master.svg?style=svg)](https://circleci.com/gh/KatLab-MiyazakiUniv/etrobocon2018/tree/master)
 
 [![codecov](https://codecov.io/gh/KatLab-MiyazakiUniv/etrobocon2018/branch/master/graph/badge.svg)](https://codecov.io/gh/KatLab-MiyazakiUniv/etrobocon2018)
+[![document](https://img.shields.io/badge/Document-auto%20build-blue.svg)](https://katlab-miyazakiuniv.github.io/etrobocon2018/)
 
 ようこそ
 
