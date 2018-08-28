@@ -2,6 +2,11 @@ dist: trusty
 sudo: require
 language: none
 
+addons:
+  apt:
+    packages:
+      - doxygen
+
 service:
  - docker
 
@@ -18,6 +23,15 @@ script:
 after_success:
  - pip install --user codecov
  - codecov -t c5592368-cd84-46fc-8f63-00ff7a8fcd25
+ - doxygen Doxyfile
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: html
+  github_token: $GH_REPO_TOKEN
+  on:
+    branch: develop
 
 notifications:
   email: false
