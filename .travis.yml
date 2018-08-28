@@ -23,6 +23,7 @@ script:
 after_success:
  - pip install --user codecov
  - codecov -t c5592368-cd84-46fc-8f63-00ff7a8fcd25
+ - export PROJECT_NUMBER="$(git rev-parse HEAD ; git diff-index --quiet HEAD || echo '(with uncommitted changes)')"
  - doxygen Doxyfile
 
 deploy:
