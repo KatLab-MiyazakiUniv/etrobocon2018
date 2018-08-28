@@ -36,6 +36,3 @@ deploy:
 
 notifications:
   email: false
-  
-git:
-  submodule: false
