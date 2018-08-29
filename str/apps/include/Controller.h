@@ -37,6 +37,7 @@ class Controller {
   {
   }
   uint16_t noteFs6 = NOTE_FS6;
+  uint16_t noteFs4 = NOTE_FS4;
   TouchSensor touchSensor;
   ColorSensor colorSensor;
   Motor liftMotor;
@@ -57,6 +58,7 @@ class Controller {
   bool buttonIsPressedEnter();
   void tslpTsk(int16_t time);  // 4msec周期起動
   void printDisplay(int8_t row, const char* format, ...);
+  void getRawColor(uint16_t& r, uint16_t& g, uint16_t& b);
 
  private:
   rgb_raw_t rgb;

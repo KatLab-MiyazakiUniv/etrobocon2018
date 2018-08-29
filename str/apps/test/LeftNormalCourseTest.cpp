@@ -10,7 +10,7 @@ $ g++-7 LeftNormalCourseTest.cpp ../src/LeftNormalCourse.cpp gtest_main.o gtest-
 #include "LeftNormalCourse.h"  // このヘッダファイルのcppファイルをテスト
 #include <gtest/gtest.h>
 
-TEST(LeftNormalCourseTest, CreateTest)
-{
-  LeftNormalCourse lnc;
-}
+namespace etrobocon2018_test {
+
+  TEST(LeftNormalCourseTest, CreateTest) { LeftNormalCourse lnc; }
+}  // namespace etrobocon2018_test

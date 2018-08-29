@@ -31,30 +31,33 @@ $ ./UserInterfaceTestLocalBuild.sh
 #include <cstdint>
 #include <gtest/gtest.h>
 
-class UserInterfaceTest : public ::testing::Test {
- protected:
-  virtual void SetUp() { setControllerBrightness(brightness); }
-  Controller controller;
-  int brightness = 100;
-  void setControllerBrightness(int brightness)
+namespace etrobocon2018_test {
+
+  class UserInterfaceTest : public ::testing::Test {
+   protected:
+    virtual void SetUp() { setControllerBrightness(brightness); }
+    Controller controller;
+    int brightness = 100;
+    void setControllerBrightness(int brightness)
+    {
+      controller.brightness = brightness;
+      controller.colorSensor.brightness = brightness;
+    }
+  };
+
+  TEST_F(UserInterfaceTest, setBrightnessWithColorTest)
   {
-    controller.brightness = brightness;
-    controller.colorSensor.brightness = brightness;
+    UserInterface ui{ controller };
+    std::int16_t resultBrightness;
+    ui.setBrightnessWithColor(resultBrightness, "test");
+    ASSERT_EQ(resultBrightness, brightness);
   }
-};
 
-TEST_F(UserInterfaceTest, setBrightnessWithColorTest)
-{
-  UserInterface ui{ controller };
-  std::int16_t resultBrightness;
-  ui.setBrightnessWithColor(resultBrightness, "test");
-  ASSERT_EQ(resultBrightness, brightness);
-}
-
-TEST_F(UserInterfaceTest, setBrightnessTest)
-{
-  UserInterface ui{ controller };
-  std::int8_t resultBrightness;
-  ui.setBrightness(resultBrightness, "test");
-  ASSERT_EQ(resultBrightness, brightness);
-}
+  TEST_F(UserInterfaceTest, setBrightnessTest)
+  {
+    UserInterface ui{ controller };
+    std::int8_t resultBrightness;
+    ui.setBrightness(resultBrightness, "test");
+    ASSERT_EQ(resultBrightness, brightness);
+  }
+}  // namespace etrobocon2018_test

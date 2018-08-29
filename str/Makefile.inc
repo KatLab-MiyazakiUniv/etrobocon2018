@@ -15,7 +15,11 @@ SelfLocalization.o \
 Emoter.o \
 NormalCourse.o \
 FirstCode.o \
+Parking.o \
+BasicWalker.o \
 Controller.o \
+Lifter.o \
+Distinguisher.o
 
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \

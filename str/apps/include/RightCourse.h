@@ -9,6 +9,7 @@
 
 #include "Controller.h"
 #include "Distance.h"
+#include "Parking.h"
 #include "RightNormalCourse.h"
 #include "SelfLocalization.h"
 #include "Walker.h"
@@ -43,11 +44,11 @@ class RightCourse {
       controller(controller_)
   {
   } /** 各エリアの処理を呼び出す **/
-  void run(int16_t brightness);
+  void run(int16_t brightness, int16_t black, int16_t white);
   /** NormalCourseエリアの処理 **/
   void runNormalCourse(int16_t brightness);
-  /** Shinkansenエリアの処理 */
-  void runShinkansen();
+
+  void runParking(int16_t brightness, LineTracerWalker lineTracer, int16_t black, int16_t white);
 
  private:
   LineTracerWalker lineTracer;
