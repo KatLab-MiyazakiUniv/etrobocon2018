@@ -41,27 +41,37 @@ bool RightNormalCourse::runNormalCourse(int16_t target_brightness){
 
         case RightStatus::R5:
             lineTracerWalker.speedControl.setPid ( 2.0, 1.0, 0.1, 100.0 );
-            lineTracerWalker.turnControl.setPid ( 2.4, 1.0, 0.14, target_brightness - 5.0);
+            lineTracerWalker.turnControl.setPid ( 1.5, 1.0, 0.14, target_brightness - 20.0);
             break;
 
         case RightStatus::R6:
             lineTracerWalker.speedControl.setPid(10.0, 1.0, 0.1, 200.0);
-            lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);       
+            lineTracerWalker.turnControl.setPid(2.0, 0.2, 0.1, target_brightness);       
             break;
 
         case RightStatus::R7:
             lineTracerWalker.speedControl.setPid ( 2.0, 1.0, 0.1, 100.0 );
-            lineTracerWalker.turnControl.setPid ( 1.9, 0.8, 0.1, target_brightness);
+            lineTracerWalker.turnControl.setPid ( 1.6, 0.01, 0.3, target_brightness - 20.0);
             break;
 
         case RightStatus::R8:
             lineTracerWalker.speedControl.setPid(10.0, 1.0, 0.1, 200.0);
-            lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);       
+            lineTracerWalker.turnControl.setPid(2.0, 0.2, 0.15, target_brightness);       
             break;
 
         case RightStatus::R9:
             lineTracerWalker.speedControl.setPid ( 10.0, 1.0, 0.12, 80.0 );
-            lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.1, target_brightness );
+            lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.1, target_brightness);
+            break;
+
+        case RightStatus::TEST0:
+            lineTracerWalker.speedControl.setPid(10.0, 1.0, 0.1, 200.0);
+            lineTracerWalker.turnControl.setPid(0.6, 0.0, 0.0, target_brightness);       
+            break;
+
+        case RightStatus::TEST1:
+            lineTracerWalker.speedControl.setPid ( 2.0, 1.0, 0.1, 100.0 );
+            lineTracerWalker.turnControl.setPid ( 1.6, 0.0, 0.1, target_brightness - 20.0);
             break;
 
         case RightStatus::STOP: stop(); break;
@@ -74,6 +84,7 @@ bool RightNormalCourse::runNormalCourse(int16_t target_brightness){
 bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR){
     distanse_total = distance.getDistanceTotal(countL, countR);
     old_status = status;
+    /*
     if(distanse_total < 2500)status = RightStatus::R1;
     else if(distanse_total < 4495)status = RightStatus::R2;
     else if(distanse_total < 5256)status = RightStatus::R3;
@@ -83,7 +94,9 @@ bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR){
     else if(distanse_total < 8590)status = RightStatus::R7;
     else if(distanse_total < 11740)status = RightStatus::R8;
     else if(distanse_total < 12500)status = RightStatus::R9;
-
+    */
+    if(distanse_total < 750)status = RightStatus::TEST0;
+    else if(distanse_total < 2250)status = RightStatus::TEST1;
     else status = RightStatus::STOP;
     if(old_status != status) return true;
     return false;

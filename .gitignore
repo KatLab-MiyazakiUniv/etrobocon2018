@@ -40,3 +40,10 @@ appsの*
 auto_build.sh
 
 *.dSYM/
+
+# VSCode Setting Files
+*.json
+
+
+# このファイルも追跡対象外にする
+.gitignore

@@ -24,6 +24,9 @@ enum struct RightStatus {
     MIDDLE_SPEED,
     SLOW_DOWN,
 
+    TEST0,
+    TEST1,
+
     R1,
     R2,
     R3,
