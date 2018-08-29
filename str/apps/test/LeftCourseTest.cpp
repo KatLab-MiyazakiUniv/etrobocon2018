@@ -11,14 +11,14 @@ $ g++-7 LeftCourseTest.cpp ../src/LeftCourse.cpp gtest_main.o gtest-all.o -I../i
 #include "Controller.h"
 #include <gtest/gtest.h>
 
-class LeftCourseTest : public ::testing::Test {
- protected:
-  virtual void SetUp() {}
-  Controller controller;
-  LeftCourse lc{ controller };
-};
+namespace etrobocon2018_test {
 
-TEST_F(LeftCourseTest, runTest)
-{
-  lc.run(30);
-}
+  class LeftCourseTest : public ::testing::Test {
+   protected:
+    virtual void SetUp() {}
+    Controller controller;
+    LeftCourse lc{ controller };
+  };
+
+  TEST_F(LeftCourseTest, runTest) { lc.run(30); }
+}  // namespace etrobocon2018_test

@@ -42,3 +42,4 @@ appsの*
 auto_build.sh
 
 *.dSYM/
+html/
