@@ -2,29 +2,32 @@
  * SelfLocalizationTest.cpp
  */
 
-/* コンパイル(平木場) 
-$ g++-7 DistanceTest.cpp ../src/Distance.cpp gtest_main.o gtest-all.o -I../include -I../../googletest/googletest/include
+/* コンパイル(平木場)
+$ g++-7 DistanceTest.cpp ../src/Distance.cpp gtest_main.o gtest-all.o -I../include
+-I../../googletest/googletest/include
 */
 
+#include "Distance.h"  // このヘッダファイルのcppファイルをテスト
 #include <gtest/gtest.h>
-#include "Distance.h" // このヘッダファイルのcppファイルをテスト
 
-TEST( DistanceTest, getDistanceTotalTest1 )
-{
+namespace etrobocon2018_test {
+
+  TEST(DistanceTest, getDistanceTotalTest1)
+  {
     Distance ds;
     int l, r;
-    
+
     l = 10;
     r = 20;
 
-    ASSERT_EQ(ds.getDistanceTotal(l, r), (l + r)/2);
-}
+    ASSERT_EQ(ds.getDistanceTotal(l, r), (l + r) / 2);
+  }
 
-TEST( DistanceTest, getDistanceCurrentTest1 )
-{
+  TEST(DistanceTest, getDistanceCurrentTest1)
+  {
     Distance ds;
     int l, r, step_l, step_r;
-    
+
     l = 10;
     r = 20;
     ds.getDistanceTotal(l, r);
@@ -32,24 +35,20 @@ TEST( DistanceTest, getDistanceCurrentTest1 )
     step_l = 20;
     step_r = 10;
 
-    ASSERT_EQ(
-        ds.getDistanceCurrent(l + step_l, r + step_r), 
-        (step_l + step_r)/2
-    );
-}
+    ASSERT_EQ(ds.getDistanceCurrent(l + step_l, r + step_r), (step_l + step_r) / 2);
+  }
 
-TEST( DistanceTest, getDistanceCurrentTest2 )
-{
+  TEST(DistanceTest, getDistanceCurrentTest2)
+  {
     Distance ds;
     int l, r;
-    
+
     l = 100;
     r = 200;
     ds.getDistanceTotal(l, r);
     ds.resetDistance(l, r);
 
-    ASSERT_EQ(
-        ds.getDistanceTotal(l, r), 
-        (l + r)/2
-    );
-}
+    ASSERT_EQ(ds.getDistanceTotal(l, r), (l + r) / 2);
+  }
+
+}  // namespace etrobocon2018_test
