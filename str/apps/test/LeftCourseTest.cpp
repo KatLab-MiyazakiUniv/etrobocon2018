@@ -20,5 +20,5 @@ namespace etrobocon2018_test {
     LeftCourse lc{ controller };
   };
 
-  TEST_F(LeftCourseTest, runTest) { lc.run(30); }
+  TEST_F(LeftCourseTest, runTest) { lc.run(30, 0, 100, 50); }
 }  // namespace etrobocon2018_test

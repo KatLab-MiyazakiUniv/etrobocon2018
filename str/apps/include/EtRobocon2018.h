@@ -33,6 +33,7 @@ class EtRobocon2018 {
   Controller controller;
   int16_t light_white;
   int16_t light_black;
+  int16_t light_gray;
   int16_t target_brightness;
   int32_t firstCode;
 };
