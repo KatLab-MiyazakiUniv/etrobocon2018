@@ -1,2 +1,0 @@
-./makeRight.sh
-./makeLeft.sh
