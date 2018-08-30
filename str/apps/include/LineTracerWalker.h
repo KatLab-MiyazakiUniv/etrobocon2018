@@ -4,6 +4,20 @@
 #include "SpeedControl.h"
 #include "TurnControl.h"
 
+/**
+ int main(){
+    lineTracerWalker.speedControl.setPid(6.0, 1.0, 0.5, 110.0);
+    lineTracerWalker.turnControl.setPid(3.0, 1.0, 1.5, target_brightness);
+    while(1){
+        auto luminance = controller.getBrightness();
+        lineTracerWalker.runLine(walker.get_count_L(), walker.get_count_R(), luminance);
+        walker.run(lineTracerWalker.getForward(), lineTracerWalker.getTurn());
+
+        controller.tlspTsk(4);
+    }
+}
+*/
+
 class LineTracerWalker {
  public:
   LineTracerWalker();
