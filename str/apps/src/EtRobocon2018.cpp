@@ -5,6 +5,7 @@
  * \section intro_sec こんにちは！
  * @b
  * このページは片山研究所モデルベース開発推進事業部が開発している、ETロボコン2017アドバンスドクラス用のプログラムのドキュメントです！
+ * 詳しくはコチラ→ https://github.com/KatLab-MiyazakiUniv/etrobocon2018	
  */
 
 /*
