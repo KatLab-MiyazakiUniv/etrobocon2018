@@ -13,7 +13,7 @@ void LeftCourse::setFirstCode(int32_t code)
 /**
  * Lコースの走行範囲の切り替えを行う
  */
-void LeftCourse::run(int16_t brightness)
+void LeftCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t gray)
 {
   runNormalCourse(brightness);
 
@@ -24,8 +24,16 @@ void LeftCourse::run(int16_t brightness)
   controller.printDisplay(3, "Finished Puzzle");
 
   // Park
-  runParallelParking();
-  controller.printDisplay(3, "Finished Parking");
+  controller.printDisplay(5, "> Start ParallelParking <");
+  runParking(brightness, black, white, gray);
+  controller.printDisplay(7, "> Finished ParallelParking <");
+}
+
+// void LeftCourse::runParking(int16_t brightness, int16_t gray)
+void LeftCourse::runParking(int16_t brightness, int16_t black, int16_t white, int16_t gray)
+{
+  Parking parking{ controller };
+  parking.runParallel(brightness, black, white, gray);
 }
 
 void LeftCourse::runNormalCourse(int16_t brightness)
@@ -58,5 +66,3 @@ void LeftCourse::runNormalCourse(int16_t brightness)
 }
 
 void LeftCourse::runBlockRange() {}
-
-void LeftCourse::runParallelParking() {}
