@@ -87,7 +87,7 @@ void bt_task( intptr_t unused )
  * motor_power モータのパワーを取得
  * motor_angle モータの角位置を取得(PORT_3)
 **/
-void sensor_log_task( intptr_t exinf )
+void sensor_log_task( intptr_t unused )
 {
   FILE *file;
   int volt = 0;
