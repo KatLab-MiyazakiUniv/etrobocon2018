@@ -64,32 +64,67 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
 
   basicWalker.setPidWithoutTarget(17.0, 1.0, 0.1);
   basicWalker.reset();
-  basicWalker.goStraight(30, 350, target_brightness);
+  basicWalker.goStraight(30, 350);
 }
 
-void Parking::runParallelrun()
+void Parking::runParallel(int16_t brightness, int16_t black, int16_t white, int16_t gray)
 {
+  LineTracerWalker lineTracer;
   BasicWalker basicWalker{ controller };
+  int count = 0;
+  int16_t grayBrightness = (gray + white) / 2;
 
-  controller.printDisplay(0, "Do ParpendicularParking...");
+  controller.printDisplay(6, ">>>>> Do ParallelParking... <<<<<");
+  while(1) {
+    int16_t luminance = controller.getBrightness();
+    lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), luminance);
 
-  basicWalker.reset();
-  basicWalker.setPidWithoutTarget(4.0, 2.0, 0.02);
-  //  basicWalker.goStraight( 150, 450 );
-  basicWalker.setPidWithoutTarget(1.0, 2.0, 0.02);
-  //    basicWalker.goStraight( 50, 150 );
-  basicWalker.reset();
+    if(lineTracer.getForward() < 0) {
+      walker.run(0, 0);
+    } else {
+      walker.run(lineTracer.getForward(), lineTracer.getTurn());
+    }
+    if(controller.buttonIsPressedBack()) {
+      walker.run(0, 0);
+      break;
+    }
 
-  basicWalker.spin(basicWalker.SPIN_RIGHT, 90);
-  basicWalker.reset();
-  controller.tslpTsk(100);
+    /*if(gray + 2 >= luminance && gray - 2 <= luminance){  //グレーを読み込んだら
+        count++;
+        ev3_speaker_play_tone( NOTE_FS4, 100 );
+    }else{
+        count = 0;
+    }*/
 
-  // basicWalker.goStraight( 150, 550 );
-  basicWalker.setPidWithoutTarget(1.0, 2.0, 0.02);
-  //  basicWalker.goStraight( 50, 250 );
-  basicWalker.reset();
+    if(black + 35 >= luminance) {  //ブラックを読み込んだら
+      count = 0;
+      controller.speakerPlayTone(controller.noteFs4, 100);
+    } else if(white + 30 >= luminance && white - 70 <= luminance) {
+      count++;
+    }
 
-  waitThreeTimes();
+    if(count > 250) {
+      waitThreeTimes();
+      break;
+    }
+
+    lineTracer.speedControl.setPid(17.0, 1.0, 0.1, 30.0);
+
+    if(grayBrightness + 3 >= luminance && grayBrightness - 1 <= luminance) {
+      lineTracer.turnControl.setPid(4.0, 1.0, 0.8, grayBrightness);
+    } else {
+      lineTracer.turnControl.setPid(4.0, 1.0, 0.8, brightness);
+    }
+    controller.tslpTsk(4);
+  }
+  basicWalker.setPidWithoutTarget(14.0, 1.0, 0.1);
+  basicWalker.goStraight(60, 600);
+  basicWalker.spin(basicWalker.SPIN_LEFT, 40);
+  // basicWalker.setPidWithoutTarget(14.0, 1.0, 0.1);
+  basicWalker.goStraight(60, 580);
+  basicWalker.spin(basicWalker.SPIN_LEFT, 90);
+  basicWalker.goStraight(30, 10);
+  // basicWalker.spin( basicWalker.SPIN_RIGHT, 90 );
 }
 
 void Parking::waitThreeTimes()

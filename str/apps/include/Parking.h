@@ -36,7 +36,7 @@ class Parking {
    * 実行開始時にBasicWalkerクラスのインスタンスを生成し、
    * goStraightメンバ関数とspinメンバ関数に依存する。
    */
-  void runParallelrun();
+  void runParallel(int16_t brightness, int16_t black, int16_t white, int16_t gray);
 
   /**
    * 3秒間待機する。
