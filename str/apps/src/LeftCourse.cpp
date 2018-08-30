@@ -15,18 +15,36 @@ void LeftCourse::setFirstCode(int32_t code)
  */
 void LeftCourse::run(int16_t brightness)
 {
-  runNormalCourse(brightness);
+  //runNormalCourse(brightness);
+  aiAnswer();
+  // getSensorLog();
 
-  controller.printDisplay(3, "Finished NormalArea");
-
-  // Puzzle
-  runBlockRange();
-  controller.printDisplay(3, "Finished Puzzle");
-
-  // Park
-  runParallelParking();
-  controller.printDisplay(3, "Finished Parking");
 }
+  //int16_t time = get_time();
+
+void LeftCourse::aiAnswer()
+{
+  // displayの三行目に文字を表示
+  controller.printDisplay(3, "aiAnswer Start!!");
+  ev3_speaker_play_tone( NOTE_FS4, 200 );
+  walker.run(30,0);
+  ev3_speaker_play_tone( NOTE_FS4, 200 );
+  tslp_tsk(3500);
+  ev3_speaker_play_tone( NOTE_FS4, 200 );
+  // その場に止まる
+  walker.reset();
+  ev3_speaker_play_tone( NOTE_FS4, 200 );
+  // 反時計回りに90°回転
+  walker.angleChange(90, 1);
+  ev3_speaker_play_tone( NOTE_FS4, 200 );
+  walker.run(30,0);
+  tslp_tsk(1000);
+  walker.run(0, 0);
+  // vcontroller.tslpTsk(4);
+  // walker.run(10,0);
+  controller.printDisplay(3, "aiAnswer1 Finished");
+}
+
 
 void LeftCourse::runNormalCourse(int16_t brightness)
 {

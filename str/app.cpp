@@ -77,3 +77,58 @@ void bt_task( intptr_t unused )
         fputc( c, g_bluetooth ); /* エコーバック */
     }
 }
+/**
+ * Logフォルダにlog数字.csvという名前でファイルを保存していく
+ * Logフォルダを消すと動かなくなる
+ * 消すときはcsvファイルだけを消すように
+ * 
+ * volt バッテリの電圧取得
+ * amp  アンペア取得
+ * motor_power モータのパワーを取得
+ * motor_angle モータの角位置を取得(PORT_3)
+**/
+void sensor_log_task( intptr_t exinf )
+{
+  FILE *file;
+  int volt = 0;
+  int amp  = 0;
+  //int motor_power = 0;
+  //int motor_angle = 0;
+  int count = 0;
+  int log_file_number = 0;
+  char log_file_name[16];
+  bool flag = true;
+  while(flag == true){
+    sprintf(log_file_name, "%s%d%s", "/Log/log", log_file_number, ".csv");
+    msg_f(log_file_name, 3);
+    file = fopen(log_file_name, "r");
+    if(file == NULL) { // ファイル名がダブらない場合
+    fclose(file);
+    file = fopen(log_file_name, "a");
+    fprintf(file, "Count, Voltage, Ampere\n");
+    flag = false;
+
+    } else { // 同じlogファイル名が存在する場合
+    log_file_number++;
+    }
+  }
+  ev3_speaker_play_tone( NOTE_FS4, 200 );
+  while(1){
+    if(ev3_button_is_pressed(BACK_BUTTON)){ // 戻るボタンを押すとlog取得終了
+    ev3_speaker_play_tone( NOTE_FS4, 500 );
+    fclose(file);
+    unl_mtx(LOG); //処理の終了
+    break;
+    }
+    count++;
+    volt = ev3_battery_voltage_mV();
+    amp  = ev3_battery_current_mA();
+    //motor_power = ev3_motor_get_power();
+    // motor_angle = ev3_motor_get_counts(PORT_3);
+    // ファイル書き込み
+    // fprintf(file, "%d,%d,%d,%d,%d\n", volt, amp, motor_power, motor_angle);
+    fprintf(file, "%d,%d,%d\n", count, volt, amp);
+    // 12msec周期起動
+    // tslp_tsk(12);
+  }
+}
