@@ -46,8 +46,6 @@ void main_task( intptr_t unused )
     EtRobocon2018 etrobocon;
     etrobocon.start( g_bluetooth_command );
 
-
-
     ter_tsk( BT_TASK );
     fclose( g_bluetooth );
 
@@ -84,17 +82,23 @@ void bt_task( intptr_t unused )
  * 
  * volt バッテリの電圧取得
  * amp  アンペア取得
- * motor_power モータのパワーを取得
- * motor_angle モータの角位置を取得(PORT_3)
+ * right_motor_counts 右モータのオフセット付き角位置取得
+ * eft_motor_counts 左モータのオフセット付き角位置取得 
 **/
 void sensor_log_task( intptr_t unused )
 {
   FILE *file;
+  Controller controller;
   int volt = 0;
   int amp  = 0;
+  int time_now = 0; // 開始時間からの経過時間を取得
+  int32_t left_motor_counts = 0; //左モータのオフセット付き角位置取得 
+  int32_t right_motor_counts = 0; //右モータのオフセット付き角位置取得 
+//   int left_motor_pwm = 0;
+//   int right_motor_pwm = 0;
   //int motor_power = 0;
   //int motor_angle = 0;
-  int count = 0;
+  //int count = 0;
   int log_file_number = 0;
   char log_file_name[16];
   bool flag = true;
@@ -105,29 +109,34 @@ void sensor_log_task( intptr_t unused )
     if(file == NULL) { // ファイル名がダブらない場合
     fclose(file);
     file = fopen(log_file_name, "a");
-    fprintf(file, "Count, Voltage, Ampere\n");
+    fprintf(file, "Time(msec), Voltage, Ampere, leftMotorCounts, rightMotorCounts\n" );
     flag = false;
 
     } else { // 同じlogファイル名が存在する場合
     log_file_number++;
     }
   }
-  ev3_speaker_play_tone( NOTE_FS4, 200 );
+  ev3_speaker_play_tone( NOTE_FS6, 200 );
   while(1){
     if(ev3_button_is_pressed(BACK_BUTTON)){ // 戻るボタンを押すとlog取得終了
-    ev3_speaker_play_tone( NOTE_FS4, 500 );
+    ev3_speaker_play_tone( NOTE_FS6, 500 ); // 終了音
     fclose(file);
     unl_mtx(LOG); //処理の終了
     break;
     }
-    count++;
+    //count++;
+    time_now = controller.clock.now();
     volt = ev3_battery_voltage_mV();
     amp  = ev3_battery_current_mA();
+    left_motor_counts = controller.leftWheel.getCount();
+    right_motor_counts = controller.rightWheel.getCount();
+    // left_motor_pwm = controller.leftWheel.getPWM();
+    // right_motor_pwm = controller.rightWheel.getPWM();
     //motor_power = ev3_motor_get_power();
     // motor_angle = ev3_motor_get_counts(PORT_3);
     // ファイル書き込み
     // fprintf(file, "%d,%d,%d,%d,%d\n", volt, amp, motor_power, motor_angle);
-    fprintf(file, "%d,%d,%d\n", count, volt, amp);
+    fprintf(file, "%d,%d,%d,%d,%d\n", time_now, volt, amp, left_motor_counts, right_motor_counts );
     // 12msec周期起動
     // tslp_tsk(12);
   }
