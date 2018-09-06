@@ -61,7 +61,7 @@ bool RightNormalCourse::runNormalCourse(int16_t target_brightness)
       break;
 
     case RightStatus::R9:
-      lineTracerWalker.speedControl.setPid(10.0, 1.0, 0.12, 150.0);
+      lineTracerWalker.speedControl.setPid(10.0, 1.0, 0.12, 90.0);
       lineTracerWalker.turnControl.setPid(2.2, 1.0, 0.11, target_brightness);
       break;
 
@@ -105,7 +105,8 @@ bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR)
     status = RightStatus::R7;
   else if(distanse_total < 11540)
     status = RightStatus::R8;
-  else if(distanse_total < 12230)
+  else if(distanse_total < 12430)//ちょうどいい感じ
+  //else if(distanse_total < 12630)//灰色を完全に通過
     status = RightStatus::R9;
   /*
    if(distanse_total < 750)
