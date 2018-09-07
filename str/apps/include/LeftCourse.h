@@ -11,6 +11,7 @@
 
 #include "Controller.h"
 #include "LeftNormalCourse.h"
+#include "Parking.h"
 #include "SelfLocalization.h"
 #include "Walker.h"
 
@@ -37,7 +38,7 @@ class LeftCourse {
   void setFirstCode(int32_t);
 
   /** 各エリアの処理を呼び出す */
-  void run(int16_t brightness);
+  void run(int16_t brightness, int16_t black, int16_t white, int16_t gray);
   /** NormalCourseエリアの処理 */
   void runNormalCourse(int16_t brightness);
   /**
@@ -50,7 +51,7 @@ class LeftCourse {
    * 縦列駐車を行う。
    * Parkingクラスに依存する。
    */
-  void runParallelParking();
+  void runParking(int16_t brightness, int16_t black, int16_t white, int16_t gray);
 
   void solveAiAnser();
 

@@ -13,12 +13,14 @@ void LeftCourse::setFirstCode(int32_t code)
 /**
  * Lコースの走行範囲の切り替えを行う
  */
-void LeftCourse::run(int16_t brightness)
+void LeftCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t gray)
 {
-  // runNormalCourse(brightness);
+  runNormalCourse(brightness);
   solveAiAnser();
-  // getSensorLog();
+  // Park
+  runParking(brightness, black, white, gray);
 }
+
 // int16_t time = get_time();
 
 void LeftCourse::solveAiAnser()
@@ -39,6 +41,13 @@ void LeftCourse::solveAiAnser()
   controller.tslpTsk(1000);
   walker.run(0, 0);
   controller.printDisplay(3, "aiAnswer1 Finished");
+}
+
+// void LeftCourse::runParking(int16_t brightness, int16_t gray)
+void LeftCourse::runParking(int16_t brightness, int16_t black, int16_t white, int16_t gray)
+{
+  Parking parking{ controller };
+  parking.runParallel(brightness, black, white, gray);
 }
 
 void LeftCourse::runNormalCourse(int16_t brightness)
@@ -71,5 +80,3 @@ void LeftCourse::runNormalCourse(int16_t brightness)
 }
 
 void LeftCourse::runBlockRange() {}
-
-void LeftCourse::runParallelParking() {}
