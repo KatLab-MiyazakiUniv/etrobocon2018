@@ -23,7 +23,6 @@ void LeftCourse::run(int16_t brightness)
 
 void LeftCourse::aiAnswer()
 {
-  // displayの三行目に文字を表示
   controller.printDisplay(3, "aiAnswer Start!!");
   ev3_speaker_play_tone(NOTE_FS4, 200);
   walker.run(30, 0);
@@ -38,11 +37,7 @@ void LeftCourse::aiAnswer()
   ev3_speaker_play_tone(NOTE_FS4, 200);
   walker.run(30, 0);
   tslp_tsk(1000);
-  while(1) {
-  }
   walker.run(0, 0);
-  // vcontroller.tslpTsk(4);
-  // walker.run(10,0);
   controller.printDisplay(3, "aiAnswer1 Finished");
 }
 
