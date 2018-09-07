@@ -16,27 +16,27 @@ void LeftCourse::setFirstCode(int32_t code)
 void LeftCourse::run(int16_t brightness)
 {
   // runNormalCourse(brightness);
-  aiAnswer();
+  solveAiAnser();
   // getSensorLog();
 }
 // int16_t time = get_time();
 
-void LeftCourse::aiAnswer()
+void LeftCourse::solveAiAnser()
 {
   controller.printDisplay(3, "aiAnswer Start!!");
-  ev3_speaker_play_tone(NOTE_FS4, 200);
+  controller.speakerPlayTone(NOTE_FS4, 200);
   walker.run(30, 0);
-  ev3_speaker_play_tone(NOTE_FS4, 200);
-  tslp_tsk(3500);
-  ev3_speaker_play_tone(NOTE_FS4, 200);
+  controller.speakerPlayTone(NOTE_FS4, 200);
+  controller.tslpTsk(3500);
+  controller.speakerPlayTone(NOTE_FS4, 200);
   // その場に止まる
   walker.reset();
-  ev3_speaker_play_tone(NOTE_FS4, 200);
+  controller.speakerPlayTone(NOTE_FS4, 200);
   // 反時計回りに90°回転
   walker.angleChange(90, 1);
-  ev3_speaker_play_tone(NOTE_FS4, 200);
+  controller.speakerPlayTone(NOTE_FS4, 200);
   walker.run(30, 0);
-  tslp_tsk(1000);
+  controller.tslpTsk(1000);
   walker.run(0, 0);
   controller.printDisplay(3, "aiAnswer1 Finished");
 }

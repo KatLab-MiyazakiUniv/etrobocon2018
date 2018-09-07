@@ -52,7 +52,7 @@ class LeftCourse {
    */
   void runParallelParking();
 
-  void aiAnswer();
+  void solveAiAnser();
 
 
  private:
