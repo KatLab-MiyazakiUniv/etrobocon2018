@@ -52,11 +52,16 @@ class LeftCourse {
    */
   void runParallelParking();
 
+  void solveAiAnser();
+
+
  private:
   Walker walker;
   /** 自己位置推定 インスタンス 初期化*/
   SelfLocalization sl;
   Controller controller;
+  // Motor motor;
+  // GyroSensor gyro_sensor;
 
   /**
    * UserInterfaceの初期位置コードを記録する。

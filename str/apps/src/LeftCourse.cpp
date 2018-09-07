@@ -15,17 +15,30 @@ void LeftCourse::setFirstCode(int32_t code)
  */
 void LeftCourse::run(int16_t brightness)
 {
-  runNormalCourse(brightness);
+  // runNormalCourse(brightness);
+  solveAiAnser();
+  // getSensorLog();
+}
+// int16_t time = get_time();
 
-  controller.printDisplay(3, "Finished NormalArea");
-
-  // Puzzle
-  runBlockRange();
-  controller.printDisplay(3, "Finished Puzzle");
-
-  // Park
-  runParallelParking();
-  controller.printDisplay(3, "Finished Parking");
+void LeftCourse::solveAiAnser()
+{
+  controller.printDisplay(3, "aiAnswer Start!!");
+  controller.speakerPlayTone(NOTE_FS4, 200);
+  walker.run(30, 0);
+  controller.speakerPlayTone(NOTE_FS4, 200);
+  controller.tslpTsk(3500);
+  controller.speakerPlayTone(NOTE_FS4, 200);
+  // その場に止まる
+  walker.reset();
+  controller.speakerPlayTone(NOTE_FS4, 200);
+  // 反時計回りに90°回転
+  walker.angleChange(90, 1);
+  controller.speakerPlayTone(NOTE_FS4, 200);
+  walker.run(30, 0);
+  controller.tslpTsk(1000);
+  walker.run(0, 0);
+  controller.printDisplay(3, "aiAnswer1 Finished");
 }
 
 void LeftCourse::runNormalCourse(int16_t brightness)
