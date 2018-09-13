@@ -17,23 +17,23 @@ bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int16_t l
 {
   switch(status) {
     case LeftStatus::STRAIGHT:
-      lineTracerWalker.speedControl.setPid(17.0, 1.0, 0.1, 180.0);
-      lineTracerWalker.turnControl.setPid(4.0, 1.0, 0.8, target_brightness);
+      lineTracerWalker.speedControl.setPid(5.0, 1.0, 0.1, 180.0);
+      lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);
       lineTracerWalker.runLine(countL, countR, light_value);
       break;
 
     case LeftStatus::EDGE_CHANGE:
-      lineTracerWalker.speedControl.setPid(6.0, 1.0, 0.5, 110.0);
-      lineTracerWalker.turnControl.setPid(3.0, 1.0, 1.5, target_brightness);
+      lineTracerWalker.speedControl.setPid(2.0, 1.0, 0.12, 150.0);
+      lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);
       lineTracerWalker.runLine(countL, countR, light_value);
       break;
 
     case LeftStatus::EDGE_RESET:
-      lineTracerWalker.speedControl.setPid(2.0, 0.5, 1.2, 110.0);
-      lineTracerWalker.turnControl.setPid(10.0, 0.5, 1.5, target_brightness);
+      lineTracerWalker.speedControl.setPid(2.0, 1.0, 0.12, 120.0);
+      lineTracerWalker.turnControl.setPid(3.0, 0.001, 0.27, target_brightness);
       lineTracerWalker.runLine(countL, countR, light_value);
       break;
-
+/*
     case LeftStatus::STRAIGHT_SLOW:
       lineTracerWalker.setForward(15);
       lineTracerWalker.setTurn(-2);
@@ -66,7 +66,7 @@ bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int16_t l
       lineTracerWalker.turnControl.setPid(4.0, 2.0, 0.096, target_brightness - 5.0);
       lineTracerWalker.runLine(countL, countR, light_value);
       break;
-
+*/
     case LeftStatus::STOP:
       stop();
       break;
@@ -87,7 +87,7 @@ bool LeftNormalCourse::statusCheck(int32_t countL, int32_t countR)
     status = LeftStatus::EDGE_CHANGE;
   else if(distanse_total < 6600)
     status = LeftStatus::STRAIGHT;
-  else if(distanse_total < 7400)
+  else if(distanse_total < 7600)
     status = LeftStatus::EDGE_RESET;
   else if(distanse_total < 8100)
     status = LeftStatus::STRAIGHT;
