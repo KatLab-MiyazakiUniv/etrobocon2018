@@ -16,9 +16,9 @@ void LeftCourse::setFirstCode(int32_t code)
 void LeftCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t gray)
 {
   runNormalCourse(brightness);
-  solveAiAnser();
+  //solveAiAnser();
   // Park
-  runParking(brightness, black, white, gray);
+  //runParking(brightness, black, white, gray);
 }
 
 // int16_t time = get_time();
