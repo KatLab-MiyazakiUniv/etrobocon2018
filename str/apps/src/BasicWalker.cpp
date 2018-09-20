@@ -25,6 +25,27 @@ void BasicWalker::spin(bool rotationalDirection, int32_t angle)
   walker.run(0, 0);
 }
 
+void BasicWalker::spin_black(bool rotationalDirection, int32_t angle)
+{
+  int8_t reverseValue = rotationalDirection == SPIN_RIGHT ? -1 : 1;
+
+  reset();
+  while((walker.get_count_R() * reverseValue)
+        < (angle / 0.645)) {  // 数値は角度から回転数への変換に必要な値
+    walker.run(0, (18 * reverseValue));
+
+int16_t now_brightness = controller.getBrightness();
+if(now_brightness < 15) {
+      walker.run(0, 0);
+      controller.speakerPlayTone(controller.noteFs4, 100);  //音で確認.
+      break;
+    }
+    controller.tslpTsk(4);
+  }
+  walker.run(0, 0);
+}
+
+
 void BasicWalker::goStraight_b(int32_t target_forward, int32_t distance, int16_t target_brightness)
 {
   speedControl.setPid(p_value, i_value, d_value, target_forward);

@@ -15,7 +15,8 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
   basicWalker.setPidWithoutTarget(17.0, 1.0, 0.1);
   basicWalker.goStraight_b(30, 1000, target_brightness);
 
-  basicWalker.spin(basicWalker.SPIN_LEFT, 25);
+  // basicWalker.spin(basicWalker.SPIN_LEFT, 25);
+  basicWalker.spin_black(basicWalker.SPIN_LEFT, 25);
 
   waitThreeTimes();
   // walker.run(1, 3);
