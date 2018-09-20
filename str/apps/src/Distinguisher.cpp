@@ -42,7 +42,7 @@ Color Distinguisher::distingishColor()
 void Distinguisher::judgement(const Rgb& rgb, double& min)
 {
   double tmp = last_distance = distanceColor(rgb);
-  if(tmp < min) {
+  if(tmp < min && tmp < rgb.threshold_distance) {
     color = rgb.color;
     min = tmp;
   }
