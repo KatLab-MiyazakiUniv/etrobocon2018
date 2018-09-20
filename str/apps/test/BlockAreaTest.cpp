@@ -16,15 +16,10 @@ using namespace BlockSideBySide;
 namespace etrobocon2018_test {
   TEST(ColorBlockTest, createColorBlock)
   {
-    ColorBlock redBlock(GameColor::RED);
-    ColorBlock blueBlock(GameColor::BLUE);
-    ColorBlock yellowBlock(GameColor::YELLOW);
-    ColorBlock greenBlock(GameColor::GREEN);
+    ColorBlock block{};
+    block.color = GameColor::RED;
 
-    ASSERT_EQ(redBlock.color, GameColor::RED);
-    ASSERT_EQ(blueBlock.color, GameColor::BLUE);
-    ASSERT_EQ(yellowBlock.color, GameColor::YELLOW);
-    ASSERT_EQ(greenBlock.color, GameColor::GREEN);
+    ASSERT_EQ(block.color, GameColor::RED);
   }
 
   TEST(ColorBlockPlaceTest, createColorBlockPlace)
@@ -36,7 +31,7 @@ namespace etrobocon2018_test {
 
   TEST(ColorBlockPlaceTest, setColorBlock)
   {
-    std::shared_ptr<ColorBlock> colorBlock0 = std::make_shared<ColorBlock>(GameColor::UNKNOWN);
+    std::shared_ptr<ColorBlock> colorBlock0 = std::make_shared<ColorBlock>();
     ColorBlockPlace blockPlace00(GameColor::RED, 0);
     blockPlace00.block = colorBlock0;
     ASSERT_EQ(blockPlace00.block->color, GameColor::UNKNOWN);

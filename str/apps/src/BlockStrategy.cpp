@@ -11,6 +11,18 @@ void BlockStrategy::createColorBlockPlace()
   }
 }
 
+void BlockStrategy::putColorBlock()
+{
+  InitialPositionCodeDecoder ipcd;
+  ipcd.decode(initialPositionCode);
+  decodedColorBlockCodeList = ipcd.getInitialPositionCodeList();
+
+  for(std::int8_t code : decodedColorBlockCodeList) {
+    std::shared_ptr<ColorBlock> colorBlock = std::make_shared<ColorBlock>();
+    colorBlockPlaceArray[code]->block = colorBlock;
+  }
+}
+
 void BlockStrategy::connectColorBlockPlace()
 {
   for(std::int8_t i = 0; i < BLOCK_NUM; i++) {

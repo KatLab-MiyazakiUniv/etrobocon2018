@@ -16,7 +16,7 @@ namespace etrobocon2018_test {
   class BlockStrategyTest : public ::testing::Test {
    protected:
     virtual void SetUp() {}
-    BlockStrategy b;
+    BlockStrategy b{ 00000 };
     std::array<std::shared_ptr<ColorBlockPlace>, BLOCK_NUM> getColorBlockPlaceArray()
     {
       return b.colorBlockPlaceArray;
@@ -51,4 +51,18 @@ namespace etrobocon2018_test {
     ASSERT_EQ(b[14]->black_line[Direction::NORTH], b[10]);
   }
 
+  TEST_F(BlockStrategyTest, putColorBlockPlace)
+  {
+    BlockStrategy b{ 84722 };
+    ASSERT_EQ(b.blockArea.colorBlockPlaceArray[1]->hasBlock(), true);
+    ASSERT_EQ(b.blockArea.colorBlockPlaceArray[4]->hasBlock(), true);
+    ASSERT_EQ(b.blockArea.colorBlockPlaceArray[10]->hasBlock(), true);
+    ASSERT_EQ(b.blockArea.colorBlockPlaceArray[15]->hasBlock(), true);
+    ASSERT_EQ(b.blockArea.colorBlockPlaceArray[2]->hasBlock(), false);
+    ASSERT_EQ(b.blockArea.colorBlockPlaceArray[6]->hasBlock(), false);
+    ASSERT_EQ(b.blockArea.colorBlockPlaceArray[8]->hasBlock(), false);
+    ASSERT_EQ(b.blockArea.colorBlockPlaceArray[9]->hasBlock(), false);
+    ASSERT_EQ(b.blockArea.colorBlockPlaceArray[11]->hasBlock(), false);
+    ASSERT_EQ(b.blockArea.colorBlockPlaceArray[13]->hasBlock(), false);
+  }
 }  // namespace etrobocon2018_test

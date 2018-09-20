@@ -20,7 +20,7 @@ namespace BlockSideBySide {
 
   class ColorBlock {
    public:
-    ColorBlock(GameColor color_) : color(color_) {}
+    ColorBlock() = default;
     GameColor color = GameColor::UNKNOWN;
   };
 
@@ -34,6 +34,13 @@ namespace BlockSideBySide {
     std::map<Direction, std::shared_ptr<ColorBlockPlace>> black_line;
     GameColor getColor() { return color; }
     std::int8_t getPlaceCord() { return place_cord; }
+    bool hasBlock()
+    {
+      if(block) {
+        return true;
+      }
+      return false;
+    }
 
    private:
     GameColor color = GameColor::UNKNOWN;
@@ -47,7 +54,7 @@ namespace BlockSideBySide {
 
    private:
     std::unique_ptr<std::weak_ptr<ColorBlockPlace>> colorBlockPlaces;
-    std::int16_t first_cord;
+    std::int32_t first_cord;
     std::list<ColorBlockPlace> waitTransportBlock;
     std::int8_t finishColorBlockNum = 0;
   };
