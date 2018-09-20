@@ -15,11 +15,8 @@ void LeftCourse::setFirstCode(int32_t code)
  */
 void LeftCourse::run(int16_t brightness)
 {
-  // runNormalCourse(brightness);
   solveAiAnser();
-  // getSensorLog();
 }
-// int16_t time = get_time();
 
 void LeftCourse::solveAiAnser()
 {
@@ -39,6 +36,10 @@ void LeftCourse::solveAiAnser()
   controller.tslpTsk(1000);
   walker.run(0, 0);
   controller.printDisplay(3, "aiAnswer1 Finished");
+  // ここから黒線探しの旅
+  while(1) {
+    walker.run(10, 0);
+  }
 }
 
 void LeftCourse::runNormalCourse(int16_t brightness)
