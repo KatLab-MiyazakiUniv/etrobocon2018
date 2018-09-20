@@ -1,2 +1,31 @@
 {
+        "files.eol": "\n",
+        "files.associations": {
+                "type_traits": "cpp",
+                "__config": "cpp",
+                "__nullptr": "cpp",
+                "cstddef": "cpp",
+                "exception": "cpp",
+                "initializer_list": "cpp",
+                "new": "cpp",
+                "stdexcept": "cpp",
+                "typeinfo": "cpp",
+                "algorithm": "cpp",
+                "cstdint": "cpp",
+                "functional": "cpp",
+                "tuple": "cpp",
+                "utility": "cpp",
+                "random": "cpp",
+                "__bit_reference": "cpp",
+                "__functional_base": "cpp",
+                "atomic": "cpp",
+                "bitset": "cpp",
+                "chrono": "cpp",
+                "iterator": "cpp",
+                "limits": "cpp",
+                "locale": "cpp",
+                "memory": "cpp",
+                "ratio": "cpp",
+                "system_error": "cpp"
+        }
 }

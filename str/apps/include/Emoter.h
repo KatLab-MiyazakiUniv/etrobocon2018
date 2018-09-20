@@ -1,15 +1,15 @@
 #ifndef __EMOTER__
 #define __EMOTER__
 
-#include "Motor.h"
 #include "Clock.h"
+#include "Motor.h"
 
 #include "util.h"
 
 using namespace ev3api;
 
 class Emoter {
-public:
+ public:
   Emoter();
   void turn(int8_t pwm);
   void wipe(int8_t pwm, int maxChange, int angle);
@@ -19,7 +19,7 @@ public:
   void terminate();
   void reset();
 
-private:
+ private:
   Motor tailHand;
   Clock clock;
 };
