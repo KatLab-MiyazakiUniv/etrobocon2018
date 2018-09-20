@@ -60,6 +60,7 @@ file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${SOURCE_DIR}/Distinguisher.cpp
     ${SOURCE_DIR}/BasicWalker.cpp
     ${SOURCE_DIR}/Parking.cpp
+    ${SOURCE_DIR}/BlockArea.cpp
     )
 add_library(${PROJECT_LIB_NAME} ${SRC_FILES})
 
