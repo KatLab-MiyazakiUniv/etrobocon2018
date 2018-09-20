@@ -3,7 +3,8 @@
 
 [![codecov](https://codecov.io/gh/KatLab-MiyazakiUniv/etrobocon2018/branch/master/graph/badge.svg)](https://codecov.io/gh/KatLab-MiyazakiUniv/etrobocon2018)
 
-ようこそ
+ようこそ!!!!!!!!!!!!!!!!!!!!!!!!!!!
+kusoga
 
 このページは[片山研究所モデルベース開発推進事業部](http://earth.cs.miyazaki-u.ac.jp "http://earth.cs.miyazaki-u.ac.jp")が開発している、ETロボコン2018デベロッパー部門アドバンスドコースのソースコードのリポジトリです。
 
