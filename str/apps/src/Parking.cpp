@@ -11,14 +11,15 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
 {
   BasicWalker basicWalker{ controller };
 
-  controller.printDisplay(0, "Do ParallelParking...");
-  basicWalker.setPidWithoutTarget(17.0, 1.0, 0.1);
-  basicWalker.goStraight_b(30, 1000, target_brightness);
+  // controller.printDisplay(0, "Do ParallelParking...");
+  // basicWalker.setPidWithoutTarget(17.0, 1.0, 0.1);
+  // basicWalker.goStraight_b(30, 1000, target_brightness);
 
-  // basicWalker.spin(basicWalker.SPIN_LEFT, 25);
-  basicWalker.spin_black(basicWalker.SPIN_LEFT, 25);
+  // basicWalker.spin(basicWalker.SPIN_LEFT, 40);
+  // waitThreeTimes();
+  // basicWalker.spin_black(basicWalker.SPIN_RIGHT, 50);
 
-  waitThreeTimes();
+  // waitThreeTimes();
   // walker.run(1, 3);
   //ライントレース開始
   int count = 0;
