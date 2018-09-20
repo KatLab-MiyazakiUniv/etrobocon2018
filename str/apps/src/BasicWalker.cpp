@@ -63,10 +63,10 @@ void BasicWalker::goStraight(int32_t target_forward, int32_t distance)
 }
  void BasicWalker::backStraight(int32_t target_forward, int32_t distance)
  {
-  speedControl.setPid(p_value, i_value, d_value, target_forward);
+  speedControl.setPid(p_value, i_value, d_value, -target_forward);
   while(((walker.get_count_L() + walker.get_count_R()) / 2) * -1 < distance) {
     forward = speedControl.calculateSpeedForPid(walker.get_count_L(), walker.get_count_R());
-    walker.run(-forward, 0);
+    walker.run(forward, 0);
     controller.tslpTsk(4);
   }
   walker.run(0, 0);
