@@ -11,6 +11,8 @@ $ g++-7 BlockAreaTest.cpp ../src/BlockArea.cpp gtest_main.o gtest-all.o -I../inc
 #include <array>
 #include <gtest/gtest.h>
 
+using namespace BlockSideBySide;
+
 namespace etrobocon2018_test {
   TEST(ColorBlockTest, createColorBlock)
   {
@@ -49,10 +51,10 @@ namespace etrobocon2018_test {
     std::shared_ptr<ColorBlockPlace> blockPlace01
         = std::make_shared<ColorBlockPlace>(GameColor::YELLOW, 1);
 
-    blockPlace00->black_line["north"] = blockPlace01;
-    blockPlace01->black_line["south"] = blockPlace00;
-    ASSERT_EQ(blockPlace00->black_line["north"]->getColor(), GameColor::YELLOW);
-    ASSERT_EQ(blockPlace01->black_line["south"]->getColor(), GameColor::RED);
+    blockPlace00->black_line[Direction::NORTH] = blockPlace01;
+    blockPlace01->black_line[Direction::SOUTH] = blockPlace00;
+    ASSERT_EQ(blockPlace00->black_line[Direction::NORTH]->getColor(), GameColor::YELLOW);
+    ASSERT_EQ(blockPlace01->black_line[Direction::SOUTH]->getColor(), GameColor::RED);
   }
 
   TEST(ColorBlockPlaceTest, dynamicCreateColorBlockPlace)
