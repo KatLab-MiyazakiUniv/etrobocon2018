@@ -4,6 +4,11 @@
  * @author Futa HIRAKOBA
  */
 #include "RightCourse.h"
+#include "Distinguisher.h"
+#include "BasicWalker.h"
+#include "Lifter.h"
+#include "LineTracerWalker.h"
+
 
 /**
  *Rコースの走行範囲の切り替えを行う
@@ -11,8 +16,10 @@
 void RightCourse::run(int16_t brightness, int16_t black, int16_t white)
 {
   LineTracerWalker lineTracer;
-  runNormalCourse(brightness);
-  //runParking(brightness, lineTracer, black, white);
+  runFirst(brightness);
+ // runNormalCourse(brightness);
+  runPuzzle(brightness);
+//runParking(brightness, lineTracer, black, white);
 }
 
 void RightCourse::runParking(int16_t brightness, LineTracerWalker lineTracer, int16_t black,
@@ -22,10 +29,86 @@ void RightCourse::runParking(int16_t brightness, LineTracerWalker lineTracer, in
   parking.runParpendicular(brightness, lineTracer, black, white);
 }
 
+void RightCourse::runFirst(int16_t target_brightness){
+  Controller controller;
+  Distinguisher d{controller};
+  BasicWalker basic{controller};
+  Lifter lifter{controller};
+  LineTracerWalker lineTracerWalker;
+  Distance distance;
+  bool isAlreadyChangedGear = false;
+
+  lineTracerWalker.speedControl.setPid(5.0, 1.0, 0.1, 90.0);
+  lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.14, target_brightness);  
+  walker.reset();
+  while(1){
+    Color result=d.getColor();      
+    auto luminance = controller.getBrightness();
+    lineTracerWalker.runLine(walker.get_count_L(), walker.get_count_R(), luminance);
+    walker.run(lineTracerWalker.getForward(), lineTracerWalker.getTurn());
+    controller.printDisplay(4, "Brightness: %d, Target: %d", luminance, result);
+    if(result==Color::RED)  break;
+    if(!isAlreadyChangedGear && distance.getDistanceTotal(walker.get_count_L(), walker.get_count_R())>1750){
+      lineTracerWalker.speedControl.setPid(5.0, 1.0, 0.1, 35.0);
+      lineTracerWalker.turnControl.setPid(2.0, 0.5, 0.1, target_brightness);
+      controller.speakerPlayTone(controller.noteFs6, 100);
+      isAlreadyChangedGear = true;
+    }
+    controller.tslpTsk(4);
+  }
+}
+
+void RightCourse::runPuzzle(int16_t target_brightness){
+  Controller controller;
+  Distinguisher d{controller};
+  BasicWalker basic{controller};
+  Lifter lifter{controller};
+  LineTracerWalker lineTracerWalker;
+
+  lineTracerWalker.speedControl.setPid(5.0, 0.8, 0.2, 25.0);
+  lineTracerWalker.turnControl.setPid(1.0, 0.5, 1.0, target_brightness);  
+  walker.reset();
+  while(1){
+    Color result=d.getColor();      
+    auto luminance = controller.getBrightness();
+    lineTracerWalker.runLine(walker.get_count_L(), walker.get_count_R(), luminance);
+    walker.run(lineTracerWalker.getForward(), lineTracerWalker.getTurn());
+    controller.printDisplay(4, "Brightness: %d, Target: %d", luminance, result);
+    controller.printDisplay(6, "out the loop, Color: %d", static_cast<int>(result));
+    if(result==Color::RED){
+      controller.printDisplay(6, "in the loop, Color: %d", static_cast<int>(result));
+      controller.speakerPlayTone(controller.noteFs4, 100);
+      basic.reset();
+      basic.setPidWithoutTarget(6.5, 0.5, 1.0);
+      basic.backStraight(15, 45);
+      lifter.liftUp(45, 10);
+      lifter.liftDown(0, 3);
+      lifter.liftUp(3.5);
+      basic.reset();
+      basic.setPidWithoutTarget(5.0, 1.0, 0.1);      
+      basic.goStraight(15, 125);
+      basic.spin(basic.SPIN_LEFT, 82,10);
+      basic.goStraight(15, 50);
+    }/*///220//
+    if(result==Color::YELLOW){
+      controller.speakerPlayTone(controller.noteFs6, 100);
+      basic.reset();
+      basic.setPidWithoutTarget(5.0, 1.0, 0.1);
+      basic.goStraight(25, 220);
+    }*/ 
+    if(result==Color::BLUE){
+      break;
+    }
+  }
+  controller.tslpTsk(4);
+}
+
+
 void RightCourse::runNormalCourse(int16_t brightness)
 {
   RightNormalCourse normalCourse;
   bool isNormalCourse;
+
   // NormalCourseを抜けるまでループする
   while(1) {
     sl.update(walker.get_count_L(), walker.get_count_R());
@@ -42,12 +125,6 @@ void RightCourse::runNormalCourse(int16_t brightness)
       break;
     }
     if(controller.buttonIsPressedBack()) {
-      walker.run(0, 0);
-      break;
-    }
-
-    if(90 < brightness && brightness < 100){
-      controller.printDisplay(4, "Find Gray Line¥n Brightness: %d, Target: %d", luminance, brightness);      
       walker.run(0, 0);
       break;
     }
