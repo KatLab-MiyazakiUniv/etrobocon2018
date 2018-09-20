@@ -11,6 +11,7 @@
 #include "EtRobocon2018.h"  // ETロボコン2017
 #include "SelfLocalization.h"
 #include "util.h"
+#include "Controller.h"
 
 #if defined(BUILD_MODULE)
 #include "module_cfg.h"
@@ -72,7 +73,7 @@ void bt_task(intptr_t unused)
     fputc(c, g_bluetooth); /* エコーバック */
   }
 }
-
+rgb_raw_t rgb;
 void sensor_log_task(intptr_t unused)
 {
   FILE* file;
@@ -82,6 +83,7 @@ void sensor_log_task(intptr_t unused)
   int time_now = 0;                // 開始時間からの経過時間を取得
   int32_t left_motor_counts = 0;   //左モータのオフセット付き角位置取得
   int32_t right_motor_counts = 0;  //右モータのオフセット付き角位置取得
+  int color_sensor_log = 0;        //カラーセンサーの値（_logをつけないと重複するかもと思って付けた）
   int log_file_number = 0;
   char log_file_name[16];
   bool flag = true;
@@ -92,7 +94,7 @@ void sensor_log_task(intptr_t unused)
     if(file == NULL) {  // ファイル名がダブらない場合
       fclose(file);
       file = fopen(log_file_name, "a");
-      fprintf(file, "Time(msec), Voltage, Ampere, leftMotorCounts, rightMotorCounts\n");
+      fprintf(file, "Time(msec), Voltage, Ampere, leftMotorCounts, rightMotorCounts, colorSensor, rawColorRed, rawColorGreen, rawColorBlue\n");
       flag = false;
 
     } else {  // 同じlogファイル名が存在する場合
@@ -112,7 +114,8 @@ void sensor_log_task(intptr_t unused)
     amp = ev3_battery_current_mA();
     left_motor_counts = controller.leftWheel.getCount();
     right_motor_counts = controller.rightWheel.getCount();
-    fprintf(file, "%d,%d,%d,%d,%d\n", time_now, volt, amp, left_motor_counts, right_motor_counts);
+    color_sensor_log = controller.getBrightness();
+    fprintf(file, "%d,%d,%d,%d,%d,%d,%d,%d,%d\n", time_now, volt, amp, left_motor_counts, right_motor_counts, color_sensor_log, rgb.r, rgb.g, rgb.b);
     // 20msec周期起動
     tslp_tsk(20);
   }
