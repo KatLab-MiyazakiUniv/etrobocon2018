@@ -65,8 +65,8 @@ void RightCourse::runPuzzle(int16_t target_brightness){
   Lifter lifter{controller};
   LineTracerWalker lineTracerWalker;
 
-  lineTracerWalker.speedControl.setPid(5.0, 0.8, 0.2, 25.0);
-  lineTracerWalker.turnControl.setPid(1.0, 0.5, 1.0, target_brightness);  
+  lineTracerWalker.speedControl.setPid(5.0, 0.8, 0.8, 40.0);
+  lineTracerWalker.turnControl.setPid(1.0, 0.9, 1.5, target_brightness);  
   walker.reset();
   while(1){
     Color result=d.getColor();      
@@ -86,7 +86,7 @@ void RightCourse::runPuzzle(int16_t target_brightness){
       lifter.liftUp(3.5);
       basic.reset();
       basic.setPidWithoutTarget(5.0, 1.0, 0.1);      
-      basic.goStraight(15, 125);
+      basic.goStraight(15, 130);
       basic.spin(basic.SPIN_LEFT, 82,10);
       basic.goStraight(15, 50);
     }/*///220//
