@@ -56,6 +56,7 @@ class Controller {
   bool buttonIsPressedRight();
   bool buttonIsPressedLeft();
   bool buttonIsPressedEnter();
+  float ev3_battery_voltage () ;
   void tslpTsk(int16_t time);  // 4msec周期起動
   void printDisplay(int8_t row, const char* format, ...);
   void getRawColor(uint16_t& r, uint16_t& g, uint16_t& b);

@@ -37,19 +37,6 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
       break;
     }
 
-    //         if(now_brightness>100){ //ライントレースを修了する条件
-    // walker.run(0, 0);
-    // break;
-    //         }
-
-    //  if(black + 40 >= now_brightness){  //ブラックを読み込んだら
-    //             count = 0;
-    //             ev3_speaker_play_tone( NOTE_CS4, 100 );
-    //         }else if( white - 70<= now_brightness){
-    //             count++;
-
-    //         }
-
     count++;
 
     if(count > 800) {
@@ -89,25 +76,20 @@ void Parking::runParallel(int16_t brightness, int16_t black, int16_t white, int1
       break;
     }
 
-    /*if(gray + 2 >= luminance && gray - 2 <= luminance){  //グレーを読み込んだら
-        count++;
-        ev3_speaker_play_tone( NOTE_FS4, 100 );
-    }else{
-        count = 0;
-    }*/
 
     if(black + 35 >= luminance) {  //ブラックを読み込んだら
       count = 0;
-      controller.speakerPlayTone(controller.noteFs4, 100);
+      //controller.speakerPlayTone(controller.noteFs4, 100);
     } else if(white + 30 >= luminance && white - 70 <= luminance) {
       count++;
     }
 
-    if(count > 250) {
+    if(count > 250) { //250
       waitThreeTimes();
+      basicWalker.reset();
+      basicWalker.goStraight(60, 500);
       break;
     }
-
     lineTracer.speedControl.setPid(17.0, 1.0, 0.1, 30.0);
 
     if(grayBrightness + 3 >= luminance && grayBrightness - 1 <= luminance) {
@@ -118,7 +100,7 @@ void Parking::runParallel(int16_t brightness, int16_t black, int16_t white, int1
     controller.tslpTsk(4);
   }
   basicWalker.setPidWithoutTarget(14.0, 1.0, 0.1);
-  basicWalker.goStraight(60, 600);
+  basicWalker.reset();
   basicWalker.spin(basicWalker.SPIN_LEFT, 40);
   // basicWalker.setPidWithoutTarget(14.0, 1.0, 0.1);
   basicWalker.goStraight(60, 580);
