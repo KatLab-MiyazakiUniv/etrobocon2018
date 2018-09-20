@@ -8,7 +8,10 @@
 #define __DISTINGUISHER_H__
 
 #include "Controller.h"
+#include <algorithm>
+#include <array>
 #include <cstdint>
+#include <map>
 
 enum struct Color { NONE, BLACK, WHITE, RED, BLUE, YELLOW, GREEN };
 
@@ -47,6 +50,7 @@ class Distinguisher {
 
   /** getColorする際の最低限必要な色距離 */
   double threshold_distance = 400;
+
   Rgb raw_color = { Color::NONE, 0, 0, 0, 400 };
 
  private:
@@ -56,12 +60,18 @@ class Distinguisher {
   void setRawColor2Rgb();
   void judgement(const Rgb& rgb, double& min);
   double distanceColor(Rgb target_color);
-  const Rgb RED = { Color::RED, 112, 13, 9, 400 };
-  const Rgb BLUE = { Color::BLUE, 18, 47, 50, 400 };
-  const Rgb GREEN = { Color::GREEN, 24, 77, 13, 400 };
-  const Rgb YELLOW = { Color::YELLOW, 116, 120, 15, 400 };
-  const Rgb BLACK = { Color::BLACK, 14, 19, 5, 400 };
-  const Rgb WHITE = { Color::WHITE, 128, 158, 93, 400 };
+  void addAr(Color& color);
+  Color getAr();
+  const Rgb RED = { Color::RED, 112, 13, 9, 40 };
+  const Rgb BLUE = { Color::BLUE, 18, 47, 50, 20 };
+  const Rgb GREEN = { Color::GREEN, 24, 77, 13, 20 };
+  const Rgb YELLOW = { Color::YELLOW, 116, 120, 15, 50 };
+  const Rgb BLACK = { Color::BLACK, 14, 19, 5, 30 };
+  const Rgb WHITE = { Color::WHITE, 128, 158, 93, 210 };
+  static constexpr std::int8_t limit = 10;
+  std::array<Color, limit> ar{ Color::NONE, Color::NONE, Color::NONE, Color::NONE, Color::NONE,
+                               Color::NONE, Color::NONE, Color::NONE, Color::NONE, Color::NONE };
+  std::int8_t ar_count = 0;
 };
 
 #endif

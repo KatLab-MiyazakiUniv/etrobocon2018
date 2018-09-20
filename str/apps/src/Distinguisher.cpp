@@ -5,7 +5,35 @@ Color Distinguisher::getColor()
 {
   setRawColor2Rgb();
   auto color = distingishColor();
+  addAr(color);
+  color = getAr();
   return color;
+}
+
+void Distinguisher::addAr(Color& color)
+{
+  ar[ar_count] = color;
+  ar_count++;
+  if(ar_count >= limit) {
+    ar_count = 0;
+  }
+}
+
+Color Distinguisher::getAr()
+{
+  std::map<Color, std::int8_t> mp;
+  for(std::int8_t i = 0; i < limit; i++) {
+    mp[ar[i]]++;
+  }
+  std::int8_t max = 0;
+  Color result = Color::NONE;
+  for(auto x : mp) {
+    if(max < x.second) {
+      result = x.first;
+    }
+  }
+
+  return result;
 }
 
 void Distinguisher::setRawColor2Rgb()
@@ -41,10 +69,10 @@ Color Distinguisher::distingishColor()
 
 void Distinguisher::judgement(const Rgb& rgb, double& min)
 {
-  double tmp = last_distance = distanceColor(rgb);
+  double tmp = distanceColor(rgb);
   if(tmp < min && tmp < rgb.threshold_distance) {
     color = rgb.color;
-    min = tmp;
+    min = last_distance = tmp;
   }
 }
 
