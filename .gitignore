@@ -45,3 +45,6 @@ auto_build.sh
 
 # VSCode Setting Files
 .vscode/
+
+# Vim Swap File
+*.swp
