@@ -50,7 +50,7 @@ void RightCourse::runFirst(int16_t target_brightness){
     if(result==Color::RED)  break;
     if(!isAlreadyChangedGear && distance.getDistanceTotal(walker.get_count_L(), walker.get_count_R())>1750){
       lineTracerWalker.speedControl.setPid(5.0, 1.0, 0.1, 35.0);
-      lineTracerWalker.turnControl.setPid(2.0, 0.5, 0.1, target_brightness);
+      lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.14, target_brightness);
       controller.speakerPlayTone(controller.noteFs6, 100);
       isAlreadyChangedGear = true;
     }
@@ -65,8 +65,8 @@ void RightCourse::runPuzzle(int16_t target_brightness){
   Lifter lifter{controller};
   LineTracerWalker lineTracerWalker;
 
-  lineTracerWalker.speedControl.setPid(5.0, 0.8, 0.8, 40.0);
-  lineTracerWalker.turnControl.setPid(1.0, 0.9, 1.5, target_brightness);  
+  lineTracerWalker.speedControl.setPid(2.0, 0.8, 0.8, 40.0);
+  lineTracerWalker.turnControl.setPid(2.0, 1.5, 1.0, target_brightness);  
   walker.reset();
   while(1){
     Color result=d.getColor();      
@@ -83,22 +83,48 @@ void RightCourse::runPuzzle(int16_t target_brightness){
       basic.backStraight(15, 45);
       lifter.liftUp(45, 10);
       lifter.liftDown(0, 3);
-      lifter.liftUp(3.5);
+      lifter.liftUp(2.5);
+      basic.reset();
+      basic.setPidWithoutTarget(5.0, 1.0, 0.1);      
+      basic.goStraight(15, 180);
+    }//L82R74//
+    if(result==Color::YELLOW){
+      controller.printDisplay(6, "in the loop, Color: %d", static_cast<int>(result));
+      controller.speakerPlayTone(controller.noteFs4, 100);
+      basic.reset();
+      basic.setPidWithoutTarget(6.5, 0.5, 1.0);
+      basic.backStraight(15, 45);
+      basic.reset();
+      basic.setPidWithoutTarget(5.0, 1.0, 0.1);      
+      basic.goStraight(15, 210);
+      basic.spin(basic.SPIN_RIGHT, 105, 10);
+      basic.goStraight(15, 75); 
+      basic.spin(basic.SPIN_RIGHT, 68, 10);
+      //while(result!=Color::BLACK){
+        basic.goStraight(15, 10);
+     // }
+    } 
+    if(result==Color::BLUE){
+      //Right
+      controller.speakerPlayTone(controller.noteFs4, 100);
+      break;
+      basic.reset();
+      basic.setPidWithoutTarget(5.0, 1.0, 0.1);      
+      basic.goStraight(15, 130);
+      basic.spin(basic.SPIN_RIGHT, 74,10);
+      basic.goStraight(15, 50);
+    }
+    if(result==Color::GREEN){
+      controller.speakerPlayTone(controller.noteFs6, 100);
+      //Left
+            break;
       basic.reset();
       basic.setPidWithoutTarget(5.0, 1.0, 0.1);      
       basic.goStraight(15, 130);
       basic.spin(basic.SPIN_LEFT, 82,10);
       basic.goStraight(15, 50);
-    }/*///220//
-    if(result==Color::YELLOW){
-      controller.speakerPlayTone(controller.noteFs6, 100);
-      basic.reset();
-      basic.setPidWithoutTarget(5.0, 1.0, 0.1);
-      basic.goStraight(25, 220);
-    }*/ 
-    if(result==Color::BLUE){
-      break;
     }
+
   }
   controller.tslpTsk(4);
 }
