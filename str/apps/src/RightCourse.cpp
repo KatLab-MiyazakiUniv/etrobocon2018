@@ -12,7 +12,7 @@ void RightCourse::run(int16_t brightness, int16_t black, int16_t white)
 {
   LineTracerWalker lineTracer;
   runNormalCourse(brightness);
-  runParking(brightness, lineTracer, black, white);
+  //runParking(brightness, lineTracer, black, white);
 }
 
 void RightCourse::runParking(int16_t brightness, LineTracerWalker lineTracer, int16_t black,
@@ -42,6 +42,12 @@ void RightCourse::runNormalCourse(int16_t brightness)
       break;
     }
     if(controller.buttonIsPressedBack()) {
+      walker.run(0, 0);
+      break;
+    }
+
+    if(90 < brightness && brightness < 100){
+      controller.printDisplay(4, "Find Gray Line¥n Brightness: %d, Target: %d", luminance, brightness);      
       walker.run(0, 0);
       break;
     }

@@ -13,26 +13,27 @@ void LeftCourse::setFirstCode(int32_t code)
 /**
  * Lコースの走行範囲の切り替えを行う
  */
-void LeftCourse::run(int16_t brightness)
+void LeftCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t gray)
 {
   solveAiAnser();
   // runGoStraight();
 }
 
+
 void LeftCourse::solveAiAnser()
 {
   controller.printDisplay(3, "aiAnswer Start!!");
-  controller.speakerPlayTone(NOTE_FS4, 200);
+  controller.speakerPlayTone(controller.noteFs4, 200);
   walker.run(30, 0);
   controller.speakerPlayTone(NOTE_FS4, 200);
   controller.tslpTsk(3300);
   controller.speakerPlayTone(NOTE_FS4, 200);
   // その場に止まる
   walker.reset();
-  controller.speakerPlayTone(NOTE_FS4, 200);
+  controller.speakerPlayTone(controller.noteFs4, 200);
   // 反時計回りに90°回転
   walker.angleChange(90, 1);
-  controller.speakerPlayTone(NOTE_FS4, 200);
+  controller.speakerPlayTone(controller.noteFs4, 200);
   walker.run(30, 0);
   controller.tslpTsk(400);
   //  walker.run(0, 0);
@@ -114,6 +115,13 @@ void LeftCourse::runGoStraight()
   }
 }
 
+// void LeftCourse::runParking(int16_t brightness, int16_t gray)
+void LeftCourse::runParking(int16_t brightness, int16_t black, int16_t white, int16_t gray)
+{
+  Parking parking{ controller };
+  parking.runParallel(brightness, black, white, gray);
+}
+
 void LeftCourse::runNormalCourse(int16_t brightness)
 {
   LeftNormalCourse normalCourse;
@@ -144,5 +152,3 @@ void LeftCourse::runNormalCourse(int16_t brightness)
 }
 
 void LeftCourse::runBlockRange() {}
-
-void LeftCourse::runParallelParking() {}

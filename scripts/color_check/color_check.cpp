@@ -45,6 +45,7 @@ void main_task(intptr_t unused)
   Controller controller;
   Distinguisher distinguisher{ controller };
   const char* color_name[7] = { "NONE", "BLACK", "WHITE", "RED", "BLUE", "YELLOW", "GREEN" };
+
   while(1) {
     if(controller.buttonIsPressedBack()) {
       break;
