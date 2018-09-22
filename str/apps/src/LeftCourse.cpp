@@ -57,17 +57,6 @@ void LeftCourse::solveAiAnser()
     }
     controller.tslpTsk(4);
   }  // whileのおわり
-
-  // ライントレース
-  //   while(1) {
-  //     lineTracer.speedControl.setPid(5.0, 1.0, 0.1, 90.0);
-  //     lineTracer.turnControl.setPid(2.0, 1.0, 0.14, target_brightness);
-  //     if(controller.buttonIsPressedBack()) {
-  //       walker.reset();
-  //       break;
-  //     }
-  //     controller.tslpTsk(4);
-  // } // whileのおわり
 }
 
 // 黒線上を走る
@@ -82,7 +71,8 @@ void LeftCourse::runGoBlack()
     // 現在の色取得
     int16_t luminance = controller.getBrightness();
     if(luminance <= 21) {
-      // 左に15度回転
+      // 左に30度回転
+      controller.tslpTsk(100);
       basic.spin(basic.SPIN_LEFT, 30);
       runGoStraight();
       break;
@@ -97,32 +87,27 @@ void LeftCourse::runGoBlack()
 
 void LeftCourse::runGoStraight()
 {
-  // // (P, I, D, speed)
-  // lineTracer.speedControl.setPid(5.0, 0.9, 0.1, 20.0);
-  // // (P, I, D, 境界値)
-  // lineTracer.turnControl.setPid(1.0, 0.2, 1.0, target_brightness);
-
   walker.reset();
+  distance.resetDistance(walker.get_count_L(), walker.get_count_R());
   while(1) {
     int16_t luminance = controller.getBrightness();
+    int32_t aiDistance = distance.getDistanceTotal(walker.get_count_L(), walker.get_count_R());
     lineTracer.speedControl.setPid(5.0, 0.8, 0.2, 20.0);
     lineTracer.turnControl.setPid(2.2, 0.1, 0.35, target_brightness);  // 2.0,0.2,0.4 最高か
     // 走る
     lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), luminance);
+    controller.printDisplay(4, "%d", aiDistance);
     if(lineTracer.getForward() < 0) {
       walker.run(0, 0);
     } else {
       walker.run(lineTracer.getForward(), lineTracer.getTurn());
     }
-    // controller.printDisplay(4, "Brightness: %d", luminance);
-    // if(lineTracer.getForward() < 0) {
-    //   walker.reset();
-    // } else {
-    //   walker.run(lineTracer.getForward(), lineTracer.getTurn());
-    //   //walker.run(10, 0);
-    // }
     if(controller.buttonIsPressedBack()) {
-      walker.run(0, 0);
+      walker.reset();
+      break;
+    }
+    if(aiDistance >= 1200) {
+      walker.reset();
       break;
     }
     controller.tslpTsk(4);
