@@ -165,19 +165,19 @@ class Node{
    * </p>
    */
   Node()
-      : nodeID(0), blockExists(false), neighbors(nullptr) {}
+      : nodeID(0), blockExists(false), neighbors(nullptr), score(99) {}
 
   /**
    * <p> ノードIDを設定できるコンストラクタ </p>
    */
   explicit Node(std::int8_t id)
-      : nodeID(id), blockExists(false), neighbors(nullptr) {}
+      : nodeID(id), blockExists(false), neighbors(nullptr), score(99) {}
 
   /**
    * <p> 隣接ノードを設定できるコンストラクタ </p>
    */
   explicit Node(std::vector<Node*>* nodes)
-      : nodeID(0), blockExists(false), neighbors(nodes) {}
+      : nodeID(0), blockExists(false), neighbors(nodes), score(99) {}
 
   /**
    * <p> オブジェクトのポインタが等しい場合に真を返す </p>
@@ -286,6 +286,14 @@ class Node{
    */
   std::int8_t getPositionY();
 
+  void setScore(std::int8_t score_);
+
+  std::int8_t getScore();
+
+  void setRealCost(std::int8_t cost);
+
+  std::int8_t getRealCost();
+
  private:
   /**
    * ノードID (一意である保証はない)
@@ -306,6 +314,10 @@ class Node{
    * ノードの位置
    */
   Position position;
+
+  std::int8_t score;
+
+  std::int8_t realCost;
 };
 
 #endif // NODE

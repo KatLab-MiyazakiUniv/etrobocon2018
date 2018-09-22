@@ -45,3 +45,23 @@ std::int8_t Node::getPositionY()
 {
   return position.y;
 }
+
+void Node::setScore(std::int8_t score_)
+{
+  score = score_;
+}
+
+std::int8_t Node::getScore()
+{
+  return score;
+}
+
+void Node::setRealCost(std::int8_t cost)
+{
+  realCost = cost;
+}
+
+std::int8_t Node::getRealCost()
+{
+  return realCost;
+}
