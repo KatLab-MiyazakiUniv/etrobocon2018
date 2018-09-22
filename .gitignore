@@ -42,4 +42,6 @@ appsの*
 auto_build.sh
 
 *.dSYM/
-html/
+
+# VSCode Setting Files
+.vscode/

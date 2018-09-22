@@ -44,7 +44,7 @@ void BasicWalker::goStraight_b(int32_t target_forward, int32_t distance, int16_t
   walker.run(0, 0);
 }
 
-void BasicWalker::goStraight(int32_t target_forward, int32_t distance, int16_t target_brightness)
+void BasicWalker::goStraight(int32_t target_forward, int32_t distance)
 {
   speedControl.setPid(p_value, i_value, d_value, target_forward);
   while(((walker.get_count_L() + walker.get_count_R()) / 2) < distance) {
