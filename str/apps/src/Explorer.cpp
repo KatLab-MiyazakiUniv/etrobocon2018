@@ -1,4 +1,5 @@
 #include "Explorer.h"
+#include "iostream"
 
 void Explorer::createBlockArea()
 {
@@ -34,31 +35,49 @@ void Explorer::createBlockArea()
 
 std::vector<int> Explorer::searchRoute(std::int8_t start, std::int8_t end)
 {
-  std::vector<int> route = {start};
   std::vector<Node*> currentNeighbors;
-  Node* minNode = nullptr;
+  Node* endNode = calculateNeighborCost(blockAreaNodeList->at(start), currentNeighbors, 0, start, end);
 
-  for (unsigned int i = 0; i < blockAreaNodeList->at(start)->getNeighbors()->size(); i++)
+  std::vector<int> route = {endNode->getNodeID()};
+  Node* parent = endNode->getParentNode();
+  while (parent != nullptr)
   {
-    auto neighbor = blockAreaNodeList->at(start)->getNeighbors()->at(i);
-    int realCost = 0;
-    int estimatedCostX =
-        blockAreaNodeList->at(end)->getPositionX() - neighbor->getPositionX();
-    int estimatedCostY =
-        blockAreaNodeList->at(end)->getPositionY() - neighbor->getPositionY();
+    route.push_back(parent->getNodeID());
+    parent = parent->getParentNode();
+  }
+
+  std::reverse(route.begin(), route.end());
+
+  return route;
+}
+
+Node* Explorer::calculateNeighborCost(Node* parent, std::vector<Node*> around, std::int32_t realCost, std::int8_t current, std::int8_t end)
+{
+  for (unsigned int i = 0; i < blockAreaNodeList->at(current)->getNeighbors()->size(); i++)
+  {
+    auto neighbor = blockAreaNodeList->at(current)->getNeighbors()->at(i);
+    if (neighbor == parent->getParentNode()) continue;
+
+    int estimatedCostX = blockAreaNodeList->at(end)->getPositionX() - neighbor->getPositionX();
+    int estimatedCostY = blockAreaNodeList->at(end)->getPositionY() - neighbor->getPositionY();
     if (estimatedCostX < 0) estimatedCostX -= estimatedCostX;
     if (estimatedCostY < 0) estimatedCostY -= estimatedCostY;
+
     int score = realCost + estimatedCostX + estimatedCostY;
+    // if (neighbor->hasBlock()) score += 99;
 
     neighbor->setScore(score);
     neighbor->setRealCost(realCost);
-    currentNeighbors.push_back(neighbor);
+    neighbor->setParentNode(parent);
+    neighbor->setBeClosed(true);
+    around.push_back(neighbor);
   }
 
-  int min = 9999;
-  int minCost = 9999;
+  std::int32_t min = 999;
+  std::int32_t minCost = 999;
+  Node* minNode = nullptr;
 
-  for (auto neighbor : currentNeighbors)
+  for (auto neighbor : around)
   {
     int score = neighbor->getScore();
     if (score > min || (score == min && neighbor->getRealCost() >= minCost)) continue;
@@ -68,9 +87,12 @@ std::vector<int> Explorer::searchRoute(std::int8_t start, std::int8_t end)
     minNode = neighbor;
   }
 
-  route.push_back(minNode->getNodeID());
+  if (minNode->getNodeID() != end)
+  {
+    minNode = calculateNeighborCost(minNode, around, realCost+1, minNode->getNodeID(), end);
+  }
 
-  return route;
+  return minNode;
 }
 
 std::vector<Node*>* Explorer::getBlockAreaNodeList()

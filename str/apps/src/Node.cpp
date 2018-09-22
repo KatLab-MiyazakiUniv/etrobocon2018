@@ -46,22 +46,42 @@ std::int8_t Node::getPositionY()
   return position.y;
 }
 
-void Node::setScore(std::int8_t score_)
+void Node::setParentNode(Node* parent)
+{
+  parentNode = parent;
+}
+
+Node* Node::getParentNode()
+{
+  return parentNode;
+}
+
+void Node::setScore(std::int32_t score_)
 {
   score = score_;
 }
 
-std::int8_t Node::getScore()
+std::int32_t Node::getScore()
 {
   return score;
 }
 
-void Node::setRealCost(std::int8_t cost)
+void Node::setRealCost(std::int32_t cost)
 {
   realCost = cost;
 }
 
-std::int8_t Node::getRealCost()
+std::int32_t Node::getRealCost()
 {
   return realCost;
+}
+
+void Node::setBeClosed(bool closed_)
+{
+  closed = closed_;
+}
+
+bool Node::isClosed()
+{
+  return closed;
 }

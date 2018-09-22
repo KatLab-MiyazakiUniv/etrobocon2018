@@ -165,19 +165,19 @@ class Node{
    * </p>
    */
   Node()
-      : nodeID(0), blockExists(false), neighbors(nullptr), score(99) {}
+      : nodeID(0), blockExists(false), neighbors(nullptr), parentNode(nullptr), score(99), closed(false) {}
 
   /**
    * <p> ノードIDを設定できるコンストラクタ </p>
    */
   explicit Node(std::int8_t id)
-      : nodeID(id), blockExists(false), neighbors(nullptr), score(99) {}
+      : nodeID(id), blockExists(false), neighbors(nullptr), parentNode(nullptr), score(99), closed(false) {}
 
   /**
    * <p> 隣接ノードを設定できるコンストラクタ </p>
    */
   explicit Node(std::vector<Node*>* nodes)
-      : nodeID(0), blockExists(false), neighbors(nodes), score(99) {}
+      : nodeID(0), blockExists(false), neighbors(nodes), parentNode(nullptr), score(99), closed(false) {}
 
   /**
    * <p> オブジェクトのポインタが等しい場合に真を返す </p>
@@ -286,13 +286,21 @@ class Node{
    */
   std::int8_t getPositionY();
 
-  void setScore(std::int8_t score_);
+  void setParentNode(Node* parent);
 
-  std::int8_t getScore();
+  Node* getParentNode();
 
-  void setRealCost(std::int8_t cost);
+  void setScore(std::int32_t score_);
 
-  std::int8_t getRealCost();
+  std::int32_t getScore();
+
+  void setRealCost(std::int32_t cost);
+
+  std::int32_t getRealCost();
+
+  void setBeClosed(bool closed_);
+
+  bool isClosed();
 
  private:
   /**
@@ -315,9 +323,13 @@ class Node{
    */
   Position position;
 
-  std::int8_t score;
+  Node* parentNode;
 
-  std::int8_t realCost;
+  std::int32_t score;
+
+  std::int32_t realCost;
+
+  bool closed;
 };
 
 #endif // NODE

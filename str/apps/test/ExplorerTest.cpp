@@ -114,4 +114,41 @@ namespace etrobocon2018_test {
     }
   }
 
+  // ノード0からノード2のルートを返す
+  TEST(ExplorerTest, searchRouteFrom0To2Test)
+  {
+    Explorer obj;
+    unsigned long int expectedSize = 3;
+    std::vector<int> expectedList = {0, 1, 2};
+
+    obj.createBlockArea();
+    auto actual = obj.searchRoute(0, 2);
+
+    ASSERT_EQ(100, actual[2]);
+    ASSERT_EQ(expectedSize, actual.size());
+
+    for (unsigned int i = 0; i < expectedSize; i++)
+    {
+      ASSERT_EQ(obj.getBlockAreaNodeList()->at(actual[i])->getNodeID(), expectedList[i]);
+    }
+  }
+
+  // ノード2からノード0のルートを返す
+  TEST(ExplorerTest, searchRouteFrom2To0Test)
+  {
+    Explorer obj;
+    unsigned long int expectedSize = 3;
+    std::vector<int> expectedList = {2, 1, 0};
+
+    obj.createBlockArea();
+    auto actual = obj.searchRoute(2, 0);
+
+    ASSERT_EQ(expectedSize, actual.size());
+
+    for (unsigned int i = 0; i < expectedSize; i++)
+    {
+      ASSERT_EQ(obj.getBlockAreaNodeList()->at(actual[i])->getNodeID(), expectedList[i]);
+    }
+  }
+
 }  // namespace etrobocon2018_test
