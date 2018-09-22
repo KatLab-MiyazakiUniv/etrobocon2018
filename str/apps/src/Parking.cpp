@@ -11,22 +11,24 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
 {
   BasicWalker basicWalker{ controller };
 
-  // controller.printDisplay(0, "Do ParallelParking...");
-  // basicWalker.setPidWithoutTarget(17.0, 1.0, 0.1);
-  // basicWalker.goStraight_b(30, 1000, target_brightness);
+  controller.printDisplay(0, "Do ParallelParking...");
+  basicWalker.setPidWithoutTarget(5.0, 0.8, 0.2);
+  basicWalker.goStraight_b(30, 1000, target_brightness);
 
-  // basicWalker.spin(basicWalker.SPIN_LEFT, 40);
+  basicWalker.spin(basicWalker.SPIN_LEFT, 70);
+  //waitThreeTimes();
+  basicWalker.spin_black(basicWalker.SPIN_RIGHT, 70);
+  basicWalker.reset();
   // waitThreeTimes();
-  // basicWalker.spin_black(basicWalker.SPIN_RIGHT, 50);
 
-  // waitThreeTimes();
-  // walker.run(1, 3);
+ // waitThreeTimes();
+  
   //ライントレース開始
   int count = 0;
   while(1) {
     int16_t now_brightness = controller.getBrightness();
-    lineTracer.speedControl.setPid(17.0, 1.0, 0.1, 20.0);
-    lineTracer.turnControl.setPid(4.0, 1.0, 0.8, target_brightness);
+    lineTracer.speedControl.setPid(5.0, 0.8, 0.2, 20.0);
+    lineTracer.turnControl.setPid(2.2, 0.1, 0.35, target_brightness);  //2.0,0.2,0.4 最高か
 
     lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), now_brightness);
     if(lineTracer.getForward() < 0) {
@@ -54,19 +56,17 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
 
     count++;
 
-    if(count > 800) {
+    if(count > 1000) { //元祖800
       waitThreeTimes();
       break;
     }
     controller.tslpTsk(4);
   }  // whileのおわり
-  // basicWalker.goStraight( 30, 600 );
-  // basicWalker.spin( basicWalker.SPIN_RIGHT, 90 );
-  // waitThreeTimes();
+ 
 
-  basicWalker.setPidWithoutTarget(17.0, 1.0, 0.1);
-  basicWalker.reset();
-  basicWalker.goStraight(30, 350, target_brightness);
+  // basicWalker.setPidWithoutTarget(5.0, 0.8, 0.2);
+  // basicWalker.reset();
+  // basicWalker.goStraight(30, 350, target_brightness);
 }
 
 void Parking::runParallelrun()
