@@ -19,7 +19,6 @@ void LeftCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t g
   // runGoStraight();
 }
 
-
 void LeftCourse::solveAiAnser()
 {
   controller.printDisplay(3, "aiAnswer Start!!");
@@ -93,8 +92,8 @@ void LeftCourse::runGoStraight()
   while(1) {
     int16_t luminance = controller.getBrightness();
     int32_t aiDistance = distance.getDistanceTotal(walker.get_count_L(), walker.get_count_R());
-    lineTracer.speedControl.setPid(5.0, 0.8, 0.2, 20.0);
-    lineTracer.turnControl.setPid(2.2, 0.1, 0.35, target_brightness);  // 2.0,0.2,0.4 最高か
+    lineTracer.speedControl.setPid(2.0, 0.8, 0.1, 20.0);
+    lineTracer.turnControl.setPid(1.1, 0.1, 0.2, target_brightness);  // 2.0,0.2,0.4 最高か
     // 走る
     lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), luminance);
     controller.printDisplay(4, "%d", aiDistance);
@@ -107,7 +106,7 @@ void LeftCourse::runGoStraight()
       walker.reset();
       break;
     }
-    if(aiDistance >= 1200) {
+    if(aiDistance >= 1000) {
       walker.reset();
       break;
     }
