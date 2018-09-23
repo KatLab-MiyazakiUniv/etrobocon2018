@@ -61,7 +61,7 @@ std::vector<int> Explorer::searchRoute(std::int8_t start, std::int8_t end)
 
 Node* Explorer::calculateNeighborCost(Node* parent, std::int32_t realCost, std::int8_t end)
 {
-  // std::int8_t current = parent->getNodeID();
+  std::int8_t current = parent->getNodeID();
 
   for (unsigned int i = 0; i < blockAreaNodeList->at(current)->getNeighbors()->size(); i++)
   // for (auto neighbor : blockAreaNodeList->at(parent->getNodeID())->getNeighbors())
