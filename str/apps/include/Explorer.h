@@ -9,8 +9,8 @@
 #include "Node.h"
 #include <vector>
 #include <algorithm>
+#include <cstdlib>
 // #include <memory>
-// #include <cstdlib>
 // #include <cstdint>
 
 /**
@@ -116,7 +116,7 @@ class Explorer {
     positionList.resize(neighborsIDList.size());
     nodeList.resize(neighborsIDList.size());
     nodePtrs.resize(neighborsIDList.size());
-    neighbors.resize(neighborsIDList.size());
+    neighborPtrs.resize(neighborsIDList.size());
 
     for (unsigned int i = 0; i < neighborsIDList.size(); i++)
     {
@@ -136,7 +136,7 @@ class Explorer {
 
   std::vector<int> searchRoute(std::int8_t start, std::int8_t end);
 
-  Node* calculateNeighborCost(Node* parent, std::vector<Node*> around, std::int32_t realCost, std::int8_t start, std::int8_t end);
+  Node* calculateNeighborCost(Node* parent, std::int32_t realCost, std::int8_t end);
 
   std::vector<Node*>* getBlockAreaNodeList();
 
@@ -176,7 +176,7 @@ class Explorer {
    * {@link #createBlockArea()} でのみの利用だが、実態を残すためにメンバ変数としている。
    * </p>
    */
-  std::vector<std::vector<Node*>> neighbors;
+  std::vector<std::vector<Node*>> neighborPtrs;
 
   /**
    * <p> 各ブロック置き場における隣接ノードIDのリスト </p>

@@ -124,7 +124,6 @@ namespace etrobocon2018_test {
     obj.createBlockArea();
     auto actual = obj.searchRoute(0, 2);
 
-    ASSERT_EQ(100, actual[2]);
     ASSERT_EQ(expectedSize, actual.size());
 
     for (unsigned int i = 0; i < expectedSize; i++)
@@ -142,6 +141,43 @@ namespace etrobocon2018_test {
 
     obj.createBlockArea();
     auto actual = obj.searchRoute(2, 0);
+
+    ASSERT_EQ(expectedSize, actual.size());
+
+    for (unsigned int i = 0; i < expectedSize; i++)
+    {
+      ASSERT_EQ(obj.getBlockAreaNodeList()->at(actual[i])->getNodeID(), expectedList[i]);
+    }
+  }
+
+  // ノード11からノード5の最短ルートを返す
+  TEST(ExplorerTest, searchShortestRouteFrom11To5Test)
+  {
+    Explorer obj;
+    unsigned long int expectedSize = 4;
+    std::vector<int> expectedList = {11, 7, 6, 5};
+
+    obj.createBlockArea();
+    auto actual = obj.searchRoute(11, 5);
+
+    ASSERT_EQ(expectedSize, actual.size());
+
+    for (unsigned int i = 0; i < expectedSize; i++)
+    {
+      ASSERT_EQ(obj.getBlockAreaNodeList()->at(actual[i])->getNodeID(), expectedList[i]);
+    }
+  }
+
+  // ノード11からノード5のノード6迂回ルートを返す
+  TEST(ExplorerTest, searchRouteFrom11To5Circumventing6Test)
+  {
+    Explorer obj;
+    unsigned long int expectedSize = 6;
+    std::vector<int> expectedList = {11, 7, 3, 2, 1, 5};
+
+    obj.createBlockArea();
+    obj.getBlockAreaNodeList()->at(6)->setHasBlock(true);
+    auto actual = obj.searchRoute(11, 5);
 
     ASSERT_EQ(expectedSize, actual.size());
 
