@@ -41,7 +41,7 @@ std::vector<int> Explorer::searchRoute(std::int8_t start, std::int8_t end)
   if (blockAreaNodeList->at(start)->hasBlock()) score += 99;
 
   blockAreaNodeList->at(start)->setScore(score);
-  blockAreaNodeList->at(start)->setRealCoset(0);
+  blockAreaNodeList->at(start)->setRealCost(0);
   blockAreaNodeList->at(start)->setParentNode(nullptr);
   blockAreaNodeList->at(start)->setBeClosed(true);
   Node* endNode = calculateNeighborCost(blockAreaNodeList->at(start), 1, end);
