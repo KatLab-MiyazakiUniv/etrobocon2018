@@ -63,10 +63,10 @@ Node* Explorer::calculateNeighborCost(Node* parent, std::int32_t realCost, std::
 {
   // std::int8_t current = parent->getNodeID();
 
-  // for (unsigned int i = 0; i < blockAreaNodeList->at(current)->getNeighbors()->size(); i++)
-  for (auto neighbor : blockAreaNodeList->at(parent->getNodeID())->getNeighbors())
+  for (unsigned int i = 0; i < blockAreaNodeList->at(current)->getNeighbors()->size(); i++)
+  // for (auto neighbor : blockAreaNodeList->at(parent->getNodeID())->getNeighbors())
   {
-    // auto neighbor = blockAreaNodeList->at(current)->getNeighbors()->at(i);
+    auto neighbor = blockAreaNodeList->at(current)->getNeighbors()->at(i);
     if (neighbor == parent->getParentNode()) continue;
 
     int estimatedCostX = std::abs(blockAreaNodeList->at(end)->getPositionX() - neighbor->getPositionX());
@@ -85,8 +85,10 @@ Node* Explorer::calculateNeighborCost(Node* parent, std::int32_t realCost, std::
   std::int32_t minCost = 999;
   Node* minNode = nullptr;
 
-  for (auto neighbor : blockAreaNodeList->at(parent->getNodeID())->getNeighbors())
+  for (unsigned int i = 0; i < blockAreaNodeList->at(current)->getNeighbors()->size(); i++)
+  // for (auto neighbor : blockAreaNodeList->at(parent->getNodeID())->getNeighbors())
   {
+    auto neighbor = blockAreaNodeList->at(current)->getNeighbors()->at(i);
     if (neighbor == parent->getParentNode()) continue;
 
     int score = neighbor->getScore();
