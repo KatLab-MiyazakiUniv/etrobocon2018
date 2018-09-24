@@ -56,7 +56,7 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
 
     count++;
 
-    if(count > 1000) { //元祖800
+    if(count > 800) { //元祖800
       waitThreeTimes();
       break;
     }
@@ -64,9 +64,9 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
   }  // whileのおわり
  
 
-  // basicWalker.setPidWithoutTarget(5.0, 0.8, 0.2);
-  // basicWalker.reset();
-  // basicWalker.goStraight(30, 350, target_brightness);
+   basicWalker.setPidWithoutTarget(5.0, 0.8, 0.2);
+   basicWalker.reset();
+   basicWalker.goStraight(30, 350, target_brightness);
 }
 
 void Parking::runParallelrun()
