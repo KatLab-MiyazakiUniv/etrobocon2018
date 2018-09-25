@@ -45,13 +45,14 @@ void RightCourse::runNormalCourse(int16_t brightness)
       walker.run(0, 0);
       break;
     }
-
-    if(90 < brightness && brightness < 100){
-      controller.printDisplay(4, "Find Gray Line¥n Brightness: %d, Target: %d", luminance, brightness);      
-      walker.run(0, 0);
-      break;
+    /*灰色を検知したら止まる
+    if(72 < brightness && brightness < 100){
+      controller.printDisplay(4, "Find Gray Line¥n Brightness: %d, Target: %d", luminance, brightness);
+      controller.speakerPlayTone(controller.noteFs6, 50);
+      //walker.run(0, 0);
+      //break;
     }
-
+    */
     controller.tslpTsk(4);  // 4msec周期起動
   }
 }

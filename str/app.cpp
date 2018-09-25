@@ -94,7 +94,7 @@ void sensor_log_task(intptr_t unused)
     if(file == NULL) {  // ファイル名がダブらない場合
       fclose(file);
       file = fopen(log_file_name, "a");
-      fprintf(file, "Time(msec), Voltage, Ampere, leftMotorCounts, rightMotorCounts, colorSensor, rawColorRed, rawColorGreen, rawColorBlue\n");
+      fprintf(file, "Time(msec), Voltage, Ampere, leftMotorCounts, rightMotorCounts, colorSensor\n");
       flag = false;
 
     } else {  // 同じlogファイル名が存在する場合
@@ -115,7 +115,7 @@ void sensor_log_task(intptr_t unused)
     left_motor_counts = controller.leftWheel.getCount();
     right_motor_counts = controller.rightWheel.getCount();
     color_sensor_log = controller.getBrightness();
-    fprintf(file, "%d,%d,%d,%d,%d,%d,%d,%d,%d\n", time_now, volt, amp, left_motor_counts, right_motor_counts, color_sensor_log, rgb.r, rgb.g, rgb.b);
+    fprintf(file, "%d,%d,%d,%d,%d,%d\n", time_now, volt, amp, left_motor_counts, right_motor_counts, color_sensor_log);
     // 20msec周期起動
     tslp_tsk(20);
   }

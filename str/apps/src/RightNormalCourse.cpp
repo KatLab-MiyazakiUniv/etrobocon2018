@@ -9,7 +9,7 @@
 RightNormalCourse::RightNormalCourse()
 {
   lineTracerWalker.isLeftsideLine(true);
-  status = old_status = RightStatus::STRAIGHT;
+  status = old_status = RightStatus::STRAIGHT_LONG;
 }
 
 /*
@@ -20,59 +20,39 @@ RightNormalCourse::RightNormalCourse()
 bool RightNormalCourse::runNormalCourse(int16_t target_brightness)
 {
   switch(status) {
-    case RightStatus::R1:
+    case RightStatus::STRAIGHT_LONG:
       lineTracerWalker.speedControl.setPid(5.0, 1.0, 0.1, 180.0);
-      lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);
+      lineTracerWalker.turnControl.setPid(1.9, 0.1, 0.1, target_brightness);
       break;
 
-    case RightStatus::R2:
-      lineTracerWalker.speedControl.setPid(2.0, 1.0, 0.12, 150.0);
-      lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);
-      break;
-
-    case RightStatus::R3:
+    case RightStatus::STRAIGHT_SHORT:
       lineTracerWalker.speedControl.setPid(10.0, 1.0, 0.1, 180.0);
-      lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);
+      lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
       break;
 
-    case RightStatus::R4:
+    case RightStatus::CURVE_INSIDE_LONG:
       lineTracerWalker.speedControl.setPid(2.0, 1.0, 0.12, 150.0);
-      lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);
+      lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
       break;
 
-    case RightStatus::R5:
-      lineTracerWalker.speedControl.setPid(2.0, 1.0, 0.12, 120.0);
-      lineTracerWalker.turnControl.setPid(4.0, 0.01, 0.5, target_brightness);
-      break;
-
-    case RightStatus::R6:
-      lineTracerWalker.speedControl.setPid(10.0, 1.0, 0.1, 180.0);
-      lineTracerWalker.turnControl.setPid(2.0, 0.2, 0.1, target_brightness);
-      break;
-
-    case RightStatus::R7:
+    case RightStatus::CURVE_INSIDE_SHORT:
       lineTracerWalker.speedControl.setPid(2.0, 1.0, 0.12, 150.0);
-      lineTracerWalker.turnControl.setPid(3.28, 0.001, 0.5, target_brightness);
+      lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
       break;
 
-    case RightStatus::R8:
-      lineTracerWalker.speedControl.setPid(10.0, 1.0, 0.1, 180.0);
-      lineTracerWalker.turnControl.setPid(2.0, 0.2, 0.1, target_brightness);
-      break;
-
-    case RightStatus::R9:
-      lineTracerWalker.speedControl.setPid(10.0, 1.0, 0.12, 90.0);
-      lineTracerWalker.turnControl.setPid(2.2, 1.0, 0.11, target_brightness);
+    case RightStatus::SLOW_DOWN:
+      lineTracerWalker.speedControl.setPid(5.0, 1.0, 0.1, 80.0);
+      lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
       break;
 
     case RightStatus::TEST0:
-      lineTracerWalker.speedControl.setPid(10.0, 1.0, 0.1, 200.0);
-      lineTracerWalker.turnControl.setPid(0.6, 0.0, 0.0, target_brightness);
+      lineTracerWalker.speedControl.setPid(3.0, 1.0, 0.1, 180.0);
+      lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
       break;
 
     case RightStatus::TEST1:
-      lineTracerWalker.speedControl.setPid(2.0, 1.0, 0.1, 100.0);
-      lineTracerWalker.turnControl.setPid(1.6, 0.0, 0.1, target_brightness - 20.0);
+      lineTracerWalker.speedControl.setPid(2.0, 1.0, 0.12, 120.0);
+      lineTracerWalker.turnControl.setPid(2.5, 0.001, 0.27, target_brightness);
       break;
 
     case RightStatus::STOP:
@@ -89,31 +69,32 @@ bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR)
 {
   distanse_total = distance.getDistanceTotal(countL, countR);
   old_status = status;
+  
+  /*
   if(distanse_total < 2500)
-    status = RightStatus::R1;
+    status = RightStatus::STRAIGHT_LONG;
   else if(distanse_total < 4495)
-    status = RightStatus::R2;
+    status = RightStatus::CURVE_INSIDE_LONG;
   else if(distanse_total < 5056)
-    status = RightStatus::R3;
+    status = RightStatus::STRAIGHT_SHORT;
   else if(distanse_total < 5640)
-    status = RightStatus::R4;
+    status = RightStatus::CURVE_INSIDE_SHORT;
   else if(distanse_total < 6542)
-    status = RightStatus::R5;
+    status = RightStatus::CURVE_OUTSIDE;
   else if(distanse_total < 7180)
-    status = RightStatus::R6;
+    status = RightStatus::STRAIGHT_SHORT;
   else if(distanse_total < 8640)
-    status = RightStatus::R7;
+    status = RightStatus::CURVE_OUTSIDE;
   else if(distanse_total < 11540)
-    status = RightStatus::R8;
+    status = RightStatus::STRAIGHT_LONG;
   else if(distanse_total < 12430)//ちょうどいい感じ
   //else if(distanse_total < 12630)//灰色を完全に通過
-    status = RightStatus::R9;
-  /*
+    status = RightStatus::CURVE_INSIDE_SHORT;
+  */
    if(distanse_total < 750)
-     status = RightStatus::TEST0;
+     status = RightStatus::SLOW_DOWN;
    else if(distanse_total < 2250)
-     status = RightStatus::TEST1;
-    */
+     status = RightStatus::SLOW_DOWN;
   else
     status = RightStatus::STOP;
   if(old_status != status) return true;
