@@ -21,8 +21,9 @@ bool RightNormalCourse::runNormalCourse(int16_t target_brightness)
 {
   switch(status) {
     case RightStatus::STRAIGHT_LONG:
-      lineTracerWalker.speedControl.setPid(4.5, 1.0, 0.1, 180.0);
-      lineTracerWalker.turnControl.setPid(0.49999, 0.0, 0.0, target_brightness);
+      lineTracerWalker.speedControl.setPid(5.0, 1.0, 0.1, 180.0);
+      lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);
+      //lineTracerWalker.turnControl.setPid(0.49999, 0.0, 0.0, target_brightness);
       break;
 
     case RightStatus::STRAIGHT_SHORT:
