@@ -16,6 +16,8 @@ enum struct RightStatus {
   STRAIGHT_LONG,
   STRAIGHT_SHORT,
   SLOW,
+  START,
+
 
   CURVE_INSIDE_LONG,
   CURVE_INSIDE_SHORT,

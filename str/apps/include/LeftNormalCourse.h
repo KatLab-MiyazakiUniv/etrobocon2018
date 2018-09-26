@@ -13,6 +13,18 @@
  * 走行場所の状態を保持する列挙型
  */
 enum struct LeftStatus {
+  STRAIGHT_LONG,
+  STRAIGHT_SHORT,
+  SLOW1,
+  SLOW2,
+  START,
+
+  CURVE_INSIDE_LONG,
+  CURVE_INSIDE_SHORT,
+  CURVE_OUTSIDE,
+
+
+
   STRAIGHT,
   STRAIGHT_SLOW,
   CURVE_RIGHT,

@@ -47,23 +47,19 @@ bool RightNormalCourse::runNormalCourse(int16_t target_brightness)
       break;
 
     case RightStatus::SLOW:
-      lineTracerWalker.speedControl.setPid(2.5, 0.01, 0.12, 150.0);
+      lineTracerWalker.speedControl.setPid(2.5, 0.01, 0.12, 165.0);
       lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
       break;
 
-    case RightStatus::TEST0:
-      lineTracerWalker.speedControl.setPid(3.0, 1.0, 0.1, 180.0);
+    case RightStatus::START:
+      lineTracerWalker.speedControl.setPid(1.5, 0.01, 0.12, 170.0);
       lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
-      break;
-
-    case RightStatus::TEST1:
-      lineTracerWalker.speedControl.setPid(2.0, 1.0, 0.12, 120.0);
-      lineTracerWalker.turnControl.setPid(2.5, 0.001, 0.27, target_brightness);
       break;
 
     case RightStatus::STOP:
       stop();
       break;
+
     default:
       stop();
   }
@@ -76,8 +72,9 @@ bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR)
   distanse_total = distance.getDistanceTotal(countL, countR);
   old_status = status;
   
-  
-  if(distanse_total < 2500)                 //Part 1
+  if(distanse_total < 200)                  //Part 1
+    status = RightStatus::START;
+  else if(distanse_total < 2500)            //Part 1
     status = RightStatus::STRAIGHT_LONG;
   else if(distanse_total < 4495)            //Part 2
     status = RightStatus::CURVE_INSIDE_LONG;
