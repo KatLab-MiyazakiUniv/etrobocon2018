@@ -72,25 +72,25 @@ bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR)
   distanse_total = distance.getDistanceTotal(countL, countR);
   old_status = status;
   
-  if(distanse_total < 200)                  //Part 1
+  if(distanse_total < CALIBRATE_DISTANCE_R)
     status = RightStatus::START;
-  else if(distanse_total < 2500)            //Part 1
+  else if(distanse_total < FIRST_STRAIGHT_DISTANCE_R)
     status = RightStatus::STRAIGHT_LONG;
-  else if(distanse_total < 4495)            //Part 2
+  else if(distanse_total < FIRST_CURVE_DISTANCE_R)
     status = RightStatus::CURVE_INSIDE_LONG;
-  else if(distanse_total < 5056)            //Part 3
+  else if(distanse_total < SECOND_STRAIGHT_DISTANCE_R)
     status = RightStatus::STRAIGHT_SHORT;
-  else if(distanse_total < 5640)            //Part 4
+  else if(distanse_total < SECOND_CURVE_DISTANCE_IN_R)
     status = RightStatus::CURVE_INSIDE_SHORT;
-  else if(distanse_total < 6542)            //Part 5
+  else if(distanse_total < SECOND_CURVE_DISTANCE_OUT_R)
     status = RightStatus::CURVE_OUTSIDE;
-  else if(distanse_total < 7100)            //Part 6
+  else if(distanse_total < THIRD_STRAIGHT_DISTANCE_R)
     status = RightStatus::SLOW;
-  else if(distanse_total < 8680)            //Part 7
+  else if(distanse_total < THIRD_CURVE_DISTANCE_R)
     status = RightStatus::CURVE_OUTSIDE;
-  else if(distanse_total < 11540)           //Part 8
+  else if(distanse_total < FOURTH_STRAIGHT_DISTANCE_R)
     status = RightStatus::STRAIGHT_LONG;
-  else if(distanse_total < 12430)           //Part 9, goal to gray line
+  else if(distanse_total < AFTER_GOAL_CURVE_R)
   //else if(distanse_total < 12630)//灰色を完全に通過
     status = RightStatus::CURVE_INSIDE_SHORT;
   

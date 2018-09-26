@@ -23,9 +23,15 @@ bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int16_t l
       break;
 
     case LeftStatus::EDGE_CHANGE:
-      lineTracerWalker.speedControl.setPid(2.5, 0.01, 0.12, 180.0);
+      lineTracerWalker.speedControl.setPid(4.5, 0.01, 0.12, 160.0);
       lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
       lineTracerWalker.runLine(countL, countR, light_value);
+      break;
+
+    case LeftStatus::SECOND_CURVE:
+      lineTracerWalker.speedControl.setPid(2.0, 0.5, 0.6, 180.0);
+      lineTracerWalker.turnControl.setPid(2.0, 0.01, 0.12, target_brightness);
+      lineTracerWalker.runLine(countL, countR, light_value);      
       break;
 
     case LeftStatus::EDGE_RESET:
@@ -34,15 +40,19 @@ bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int16_t l
       lineTracerWalker.runLine(countL, countR, light_value);      
       break;
 
-    case LeftStatus::SLOW1:
-      lineTracerWalker.speedControl.setPid(5.5, 0.01, 0.12, 180.0);
-      lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
+    case LeftStatus::THIRD_CURVE:
+    /*
+      lineTracerWalker.speedControl.setPid(2.0, 0.5, 0.6, 150.0);
+      lineTracerWalker.turnControl.setPid(5.0 , 0.01, 0.5, target_brightness);
       lineTracerWalker.runLine(countL, countR, light_value);
+    */
+      lineTracerWalker.speedControl.setPid(2.5, 0.01, 0.12, 150.0);
+      lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
       break;
 
-    case LeftStatus::SLOW2:
-      lineTracerWalker.speedControl.setPid(5.5, 0.01, 0.12, 165.0);
-      lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
+    case LeftStatus::STRAIGHT_THIRD:
+      lineTracerWalker.speedControl.setPid(8.0, 1.0, 0.1, 160.0);
+      lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness - 20);
       lineTracerWalker.runLine(countL, countR, light_value);
       break;
     
@@ -66,58 +76,21 @@ bool LeftNormalCourse::statusCheck(int32_t countL, int32_t countR)
 {
   distanse_total = distance.getDistanceTotal(countL, countR);
   old_status = status;
-  if(distanse_total < 200)
+  if(distanse_total < CALIBRATE_DISTANCE_L)
     status = LeftStatus::START;
-  else if(distanse_total < 2850)
+  else if(distanse_total < FIRST_STRAIGHT_DISTANCE_L)
     status = LeftStatus::STRAIGHT;
-  /*
-  else if(distanse_total < 2650)        //^^^ Part 1
-    status = LeftStatus::SLOW1;
-  else if(distanse_total < 2850)        //^^^ Part 1
-    status = LeftStatus::SLOW2;
-  */
-
-  else if(distanse_total < 4950)        //^^^ Part 2
+  else if(distanse_total < FIRST_CURVE_DISTANCE_L)
     status = LeftStatus::EDGE_CHANGE;
-
-  /*
-  else if(distanse_total < 5200)        //^^^ Part 3        
-    status = LeftStatus::SLOW1;
-  */
-  else if(distanse_total < 6600)
+  else if(distanse_total < SECOND_STRAIGHT_DISTANCE_L)
     status = LeftStatus::STRAIGHT;
-  /*
-  else if(distanse_total < 6400)
-    status = LeftStatus::SLOW1;
-  else if(distanse_total < 6600)
-    status = LeftStatus::SLOW2;
-  */
-  else if(distanse_total < 7500)
-    status = LeftStatus::EDGE_RESET;    //^^^ Part 4
-
-  /*
-  else if(distanse_total < 7600)
-    status = LeftStatus::SLOW2;
-  else if(distanse_total < 7750)
-    status = LeftStatus::SLOW1;
-  */
-  else if(distanse_total < 8100)        //^^^ Part 5
-    status = LeftStatus::STRAIGHT;
-  /*
-  else if(distanse_total < 7900)
-    status = LeftStatus::SLOW1;
-  else if(distanse_total < 8100)
-    status = LeftStatus::SLOW2;
-  */
-
-  else if(distanse_total < 9000)
-    status = LeftStatus::EDGE_RESET;    //^^^ Part 6
-
-  /*
-  else if(distanse_total < 9200)        //^^^ Part 7
-    status = LeftStatus::SLOW2;
-  */
-  else if(distanse_total < 12000)
+  else if(distanse_total < SECOND_CURVE_DISTANCE_L)
+    status = LeftStatus::SECOND_CURVE;
+  else if(distanse_total < THIRD_STRAIGHT_DISTANCE_L)
+    status = LeftStatus::STRAIGHT_THIRD;
+  else if(distanse_total < THIRD_CURVE_DISTANCE_L)
+    status = LeftStatus::EDGE_RESET;
+  else if(distanse_total < FOURTH_STRAIGHT_DISTANCE_L)
     status = LeftStatus::STRAIGHT;
   else
     status = LeftStatus::STOP;

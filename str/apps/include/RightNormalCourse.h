@@ -62,6 +62,18 @@ class RightNormalCourse : public NormalCourse {
  private:
   RightStatus status;
   RightStatus old_status;
+
+  #define CALIBRATE_DISTANCE_R 300
+  #define FIRST_STRAIGHT_DISTANCE_R 2500
+  #define FIRST_CURVE_DISTANCE_R 4495
+  #define SECOND_STRAIGHT_DISTANCE_R 5056
+  #define SECOND_CURVE_DISTANCE_IN_R 5640
+  #define SECOND_CURVE_DISTANCE_OUT_R 6542
+  #define THIRD_STRAIGHT_DISTANCE_R 7100
+  #define THIRD_CURVE_DISTANCE_R 8680
+  #define FOURTH_STRAIGHT_DISTANCE_R 11540
+  #define AFTER_GOAL_CURVE_R 12330
+
 };
 
 #endif
