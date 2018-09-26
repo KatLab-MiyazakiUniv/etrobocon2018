@@ -52,6 +52,7 @@ class Parking {
   Controller controller;
   Walker walker;
   float remaining_amount;
+  //char *aa;
 };
 
 #endif

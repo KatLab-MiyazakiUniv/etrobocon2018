@@ -15,7 +15,7 @@ void LeftCourse::setFirstCode(int32_t code)
  */
 void LeftCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t gray)
 {
-  //runNormalCourse(brightness);
+  runNormalCourse(brightness);
 
   controller.printDisplay(3, "Finished NormalArea");
 
@@ -25,7 +25,7 @@ void LeftCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t g
 
   // Park
   controller.printDisplay(5, "> Start ParallelParking <");
-  runParking(brightness, black, white, gray);
+  //runParking(brightness, black, white, gray);
   controller.printDisplay(7, "> Finished ParallelParking <");
 }
 

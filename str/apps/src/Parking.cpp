@@ -84,10 +84,26 @@ void Parking::runParallel(int16_t brightness, int16_t black, int16_t white, int1
       count++;
     }
 
-    if(count > 250) { //250
+    if(controller.ev3_battery_voltage() > 1390 &&  count > 260) { //250
+      controller.printDisplay(9, ">>  13 <<<");
       waitThreeTimes();
       basicWalker.reset();
-      basicWalker.goStraight(60, 500);
+      basicWalker.setPidWithoutTarget(14.0, 1.0, 0.1);
+      basicWalker.goStraight(60, 300);
+      break;
+    }else if(controller.ev3_battery_voltage() > 1350 &&  count > 270) { //250
+      controller.printDisplay(9, ">>  12 <<<");
+      waitThreeTimes();
+      basicWalker.reset();
+      basicWalker.setPidWithoutTarget(14.0, 1.0, 0.1);
+      basicWalker.goStraight(60, 300);
+      break;
+    }else if(count > 280){
+      controller.printDisplay(9, ">>  etc <<<");
+      waitThreeTimes();
+      basicWalker.reset();
+      basicWalker.setPidWithoutTarget(14.0, 1.0, 0.1);
+      basicWalker.goStraight(60, 300);
       break;
     }
     lineTracer.speedControl.setPid(17.0, 1.0, 0.1, 30.0);
@@ -99,13 +115,16 @@ void Parking::runParallel(int16_t brightness, int16_t black, int16_t white, int1
     }
     controller.tslpTsk(4);
   }
-  basicWalker.setPidWithoutTarget(14.0, 1.0, 0.1);
+  //sprintf(aa, "%f", controller.ev3_battery_voltage());
+
+  //controller.printDisplay(5, aa);
   basicWalker.reset();
+  basicWalker.setPidWithoutTarget(14.0, 1.0, 0.1);
   basicWalker.spin(basicWalker.SPIN_LEFT, 40);
   // basicWalker.setPidWithoutTarget(14.0, 1.0, 0.1);
-  basicWalker.goStraight(60, 580);
+  basicWalker.goStraight(60, 500);
   basicWalker.spin(basicWalker.SPIN_LEFT, 90);
-  basicWalker.goStraight(30, 10);
+  //basicWalker.goStraight(30, 10);
   // basicWalker.spin( basicWalker.SPIN_RIGHT, 90 );
 }
 
