@@ -27,14 +27,21 @@ void RightCourse::runNormalCourse(int16_t brightness, int16_t black, int16_t whi
   RightNormalCourse normalCourse;
   bool isNormalCourse;
 
+  /*灰色を検知用*/
+  /* 
   int8_t counter = 0;
   int16_t target_brightness_gray = (white + gray) / 2;
+  */
 
   // NormalCourseを抜けるまでループする
   while(1) {
     sl.update(walker.get_count_L(), walker.get_count_R());
     auto luminance = controller.getBrightness();
+
+    /*灰色を検知用*/
+    /*
     auto distance_total_r = (walker.get_count_L() + walker.get_count_R()) / 2;
+    */
     controller.printDisplay(4, "Brightness: %d, Target: %d", luminance, brightness);
     if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R()))
       controller.speakerPlayTone(controller.noteFs6, 100);
