@@ -83,6 +83,7 @@ extern "C" {
 
 extern void main_task(intptr_t exinf);
 extern void bt_task(intptr_t exinf);
+extern void sensor_log_task(intptr_t exinf);
 
 #endif /* TOPPERS_MACRO_ONLY */
 
