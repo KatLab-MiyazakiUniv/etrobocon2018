@@ -18,13 +18,11 @@ enum struct RightStatus {
   SLOW,
   START,
 
-
   CURVE_INSIDE_LONG,
   CURVE_INSIDE_SHORT,
   CURVE_OUTSIDE,
 
   TRANSFER_ZONE,
-
   STOP,
 };
 
@@ -68,9 +66,10 @@ class RightNormalCourse : public NormalCourse {
   #define SECOND_CURVE_DISTANCE_OUT_R 6542
   #define THIRD_STRAIGHT_DISTANCE_R 7100
   #define THIRD_CURVE_DISTANCE_R 8680
-  #define FOURTH_STRAIGHT_DISTANCE_R 11540
-  #define AFTER_GOAL_CURVE_R 12000
+  #define FOURTH_STRAIGHT_DISTANCE_R 11657
 
+  #define AFTER_GOAL_CURVE_R 12000
+  #define GRAY_FIND_AREA_R 12450
 };
 
 #endif

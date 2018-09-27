@@ -12,7 +12,7 @@ void RightCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t 
 {
   LineTracerWalker lineTracer;
   runNormalCourse(brightness, black, white, gray);
-  runParking(brightness, lineTracer, black, white);
+  //runParking(brightness, lineTracer, black, white);
 }
 
 void RightCourse::runParking(int16_t brightness, LineTracerWalker lineTracer, int16_t black,
@@ -50,9 +50,10 @@ void RightCourse::runNormalCourse(int16_t brightness, int16_t black, int16_t whi
       walker.run(0, 0);
       break;
     }
-    /*灰色を検知したら止まる*/
-    if(distance_total_r > FOURTH_STRAIGHT_DISTANCE_R && target_brightness_gray + 10 > luminance && luminance > target_brightness_gray - 3){
-      if(counter > 40){
+    /*灰色を検知したら止まる*/ 
+    /* 
+    if(distance_total_r > AFTER_GOAL_CURVE_R && target_brightness_gray + 20 > luminance && luminance > target_brightness_gray - 3){
+      if(counter > 10){
         controller.printDisplay(4, "Find Gray Line¥n Brightness: %d, Target: %d", luminance, brightness);
         controller.speakerPlayTone(controller.noteFs6, 100); 
       }
@@ -61,7 +62,7 @@ void RightCourse::runNormalCourse(int16_t brightness, int16_t black, int16_t whi
     }else{
       counter = 0;      
     }
-    /**/
+    */
     controller.tslpTsk(4);  // 4msec周期起動
   }
 }
