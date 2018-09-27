@@ -66,18 +66,11 @@ void RightCourse::runPuzzle(int16_t target_brightness){
   LineTracerWalker lineTracerWalker;
 
   lineTracerWalker.speedControl.setPid(2.0, 0.8, 0.8, 60.0);
-  lineTracerWalker.turnControl.setPid(2.0, 1.7, 0.6, target_brightness);  
-
+  lineTracerWalker.turnControl.setPid(1.0, 1.7, 0.6, target_brightness);  
   walker.reset();
-controller.printDisplay(6, "in the loop, Color: %d", static_cast<int>(result));
-      controller.speakerPlayTone(controller.noteFs4, 100);
-      basic.reset();
-      basic.setPidWithoutTarget(6.5, 0.5, 1.0);
-      basic.backStraight(15, 45);
-      lifter.liftUp(45, 10);
-      Color result=d.getColor(); 
-      lifter.liftDown(0, 3);
-      lifter.liftUp(1.5,5);
+  Color result=d.getColor(); 
+  controller.printDisplay(6, "in the loop, Color: %d", static_cast<int>(result));
+  controller.speakerPlayTone(controller.noteFs4, 100);
   while(1){
     Color result=d.getColor();      
     auto luminance = controller.getBrightness();
@@ -99,7 +92,8 @@ controller.printDisplay(6, "in the loop, Color: %d", static_cast<int>(result));
       basic.goStraight(15, 180);
     }//L82R74//
     if(result==Color::YELLOW){
-      controller.printDisplay(6, "in the loop, Color: %d", static_cast<int>(result));
+      //180回転
+      /*controller.printDisplay(6, "in the loop, Color: %d", static_cast<int>(result));
       controller.speakerPlayTone(controller.noteFs4, 100);
       basic.reset();
       basic.setPidWithoutTarget(6.5, 0.5, 1.0);
@@ -111,8 +105,17 @@ controller.printDisplay(6, "in the loop, Color: %d", static_cast<int>(result));
       basic.goStraight(15, 90); 
       basic.spin(basic.SPIN_RIGHT, 82, 10);
       //while(result!=Color::BLACK){
-        basic.goStraight(15, 300);
-     // }
+      basic.goStraight(15, 300);
+      }
+     /*/
+      basic.reset();
+      basic.setPidWithoutTarget(6.5, 0.5, 1.0);
+      basic.backStraight(15, 120);
+      basic.reset();
+      basic.setPidWithoutTarget(5.0, 1.0, 0.1);      
+      basic.spin(basic.SPIN_RIGHT, 165, 10);
+      basic.goStraight(15, 75);
+    
     } 
     if(result==Color::BLUE){
       //Right
@@ -127,7 +130,7 @@ controller.printDisplay(6, "in the loop, Color: %d", static_cast<int>(result));
     if(result==Color::GREEN){
       controller.speakerPlayTone(controller.noteFs6, 100);
       //Left
-            break;
+      break;
       basic.reset();
       basic.setPidWithoutTarget(5.0, 1.0, 0.1);      
       basic.goStraight(15, 130);
