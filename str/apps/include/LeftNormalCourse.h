@@ -68,14 +68,14 @@ class LeftNormalCourse : public NormalCourse {
   bool isChangedEdge;
   int16_t time_count;
   
-  #define CALIBRATE_DISTANCE_L 300  
-  #define FIRST_STRAIGHT_DISTANCE_L 2850
-  #define FIRST_CURVE_DISTANCE_L 4950
-  #define SECOND_STRAIGHT_DISTANCE_L 6600
-  #define SECOND_CURVE_DISTANCE_L 7500
-  #define THIRD_STRAIGHT_DISTANCE_L 7900
-  #define THIRD_CURVE_DISTANCE_L 9600
-  #define FOURTH_STRAIGHT_DISTANCE_L 12000
+  const std::int16_t CALIBRATE_DISTANCE_L = 300;  
+  const std::int16_t FIRST_STRAIGHT_DISTANCE_L = 2850;
+  const std::int16_t FIRST_CURVE_DISTANCE_L = 4950;
+  const std::int16_t SECOND_STRAIGHT_DISTANCE_L = 6600;
+  const std::int16_t SECOND_CURVE_DISTANCE_L = 7500;
+  const std::int16_t THIRD_STRAIGHT_DISTANCE_L = 7900;
+  const std::int16_t THIRD_CURVE_DISTANCE_L = 9600;
+  const std::int16_t FOURTH_STRAIGHT_DISTANCE_L = 12000;
 };
 
 #endif

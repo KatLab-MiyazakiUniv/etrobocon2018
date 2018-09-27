@@ -58,18 +58,18 @@ class RightNormalCourse : public NormalCourse {
   RightStatus status;
   RightStatus old_status;
 
-  #define CALIBRATE_DISTANCE_R 300
-  #define FIRST_STRAIGHT_DISTANCE_R 2500
-  #define FIRST_CURVE_DISTANCE_R 4495
-  #define SECOND_STRAIGHT_DISTANCE_R 5056
-  #define SECOND_CURVE_DISTANCE_IN_R 5640
-  #define SECOND_CURVE_DISTANCE_OUT_R 6542
-  #define THIRD_STRAIGHT_DISTANCE_R 7100
-  #define THIRD_CURVE_DISTANCE_R 8680
-  #define FOURTH_STRAIGHT_DISTANCE_R 11657
+  const std::int16_t CALIBRATE_DISTANCE_R = 300;
+  const std::int16_t FIRST_STRAIGHT_DISTANCE_R = 2500;
+  const std::int16_t FIRST_CURVE_DISTANCE_R = 4495;
+  const std::int16_t SECOND_STRAIGHT_DISTANCE_R = 5056;
+  const std::int16_t SECOND_CURVE_DISTANCE_IN_R = 5640;
+  const std::int16_t SECOND_CURVE_DISTANCE_OUT_R = 6542;
+  const std::int16_t THIRD_STRAIGHT_DISTANCE_R = 7100;
+  const std::int16_t THIRD_CURVE_DISTANCE_R = 8680;
+  const std::int16_t FOURTH_STRAIGHT_DISTANCE_R = 11657;
 
-  #define AFTER_GOAL_CURVE_R 12000
-  #define GRAY_FIND_AREA_R 12450
+  const std::int16_t AFTER_GOAL_CURVE_R = 11900;
+  const std::int16_t GRAY_FIND_AREA_R = 12250;
 };
 
 #endif

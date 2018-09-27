@@ -64,7 +64,6 @@ void EtRobocon2018::loop()
   LeftCourse leftCourse{ controller };
   leftCourse.setFirstCode(firstCode);
   leftCourse.run(brightness, light_black, light_white, light_gray);
-  rightCourse.run(brightness, light_black, light_white, light_gray);
 #endif
 }
 
