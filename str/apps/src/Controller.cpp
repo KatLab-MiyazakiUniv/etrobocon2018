@@ -50,7 +50,7 @@ bool Controller::buttonIsPressedLeft()
   return ev3_button_is_pressed(LEFT_BUTTON);
 }
 
-float Controller::ev3_battery_voltage ()
+float Controller::measureBatteryVoltage ()
 {
   return ev3_battery_voltage_mV ();
 }

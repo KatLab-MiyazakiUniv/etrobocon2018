@@ -94,9 +94,9 @@ bool LeftNormalCourse::statusCheck(int32_t countL, int32_t countR)
 {
   distanse_total = distance.getDistanceTotal(countL, countR);
   old_status = status;
-  if(distanse_total < 300){
+  if(distanse_total < 300)
     status = LeftStatus::START;
-  }else if(distanse_total < 2850)
+  else if(distanse_total < 2850)
     status = LeftStatus::STRAIGHT;
   else if(distanse_total < 4750)
     status = LeftStatus::EDGE_CHANGE;
