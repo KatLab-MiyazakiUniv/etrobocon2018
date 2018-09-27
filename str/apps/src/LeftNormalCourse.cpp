@@ -42,17 +42,18 @@ bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int16_t l
 
     case LeftStatus::THIRD_CURVE:
     /*
-      lineTracerWalker.speedControl.setPid(2.0, 0.5, 0.6, 150.0);
-      lineTracerWalker.turnControl.setPid(5.0 , 0.01, 0.5, target_brightness);
+      lineTracerWalker.speedControl.setPid(1.0, 0.02, 0.0.15, 180.0);
+      lineTracerWalker.turnControl.setPid(2.5 , 0.02, 0.15, target_brightness);
       lineTracerWalker.runLine(countL, countR, light_value);
     */
+
       lineTracerWalker.speedControl.setPid(2.5, 0.01, 0.12, 150.0);
-      lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
+      lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness - 10);
       break;
 
     case LeftStatus::STRAIGHT_THIRD:
       lineTracerWalker.speedControl.setPid(8.0, 1.0, 0.1, 160.0);
-      lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness - 20);
+      lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness - 10);
       lineTracerWalker.runLine(countL, countR, light_value);
       break;
     

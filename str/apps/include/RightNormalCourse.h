@@ -23,12 +23,9 @@ enum struct RightStatus {
   CURVE_INSIDE_SHORT,
   CURVE_OUTSIDE,
 
-  //CURVE_OUTSIDE_GATE2,
+  TRANSFER_ZONE,
 
   STOP,
-
-  TEST0,
-  TEST1,
 };
 
 /**
@@ -71,8 +68,8 @@ class RightNormalCourse : public NormalCourse {
   #define SECOND_CURVE_DISTANCE_OUT_R 6542
   #define THIRD_STRAIGHT_DISTANCE_R 7100
   #define THIRD_CURVE_DISTANCE_R 8680
-  #define FOURTH_STRAIGHT_DISTANCE_R 11540
-  #define AFTER_GOAL_CURVE_R 12330
+  #define FOURTH_STRAIGHT_DISTANCE_R 10000
+  #define AFTER_GOAL_CURVE_R 11300
 
 };
 

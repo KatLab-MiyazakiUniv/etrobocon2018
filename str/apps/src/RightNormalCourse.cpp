@@ -55,6 +55,11 @@ bool RightNormalCourse::runNormalCourse(int16_t target_brightness)
       lineTracerWalker.speedControl.setPid(1.5, 0.01, 0.12, 170.0);
       lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
       break;
+    
+    case RightStatus::TRANSFER_ZONE:
+      lineTracerWalker.speedControl.setPid(5.0, 1.0, 0.12, 80.0);
+      lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
+      break;
 
     case RightStatus::STOP:
       stop();
@@ -92,14 +97,7 @@ bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR)
     status = RightStatus::STRAIGHT_LONG;
   else if(distanse_total < AFTER_GOAL_CURVE_R)
   //else if(distanse_total < 12630)//灰色を完全に通過
-    status = RightStatus::CURVE_INSIDE_SHORT;
-  
-  /*
-   if(distanse_total < 750)
-     status = RightStatus::SLOW_DOWN;
-   else if(distanse_total < 2250)
-     status = RightStatus::SLOW_DOWN;
-  */
+    status = RightStatus::TRANSFER_ZONE;
   else
     status = RightStatus::STOP;
   if(old_status != status) return true;
