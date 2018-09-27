@@ -57,8 +57,8 @@ bool RightNormalCourse::runNormalCourse(int16_t target_brightness, int16_t black
       break;
     
     case RightStatus::TRANSFER_ZONE:
-      lineTracerWalker.speedControl.setPid(3.0, 0.0001, 0.12, 120.0);
-      lineTracerWalker.turnControl.setPid(2.0, 1.6, 0.5, target_brightness);
+      lineTracerWalker.speedControl.setPid(10.0, 0.0001, 0.12, 140.0);
+      lineTracerWalker.turnControl.setPid(1.0, 1.6, 0.5, target_brightness);
       break;
 
     case RightStatus::STOP:
