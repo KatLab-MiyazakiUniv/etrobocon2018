@@ -51,7 +51,8 @@ void RightCourse::runNormalCourse(int16_t brightness, int16_t black, int16_t whi
       break;
     }
     /*灰色を検知したら止まる*/ 
-    /* 
+  /*
+  const std::int16_t AFTER_GOAL_CURVE_R = 11900;
     if(distance_total_r > AFTER_GOAL_CURVE_R && target_brightness_gray + 20 > luminance && luminance > target_brightness_gray - 3){
       if(counter > 10){
         controller.printDisplay(4, "Find Gray Line¥n Brightness: %d, Target: %d", luminance, brightness);
@@ -62,7 +63,7 @@ void RightCourse::runNormalCourse(int16_t brightness, int16_t black, int16_t whi
     }else{
       counter = 0;      
     }
-    */
+  */
     controller.tslpTsk(4);  // 4msec周期起動
   }
 }

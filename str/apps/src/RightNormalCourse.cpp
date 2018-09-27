@@ -96,7 +96,6 @@ bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR)
   else if(distanse_total < FOURTH_STRAIGHT_DISTANCE_R)
     status = RightStatus::STRAIGHT_LONG;
   else if(distanse_total < AFTER_GOAL_CURVE_R)
-  //else if(distanse_total < 12630)//灰色を完全に通過
     status = RightStatus::TRANSFER_ZONE;
   else if(distanse_total < GRAY_FIND_AREA_R)
     status = RightStatus::START;
