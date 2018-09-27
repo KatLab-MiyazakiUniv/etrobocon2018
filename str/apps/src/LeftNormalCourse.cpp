@@ -36,14 +36,14 @@ bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int16_t l
       break;
 
     case LeftStatus::EDGE_RESET:
-      lineTracerWalker.speedControl.setPid(2.0, 0.5, 0.6, 180.0);
-      lineTracerWalker.turnControl.setPid(2.0, 0.01, 0.12, target_brightness);
+      lineTracerWalker.speedControl.setPid(2.0, 0.5, 0.7, 180.0);
+      lineTracerWalker.turnControl.setPid(2.0, 0.01, 0.2, target_brightness);
       lineTracerWalker.runLine(countL, countR, light_value);
       break;
 
     case LeftStatus::CURVE_LEFT:
       lineTracerWalker.speedControl.setPid(2.0, 0.5, 0.6, 180.0);
-      lineTracerWalker.turnControl.setPid(5.0, 0.05, 0.5, target_brightness);
+      lineTracerWalker.turnControl.setPid(4.2, 0.05, 0.3, target_brightness);
       lineTracerWalker.runLine(countL, countR, light_value);
       break;
     /*
@@ -106,9 +106,9 @@ bool LeftNormalCourse::statusCheck(int32_t countL, int32_t countR)
     status = LeftStatus::EDGE_RESET;
   else if(distanse_total < 8100)
     status = LeftStatus::STRAIGHT;
-  else if(distanse_total < 9000)
+  else if(distanse_total < 8900)
     status = LeftStatus::CURVE_LEFT;
-  else if(distanse_total < 13000)
+  else if(distanse_total < 14500)
     status = LeftStatus::STRAIGHT;
   else
     status = LeftStatus::STOP;
