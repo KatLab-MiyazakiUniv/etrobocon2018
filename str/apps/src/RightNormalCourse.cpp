@@ -17,7 +17,7 @@ RightNormalCourse::RightNormalCourse()
  * マイナス値は入れないほうがいい
  *lineTracerWalker.speedControl.setPid ( 2.0, 4.8, 0.024, 速度mm/s );
  */
-bool RightNormalCourse::runNormalCourse(int16_t target_brightness)
+bool RightNormalCourse::runNormalCourse(int16_t target_brightness, int16_t black, int16_t white, int16_t gray)
 {
   switch(status) {
     case RightStatus::STRAIGHT_LONG:

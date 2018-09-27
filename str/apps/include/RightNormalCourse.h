@@ -40,7 +40,7 @@ class RightNormalCourse : public NormalCourse {
    * 走行場所でのPID値を設定する
    * @return Goalしたかどうか
    */
-  bool runNormalCourse(int16_t target_brightness);
+  bool runNormalCourse(int16_t target_brightness, int16_t black, int16_t white, int16_t gray);
 
   /**
    * 現在の走行場所の状態を設定する
@@ -68,8 +68,8 @@ class RightNormalCourse : public NormalCourse {
   #define SECOND_CURVE_DISTANCE_OUT_R 6542
   #define THIRD_STRAIGHT_DISTANCE_R 7100
   #define THIRD_CURVE_DISTANCE_R 8680
-  #define FOURTH_STRAIGHT_DISTANCE_R 10000
-  #define AFTER_GOAL_CURVE_R 11300
+  #define FOURTH_STRAIGHT_DISTANCE_R 11540
+  #define AFTER_GOAL_CURVE_R 12000
 
 };
 
