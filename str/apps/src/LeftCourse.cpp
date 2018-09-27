@@ -20,12 +20,12 @@ void LeftCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t g
   controller.printDisplay(3, "Finished NormalArea");
 
   // Puzzle
-  //runBlockRange();
+  runBlockRange();
   controller.printDisplay(3, "Finished Puzzle");
 
   // Park
   controller.printDisplay(5, "> Start ParallelParking <");
-  //runParking(brightness, black, white, gray);
+  runParking(brightness, black, white, gray);
   controller.printDisplay(7, "> Finished ParallelParking <");
 }
 

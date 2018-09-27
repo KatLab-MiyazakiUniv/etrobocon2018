@@ -30,7 +30,7 @@ bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int16_t l
       break;
 
     case LeftStatus::EDGE_CHANGE:
-      lineTracerWalker.speedControl.setPid(2.5, 0.01, 0.12, 180.0);
+      lineTracerWalker.speedControl.setPid(3.5, 0.01, 0.12, 180.0);
       lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);
       lineTracerWalker.runLine(countL, countR, light_value);
       break;

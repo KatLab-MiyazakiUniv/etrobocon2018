@@ -16,6 +16,7 @@
                 "tuple": "cpp",
                 "utility": "cpp",
                 "random": "cpp",
-                "bitset": "cpp"
+                "bitset": "cpp",
+                "memory": "cpp"
         }
 }
