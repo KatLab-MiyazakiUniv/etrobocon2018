@@ -24,10 +24,8 @@ void LeftCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t g
   // controller.printDisplay(3, "Finished Puzzle");
 
   // Park
-  controller.printDisplay(5, "> Start ParallelParking <");
-  // runParking(brightness, black, white, gray);
-  controller.printDisplay(7, "> Finished ParallelParking <");
   solveAiAnser();
+  runParking(brightness, black, white, gray);
   // runGoStraight();
 }
 
@@ -37,7 +35,7 @@ void LeftCourse::solveAiAnser()
   controller.speakerPlayTone(controller.noteFs4, 200);
   walker.run(30, 0);
   controller.speakerPlayTone(controller.noteFs4, 200);
-  controller.tslpTsk(3300);
+  controller.tslpTsk(2200);
   controller.speakerPlayTone(controller.noteFs4, 200);
   // その場に止まる
   walker.reset();
@@ -54,7 +52,7 @@ void LeftCourse::solveAiAnser()
     // 現在の色取得
     int16_t luminance = controller.getBrightness();
     // 黒検知
-    if(luminance <= 21) {
+    if(luminance <= 11) {
       runGoBlack();
       // lineTracer.speedControl.setPid(5.0, 1.0, 0.1, 90.0);
       // lineTracer.turnControl.setPid(2.0, 1.0, 0.14, target_brightness);
