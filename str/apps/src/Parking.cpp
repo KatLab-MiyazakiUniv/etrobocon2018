@@ -13,13 +13,13 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
 
   controller.printDisplay(0, "Do ParallelParking...");
   basicWalker.setPidWithoutTarget(5.0, 0.8, 0.2);
-  basicWalker.goStraight_b(30, 1000, target_brightness);
+  basicWalker.goStraightToCheckBlackLine(30, 1000, target_brightness);
 
   basicWalker.spin(basicWalker.SPIN_LEFT, 70);
   //waitThreeTimes();
-  basicWalker.spin_black(basicWalker.SPIN_RIGHT, 70);
+  basicWalker.spinToCheckBlackLine(basicWalker.SPIN_RIGHT, 70);
   basicWalker.reset();
-  // waitThreeTimes();
+  
 
  // waitThreeTimes();
   
@@ -56,7 +56,7 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
 
     count++;
 
-    if(count > 800) { //元祖800
+    if(count > 1000) { 
       waitThreeTimes();
       break;
     }
@@ -67,6 +67,7 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
    basicWalker.setPidWithoutTarget(5.0, 0.8, 0.2);
    basicWalker.reset();
    basicWalker.goStraight(30, 350, target_brightness);
+    waitThreeTimes();
 }
 
 void Parking::runParallelrun()

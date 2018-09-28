@@ -25,7 +25,7 @@ void BasicWalker::spin(bool rotationalDirection, int32_t angle)
   walker.run(0, 0);
 }
 
-void BasicWalker::spin_black(bool rotationalDirection, int32_t angle)
+void BasicWalker::spinToCheckBlackLine(bool rotationalDirection, int32_t angle)
 {
   int8_t reverseValue = rotationalDirection == SPIN_RIGHT ? -1 : 1;
 
@@ -46,7 +46,7 @@ if(now_brightness < 120) {  //白が黒に近ずいたら
 }
 
 
-void BasicWalker::goStraight_b(int32_t target_forward, int32_t distance, int16_t target_brightness)
+void BasicWalker::goStraightToCheckBlackLine(int32_t target_forward, int32_t distance, int16_t target_brightness)
 {
   speedControl.setPid(p_value, i_value, d_value, target_forward);
   while(((walker.get_count_L() + walker.get_count_R()) / 2) < distance) {
