@@ -35,9 +35,14 @@
  * <pre>
  *     {@code
  *     Explorer explorer;
- *
  *     explorer.createBlockArea();
- *     auto route = explorer.searchRoute(8, 11);
+ *
+ *     explorer.resetBlocArea();
+ *     explorer.setHasBlockIn(8);
+ *     explorer.setHasBlockIn(9);
+ *     explorer.setHasBlockIn(11);
+ *     explorer.setHasBlockIn(15);
+ *     auto route = explorer.searchRoute(8, 10); // == {8, 12, 13, 14, 10}
  *     }
  * </pre>
  */
@@ -133,6 +138,10 @@ class Explorer {
    * </p>
    */
   void createBlockArea();
+
+  void resetBlockArea();
+
+  void setHasBlockIn(std::int8_t blockID);
 
   std::vector<int> searchRoute(std::int8_t start, std::int8_t end);
 

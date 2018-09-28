@@ -226,4 +226,133 @@ namespace etrobocon2018_test {
     ASSERT_EQ(expected.size(), actual.size());
   }
 
+  // 簡単なシナリオルートを返す
+  TEST(ExplorerTest, searchRouteInSenarioTest)
+  {
+    Explorer obj;
+    // 8->Blue, 9->Red, 11->Yellow, 15->Green
+    std::vector<int> expectedCartingBlue = {8, 12, 13, 14, 10};
+    std::vector<int> expectedMovingToRed = {14, 13, 9};
+    std::vector<int> expectedCartingRed = {9, 5, 6};
+    std::vector<int> expectedMovingToYellow = {5, 1, 2, 3, 7, 11};
+    std::vector<int> expectedCartingYellow = {11, 7, 3, 2, 1, 5, 9};
+    std::vector<int> expectedMovingToGreen = {5, 4, 8, 12, 13, 14, 15};
+    std::vector<int> expectedCartingGreen = {15, 14, 13, 12, 8, 4, 5};
+    std::vector<int> expectedMovingTo11 = {4, 0, 1, 2, 3, 7, 11};
+
+    obj.createBlockArea();
+    obj.resetBlockArea();
+    obj.setHasBlockIn(8);
+    obj.setHasBlockIn(9);
+    obj.setHasBlockIn(11);
+    obj.setHasBlockIn(15);
+
+    // Blue 8->10
+    auto actualCartingBlue = obj.searchRoute(8, 10);
+
+    for (unsigned int i = 0; i < expectedCartingBlue.size(); i++)
+    {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualCartingBlue[i])->getNodeID(), expectedCartingBlue[i]);
+    }
+    EXPECT_EQ(expectedCartingBlue.size(), actualCartingBlue.size());
+
+    obj.resetBlockArea();
+    obj.setHasBlockIn(9);
+    obj.setHasBlockIn(10);
+    obj.setHasBlockIn(11);
+    obj.setHasBlockIn(15);
+
+    // 14->9
+    auto actualMovingToRed = obj.searchRoute(14, 9);
+    for (unsigned int i = 0; i < expectedMovingToRed.size(); i++)
+    {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualMovingToRed[i])->getNodeID(), expectedMovingToRed[i]);
+    }
+    EXPECT_EQ(expectedMovingToRed.size(), actualMovingToRed.size());
+
+    obj.resetBlockArea();
+    obj.setHasBlockIn(9);
+    obj.setHasBlockIn(10);
+    obj.setHasBlockIn(11);
+    obj.setHasBlockIn(15);
+
+    // Red 9->6
+    auto actualCartingRed = obj.searchRoute(9, 6);
+    for (unsigned int i = 0; i < expectedCartingRed.size(); i++)
+    {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualCartingRed[i])->getNodeID(), expectedCartingRed[i]);
+    }
+    EXPECT_EQ(expectedCartingRed.size(), actualCartingRed.size());
+
+    obj.resetBlockArea();
+    obj.setHasBlockIn(6);
+    obj.setHasBlockIn(10);
+    obj.setHasBlockIn(11);
+    obj.setHasBlockIn(15);
+
+    // 5->11
+    auto actualMovingToYellow = obj.searchRoute(5, 11);
+    for (unsigned int i = 0; i < expectedMovingToYellow.size(); i++)
+    {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualMovingToYellow[i])->getNodeID(), expectedMovingToYellow[i]);
+    }
+    EXPECT_EQ(expectedMovingToYellow.size(), actualMovingToYellow.size());
+
+    obj.resetBlockArea();
+    obj.setHasBlockIn(6);
+    obj.setHasBlockIn(10);
+    obj.setHasBlockIn(11);
+    obj.setHasBlockIn(15);
+
+    // Yellow 11->9
+    auto actualCartingYellow = obj.searchRoute(11, 9);
+    for (unsigned int i = 0; i < expectedCartingYellow.size(); i++)
+    {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualCartingYellow[i])->getNodeID(), expectedCartingYellow[i]);
+    }
+    EXPECT_EQ(expectedCartingYellow.size(), actualCartingYellow.size());
+
+    obj.resetBlockArea();
+    obj.setHasBlockIn(6);
+    obj.setHasBlockIn(9);
+    obj.setHasBlockIn(10);
+    obj.setHasBlockIn(15);
+
+    // 5->15
+    auto actualMovingToGreen = obj.searchRoute(5, 15);
+    for (unsigned int i = 0; i < expectedMovingToGreen.size(); i++)
+    {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualMovingToGreen[i])->getNodeID(), expectedMovingToGreen[i]);
+    }
+    EXPECT_EQ(expectedMovingToGreen.size(), actualMovingToGreen.size());
+
+    obj.resetBlockArea();
+    obj.setHasBlockIn(6);
+    obj.setHasBlockIn(9);
+    obj.setHasBlockIn(10);
+    obj.setHasBlockIn(15);
+
+    // Green 15->5
+    auto actualCartingGreen = obj.searchRoute(15, 5);
+    for (unsigned int i = 0; i < expectedCartingGreen.size(); i++)
+    {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualCartingGreen[i])->getNodeID(), expectedCartingGreen[i]);
+    }
+    EXPECT_EQ(expectedCartingYellow.size(), actualCartingGreen.size());
+
+    obj.resetBlockArea();
+    obj.setHasBlockIn(5);
+    obj.setHasBlockIn(6);
+    obj.setHasBlockIn(9);
+    obj.setHasBlockIn(10);
+
+    // 4->11
+    auto actualMovingTo11 = obj.searchRoute(4, 11);
+    for (unsigned int i = 0; i < expectedMovingTo11.size(); i++)
+    {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualMovingTo11[i])->getNodeID(), expectedMovingTo11[i]);
+    }
+    EXPECT_EQ(expectedMovingTo11.size(), actualMovingTo11.size());
+  }
+
 }  // namespace etrobocon2018_test

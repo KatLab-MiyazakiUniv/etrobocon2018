@@ -33,6 +33,23 @@ void Explorer::createBlockArea()
 
 }
 
+void Explorer::resetBlockArea()
+{
+  for (unsigned int i = 0; i < blockAreaNodeList->size(); i++)
+  {
+    blockAreaNodeList->at(i)->setBeClosed(false);
+    blockAreaNodeList->at(i)->setHasBlock(false);
+    blockAreaNodeList->at(i)->setScore(0);
+    blockAreaNodeList->at(i)->setRealCost(0);
+    blockAreaNodeList->at(i)->setParentNode(nullptr);
+  }
+}
+
+void Explorer::setHasBlockIn(std::int8_t blockID)
+{
+  blockAreaNodeList->at(blockID)->setHasBlock(true);
+}
+
 std::vector<int> Explorer::searchRoute(std::int8_t start, std::int8_t end)
 {
   int estimatedCostX = std::abs(blockAreaNodeList->at(end)->getPositionX() - blockAreaNodeList->at(start)->getPositionX());
@@ -74,7 +91,7 @@ Node* Explorer::calculateNeighborCost(Node* parent, std::vector<Node*>* around, 
     int estimatedCostX = std::abs(blockAreaNodeList->at(end)->getPositionX() - neighbor->getPositionX());
     int estimatedCostY = std::abs(blockAreaNodeList->at(end)->getPositionY() - neighbor->getPositionY());
     int score = realCost + estimatedCostX + estimatedCostY;
-    if (neighbor->hasBlock()) score += 99;
+    if (neighbor->hasBlock() && neighbor->getNodeID() != end) score += 99;
 
     neighbor->setScore(score);
     neighbor->setRealCost(realCost);
