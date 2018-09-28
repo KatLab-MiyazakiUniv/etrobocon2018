@@ -24,9 +24,9 @@ void LeftCourse::solveAiAnser()
   controller.printDisplay(3, "aiAnswer Start!!");
   controller.speakerPlayTone(controller.noteFs4, 200);
   walker.run(30, 0);
-  controller.speakerPlayTone(NOTE_FS4, 200);
+  controller.speakerPlayTone(controller.noteFs4, 200);
   controller.tslpTsk(3300);
-  controller.speakerPlayTone(NOTE_FS4, 200);
+  controller.speakerPlayTone(controller.noteFs4, 200);
   // その場に止まる
   walker.reset();
   controller.speakerPlayTone(controller.noteFs4, 200);
