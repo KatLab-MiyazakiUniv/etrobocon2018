@@ -19,7 +19,10 @@ Parking.o \
 BasicWalker.o \
 Controller.o \
 Lifter.o \
-Distinguisher.o
+Distinguisher.o \
+InitialPositionCodeDecoder.o \
+Explorer.o \
+Node.o
 
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \
