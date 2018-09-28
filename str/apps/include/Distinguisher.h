@@ -62,12 +62,12 @@ class Distinguisher {
   double distanceColor(Rgb target_color);
   void addAr(Color& color);
   Color getAr();
-  const Rgb RED = { Color::RED, 112, 13, 9, 40 };
-  const Rgb BLUE = { Color::BLUE, 18, 47, 50, 20 };
+  const Rgb RED = { Color::RED, 112, 13, 9, 50 };
+  const Rgb BLUE = { Color::BLUE, 18, 47, 50, 15 };
   const Rgb GREEN = { Color::GREEN, 24, 77, 13, 20 };
-  const Rgb YELLOW = { Color::YELLOW, 116, 120, 15, 50 };
-  const Rgb BLACK = { Color::BLACK, 14, 19, 5, 30 };
-  const Rgb WHITE = { Color::WHITE, 128, 158, 93, 210 };
+  const Rgb YELLOW = { Color::YELLOW, 116, 120, 15, 46 };
+  const Rgb BLACK = { Color::BLACK, 14, 19, 5, 150 };
+  const Rgb WHITE = { Color::WHITE, 128, 158, 93, 220 };
   static constexpr std::int8_t limit = 10;
   std::array<Color, limit> ar{ Color::NONE, Color::NONE, Color::NONE, Color::NONE, Color::NONE,
                                Color::NONE, Color::NONE, Color::NONE, Color::NONE, Color::NONE };

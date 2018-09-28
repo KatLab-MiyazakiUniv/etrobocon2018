@@ -1,4 +1,7 @@
 # etrobocon2018
+
+## コミット方法
+=======
 [![Build Status](https://travis-ci.org/KatLab-MiyazakiUniv/etrobocon2018.svg?branch=master)](https://travis-ci.org/KatLab-MiyazakiUniv/etrobocon2018) [![CircleCI](https://circleci.com/gh/KatLab-MiyazakiUniv/etrobocon2018/tree/master.svg?style=svg)](https://circleci.com/gh/KatLab-MiyazakiUniv/etrobocon2018/tree/master) [![codecov](https://codecov.io/gh/KatLab-MiyazakiUniv/etrobocon2018/branch/master/graph/badge.svg)](https://codecov.io/gh/KatLab-MiyazakiUniv/etrobocon2018)
 
 [![CodeFactor](https://www.codefactor.io/repository/github/katlab-miyazakiuniv/etrobocon2018/badge)](https://www.codefactor.io/repository/github/katlab-miyazakiuniv/etrobocon2018)
