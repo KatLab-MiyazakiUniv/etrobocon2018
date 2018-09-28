@@ -5,8 +5,8 @@ Color Distinguisher::getColor()
 {
   setRawColor2Rgb();
   auto color = distingishColor();
-  addAr(color);
-  color = getAr();
+  //addAr(color);
+  //color = getAr();
   return color;
 }
 

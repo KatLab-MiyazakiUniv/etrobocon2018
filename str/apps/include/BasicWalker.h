@@ -14,7 +14,7 @@ class BasicWalker {
   void reset(void);
   void parkingLeft(void);
   void setPidWithoutTarget(double, double, double);
-  void spin(bool, int32_t);
+  void spin(bool, int32_t,int32_t turn=18);
   void goStraight(int32_t, int32_t);
   void goStraight_b(int32_t, int32_t, int16_t);
   void backStraight(int32_t, int32_t);

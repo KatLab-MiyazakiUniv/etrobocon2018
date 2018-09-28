@@ -15,7 +15,7 @@
 void RightCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t gray)
 {
   LineTracerWalker lineTracer;
-  moveblockAreato8(brightness);
+  moveBlockAreaTo8(brightness);
   runNormalCourse(brightness, black, white, gray);
 }
 
@@ -26,7 +26,7 @@ void RightCourse::runParking(int16_t brightness, LineTracerWalker lineTracer, in
   parking.runParpendicular(brightness, lineTracer, black, white);
 }
 
-void RightCourse::moveblockAreato8(int16_t target_brightness){
+void RightCourse::moveBlockAreaTo8(int16_t target_brightness){
   Controller controller;
   Distinguisher d{controller};
   LineTracerWalker lineTracerWalker;
@@ -104,7 +104,7 @@ void RightCourse::throughArea(){
   basic.goStraight(15, 140);
 }
 
-void RightCourse::goleft(){
+void RightCourse::goLeft(){
   //左折する関数
   BasicWalker basic{controller};
   Controller controller;  
@@ -116,7 +116,7 @@ void RightCourse::goleft(){
   basic.goStraight(15, 50);
 }
 
-void RightCourse::goright(){
+void RightCourse::goRight(){
   //右折する関数
   BasicWalker basic{controller};
   Controller controller;  
@@ -143,7 +143,7 @@ void RightCourse::rotat180Degree(){
 
 }
 
-void RightCourse::carryblockToback(){
+void RightCourse::carryBlockToBack(){
   //ブロックを保持した状態で後ろに移動する
   BasicWalker basic{controller};
   controller.speakerPlayTone(controller.noteFs4, 100);
