@@ -12,4 +12,5 @@ void NormalCourse::runOrStop(Walker& walker)
   } else {
     walker.run(lineTracerWalker.getForward(), lineTracerWalker.getTurn());
   }
+  
 }
