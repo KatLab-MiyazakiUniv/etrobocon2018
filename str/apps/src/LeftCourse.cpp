@@ -15,22 +15,18 @@ void LeftCourse::setFirstCode(int32_t code)
  */
 void LeftCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t gray)
 {
-  runNormalCourse(brightness);
   solveAiAnser();
-  // Park
-  runParking(brightness, black, white, gray);
+  // runGoStraight();
 }
-
-// int16_t time = get_time();
 
 void LeftCourse::solveAiAnser()
 {
   controller.printDisplay(3, "aiAnswer Start!!");
   controller.speakerPlayTone(controller.noteFs4, 200);
   walker.run(30, 0);
-  controller.speakerPlayTone(controller.noteFs4, 200);
-  controller.tslpTsk(3500);
-  controller.speakerPlayTone(controller.noteFs4, 200);
+  controller.speakerPlayTone(NOTE_FS4, 200);
+  controller.tslpTsk(3300);
+  controller.speakerPlayTone(NOTE_FS4, 200);
   // その場に止まる
   walker.reset();
   controller.speakerPlayTone(controller.noteFs4, 200);
@@ -38,9 +34,84 @@ void LeftCourse::solveAiAnser()
   walker.angleChange(90, 1);
   controller.speakerPlayTone(controller.noteFs4, 200);
   walker.run(30, 0);
-  controller.tslpTsk(1000);
-  walker.run(0, 0);
+  controller.tslpTsk(400);
+  //  walker.run(0, 0);
   controller.printDisplay(3, "aiAnswer1 Finished");
+  // ここから黒線探しの旅
+  while(1) {
+    // 現在の色取得
+    int16_t luminance = controller.getBrightness();
+    // 黒検知
+    if(luminance <= 21) {
+      runGoBlack();
+      // lineTracer.speedControl.setPid(5.0, 1.0, 0.1, 90.0);
+      // lineTracer.turnControl.setPid(2.0, 1.0, 0.14, target_brightness);
+      break;
+      // それ以外
+    } else {
+      walker.run(10, 0);
+    }
+    if(controller.buttonIsPressedBack()) {
+      walker.reset();
+      break;
+    }
+    controller.tslpTsk(4);
+  }  // whileのおわり
+}
+
+// 黒線上を走る
+void LeftCourse::runGoBlack()
+{
+  walker.reset();
+  // 時計回りに45°回転
+  walker.angleChange(45, -1);
+  walker.run(10, 0);
+  controller.tslpTsk(1000);
+  while(1) {
+    // 現在の色取得
+    int16_t luminance = controller.getBrightness();
+    if(luminance <= 21) {
+      // 左に30度回転
+      controller.tslpTsk(100);
+      basic.spin(basic.SPIN_LEFT, 30);
+      runGoStraight();
+      break;
+    }
+    if(controller.buttonIsPressedBack()) {
+      walker.reset();
+      break;
+    }
+    controller.tslpTsk(4);
+  }
+}
+
+void LeftCourse::runGoStraight()
+{
+  walker.reset();
+  distance.resetDistance(walker.get_count_L(), walker.get_count_R());
+  while(1) {
+    int16_t luminance = controller.getBrightness();
+    int32_t aiDistance = distance.getDistanceTotal(walker.get_count_L(), walker.get_count_R());
+    lineTracer.speedControl.setPid(2.0, 0.8, 0.1, 20.0);
+    lineTracer.turnControl.setPid(1.1, 0.1, 0.2, target_brightness);  // 2.0,0.2,0.4 最高か
+    // 走る
+    lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), luminance);
+    controller.printDisplay(4, "%d", aiDistance);
+    if(lineTracer.getForward() < 0) {
+      walker.run(0, 0);
+    } else {
+      walker.run(lineTracer.getForward(), lineTracer.getTurn());
+    }
+    if(controller.buttonIsPressedBack()) {
+      walker.reset();
+      break;
+    }
+    if(aiDistance >= 1000) {
+      walker.reset();
+      break;
+    }
+    controller.tslpTsk(4);
+  }
 }
 
 // void LeftCourse::runParking(int16_t brightness, int16_t gray)

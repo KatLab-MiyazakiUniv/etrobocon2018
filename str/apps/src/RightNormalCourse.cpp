@@ -9,7 +9,7 @@
 RightNormalCourse::RightNormalCourse()
 {
   lineTracerWalker.isLeftsideLine(true);
-  status = old_status = RightStatus::STRAIGHT;
+  status = old_status = RightStatus::STRAIGHT_LONG;
 }
 
 /*
@@ -17,67 +17,54 @@ RightNormalCourse::RightNormalCourse()
  * マイナス値は入れないほうがいい
  *lineTracerWalker.speedControl.setPid ( 2.0, 4.8, 0.024, 速度mm/s );
  */
-bool RightNormalCourse::runNormalCourse(int16_t target_brightness)
+bool RightNormalCourse::runNormalCourse(int16_t target_brightness, int16_t black, int16_t white, int16_t gray)
 {
   switch(status) {
-    case RightStatus::R1:
-      lineTracerWalker.speedControl.setPid(5.0, 1.0, 0.1, 180.0);
+    case RightStatus::STRAIGHT_LONG:
+      lineTracerWalker.speedControl.setPid(8.0, 1.0, 0.1, 180.0);
       lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);
+      //lineTracerWalker.turnControl.setPid(0.49999, 0.0, 0.0, target_brightness);
       break;
 
-    case RightStatus::R2:
+    case RightStatus::STRAIGHT_SHORT:
+      lineTracerWalker.speedControl.setPid(2.4, 1.0, 0.1, 180.0);
+      lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
+      break;
+
+    case RightStatus::CURVE_INSIDE_LONG:
       lineTracerWalker.speedControl.setPid(2.0, 1.0, 0.12, 150.0);
-      lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);
+      lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
       break;
 
-    case RightStatus::R3:
-      lineTracerWalker.speedControl.setPid(10.0, 1.0, 0.1, 180.0);
-      lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);
-      break;
-
-    case RightStatus::R4:
+    case RightStatus::CURVE_INSIDE_SHORT:
       lineTracerWalker.speedControl.setPid(2.0, 1.0, 0.12, 150.0);
-      lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);
+      lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
       break;
 
-    case RightStatus::R5:
-      lineTracerWalker.speedControl.setPid(2.0, 1.0, 0.12, 150.0);
-      lineTracerWalker.turnControl.setPid(4.0, 0.001, 0.27, target_brightness);
+    case RightStatus::CURVE_OUTSIDE:
+      lineTracerWalker.speedControl.setPid(2.5, 0.01, 0.12, 175.0);
+      lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.15, target_brightness);
       break;
 
-    case RightStatus::R6:
-      lineTracerWalker.speedControl.setPid(10.0, 1.0, 0.1, 180.0);
-      lineTracerWalker.turnControl.setPid(2.0, 0.2, 0.1, target_brightness);
+    case RightStatus::SLOW:
+      lineTracerWalker.speedControl.setPid(2.5, 0.01, 0.12, 175.0);
+      lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
       break;
 
-    case RightStatus::R7:
-      lineTracerWalker.speedControl.setPid(2.0, 1.0, 0.12, 150.0);
-      lineTracerWalker.turnControl.setPid(3.28, 0.001, 0.27, target_brightness);
+    case RightStatus::START:
+      lineTracerWalker.speedControl.setPid(1.5, 0.01, 0.12, 170.0);
+      lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
       break;
-
-    case RightStatus::R8:
-      lineTracerWalker.speedControl.setPid(10.0, 1.0, 0.1, 180.0);
-      lineTracerWalker.turnControl.setPid(2.0, 0.2, 0.1, target_brightness);
-      break;
-
-    case RightStatus::R9:
-      lineTracerWalker.speedControl.setPid(10.0, 1.0, 0.12, 90.0);
-      lineTracerWalker.turnControl.setPid(2.2, 1.0, 0.11, target_brightness);
-      break;
-
-    case RightStatus::TEST0:
-      lineTracerWalker.speedControl.setPid(10.0, 1.0, 0.1, 200.0);
-      lineTracerWalker.turnControl.setPid(0.6, 0.0, 0.0, target_brightness);
-      break;
-
-    case RightStatus::TEST1:
-      lineTracerWalker.speedControl.setPid(2.0, 1.0, 0.1, 100.0);
-      lineTracerWalker.turnControl.setPid(1.6, 0.0, 0.1, target_brightness - 20.0);
+    
+    case RightStatus::TRANSFER_ZONE:
+      lineTracerWalker.speedControl.setPid(10.0, 0.0001, 0.12, 140.0);
+      lineTracerWalker.turnControl.setPid(1.0, 1.6, 0.5, target_brightness);
       break;
 
     case RightStatus::STOP:
       stop();
       break;
+
     default:
       stop();
   }
@@ -89,31 +76,29 @@ bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR)
 {
   distanse_total = distance.getDistanceTotal(countL, countR);
   old_status = status;
-  if(distanse_total < 2500)
-    status = RightStatus::R1;
-  else if(distanse_total < 4495)
-    status = RightStatus::R2;
-  else if(distanse_total < 5056)
-    status = RightStatus::R3;
-  else if(distanse_total < 5640)
-    status = RightStatus::R4;
-  else if(distanse_total < 6542)
-    status = RightStatus::R5;
-  else if(distanse_total < 7180)
-    status = RightStatus::R6;
-  else if(distanse_total < 8640)
-    status = RightStatus::R7;
-  else if(distanse_total < 11540)
-    status = RightStatus::R8;
-  else if(distanse_total < 12430)//ちょうどいい感じ
-  //else if(distanse_total < 12630)//灰色を完全に通過
-    status = RightStatus::R9;
-  /*
-   if(distanse_total < 750)
-     status = RightStatus::TEST0;
-   else if(distanse_total < 2250)
-     status = RightStatus::TEST1;
-    */
+  
+  if(distanse_total < CALIBRATE_DISTANCE_R)
+    status = RightStatus::START;
+  else if(distanse_total < FIRST_STRAIGHT_DISTANCE_R)
+    status = RightStatus::STRAIGHT_LONG;
+  else if(distanse_total < FIRST_CURVE_DISTANCE_R)
+    status = RightStatus::CURVE_INSIDE_LONG;
+  else if(distanse_total < SECOND_STRAIGHT_DISTANCE_R)
+    status = RightStatus::STRAIGHT_SHORT;
+  else if(distanse_total < SECOND_CURVE_DISTANCE_IN_R)
+    status = RightStatus::CURVE_INSIDE_SHORT;
+  else if(distanse_total < SECOND_CURVE_DISTANCE_OUT_R)
+    status = RightStatus::CURVE_OUTSIDE;
+  else if(distanse_total < THIRD_STRAIGHT_DISTANCE_R)
+    status = RightStatus::SLOW;
+  else if(distanse_total < THIRD_CURVE_DISTANCE_R)
+    status = RightStatus::CURVE_OUTSIDE;
+  else if(distanse_total < FOURTH_STRAIGHT_DISTANCE_R)
+    status = RightStatus::STRAIGHT_LONG;
+  else if(distanse_total < AFTER_GOAL_CURVE_R)
+    status = RightStatus::TRANSFER_ZONE;
+  else if(distanse_total < GRAY_FIND_AREA_R)
+    status = RightStatus::START;
   else
     status = RightStatus::STOP;
   if(old_status != status) return true;

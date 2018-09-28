@@ -44,9 +44,9 @@ class RightCourse {
       controller(controller_)
   {
   } /** 各エリアの処理を呼び出す **/
-  void run(int16_t brightness, int16_t black, int16_t white);
+  void run(int16_t brightness, int16_t black, int16_t white, int16_t gray);
   /** NormalCourseエリアの処理 **/
-  void runNormalCourse(int16_t brightness);
+  void runNormalCourse(int16_t brightness, int16_t black, int16_t white,  int16_t gray);
 
   void runParking(int16_t brightness, LineTracerWalker lineTracer, int16_t black, int16_t white);
 
