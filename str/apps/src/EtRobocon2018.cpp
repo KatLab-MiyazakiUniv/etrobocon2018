@@ -59,7 +59,7 @@ void EtRobocon2018::loop()
   auto brightness = target_brightness;
 #ifdef IS_RIGHT_COURSE
   RightCourse rightCourse{ controller };
-  rightCourse.run(brightness, light_black, light_white);
+  rightCourse.run(brightness, light_black, light_white, light_gray);
 #else
   LeftCourse leftCourse{ controller };
   leftCourse.setFirstCode(firstCode);

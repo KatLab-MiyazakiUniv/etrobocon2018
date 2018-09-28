@@ -13,29 +13,15 @@
  * 走行場所の状態を保持する列挙型
  */
 enum struct RightStatus {
-  STRAIGHT,
-  CURVE_RIGHT,
-  CURVE_LEFT,
-  CURVE_LEFT_SHORT,
-  STOP,
+  STRAIGHT_LONG,
+  STRAIGHT_SHORT,
+  CURVE_INSIDE_LONG,
+  CURVE_INSIDE_SHORT,
+  CURVE_OUTSIDE,
   SLOW,
-  CURVE_LEFT_SHORT_SLOW,
-  ACCELERATE,
-  MIDDLE_SPEED,
-  SLOW_DOWN,
-
-  TEST0,
-  TEST1,
-
-  R1,
-  R2,
-  R3,
-  R4,
-  R5,
-  R6,
-  R7,
-  R8,
-  R9
+  START,
+  TRANSFER_ZONE,
+  STOP,
 };
 
 /**
@@ -50,7 +36,7 @@ class RightNormalCourse : public NormalCourse {
    * 走行場所でのPID値を設定する
    * @return Goalしたかどうか
    */
-  bool runNormalCourse(int16_t target_brightness);
+  bool runNormalCourse(int16_t target_brightness, int16_t black, int16_t white, int16_t gray);
 
   /**
    * 現在の走行場所の状態を設定する
@@ -69,6 +55,19 @@ class RightNormalCourse : public NormalCourse {
  private:
   RightStatus status;
   RightStatus old_status;
+
+  const std::int16_t CALIBRATE_DISTANCE_R = 300;
+  const std::int16_t FIRST_STRAIGHT_DISTANCE_R = 2500;
+  const std::int16_t FIRST_CURVE_DISTANCE_R = 4495;
+  const std::int16_t SECOND_STRAIGHT_DISTANCE_R = 5056;
+  const std::int16_t SECOND_CURVE_DISTANCE_IN_R = 5640;
+  const std::int16_t SECOND_CURVE_DISTANCE_OUT_R = 6542;
+  const std::int16_t THIRD_STRAIGHT_DISTANCE_R = 7100;
+  const std::int16_t THIRD_CURVE_DISTANCE_R = 8680;
+  const std::int16_t FOURTH_STRAIGHT_DISTANCE_R = 11657;
+
+  const std::int16_t AFTER_GOAL_CURVE_R = 11900;
+  const std::int16_t GRAY_FIND_AREA_R = 12250;
 };
 
 #endif

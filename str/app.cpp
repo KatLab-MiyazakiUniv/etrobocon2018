@@ -11,6 +11,7 @@
 #include "EtRobocon2018.h"  // ETロボコン2017
 #include "SelfLocalization.h"
 #include "util.h"
+#include "Controller.h"
 
 #if defined(BUILD_MODULE)
 #include "module_cfg.h"
@@ -72,7 +73,7 @@ void bt_task(intptr_t unused)
     fputc(c, g_bluetooth); /* エコーバック */
   }
 }
-
+rgb_raw_t rgb;
 void sensor_log_task(intptr_t unused)
 {
   FILE* file;
@@ -112,7 +113,7 @@ void sensor_log_task(intptr_t unused)
     amp = ev3_battery_current_mA();
     left_motor_counts = controller.leftWheel.getCount();
     right_motor_counts = controller.rightWheel.getCount();
-    fprintf(file, "%d,%d,%d,%d,%d\n", time_now, volt, amp, left_motor_counts, right_motor_counts);
+    fprintf(file, "%d,%d,%d,%ld,%ld\n", time_now, volt, amp, left_motor_counts, right_motor_counts);
     // 20msec周期起動
     tslp_tsk(20);
   }

@@ -9,6 +9,7 @@
 
 #define IS_SHORT_CUT 0
 
+#include "BasicWalker.h"
 #include "Controller.h"
 #include "LeftNormalCourse.h"
 #include "Parking.h"
@@ -55,12 +56,20 @@ class LeftCourse {
 
   void solveAiAnser();
 
+  void runGoBlack();
+
+  void runGoStraight();
 
  private:
   Walker walker;
   /** 自己位置推定 インスタンス 初期化*/
   SelfLocalization sl;
   Controller controller;
+  int16_t target_brightness;
+  LineTracerWalker lineTracer;
+  BasicWalker basic{ controller };
+  Distance distance;
+  // BasicWalker basicWalker;
   // Motor motor;
   // GyroSensor gyro_sensor;
 
