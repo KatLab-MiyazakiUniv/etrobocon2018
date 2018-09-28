@@ -43,8 +43,9 @@ std::vector<int> Explorer::searchRoute(std::int8_t start, std::int8_t end)
   blockAreaNodeList->at(start)->setScore(score);
   blockAreaNodeList->at(start)->setRealCost(0);
   blockAreaNodeList->at(start)->setParentNode(nullptr);
-  blockAreaNodeList->at(start)->setBeClosed(true);
-  Node* endNode = calculateNeighborCost(blockAreaNodeList->at(start), 1, end);
+
+  std::vector<Node*> around;
+  Node* endNode = calculateNeighborCost(blockAreaNodeList->at(start), &around, 1, end);
 
   std::vector<int> route = {endNode->getNodeID()};
   Node* parent = endNode->getParentNode();
@@ -59,15 +60,16 @@ std::vector<int> Explorer::searchRoute(std::int8_t start, std::int8_t end)
   return route;
 }
 
-Node* Explorer::calculateNeighborCost(Node* parent, std::int32_t realCost, std::int8_t end)
+Node* Explorer::calculateNeighborCost(Node* parent, std::vector<Node*>* around, std::int32_t realCost, std::int8_t end)
 {
   std::int8_t current = parent->getNodeID();
+  parent->setBeClosed(true);
 
   for (unsigned int i = 0; i < blockAreaNodeList->at(current)->getNeighbors()->size(); i++)
   // for (auto neighbor : blockAreaNodeList->at(parent->getNodeID())->getNeighbors())
   {
     auto neighbor = blockAreaNodeList->at(current)->getNeighbors()->at(i);
-    if (neighbor == parent->getParentNode()) continue;
+    if (neighbor->isClosed() || neighbor == parent->getParentNode()) continue;
 
     int estimatedCostX = std::abs(blockAreaNodeList->at(end)->getPositionX() - neighbor->getPositionX());
     int estimatedCostY = std::abs(blockAreaNodeList->at(end)->getPositionY() - neighbor->getPositionY());
@@ -77,31 +79,37 @@ Node* Explorer::calculateNeighborCost(Node* parent, std::int32_t realCost, std::
     neighbor->setScore(score);
     neighbor->setRealCost(realCost);
     neighbor->setParentNode(parent);
-    neighbor->setBeClosed(true);
-    // neighbors.push_back(neighbor);
+    around->push_back(neighbor);
   }
 
   std::int32_t min = 999;
   std::int32_t minCost = 999;
   Node* minNode = nullptr;
 
-  for (unsigned int i = 0; i < blockAreaNodeList->at(current)->getNeighbors()->size(); i++)
+  for (unsigned int i = 0; i < around->size(); i++)
   // for (auto neighbor : blockAreaNodeList->at(parent->getNodeID())->getNeighbors())
   {
-    auto neighbor = blockAreaNodeList->at(current)->getNeighbors()->at(i);
-    if (neighbor == parent->getParentNode()) continue;
+    auto neighborhood = around->at(i);
+    if (neighborhood->isClosed() || neighborhood == parent->getParentNode()) continue;
 
-    int score = neighbor->getScore();
-    if (score > min || (score == min && neighbor->getRealCost() >= minCost)) continue;
+    int score = neighborhood->getScore();
+    if (score > min || (score == min && neighborhood->getRealCost() >= minCost)) continue;
 
     min = score;
-    minCost = neighbor->getRealCost();
-    minNode = neighbor;
+    minCost = neighborhood->getRealCost();
+    minNode = neighborhood;
   }
 
   if (minNode->getNodeID() != end)
   {
-    minNode = calculateNeighborCost(minNode, realCost+1, end);
+    std::int8_t cost = 0;
+    Node* node = minNode;
+    while (node->getParentNode() == nullptr)
+    {
+      cost++;
+      node = node->getParentNode();
+    }
+    minNode = calculateNeighborCost(minNode, around, realCost+1, end);
   }
 
   return minNode;

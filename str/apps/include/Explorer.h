@@ -136,7 +136,7 @@ class Explorer {
 
   std::vector<int> searchRoute(std::int8_t start, std::int8_t end);
 
-  Node* calculateNeighborCost(Node* parent, std::int32_t realCost, std::int8_t end);
+  Node* calculateNeighborCost(Node* parent, std::vector<Node*>* around, std::int32_t realCost, std::int8_t end);
 
   std::vector<Node*>* getBlockAreaNodeList();
 
