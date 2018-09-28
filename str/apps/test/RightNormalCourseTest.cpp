@@ -19,7 +19,7 @@ namespace etrobocon2018_test {
     RightNormalCourse rnc;
     for(int i = 0; i < 13000; i++) {
       rnc.statusCheck(i, i);
-      rnc.runNormalCourse(30);
+      rnc.runNormalCourse(30, 30, 30, 30);
     }
   }
 }  // namespace etrobocon2018_test
