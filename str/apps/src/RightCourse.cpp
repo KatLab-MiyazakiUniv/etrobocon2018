@@ -29,26 +29,26 @@ void RightCourse::runParking(int16_t brightness, LineTracerWalker lineTracer, in
 
 void RightCourse::moveBlockAreaTo8(int16_t target_brightness)
 {
-  Controller controller;
   Distinguisher d{ controller };
-  LineTracerWalker lineTracerWalker;
   Distance distance;
   bool isAlreadyChangedGear = false;
 
-  lineTracerWalker.speedControl.setPid(5.0, 1.0, 0.1, 90.0);
-  lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.14, target_brightness);
+  lineTracer.speedControl.setPid(5.0, 1.0, 0.1, 90.0);
+  lineTracer.turnControl.setPid(2.0, 1.0, 0.14, target_brightness);
+  controller.tslpTsk(500);
+
   walker.reset();
   while(1) {
     Color result = d.getColor();
     auto luminance = controller.getBrightness();
-    lineTracerWalker.runLine(walker.get_count_L(), walker.get_count_R(), luminance);
-    walker.run(lineTracerWalker.getForward(), lineTracerWalker.getTurn());
+    lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), luminance);
+    walker.run(lineTracer.getForward(), lineTracer.getTurn());
     controller.printDisplay(4, "Brightness: %d, Target: %d", luminance, result);
     if(result == Color::RED) break;
     if(!isAlreadyChangedGear
        && distance.getDistanceTotal(walker.get_count_L(), walker.get_count_R()) > 1750) {
-      lineTracerWalker.speedControl.setPid(5.0, 1.0, 0.1, 25.0);
-      lineTracerWalker.turnControl.setPid(1.0, 1.0, 0.14, target_brightness);
+      lineTracer.speedControl.setPid(5.0, 1.0, 0.1, 25.0);
+      lineTracer.turnControl.setPid(1.0, 1.0, 0.14, target_brightness);
       controller.speakerPlayTone(controller.noteFs6, 100);
       isAlreadyChangedGear = true;
     }

@@ -64,10 +64,11 @@ class RightNormalCourse : public NormalCourse {
   const std::int16_t SECOND_CURVE_DISTANCE_OUT_R = 6542;
   const std::int16_t THIRD_STRAIGHT_DISTANCE_R = 7100;
   const std::int16_t THIRD_CURVE_DISTANCE_R = 8680;
-  const std::int16_t FOURTH_STRAIGHT_DISTANCE_R = 11657;
+  const std::int16_t FOURTH_STRAIGHT_DISTANCE_R = 11607;
+
 
   const std::int16_t AFTER_GOAL_CURVE_R = 11900;
-  const std::int16_t GRAY_FIND_AREA_R = 12250;
+  const std::int16_t GRAY_FIND_AREA_R = 12650;
 };
 
 #endif
