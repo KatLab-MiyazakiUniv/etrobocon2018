@@ -286,20 +286,92 @@ class Node{
    */
   std::int8_t getPositionY();
 
+  /**
+   * <p> 親ノードを設定する </p>
+   *
+   * <p>
+   * これは {@link Explorer} クラスで利用する。
+   * </p>
+   *
+   * @param parent 親ノードのポインタ
+   */
   void setParentNode(Node* parent);
 
+  /**
+   * <p> 親ノードを取得する </p>
+   *
+   * <p>
+   * これは {@link Explorer} クラスで利用する。
+   * </p>
+   *
+   * @return 親ノードのポインタ
+   */
   Node* getParentNode();
 
+  /**
+   * <p> A*アルゴリズムで用いるスコアを設定する </p>
+   *
+   * <p>
+   * これは {@link Explorer} クラスで利用する。
+   * </p>
+   *
+   * @param score_ スコア
+   */
   void setScore(std::int32_t score_);
 
+  /**
+   * <p> A*アルゴリズムで用いるスコアを取得する </p>
+   *
+   * <p>
+   * これは {@link Explorer} クラスで利用する。
+   * </p>
+   *
+   * @return 親ノードのポインタ
+   */
   std::int32_t getScore();
 
+  /**
+   * <p> A*アルゴリズムで用いる実コストを設定する </p>
+   *
+   * <p>
+   * これは {@link Explorer} クラスで利用する。
+   * </p>
+   *
+   * @param cost 実コスト
+   */
   void setRealCost(std::int32_t cost);
 
+  /**
+   * <p> A*アルゴリズムで用いる実コストを取得する </p>
+   *
+   * <p>
+   * これは {@link Explorer} クラスで利用する。
+   * </p>
+   *
+   * @return 実コスト
+   */
   std::int32_t getRealCost();
 
+  /**
+   * <p> A*アルゴリズムで用いる開閉を設定する </p>
+   *
+   * <p>
+   * これは {@link Explorer} クラスで利用する。
+   * </p>
+   *
+   * @param closed_ 探索ノードを閉じている場合は真を示す真偽値
+   */
   void setBeClosed(bool closed_);
 
+  /**
+   * <p> A*アルゴリズムで用いる開閉を取得する </p>
+   *
+   * <p>
+   * これは {@link Explorer} クラスで利用する。
+   * </p>
+   *
+   * @return 探索ノードを閉じている場合は真を示す真偽値
+   */
   bool isClosed();
 
  private:
@@ -323,12 +395,40 @@ class Node{
    */
   Position position;
 
+  /**
+   * <p> 親ノードのポインタ </p>
+   *
+   * <p>
+   * これは {@link Explorer} クラスで利用する。
+   * </p>
+   */
   Node* parentNode;
 
+  /**
+   * <p> A*アルゴリズムで用いるスコア </p>
+   *
+   * <p>
+   * これは {@link Explorer} クラスで利用する。
+   * </p>
+   */
   std::int32_t score;
 
+  /**
+   * <p> A*アルゴリズムで用いる実コスト </p>
+   *
+   * <p>
+   * これは {@link Explorer} クラスで利用する。
+   * </p>
+   */
   std::int32_t realCost;
 
+  /**
+   * <p> 探索ノードを閉じている場合は真を示す真偽値 </p>
+   *
+   * <p>
+   * これは {@link Explorer} クラスで利用する。
+   * </p>
+   */
   bool closed;
 };
 

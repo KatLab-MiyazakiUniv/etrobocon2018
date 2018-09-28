@@ -37,7 +37,7 @@
  *     Explorer explorer;
  *     explorer.createBlockArea();
  *
- *     explorer.resetBlocArea();
+ *     explorer.resetBlocArea(); // 内部のフラグを初期化
  *     explorer.setHasBlockIn(8);
  *     explorer.setHasBlockIn(9);
  *     explorer.setHasBlockIn(11);
@@ -139,14 +139,56 @@ class Explorer {
    */
   void createBlockArea();
 
+  /**
+   * <p> ブロックエリアのノードリストにおける探索時のフラグなどを初期化します </p>
+   */
   void resetBlockArea();
 
+  /**
+   * <p> ブロックが存在するブロック置き場の位置コードを設定します </p>
+   *
+   * @param blockID ブロック置き場の位置コード
+   */
   void setHasBlockIn(std::int8_t blockID);
 
+  /**
+   * <p> ブロック置き場エリアにおける移動ルートを探索します </p>
+   *
+   * <p>
+   * スタート位置と向かいたい位置を入力すると、 {@code std::vector<int>} 型のリストを返します。
+   * これは、ブロック置き場の位置コードのリストであり、隣接ノードが連なっています。
+   * たとえば、位置コード8から位置コード10に移動したい場合は、 {@code {8, 9, 10}} を返します。
+   * もし位置コード9にブロックが存在している場合は、 {@code {8, 12, 13, 14, 10}} を返します。
+   * 斜め移動は未対応です。
+   * </p>
+   *
+   * @param start スタート位置の位置コード
+   * @param end 向かいたい位置の位置コード
+   * @return ブロック置き場の位置コードのリスト
+   */
   std::vector<int> searchRoute(std::int8_t start, std::int8_t end);
 
+  /**
+   * <p> ブロック置き場における隣接ノードのコストを計算します </p>
+   *
+   * <p>
+   * これはA*アルゴリズムで用いる再帰的な内部処理です。
+   * {@link searchRoute(std::int8_t, std::int8_t)} でのみ利用しています。
+   * </p>
+   *
+   * @param parent 親ノードのポインタ
+   * @param around 周辺ノード
+   * @param realCost 実コスト
+   * @param end 終端ノードのノードID
+   * @return 終端ノードのポインタ
+   */
   Node* calculateNeighborCost(Node* parent, std::vector<Node*>* around, std::int32_t realCost, std::int8_t end);
 
+  /**
+   * <p> ブロック置き場のノードのポインタのリストのポインタを取得します </p>
+   *
+   * @return ブロック置き場のノードのポインタのリストのポインタ
+   */
   std::vector<Node*>* getBlockAreaNodeList();
 
 
@@ -158,6 +200,9 @@ class Explorer {
    */
   std::vector<Node*>* blockAreaNodeList;
 
+  /**
+   * ポジションリスト
+   */
   std::vector<Position> positionList;
 
   /**
