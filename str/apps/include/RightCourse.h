@@ -13,6 +13,7 @@
 #include "RightNormalCourse.h"
 #include "SelfLocalization.h"
 #include "Walker.h"
+#include "Distinguisher.h"
 
 /**
  * 走行場所の状態を保持する列挙型
@@ -44,11 +45,21 @@ class RightCourse {
       controller(controller_)
   {
   } /** 各エリアの処理を呼び出す **/
-  void run(int16_t brightness, int16_t black, int16_t white, int16_t gray);
+  void run(int16_t brightness, int16_t black, int16_t white);
   /** NormalCourseエリアの処理 **/
-  void runNormalCourse(int16_t brightness, int16_t black, int16_t white,  int16_t gray);
+void runNormalCourse(int16_t brightness);
+void run(int16_t brightness, int16_t black, int16_t white, int16_t gray);
+void runParking(int16_t brightness, LineTracerWalker lineTracer, int16_t black,int16_t white);
+void runPuzzle(int16_t target_brightness);
+void moveBlockAreaTo8(int16_t target_brightness);
+Color checkPuzzle();
+void throughArea();
+void goLeft();
+void goRight();
+void rotat180Degree();
+void carryBlockToBack();
+void runNormalCourse(int16_t brightness, int16_t black, int16_t white, int16_t gray);
 
-  void runParking(int16_t brightness, LineTracerWalker lineTracer, int16_t black, int16_t white);
 
  private:
   LineTracerWalker lineTracer;
