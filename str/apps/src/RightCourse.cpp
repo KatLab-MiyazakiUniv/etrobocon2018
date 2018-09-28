@@ -21,7 +21,7 @@ void RightCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t 
   throughArea();
   controller.tslpTsk(100);
   throughArea();
-  throughArea();
+  controller.tslpTsk(100);
 
   //runPuzzle(brightness);
   runParking(brightness, lineTracer, black, white);
