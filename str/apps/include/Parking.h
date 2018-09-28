@@ -46,9 +46,13 @@ class Parking {
    */
   void waitThreeTimes();
 
+  void ev3_remaining_amount();
+
  private:
   Controller controller;
   Walker walker;
+  float remaining_amount;
+  //char *aa;
 };
 
 #endif

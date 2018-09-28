@@ -15,6 +15,9 @@
 enum struct LeftStatus {
   STRAIGHT,
   EDGE_CHANGE,
+  CURVE_LEFT,
+  CURVE_LEFT_SHORT,
+  STRAIGHT_SLOW,
   SECOND_CURVE,
   EDGE_RESET,
   THIRD_CURVE,
@@ -57,8 +60,8 @@ class LeftNormalCourse : public NormalCourse {
   LeftStatus old_status;
   bool isChangedEdge;
   int16_t time_count;
-  
-  const std::int16_t CALIBRATE_DISTANCE_L = 300;  
+
+  const std::int16_t CALIBRATE_DISTANCE_L = 300;
   const std::int16_t FIRST_STRAIGHT_DISTANCE_L = 2850;
   const std::int16_t FIRST_CURVE_DISTANCE_L = 4950;
   const std::int16_t SECOND_STRAIGHT_DISTANCE_L = 6600;
@@ -69,4 +72,3 @@ class LeftNormalCourse : public NormalCourse {
 };
 
 #endif
-

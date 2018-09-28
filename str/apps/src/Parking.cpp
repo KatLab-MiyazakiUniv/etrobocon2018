@@ -40,19 +40,6 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
       break;
     }
 
-    //         if(now_brightness>100){ //ライントレースを修了する条件
-    // walker.run(0, 0);
-    // break;
-    //         }
-
-    //  if(black + 40 >= now_brightness){  //ブラックを読み込んだら
-    //             count = 0;
-    //             ev3_speaker_play_tone( NOTE_CS4, 100 );
-    //         }else if( white - 70<= now_brightness){
-    //             count++;
-
-    //         }
-
     count++;
 
     if(count > 950) {
@@ -90,41 +77,44 @@ void Parking::runParallel(int16_t brightness, int16_t black, int16_t white, int1
       break;
     }
 
-    /*if(gray + 2 >= luminance && gray - 2 <= luminance){  //グレーを読み込んだら
-        count++;
-        ev3_speaker_play_tone( NOTE_FS4, 100 );
-    }else{
-        count = 0;
-    }*/
-
     if(black + 35 >= luminance) {  //ブラックを読み込んだら
       count = 0;
       controller.speakerPlayTone(controller.noteFs4, 100);
-    } else if(white + 30 >= luminance && white - 70 <= luminance) {
+    } else if(white + 70 >= luminance && white - 70 <= luminance) {  //+30 -70
       count++;
+      controller.speakerPlayTone(controller.noteFs6, 100);
     }
 
-    if(count > 250) {
+    if(count > 50) {  // 250
       waitThreeTimes();
+      basicWalker.reset();
+      basicWalker.setPidWithoutTarget(14.0, 1.0, 0.1);
+      basicWalker.goStraight(60, 200);
       break;
     }
 
-    lineTracer.speedControl.setPid(17.0, 1.0, 0.1, 30.0);
+    lineTracer.speedControl.setPid(1.5, 0.01, 0.12, 170.0);
+    // lineTracer.speedControl.setPid(17.0, 1.0, 0.1, 30.0);
 
-    if(grayBrightness + 3 >= luminance && grayBrightness - 1 <= luminance) {
-      lineTracer.turnControl.setPid(4.0, 1.0, 0.8, grayBrightness);
+    if(grayBrightness + 1 >= luminance && grayBrightness - 1 <= luminance) {
+      // lineTracer.turnControl.setPid(4.0, 1.0, 0.8, grayBrightness);
+      lineTracer.turnControl.setPid(2.0, 0.1, 0.1, grayBrightness - 25);
     } else {
-      lineTracer.turnControl.setPid(4.0, 1.0, 0.8, brightness);
+      // lineTracer.turnControl.setPid(4.0, 1.0, 0.8, brightness);
+      lineTracer.turnControl.setPid(2.0, 0.1, 0.1, brightness - 20);
     }
     controller.tslpTsk(4);
   }
+  // sprintf(aa, "%f", controller.ev3_battery_voltage());
+
+  // controller.printDisplay(5, aa);
+  basicWalker.reset();
   basicWalker.setPidWithoutTarget(14.0, 1.0, 0.1);
-  basicWalker.goStraight(60, 600);
   basicWalker.spin(basicWalker.SPIN_LEFT, 40);
   // basicWalker.setPidWithoutTarget(14.0, 1.0, 0.1);
-  basicWalker.goStraight(60, 580);
+  basicWalker.goStraight(60, 550);
   basicWalker.spin(basicWalker.SPIN_LEFT, 90);
-  basicWalker.goStraight(30, 10);
+  // basicWalker.goStraight(30, 10);
   // basicWalker.spin( basicWalker.SPIN_RIGHT, 90 );
 }
 
