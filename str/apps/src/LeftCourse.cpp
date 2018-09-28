@@ -16,19 +16,19 @@ void LeftCourse::setFirstCode(int32_t code)
 void LeftCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t gray)
 {
   runNormalCourse(brightness);
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
   controller.printDisplay(3, "Finished NormalArea");
 
   // Puzzle
-  runBlockRange();
+  //runBlockRange();
   //controller.printDisplay(3, "Finished Puzzle");
 
   // Park
   controller.printDisplay(5, "> Start ParallelParking <");
   //runParking(brightness, black, white, gray);
   controller.printDisplay(7, "> Finished ParallelParking <");
-=======
+//=======
   solveAiAnser();
   // Park
   runParking(brightness, black, white, gray);
@@ -54,7 +54,7 @@ void LeftCourse::solveAiAnser()
   controller.tslpTsk(1000);
   walker.run(0, 0);
   controller.printDisplay(3, "aiAnswer1 Finished");
->>>>>>> fbc63a97409954f4c6b93c89d0895dcd95b8400f
+//>>>>>>> fbc63a97409954f4c6b93c89d0895dcd95b8400f
 }
 
 // void LeftCourse::runParking(int16_t brightness, int16_t gray)

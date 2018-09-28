@@ -18,7 +18,7 @@ bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int16_t l
   switch(status) {
 
     case LeftStatus::START:
-       lineTracerWalker.speedControl.setPid(1.5, 0.01, 0.12, 170.0);
+       lineTracerWalker.speedControl.setPid(1.2, 0.01, 0.12, 170.0);
        lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
        lineTracerWalker.runLine(countL, countR, light_value);
        break;
@@ -43,9 +43,22 @@ bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int16_t l
 
     case LeftStatus::CURVE_LEFT:
       lineTracerWalker.speedControl.setPid(2.0, 0.5, 0.6, 180.0);
-      lineTracerWalker.turnControl.setPid(4.2, 0.05, 0.3, target_brightness);
+      lineTracerWalker.turnControl.setPid(4.2, 0.08, 0.4, target_brightness);
       lineTracerWalker.runLine(countL, countR, light_value);
       break;
+
+    case LeftStatus::CURVE_LEFT_SHORT:
+      lineTracerWalker.speedControl.setPid(4.0, 0.8, 0.1, 150.0);
+      lineTracerWalker.turnControl.setPid(4.5, 0, 0.4, target_brightness);
+      lineTracerWalker.runLine(countL, countR, light_value);
+      break;
+
+    case LeftStatus::STRAIGHT_SLOW:
+      lineTracerWalker.speedControl.setPid(8.0, 1.0, 0.1, 200.0);
+      lineTracerWalker.turnControl.setPid(1.0, 1.0, 0.2, target_brightness);
+      lineTracerWalker.runLine(countL, countR, light_value);
+      break;
+
     /*
     case LeftStatus::STRAIGHT_SLOW:
       lineTracerWalker.setForward(15);
@@ -104,13 +117,15 @@ bool LeftNormalCourse::statusCheck(int32_t countL, int32_t countR)
     status = LeftStatus::STRAIGHT;
   else if(distanse_total < 7400)
     status = LeftStatus::EDGE_RESET;
-  else if(distanse_total < 8100)
-    status = LeftStatus::STRAIGHT;
-  else if(distanse_total < 8900)
+  else if(distanse_total < 8150)
+    status = LeftStatus::STRAIGHT_SLOW;
+  else if(distanse_total < 9000)
     status = LeftStatus::CURVE_LEFT;
-  else if(distanse_total < 14500)
+  else if(distanse_total < 11700)
     status = LeftStatus::STRAIGHT;
-  else
+  else if(distanse_total < 12900)
+    status = LeftStatus::CURVE_LEFT_SHORT;
+  else 
     status = LeftStatus::STOP;
 
   if(isChangedEdge) {
