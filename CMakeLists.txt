@@ -63,6 +63,8 @@ file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${SOURCE_DIR}/BlockArea.cpp
     ${SOURCE_DIR}/BlockStrategy.cpp
     ${SOURCE_DIR}/InitialPositionCodeDecoder.cpp
+    ${SOURCE_DIR}/Node.cpp
+    ${SOURCE_DIR}/Explorer.cpp
     )
 add_library(${PROJECT_LIB_NAME} ${SRC_FILES})
 
