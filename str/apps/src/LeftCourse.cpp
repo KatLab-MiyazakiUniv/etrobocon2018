@@ -119,8 +119,9 @@ void LeftCourse::runGoStraight()
       walker.reset();
       break;
     }
-    if(aiDistance >= 1000) {
+    if(aiDistance >= 1200) {
       walker.reset();
+
       break;
     }
     controller.tslpTsk(4);

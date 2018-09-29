@@ -26,6 +26,7 @@
                 "locale": "cpp",
                 "memory": "cpp",
                 "ratio": "cpp",
-                "system_error": "cpp"
+                "system_error": "cpp",
+                "map": "cpp"
         }
 }
