@@ -9,11 +9,12 @@
 
 #include "Controller.h"
 #include "Distance.h"
+#include "Distinguisher.h"
 #include "Parking.h"
 #include "RightNormalCourse.h"
 #include "SelfLocalization.h"
 #include "Walker.h"
-#include "Distinguisher.h"
+#include <cstdint>
 
 /**
  * 走行場所の状態を保持する列挙型
@@ -45,21 +46,22 @@ class RightCourse {
       controller(controller_)
   {
   } /** 各エリアの処理を呼び出す **/
-  void run(int16_t brightness, int16_t black, int16_t white);
+  void run(std::int16_t brightness, std::int16_t black, std::int16_t white);
   /** NormalCourseエリアの処理 **/
-void runNormalCourse(int16_t brightness);
-void run(int16_t brightness, int16_t black, int16_t white, int16_t gray);
-void runParking(int16_t brightness, LineTracerWalker lineTracer, int16_t black,int16_t white);
-void runPuzzle(int16_t target_brightness);
-void moveBlockAreaTo8(int16_t target_brightness);
-Color checkPuzzle();
-void throughArea();
-void goLeft();
-void goRight();
-void rotat180Degree();
-void carryBlockToBack();
-void runNormalCourse(int16_t brightness, int16_t black, int16_t white, int16_t gray);
-
+  void runNormalCourse(std::int16_t brightness);
+  void run(std::int16_t brightness, std::int16_t black, std::int16_t white, std::int16_t gray);
+  void runParking(std::int16_t brightness, LineTracerWalker lineTracer, std::int16_t black,
+                  std::int16_t white);
+  void runPuzzle(std::int16_t target_brightness);
+  void moveBlockAreaTo8(std::int16_t target_brightness);
+  Color checkPuzzle();
+  void throughArea();
+  void goLeft();
+  void goRight();
+  void rotat180Degree();
+  void carryBlockToBack();
+  void runNormalCourse(std::int16_t brightness, std::int16_t black, std::int16_t white,
+                       std::int16_t gray);
 
  private:
   LineTracerWalker lineTracer;
