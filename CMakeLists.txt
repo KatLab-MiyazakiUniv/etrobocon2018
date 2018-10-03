@@ -23,7 +23,7 @@ endif()
 if(MSVC)
     #vc 2012 fix for vararg templates
     set(MSVC_COMPILER_DEFS "-D_VARIADIC_MAX=10")
-endif() 
+endif()
 
 #-------------------
 # set common include folder for module
@@ -65,6 +65,7 @@ file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${SOURCE_DIR}/InitialPositionCodeDecoder.cpp
     ${SOURCE_DIR}/Node.cpp
     ${SOURCE_DIR}/Explorer.cpp
+    ${SOURCE_DIR}/LightFilter.cpp
     )
 add_library(${PROJECT_LIB_NAME} ${SRC_FILES})
 
