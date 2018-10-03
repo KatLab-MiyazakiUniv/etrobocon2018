@@ -46,7 +46,6 @@ class RightCourse {
       controller(controller_)
   {
   } /** 各エリアの処理を呼び出す **/
-  void run(std::int16_t brightness, std::int16_t black, std::int16_t white);
   /** NormalCourseエリアの処理 **/
   void runNormalCourse(std::int16_t brightness);
   void run(std::int16_t brightness, std::int16_t black, std::int16_t white, std::int16_t gray);

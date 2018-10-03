@@ -2,9 +2,7 @@ mkfile_path := $(dir $(lastword $(MAKEFILE_LIST)))
 
 APPL_CXXOBJS += \
 UserInterface.o \
-util.o \
 EtRobocon2018.o \
-SonarAlert.o \
 LineTracerWalker.o \
 Pid.o \
 SpeedControl.o \
@@ -12,7 +10,6 @@ TurnControl.o \
 Distance.o \
 Walker.o \
 SelfLocalization.o \
-Emoter.o \
 NormalCourse.o \
 FirstCode.o \
 Parking.o \
