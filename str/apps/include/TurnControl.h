@@ -7,6 +7,7 @@
 #define __TURNCONTROL__
 
 #include "Pid.h"
+#include "LightFilter.h"
 #include <cstdint>
 
 /**
@@ -23,6 +24,7 @@ class TurnControl : public Pid {
  private:
   double turn;
   double pid_value_old;
+  LightFilter filter;
 };
 
 #endif

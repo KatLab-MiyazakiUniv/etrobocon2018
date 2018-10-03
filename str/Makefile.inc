@@ -16,7 +16,8 @@ Parking.o \
 BasicWalker.o \
 Controller.o \
 Lifter.o \
-Distinguisher.o
+Distinguisher.o \
+LightFilter.o
 
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \
@@ -36,7 +37,7 @@ SRCLANG := c++
 
 APPL_DIR += $(mkfile_path)apps
 
-INCLUDES += -I$(mkfile_path)apps 
+INCLUDES += -I$(mkfile_path)apps
 
 ifdef CONFIG_EV3RT_APPLICATION
 
