@@ -5,12 +5,11 @@
  *
  * 注記 : Bluetooth通信リモートスタート機能付き
  */
-
+#include "ev3api.h"
 #include "app.h"
 #include "Controller.h"
 #include "EtRobocon2018.h"  // ETロボコン2017
 #include "SelfLocalization.h"
-#include "ev3api.h"
 
 #if defined(BUILD_MODULE)
 #include "module_cfg.h"
