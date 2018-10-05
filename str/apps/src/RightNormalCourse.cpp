@@ -17,13 +17,14 @@ RightNormalCourse::RightNormalCourse()
  * マイナス値は入れないほうがいい
  *lineTracerWalker.speedControl.setPid ( 2.0, 4.8, 0.024, 速度mm/s );
  */
-bool RightNormalCourse::runNormalCourse(int16_t target_brightness, int16_t black, int16_t white, int16_t gray)
+bool RightNormalCourse::runNormalCourse(int16_t target_brightness, int16_t black, int16_t white,
+                                        int16_t gray)
 {
   switch(status) {
     case RightStatus::STRAIGHT_LONG:
       lineTracerWalker.speedControl.setPid(8.0, 1.0, 0.1, 180.0);
       lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);
-      //lineTracerWalker.turnControl.setPid(0.49999, 0.0, 0.0, target_brightness);
+      // lineTracerWalker.turnControl.setPid(0.49999, 0.0, 0.0, target_brightness);
       break;
 
     case RightStatus::STRAIGHT_SHORT:
@@ -55,10 +56,10 @@ bool RightNormalCourse::runNormalCourse(int16_t target_brightness, int16_t black
       lineTracerWalker.speedControl.setPid(1.5, 0.01, 0.12, 170.0);
       lineTracerWalker.turnControl.setPid(2.0, 0.1, 0.1, target_brightness);
       break;
-    
+
     case RightStatus::TRANSFER_ZONE:
       lineTracerWalker.speedControl.setPid(10.0, 0.0001, 0.12, 140.0);
-      lineTracerWalker.turnControl.setPid(1.0, 1.6, 0.5, target_brightness);
+      lineTracerWalker.turnControl.setPid(2.0, 1.7, 0.6, target_brightness);
       break;
 
     case RightStatus::STOP:
@@ -76,7 +77,7 @@ bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR)
 {
   distanse_total = distance.getDistanceTotal(countL, countR);
   old_status = status;
-  
+
   if(distanse_total < CALIBRATE_DISTANCE_R)
     status = RightStatus::START;
   else if(distanse_total < FIRST_STRAIGHT_DISTANCE_R)

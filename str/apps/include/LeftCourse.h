@@ -60,6 +60,8 @@ class LeftCourse {
 
   void runGoStraight();
 
+  void getSensor();
+
  private:
   Walker walker;
   /** 自己位置推定 インスタンス 初期化*/
