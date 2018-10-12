@@ -12,7 +12,7 @@
 /**
  *Rコースの走行範囲の切り替えを行う
  */
-void RightCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t gray)
+void RightCourse::run(std::int16_t brightness, std::int16_t black, std::int16_t white, std::int16_t gray)
 {
   LineTracerWalker lineTracer;
   runNormalCourse(brightness, black, white, gray);
@@ -27,14 +27,14 @@ void RightCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t 
   runParking(brightness, lineTracer, black, white);
 }
 
-void RightCourse::runParking(int16_t brightness, LineTracerWalker lineTracer, int16_t black,
-                             int16_t white)
+void RightCourse::runParking(std::int16_t brightness, LineTracerWalker lineTracer, std::int16_t black,
+                             std::int16_t white)
 {
   Parking parking{ controller };
   parking.runParpendicular(brightness, lineTracer, black, white);
 }
 
-void RightCourse::moveBlockAreaTo8(int16_t target_brightness)
+void RightCourse::moveBlockAreaTo8(std::int16_t target_brightness)
 {
   Distinguisher d{ controller };
   Distance distance;
@@ -63,7 +63,7 @@ void RightCourse::moveBlockAreaTo8(int16_t target_brightness)
   }
 }
 
-void RightCourse::runPuzzle(int16_t target_brightness)
+void RightCourse::runPuzzle(std::int16_t target_brightness)
 {
   Controller controller;
   Distinguisher d{ controller };
@@ -175,7 +175,7 @@ void RightCourse::carryBlockToBack()
   basic.goStraight(15, 300);
 }
 
-void RightCourse::runNormalCourse(int16_t brightness, int16_t black, int16_t white, int16_t gray)
+void RightCourse::runNormalCourse(std::int16_t brightness, std::int16_t black, std::int16_t white, std::int16_t gray)
 {
   RightNormalCourse normalCourse;
   bool isNormalCourse;
@@ -183,7 +183,7 @@ void RightCourse::runNormalCourse(int16_t brightness, int16_t black, int16_t whi
   /*灰色を検知用*/
   /*
   int8_t counter = 0;
-  int16_t target_brightness_gray = (white + gray) / 2;
+  std::int16_t target_brightness_gray = (white + gray) / 2;
   */
 
   // NormalCourseを抜けるまでループする
@@ -212,7 +212,7 @@ void RightCourse::runNormalCourse(int16_t brightness, int16_t black, int16_t whi
     }
     /*灰色を検知したら止まる*/
     /*
-    const std::int16_t AFTER_GOAL_CURVE_R = 11900;
+    const std::std::int16_t AFTER_GOAL_CURVE_R = 11900;
       if(distance_total_r > AFTER_GOAL_CURVE_R && target_brightness_gray + 20 > luminance &&
     luminance > target_brightness_gray - 3){ if(counter > 10){ controller.printDisplay(4, "Find Gray
     Line¥n Brightness: %d, Target: %d", luminance, brightness);

@@ -7,7 +7,7 @@ cp apps/test/MockController.h apps/include/Controller.h
 cp apps/test/MockController.cpp apps/src/Controller.cpp
 
 cd apps/test
-g++-8 -g -O0 UserInterfaceTest.cpp ../src/UserInterface.cpp ../src/FirstCode.cpp gtest_main.o gtest-all.o -I../include -I/Users/Futa/googletest/googletest/include
+g++-8 -g -O0 RightCourseTest.cpp ../src/*.cpp gtest_main.o gtest-all.o -I../include -I/Users/Futa/googletest/googletest/include
 
 cd ../../
 mv -f apps/include/Controller.h.bak apps/include/Controller.h

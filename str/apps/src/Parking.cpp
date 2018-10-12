@@ -61,8 +61,11 @@ void Parking::runParallel(int16_t brightness, int16_t black, int16_t white, int1
   BasicWalker basicWalker{ controller };
   int count = 0;
   int16_t grayBrightness = (gray + white) / 2;
+  // controller.tslpTsk(500);
 
   controller.printDisplay(6, ">>>>> Do ParallelParking... <<<<<");
+  lineTracer.speedControl.setPid(1.5, 0.01, 0.12, 170.0);
+  lineTracer.turnControl.setPid(2.0, 0.1, 0.1, brightness - 20);
   while(1) {
     int16_t luminance = controller.getBrightness();
     lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), luminance);
@@ -79,13 +82,13 @@ void Parking::runParallel(int16_t brightness, int16_t black, int16_t white, int1
 
     if(black + 35 >= luminance) {  //ブラックを読み込んだら
       count = 0;
-      controller.speakerPlayTone(controller.noteFs4, 100);
-    } else if(white + 70 >= luminance && white - 70 <= luminance) {  //+30 -70
+      controller.speakerPlayTone(controller.noteFs4, 10);
+    } else if(white + 40 >= luminance && white - 70 <= luminance) {  //+30 -70
       count++;
-      controller.speakerPlayTone(controller.noteFs6, 100);
+      // controller.speakerPlayTone(controller.noteFs6, 100);
     }
 
-    if(count > 50) {  // 250
+    if(count > 80) {  // 250
       waitThreeTimes();
       basicWalker.reset();
       basicWalker.setPidWithoutTarget(14.0, 1.0, 0.1);

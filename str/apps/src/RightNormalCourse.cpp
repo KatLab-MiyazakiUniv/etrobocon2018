@@ -60,6 +60,11 @@ bool RightNormalCourse::runNormalCourse(int16_t target_brightness, int16_t black
       lineTracerWalker.speedControl.setPid(10.0, 0.0001, 0.12, 140.0);
       lineTracerWalker.turnControl.setPid(1.0, 1.6, 0.5, target_brightness);
       break;
+    
+    case RightStatus::SLOW_DOWN:
+      //lineTracerWalker.speedControl.setPid(1.5, 0.01, 0.12, 160.0);
+      lineTracerWalker.speedControl.setPid(8.0, 1.0, 0.1, 165.0);
+      lineTracerWalker.speedControl.setPid(2.0, 0.1, 0.1, target_brightness);
 
     case RightStatus::STOP:
       stop();
@@ -95,6 +100,10 @@ bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR)
     status = RightStatus::CURVE_OUTSIDE;
   else if(distanse_total < FOURTH_STRAIGHT_DISTANCE_R)
     status = RightStatus::STRAIGHT_LONG;
+  else if(distanse_total < FOR_DECREASE_JACKKNIFE_R)
+    status = RightStatus::SLOW_DOWN;
+  //else if(distanse_total < 11607)
+  //  status = RightStatus::SLOW;  
   else if(distanse_total < AFTER_GOAL_CURVE_R)
     status = RightStatus::TRANSFER_ZONE;
   else if(distanse_total < GRAY_FIND_AREA_R)
