@@ -17,6 +17,13 @@ void RightCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t 
   LineTracerWalker lineTracer;
   runNormalCourse(brightness, black, white, gray);
   moveBlockAreaTo8(brightness);
+  //checkPuzzle();
+  throughArea();
+  controller.tslpTsk(100);
+  throughArea();
+  controller.tslpTsk(100);
+
+  //runPuzzle(brightness);
   runParking(brightness, lineTracer, black, white);
 }
 
