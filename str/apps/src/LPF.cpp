@@ -1,14 +1,14 @@
-#include "LightFilter.h"
+#include "LPF.h"
 
 /**
- *  [LightFilter::sensor]
+ *  [LPF::sensor]
  *  @brief  現在のセンサ値にフィルタ処理を実行する
  *  @param  current_sensor 現在のセンサ値
  *  @return               フィルタ処理を実行したセンサ値
  */
-std::uint8_t LightFilter::sensor(std::uint8_t current_sensor)
+std::uint8_t LPF::sensor(std::uint8_t current_sensor)
 {
-  // presensorの初期化
+  // pre_sensorの初期化
   if(pre_sensor == 0){
     pre_sensor = current_sensor;
     return current_sensor;
@@ -19,12 +19,12 @@ std::uint8_t LightFilter::sensor(std::uint8_t current_sensor)
 }
 
 /**
- *  [LightFilter::RCFilter]
+ *  [LPF::RCFilter]
  *  @brief  RCフィルタ(ローパスフィルタ)処理
  *  @param  current_sensor 現在のセンサ値
  *  @return                フィルタ処理を実行したセンサ値
  */
-std::uint8_t LightFilter::RCFilter(std::uint8_t current_sensor)
+std::uint8_t LPF::RCFilter(std::uint8_t current_sensor)
 {
   // RCフィルタにおける係数(通常、0.8 or 0.9)
   constexpr double coefficient = 0.9;
