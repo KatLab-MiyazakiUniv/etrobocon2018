@@ -17,7 +17,7 @@ BasicWalker.o \
 Controller.o \
 Lifter.o \
 Distinguisher.o \
-LightFilter.o
+LPF.o
 
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \

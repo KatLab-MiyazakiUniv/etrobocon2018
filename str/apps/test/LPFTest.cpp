@@ -1,16 +1,16 @@
 /**
- *  @file LightFilterTest.cpp
+ *  @file LPFTest.cpp
  *  @author T.Miyaji
  */
 
-#include "LightFilter.h"
+#include "LPF.h"
 #include <gtest/gtest.h>
 
 namespace etrobocon2018_test {
 
-  TEST(LightFilter, sensorTest)
+  TEST(LPF, sensorTest)
   {
-    LightFilter filter;
+    LPF filter;
     std::uint8_t sensor = 24;  // This is 適当
 
     // 前回のセンサ値がない場合は、入力値をそのまま返す

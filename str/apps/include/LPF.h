@@ -1,21 +1,21 @@
 /**
- *  @file LightFilter.h
- *  @brief 光センサ値に用いるフィルタ処理をまとめたクラス
+ *  @file LPF.h
+ *  @brief LPF(Low-Pass Filter)をまとめたクラス
  *  @author T.Miyaji
  */
-#ifndef LIGHT_FILTER_H
-#define LIGHT_FILTER_H
+#ifndef LPF_H
+#define LPF_H
 #include <cstdint>
 
 /*!
- *  @class LightFilter
- *  @brief 光センサ値に用いるフィルタ処理をまとめたクラス
+ *  @class LPF
+ *  @brief LPF(Low-Pass Filter)をまとめたクラス
  */
-struct LightFilter {
+struct LPF {
   // 前回のセンサ値
   std::uint8_t pre_sensor;
   // コンストラクタ
-  LightFilter() : pre_sensor(0) { }
+  LPF() : pre_sensor(0) { }
   // 現在のセンサ値にフィルタ処理を実行する
   std::uint8_t sensor(std::uint8_t current_sensor);
   // RCフィルタ
