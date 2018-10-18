@@ -13,9 +13,15 @@
  */
 class Distance {
  public:
+  Distance() : leftMotorDegTotal(0), rightMotorDegTotal(0), leftMotorDegOld(0), rightMotorDegOld(0)
+  {
+  }
   /** @return スタートしてからの回転角の合計 */
   std::int32_t getDistanceTotal(std::int32_t countL, std::int32_t countR);
 
+  /** @return スタートしてからの左右車輪の回転角の差分 */
+  std::int32_t getAngleTotal(std::int32_t countL, std::int32_t countR);
+  
   /** @return 最後のresetDistance()からの回転角の合計 */
   std::int32_t getDistanceCurrent(std::int32_t countL, std::int32_t countR);
 

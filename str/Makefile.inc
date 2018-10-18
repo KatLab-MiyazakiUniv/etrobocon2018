@@ -17,7 +17,8 @@ BasicWalker.o \
 Controller.o \
 Lifter.o \
 Distinguisher.o \
-LPF.o
+LPF.o \
+Localization.o
 
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \
