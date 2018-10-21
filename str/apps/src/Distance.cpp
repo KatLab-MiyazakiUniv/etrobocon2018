@@ -18,18 +18,22 @@ std::int32_t Distance::getDistanceCurrent(std::int32_t countL, std::int32_t coun
   std::int32_t leftMotorDeg = countL - leftMotorDegOld;
   std::int32_t rightMotorDeg = countR - rightMotorDegOld;
 
+  leftMotorDegOld = countL;
+  rightMotorDegOld = countR;
+
   return (leftMotorDeg + rightMotorDeg) / 2;
 }
 
-std::int32_t Distance::getAngleTotal(std::int32_t countL, std::int32_t countR)
+std::int32_t Distance::getAngleCurrent(std::int32_t countL, std::int32_t countR)
 {
-  leftMotorDegTotal = countL;
-  rightMotorDegTotal = countR;
+  std::int32_t leftMotorDeg = countL - leftMotorDegOld;
+  std::int32_t rightMotorDeg = countR - rightMotorDegOld;
 
-  return rightMotorDegTotal - leftMotorDegTotal;
+  leftMotorDegOld = countL;
+  rightMotorDegOld = countR;
+
+  return (rightMotorDeg - leftMotorDeg);
 }
-
-
 
 void Distance::resetDistance(std::int32_t countL, std::int32_t countR)
 {

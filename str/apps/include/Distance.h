@@ -19,10 +19,10 @@ class Distance {
   /** @return スタートしてからの回転角の合計 */
   std::int32_t getDistanceTotal(std::int32_t countL, std::int32_t countR);
 
-  /** @return スタートしてからの左右車輪の回転角の差分 */
-  std::int32_t getAngleTotal(std::int32_t countL, std::int32_t countR);
-  
-  /** @return 最後のresetDistance()からの回転角の合計 */
+  /** @return 左右モータの回転速度の差を返す */
+  std::int32_t getAngleCurrent(std::int32_t countL, std::int32_t countR);
+
+  /** @return 左右モータの回転速度の平均を返す */
   std::int32_t getDistanceCurrent(std::int32_t countL, std::int32_t countR);
 
   /** 相対的な回転角の現在地を0にする */
