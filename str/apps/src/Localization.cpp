@@ -47,7 +47,7 @@ std::int32_t Localization::distance(std::int32_t left_motor, std::int32_t right_
   // 走行体の速度を求める
   auto v = velocity(left_motor, right_motor);
   // 走行体の速度を積分(加算)する
-  radius += v;
+  radius += v * delta;
 
   // 求めた距離を返す
   return distance();
@@ -75,7 +75,7 @@ std::int32_t Localization::angle(std::int32_t left_motor, std::int32_t right_mot
   // 走行体の角速度を求める
   auto angular_velocity = angularVelocity(left_motor, right_motor);
   // 走行体の角速度を積分(加算)する
-  arg += angular_velocity;
+  arg += angular_velocity * delta;
 
   // 求めた角度を返す
   return angle();
