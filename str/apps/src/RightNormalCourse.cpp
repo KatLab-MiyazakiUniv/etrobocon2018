@@ -63,7 +63,7 @@ bool RightNormalCourse::runNormalCourse(int16_t target_brightness, int16_t black
     
     case RightStatus::SLOW_DOWN:
       //lineTracerWalker.speedControl.setPid(1.5, 0.01, 0.12, 160.0);
-      lineTracerWalker.speedControl.setPid(8.0, 1.0, 0.1, 165.0);
+      lineTracerWalker.speedControl.setPid(2.0, 1.0, 0.1, 165.0);
       lineTracerWalker.speedControl.setPid(2.0, 0.1, 0.1, target_brightness);
 
     case RightStatus::STOP:
