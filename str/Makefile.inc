@@ -7,9 +7,7 @@ LineTracerWalker.o \
 Pid.o \
 SpeedControl.o \
 TurnControl.o \
-Distance.o \
 Walker.o \
-SelfLocalization.o \
 NormalCourse.o \
 FirstCode.o \
 Parking.o \
@@ -17,7 +15,8 @@ BasicWalker.o \
 Controller.o \
 Lifter.o \
 Distinguisher.o \
-LightFilter.o
+LPF.o \
+MotorAngle.o
 
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \

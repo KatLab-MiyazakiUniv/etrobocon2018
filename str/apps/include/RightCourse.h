@@ -8,11 +8,9 @@
 #define __RIGHT_COURSE__
 
 #include "Controller.h"
-#include "Distance.h"
 #include "Distinguisher.h"
 #include "Parking.h"
 #include "RightNormalCourse.h"
-#include "SelfLocalization.h"
 #include "Walker.h"
 #include <cstdint>
 
@@ -42,7 +40,6 @@ class RightCourse {
   RightCourse() = default;
   explicit RightCourse(Controller& controller_)
     : walker(controller_),
-      sl(walker.get_count_L(), walker.get_count_R(), true),
       controller(controller_)
   {
   } /** 各エリアの処理を呼び出す **/
@@ -65,7 +62,6 @@ class RightCourse {
  private:
   LineTracerWalker lineTracer;
   Walker walker;
-  SelfLocalization sl;
   Controller controller;
 };
 
