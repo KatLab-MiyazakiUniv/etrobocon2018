@@ -9,7 +9,6 @@ SpeedControl.o \
 TurnControl.o \
 Distance.o \
 Walker.o \
-SelfLocalization.o \
 NormalCourse.o \
 FirstCode.o \
 Parking.o \

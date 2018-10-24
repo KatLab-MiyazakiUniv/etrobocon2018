@@ -49,7 +49,6 @@ file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${SOURCE_DIR}/NormalCourse.cpp
     ${SOURCE_DIR}/LeftNormalCourse.cpp
     ${SOURCE_DIR}/RightNormalCourse.cpp
-    ${SOURCE_DIR}/SelfLocalization.cpp
     ${SOURCE_DIR}/FirstCode.cpp
     ${SOURCE_DIR}/Walker.cpp
     ${SOURCE_DIR}/RightCourse.cpp

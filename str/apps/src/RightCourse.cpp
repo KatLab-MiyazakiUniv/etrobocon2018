@@ -181,7 +181,6 @@ void RightCourse::runNormalCourse(std::int16_t brightness, std::int16_t black, s
 
   // NormalCourseを抜けるまでループする
   while(1) {
-    sl.update(walker.get_count_L(), walker.get_count_R());
     auto luminance = controller.getBrightness();
 
     /*灰色を検知用*/
