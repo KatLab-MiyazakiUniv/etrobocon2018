@@ -18,7 +18,7 @@ Controller.o \
 Lifter.o \
 Distinguisher.o \
 LPF.o \
-Localization.o
+MotorAngle.o
 
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \

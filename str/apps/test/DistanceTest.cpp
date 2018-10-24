@@ -29,7 +29,7 @@ namespace etrobocon2018_test {
     int left = 10;
     int right = 20;
 
-    ASSERT_EQ(right - left, ds.getAngleTotal(left, right));
+    ASSERT_EQ(right - left, ds.getAngleCurrent(left, right));
   }
 
 
