@@ -50,9 +50,13 @@ namespace etrobocon2018_test {
     ASSERT_FLOAT_EQ(angle.absoluteAngleMean(left, right),
                     angle.absoluteAngleMean(left, right, true));
 
-    left = 20;
-    right = 30;
-    ASSERT_NE(angle.absoluteAngleMean(left, right), angle.absoluteAngleMean(left, right, true));
+    float left2 = 20;
+    float left2_filtered = left2 * 0.1 + left * 0.9;
+    float right2 = 30;
+    float right2_filtered = right2 * 0.1 + right * 0.9;
+    float mean = (left2_filtered + right2_filtered) / 2.0f;
+
+    ASSERT_FLOAT_EQ(mean, angle.absoluteAngleMean(left2, right2, true));
   }
 
   TEST(MotorAngleTest, relativeAngleMeanTestPositive)
