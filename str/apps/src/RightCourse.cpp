@@ -12,7 +12,8 @@
 /**
  *Rコースの走行範囲の切り替えを行う
  */
-void RightCourse::run(std::int16_t brightness, std::int16_t black, std::int16_t white, std::int16_t gray)
+void RightCourse::run(std::int16_t brightness, std::int16_t black, std::int16_t white,
+                      std::int16_t gray)
 {
   LineTracerWalker lineTracer;
   runNormalCourse(brightness, black, white, gray);
@@ -20,8 +21,8 @@ void RightCourse::run(std::int16_t brightness, std::int16_t black, std::int16_t 
   runParking(brightness, lineTracer, black, white);
 }
 
-void RightCourse::runParking(std::int16_t brightness, LineTracerWalker lineTracer, std::int16_t black,
-                             std::int16_t white)
+void RightCourse::runParking(std::int16_t brightness, LineTracerWalker lineTracer,
+                             std::int16_t black, std::int16_t white)
 {
   Parking parking{ controller };
   parking.runParpendicular(brightness, lineTracer, black, white);
@@ -30,7 +31,7 @@ void RightCourse::runParking(std::int16_t brightness, LineTracerWalker lineTrace
 void RightCourse::moveBlockAreaTo8(std::int16_t target_brightness)
 {
   Distinguisher d{ controller };
-  Distance distance;
+  MotorAngle motor_angle;
   bool isAlreadyChangedGear = false;
 
   lineTracer.speedControl.setPid(5.0, 1.0, 0.1, 90.0);
@@ -46,7 +47,7 @@ void RightCourse::moveBlockAreaTo8(std::int16_t target_brightness)
     controller.printDisplay(4, "Brightness: %d, Target: %d", luminance, result);
     if(result == Color::RED) break;
     if(!isAlreadyChangedGear
-       && distance.getDistanceTotal(walker.get_count_L(), walker.get_count_R()) > 1750) {
+       && motor_angle.absoluteAngleMean(walker.get_count_L(), walker.get_count_R()) > 1750) {
       lineTracer.speedControl.setPid(5.0, 1.0, 0.1, 25.0);
       lineTracer.turnControl.setPid(1.0, 1.0, 0.14, target_brightness);
       controller.speakerPlayTone(controller.noteFs6, 100);
@@ -168,7 +169,8 @@ void RightCourse::carryBlockToBack()
   basic.goStraight(15, 300);
 }
 
-void RightCourse::runNormalCourse(std::int16_t brightness, std::int16_t black, std::int16_t white, std::int16_t gray)
+void RightCourse::runNormalCourse(std::int16_t brightness, std::int16_t black, std::int16_t white,
+                                  std::int16_t gray)
 {
   RightNormalCourse normalCourse;
   bool isNormalCourse;
@@ -181,7 +183,6 @@ void RightCourse::runNormalCourse(std::int16_t brightness, std::int16_t black, s
 
   // NormalCourseを抜けるまでループする
   while(1) {
-    sl.update(walker.get_count_L(), walker.get_count_R());
     auto luminance = controller.getBrightness();
 
     /*灰色を検知用*/

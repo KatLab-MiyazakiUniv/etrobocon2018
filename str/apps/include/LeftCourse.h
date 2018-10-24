@@ -13,7 +13,6 @@
 #include "Controller.h"
 #include "LeftNormalCourse.h"
 #include "Parking.h"
-#include "SelfLocalization.h"
 #include "Walker.h"
 
 /**
@@ -23,12 +22,7 @@ class LeftCourse {
  public:
   /** コンストラクタ。センサ類の初期化を行う */
   LeftCourse() = default;
-  explicit LeftCourse(Controller& controller_)
-    : walker(controller_),
-      sl(walker.get_count_L(), walker.get_count_R(), true),
-      controller(controller_)
-  {
-  }
+  explicit LeftCourse(Controller& controller_) : walker(controller_), controller(controller_) {}
 
   /**
    * このクラスのインスタンスを保持しているインスタンスまたはメンバ関数が、
@@ -54,7 +48,7 @@ class LeftCourse {
    */
   void runParking(int16_t brightness, int16_t black, int16_t white, int16_t gray);
 
-  void solveAiAnser();
+  void solveAiAnswer();
 
   void runGoBlack();
 
@@ -64,13 +58,11 @@ class LeftCourse {
 
  private:
   Walker walker;
-  /** 自己位置推定 インスタンス 初期化*/
-  SelfLocalization sl;
   Controller controller;
   int16_t target_brightness;
   LineTracerWalker lineTracer;
   BasicWalker basic{ controller };
-  Distance distance;
+  MotorAngle motor_angle;
   // BasicWalker basicWalker;
   // Motor motor;
   // GyroSensor gyro_sensor;

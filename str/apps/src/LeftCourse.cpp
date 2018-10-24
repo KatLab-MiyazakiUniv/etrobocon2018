@@ -24,12 +24,12 @@ void LeftCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t g
   runBlockRange();
   controller.printDisplay(3, "Finished Puzzle");
   target_brightness = brightness;
-  solveAiAnser();
+  solveAiAnswer();
   runParking(brightness, black, white, gray);
   runGoStraight();
 }
 
-void LeftCourse::solveAiAnser() {}
+void LeftCourse::solveAiAnswer() {}
 
 // void LeftCourse::solveAiAnser()
 // {
@@ -101,14 +101,13 @@ void LeftCourse::runGoBlack()
 void LeftCourse::runGoStraight()
 {
   walker.reset();
-  distance.resetDistance(walker.get_count_L(), walker.get_count_R());
-  int16_t luminance;
-  int32_t aiDistance;
+  int16_t luminance = 0;
+  int32_t aiDistance = 0;
   lineTracer.speedControl.setPid(2.0, 0.8, 0.1, 20.0);
   lineTracer.turnControl.setPid(1.1, 0.1, 0.2, target_brightness);  // 2.0,0.2,0.4 最高か
   while(1) {
     luminance = controller.getBrightness();
-    aiDistance = distance.getDistanceTotal(walker.get_count_L(), walker.get_count_R());
+    aiDistance = motor_angle.absoluteAngleMean(walker.get_count_L(), walker.get_count_R());
     // 走る
     lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), luminance);
     controller.printDisplay(4, "%d", aiDistance);
@@ -196,7 +195,6 @@ void LeftCourse::runNormalCourse(int16_t brightness)
   bool isNormalCourse;
   // NormalCourseを抜けるまでループする
   while(1) {
-    sl.update(walker.get_count_L(), walker.get_count_R());
     auto luminance = controller.getBrightness();
     controller.printDisplay(4, "Brightness: %d, Target: %d", luminance, brightness);
     if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R()))

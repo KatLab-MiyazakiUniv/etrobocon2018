@@ -8,11 +8,9 @@
 #define __RIGHT_COURSE__
 
 #include "Controller.h"
-#include "Distance.h"
 #include "Distinguisher.h"
 #include "Parking.h"
 #include "RightNormalCourse.h"
-#include "SelfLocalization.h"
 #include "Walker.h"
 #include <cstdint>
 
@@ -41,11 +39,7 @@ class RightCourse {
   /** コンストラクタ。センサ類の初期化を行う **/
   RightCourse() = default;
   explicit RightCourse(Controller& controller_)
-    : walker(controller_),
-      sl(walker.get_count_L(), walker.get_count_R(), true),
-      controller(controller_)
-  {
-  } /** 各エリアの処理を呼び出す **/
+    : walker(controller_), controller(controller_) {} /** 各エリアの処理を呼び出す **/
   /** NormalCourseエリアの処理 **/
   void runNormalCourse(std::int16_t brightness);
   void run(std::int16_t brightness, std::int16_t black, std::int16_t white, std::int16_t gray);
@@ -65,7 +59,6 @@ class RightCourse {
  private:
   LineTracerWalker lineTracer;
   Walker walker;
-  SelfLocalization sl;
   Controller controller;
 };
 
