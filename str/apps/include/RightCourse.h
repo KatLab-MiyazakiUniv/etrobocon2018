@@ -8,7 +8,6 @@
 #define __RIGHT_COURSE__
 
 #include "Controller.h"
-#include "Distance.h"
 #include "Distinguisher.h"
 #include "Parking.h"
 #include "RightNormalCourse.h"

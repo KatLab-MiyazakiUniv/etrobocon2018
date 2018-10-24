@@ -64,7 +64,7 @@ class LeftCourse {
   int16_t target_brightness;
   LineTracerWalker lineTracer;
   BasicWalker basic{ controller };
-  Distance distance;
+  MotorAngle motor_angle;
   // BasicWalker basicWalker;
   // Motor motor;
   // GyroSensor gyro_sensor;

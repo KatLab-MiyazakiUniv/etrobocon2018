@@ -7,7 +7,6 @@ LineTracerWalker.o \
 Pid.o \
 SpeedControl.o \
 TurnControl.o \
-Distance.o \
 Walker.o \
 NormalCourse.o \
 FirstCode.o \
