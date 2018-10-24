@@ -100,11 +100,11 @@ bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR)
     status = RightStatus::CURVE_OUTSIDE;
   else if(distance_total < FOURTH_STRAIGHT_DISTANCE_R)
     status = RightStatus::STRAIGHT_LONG;
-  else if(distanse_total < FOR_DECREASE_JACKKNIFE_R)
+  else if(distance_total < FOR_DECREASE_JACKKNIFE_R)
     status = RightStatus::SLOW_DOWN;
   //else if(distanse_total < 11607)
   //  status = RightStatus::SLOW;  
-  else if(distanse_total < AFTER_GOAL_CURVE_R)
+  else if(distance_total < AFTER_GOAL_CURVE_R)
     status = RightStatus::TRANSFER_ZONE;
   else if(distance_total < GRAY_FIND_AREA_R)
     status = RightStatus::START;
