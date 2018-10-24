@@ -32,7 +32,7 @@ class WheelOdometry {
   Coordinate coordinate;   // 走行体の現在位置の情報
   float rotation_angle;    // 走行体の回転角度(その場で回転したとき)
  public:
-  WheelOdometry(float diameter = 10.0, float tread = 100.0, float cycle = 0.04)
+  WheelOdometry(float diameter = 99.0, float tread = 147.5, float cycle = 0.04)
     : motor_angle(), property(diameter, tread, cycle), coordinate(), rotation_angle(0.0f)
   {
   }

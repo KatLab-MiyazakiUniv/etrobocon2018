@@ -114,7 +114,7 @@ float WheelOdometry::updateRotationAngle(std::int32_t left_motor, std::int32_t r
   right_motor = motor_angle.absoluteValueOfAngle(right_motor);
 
   // モータの角度の平均値を求める
-  float mean = (left_motor + right_motor) / 2.0f;
+  float mean = motor_angle.relativeAngleMean(left_motor, right_motor);
 
   rotation_angle += transform * mean;
   return rotation_angle;

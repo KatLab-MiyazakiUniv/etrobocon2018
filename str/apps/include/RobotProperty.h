@@ -18,7 +18,7 @@ struct RobotProperty {
    *  @param tread    左右車輪の幅(トレッド幅)
    *  @param cycle    周期
    */
-  constexpr RobotProperty(float diameter = 9.8f, float tread = 100.0f, float cycle = 0.04f)
+  constexpr RobotProperty(float diameter = 100.0f, float tread = 148.0f, float cycle = 0.04f)
     : radius_wheel(diameter / 2.0f), between_wheels(tread), dt(cycle)
   {
   }
