@@ -104,23 +104,23 @@ bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int16_t l
 
 bool LeftNormalCourse::statusCheck(int32_t countL, int32_t countR)
 {
-  distanse_total = distance.getDistanceTotal(countL, countR);
+  std::int32_t distance_total = motor_angle.absoluteAngleMean(countL, countR);
   old_status = status;
-  if(distanse_total < 300)
+  if(distance_total < 300)
     status = LeftStatus::START;
-  else if(distanse_total < 2850)
+  else if(distance_total < 2850)
     status = LeftStatus::STRAIGHT;
-  else if(distanse_total < 6600)
+  else if(distance_total < 6600)
     status = LeftStatus::STRAIGHT;
-  else if(distanse_total < 7400)
+  else if(distance_total < 7400)
     status = LeftStatus::EDGE_RESET;
-  else if(distanse_total < 8150)
+  else if(distance_total < 8150)
     status = LeftStatus::STRAIGHT_SLOW;
-  else if(distanse_total < 9000)
+  else if(distance_total < 9000)
     status = LeftStatus::CURVE_LEFT;
-  else if(distanse_total < 11700)
+  else if(distance_total < 11700)
     status = LeftStatus::STRAIGHT;
-  else if(distanse_total < 12900)
+  else if(distance_total < 12900)
     status = LeftStatus::CURVE_LEFT_SHORT;
   else
     status = LeftStatus::STOP;
