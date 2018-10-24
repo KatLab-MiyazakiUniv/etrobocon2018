@@ -23,6 +23,16 @@ namespace etrobocon2018_test {
     ASSERT_EQ(ds.getDistanceTotal(l, r), (l + r) / 2);
   }
 
+  TEST(DistanceTest, getAngleTotalTest)
+  {
+    Distance ds;
+    int left = 10;
+    int right = 20;
+
+    ASSERT_EQ(right - left, ds.getAngleCurrent(left, right));
+  }
+
+
   TEST(DistanceTest, getDistanceCurrentTest1)
   {
     Distance ds;

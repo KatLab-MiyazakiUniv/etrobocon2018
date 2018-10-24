@@ -49,7 +49,6 @@ file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${SOURCE_DIR}/NormalCourse.cpp
     ${SOURCE_DIR}/LeftNormalCourse.cpp
     ${SOURCE_DIR}/RightNormalCourse.cpp
-    ${SOURCE_DIR}/SelfLocalization.cpp
     ${SOURCE_DIR}/FirstCode.cpp
     ${SOURCE_DIR}/Walker.cpp
     ${SOURCE_DIR}/RightCourse.cpp
@@ -66,6 +65,7 @@ file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${SOURCE_DIR}/Node.cpp
     ${SOURCE_DIR}/Explorer.cpp
     ${SOURCE_DIR}/LPF.cpp
+    ${SOURCE_DIR}/MotorAngle.cpp
     )
 add_library(${PROJECT_LIB_NAME} ${SRC_FILES})
 

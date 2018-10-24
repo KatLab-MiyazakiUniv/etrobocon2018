@@ -141,7 +141,6 @@ void LeftCourse::runNormalCourse(int16_t brightness)
   bool isNormalCourse;
   // NormalCourseを抜けるまでループする
   while(1) {
-    sl.update(walker.get_count_L(), walker.get_count_R());
     auto luminance = controller.getBrightness();
     controller.printDisplay(4, "Brightness: %d, Target: %d", luminance, brightness);
     if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R()))
