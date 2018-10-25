@@ -8,6 +8,7 @@
 
 #include "Node.h"
 #include <vector>
+#include <array>
 #include <algorithm>
 #include <cstdlib>
 // #include <memory>
@@ -97,7 +98,7 @@ class Explorer {
         {11, 14}};
 
     // 相対的なノード位置のリスト
-    std::vector<std::vector<int>> currentPosition = {
+    std::vector<std::array<std::int8_t, 2>> currentPosition = {
         {0, 0},
         {1, 0},
         {2, 0},
@@ -239,7 +240,7 @@ class Explorer {
    * {@link #createBlockArea()} でのみの利用だが、実態を残すためにメンバ変数としている。
    * </p>
    */
-  std::vector<std::vector<int>> neighborsIDList;
+  std::vector<std::vector<std::int8_t>> neighborsIDList;
 };
 
 #endif // EXPLORER

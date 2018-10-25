@@ -29,7 +29,6 @@ void Explorer::createBlockArea()
 
   // 各ノードのポインタを格納
   blockAreaNodeList = &nodePtrs;
-
 }
 
 void Explorer::resetBlockArea()
