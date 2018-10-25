@@ -5,13 +5,10 @@
  *
  * 注記 : Bluetooth通信リモートスタート機能付き
  */
-
 #include "ev3api.h"
 #include "app.h"
-#include "EtRobocon2018.h"  // ETロボコン2017
-#include "SelfLocalization.h"
-#include "util.h"
 #include "Controller.h"
+#include "EtRobocon2018.h"  // ETロボコン2017
 
 #if defined(BUILD_MODULE)
 #include "module_cfg.h"
@@ -39,9 +36,9 @@ void main_task(intptr_t unused)
 
   /* Bluetooth通信タスクの起動 */
   act_tsk(BT_TASK);
-
-  msg_f("ET-Robocon2018", 1);
-  msg_f(" create from github.com/korosuke613/etrobocon2018", 2);
+  Controller controller;
+  controller.printDisplay(1, "ET-Robocon2018");
+  controller.printDisplay(2, " create from github.com/korosuke613/etrobocon2018");
 
   EtRobocon2018 etrobocon;
   etrobocon.start(g_bluetooth_command);
@@ -88,7 +85,7 @@ void sensor_log_task(intptr_t unused)
   bool flag = true;
   while(flag == true) {
     sprintf(log_file_name, "%s%d%s", "/Log/log", log_file_number, ".csv");
-    msg_f(log_file_name, 3);
+    controller.printDisplay(3, log_file_name);
     file = fopen(log_file_name, "r");
     if(file == NULL) {  // ファイル名がダブらない場合
       fclose(file);

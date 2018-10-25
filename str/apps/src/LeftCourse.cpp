@@ -15,7 +15,17 @@ void LeftCourse::setFirstCode(int32_t code)
  */
 void LeftCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t gray)
 {
+  runNormalCourse(brightness);
+
+  controller.printDisplay(3, "Finished NormalArea");
+
+  // Puzzle
+  // runBlockRange();
+  // controller.printDisplay(3, "Finished Puzzle");
+  target_brightness = brightness;
+  // Park
   solveAiAnser();
+  runParking(brightness, black, white, gray);
   // runGoStraight();
 }
 
@@ -24,9 +34,9 @@ void LeftCourse::solveAiAnser()
   controller.printDisplay(3, "aiAnswer Start!!");
   controller.speakerPlayTone(controller.noteFs4, 200);
   walker.run(30, 0);
-  controller.speakerPlayTone(NOTE_FS4, 200);
-  controller.tslpTsk(3300);
-  controller.speakerPlayTone(NOTE_FS4, 200);
+  controller.speakerPlayTone(controller.noteFs4, 200);
+  controller.tslpTsk(2200);
+  controller.speakerPlayTone(controller.noteFs4, 200);
   // その場に止まる
   walker.reset();
   controller.speakerPlayTone(controller.noteFs4, 200);
@@ -42,7 +52,7 @@ void LeftCourse::solveAiAnser()
     // 現在の色取得
     int16_t luminance = controller.getBrightness();
     // 黒検知
-    if(luminance <= 21) {
+    if(luminance <= 11) {
       runGoBlack();
       // lineTracer.speedControl.setPid(5.0, 1.0, 0.1, 90.0);
       // lineTracer.turnControl.setPid(2.0, 1.0, 0.14, target_brightness);
@@ -70,10 +80,11 @@ void LeftCourse::runGoBlack()
   while(1) {
     // 現在の色取得
     int16_t luminance = controller.getBrightness();
-    if(luminance <= 21) {
+    if(luminance <= 51) {
       // 左に30度回転
       controller.tslpTsk(100);
-      basic.spin(basic.SPIN_LEFT, 30);
+      walker.angleChange(30, 1);
+      // basic.spin(basic.SPIN_LEFT, 30);
       runGoStraight();
       break;
     }
@@ -88,12 +99,13 @@ void LeftCourse::runGoBlack()
 void LeftCourse::runGoStraight()
 {
   walker.reset();
-  distance.resetDistance(walker.get_count_L(), walker.get_count_R());
+  int16_t luminance = 0;
+  int32_t aiDistance = 0;
+  lineTracer.speedControl.setPid(2.0, 0.8, 0.1, 20.0);
+  lineTracer.turnControl.setPid(1.1, 0.1, 0.2, target_brightness);  // 2.0,0.2,0.4 最高か
   while(1) {
-    int16_t luminance = controller.getBrightness();
-    int32_t aiDistance = distance.getDistanceTotal(walker.get_count_L(), walker.get_count_R());
-    lineTracer.speedControl.setPid(2.0, 0.8, 0.1, 20.0);
-    lineTracer.turnControl.setPid(1.1, 0.1, 0.2, target_brightness);  // 2.0,0.2,0.4 最高か
+    luminance = controller.getBrightness();
+    aiDistance = motor_angle.absoluteAngleMean(walker.get_count_L(), walker.get_count_R());
     // 走る
     lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), luminance);
     controller.printDisplay(4, "%d", aiDistance);
@@ -106,8 +118,9 @@ void LeftCourse::runGoStraight()
       walker.reset();
       break;
     }
-    if(aiDistance >= 1000) {
+    if(aiDistance >= 1200) {
       walker.reset();
+
       break;
     }
     controller.tslpTsk(4);
@@ -127,7 +140,6 @@ void LeftCourse::runNormalCourse(int16_t brightness)
   bool isNormalCourse;
   // NormalCourseを抜けるまでループする
   while(1) {
-    sl.update(walker.get_count_L(), walker.get_count_R());
     auto luminance = controller.getBrightness();
     controller.printDisplay(4, "Brightness: %d, Target: %d", luminance, brightness);
     if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R()))

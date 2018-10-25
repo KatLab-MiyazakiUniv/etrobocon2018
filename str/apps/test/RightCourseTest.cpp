@@ -20,5 +20,5 @@ namespace etrobocon2018_test {
     RightCourse rc{ controller };
   };
 
-  TEST_F(RightCourseTest, runTest) { rc.run(30, 0, 100); }
+  //TEST_F(RightCourseTest, runTest) { rc.run(30, 0, 100, 50); }
 }  // namespace etrobocon2018_test

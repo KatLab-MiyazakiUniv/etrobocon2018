@@ -2,17 +2,12 @@ mkfile_path := $(dir $(lastword $(MAKEFILE_LIST)))
 
 APPL_CXXOBJS += \
 UserInterface.o \
-util.o \
 EtRobocon2018.o \
-SonarAlert.o \
 LineTracerWalker.o \
 Pid.o \
 SpeedControl.o \
 TurnControl.o \
-Distance.o \
 Walker.o \
-SelfLocalization.o \
-Emoter.o \
 NormalCourse.o \
 FirstCode.o \
 Parking.o \
@@ -22,7 +17,9 @@ Lifter.o \
 Distinguisher.o \
 InitialPositionCodeDecoder.o \
 Explorer.o \
-Node.o
+Node.o \
+LPF.o \
+MotorAngle.o
 
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \
@@ -42,7 +39,7 @@ SRCLANG := c++
 
 APPL_DIR += $(mkfile_path)apps
 
-INCLUDES += -I$(mkfile_path)apps 
+INCLUDES += -I$(mkfile_path)apps
 
 ifdef CONFIG_EV3RT_APPLICATION
 

@@ -51,6 +51,11 @@ bool Controller::buttonIsPressedLeft()
   return ev3_button_is_pressed(LEFT_BUTTON);
 }
 
+float Controller::measureBatteryVoltage()
+{
+  return ev3_battery_voltage_mV();
+}
+
 int16_t Controller::getBrightness()
 {
   colorSensor.getRawColor(rgb);
@@ -79,5 +84,7 @@ void Controller::printDisplay(int8_t row, const char* format, ...)
   vsprintf(msg, format, arg);
   va_end(arg);
 
-  msg_f(msg, row);
+  const int8_t line_height = 10;
+  ev3_lcd_fill_rect(0, row * line_height, EV3_LCD_WIDTH, line_height, EV3_LCD_WHITE);
+  ev3_lcd_draw_string(msg, 0, row * line_height);
 }
