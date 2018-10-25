@@ -4,14 +4,14 @@ void Explorer::createBlockArea()
 {
   int nodeCount = neighborsIDList.size();
 
-  // $B%N!<%I$N%]%$%s%?$N%j%9%H$r:n@.(B
+  // ノードのポインタのリストを作成
   for (int i = 0; i < nodeCount; i++)
   {
     nodeList[i].setNodeID(i);
     nodePtrs[i] = &nodeList[i];
   }
 
-  // $BNY@\%N!<%I$N%]%$%s%?$N%j%9%H$r%N!<%IJ,%j%9%H2=(B
+  // 隣接ノードのポインタのリストをノード分リスト化
   for (int i = 0; i < nodeCount; i++)
   {
     for (int nodeID : neighborsIDList[i])
@@ -20,16 +20,15 @@ void Explorer::createBlockArea()
     }
   }
 
-  // $BNY@\%N!<%I$N%]%$%s%?$N%j%9%H$r3JG<(B
+  // 隣接ノードのポインタのリストを格納
   for (int i = 0; i < nodeCount; i++)
   {
     nodePtrs[i]->setNeighbors(&neighborPtrs[i]);
     nodePtrs[i]->setPosition(positionList[i].x, positionList[i].y);
   }
 
-  // $B3F%N!<%I$N%]%$%s%?$r3JG<(B
+  // 各ノードのポインタを格納
   blockAreaNodeList = &nodePtrs;
-
 }
 
 void Explorer::resetBlockArea()

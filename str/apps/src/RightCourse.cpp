@@ -17,6 +17,13 @@ void RightCourse::run(std::int16_t brightness, std::int16_t black, std::int16_t 
   LineTracerWalker lineTracer;
   runNormalCourse(brightness, black, white, gray);
   moveBlockAreaTo8(brightness);
+  //checkPuzzle();
+  throughArea();
+  controller.tslpTsk(100);
+  throughArea();
+  controller.tslpTsk(100);
+
+  //runPuzzle(brightness);
   runParking(brightness, lineTracer, black, white);
 }
 
