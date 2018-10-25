@@ -15,6 +15,9 @@ BasicWalker.o \
 Controller.o \
 Lifter.o \
 Distinguisher.o \
+InitialPositionCodeDecoder.o \
+Explorer.o \
+Node.o \
 LPF.o \
 MotorAngle.o
 

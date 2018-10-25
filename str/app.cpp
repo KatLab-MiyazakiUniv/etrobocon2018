@@ -10,6 +10,9 @@
 #include "Controller.h"
 #include "EtRobocon2018.h"  // ETロボコン2017
 
+// 参考: https://devkitpro.org/viewtopic.php?f=13&t=8643&start=10
+extern "C" void __sync_synchronize() {}
+
 #if defined(BUILD_MODULE)
 #include "module_cfg.h"
 #else
