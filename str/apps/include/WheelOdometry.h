@@ -44,8 +44,8 @@ class WheelOdometry {
   Coordinate& reset();
   //! 走行体の位置情報を更新する
   Coordinate& update(std::int32_t left_motor, std::int32_t right_motor);
-  //! 走行体の回転角度を更新する
-  float updateRotationAngle(std::int32_t left_motor, std::int32_t right_motor);
+  //! 走行体の回転角度を返す
+  float getRotationAngle(std::int32_t left_motor, std::int32_t right_motor);
   //! 走行体の位置情報を返す
   Coordinate& getCoordinate();
   //! 走行体の位置x座標を返す

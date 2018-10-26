@@ -95,17 +95,17 @@ namespace etrobocon2018_test {
     ASSERT_FLOAT_EQ(expected_distance * std::sin(expected_angle / 2.0f), coordinate.y);
   }
 
-  TEST(WheelOdometryTest, updateRotationAngleTest)
+  TEST(WheelOdometryTest, getRotationAngleTest)
   {
     WheelOdometry odometry;
     float transform = 99.0f / 147.5f;
     float angle = (5.0f + 5.0f) / 2.0f;
 
-    ASSERT_FLOAT_EQ(transform * angle, odometry.updateRotationAngle(-5, 5));
+    ASSERT_FLOAT_EQ(transform * angle, odometry.getRotationAngle(-5, 5));
 
     float angle2 = (2.0f + 2.0f) / 2.0f;
 
-    ASSERT_FLOAT_EQ(transform * angle2, odometry.updateRotationAngle(-2, 2));
+    ASSERT_FLOAT_EQ(transform * angle2, odometry.getRotationAngle(-2, 2));
   }
 
   TEST(WheelOdometryTest, getCoordinateTest)

@@ -98,13 +98,13 @@ Coordinate& WheelOdometry::update(std::int32_t left_motor, std::int32_t right_mo
 }
 
 /**
- *  [WheelOdometry::updateRotationAngle]
- *  @brief  走行体の回転角度を更新する
+ *  [WheelOdometry::getRotationAngle]
+ *  @brief  走行体の回転角度を返す
  *  @param  left_motor  左モータの回転角
  *  @param  right_motor 右モータの回転角
  *  @return 走行体の回転角度 [deg]
  */
-float WheelOdometry::updateRotationAngle(std::int32_t left_motor, std::int32_t right_motor)
+float WheelOdometry::getRotationAngle(std::int32_t left_motor, std::int32_t right_motor)
 {
   // モータの角度から回転角度へ変換するときに必要な係数
   float transform = 2.0f * property.radius_wheel / property.between_wheels;
