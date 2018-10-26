@@ -30,10 +30,10 @@ class WheelOdometry {
   MotorAngle motor_angle;  // モータ角度の情報
   RobotProperty property;  // 走行体の情報
   Coordinate coordinate;   // 走行体の現在位置の情報
-  float rotation_angle;    // 走行体の回転角度(その場で回転したとき)
+
  public:
   WheelOdometry(float diameter = 99.0, float tread = 147.5, float cycle = 0.04)
-    : motor_angle(), property(diameter, tread, cycle), coordinate(), rotation_angle(0.0f)
+    : motor_angle(), property(diameter, tread, cycle), coordinate()
   {
   }
   //! 走行体の旋回速度を求める
@@ -52,8 +52,6 @@ class WheelOdometry {
   float getPointX();
   //! 走行体の位置y座標を返す
   float getPointY();
-  //! 走行体の回転角度を返す
-  float getRotationAngle();
 };
 
 #endif

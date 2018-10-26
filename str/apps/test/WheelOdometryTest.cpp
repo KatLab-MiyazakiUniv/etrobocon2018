@@ -48,7 +48,7 @@ namespace etrobocon2018_test {
   TEST(WheelOdometryTest, velocityTest)
   {
     MotorAngle motor_angle;
-    float transform = 3.14f * 10.0f / 2.0f / 180.0f / 0.04f;
+    float transform = 3.14f * 99.0f / 2.0f / 180.0f / 0.04f;
     float angle = motor_angle.relativeAngleMean(5, 5);
 
     WheelOdometry odometry;
@@ -58,7 +58,7 @@ namespace etrobocon2018_test {
   TEST(WheelOdometryTest, angularVelocityTest)
   {
     MotorAngle motor_angle;
-    float transform = 5.0f / 100.0f / 0.04f;
+    float transform = 99.0f / 2.0f / 147.5f / 0.04f;
     float angle = motor_angle.angularDifference(2, 5);
 
     WheelOdometry odometry;
@@ -79,11 +79,11 @@ namespace etrobocon2018_test {
   TEST(WheelOdometryTest, updateTest)
   {
     MotorAngle motor_angle;
-    float transform = 3.14f * 10.0f / 2.0f / 180.0f;
+    float transform = 3.14f * 99.0f / 2.0f / 180.0f;
     float angle = motor_angle.relativeAngleMean(2, 5);
     float expected_distance = transform * angle;
 
-    transform = 5.0f / 100.0f;
+    transform = 99.0f / 2.0f / 147.5f;
     angle = motor_angle.angularDifference(2, 5);
     float expected_angle = transform * angle;
 
@@ -98,14 +98,14 @@ namespace etrobocon2018_test {
   TEST(WheelOdometryTest, updateRotationAngleTest)
   {
     WheelOdometry odometry;
-    float transform = 2.0f * 5.0f / 100.0f;
+    float transform = 99.0f / 147.5f;
     float angle = (5.0f + 5.0f) / 2.0f;
 
     ASSERT_FLOAT_EQ(transform * angle, odometry.updateRotationAngle(-5, 5));
 
     float angle2 = (2.0f + 2.0f) / 2.0f;
 
-    ASSERT_FLOAT_EQ(transform * angle + transform * angle2, odometry.updateRotationAngle(-2, 2));
+    ASSERT_FLOAT_EQ(transform * angle2, odometry.updateRotationAngle(-2, 2));
   }
 
   TEST(WheelOdometryTest, getCoordinateTest)
@@ -139,17 +139,5 @@ namespace etrobocon2018_test {
     Coordinate& coordinate = odometry.update(2, 5);
 
     ASSERT_FLOAT_EQ(coordinate.y, odometry.getPointY());
-  }
-
-  TEST(WheelOdometryTest, getRotationAngleTest)
-  {
-    float transform = 2.0f * 5.0f / 100.0f;
-    float angle = (5.0f + 5.0f) / 2.0f;
-
-    WheelOdometry odometry;
-    odometry.updateRotationAngle(-5, 5);
-
-    ASSERT_FLOAT_EQ(transform * angle, odometry.getRotationAngle());
-
   }
 }

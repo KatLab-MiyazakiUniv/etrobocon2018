@@ -114,10 +114,9 @@ float WheelOdometry::updateRotationAngle(std::int32_t left_motor, std::int32_t r
   right_motor = motor_angle.absoluteValueOfAngle(right_motor);
 
   // モータの角度の平均値を求める
-  float mean = motor_angle.relativeAngleMean(left_motor, right_motor);
+  float mean = motor_angle.absoluteAngleMean(left_motor, right_motor);
 
-  rotation_angle += transform * mean;
-  return rotation_angle;
+  return transform * mean;
 }
 
 /**
@@ -145,13 +144,4 @@ float WheelOdometry::getPointX()
 float WheelOdometry::getPointY()
 {
   return coordinate.y;
-}
-
-/**
- *  [WheelOdometry::getRotationAngle]
- *  @brief 走行体の回転角度を返す
- */
-float WheelOdometry::getRotationAngle()
-{
-  return rotation_angle;
 }
