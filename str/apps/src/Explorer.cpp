@@ -45,17 +45,14 @@ void Explorer::resetBlockArea()
 
 void Explorer::setHasBlockIn(std::int8_t blockID)
 {
-  auto itr = blockAreaNodeList->begin();
-  for (int i = 0; i < blockID; i++) itr++;
+  auto itr = blockAreaNodeList->begin() + blockID;
   (*itr)->setHasBlock(true);
 }
 
 std::vector<int> Explorer::searchRoute(std::int8_t start, std::int8_t end)
 {
-  auto startItr = blockAreaNodeList->begin();
-  auto endItr = blockAreaNodeList->begin();
-  for (int i = 0; i < start; i++) startItr++;
-  for (int i = 0; i < end; i++) endItr++;
+  auto startItr = blockAreaNodeList->begin() + start;
+  auto endItr = blockAreaNodeList->begin() + end;
 
   int estimatedCostX = std::abs((*endItr)->getPositionX() - (*startItr)->getPositionX());
   int estimatedCostY = std::abs((*endItr)->getPositionY() - (*startItr)->getPositionY());
@@ -84,10 +81,8 @@ std::vector<int> Explorer::searchRoute(std::int8_t start, std::int8_t end)
 
 Node* Explorer::calculateNeighborCost(Node* parent, std::vector<Node*>* around, std::int32_t realCost, std::int8_t end)
 {
-  auto currentItr = blockAreaNodeList->begin();
-  auto endItr = blockAreaNodeList->begin();
-  for (int i = 0; i < parent->getNodeID(); i++) currentItr++;
-  for (int i = 0; i < end; i++) endItr++;
+  auto currentItr = blockAreaNodeList->begin() + parent->getNodeID();
+  auto endItr = blockAreaNodeList->begin() + end;
 
   parent->setBeClosed(true);
 
