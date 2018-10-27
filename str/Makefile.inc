@@ -19,7 +19,8 @@ InitialPositionCodeDecoder.o \
 Explorer.o \
 Node.o \
 LPF.o \
-MotorAngle.o
+MotorAngle.o \
+WheelOdometry.o
 
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \
