@@ -19,13 +19,24 @@ enum struct Color { NONE, BLACK, WHITE, RED, BLUE, YELLOW, GREEN };
  *  @brief 色とHsv情報を保持するクラス。
  */
 struct Hsv {
-  Color color = Color::NONE;
-  double h = 0.0;
-  double s = 0.0;
-  double v = 0.0;
-  double threshold_distance = 0.0;
-  double start_h = 0.0;
-  double end_h = 0.0;
+  explicit Hsv(Color color_, double h_, double s_, double v_, double threshold_distance_,
+               double start_h_, double end_h_)
+    : color(color_),
+      h(h_),
+      s(s_),
+      v(v_),
+      threshold_distance(threshold_distance_),
+      start_h(start_h_),
+      end_h(end_h_)
+  {
+  }
+  Color color;
+  double h;
+  double s;
+  double v;
+  double threshold_distance;
+  double start_h;
+  double end_h;
 };
 
 struct Rgb {
@@ -59,7 +70,7 @@ class Distinguisher {
   /** getColorする際の最低限必要な色距離 */
   double threshold_distance = 400;
 
-  Hsv hsv = { Color::NONE, 0, 0, 0, 400, 0, 0 };
+  Hsv hsv{ Color::NONE, 0, 0, 0, 400, 0, 0 };
 
  private:
   void setRawColor2Rgb();
@@ -71,11 +82,11 @@ class Distinguisher {
   Controller controller;
   Color color = Color::NONE;
   Rgb rgb;
-  const Hsv RED = { Color::RED, 0, 92, 35, 400, 0, 40 };
-  const Hsv AltRED = { Color::RED, 0, 92, 35, 400, 300, 360 };
-  const Hsv BLUE = { Color::BLUE, 0, 75, 19, 400, 160, 240 };
-  const Hsv GREEN = { Color::GREEN, 0, 81, 27, 400, 100, 150 };
-  const Hsv YELLOW = { Color::YELLOW, 0, 90, 36, 400, 50, 80 };
+  const Hsv RED{ Color::RED, 0, 92, 35, 400, 0, 40 };
+  const Hsv AltRED{ Color::RED, 0, 92, 35, 400, 300, 360 };
+  const Hsv BLUE{ Color::BLUE, 0, 75, 19, 400, 160, 240 };
+  const Hsv GREEN{ Color::GREEN, 0, 81, 27, 400, 100, 150 };
+  const Hsv YELLOW{ Color::YELLOW, 0, 90, 36, 400, 50, 80 };
 };
 
 #endif
