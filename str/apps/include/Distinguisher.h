@@ -19,19 +19,19 @@ enum struct Color { NONE, BLACK, WHITE, RED, BLUE, YELLOW, GREEN };
  *  @brief 色とHsv情報を保持するクラス。
  */
 struct Hsv {
-  Color color;
-  double h;
-  double s;
-  double v;
-  double threshold_distance;
-  double start_h;
-  double end_h;
+  Color color = Color::NONE;
+  double h = 0.0;
+  double s = 0.0;
+  double v = 0.0;
+  double threshold_distance = 0.0;
+  double start_h = 0.0;
+  double end_h = 0.0;
 };
 
 struct Rgb {
-  std::uint16_t r;
-  std::uint16_t g;
-  std::uint16_t b;
+  std::uint16_t r = 0;
+  std::uint16_t g = 0;
+  std::uint16_t b = 0;
 };
 
 namespace etrobocon2018_test {
