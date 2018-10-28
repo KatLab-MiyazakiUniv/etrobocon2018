@@ -6,11 +6,11 @@
  * 注記 : Bluetooth通信リモートスタート機能付き
  */
 
+#include "ev3api.h"
+
 #include "Controller.h"
 #include "Distinguisher.h"
 #include "app.h"
-#include "ev3api.h"
-#include "util.h"
 
 #if defined(BUILD_MODULE)
 #include "module_cfg.h"
@@ -39,23 +39,26 @@ void main_task(intptr_t unused)
   /* Bluetooth通信タスクの起動 */
   act_tsk(BT_TASK);
 
-  msg_f("ET-Robocon2018", 1);
-  msg_f(" create from github.com/korosuke613/etrobocon2018", 2);
-
   Controller controller;
   Distinguisher distinguisher{ controller };
   const char* color_name[7] = { "NONE", "BLACK", "WHITE", "RED", "BLUE", "YELLOW", "GREEN" };
+  controller.printDisplay(1, "ET-Robocon2018");
+  controller.printDisplay(2, " create from github.com/korosuke613/etrobocon2018");
+  rgb_raw_t rgb;
 
   while(1) {
     if(controller.buttonIsPressedBack()) {
       break;
     }
-    int result = static_cast<int>(distinguisher.getColor());
-    controller.printDisplay(4, "RGB: %d, %d, %d", distinguisher.raw_color.r,
-                            distinguisher.raw_color.g, distinguisher.raw_color.b);
-    controller.printDisplay(5, "Color Distance: %lf", distinguisher.last_distance);
+    // controller.getRawColor(rgb.r, rgb.g, rgb.b);
+    // controller.printDisplay(4, "RGB: %d, %d, %d", rgb.r, rgb.g, rgb.b);
+    auto result = distinguisher.getColor();
+    controller.printDisplay(4, "HSV: %3d, %3d, %3d", static_cast<int16_t>(distinguisher.hsv.h),
+                            static_cast<int16_t>(distinguisher.hsv.s),
+                            static_cast<int16_t>(distinguisher.hsv.v));
+    // controller.printDisplay(5, "Color Distance: %lf", distinguisher.last_distance);
     controller.printDisplay(6, "Color Number: %d", result);
-    controller.printDisplay(7, "Color Name: %s", color_name[result]);
+    controller.printDisplay(7, "Color Name: %s", color_name[static_cast<int>(result)]);
 
     controller.tslpTsk(4);
   }
@@ -85,5 +88,50 @@ void bt_task(intptr_t unused)
         break;
     }
     fputc(c, g_bluetooth); /* エコーバック */
+  }
+}
+
+void sensor_log_task(intptr_t unused)
+{
+  FILE* file;
+  Controller controller;
+  int volt = 0;
+  int amp = 0;
+  int time_now = 0;                // 開始時間からの経過時間を取得
+  int32_t left_motor_counts = 0;   //左モータのオフセット付き角位置取得
+  int32_t right_motor_counts = 0;  //右モータのオフセット付き角位置取得
+  int log_file_number = 0;
+  char log_file_name[16];
+  bool flag = true;
+  while(flag == true) {
+    sprintf(log_file_name, "%s%d%s", "/Log/log", log_file_number, ".csv");
+    controller.printDisplay(3, log_file_name);
+    file = fopen(log_file_name, "r");
+    if(file == NULL) {  // ファイル名がダブらない場合
+      fclose(file);
+      file = fopen(log_file_name, "a");
+      fprintf(file, "Time(msec), Voltage, Ampere, leftMotorCounts, rightMotorCounts\n");
+      flag = false;
+
+    } else {  // 同じlogファイル名が存在する場合
+      log_file_number++;
+    }
+  }
+  ev3_speaker_play_tone(NOTE_FS6, 200);
+  while(1) {
+    if(ev3_button_is_pressed(BACK_BUTTON)) {  // 戻るボタンを押すとlog取得終了
+      ev3_speaker_play_tone(NOTE_FS6, 500);   // 終了音
+      fclose(file);
+      unl_mtx(LOG);  //処理の終了
+      break;
+    }
+    time_now = controller.clock.now();
+    volt = ev3_battery_voltage_mV();
+    amp = ev3_battery_current_mA();
+    left_motor_counts = controller.leftWheel.getCount();
+    right_motor_counts = controller.rightWheel.getCount();
+    fprintf(file, "%d,%d,%d,%ld,%ld\n", time_now, volt, amp, left_motor_counts, right_motor_counts);
+    // 20msec周期起動
+    tslp_tsk(20);
   }
 }
