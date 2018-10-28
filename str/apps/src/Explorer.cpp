@@ -4,14 +4,14 @@ void Explorer::createBlockArea()
 {
   int nodeCount = neighborsIDList.size();
 
-  // $B%N!<%I$N%]%$%s%?$N%j%9%H$r:n@.(B
+  // ノードのポインタのリストを作成
   for (int i = 0; i < nodeCount; i++)
   {
     nodeList[i].setNodeID(i);
     nodePtrs[i] = &nodeList[i];
   }
 
-  // $BNY@\%N!<%I$N%]%$%s%?$N%j%9%H$r%N!<%IJ,%j%9%H2=(B
+  // 隣接ノードのポインタのリストをノード分リスト化
   for (int i = 0; i < nodeCount; i++)
   {
     for (int nodeID : neighborsIDList[i])
@@ -20,48 +20,51 @@ void Explorer::createBlockArea()
     }
   }
 
-  // $BNY@\%N!<%I$N%]%$%s%?$N%j%9%H$r3JG<(B
+  // 隣接ノードのポインタのリストを格納
   for (int i = 0; i < nodeCount; i++)
   {
     nodePtrs[i]->setNeighbors(&neighborPtrs[i]);
     nodePtrs[i]->setPosition(positionList[i].x, positionList[i].y);
   }
 
-  // $B3F%N!<%I$N%]%$%s%?$r3JG<(B
+  // 各ノードのポインタを格納
   blockAreaNodeList = &nodePtrs;
-
 }
 
 void Explorer::resetBlockArea()
 {
-  for (unsigned int i = 0; i < blockAreaNodeList->size(); i++)
+  for (auto itr = blockAreaNodeList->begin(); itr != blockAreaNodeList->end(); itr++)
   {
-    blockAreaNodeList->at(i)->setBeClosed(false);
-    blockAreaNodeList->at(i)->setHasBlock(false);
-    blockAreaNodeList->at(i)->setScore(0);
-    blockAreaNodeList->at(i)->setRealCost(0);
-    blockAreaNodeList->at(i)->setParentNode(nullptr);
+    (*itr)->setBeClosed(false);
+    (*itr)->setHasBlock(false);
+    (*itr)->setScore(0);
+    (*itr)->setRealCost(0);
+    (*itr)->setParentNode(nullptr);
   }
 }
 
 void Explorer::setHasBlockIn(std::int8_t blockID)
 {
-  blockAreaNodeList->at(blockID)->setHasBlock(true);
+  auto itr = blockAreaNodeList->begin() + blockID;
+  (*itr)->setHasBlock(true);
 }
 
 std::vector<int> Explorer::searchRoute(std::int8_t start, std::int8_t end)
 {
-  int estimatedCostX = std::abs(blockAreaNodeList->at(end)->getPositionX() - blockAreaNodeList->at(start)->getPositionX());
-  int estimatedCostY = std::abs(blockAreaNodeList->at(end)->getPositionY() - blockAreaNodeList->at(start)->getPositionY());
-  int score = estimatedCostX + estimatedCostY;
-  if (blockAreaNodeList->at(start)->hasBlock()) score += 99;
+  auto startItr = blockAreaNodeList->begin() + start;
+  auto endItr = blockAreaNodeList->begin() + end;
 
-  blockAreaNodeList->at(start)->setScore(score);
-  blockAreaNodeList->at(start)->setRealCost(0);
-  blockAreaNodeList->at(start)->setParentNode(nullptr);
+  int estimatedCostX = std::abs((*endItr)->getPositionX() - (*startItr)->getPositionX());
+  int estimatedCostY = std::abs((*endItr)->getPositionY() - (*startItr)->getPositionY());
+  int score = estimatedCostX + estimatedCostY;
+  if ((*startItr)->hasBlock()) score += 99;
+
+  (*startItr)->setScore(score);
+  (*startItr)->setRealCost(0);
+  (*startItr)->setParentNode(nullptr);
 
   std::vector<Node*> around;
-  Node* endNode = calculateNeighborCost(blockAreaNodeList->at(start), &around, 1, end);
+  Node* endNode = calculateNeighborCost((*startItr), &around, 1, end);
 
   std::vector<int> route = {endNode->getNodeID()};
   Node* parent = endNode->getParentNode();
@@ -78,42 +81,40 @@ std::vector<int> Explorer::searchRoute(std::int8_t start, std::int8_t end)
 
 Node* Explorer::calculateNeighborCost(Node* parent, std::vector<Node*>* around, std::int32_t realCost, std::int8_t end)
 {
-  std::int8_t current = parent->getNodeID();
+  auto currentItr = blockAreaNodeList->begin() + parent->getNodeID();
+  auto endItr = blockAreaNodeList->begin() + end;
+
   parent->setBeClosed(true);
 
-  for (unsigned int i = 0; i < blockAreaNodeList->at(current)->getNeighbors()->size(); i++)
-  // for (auto neighbor : blockAreaNodeList->at(parent->getNodeID())->getNeighbors())
+  for (auto itr = (*currentItr)->getNeighbors()->begin(); itr != (*currentItr)->getNeighbors()->end(); itr++)
   {
-    auto neighbor = blockAreaNodeList->at(current)->getNeighbors()->at(i);
-    if (neighbor->isClosed() || neighbor == parent->getParentNode()) continue;
+    if ((*itr)->isClosed() || (*itr) == parent->getParentNode()) continue;
 
-    int estimatedCostX = std::abs(blockAreaNodeList->at(end)->getPositionX() - neighbor->getPositionX());
-    int estimatedCostY = std::abs(blockAreaNodeList->at(end)->getPositionY() - neighbor->getPositionY());
+    int estimatedCostX = std::abs((*endItr)->getPositionX() - (*itr)->getPositionX());
+    int estimatedCostY = std::abs((*endItr)->getPositionY() - (*itr)->getPositionY());
     int score = realCost + estimatedCostX + estimatedCostY;
-    if (neighbor->hasBlock() && neighbor->getNodeID() != end) score += 99;
+    if ((*itr)->hasBlock() && (*itr)->getNodeID() != end) score += 99;
 
-    neighbor->setScore(score);
-    neighbor->setRealCost(realCost);
-    neighbor->setParentNode(parent);
-    around->push_back(neighbor);
+    (*itr)->setScore(score);
+    (*itr)->setRealCost(realCost);
+    (*itr)->setParentNode(parent);
+    around->push_back((*itr));
   }
 
   std::int32_t min = 999;
   std::int32_t minCost = 999;
   Node* minNode = nullptr;
 
-  for (unsigned int i = 0; i < around->size(); i++)
-  // for (auto neighbor : blockAreaNodeList->at(parent->getNodeID())->getNeighbors())
+  for (auto itr = around->begin(); itr != around->end(); itr++)
   {
-    auto neighborhood = around->at(i);
-    if (neighborhood->isClosed() || neighborhood == parent->getParentNode()) continue;
+    if ((*itr)->isClosed() || (*itr) == parent->getParentNode()) continue;
 
-    int score = neighborhood->getScore();
-    if (score > min || (score == min && neighborhood->getRealCost() >= minCost)) continue;
+    int score = (*itr)->getScore();
+    if (score > min || (score == min && (*itr)->getRealCost() >= minCost)) continue;
 
     min = score;
-    minCost = neighborhood->getRealCost();
-    minNode = neighborhood;
+    minCost = (*itr)->getRealCost();
+    minNode = (*itr);
   }
 
   if (minNode->getNodeID() != end)
