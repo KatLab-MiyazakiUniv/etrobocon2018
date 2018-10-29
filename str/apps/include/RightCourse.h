@@ -12,6 +12,7 @@
 #include "Parking.h"
 #include "RightNormalCourse.h"
 #include "Walker.h"
+#include "Explorer.h"
 #include <cstdint>
 
 /**
@@ -63,6 +64,7 @@ class RightCourse {
   LineTracerWalker lineTracer;
   Walker walker;
   Controller controller;
+  Explorer explorer;
 };
 
 #endif

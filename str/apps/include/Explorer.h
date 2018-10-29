@@ -119,15 +119,13 @@ class Explorer {
         {2, 3},
         {3, 3}};
 
-    positionList.resize(neighborsIDList.size());
-    nodeList.resize(neighborsIDList.size());
-    nodePtrs.resize(neighborsIDList.size());
-    neighborPtrs.resize(neighborsIDList.size());
-
+    neighborPtrs.resize(16);
     for (unsigned int i = 0; i < neighborsIDList.size(); i++)
     {
-      positionList[i].x = currentPosition[i][0];
-      positionList[i].y = currentPosition[i][1];
+      Position position;
+      position.x = currentPosition[i][0];
+      position.y = currentPosition[i][1];
+      positionList.push_back(position);
     }
   }
 
