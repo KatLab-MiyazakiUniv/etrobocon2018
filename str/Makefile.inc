@@ -20,8 +20,7 @@ Explorer.o \
 Node.o \
 LPF.o \
 MotorAngle.o \
-WheelOdometry.o \
-KalmanFilter.o
+WheelOdometry.o
 
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \
