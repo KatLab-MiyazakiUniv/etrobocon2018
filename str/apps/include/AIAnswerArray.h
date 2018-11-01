@@ -1,3 +1,9 @@
+/**
+ *  @file AIAnswerArray.h
+ *  @brief AIアンサーで使う配列
+ *  @author T.Miyaji
+ */
+
 #ifndef AI_ANSWER_ARRAY_H
 #define AI_ANSWER_ARRAY_H
 #include <cstdint>
@@ -14,13 +20,20 @@ namespace AIAnswer {
    public:
     std::array<float, 8> probs;
     constexpr array() : sequence{}, pos(0), probs() { }
+    //! 配列のサイズを返す
     constexpr std::uint8_t size() noexcept { return N; }
+
+    //! 配列の要素を指し示すポインタを返す
     constexpr std::uint8_t position() noexcept { return pos; }
+
+    //! 確率を入れた配列のうち、一番確率の高い要素のインデックスを返す
     std::int8_t maxProbabilityNumber() noexcept
     {
       auto max_it = std::max_element(probs.begin(), probs.end());
       return static_cast<std::int8_t>(std::distance(probs.begin(), max_it));
     }
+
+    //! 配列の要素を入れる
     void push_back(const T& value) noexcept
     {
       if(pos >= N)  pos = 0;
@@ -44,6 +57,7 @@ namespace AIAnswer {
       return sequence[i];
     }
 
+    // 手書き数字の判定
     std::int8_t handwriting() noexcept
     {
       if(sequence[0] == cast(0))  addProb(0, 1);
@@ -67,6 +81,7 @@ namespace AIAnswer {
       return maxProbabilityNumber();
     }
 
+    // デジタル数字の判定
     std::int8_t digitalNumber() noexcept
     {
       if(sequence[0] == cast(0))  addProb(1, 4);
@@ -92,6 +107,7 @@ namespace AIAnswer {
 
     constexpr T cast(int i) { return static_cast<T>(i); }
 
+    // 確率を加える
     template <class... Args>
     void addProb(const Args&... args)
     {
