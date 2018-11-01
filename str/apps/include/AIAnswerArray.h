@@ -60,6 +60,7 @@ namespace AI_Answer {
     // 手書き数字の判定
     std::int8_t handwriting() noexcept
     {
+      if(size() != 6)  return -1;
       if(sequence[0] == cast(0))  addProb(0, 1);
       if(sequence[0] == cast(1))  addProb(2, 3, 4, 5, 6, 7);
 
@@ -84,6 +85,7 @@ namespace AI_Answer {
     // デジタル数字の判定
     std::int8_t digitalNumber() noexcept
     {
+      if(size() != 6)  return -1;
       if(sequence[0] == cast(0))  addProb(1, 4);
       if(sequence[0] == cast(1))  addProb(0, 2, 3, 5, 6, 7);
 
