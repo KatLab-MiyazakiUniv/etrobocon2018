@@ -12,6 +12,7 @@
 #include "Parking.h"
 #include "RightNormalCourse.h"
 #include "Walker.h"
+#include "Explorer.h"
 #include <cstdint>
 
 /**
@@ -38,9 +39,10 @@ class RightCourse {
  public:
   /** コンストラクタ。センサ類の初期化を行う **/
   RightCourse() = default;
-  explicit RightCourse(Controller& controller_)
+  explicit RightCourse(Controller& controller_, std::vector<std::int8_t> ipcv)
     : walker(controller_),
-      controller(controller_)
+      controller(controller_),
+      initialPositionCodeVector(ipcv)
   {
   } /** 各エリアの処理を呼び出す **/
   /** NormalCourseエリアの処理 **/
@@ -63,6 +65,8 @@ class RightCourse {
   LineTracerWalker lineTracer;
   Walker walker;
   Controller controller;
+  Explorer explorer;
+  std::vector<std::int8_t> initialPositionCodeVector;
 };
 
 #endif
