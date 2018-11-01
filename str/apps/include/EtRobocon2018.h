@@ -14,6 +14,7 @@
 #include "LeftCourse.h"
 #include "RightCourse.h"
 #include "UserInterface.h"
+#include "InitialPositionCodeDecoder.h"
 
 /**
  * main的なクラス
@@ -31,6 +32,7 @@ class EtRobocon2018 {
 
  private:
   Controller controller;
+  InitialPositionCodeDecoder ipcd;
   int16_t light_white;
   int16_t light_black;
   int16_t light_gray;

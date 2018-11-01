@@ -11,8 +11,6 @@
 #include <array>
 #include <algorithm>
 #include <cstdlib>
-// #include <memory>
-// #include <cstdint>
 
 /**
  * <p> ルート探索クラス <p>
@@ -23,12 +21,14 @@
  * </p>
  *
  * <p>
- * このクラスを利用して、別のブロック並べエリアを作成する場合は、デフォルトコンストラクタに存在する次の2つを記述してください。
+ * このクラスを利用して、別のブロック並べエリアを作成する場合は、次の4つの変数値を編集してください。
  * </p>
  *
  * <ul>
- * <li> 隣接ノードIDのリスト </li>
- * <li> 相対的なノード位置のリスト </li>
+ * <li> 隣接ノードIDのリスト (デフォルトコンストラクタ内における {@code neighborsIDList_} の初期化値) </li>
+ * <li> 相対的なノード位置のリスト (デフォルトコンストラクタ内における {@code currentPosition} の初期化値)  </li>
+ * <li> ブロック並べエリアにおけるノード総数 ({@link #TOTAL_NODE_COUNT}) </li>
+ * <li> ブロック並べエリアにおける各ブロック置き場が隣接するブロック置き場の最大数 ({@link #MAX_NEIGHBOR_COUNT}) </li>
  * </ul>
  *
  * <p> Example </p>
@@ -69,33 +69,36 @@ class Explorer {
    * <p> デフォルトコンストラクタ </p>
    *
    * <p>
-   * 各ブロック置き場における隣接ノードIDのリスト、およびノード位置リストを作成し、そのサイズを元にノードリストを初期化している。
+   * 各ブロック置き場における隣接ノードIDのリスト、およびノード位置リストを作成し、そのサイズを元にノードリストを初期化しています。
    * </p>
    */
   Explorer()
-      : blockAreaNodeList(nullptr)
+      : blockAreaNodeList(nullptr), neighborPtrs(TOTAL_NODE_COUNT), neighborsIDList(TOTAL_NODE_COUNT)
   {
     // 隣接ノードIDのリスト
-    neighborsIDList = {
-        {1, 4},
-        {0, 2, 5},
-        {1, 3, 6},
-        {2, 7},
+    std::vector<std::array<std::int8_t, MAX_NEIGHBOR_COUNT>> neighborsIDList_{
+        {
+            {1, 4, EMPTY_ID, EMPTY_ID},
+            {0, 2, 5, EMPTY_ID},
+            {1, 3, 6, EMPTY_ID},
+            {2, 7, EMPTY_ID, EMPTY_ID},
 
-        {0, 5, 8},
-        {1, 4, 6, 9},
-        {2, 5, 7, 10},
-        {3, 6, 11},
+            {0, 5, 8, EMPTY_ID},
+            {1, 4, 6, 9},
+            {2, 5, 7, 10},
+            {3, 6, 11, EMPTY_ID},
 
-        {4, 9, 12},
-        {5, 8, 10, 13},
-        {6, 9, 11, 14},
-        {7, 10, 15},
+            {4, 9, 12, EMPTY_ID},
+            {5, 8, 10, 13},
+            {6, 9, 11, 14},
+            {7, 10, 15, EMPTY_ID},
 
-        {8, 13},
-        {9, 12, 14},
-        {10, 13, 15},
-        {11, 14}};
+            {8, 13, EMPTY_ID, EMPTY_ID},
+            {9, 12, 14, EMPTY_ID},
+            {10, 13, 15, EMPTY_ID},
+            {11, 14, EMPTY_ID, EMPTY_ID}
+        }
+    };
 
     // 相対的なノード位置のリスト
     std::vector<std::array<std::int8_t, 2>> currentPosition = {
@@ -119,15 +122,21 @@ class Explorer {
         {2, 3},
         {3, 3}};
 
-    positionList.resize(neighborsIDList.size());
-    nodeList.resize(neighborsIDList.size());
-    nodePtrs.resize(neighborsIDList.size());
-    neighborPtrs.resize(neighborsIDList.size());
+    //
+    // 以降は触れなくてよい
+    //
+
+    for (unsigned int i = 0; i < neighborsIDList_.size(); i++)
+    {
+      neighborsIDList[i] = neighborsIDList_[i];
+    }
 
     for (unsigned int i = 0; i < neighborsIDList.size(); i++)
     {
-      positionList[i].x = currentPosition[i][0];
-      positionList[i].y = currentPosition[i][1];
+      Position position;
+      position.x = currentPosition[i][0];
+      position.y = currentPosition[i][1];
+      positionList.push_back(position);
     }
   }
 
@@ -207,10 +216,30 @@ class Explorer {
   std::vector<Position> positionList;
 
   /**
+   * <p> 隣接ノードが空であることを示すのノードID </p>
+   *
+   * <p>
+   * {@link #neighborsIDList} の中身が固定長配列のため、隣接ノードが存在しないことを示すIDが必要になりました。
+   * 詳細は {@link #neighborsIDList} を参照してください。
+   * </p>
+   */
+  const std::int8_t EMPTY_ID = -1;
+
+  /**
+   * <p> ブロック並べエリアにおけるブロック置き場の総数 </p>
+   */
+  static const std::int8_t TOTAL_NODE_COUNT = 16;
+
+  /**
+   * <p> ブロック並べエリアにおける各ブロック置き場が隣接するブロック置き場の最大数 </p>
+   */
+  static const std::int8_t MAX_NEIGHBOR_COUNT = 4;
+
+  /**
    * <p> ブロック置き場リスト </p>
    *
    * <p>
-   * {@link #createBlockArea()} でのみの利用だが、実態を残すためにメンバ変数としている。
+   * {@link #createBlockArea()} でのみ利用していますが、実態を残すためにメンバ変数としています。
    * </p>
    */
   std::vector<Node> nodeList;
@@ -219,7 +248,7 @@ class Explorer {
    * <p> ブロック置き場のポインタのリスト </p>
    *
    * <p>
-   * {@link #createBlockArea()} でのみの利用だが、実態を残すためにメンバ変数としている。
+   * {@link #createBlockArea()} でのみ利用していますが、実態を残すためにメンバ変数としています。
    * </p>
    */
   std::vector<Node*> nodePtrs;
@@ -228,7 +257,7 @@ class Explorer {
    * <p> 各ブロック置き場における隣接ノードのポインタのリスト </p>
    *
    * <p>
-   * {@link #createBlockArea()} でのみの利用だが、実態を残すためにメンバ変数としている。
+   * {@link #createBlockArea()} でのみ利用していますが、実態を残すためにメンバ変数としています。
    * </p>
    */
   std::vector<std::vector<Node*>> neighborPtrs;
@@ -237,10 +266,21 @@ class Explorer {
    * <p> 各ブロック置き場における隣接ノードIDのリスト </p>
    *
    * <p>
-   * {@link #createBlockArea()} でのみの利用だが、実態を残すためにメンバ変数としている。
+   * コンストラクタおよび {@link #createBlockArea()} でのみ利用していますが、実態を残すためにメンバ変数としています。
    * </p>
+   *
+   * <p>
+   * 可変長配列の中身が可変長配列の場合、中身の可変長配列の長さが変わるごとに例外処理を呼び起こす可能性があり、実行メモリが肥大化してしまいます。
+   * これを防ぐため、次のような工夫を施しています。
+   * </p>
+   *
+   * <ul>
+   * <li> 可変長配列の中身を固定長配列にする </li>
+   * <li> 中身の固定長配列の長さを {@link #MAX_NEIGHBOR_COUNT} に設定する </li>
+   * <li> 中身の固定長配列に空きが存在するノードについては {@link #EMPTY_ID} を設定して {@link #createBlockArea()} 内で無視する </li>
+   * </ul>
    */
-  std::vector<std::vector<std::int8_t>> neighborsIDList;
+  std::vector<std::array<std::int8_t, MAX_NEIGHBOR_COUNT>> neighborsIDList;
 };
 
 #endif // EXPLORER

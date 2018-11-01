@@ -7,8 +7,10 @@ void Explorer::createBlockArea()
   // ノードのポインタのリストを作成
   for (int i = 0; i < nodeCount; i++)
   {
-    nodeList[i].setNodeID(i);
-    nodePtrs[i] = &nodeList[i];
+    Node node;
+    node.setNodeID(i);
+    nodeList.push_back(node);
+    nodePtrs.push_back(&nodeList[i]);
   }
 
   // 隣接ノードのポインタのリストをノード分リスト化
@@ -16,6 +18,7 @@ void Explorer::createBlockArea()
   {
     for (int nodeID : neighborsIDList[i])
     {
+      if (nodeID == EMPTY_ID) break;
       neighborPtrs[i].push_back(nodePtrs[nodeID]);
     }
   }
