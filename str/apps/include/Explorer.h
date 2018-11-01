@@ -248,7 +248,7 @@ class Explorer {
    * <p> ブロック置き場のポインタのリスト </p>
    *
    * <p>
-   * {@link #createblockarea()} でのみ利用していますが、実態を残すためにメンバ変数としています。
+   * {@link #createBlockArea()} でのみ利用していますが、実態を残すためにメンバ変数としています。
    * </p>
    */
   std::vector<Node*> nodePtrs;
@@ -277,7 +277,7 @@ class Explorer {
    * <ul>
    * <li> 可変長配列の中身を固定長配列にする </li>
    * <li> 中身の固定長配列の長さを {@link #MAX_NEIGHBOR_COUNT} に設定する </li>
-   * <li> 中身の固定長配列に空きが存在するノードについては {@link #EMPTY_ID} を設定して {@link #createBlockArea()} 内で無視する
+   * <li> 中身の固定長配列に空きが存在するノードについては {@link #EMPTY_ID} を設定して {@link #createBlockArea()} 内で無視する </li>
    * </ul>
    */
   std::vector<std::array<std::int8_t, MAX_NEIGHBOR_COUNT>> neighborsIDList;
