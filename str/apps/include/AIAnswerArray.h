@@ -11,7 +11,7 @@
 #include <initializer_list>
 #include <algorithm>
 
-namespace AIAnswer {
+namespace AI_Answer {
   template <typename T, std::uint8_t N = 6>
   class array {
    private:
