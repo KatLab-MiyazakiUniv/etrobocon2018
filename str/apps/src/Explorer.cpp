@@ -18,6 +18,7 @@ void Explorer::createBlockArea()
   {
     for (int nodeID : neighborsIDList[i])
     {
+      if (nodeID == EMPTY_ID) break;
       neighborPtrs[i].push_back(nodePtrs[nodeID]);
     }
   }
