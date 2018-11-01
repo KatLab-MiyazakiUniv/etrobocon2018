@@ -65,6 +65,7 @@ file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${SOURCE_DIR}/Explorer.cpp
     ${SOURCE_DIR}/LPF.cpp
     ${SOURCE_DIR}/MotorAngle.cpp
+    ${SOURCE_DIR}/WheelOdometry.cpp
     )
 add_library(${PROJECT_LIB_NAME} ${SRC_FILES})
 

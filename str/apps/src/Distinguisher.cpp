@@ -4,36 +4,54 @@
 Color Distinguisher::getColor()
 {
   setRawColor2Rgb();
-  auto color = distingishColor();
-  //addAr(color);
-  //color = getAr();
+  convertRgbToHsv(rgb);
+  distingishColor();
   return color;
 }
 
-void Distinguisher::addAr(Color& color)
+void Distinguisher::distingishColor()
 {
-  ar[ar_count] = color;
-  ar_count++;
-  if(ar_count >= limit) {
-    ar_count = 0;
+  color = Color::NONE;
+  double min_distance = threshold_distance;
+  std::int8_t black_threthold = 10;
+  std::int8_t white_threthold = 40;
+
+  judgement(RED, min_distance);
+  judgement(AltRED, min_distance);
+  judgement(BLUE, min_distance);
+  judgement(YELLOW, min_distance);
+  judgement(GREEN, min_distance);
+  if(color == Color::YELLOW) {
+    black_threthold = 20;
+  } else if(color == Color::GREEN) {
+    white_threthold = 35;
+    if(hsv.s < 40) {
+      color = Color::WHITE;
+    }
+  }
+  if(hsv.v < black_threthold) {
+    color = Color::BLACK;
+  } else if(hsv.v > white_threthold) {
+    color = Color::WHITE;
   }
 }
 
-Color Distinguisher::getAr()
+void Distinguisher::judgement(const Hsv& hsv_, double& min)
 {
-  std::map<Color, std::int8_t> mp;
-  for(std::int8_t i = 0; i < limit; i++) {
-    mp[ar[i]]++;
+  double tmp = std::abs((hsv_.start_h + hsv_.end_h) / 2 - hsv.h);
+  if(min > tmp) return;
+  if(hsv_.start_h < hsv.h && hsv_.end_h > hsv.h) {
+    min = tmp;
+    color = hsv_.color;
   }
-  std::int8_t max = 0;
-  Color result = Color::NONE;
-  for(auto x : mp) {
-    if(max < x.second) {
-      result = x.first;
-    }
-  }
+}
 
-  return result;
+double Distinguisher::distanceColor(Hsv target_color)
+{
+  std::uint16_t pow_h = std::pow(hsv.h - target_color.h, 2);
+  std::uint16_t pow_s = std::pow(hsv.s - target_color.s, 2);
+  std::uint16_t pow_v = std::pow(hsv.v - target_color.v, 2);
+  return std::sqrt(pow_h + pow_s + pow_v);
 }
 
 void Distinguisher::setRawColor2Rgb()
@@ -43,43 +61,38 @@ void Distinguisher::setRawColor2Rgb()
 
   total_r = total_g = total_b = 0;
   for(int i = 0; i < times; i++) {
-    controller.getRawColor(raw_color.r, raw_color.g, raw_color.b);
-    total_r += raw_color.r;
-    total_g += raw_color.g;
-    total_b += raw_color.b;
+    controller.getRawColor(rgb.r, rgb.g, rgb.b);
+    total_r += rgb.r;
+    total_g += rgb.g;
+    total_b += rgb.b;
   }
-  raw_color.r = total_r / times;
-  raw_color.g = total_g / times;
-  raw_color.b = total_b / times;
+  rgb.r = total_r / times;
+  rgb.g = total_g / times;
+  rgb.b = total_b / times;
 }
 
-Color Distinguisher::distingishColor()
+void Distinguisher::convertRgbToHsv(Rgb rgb_)
 {
-  color = Color::NONE;
-  double min_distance = threshold_distance;
+  double max = std::max((std::max(rgb_.r, rgb_.g)), rgb_.b);
+  double min = std::min((std::min(rgb_.r, rgb_.g)), rgb_.b);
+  hsv.v = max / 256 * 100;
 
-  judgement(RED, min_distance);
-  judgement(BLUE, min_distance);
-  judgement(YELLOW, min_distance);
-  judgement(GREEN, min_distance);
-  judgement(WHITE, min_distance);
-  judgement(BLACK, min_distance);
-  return color;
-}
+  if(max == min) {
+    hsv.h = 0;
+    hsv.s = 0;
+  } else {
+    if(max == rgb_.r)
+      hsv.h = 60.0 * (rgb_.g - rgb_.b) / (max - min) + 0;
+    else if(max == rgb_.g)
+      hsv.h = 60.0 * (rgb_.b - rgb_.r) / (max - min) + 120.0;
+    else if(max == rgb_.b)
+      hsv.h = 60.0 * (rgb_.r - rgb_.g) / (max - min) + 240.0;
 
-void Distinguisher::judgement(const Rgb& rgb, double& min)
-{
-  double tmp = distanceColor(rgb);
-  if(tmp < min && tmp < rgb.threshold_distance) {
-    color = rgb.color;
-    min = last_distance = tmp;
+    if(hsv.h > 360.0) {
+      hsv.h = hsv.h - 360.0;
+    } else if(hsv.h < 0) {
+      hsv.h = hsv.h + 360.0;
+    }
+    hsv.s = (max - min) / max * 100.0;
   }
-}
-
-double Distinguisher::distanceColor(Rgb target_color)
-{
-  std::uint16_t pow_r = std::pow(raw_color.r - target_color.r, 2);
-  std::uint16_t pow_g = std::pow(raw_color.g - target_color.g, 2);
-  std::uint16_t pow_b = std::pow(raw_color.b - target_color.b, 2);
-  return std::sqrt(pow_r + pow_g + pow_b);
 }

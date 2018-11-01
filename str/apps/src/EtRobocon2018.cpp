@@ -36,10 +36,10 @@ void EtRobocon2018::start(int bluetooth_command)
 {
   UserInterface ui{ controller };
 #ifdef IS_RIGHT_COURSE
-#else
   ui.inputFirstCode();
   firstCode = ui.getFirstCode();
   ipcd.decode(firstCode);
+#else
 #endif
   ui.setBrightnessWithColor(light_white, "white");
   ui.setBrightnessWithColor(light_black, "black");

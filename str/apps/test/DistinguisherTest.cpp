@@ -20,36 +20,8 @@ namespace etrobocon2018_test {
     {
       d.controller.setMockRgb(r, g, b);
     }
-    Rgb getRed() { return d.RED; }
+    Hsv getRed() { return d.RED; }
   };
-
-  TEST_F(DistinguisherTest, getColorRedTest1)
-  {
-    setMockRgb(112, 13, 9);
-    Color result = d.getColor();
-    ASSERT_EQ(result, Color::RED);
-  }
-
-  TEST_F(DistinguisherTest, getColorBlueTest1)
-  {
-    setMockRgb(18, 47, 50);
-    Color result = d.getColor();
-    ASSERT_EQ(result, Color::BLUE);
-  }
-
-  TEST_F(DistinguisherTest, getColorYellowTest1)
-  {
-    setMockRgb(116, 120, 15);
-    Color result = d.getColor();
-    ASSERT_EQ(result, Color::YELLOW);
-  }
-
-  TEST_F(DistinguisherTest, getColorGreenTest1)
-  {
-    setMockRgb(24, 77, 13);
-    Color result = d.getColor();
-    ASSERT_EQ(result, Color::GREEN);
-  }
 
   TEST_F(DistinguisherTest, getColorWhiteTest2)
   {
