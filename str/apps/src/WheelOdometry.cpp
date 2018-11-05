@@ -45,7 +45,7 @@ float WheelOdometry::velocity(std::int32_t left_motor, std::int32_t right_motor)
   // 回転速度から走行体の速度へ変換するときに必要な係数
   float transform = 3.14f * property.radius_wheel / 180.0f;
   // 走行体の回転角の差を求める(LPF処理つき)
-  float angle = motor_angle.relativeAngleMean(left_motor, right_motor, true);
+  float angle = motor_angle.relativeAngleMean(left_motor, right_motor);
 
   return transform * angle / property.dt;
 }
@@ -63,7 +63,7 @@ float WheelOdometry::angularVelocity(std::int32_t left_motor, std::int32_t right
   float transform = property.radius_wheel / property.between_wheels;
 
   // 走行体の回転角の差を求める(右モータ - 左モータ), LPF処理つき
-  float angle = motor_angle.angularDifference(left_motor, right_motor, true);
+  float angle = motor_angle.angularDifference(left_motor, right_motor);
 
   return transform * angle / property.dt;
 }
@@ -72,9 +72,10 @@ float WheelOdometry::angularVelocity(std::int32_t left_motor, std::int32_t right
  *  [WheelOdometry::reset]
  *  @brief  走行体の位置情報を初期化する
  */
-Coordinate& WheelOdometry::reset()
+const Coordinate& WheelOdometry::reset()
 {
   coordinate.reset();
+  motor_angle.reset();
   return coordinate;
 }
 
@@ -85,7 +86,7 @@ Coordinate& WheelOdometry::reset()
  *  @param  right_motor 右モータの回転角
  *  @return 走行体の位置情報
  */
-Coordinate& WheelOdometry::update(std::int32_t left_motor, std::int32_t right_motor)
+const Coordinate& WheelOdometry::update(std::int32_t left_motor, std::int32_t right_motor)
 {
   // 走行体の移動距離を計算する
   float distance = velocity(left_motor, right_motor) * property.dt;
@@ -93,7 +94,6 @@ Coordinate& WheelOdometry::update(std::int32_t left_motor, std::int32_t right_mo
   float angle = angularVelocity(left_motor, right_motor) * property.dt;
   // 走行体の位置情報を更新する
   coordinate.update(distance, angle);
-
   return coordinate;
 }
 
@@ -123,7 +123,7 @@ float WheelOdometry::getRotationAngle(std::int32_t left_motor, std::int32_t righ
  *  [WheelOdometry::getCoordinate]
  *  @brief 走行体の位置情報を返す
  */
-Coordinate& WheelOdometry::getCoordinate()
+const Coordinate& WheelOdometry::getCoordinate()
 {
   return coordinate;
 }

@@ -8,28 +8,15 @@
 /**
  *  [MotorAngle::update]
  *  @brief MotorAngleメンバ変数のpre_left_motorとpre_right_motorの値を現在値に更新する
- *  @param  current_left_motor  左モータ角度の現在値
- *  @param  current_right_motor 右モータ角度の現在値
+ *  @param  left_motor  左モータ角度の現在値
+ *  @param  right_motor 右モータ角度の現在値
  */
-void MotorAngle::update(std::int32_t current_left_motor, std::int32_t current_right_motor)
+void MotorAngle::update(std::int32_t left_motor, std::int32_t right_motor)
 {
   // 左モータ角度の過去値を更新
-  pre_left_motor = current_left_motor;
+  pre_left_motor = left_motor;
   // 右モータ角度の過去値を更新
-  pre_right_motor = current_right_motor;
-}
-
-/**
- *  [MotorAngle::filterMotorNoise]
- *  @brief 左右モータの角度にローパスフィルタを通す
- *  @param  current_left_motor  左モータ角度の現在値
- *  @param  current_right_motor 右モータ角度の現在値
- */
-void MotorAngle::filterMotorNoise(std::int32_t& current_left_motor,
-                                  std::int32_t& current_right_motor)
-{
-  current_left_motor = left_filter.sensor(current_left_motor);
-  current_right_motor = right_filter.sensor(current_right_motor);
+  pre_right_motor = right_motor;
 }
 
 /**
@@ -45,16 +32,13 @@ void MotorAngle::reset()
 /**
  *  [MotorAngle::absoluteAngleMean]
  *  @brief 左モータと右モータの絶対角度の平均値を計算する
- *  @param  current_left_motor  左モータ角度の現在値
- *  @param  current_right_motor 右モータ角度の現在値
- *  @param  filter              フィルタ処理をするかどうか
+ *  @param  left_motor  左モータ角度の現在値
+ *  @param  right_motor 右モータ角度の現在値
  *  @return 左右モータの絶対角度の平均値
  */
-float MotorAngle::absoluteAngleMean(std::int32_t current_left_motor,
-                                    std::int32_t current_right_motor, bool filter)
+float MotorAngle::absoluteAngleMean(std::int32_t left_motor, std::int32_t right_motor)
 {
-  if(filter == true) filterMotorNoise(current_left_motor, current_right_motor);
-  return (current_left_motor + current_right_motor) / 2.0f;
+  return (left_motor + right_motor) / 2.0f;
 }
 
 /**
@@ -62,17 +46,15 @@ float MotorAngle::absoluteAngleMean(std::int32_t current_left_motor,
  *  @brief 左モータと右モータの相対角度の平均値を計算する
  *  @param  current_left_motor  左モータ角度の現在値
  *  @param  current_right_motor 右モータ角度の現在値
- *  @param  filter              フィルタ処理をするかどうか
  *  @return 左右モータの相対角度の平均値
  */
 float MotorAngle::relativeAngleMean(std::int32_t current_left_motor,
-                                    std::int32_t current_right_motor, bool filter)
+                                    std::int32_t current_right_motor)
 {
-  if(filter == true) filterMotorNoise(current_left_motor, current_right_motor);
   // 左モータの相対角度を求める
-  std::int32_t left_motor = current_left_motor - pre_left_motor;
+  float left_motor = current_left_motor - pre_left_motor;
   // 右モータの相対角度を求める
-  std::int32_t right_motor = current_right_motor - pre_right_motor;
+  float right_motor = current_right_motor - pre_right_motor;
 
   // 左右モータの過去値を現在値に更新
   update(current_left_motor, current_right_motor);
@@ -83,16 +65,13 @@ float MotorAngle::relativeAngleMean(std::int32_t current_left_motor,
 /**
  *  [MotorAngle::angularDifference]
  *  @brief 左右モータの回転角の差を計算する(右手系/反時計回りが正)
- *  @param  current_left_motor  左モータ角度の現在値
- *  @param  current_right_motor 右モータ角度の現在値
+ *  @param  left_motor  左モータ角度の現在値
+ *  @param  right_motor 右モータ角度の現在値
  *  @return 左右モータの絶対角度の差
  */
-float MotorAngle::angularDifference(std::int32_t current_left_motor,
-                                    std::int32_t current_right_motor, bool filter)
+float MotorAngle::angularDifference(std::int32_t left_motor, std::int32_t right_motor)
 {
-  if(filter == true) filterMotorNoise(current_left_motor, current_right_motor);
-
-  return current_right_motor - current_left_motor;
+  return static_cast<float>(right_motor - left_motor);
 }
 
 /**

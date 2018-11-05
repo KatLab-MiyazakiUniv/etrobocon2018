@@ -9,7 +9,7 @@
 float LPF::sensor(std::int32_t current_sensor)
 {
   // pre_sensorの初期化
-  if(pre_sensor == 0){
+  if(pre_sensor == 0) {
     pre_sensor = current_sensor;
     return static_cast<double>(current_sensor);
   }
