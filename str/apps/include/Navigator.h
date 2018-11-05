@@ -26,7 +26,7 @@ class Navigator {
   //! 座標とエンコーダの値を初期化する
   void reset();
   //! 指定した角度まで走行体を回転させる
-  void spin(float angle, std::int8_t pwm = 10, bool clockwise = false);
+  void spin(float angle, bool clockwise = false, std::int8_t pwm = 10);
   //! 指定した距離まで走行体を移動させる
   void move(float distance, std::int8_t pwm = 20);
   //! 指定した距離まで黒色の点を検出しながら走行体を移動させる

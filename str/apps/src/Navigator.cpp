@@ -11,7 +11,7 @@ void Navigator::reset()
   odometry.reset();
 }
 
-void Navigator::spin(float angle, std::int8_t pwm, bool clockwise)
+void Navigator::spin(float angle, bool clockwise, std::int8_t pwm)
 {
   // 測定角度の初期化
   reset();
@@ -30,9 +30,12 @@ void Navigator::move(float distance, std::int8_t pwm)
 {
   // 測定距離の初期化
   reset();
+  float radius = 0.0f;
 
-  while(odometry.update(walker.get_count_L(), walker.get_count_R()).radius < distance){
+  while(radius < distance){
     walker.run(pwm, 0);
+    odometry.update(walker.get_count_L(), walker.get_count_R());
+    radius = odometry.getCoordinate().radius;
   }
 
   // 移動停止
@@ -44,9 +47,11 @@ void Navigator::moveWhileDetecting(float distance, std::int8_t pwm)
 {
   // 測定距離の初期化
   reset();
+  controller.ledSetColorGreen();
   while(odometry.update(walker.get_count_L(), walker.get_count_R()).radius < distance){
     walker.run(pwm, 0);
-    if(binarization() == false)  controller.speakerPlayTone(controller.noteFs4, 100);
+    if(binarization() == false)  controller.ledSetColorOrange();
+    else controller.ledSetColorGreen();
   }
 
   walker.run(0, 0);
