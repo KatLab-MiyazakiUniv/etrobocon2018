@@ -41,13 +41,13 @@ class WheelOdometry {
   //! 走行体の旋回角速度を求める
   float angularVelocity(std::int32_t left_motor, std::int32_t right_motor);
   //! 走行体の位置情報を初期化する
-  Coordinate& reset();
+  const Coordinate& reset();
   //! 走行体の位置情報を更新する
-  Coordinate& update(std::int32_t left_motor, std::int32_t right_motor);
+  const Coordinate& update(std::int32_t left_motor, std::int32_t right_motor);
   //! 走行体の回転角度を返す
   float getRotationAngle(std::int32_t left_motor, std::int32_t right_motor);
   //! 走行体の位置情報を返す
-  Coordinate& getCoordinate();
+  const Coordinate& getCoordinate();
   //! 走行体の位置x座標を返す
   float getPointX();
   //! 走行体の位置y座標を返す

@@ -55,6 +55,17 @@ namespace etrobocon2018_test {
     ASSERT_FLOAT_EQ(transform * angle, odometry.velocity(5, 5));
   }
 
+  TEST(WheelOdometryTest, velocityTestHuge)
+  {
+    MotorAngle motor_angle;
+    float transform = 3.14f * 99.0f / 2.0f / 180.0f / 0.04f;
+    float angle = motor_angle.relativeAngleMean(140, 140);
+
+    WheelOdometry odometry;
+    ASSERT_FLOAT_EQ(transform * angle, odometry.velocity(140, 140));
+  }
+
+
   TEST(WheelOdometryTest, angularVelocityTest)
   {
     MotorAngle motor_angle;
@@ -69,7 +80,7 @@ namespace etrobocon2018_test {
   {
     WheelOdometry odometry;
     odometry.update(10.0f, 5.0f);
-    Coordinate& coordinate = odometry.reset();
+    const Coordinate& coordinate = odometry.reset();
     ASSERT_FLOAT_EQ(0.0f, coordinate.radius);
     ASSERT_FLOAT_EQ(0.0f, coordinate.arg);
     ASSERT_FLOAT_EQ(0.0f, coordinate.x);
@@ -88,11 +99,30 @@ namespace etrobocon2018_test {
     float expected_angle = transform * angle;
 
     WheelOdometry odometry;
-    Coordinate& coordinate = odometry.update(2, 5);
+    const Coordinate& coordinate = odometry.update(2, 5);
     ASSERT_FLOAT_EQ(expected_distance, coordinate.radius);
     ASSERT_FLOAT_EQ(expected_angle / 2.0f, coordinate.arg);
     ASSERT_FLOAT_EQ(expected_distance * std::cos(expected_angle / 2.0f), coordinate.x);
     ASSERT_FLOAT_EQ(expected_distance * std::sin(expected_angle / 2.0f), coordinate.y);
+  }
+
+  TEST(WheelOdometryTest, updateCoordinateTest)
+  {
+    WheelOdometry odometry;
+    MotorAngle motor_angle;
+    ASSERT_FLOAT_EQ(0.0, odometry.getCoordinate().radius);
+    ASSERT_FLOAT_EQ(0.0, odometry.getCoordinate().arg);
+
+    float transform = 3.14f * 99.0f / 2.0f / 180.0f;
+    float angle = motor_angle.relativeAngleMean(2, 5);
+    float expected_distance = transform * angle;
+    odometry.update(2, 5);
+
+    ASSERT_FLOAT_EQ(expected_distance, odometry.getCoordinate().radius);
+    odometry.update(4, 10);
+    ASSERT_FLOAT_EQ(2 * expected_distance, odometry.getCoordinate().radius);
+    odometry.update(6, 15);
+    ASSERT_FLOAT_EQ(3 * expected_distance, odometry.getCoordinate().radius);
   }
 
   TEST(WheelOdometryTest, getRotationAngleTest)
@@ -111,24 +141,18 @@ namespace etrobocon2018_test {
   TEST(WheelOdometryTest, getCoordinateTest)
   {
     WheelOdometry odometry;
-    Coordinate& coordinate = odometry.getCoordinate();
+    const Coordinate& coordinate = odometry.getCoordinate();
 
     ASSERT_FLOAT_EQ(0.0f, coordinate.radius);
     ASSERT_FLOAT_EQ(0.0f, coordinate.arg);
     ASSERT_FLOAT_EQ(0.0f, coordinate.x);
     ASSERT_FLOAT_EQ(0.0f, coordinate.y);
-
-    Coordinate coordinate_copy = odometry.update(2, 5);
-    ASSERT_FLOAT_EQ(coordinate.radius, coordinate_copy.radius);
-    ASSERT_FLOAT_EQ(coordinate.arg, coordinate_copy.arg);
-    ASSERT_FLOAT_EQ(coordinate.x, coordinate_copy.x);
-    ASSERT_FLOAT_EQ(coordinate.y, coordinate_copy.y);
   }
 
   TEST(WheelOdometryTest, getPointXTest)
   {
     WheelOdometry odometry;
-    Coordinate& coordinate = odometry.update(2, 5);
+    const Coordinate& coordinate = odometry.update(2, 5);
 
     ASSERT_FLOAT_EQ(coordinate.x, odometry.getPointX());
   }
@@ -136,7 +160,7 @@ namespace etrobocon2018_test {
   TEST(WheelOdometryTest, getPointYTest)
   {
     WheelOdometry odometry;
-    Coordinate& coordinate = odometry.update(2, 5);
+    const Coordinate& coordinate = odometry.update(2, 5);
 
     ASSERT_FLOAT_EQ(coordinate.y, odometry.getPointY());
   }

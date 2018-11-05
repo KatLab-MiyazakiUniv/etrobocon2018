@@ -13,13 +13,13 @@
  */
 struct LPF {
   // 前回のセンサ値
-  std::uint8_t pre_sensor;
+  std::int32_t pre_sensor;
   // コンストラクタ
-  LPF() : pre_sensor(0) { }
+  LPF() : pre_sensor(0) {}
   // 現在のセンサ値にフィルタ処理を実行する
-  std::uint8_t sensor(std::uint8_t current_sensor);
+  float sensor(std::int32_t current_sensor);
   // RCフィルタ
-  std::uint8_t RCFilter(std::uint8_t current_sensor);
+  float RCFilter(std::int32_t current_sensor);
 };
 
 #endif
