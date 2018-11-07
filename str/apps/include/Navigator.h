@@ -6,6 +6,7 @@
 #ifndef NAVIGATOR_H
 #define NAVIGATOR_H
 #include "Controller.h"
+#include "LineTracerWalker.h"
 #include "Walker.h"
 #include "WheelOdometry.h"
 #include <algorithm>
@@ -16,14 +17,16 @@ class Navigator {
   Controller controller;
   Walker walker;
   WheelOdometry odometry;
+  MotorAngle motor_angle;
+  LineTracerWalker line_tracer;
 
  public:
   Navigator(const Controller& controller_, const Walker& walker_)
-    : controller(controller_), walker(walker_), odometry()
+    : controller(controller_), walker(walker_), odometry(), motor_angle(), line_tracer()
   {
   }
   Navigator(const Controller& controller_) : controller(controller_), walker(), odometry() {}
-  Navigator() : controller(), walker(), odometry() {}
+  Navigator() : controller(), walker(), odometry(), motor_angle(), line_tracer() {}
   //! 座標とエンコーダの値を初期化する
   void reset();
   //! 指定した角度まで走行体を回転させる
@@ -40,6 +43,8 @@ class Navigator {
   std::int8_t getNearbyBrightness(float distance = 20.0f);
   //! 2値化処理を実行する
   bool binarization(std::int16_t target);
+  //! 指定した距離分ライントレースする
+  void goLineTrace(float distance, std::int16_t target_brightness, std::int8_t pwm = 20);
 };
 
 #endif

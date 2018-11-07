@@ -26,9 +26,9 @@ void Navigator::spin(float angle, bool clockwise, std::int8_t pwm)
 {
   // 測定角度の初期化
   reset();
-  angle = (angle < 0)? -angle : angle;
+  angle = (angle < 0) ? -angle : angle;
 
-  while(odometry.getRotationAngle(walker.get_count_L(), walker.get_count_R()) < angle){
+  while(odometry.getRotationAngle(walker.get_count_L(), walker.get_count_R()) < angle) {
     // 時計回りのときは-pwmを渡す
     walker.run(0, clockwise ? -pwm : pwm);
     controller.tslpTsk(4);
@@ -51,7 +51,7 @@ void Navigator::move(float distance, std::int8_t pwm)
   reset();
   float radius = 0.0f;
 
-  while(radius < distance){
+  while(radius < distance) {
     walker.run(pwm, 0);
     odometry.update(walker.get_count_L(), walker.get_count_R());
     radius = odometry.getCoordinate().radius;
@@ -75,7 +75,7 @@ void Navigator::back(float distance, std::int8_t pwm)
   reset();
   float radius = 0.0f;
 
-  while(radius < distance){
+  while(radius < distance) {
     walker.run(-pwm, 0);
     odometry.update(walker.get_count_L(), walker.get_count_R());
     radius = -odometry.getCoordinate().radius;
@@ -94,10 +94,12 @@ void Navigator::moveWhileDetecting(float distance, std::int16_t black, std::int8
   // 測定距離の初期化
   reset();
   controller.ledSetColorGreen();
-  while(odometry.update(walker.get_count_L(), walker.get_count_R()).radius < distance){
+  while(odometry.update(walker.get_count_L(), walker.get_count_R()).radius < distance) {
     walker.run(pwm, 0);
-    if(binarization(black) == false)  controller.ledSetColorOrange();
-    else controller.ledSetColorGreen();
+    if(binarization(black) == false)
+      controller.ledSetColorOrange();
+    else
+      controller.ledSetColorGreen();
     controller.tslpTsk(4);
   }
 
@@ -135,11 +137,33 @@ std::int8_t Navigator::getNearbyBrightness(float distance)
   auto back_value = getBrightness();
   move(distance, 10);
 
-  return std::min({front_value, center, back_value});
+  return std::min({ front_value, center, back_value });
 }
 
 bool Navigator::binarization(std::int16_t black)
 {
   auto brightness = getBrightness();
-  return (brightness < black)? false : true;
+  return (brightness < black) ? false : true;
+}
+
+void Navigator::goLineTrace(float distance, std::int16_t target_brightness, std::int8_t pwm)
+{
+  std::int16_t luminance = 0;
+  float radius = 0.0f;
+  line_tracer.speedControl.setPid(2.0, 0.8, 0.1, pwm);
+  line_tracer.turnControl.setPid(1.1, 0.1, 0.2, target_brightness);
+  while(radius < distance) {
+    odometry.update(walker.get_count_L(), walker.get_count_R());
+    radius = odometry.getCoordinate().radius;
+    luminance = controller.getBrightness();
+    line_tracer.runLine(walker.get_count_L(), walker.get_count_R(), luminance);
+    // controller.printDisplay(5, "distance: %f", radius);
+    if(line_tracer.getForward() < 0) {
+      walker.run(0, 0);
+    } else {
+      walker.run(line_tracer.getForward(), line_tracer.getTurn());
+    }
+    controller.tslpTsk(4);  // 4msec周期
+  }
+  walker.reset();  // 止まる
 }

@@ -9,6 +9,7 @@
 
 #define IS_SHORT_CUT 0
 
+#include "AIAnswer.h"
 #include "BasicWalker.h"
 #include "Controller.h"
 #include "LeftNormalCourse.h"
@@ -22,11 +23,7 @@ class LeftCourse {
  public:
   /** コンストラクタ。センサ類の初期化を行う */
   LeftCourse() = default;
-  explicit LeftCourse(Controller& controller_)
-    : walker(controller_),
-      controller(controller_)
-  {
-  }
+  explicit LeftCourse(Controller& controller_) : walker(controller_), controller(controller_) {}
 
   /**
    * このクラスのインスタンスを保持しているインスタンスまたはメンバ関数が、
@@ -65,6 +62,7 @@ class LeftCourse {
   LineTracerWalker lineTracer;
   BasicWalker basic{ controller };
   MotorAngle motor_angle;
+  AIAnswer ai_answer;
   // BasicWalker basicWalker;
   // Motor motor;
   // GyroSensor gyro_sensor;
