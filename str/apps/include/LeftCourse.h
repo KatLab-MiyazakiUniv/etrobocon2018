@@ -49,11 +49,13 @@ class LeftCourse {
    */
   void runParking(int16_t brightness, int16_t black, int16_t white, int16_t gray);
 
-  void solveAiAnser();
+  void solveAiAnswer();
 
   void runGoBlack();
 
   void runGoStraight();
+
+  void getSensor();
 
  private:
   Walker walker;

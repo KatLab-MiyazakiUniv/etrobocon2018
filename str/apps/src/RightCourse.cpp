@@ -12,23 +12,24 @@
 /**
  *Rコースの走行範囲の切り替えを行う
  */
-void RightCourse::run(std::int16_t brightness, std::int16_t black, std::int16_t white, std::int16_t gray)
+void RightCourse::run(std::int16_t brightness, std::int16_t black, std::int16_t white,
+                      std::int16_t gray)
 {
   LineTracerWalker lineTracer;
   runNormalCourse(brightness, black, white, gray);
   moveBlockAreaTo8(brightness);
-  //checkPuzzle();
+  // checkPuzzle();
   throughArea();
   controller.tslpTsk(100);
   throughArea();
   controller.tslpTsk(100);
 
-  //runPuzzle(brightness);
+  // runPuzzle(brightness);
   runParking(brightness, lineTracer, black, white);
 }
 
-void RightCourse::runParking(std::int16_t brightness, LineTracerWalker lineTracer, std::int16_t black,
-                             std::int16_t white)
+void RightCourse::runParking(std::int16_t brightness, LineTracerWalker lineTracer,
+                             std::int16_t black, std::int16_t white)
 {
   Parking parking{ controller };
   parking.runParpendicular(brightness, lineTracer, black, white);
@@ -175,7 +176,8 @@ void RightCourse::carryBlockToBack()
   basic.goStraight(15, 300);
 }
 
-void RightCourse::runNormalCourse(std::int16_t brightness, std::int16_t black, std::int16_t white, std::int16_t gray)
+void RightCourse::runNormalCourse(std::int16_t brightness, std::int16_t black, std::int16_t white,
+                                  std::int16_t gray)
 {
   RightNormalCourse normalCourse;
   bool isNormalCourse;

@@ -5,10 +5,10 @@
  *
  * 注記 : Bluetooth通信リモートスタート機能付き
  */
-#include "ev3api.h"
 #include "app.h"
 #include "Controller.h"
 #include "EtRobocon2018.h"  // ETロボコン2017
+#include "ev3api.h"
 
 // 参考: https://devkitpro.org/viewtopic.php?f=13&t=8643&start=10
 extern "C" void __sync_synchronize() {}
