@@ -18,7 +18,7 @@ void Navigator::reset()
 /**
  *  [Navigator::spin]
  *  @brief 指定した角度まで走行体を回転させる
- *  @param angle     回転角度
+ *  @param angle     回転角度 [deg]
  *  @param clockwise 時計回りに回転させるか(デフォルトは、反時計回り)
  *  @param pwm       モータパワー
  */
@@ -42,7 +42,7 @@ void Navigator::spin(float angle, bool clockwise, std::int8_t pwm)
 /**
  *  [Navigator::move]
  *  @brief 指定した距離まで走行体を移動させる
- *  @param distance 距離
+ *  @param distance 距離 [mm]
  *  @param pwm      モータパワー
  */
 void Navigator::move(float distance, std::int8_t pwm)
@@ -66,7 +66,7 @@ void Navigator::move(float distance, std::int8_t pwm)
 /**
  *  [Navigator::back]
  *  @brief 指定した距離まで走行体を後退させる
- *  @param distance 距離
+ *  @param distance 距離 [mm]
  *  @param pwm      モータパワー
  */
 void Navigator::back(float distance, std::int8_t pwm)
@@ -85,7 +85,7 @@ void Navigator::back(float distance, std::int8_t pwm)
 
 /**
  *  [Navigator::moveWhileDetecting]
- *  @param distance 距離
+ *  @param distance 距離 [mm]
  *  @param black    黒色の輝度値
  *  @param pwm      モータパワー
  */
@@ -120,7 +120,7 @@ std::int16_t Navigator::getBrightness()
 /**
  *  [Navigator::getNearbyBrightness]
  *  @brief 現在位置の周辺における光センサ値を取得する
- *  @param  distance 距離
+ *  @param  distance 距離 [mm]
  *  @return          光センサの値
  */
 std::int8_t Navigator::getNearbyBrightness(float distance)
@@ -152,6 +152,13 @@ bool Navigator::binarization(std::int16_t black)
   return (brightness < black) ? false : true;
 }
 
+/**
+ *  [Navigator::moveOnLine]
+ *  @brief 指定した距離だけライントレースする
+ *  @param distance 距離 [mm]
+ *  @param target   黒色と白色の境界の輝度値
+ *  @param pwm      モータパワー
+ */
 void Navigator::moveOnLine(float distance, std::int16_t target, std::int8_t pwm)
 {
   // 測定距離の初期化

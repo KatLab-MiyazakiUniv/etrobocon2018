@@ -22,7 +22,7 @@ class AIAnswer {
  public:
   AIAnswer(Controller& controller, Walker& walker, std::int16_t white_, std::int16_t black_,
            std::int16_t brightness_)
-    : navigator(controller, walker), white(white_), black(black_), brightness(brightness_)
+    : navigator(controller, walker), white(white_), black(black_), target_brightness(brightness_)
   {
   }
   void run();
