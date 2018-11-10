@@ -39,7 +39,7 @@ void Distinguisher::distingishColor()
 void Distinguisher::judgement(const Hsv& hsv_, double& min)
 {
   double tmp = std::abs((hsv_.start_h + hsv_.end_h) / 2 - hsv.h);
-  if(min > tmp) return;
+  if(min < tmp) return;
   if(hsv_.start_h < hsv.h && hsv_.end_h > hsv.h) {
     min = tmp;
     color = hsv_.color;

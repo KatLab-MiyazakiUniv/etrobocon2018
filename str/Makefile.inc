@@ -22,7 +22,8 @@ LPF.o \
 MotorAngle.o \
 WheelOdometry.o \
 Navigator.o \
-AIAnswer.o
+AIAnswer.o \
+BlockSolver.o
 
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \
