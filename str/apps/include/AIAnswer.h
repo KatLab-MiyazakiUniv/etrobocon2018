@@ -15,12 +15,14 @@ class AIAnswer {
   AI_Answer::array<int, 6> handwriting;
   AI_Answer::array<int, 6> digital;
   Navigator navigator;
-  std::array<std::int16_t, 3> sensor_values;
+  std::int16_t white;
+  std::int16_t black;
+  std::int16_t target_brightness;
 
  public:
-  AIAnswer(Controller& controller, Walker& walker, std::int16_t white, std::int16_t black,
-           std::int16_t brightness)
-    : navigator(controller, walker), sensor_values{ white, black, brightness }
+  AIAnswer(Controller& controller, Walker& walker, std::int16_t white_, std::int16_t black_,
+           std::int16_t brightness_)
+    : navigator(controller, walker), white(white_), black(black_), brightness(brightness_)
   {
   }
   void run();
