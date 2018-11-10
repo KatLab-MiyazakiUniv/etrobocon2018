@@ -85,6 +85,10 @@ class Selector {
     explorer.createBlockArea();
   }
 
+  enum NextOperationOfSearchingRouteIs {Evacuating, Moving, Carrying};
+
+  std::vector<int> exploreNextBlock(std::int8_t currentPosition);
+
   std::int8_t searchBlockPosition(std::int8_t currentPosition);
 
   bool isAlreadyMovedNode(std::int8_t position);
@@ -95,7 +99,17 @@ class Selector {
 
   void addMovedBlockPosition(std::int8_t list);
 
+  void prepareSearching(std::vector<std::int8_t> list);
 
+  std::vector<int> searchRoute(std::int8_t start, std::int8_t end);
+
+  void setNext(NextOperationOfSearchingRouteIs next);
+
+  bool isEvacuatingWithNext();
+
+  bool isMovingWithNext();
+
+  bool isCarryingWithNext();
 
  private:
   /**
@@ -117,6 +131,14 @@ class Selector {
    * </p>
    */
   const std::int8_t EMPTY_ID = -1;
+
+  bool backStepFlag = false;
+
+  bool evacuatingFlag = false;
+
+  bool movingFlag = false;
+
+  bool carryingFlag = false;
 
   std::int8_t movedCount = 0;
 

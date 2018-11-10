@@ -19,6 +19,24 @@ namespace etrobocon2018_test {
     ASSERT_EQ(expected, actual);
   }
 
+  // Explorerクラスを用いた同じリストを返す
+  TEST(SelectorTest, searchRouteByExplorerTest)
+  {
+    Selector obj;
+    std::vector<int> expected{{11, 7, 3, 2, 1, 5}};
+    std::vector<std::int8_t> nodeHadBlockList{{6, 9, 10}};
+
+    obj.prepareSearching(nodeHadBlockList);
+    auto actual = obj.searchRoute(11, 5);
+
+    for (unsigned int i = 0; i < expected.size(); i++)
+    {
+      EXPECT_EQ(actual[i], expected[i]);
+    }
+
+    ASSERT_EQ(expected.size(), actual.size());
+  }
+
   // ノード8を返す
   TEST(SelectorTest, searchNode8Test)
   {
@@ -117,8 +135,73 @@ namespace etrobocon2018_test {
     ASSERT_TRUE(obj.isAlreadyMovedNode(10));
   }
 
-  // ノード0を返す
+  // 初期値において次の動作は全て偽とする
+  TEST(SelectorTest, checkNextOperationIsAllFalseInInitialStageTest)
+  {
+    Selector obj;
+
+    ASSERT_FALSE(obj.isEvacuatingWithNext());
+    ASSERT_FALSE(obj.isMovingWithNext());
+    ASSERT_FALSE(obj.isCarryingWithNext());
+  }
+
+  // 次の動作を設定するとそれ以外の動作は全て偽とする
+  TEST(SelectorTest, checkNextOperationIsAllFalseWithoutSetNextWhenNextIsSetTest)
+  {
+    Selector obj;
+
+    obj.setNext(Selector::Evacuating);
+    ASSERT_TRUE(obj.isEvacuatingWithNext());
+    ASSERT_FALSE(obj.isMovingWithNext());
+    ASSERT_FALSE(obj.isCarryingWithNext());
+
+    obj.setNext(Selector::Moving);
+    ASSERT_FALSE(obj.isEvacuatingWithNext());
+    ASSERT_TRUE(obj.isMovingWithNext());
+    ASSERT_FALSE(obj.isCarryingWithNext());
+
+    obj.setNext(Selector::Carrying);
+    ASSERT_FALSE(obj.isEvacuatingWithNext());
+    ASSERT_FALSE(obj.isMovingWithNext());
+    ASSERT_TRUE(obj.isCarryingWithNext());
+  }
+
+  // シナリオテストでノードを探索する
   TEST(SelectorTest, searchNodeInSenarioTest)
+  {
+    Selector obj;
+    std::vector<std::int8_t> blockList{{8, 9, 11, 15}};
+
+    obj.setBlockPositionList(blockList);
+
+    // 8を探す
+    auto actual8 = obj.searchBlockPosition(8);
+    ASSERT_EQ(8, actual8);
+
+    // 9を探す
+    blockList = {9, 10, 11, 15};
+    obj.setBlockPositionList(blockList);
+    obj.addMovedBlockPosition(10);
+    auto actual9 = obj.searchBlockPosition(14);
+    ASSERT_EQ(9, actual9);
+
+    // 11を探す
+    blockList = {6, 10, 11, 15};
+    obj.setBlockPositionList(blockList);
+    obj.addMovedBlockPosition(6);
+    auto actual11 = obj.searchBlockPosition(5);
+    ASSERT_EQ(11, actual11);
+
+    // 15を探す
+    blockList = {6, 9, 10, 15};
+    obj.setBlockPositionList(blockList);
+    obj.addMovedBlockPosition(5);
+    auto actual15 = obj.searchBlockPosition(15);
+    ASSERT_EQ(15, actual15);
+  }
+
+  // シナリオテストで一連のルートを探索する
+  TEST(SelectorTest, DISABLED_searchRouteInSenarioTest)
   {
     Selector obj;
     std::vector<std::int8_t> blockList{{8, 9, 11, 15}};
