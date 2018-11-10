@@ -96,6 +96,24 @@ namespace etrobocon2018_test {
     ASSERT_EQ(expectedSize, actual.size());
   }
 
+  // ノード8からノード9のルートを返す
+  TEST(ExplorerTest, searchRouteFrom8To9Test)
+  {
+    Explorer obj;
+    unsigned long int expectedSize = 2;
+    std::vector<int> expectedList = {8, 9};
+
+    obj.createBlockArea();
+    auto actual = obj.searchRoute(8, 9);
+
+    for (unsigned int i = 0; i < expectedSize; i++)
+    {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actual[i])->getNodeID(), expectedList[i]);
+    }
+
+    ASSERT_EQ(expectedSize, actual.size());
+  }
+
   // ノード11からノード10のルートを返す
   TEST(ExplorerTest, searchRouteFrom11To10Test)
   {
