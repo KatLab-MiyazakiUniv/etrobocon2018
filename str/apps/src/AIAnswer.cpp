@@ -7,6 +7,6 @@
 
 void AIAnswer::run()
 {
-  // 20cm進む
-  navigator.getNearbyBrightness(50);
+  // 100cm
+  navigator.moveOnLine(1000, target_brightness);
 }

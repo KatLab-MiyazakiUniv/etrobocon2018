@@ -14,6 +14,7 @@
 #include "LeftNormalCourse.h"
 #include "Parking.h"
 #include "Walker.h"
+#include "AIAnswer.h"
 
 /**
  * Lコースを走らせるときに呼び出されるクラス
