@@ -39,15 +39,10 @@ class RightCourse {
  public:
   /** コンストラクタ。センサ類の初期化を行う **/
   RightCourse() = default;
-<<<<<<< HEAD
   explicit RightCourse(Controller& controller_, std::vector<std::int8_t> ipcv)
     : walker(controller_), controller(controller_), initialPositionCodeVector(ipcv)
   {
   } /** 各エリアの処理を呼び出す **/
-=======
-  explicit RightCourse(Controller& controller_)
-    : walker(controller_), controller(controller_) {} /** 各エリアの処理を呼び出す **/
->>>>>>> 751b48e58956ffd3ea049220ab92d433957e4fe9
   /** NormalCourseエリアの処理 **/
   void runNormalCourse(std::int16_t brightness);
   void run(std::int16_t brightness, std::int16_t black, std::int16_t white, std::int16_t gray);

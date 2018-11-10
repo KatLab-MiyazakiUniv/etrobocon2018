@@ -81,31 +81,12 @@ class Distinguisher {
 
   Controller controller;
   Color color = Color::NONE;
-<<<<<<< HEAD
   Rgb rgb;
   const Hsv RED{ Color::RED, 0, 92, 35, 400, 0, 40 };
   const Hsv AltRED{ Color::RED, 0, 92, 35, 400, 300, 360 };
   const Hsv BLUE{ Color::BLUE, 0, 75, 19, 400, 160, 240 };
   const Hsv GREEN{ Color::GREEN, 0, 81, 27, 400, 100, 150 };
   const Hsv YELLOW{ Color::YELLOW, 0, 90, 36, 400, 50, 80 };
-=======
-  Color distingishColor();
-  void setRawColor2Rgb();
-  void judgement(const Rgb& rgb, double& min);
-  double distanceColor(Rgb target_color);
-  void addAr(Color& color);
-  Color getAr();
-  const Rgb RED = { Color::RED, 81, 25, 5, 31 };
-  const Rgb BLUE = { Color::BLUE, 35, 52, 17, 6 };
-  const Rgb GREEN = { Color::GREEN, 13, 61, 12, 18 };
-  const Rgb YELLOW = { Color::YELLOW, 88, 88, 12, 44 };
-  const Rgb BLACK = { Color::BLACK, 7, 8, 5, 12 };
-  const Rgb WHITE = { Color::WHITE, 90, 100, 81, 63 };
-  static constexpr std::int8_t limit = 10;
-  std::array<Color, limit> ar{ Color::NONE, Color::NONE, Color::NONE, Color::NONE, Color::NONE,
-                               Color::NONE, Color::NONE, Color::NONE, Color::NONE, Color::NONE };
-  std::int8_t ar_count = 0;
->>>>>>> 751b48e58956ffd3ea049220ab92d433957e4fe9
 };
 
 #endif

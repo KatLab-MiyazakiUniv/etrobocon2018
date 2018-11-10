@@ -1,29 +1,31 @@
 /**
- * @file AIAnswer.h
- * @brief AIAnswerクラス
- * @author Tatsumi Nishida
+ *  @file   AIAnswer.h
+ *  @brief  AIアンサー
+ *  @author T.Miyaji
  */
-#ifndef __AIANSWER__
-#define __AIANSWER__
+#ifndef AI_ANSWER_H
+#define AI_ANSWER_H
+#include "AIAnswerArray.h"
+#include "Navigator.h"
+#include <array>
+#include <cstdint>
 
-#include "BasicWalker.h"
-#include "LineTracerWalker.h"
-#include "Walker.h"
-/*! @class Parking Parking.h "Parking.h"
- *  @brief 駐車クラス
- */
 class AIAnswer {
  private:
-  std::int32_t digital_number;  // 読み取ったデジタル数字
-  std::int32_t analog_number;   // 読み取ったアナログ数字
-  MotorAngle motor_angle;
+  AI_Answer::array<int, 6> handwriting;
+  AI_Answer::array<int, 6> digital;
+  Navigator navigator;
+  std::int16_t white;
+  std::int16_t black;
+  std::int16_t target_brightness;
 
  public:
-  AIAnswer() : digital_number(0), analog_number(0), motor_angle() {}
-  // 数字を読み取る
-  void readAIAnswer(Controller controller, LineTracerWalker line_tracer);
-  // 数字に対応したブロックを動かす
-  void solveAIAnswer(Controller controller, LineTracerWalker line_tracer, MotorAngle motor_angle);
-}
+  AIAnswer(Controller& controller, Walker& walker, std::int16_t white_, std::int16_t black_,
+           std::int16_t brightness_)
+    : navigator(controller, walker), white(white_), black(black_), target_brightness(brightness_)
+  {
+  }
+  void run();
+};
 
 #endif
