@@ -72,12 +72,13 @@ namespace etrobocon2018_test {
   }
 
   // ノード6を返す
-  TEST(SelectorTest, DISABLED_searchNode6Test)
+  TEST(SelectorTest, searchNode6Test)
   {
     Selector obj;
-    std::vector<std::int8_t> blockList{{6, 7, 11}};
+    std::vector<std::int8_t> blockList{{6, 7, 10, 11}};
     std::int8_t expected = 6;
 
+    obj.addMovedBlockPosition(10);
     obj.setBlockPositionList(blockList);
     auto actual = obj.searchBlockPosition(13);
 
@@ -95,6 +96,59 @@ namespace etrobocon2018_test {
     auto actual = obj.searchBlockPosition(8);
 
     ASSERT_EQ(expected, actual);
+  }
+
+  // 移動済みブロックを設定できているかどうかチェックする
+  TEST(SelectorTest, checkWhetherThereIsMovedBlock)
+  {
+    Selector obj;
+
+    ASSERT_FALSE(obj.isAlreadyMovedNode(1));
+    ASSERT_FALSE(obj.isAlreadyMovedNode(10));
+
+    obj.addMovedBlockPosition(1);
+
+    ASSERT_TRUE(obj.isAlreadyMovedNode(1));
+    ASSERT_FALSE(obj.isAlreadyMovedNode(10));
+
+    obj.addMovedBlockPosition(10);
+
+    ASSERT_TRUE(obj.isAlreadyMovedNode(1));
+    ASSERT_TRUE(obj.isAlreadyMovedNode(10));
+  }
+
+  // ノード0を返す
+  TEST(SelectorTest, searchNodeInSenarioTest)
+  {
+    Selector obj;
+    std::vector<std::int8_t> blockList{{8, 9, 11, 15}};
+
+    obj.setBlockPositionList(blockList);
+
+    // 8を探す
+    auto actual8 = obj.searchBlockPosition(8);
+    ASSERT_EQ(8, actual8);
+
+    // 9を探す
+    blockList = {9, 10, 11, 15};
+    obj.setBlockPositionList(blockList);
+    obj.addMovedBlockPosition(10);
+    auto actual9 = obj.searchBlockPosition(14);
+    ASSERT_EQ(9, actual9);
+
+    // 11を探す
+    blockList = {6, 10, 11, 15};
+    obj.setBlockPositionList(blockList);
+    obj.addMovedBlockPosition(6);
+    auto actual11 = obj.searchBlockPosition(5);
+    ASSERT_EQ(11, actual11);
+
+    // 15を探す
+    blockList = {6, 9, 10, 15};
+    obj.setBlockPositionList(blockList);
+    obj.addMovedBlockPosition(5);
+    auto actual15 = obj.searchBlockPosition(15);
+    ASSERT_EQ(15, actual15);
   }
 
 }  // namespace etrobocon2018_test

@@ -1,15 +1,13 @@
 /**
  * @file Selector.h
- * @brief ルート探索クラス
+ * @brief ブロック選択クラス
  * @author Keisuke MORI
  */
 #ifndef __SELECTOR__
 #define __SELECTOR__
 
-#include "Node.h"
 #include "Explorer.h"
 #include <vector>
-#include <array>
 #include <algorithm>
 #include <cstdlib>
 
@@ -38,8 +36,15 @@
  *     Selector selector;
  *     std::vector<std::int8_t> blockPositionList{{0, 2, 10, 14}};
  *
+ *     // 一度も動かしていない場合
  *     selector.setBlockPositionList(blockPositionList);
  *     auto actual = selector.searchBlockPosition(8); // == 10
+ *
+ *     // ブロックを移動した場合
+ *     blockPositionList = {0, 2, 5, 14};
+ *     selector.setBlockPositionList(blockPositionList);
+ *     selector.addMovedBlockPosition(5); // 移動済みブロック
+ *     auto actual = selector.searchBlockPosition(9); // == 10
  *     }
  * </pre>
  */
@@ -54,6 +59,7 @@ class Selector {
    */
   Selector() :
       blockPositionList(MAX_BLOCK_COUNT),
+      movedBlockPositionList(MAX_BLOCK_COUNT),
       nodePositionCostList(TOTAL_NODE_COUNT)
   {
     // 各ノードにおける位置コストのリスト
@@ -71,13 +77,23 @@ class Selector {
       nodePositionCostList[i] = nodePositionCostList_[i];
     }
 
+    for (auto itr = movedBlockPositionList.begin(); itr != movedBlockPositionList.end(); itr++)
+    {
+      (* itr) = EMPTY_ID;
+    }
+
     explorer.createBlockArea();
   }
 
   std::int8_t searchBlockPosition(std::int8_t currentPosition);
 
+  bool isAlreadyMovedNode(std::int8_t position);
+
   void setBlockPositionList(std::vector<std::int8_t> list);
+
   std::vector<std::int8_t> getBlockPositionList();
+
+  void addMovedBlockPosition(std::int8_t list);
 
 
 
@@ -93,15 +109,20 @@ class Selector {
   static const std::int8_t MAX_BLOCK_COUNT = 4;
 
   /**
-   * <p> 隣接ノードが空であることを示すのノードID </p>
+   * <p> ノードが空であることを示すのノードID </p>
    *
    * <p>
-   * {@link #blockPositionList} のリサイズによる例外処理の利用が原因となるメモリ肥大化を防ぐため、ノードが存在しないことを示すIDが必要になりました。
+   * {@link #blockPositionList} および {@link #movedBlockPositionList} のリサイズによる例外処理の利用が原因となるメモリ肥大化を防ぐため、
+   * ノードが存在しないことを示すIDが必要になりました。
    * </p>
    */
   const std::int8_t EMPTY_ID = -1;
 
+  std::int8_t movedCount = 0;
+
   std::vector<std::int8_t> blockPositionList;
+
+  std::vector<std::int8_t> movedBlockPositionList;
 
   std::vector<int> nodePositionCostList;
 

@@ -224,6 +224,27 @@ namespace etrobocon2018_test {
     ASSERT_EQ(expected.size(), actual.size());
   }
 
+  // ノード13からノード6のノード10迂回ルートを返す
+  TEST(ExplorerTest, searchRouteFrom13To6Circumventing10Test)
+  {
+    Explorer obj;
+    std::vector<int> expected = {13, 9, 5, 6};
+
+    obj.createBlockArea();
+    obj.getBlockAreaNodeList()->at(6)->setHasBlock(true);
+    obj.getBlockAreaNodeList()->at(7)->setHasBlock(true);
+    obj.getBlockAreaNodeList()->at(10)->setHasBlock(true);
+    obj.getBlockAreaNodeList()->at(11)->setHasBlock(true);
+    auto actual = obj.searchRoute(13, 6);
+
+    for (unsigned int i = 0; i < expected.size(); i++)
+    {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actual[i])->getNodeID(), expected[i]);
+    }
+
+    ASSERT_EQ(expected.size(), actual.size());
+  }
+
   // ノード11からノード5のノード6とノード10とノード9迂回ルートを返す
   TEST(ExplorerTest, searchRouteFrom11To5Circumventing6And9And10Test)
   {
