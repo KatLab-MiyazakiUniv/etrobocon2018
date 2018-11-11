@@ -7,11 +7,11 @@
 
 void AIAnswer::run()
 {
-  // moveToDigitalNumber();  // 数字の箇所まで進む
-  // solveDigitalNumber();
+  moveToDigitalNumber();  // 数字の箇所まで進む
+  solveDigitalNumber();
   // shiftAIAnswerBlock(0, 0);
   // navigator.moveToColor(1000, target_brightness, Color::RED);
-  ai_answer_block.block00();
+  // ai_answer_block.block00();
 }
 
 /**
@@ -20,11 +20,11 @@ void AIAnswer::run()
  */
 void AIAnswer::moveToDigitalNumber()
 {
-  navigator.moveOnLine(500, target_brightness, 30);  // 40cmライントレースしながら進む
-  navigator.move(190);                               // 29cm前進
-  navigator.spin(45, true);                          // 45度右回転
-  navigator.move(200);                               // 30cm前進
-  navigator.spin(135);                               // 135度左回転
+  // navigator.moveOnLine(200, target_brightness, 30);  // 20cmライントレースしながら進む
+  navigator.move(190);       // 19cm前進
+  navigator.spin(45, true);  // 45度右回転
+  navigator.move(200);       // 20cm前進
+  navigator.spin(135);       // 135度左回転
   // navigator.spin(90);                            // 90度左回転
 }
 

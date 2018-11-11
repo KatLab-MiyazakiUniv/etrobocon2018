@@ -49,7 +49,7 @@ class LeftCourse {
    */
   void runParking(int16_t brightness, int16_t black, int16_t white, int16_t gray);
 
-  void solveAiAnser();
+  void AnswerGo(std::int16_t brightness, std::int16_t black, std::int16_t white, std::int16_t gray);
 
   void runGoBlack();
 
@@ -62,6 +62,7 @@ class LeftCourse {
   LineTracerWalker lineTracer;
   BasicWalker basic{ controller };
   MotorAngle motor_angle;
+  // AIAnswer ai_answer;
   // BasicWalker basicWalker;
   // Motor motor;
   // GyroSensor gyro_sensor;
