@@ -23,8 +23,8 @@ class RightCourse {
  public:
   /** コンストラクタ。センサ類の初期化を行う **/
   RightCourse() = default;
-  explicit RightCourse(Controller& controller_, std::vector<std::int8_t> ipcv)
-    : walker(controller_), controller(controller_), initialPositionCodeVector(ipcv)
+  explicit RightCourse(Controller& controller_, std::int32_t ipc)
+    : walker(controller_), controller(controller_), initialPositionCode(ipc)
   {
   } /** 各エリアの処理を呼び出す **/
   /** NormalCourseエリアの処理 **/
@@ -44,7 +44,7 @@ class RightCourse {
   Walker walker;
   Controller controller;
   Explorer explorer;
-  std::vector<std::int8_t> initialPositionCodeVector;
+  std::int32_t initialPositionCode;
 };
 
 #endif

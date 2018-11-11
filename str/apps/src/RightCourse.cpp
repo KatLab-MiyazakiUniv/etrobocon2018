@@ -18,13 +18,13 @@ void RightCourse::run(std::int16_t brightness, std::int16_t black, std::int16_t 
   LineTracerWalker lineTracer;
   runNormalCourse(brightness, black, white, gray);
   moveBlockAreaTo8(brightness);
-  // solveBlockPuzzle(brightness);
+  solveBlockPuzzle(brightness);
   runParking(brightness, lineTracer, black, white);
 }
 
 void RightCourse::solveBlockPuzzle(std::int16_t brightness)
 {
-  BlockSolver blockSolver{ controller, walker };
+  BlockSolver blockSolver{ controller, walker, initialPositionCode };
   blockSolver.run(brightness);
 }
 
