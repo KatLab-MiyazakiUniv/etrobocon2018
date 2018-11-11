@@ -5,10 +5,11 @@
  *
  * 注記 : Bluetooth通信リモートスタート機能付き
  */
-#include "app.h"
+#include "ev3api.h"
+
 #include "Controller.h"
 #include "EtRobocon2018.h"  // ETロボコン2017
-#include "ev3api.h"
+#include "app.h"
 
 // 参考: https://devkitpro.org/viewtopic.php?f=13&t=8643&start=10
 extern "C" void __sync_synchronize() {}
@@ -76,45 +77,46 @@ void bt_task(intptr_t unused)
 rgb_raw_t rgb;
 void sensor_log_task(intptr_t unused)
 {
-  FILE* file;
-  Controller controller;
-  int volt = 0;
-  int amp = 0;
-  int time_now = 0;                // 開始時間からの経過時間を取得
-  int32_t left_motor_counts = 0;   //左モータのオフセット付き角位置取得
-  int32_t right_motor_counts = 0;  //右モータのオフセット付き角位置取得
-  int log_file_number = 0;
-  char log_file_name[16];
-  bool flag = true;
-  while(flag == true) {
-    sprintf(log_file_name, "%s%d%s", "/Log/log", log_file_number, ".csv");
-    controller.printDisplay(3, log_file_name);
-    file = fopen(log_file_name, "r");
-    if(file == NULL) {  // ファイル名がダブらない場合
-      fclose(file);
-      file = fopen(log_file_name, "a");
-      fprintf(file, "Time(msec), Voltage, Ampere, leftMotorCounts, rightMotorCounts\n");
-      flag = false;
+  // FILE* file;
+  // Controller controller;
+  // int volt = 0;
+  // int amp = 0;
+  // int time_now = 0;                // 開始時間からの経過時間を取得
+  // int32_t left_motor_counts = 0;   //左モータのオフセット付き角位置取得
+  // int32_t right_motor_counts = 0;  //右モータのオフセット付き角位置取得
+  // int log_file_number = 0;
+  // char log_file_name[16];
+  // bool flag = true;
+  // while(flag == true) {
+  //   sprintf(log_file_name, "%s%d%s", "/Log/log", log_file_number, ".csv");
+  //   controller.printDisplay(3, log_file_name);
+  //   file = fopen(log_file_name, "r");
+  //   if(file == NULL) {  // ファイル名がダブらない場合
+  //     fclose(file);
+  //     file = fopen(log_file_name, "a");
+  //     fprintf(file, "Time(msec), Voltage, Ampere, leftMotorCounts, rightMotorCounts\n");
+  //     flag = false;
 
-    } else {  // 同じlogファイル名が存在する場合
-      log_file_number++;
-    }
-  }
-  ev3_speaker_play_tone(NOTE_FS6, 200);
-  while(1) {
-    if(ev3_button_is_pressed(BACK_BUTTON)) {  // 戻るボタンを押すとlog取得終了
-      ev3_speaker_play_tone(NOTE_FS6, 500);   // 終了音
-      fclose(file);
-      unl_mtx(LOG);  //処理の終了
-      break;
-    }
-    time_now = controller.clock.now();
-    volt = ev3_battery_voltage_mV();
-    amp = ev3_battery_current_mA();
-    left_motor_counts = controller.leftWheel.getCount();
-    right_motor_counts = controller.rightWheel.getCount();
-    fprintf(file, "%d,%d,%d,%ld,%ld\n", time_now, volt, amp, left_motor_counts, right_motor_counts);
-    // 20msec周期起動
-    tslp_tsk(20);
-  }
+  //   } else {  // 同じlogファイル名が存在する場合
+  //     log_file_number++;
+  //   }
+  // }
+  // ev3_speaker_play_tone(NOTE_FS6, 200);
+  // while(1) {
+  //   if(ev3_button_is_pressed(BACK_BUTTON)) {  // 戻るボタンを押すとlog取得終了
+  //     ev3_speaker_play_tone(NOTE_FS6, 500);   // 終了音
+  //     fclose(file);
+  //     unl_mtx(LOG);  //処理の終了
+  //     break;
+  //   }
+  //   time_now = controller.clock.now();
+  //   volt = ev3_battery_voltage_mV();
+  //   amp = ev3_battery_current_mA();
+  //   left_motor_counts = controller.leftWheel.getCount();
+  //   right_motor_counts = controller.rightWheel.getCount();
+  //   fprintf(file, "%d,%d,%d,%ld,%ld\n", time_now, volt, amp, left_motor_counts,
+  //   right_motor_counts);
+  //   // 20msec周期起動
+  //   tslp_tsk(20);
+  // }
 }

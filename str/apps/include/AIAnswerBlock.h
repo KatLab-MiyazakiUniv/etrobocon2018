@@ -10,11 +10,15 @@
 
 class AIAnswerBlock {
  private:
-  // Navigator navigator;
+  Navigator navigator;
+  std::int16_t target_brightness;
   // Distinguisher distingish_color;
 
  public:
-  AIAnswerBlock(Controller& controller_, Walker& walker_) {}
+  AIAnswerBlock(Controller& controller_, Walker& walker_, std::int16_t brightness)
+    : navigator(controller_, walker_), target_brightness(brightness)
+  {
+  }
   //! アナログ数字が0，デジタル数字が0
   void block00();
   //! アナログ数字が0，デジタル数字が1
