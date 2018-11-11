@@ -11,10 +11,10 @@
 //#define IS_RIGHT_COURSE
 
 #include "Controller.h"
+#include "InitialPositionCodeDecoder.h"
 #include "LeftCourse.h"
 #include "RightCourse.h"
 #include "UserInterface.h"
-#include "InitialPositionCodeDecoder.h"
 
 /**
  * main的なクラス
@@ -32,7 +32,9 @@ class EtRobocon2018 {
 
  private:
   Controller controller;
+#ifdef IS_RIGHT_COURSE
   InitialPositionCodeDecoder ipcd;
+#endif
   int16_t light_white;
   int16_t light_black;
   int16_t light_gray;
