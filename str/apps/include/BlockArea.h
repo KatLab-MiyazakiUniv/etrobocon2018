@@ -51,6 +51,7 @@ namespace BlockSideBySide {
    public:
     // void calculateFirstCord();
     std::array<std::shared_ptr<ColorBlockPlace>, 16> colorBlockPlaceArray;
+    BlockSideBySide::Direction getDirection(std::int8_t n1, std::int8_t n2);
 
    private:
     std::unique_ptr<std::weak_ptr<ColorBlockPlace>> colorBlockPlaces;

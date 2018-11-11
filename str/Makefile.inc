@@ -25,7 +25,9 @@ FirstCode.o
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \
     RightCourse.o \
+    BlockArea.o \
     BlockSolver.o \
+    BlockStrategy.o \
     InitialPositionCodeDecoder.o
 
 endif
