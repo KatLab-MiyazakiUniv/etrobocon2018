@@ -16,7 +16,7 @@ void RightCourse::run(std::int16_t brightness, std::int16_t black, std::int16_t 
                       std::int16_t gray)
 {
   LineTracerWalker lineTracer;
-  runNormalCourse(brightness, black, white, gray);
+  // runNormalCourse(brightness, black, white, gray);
   moveBlockAreaTo8(brightness);
   // checkPuzzle();
   throughArea();

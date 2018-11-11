@@ -5,18 +5,19 @@
  */
 #ifndef AI_ANSWER_BLOCK_H
 #define AI_ANSWER_BLOCK_H
-#include "Distinguisher.h"
+#include "Lifter.h"
 #include "Navigator.h"
 
 class AIAnswerBlock {
  private:
   Navigator navigator;
   std::int16_t target_brightness;
+  Lifter lifter;
   // Distinguisher distingish_color;
 
  public:
-  AIAnswerBlock(Controller& controller_, Walker& walker_, std::int16_t brightness)
-    : navigator(controller_, walker_), target_brightness(brightness)
+  AIAnswerBlock(Controller& controller, Walker& walker, std::int16_t brightness)
+    : navigator(controller, walker), target_brightness(brightness), lifter(controller)
   {
   }
   //! アナログ数字が0，デジタル数字が0

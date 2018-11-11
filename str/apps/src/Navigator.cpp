@@ -183,3 +183,31 @@ void Navigator::moveOnLine(float distance, std::int16_t target, std::int8_t pwm)
   walker.run(0, 0);
   reset();
 }
+
+void Navigator::moveToColor(float distance, std::int16_t target_brightness, Color target_color,
+                            std::int8_t speed)
+{
+  reset();  // 距離の初期化
+  float radius = 0.0f;
+  // ライントレースで用いるPID値のセット
+  line_tracer.speedControl.setPid(2.0, 0.8, 0.1, speed);
+  line_tracer.turnControl.setPid(1.1, 0.1, 0.2, target_brightness);
+  // 距離を超過するか目的の色を見つけるまでループ
+  while(radius < distance) {
+    color = distinguisher.getColor();
+    odometry.update(walker.get_count_L(), walker.get_count_R());
+    radius = odometry.getCoordinate().radius;
+    line_tracer.runLine(walker.get_count_L(), walker.get_count_R(), getBrightness());
+    walker.run(line_tracer.getForward(), line_tracer.getTurn());
+    controller.printDisplay(5, "color: %d", color);
+    if(color == target_color) {
+      controller.speakerPlayTone(NOTE_A5, 300);
+      break;
+    }
+    controller.tslpTsk(4);  // 4msec周期
+  }
+
+  color = Color::NONE;
+  walker.run(0, 0);
+  reset();
+}

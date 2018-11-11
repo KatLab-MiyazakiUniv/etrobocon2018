@@ -17,7 +17,7 @@ void LeftCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t g
 {
   // runNormalCourse(brightness);
 
-  controller.printDisplay(3, "Finished NormalArea");
+  // controller.printDisplay(3, "Finished NormalArea");
   AIAnswer ai_answer(controller, walker, white, black, gray, brightness);
   ai_answer.run();
   // Puzzle

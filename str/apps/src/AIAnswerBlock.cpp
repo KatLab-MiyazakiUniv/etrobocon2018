@@ -8,7 +8,10 @@
 
 void AIAnswerBlock::block00()
 {
-  navigator.moveOnLine(1200, target_brightness);
+  navigator.moveOnLine(250, target_brightness);
+  navigator.move(100);
+  navigator.spin(true, 90);
+  navigator.moveToColor(250, target_brightness, Color::RED);
 }
 
 void AIAnswerBlock::block01() {}

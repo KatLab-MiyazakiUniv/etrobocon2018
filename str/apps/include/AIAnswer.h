@@ -36,10 +36,10 @@ class AIAnswer {
   {
   }
   void run();
-  //! 数字を読み取る場所まで行く（灰色の始まりから69cm）
-  void moveToAIAnswer();
-  //! 数字を読み取る
-  void solve();
+  //! デジタル数字の場所まで行く
+  void moveToDigitalNumber();
+  //! デジタル数字を読み取る
+  void solveDigitalNumber();
   //! 数字に応じてブロックを動かす
   void shiftAIAnswerBlock(std::int8_t analog_number, std::int8_t digital_number);
 };

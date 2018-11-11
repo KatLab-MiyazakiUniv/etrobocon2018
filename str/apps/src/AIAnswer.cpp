@@ -7,34 +7,39 @@
 
 void AIAnswer::run()
 {
-  moveToAIAnswer();  // 数字の箇所まで進む
-  solve();
+  // moveToDigitalNumber();  // 数字の箇所まで進む
+  // solveDigitalNumber();
   // shiftAIAnswerBlock(0, 0);
+  navigator.moveToColor(1000, target_brightness, Color::RED);
 }
 
 /**
- *  [AIAnswer::moveToAIAnswer]
- *  @brief 数字の場所まで行く
+ *  [AIAnswer::moveToDigitalNumber]
+ *  @brief デジタル数字の場所まで行く
  */
-void AIAnswer::moveToAIAnswer()
+void AIAnswer::moveToDigitalNumber()
 {
-  navigator.moveOnLine(300, target_brightness);  // 10cmライントレースしながら進む
-  navigator.move(490);                           // 59cm前進
-  navigator.spin(90);                            // 90度左回転
+  navigator.moveOnLine(500, target_brightness, 30);  // 40cmライントレースしながら進む
+  navigator.move(190);                               // 29cm前進
+  navigator.spin(45, true);                          // 45度右回転
+  navigator.move(200);                               // 30cm前進
+  navigator.spin(135);                               // 135度左回転
+  // navigator.spin(90);                            // 90度左回転
 }
 
 /**
- *  [AIAnswer::solve]
+ *  [AIAnswer::solveDigitalNumber]
  *  @brief 数字を読み取る
  */
-void AIAnswer::solve()
+void AIAnswer::solveDigitalNumber()
 {
-  navigator.moveWhileDetecting(370, black);  // 37cm進む
+  navigator.moveWhileDetecting(530, black);  // 37cm進む
   navigator.spin(135, true);                 // 135度右回転
   navigator.moveWhileDetecting(160, black);  // 16cm進む
-  navigator.spin(45, true);                  // 45度右回転
-  navigator.moveWhileDetecting(260, black);  // 26cm進む
-  navigator.spin(45);                        // 45度左回転
+  navigator.spin(90, true);                  // 90度右回転
+  navigator.moveWhileDetecting(460, black);  // 26cm進む
+  navigator.spin(135);                       // 135度左回転
+  navigator.move(500);                       // ここ適当
 }
 
 /**
@@ -44,8 +49,9 @@ void AIAnswer::solve()
 
 void AIAnswer::shiftAIAnswerBlock(std::int8_t analog_number, std::int8_t digital_number)
 {
-  // 読み取った数字を
+  // アナログ数字を10の位，デジタル数字を1の位に変換
   solve_number = (analog_number * 10) + digital_number;
+  // 読み取った数字に応じて分岐
   switch(solve_number) {
     case 0:
       ai_answer_block.block00();
