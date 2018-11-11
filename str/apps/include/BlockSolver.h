@@ -25,7 +25,7 @@ class BlockSolver {
   {
   }
 
-  void run(std::int16_t brightness);
+  void run(const std::int16_t& brightness);
   void getBlockColor();
   void passCircle(const Color& circle_color);
   void moveOnLineToColor(std::int8_t pwm, std::int16_t target, const Color& circle_color,
