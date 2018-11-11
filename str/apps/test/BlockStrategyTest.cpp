@@ -73,5 +73,6 @@ namespace etrobocon2018_test {
     ASSERT_EQ(b.blockArea.getDirection(1, 5), Direction::SOUTH);
     ASSERT_EQ(b.blockArea.getDirection(1, 0), Direction::EAST);
     ASSERT_EQ(b.blockArea.getDirection(8, 4), Direction::NORTH);
+    ASSERT_EQ(b.blockArea.getDirection(5, 9), Direction::SOUTH);
   }
 }  // namespace etrobocon2018_test
