@@ -7,6 +7,25 @@
 
 void BlockSolver::run(const std::int16_t& brightness)
 {
+  std::vector<int8_t> route{ 8, 12, 13, 14, 10 };
+  std::int8_t i = 4;
+
+  std::int8_t prev_n;
+  bool isFirst = true;
+  for(auto next_n : route) {
+    if(isFirst == true) {
+      prev_n = next_n;
+      isFirst = false;
+      continue;
+    }
+    controller.printDisplay(
+        i, "%d %d",
+        static_cast<int>(blockStrategy.blockArea.colorBlockPlaceArray[prev_n]->getColor()),
+        static_cast<int>(blockStrategy.blockArea.getDirection(prev_n, next_n)));
+    i++;
+    prev_n = next_n;
+  }
+  return;
   // distinguisher.threshold_distance = 200;
   // moveOnLineToColor(50, brightness, Color::GREEN, false);
   auto offset = 10;

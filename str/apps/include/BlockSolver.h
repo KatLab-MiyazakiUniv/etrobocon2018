@@ -6,22 +6,25 @@
 #ifndef BLOCK_SOLVER_H
 #define BLOCK_SOLVER_H
 
+#include "BlockStrategy.h"
 #include "Controller.h"
 #include "Distinguisher.h"
 #include "Lifter.h"
 #include "Navigator.h"
 #include "Walker.h"
 #include <cstdint>
+#include <vector>
 
 class BlockSolver {
  public:
   BlockSolver() = default;
-  explicit BlockSolver(Controller& controller_, Walker& walker_)
+  explicit BlockSolver(Controller& controller_, Walker& walker_, const std::int32_t& ipc)
     : controller(controller_),
       walker(walker_),
       distinguisher(controller_),
       lifter(controller_),
-      navigator(controller_, walker_)
+      navigator(controller_, walker_),
+      blockStrategy(ipc)
   {
   }
 
@@ -42,6 +45,7 @@ class BlockSolver {
   Navigator navigator;
   LineTracerWalker lineTracer;
   Color blockColor = Color::NONE;
+  BlockSideBySide::BlockStrategy blockStrategy;
 };
 
 #endif

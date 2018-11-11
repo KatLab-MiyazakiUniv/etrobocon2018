@@ -38,7 +38,6 @@ void EtRobocon2018::start(int bluetooth_command)
 #ifdef IS_RIGHT_COURSE
   ui.inputFirstCode();
   firstCode = ui.getFirstCode();
-  ipcd.decode(firstCode);
 #else
 #endif
   ui.setBrightnessWithColor(light_white, "white");
@@ -59,7 +58,7 @@ void EtRobocon2018::loop()
   // Rコースを走らせるときは1, Lコースを走らせるときは0
   auto brightness = target_brightness;
 #ifdef IS_RIGHT_COURSE
-  RightCourse rightCourse{ controller, ipcd.getInitialPositionCodeList() };
+  RightCourse rightCourse{ controller, firstCode };
   rightCourse.run(brightness, light_black, light_white, light_gray);
 #else
   LeftCourse leftCourse{ controller };
