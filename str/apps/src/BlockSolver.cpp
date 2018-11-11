@@ -7,25 +7,23 @@
 
 void BlockSolver::run()
 {
-  std::vector<int8_t> route{ 8, 9, 10, 6, 5 };
-  std::int8_t i = 4;
+  std::vector<int8_t> route{ 8, 9, 8, 4, 5 };
+  moveRoute(route);
+  route = { 5, 6, 5 };
+  moveRoute(route);
+}
 
-  std::int8_t prev_n;
+void BlockSolver::moveRoute(std::vector<int8_t> route)
+{
   bool isFirst = true;
   for(auto next_n : route) {
     if(isFirst == true) {
-      prev_n = next_n;
       isFirst = false;
       continue;
     }
-    controller.printDisplay(
-        i, "%d %d",
-        static_cast<int>(blockStrategy.blockArea.colorBlockPlaceArray[prev_n]->getColor()),
-        static_cast<int>(blockStrategy.blockArea.getDirection(prev_n, next_n)));
-    i++;
-    prev_n = next_n;
     moveDirection(next_n);
   }
+  controller.speakerPlayTone(controller.noteFs4, 300);
   return;
 }
 
@@ -39,23 +37,33 @@ void BlockSolver::moveDirection(const std::int8_t& nextPlace)
 
   std::int8_t diffDirection
       = static_cast<std::int8_t>(nextDirection) - static_cast<std::int8_t>(nowDirection);
+  std::int16_t black_line_length = 250;
+  if(nextDirection == BlockSideBySide::Direction::EAST
+     || nextDirection == BlockSideBySide::Direction::WEST) {
+    black_line_length = 300;
+  }
   if(diffDirection == 0) {
     // 前方向に行く場合
     passCircle(nowColor);
   } else if(diffDirection == -1 || diffDirection == 3) {
     // 左方向に行く場合
     passCircle(nowColor);
-    navigator.spin(100, false);
+    navigator.spin(95, false);
     changeDirection(-1);
   } else if(diffDirection == 1 || diffDirection == -3) {
     // 右方向に行く場合
     passCircle(nowColor);
-    navigator.spin(100, true);
+    navigator.spin(95, true);
     changeDirection(1);
   } else {
     // 後方向に行く場合
+    black_line_length -= 100;
+    navigator.spin(170, true);
+    changeDirection(2);
   }
-  navigator.moveOnLine(300, targetBrightness - offset, 45);
+
+  controller.speakerPlayTone(controller.noteFs4, 150);
+  navigator.moveOnLine(black_line_length, targetBrightness - offset, 45);
   moveOnLineToColor(30, targetBrightness - offset, nextColor, false);
   nowPlace = nextPlace;
 }
@@ -78,7 +86,7 @@ void BlockSolver::changeDirection(std::int8_t angle)
 {
   std::int8_t tmp = static_cast<std::int8_t>(nowDirection) + angle;
   if(tmp > 3) {
-    tmp = -1 + angle;
+    tmp = tmp % 4;
   } else if(tmp < 0) {
     tmp = 4 + angle;
   }
@@ -113,7 +121,7 @@ void BlockSolver::moveOnLineToColor(std::int8_t pwm, std::int16_t target, const 
       }
       walker.run(lineTracer.getForward(), lineTracer.getTurn() * buf);
     }
-    if(count >= 10 || controller.buttonIsPressedBack()) {
+    if(count >= 5 || controller.buttonIsPressedBack()) {
       walker.run(0, 0);
       break;
     }
@@ -137,7 +145,6 @@ void BlockSolver::passCircle(const Color& circle_color)
 {
   controller.speakerPlayTone(controller.noteFs4, 100);
   navigator.move(90, 5);
-  controller.speakerPlayTone(controller.noteFs4, 100);
   walker.run(5, 0);
   Color tmp;
   while(1) {
@@ -148,22 +155,19 @@ void BlockSolver::passCircle(const Color& circle_color)
     }
     controller.tslpTsk(4);
   }
-  controller.speakerPlayTone(controller.noteFs4, 100);
 }
 
 void BlockSolver::turnLeft90()
 {
-  controller.speakerPlayTone(controller.noteFs4, 100);
+  controller.speakerPlayTone(controller.noteFs4, 50);
   navigator.spin(90);
-  controller.speakerPlayTone(controller.noteFs4, 100);
 }
 
 void BlockSolver::turnRight90()
 {
   //右折する関数
-  controller.speakerPlayTone(controller.noteFs4, 100);
+  controller.speakerPlayTone(controller.noteFs4, 50);
   navigator.spin(90, true);
-  controller.speakerPlayTone(controller.noteFs4, 100);
 }
 
 void BlockSolver::turnRight180()

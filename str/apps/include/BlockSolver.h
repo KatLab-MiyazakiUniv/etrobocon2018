@@ -31,6 +31,7 @@ class BlockSolver {
   }
 
   void run();
+  void moveRoute(std::vector<int8_t> route);
   void getBlockColor();
   void passCircle(const Color& circle_color);
   void moveOnLineToColor(std::int8_t pwm, std::int16_t target, const Color& circle_color,

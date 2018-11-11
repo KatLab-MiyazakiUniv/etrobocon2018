@@ -44,6 +44,8 @@ namespace etrobocon2018_test {
     ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 2);
     blockSolver.changeDirection(-1);
     ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 1);
+    blockSolver.changeDirection(2);
+    ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 3);
   }
 
   TEST(BlockSolverTest, move)
@@ -54,10 +56,26 @@ namespace etrobocon2018_test {
     blockSolver.moveDirection(9);
     ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 2);
     blockSolver.moveDirection(10);
-    ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 1);
+    ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 2);
     blockSolver.moveDirection(6);
-    ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 0);
+    ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 1);
     blockSolver.moveDirection(5);
-    ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 3);
+    ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 0);
+    blockSolver.moveDirection(6);
+    ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 2);
+  }
+  TEST(BlockSolverTest, move2)
+  {
+    Controller controller;
+    Walker walker{ controller };
+    BlockSolver blockSolver{ controller, walker, 01233, 40 };
+    blockSolver.moveDirection(9);
+    ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 2);
+    blockSolver.moveDirection(8);
+    ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 0);
+    blockSolver.moveDirection(4);
+    ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 1);
+    blockSolver.moveDirection(5);
+    ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 2);
   }
 }  // namespace etrobocon2018_test
