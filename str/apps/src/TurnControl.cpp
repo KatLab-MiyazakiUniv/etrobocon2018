@@ -8,7 +8,7 @@
 
 TurnControl::TurnControl() : Pid(0.8, 1.2, 0.012, 30.0), turn(0.0), filter() {}
 
-std::int8_t TurnControl::calculateTurnForPid(std::int8_t forward, std::int8_t light_value)
+std::int8_t TurnControl::calculateTurnForPid(std::int8_t forward, std::int16_t light_value)
 {
   calculate(static_cast<double>(filter.sensor(light_value)));
   double pid_value = get_output();

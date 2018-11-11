@@ -21,8 +21,12 @@ void Distinguisher::distingishColor()
   judgement(BLUE, min_distance);
   judgement(YELLOW, min_distance);
   judgement(GREEN, min_distance);
+  judgement(GREY, min_distance);
+  judgement(BLACK, min_distance);
+  judgement(WHITE, min_distance);
   if(color == Color::YELLOW) {
-    black_threthold = 20;
+    black_threthold = 30;
+    white_threthold = 50;
   } else if(color == Color::GREEN) {
     white_threthold = 35;
     if(hsv.s < 40) {
@@ -38,8 +42,8 @@ void Distinguisher::distingishColor()
 
 void Distinguisher::judgement(const Hsv& hsv_, double& min)
 {
-  double tmp = std::abs((hsv_.start_h + hsv_.end_h) / 2 - hsv.h);
-  if(min > tmp) return;
+  double tmp = distanceColor(hsv_);
+  if(min < tmp) return;
   if(hsv_.start_h < hsv.h && hsv_.end_h > hsv.h) {
     min = tmp;
     color = hsv_.color;
