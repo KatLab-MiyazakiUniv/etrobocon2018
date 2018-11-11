@@ -20,6 +20,8 @@ class AIAnswerBlock {
     : navigator(controller, walker), target_brightness(brightness), lifter(controller)
   {
   }
+  //! リフターを使ってブロックを放って後ろを向く
+  void throwBlock(bool angle_direction = false);
   //! アナログ数字が0，デジタル数字が0
   void block00();
   //! アナログ数字が0，デジタル数字が1

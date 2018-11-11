@@ -158,8 +158,10 @@ bool Navigator::binarization(std::int16_t black)
  *  @param distance 距離 [mm]
  *  @param target   黒色と白色の境界の輝度値
  *  @param pwm      モータパワー
+ *  @param isLeftsideLine       true = 左エッジ，false = 右エッジ
  */
-void Navigator::moveOnLine(float distance, std::int16_t target, std::int8_t pwm)
+void Navigator::moveOnLine(float distance, std::int16_t target, std::int8_t pwm,
+                           bool is_leftside_line)
 {
   // 測定距離の初期化
   reset();
@@ -168,6 +170,8 @@ void Navigator::moveOnLine(float distance, std::int16_t target, std::int8_t pwm)
   // ライントレースで用いるPID値のセット
   line_tracer.speedControl.setPid(2.0, 0.8, 0.1, pwm);
   line_tracer.turnControl.setPid(1.1, 0.1, 0.2, target);
+  // 左エッジか右エッジか設定
+  line_tracer.isLeftsideLine(is_leftside_line);
 
   while(radius < distance) {
     odometry.update(walker.get_count_L(), walker.get_count_R());
@@ -185,10 +189,11 @@ void Navigator::moveOnLine(float distance, std::int16_t target, std::int8_t pwm)
 }
 
 void Navigator::moveToColor(float distance, std::int16_t target_brightness, Color target_color,
-                            std::int8_t speed)
+                            std::int8_t speed, bool is_leftside_line)
 {
   reset();  // 距離の初期化
   float radius = 0.0f;
+  line_tracer.isLeftsideLine(is_leftside_line);  // 左エッジか否か
   // ライントレースで用いるPID値のセット
   line_tracer.speedControl.setPid(2.0, 0.8, 0.1, speed);
   line_tracer.turnControl.setPid(1.1, 0.1, 0.2, target_brightness);

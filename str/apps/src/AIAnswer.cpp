@@ -10,7 +10,8 @@ void AIAnswer::run()
   // moveToDigitalNumber();  // 数字の箇所まで進む
   // solveDigitalNumber();
   // shiftAIAnswerBlock(0, 0);
-  navigator.moveToColor(1000, target_brightness, Color::RED);
+  // navigator.moveToColor(1000, target_brightness, Color::RED);
+  ai_answer_block.block00();
 }
 
 /**

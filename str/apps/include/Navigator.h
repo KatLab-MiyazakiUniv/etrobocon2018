@@ -52,7 +52,7 @@ class Navigator {
   }
   //! 座標とエンコーダの値を初期化する
   void reset();
-  //! 指定した角度まで走行体を回転させる
+  //! 指定した角度まで走行体を回転させる(基本左エッジ)
   void spin(float angle, bool clockwise = false, std::int8_t pwm = 10);
   //! 指定した距離まで走行体を移動させる
   void move(float distance, std::int8_t pwm = 20);
@@ -61,10 +61,11 @@ class Navigator {
   //! 指定した距離まで黒色の点を検出しながら走行体を移動させる
   void moveWhileDetecting(float distance, std::int16_t target, std::int8_t pwm = 10);
   //! 指定した距離だけライントレースする
-  void moveOnLine(float distance, std::int16_t target, std::int8_t pwm = 20);
+  void moveOnLine(float distance, std::int16_t target, std::int8_t pwm = 20,
+                  bool is_leftside_line = true);
   //! 指定した距離分ライントレースして指定した色があると停止する
   void moveToColor(float distance, std::int16_t target_brightness, Color target_color,
-                   std::int8_t speed = 20);
+                   std::int8_t speed = 20, bool is_leftside_line = true);
   //! 光センサの値を取得する
   std::int16_t getBrightness();
   //! 現在位置の周辺における光センサ値を取得する
