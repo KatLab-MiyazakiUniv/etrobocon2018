@@ -84,9 +84,13 @@ class Distinguisher {
   Rgb rgb;
   const Hsv RED{ Color::RED, 0, 92, 35, 400, 0, 60 };
   const Hsv AltRED{ Color::RED, 0, 92, 35, 400, 290, 360 };
-  const Hsv BLUE{ Color::BLUE, 0, 75, 19, 400, 160, 240 };
-  const Hsv GREEN{ Color::GREEN, 0, 81, 27, 400, 90, 150 };
-  const Hsv YELLOW{ Color::YELLOW, 0, 90, 36, 400, 50, 90 };
+  const Hsv BLUE{ Color::BLUE, 190, 75, 19, 400, 160, 240 };
+  const Hsv GREEN{ Color::GREEN, 111, 70, 26, 400, 90, 150 };
+  const Hsv YELLOW{ Color::YELLOW, 63, 88, 46, 400, 50, 80 };
+  const Hsv WHITE{ Color::WHITE, 86, 41, 53, 400, 40, 80 };
+  const Hsv BLACK{ Color::BLACK, 80, 42, 6, 400, 0, 20 };
+  const Hsv GREY{ Color::BLACK, 83, 15, 20, 400, 10, 30 };
+
 };
 
 #endif

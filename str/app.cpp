@@ -76,6 +76,7 @@ void bt_task(intptr_t unused)
 rgb_raw_t rgb;
 void sensor_log_task(intptr_t unused)
 {
+  /*
   FILE* file;
   Controller controller;
   int volt = 0;
@@ -117,4 +118,5 @@ void sensor_log_task(intptr_t unused)
     // 20msec周期起動
     tslp_tsk(20);
   }
+  */
 }
