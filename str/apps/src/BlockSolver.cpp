@@ -77,27 +77,27 @@ void BlockSolver::moveDirection(const std::int8_t& nextPlace, bool remove_block)
     // 左方向に行く場合
     passCircle(nowColor);
     navigator.spin(110, false);
-    //spinToBlack(false);
+    // spinToBlack(false);
     nowDirection = getChangeDirection(-1);
   } else if(diffDirection == 1 || diffDirection == -3) {
     // 右方向に行く場合
     passCircle(nowColor);
     navigator.spin(90, true);
 
-    //spinToBlack(true);
+    // spinToBlack(true);
     nowDirection = getChangeDirection(1);
   } else if(remove_block == false) {
     // 後方向に行く場合
     black_line_length -= 100;
     navigator.spin(170, true);
 
-    //spinToBlack(true);
+    // spinToBlack(true);
     nowDirection = getChangeDirection(2);
   } else {
     // 後方向に行く場合
     black_line_length -= 200;
     navigator.back(100);
-    //spinToBlack(true);
+    // spinToBlack(true);
     navigator.spin(170, true);
 
     nowDirection = getChangeDirection(2);
@@ -134,12 +134,12 @@ BlockSideBySide::Direction BlockSolver::getChangeDirection(std::int8_t angle)
 }
 
 void BlockSolver::moveOnLineToColor(std::int8_t pwm, std::int16_t target, const Color& circle_color,
-                                    bool isLeft)
+                                    bool isRight)
 {
   std::int8_t buf = 1;
   controller.tslpTsk(50);
 
-  if(isLeft == true) {
+  if(isRight == true) {
     buf = -1;
   }
   walker.reset();
@@ -148,7 +148,7 @@ void BlockSolver::moveOnLineToColor(std::int8_t pwm, std::int16_t target, const 
   lineTracer.turnControl.setPid(1.1, 0.1, 0.2, target);
   Color tmp;
   std::int8_t count = 0;
-  //navigator.move(15);
+  // navigator.move(15);
   while(1) {
     tmp = distinguisher.getColor();
     // controller.printDisplay(10, "%4d %4d %4d", pwm, turn, target);
@@ -191,8 +191,8 @@ void BlockSolver::passCircle(const Color& circle_color)
   while(1) {
     tmp = distinguisher.getColor();
     if(Color::BLACK == tmp || Color::WHITE == tmp) {
-        count++;
-    }else{      
+      count++;
+    } else {
       if(count > 0) {
         count--;
       }

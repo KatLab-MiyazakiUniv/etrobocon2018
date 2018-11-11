@@ -30,16 +30,33 @@ class BlockSolver {
   {
   }
 
+  //! ブロック並べを攻略します。
   void run();
+
+  //! ルートを移動します。
   void moveRoute(std::vector<int8_t> route);
+
+  //! ブロックの色を取得し、blockColorに格納します。
   void getBlockColor();
+
+  //! ブロック置き場を乗り越えます。
   void passCircle(const Color& circle_color);
+
+  //! 指定した色のブロック置き場までライントレースします。
   void moveOnLineToColor(std::int8_t pwm, std::int16_t target, const Color& circle_color,
-                         bool isLeft);
-  void moveDirection(const std::int8_t& nextPlace, bool remove_block=false);
+                         bool isRight);
+
+  //! 指定した方角へ移動します。
+  void moveDirection(const std::int8_t& nextPlace, bool remove_block = false);
+
+  //! 今向いてる方角です。
   BlockSideBySide::Direction nowDirection = BlockSideBySide::Direction::WEST;
-  BlockSideBySide::Direction getChangeDirection(std::int8_t angle);
+
+  //! バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。
   void byeByeBlock();
+
+  //! 次に向かうべき方角を切り替えます。
+  BlockSideBySide::Direction getChangeDirection(std::int8_t angle);
 
  private:
   Controller controller;
