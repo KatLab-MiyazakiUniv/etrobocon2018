@@ -28,23 +28,23 @@ namespace etrobocon2018_test {
   };
   */
 
-  TEST(BlockSolverTest, changeDirection)
+  TEST(BlockSolverTest, getChangeDirection)
   {
     Controller controller;
     Walker walker{ controller };
     BlockSolver blockSolver{ controller, walker, 01233, 40 };
     ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 2);
-    blockSolver.changeDirection(1);
+    blockSolver.nowDirection = blockSolver.getChangeDirection(1);
     ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 3);
-    blockSolver.changeDirection(1);
+    blockSolver.nowDirection = blockSolver.getChangeDirection(1);
     ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 0);
-    blockSolver.changeDirection(-1);
+    blockSolver.nowDirection = blockSolver.getChangeDirection(-1);
     ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 3);
-    blockSolver.changeDirection(-1);
+    blockSolver.nowDirection = blockSolver.getChangeDirection(-1);
     ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 2);
-    blockSolver.changeDirection(-1);
+    blockSolver.nowDirection = blockSolver.getChangeDirection(-1);
     ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 1);
-    blockSolver.changeDirection(2);
+    blockSolver.nowDirection = blockSolver.getChangeDirection(2);
     ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 3);
   }
 
