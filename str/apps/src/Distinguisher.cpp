@@ -22,7 +22,8 @@ void Distinguisher::distingishColor()
   judgement(YELLOW, min_distance);
   judgement(GREEN, min_distance);
   if(color == Color::YELLOW) {
-    black_threthold = 20;
+    black_threthold = 30;
+    white_threthold = 50;
   } else if(color == Color::GREEN) {
     white_threthold = 35;
     if(hsv.s < 40) {

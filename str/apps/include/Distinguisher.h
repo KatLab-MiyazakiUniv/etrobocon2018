@@ -82,11 +82,11 @@ class Distinguisher {
   Controller controller;
   Color color = Color::NONE;
   Rgb rgb;
-  const Hsv RED{ Color::RED, 0, 92, 35, 400, 0, 40 };
+  const Hsv RED{ Color::RED, 0, 92, 35, 400, 0, 50 };
   const Hsv AltRED{ Color::RED, 0, 92, 35, 400, 300, 360 };
   const Hsv BLUE{ Color::BLUE, 0, 75, 19, 400, 160, 240 };
   const Hsv GREEN{ Color::GREEN, 0, 81, 27, 400, 90, 150 };
-  const Hsv YELLOW{ Color::YELLOW, 0, 90, 36, 400, 50, 80 };
+  const Hsv YELLOW{ Color::YELLOW, 0, 90, 36, 400, 50, 90 };
 };
 
 #endif
