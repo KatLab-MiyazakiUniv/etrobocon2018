@@ -2,7 +2,7 @@
 
 LineTracerWalker::LineTracerWalker() : minus(-1), forward(30), turn(0) {}
 
-void LineTracerWalker::runLine(int32_t countL, int32_t countR, int8_t light_value)
+void LineTracerWalker::runLine(int32_t countL, int32_t countR, int16_t light_value)
 {
   forward = speedControl.calculateSpeedForPid(countL, countR);
   turn = turnControl.calculateTurnForPid(forward, light_value) * minus;
