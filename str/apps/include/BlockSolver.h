@@ -28,6 +28,8 @@ class BlockSolver {
   void run(std::int16_t brightness);
   void getBlockColor();
   void passCircle(const Color& circle_color);
+  void moveOnLineToColor(std::int8_t pwm, std::int16_t target, const Color& circle_color,
+                         bool isLeft);
   void turnLeft90();
   void turnRight90();
   void turnRight180();
@@ -38,6 +40,7 @@ class BlockSolver {
   Distinguisher distinguisher;
   Lifter lifter;
   Navigator navigator;
+  LineTracerWalker lineTracer;
   Color blockColor = Color::NONE;
 };
 

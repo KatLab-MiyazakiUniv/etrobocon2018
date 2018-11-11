@@ -9,6 +9,36 @@ void BlockSolver::run(std::int16_t brightness)
 {
   passCircle(Color::RED);
   turnLeft90();
+  controller.tslpTsk(50);
+  moveOnLineToColor(10, brightness, Color::BLUE, false);
+  //  navigator.moveOnLine(690, brightness);  // 69cmライントレースで前進
+}
+
+void BlockSolver::moveOnLineToColor(std::int8_t pwm, std::int16_t target, const Color& circle_color,
+                                    bool isLeft)
+{
+  std::int8_t buf = 1;
+  if(isLeft == true) {
+    buf = -1;
+  }
+  walker.reset();
+  // ライントレースで用いるPID値のセット
+  lineTracer.speedControl.setPid(2.0, 0.8, 0.1, pwm);
+  lineTracer.turnControl.setPid(1.1, 0.1, 0.2, target);
+  Color tmp;
+  while(1) {
+    tmp = distinguisher.getColor();
+    // controller.printDisplay(10, "%4d %4d %4d", pwm, turn, target);
+    lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), controller.getBrightness());
+    if(circle_color == tmp || controller.buttonIsPressedBack()) {
+      walker.run(0, 0);
+      break;
+    } else {
+      walker.run(lineTracer.getForward(), lineTracer.getTurn());
+    }
+    controller.tslpTsk(4);
+  }
+  walker.run(0, 0);
 }
 
 void BlockSolver::getBlockColor()
@@ -24,22 +54,16 @@ void BlockSolver::getBlockColor()
 void BlockSolver::passCircle(const Color& circle_color)
 {
   controller.speakerPlayTone(controller.noteFs4, 100);
-  navigator.move(80, 5);
+  navigator.move(90, 5);
   controller.speakerPlayTone(controller.noteFs4, 100);
   walker.run(5, 0);
   Color tmp;
-  std::int8_t count = 0;
 
   controller.speakerPlayTone(controller.noteFs4, 100);
 
   while(1) {
     tmp = distinguisher.getColor();
-    if(Color::BLACK == tmp || Color::WHITE == tmp) {
-      count++;
-    } else {
-      count = 0;
-    }
-    if(count > 3 || controller.buttonIsPressedBack()) {
+    if(Color::BLACK == tmp || Color::WHITE == tmp || controller.buttonIsPressedBack()) {
       walker.run(0, 0);
       break;
     }
