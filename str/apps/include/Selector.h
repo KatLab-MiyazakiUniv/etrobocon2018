@@ -132,6 +132,8 @@ class Selector {
 
   std::int8_t searchBlockPosition(std::int8_t currentPosition);
 
+  std::int8_t searchMostPoorCostShelter(std::int8_t currentPosition);
+
   bool isAlreadyMovedNode(std::int8_t position);
 
   bool isAlreadyAllBlockMoved();
@@ -147,6 +149,8 @@ class Selector {
   void pushEvacuatedBlockPosition(std::int8_t position);
 
   std::int8_t popEvacuatedBlockPosition();
+
+  bool canFindBlockInEvacuatedList(std::int8_t position);
 
   void prepareSearching(std::vector<std::int8_t> list);
 
@@ -170,7 +174,7 @@ class Selector {
 
   std::vector<int> extractRoute();
 
- private:
+//  private:
   /**
    * <p> ブロック並べエリアにおけるブロック置き場の総数 </p>
    */
@@ -200,6 +204,10 @@ class Selector {
   bool backsteppingFlag = false;
 
   bool backsteppingBeforeNextOeperationFlag = false;
+
+  bool isCarriedToSelter = false;
+
+  bool isClearGame = false;
 
   std::int8_t movedCount = 0;
 

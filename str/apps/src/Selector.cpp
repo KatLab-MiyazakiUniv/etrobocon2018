@@ -9,10 +9,9 @@ std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, Blo
   auto routeBeforeOne = extractRoute();
   auto next = nextBlock;
   auto start = currentPosition;
-  bool isGoingToCarryBlock = false;
-  bool isGoingToEvacuateBlock = false;
   backsteppingFlag = false;
   backsteppingBeforeNextOeperationFlag = false;
+  isClearGame = !isAlreadyMovedNode(EMPTY_ID);
 
   if (currentPosition == 8 && nextBlock == 8)
   {
@@ -27,24 +26,21 @@ std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, Blo
         setNext(Evacuating);
         next = shelterWhenPathBlocked;
         pushEvacuatedBlockPosition(shelterWhenPathBlocked);
-        isGoingToEvacuateBlock = true;
       }
       else if (explorer.hasBlock(nextMovedPosition))
       {
         setNext(Evacuating);
-        next = shelterWhenPathBlocked;
-        pushEvacuatedBlockPosition(shelterWhenPathBlocked);
-        isGoingToEvacuateBlock = true;
+        next = searchMostPoorCostShelter(currentPosition);
+        pushEvacuatedBlockPosition(next);
       }
       else
       {
         setNext(Carrying);
         next = nextMovedPosition;
-        isGoingToCarryBlock = true;
       }
     }
   }
-  else if (isAlreadyAllBlockMoved())
+  else if (isClearGame)
   {
     setNext(Moving);
     next = goal;
@@ -53,10 +49,16 @@ std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, Blo
   {
     if (color == Undefined)
     {
-      if (evacuatedSize > 0 && (!evacuatingFlag || carryingFlag))
+      if (evacuatedSize > 0 && carryingFlag)
       {
         setNext(Moving);
         next = popEvacuatedBlockPosition();
+      }
+      else if (evacuatedSize > 0 && isCarriedToSelter)
+      {
+        setNext(Moving);
+        next = popEvacuatedBlockPosition();
+        isCarriedToSelter = false;
       }
       else
       {
@@ -67,24 +69,32 @@ std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, Blo
     {
       if (explorer.hasBlock(nextMovedPosition))
       {
-        pushEvacuatedBlockPosition(currentPosition);
-        start = routeBeforeOne[routeBeforeOne.size() - 2];
-        next = nextMovedPosition;
-        setNext(Moving);
-        backsteppingBeforeNextOeperationFlag = true;
+        if (canFindBlockInEvacuatedList(nextMovedPosition))
+        {
+          next = searchMostPoorCostShelter(currentPosition);
+          setNext(Evacuating);
+          isCarriedToSelter = true;
+        }
+        else
+        {
+          pushEvacuatedBlockPosition(currentPosition);
+          start = routeBeforeOne[routeBeforeOne.size() - 2];
+          next = nextMovedPosition;
+          setNext(Moving);
+          backsteppingBeforeNextOeperationFlag = true;
+        }
       }
       else
       {
         setNext(Carrying);
         next = nextMovedPosition;
-        isGoingToCarryBlock = true;
       }
     }
   }
 
   if (evacuatingFlag || carryingFlag) backsteppingFlag = true;
 
-  if ((isGoingToCarryBlock || isGoingToEvacuateBlock) && !backsteppingBeforeNextOeperationFlag)
+  if ((evacuatingFlag || carryingFlag) && !backsteppingBeforeNextOeperationFlag)
   {
     changeBlockPosition(currentPosition, next);
   }
@@ -110,7 +120,7 @@ std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, Blo
     }
   }
 
-  if (isGoingToCarryBlock)
+  if (carryingFlag)
   {
     addMovedBlockPosition(next);
   }
@@ -150,6 +160,39 @@ std::int8_t Selector::searchBlockPosition(std::int8_t currentPosition)
   return blockPosition;
 }
 
+std::int8_t Selector::searchMostPoorCostShelter(std::int8_t currentPosition)
+{
+  std::int8_t blockPosition = -1;
+  int minCost = 9999;
+  std::vector<std::int8_t> shelters = {0, 3, 12, 15};
+
+  for (auto shelter: shelters)
+  {
+    explorer.resetBlockArea();
+    for (auto position: blockPositionList) explorer.setHasBlockIn(position);
+
+    if (explorer.hasBlock(shelter)) continue;
+
+    if (shelter == currentPosition)
+    {
+      minCost = 0;
+      blockPosition = shelter;
+      break;
+    }
+
+    auto route = explorer.searchRoute(currentPosition, shelter);
+    int cost = route.size() - 1;
+
+    if (minCost > cost)
+    {
+      minCost = cost;
+      blockPosition = shelter;
+    }
+  }
+
+  return blockPosition;
+}
+
 bool Selector::isAlreadyMovedNode(std::int8_t position)
 {
   auto itr = std::find(movedBlockPositionList.begin(), movedBlockPositionList.end(), position);
@@ -158,7 +201,7 @@ bool Selector::isAlreadyMovedNode(std::int8_t position)
 
 bool Selector::isAlreadyAllBlockMoved()
 {
-  return !isAlreadyMovedNode(EMPTY_ID);
+  return isClearGame;
 }
 
 void Selector::changeBlockPosition(std::int8_t beforePosition, std::int8_t afterPosition)
@@ -198,6 +241,12 @@ std::int8_t Selector::popEvacuatedBlockPosition()
 {
   evacuatedSize--;
   return evacuatedBlockPositionList[evacuatedSize];
+}
+
+bool Selector::canFindBlockInEvacuatedList(std::int8_t position)
+{
+  auto itr = std::find(evacuatedBlockPositionList.begin(), evacuatedBlockPositionList.end(), position);
+  return itr != evacuatedBlockPositionList.end();
 }
 
 void Selector::prepareSearching(std::vector<std::int8_t> list)
