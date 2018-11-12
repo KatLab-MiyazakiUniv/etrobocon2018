@@ -777,7 +777,7 @@ namespace etrobocon2018_test {
   }
 
   // 運搬先の運搬先の運搬先が埋まっている場合の一連のルートを探索する
-  TEST(SelectorTest, DISABLED_searchRouteWhenNextOfNextOfNextMovedPositionIsBuried)
+  TEST(SelectorTest, searchRouteWhenNextOfNextOfNextMovedPositionIsBuried)
   {
     Selector obj;
     std::vector<std::int8_t> blockList{{5, 6, 8, 10}};
