@@ -7,30 +7,14 @@
 #ifndef __RIGHT_COURSE__
 #define __RIGHT_COURSE__
 
+#include "BlockSolver.h"
 #include "Controller.h"
 #include "Distinguisher.h"
+#include "Explorer.h"
 #include "Parking.h"
 #include "RightNormalCourse.h"
 #include "Walker.h"
-#include "Explorer.h"
 #include <cstdint>
-
-/**
- * 走行場所の状態を保持する列挙型
- */
-enum struct ShinkansenStatus {
-  BEFORE_FIRST_SHINKANSEN,
-  FIRST_RAIL,
-  FIRST_LINE,
-  SECOND_LINE,
-  BEFORE_SECOND_SHINKANSEN,
-  SECOND_RAIL,
-  THIRD_LINE,
-  FOURTH_LINE,
-  BEFORE_THIRD_SHINKANSEN,
-  PRIZE,
-  STOP
-};
 
 /**
  * Rコースを走らせるときに呼び出されるクラス
@@ -39,10 +23,8 @@ class RightCourse {
  public:
   /** コンストラクタ。センサ類の初期化を行う **/
   RightCourse() = default;
-  explicit RightCourse(Controller& controller_, std::vector<std::int8_t> ipcv)
-    : walker(controller_),
-      controller(controller_),
-      initialPositionCodeVector(ipcv)
+  explicit RightCourse(Controller& controller_, std::int32_t ipc)
+    : walker(controller_), controller(controller_), initialPositionCode(ipc)
   {
   } /** 各エリアの処理を呼び出す **/
   /** NormalCourseエリアの処理 **/
@@ -52,21 +34,17 @@ class RightCourse {
                   std::int16_t white);
   void runPuzzle(std::int16_t target_brightness);
   void moveBlockAreaTo8(std::int16_t target_brightness);
-  Color checkPuzzle();
   void throughArea();
-  void goLeft();
-  void goRight();
-  void rotat180Degree();
-  void carryBlockToBack();
   void runNormalCourse(std::int16_t brightness, std::int16_t black, std::int16_t white,
                        std::int16_t gray);
+  void solveBlockPuzzle(std::int16_t brightness);
 
  private:
   LineTracerWalker lineTracer;
   Walker walker;
   Controller controller;
   Explorer explorer;
-  std::vector<std::int8_t> initialPositionCodeVector;
+  std::int32_t initialPositionCode;
 };
 
 #endif

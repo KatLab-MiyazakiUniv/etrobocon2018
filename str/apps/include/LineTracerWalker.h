@@ -21,7 +21,7 @@
 class LineTracerWalker {
  public:
   LineTracerWalker();
-  void runLine(int32_t countL, int32_t countR, int8_t light_value);
+  void runLine(int32_t countL, int32_t countR, int16_t light_value);
   void setForward(int8_t setValue);
   void setTurn(int8_t setValue);
   int8_t getForward();

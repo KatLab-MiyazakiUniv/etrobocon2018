@@ -3,8 +3,8 @@
  */
 
 /* コンパイル(平木場)
-$ g++-7 BlockAreaTest.cpp ../src/BlockArea.cpp gtest_main.o gtest-all.o -I../include
--I../../googletest/googletest/include
+$ g++-8 BlockStrategyTest.cpp ../src/BlockArea.cpp ../src/BlockStrategy.cpp gtest_main.o gtest-all.o
+-I../include -I~/googletest/googletest/include
 */
 
 #include "BlockStrategy.h"  // このヘッダファイルのcppファイルをテスト
@@ -64,5 +64,15 @@ namespace etrobocon2018_test {
     ASSERT_EQ(b.blockArea.colorBlockPlaceArray[9]->hasBlock(), false);
     ASSERT_EQ(b.blockArea.colorBlockPlaceArray[11]->hasBlock(), false);
     ASSERT_EQ(b.blockArea.colorBlockPlaceArray[13]->hasBlock(), false);
+  }
+
+  TEST_F(BlockStrategyTest, getDirection)
+  {
+    BlockStrategy b{ 84722 };
+    ASSERT_EQ(b.blockArea.getDirection(1, 2), Direction::WEST);
+    ASSERT_EQ(b.blockArea.getDirection(1, 5), Direction::SOUTH);
+    ASSERT_EQ(b.blockArea.getDirection(1, 0), Direction::EAST);
+    ASSERT_EQ(b.blockArea.getDirection(8, 4), Direction::NORTH);
+    ASSERT_EQ(b.blockArea.getDirection(5, 9), Direction::SOUTH);
   }
 }  // namespace etrobocon2018_test

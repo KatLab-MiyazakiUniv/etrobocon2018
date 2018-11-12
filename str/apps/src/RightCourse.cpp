@@ -12,23 +12,24 @@
 /**
  *Rコースの走行範囲の切り替えを行う
  */
-void RightCourse::run(std::int16_t brightness, std::int16_t black, std::int16_t white, std::int16_t gray)
+void RightCourse::run(std::int16_t brightness, std::int16_t black, std::int16_t white,
+                      std::int16_t gray)
 {
   LineTracerWalker lineTracer;
   runNormalCourse(brightness, black, white, gray);
-  moveBlockAreaTo8(brightness);
-  //checkPuzzle();
-  throughArea();
-  controller.tslpTsk(100);
-  throughArea();
-  controller.tslpTsk(100);
-
-  //runPuzzle(brightness);
+  //controller.tslpTsk(400);
+  solveBlockPuzzle(brightness);
   runParking(brightness, lineTracer, black, white);
 }
 
-void RightCourse::runParking(std::int16_t brightness, LineTracerWalker lineTracer, std::int16_t black,
-                             std::int16_t white)
+void RightCourse::solveBlockPuzzle(std::int16_t brightness)
+{
+  BlockSolver blockSolver{ controller, walker, initialPositionCode, brightness };
+  blockSolver.run();
+}
+
+void RightCourse::runParking(std::int16_t brightness, LineTracerWalker lineTracer,
+                             std::int16_t black, std::int16_t white)
 {
   Parking parking{ controller };
   parking.runParpendicular(brightness, lineTracer, black, white);
@@ -86,26 +87,6 @@ void RightCourse::runPuzzle(std::int16_t target_brightness)
   controller.tslpTsk(4);
 }
 
-Color RightCourse::checkPuzzle()
-{
-  //パズルの色をチェックして保持する
-  Controller controller;
-  controller.speakerPlayTone(controller.noteFs4, 100);
-  Distinguisher d{ controller };
-  BasicWalker basic{ controller };
-  Lifter lifter{ controller };
-  controller.speakerPlayTone(controller.noteFs4, 100);
-  basic.reset();
-  basic.setPidWithoutTarget(6.5, 0.5, 1.0);
-  basic.backStraight(15, 45);
-  lifter.liftUp(45, 10);
-  Color check = d.getColor();
-  lifter.liftDown(0, 3);
-  lifter.liftUp(1.5, 5);
-  basic.goStraight(15, 45);
-  return check;
-}
-
 void RightCourse::throughArea()
 {
   //ブロックエリアを通り過ぎる関数
@@ -117,65 +98,8 @@ void RightCourse::throughArea()
   basic.goStraight(15, 140);
 }
 
-void RightCourse::goLeft()
-{
-  //左折する関数
-  BasicWalker basic{ controller };
-  Controller controller;
-  controller.speakerPlayTone(controller.noteFs4, 100);
-  basic.reset();
-  basic.setPidWithoutTarget(5.0, 1.0, 0.1);
-  basic.goStraight(15, 130);
-  basic.spin(basic.SPIN_LEFT, 82, 10);
-  basic.goStraight(15, 50);
-}
-
-void RightCourse::goRight()
-{
-  //右折する関数
-  BasicWalker basic{ controller };
-  Controller controller;
-  controller.speakerPlayTone(controller.noteFs4, 100);
-  basic.reset();
-  basic.setPidWithoutTarget(5.0, 1.0, 0.1);
-  basic.goStraight(15, 130);
-  basic.spin(basic.SPIN_RIGHT, 74, 10);
-  basic.goStraight(15, 50);
-}
-
-void RightCourse::rotat180Degree()
-{
-  //運搬後に180度回転して後ろを向く関数
-  BasicWalker basic{ controller };
-  Controller controller;
-  controller.speakerPlayTone(controller.noteFs4, 100);
-  basic.reset();
-  basic.setPidWithoutTarget(6.5, 0.5, 1.0);
-  basic.backStraight(15, 120);
-  basic.reset();
-  basic.setPidWithoutTarget(5.0, 1.0, 0.1);
-  basic.spin(basic.SPIN_RIGHT, 165, 10);
-  basic.goStraight(15, 75);
-}
-
-void RightCourse::carryBlockToBack()
-{
-  //ブロックを保持した状態で後ろに移動する
-  BasicWalker basic{ controller };
-  controller.speakerPlayTone(controller.noteFs4, 100);
-  basic.reset();
-  basic.setPidWithoutTarget(6.5, 0.5, 1.0);
-  basic.backStraight(15, 45);
-  basic.reset();
-  basic.setPidWithoutTarget(5.0, 1.0, 0.1);
-  basic.goStraight(15, 210);
-  basic.spin(basic.SPIN_RIGHT, 87, 10);
-  basic.goStraight(15, 90);
-  basic.spin(basic.SPIN_RIGHT, 82, 10);
-  basic.goStraight(15, 300);
-}
-
-void RightCourse::runNormalCourse(std::int16_t brightness, std::int16_t black, std::int16_t white, std::int16_t gray)
+void RightCourse::runNormalCourse(std::int16_t brightness, std::int16_t black, std::int16_t white,
+                                  std::int16_t gray)
 {
   RightNormalCourse normalCourse;
   bool isNormalCourse;

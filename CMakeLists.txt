@@ -69,6 +69,7 @@ file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${SOURCE_DIR}/WheelOdometry.cpp
     ${SOURCE_DIR}/Navigator.cpp
     ${SOURCE_DIR}/AIAnswer.cpp
+    ${SOURCE_DIR}/BlockSolver.cpp
     )
 add_library(${PROJECT_LIB_NAME} ${SRC_FILES})
 
