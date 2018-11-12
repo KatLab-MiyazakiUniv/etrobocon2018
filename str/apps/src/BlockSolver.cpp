@@ -30,7 +30,46 @@ void BlockSolver::demo()
   navigator.spin(90, false);
 }
 
-void BlockSolver::run() {}
+Selector::BlockColor BlockSolver::convertSelectorColor(const Color& gameColor)
+{
+  if(gameColor == Color::RED) {
+    return Selector::BlockColor::Red;
+  } else if(gameColor == Color::BLUE) {
+    return Selector::BlockColor::Blue;
+  } else if(gameColor == Color::GREEN) {
+    return Selector::BlockColor::Green;
+  } else if(gameColor == Color::YELLOW) {
+    return Selector::BlockColor::Yellow;
+  }
+  return Selector::BlockColor::Undefined;
+}
+
+void BlockSolver::run()
+{
+  // 最初の8番までのライントレース
+  navigator.moveOnLine(500, targetBrightness, 55);
+  moveOnLineToColor(45, targetBrightness - 10, Color::RED, false);
+  Selector::BlockColor b_color = Selector::Undefined;
+
+  while(1) {
+    auto route = selector.exploreNextOperation(nowPlace, b_color);
+
+    // 目的地移動前にバックステップを行う必要がある場合
+    if(selector.isBacksteppingBeforeNextOperation()) {
+    }
+
+    if(selector.isMovingWithNext()) {
+      // ブロックまで移動する場合
+      moveRoute(route);
+      getBlockColor();
+      b_color = convertSelectorColor(blockColor);
+    } else if(selector.isCarryingWithNext()) {
+      // ブロックを移動する場合
+      moveRoute(route);
+      b_color = Selector::Undefined;
+    }
+  }
+}
 
 void BlockSolver::byeByeBlock()
 {

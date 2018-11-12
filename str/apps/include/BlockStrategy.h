@@ -24,9 +24,9 @@ namespace BlockSideBySide {
       blockArea.colorBlockPlaceArray = colorBlockPlaceArray;
     }
     BlockArea blockArea;
+    std::vector<std::int8_t> decodedColorBlockCodeList;
 
    private:
-    std::vector<std::int8_t> decodedColorBlockCodeList;
     std::int32_t initialPositionCode;  // = 1*16^4 + 2*16^3 + 4*16^2 + 5*16^1 + 8
     std::array<std::shared_ptr<ColorBlockPlace>, BLOCK_NUM> colorBlockPlaceArray;
     void createColorBlockPlace();

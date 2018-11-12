@@ -11,6 +11,7 @@
 #include "Distinguisher.h"
 #include "Lifter.h"
 #include "Navigator.h"
+#include "Selector.h"
 #include "Walker.h"
 #include <cstdint>
 #include <vector>
@@ -28,6 +29,7 @@ class BlockSolver {
       blockStrategy(ipc),
       targetBrightness(targetBrightness_)
   {
+    selector.setBlockPositionList(blockStrategy.decodedColorBlockCodeList);
   }
 
   //! デモです。アリアに従って移動します。
@@ -61,9 +63,12 @@ class BlockSolver {
   //! 次に向かうべき方角を切り替えます。
   BlockSideBySide::Direction getChangeDirection(std::int8_t angle);
 
+  Selector::BlockColor convertSelectorColor(const Color& gameColor);
+
  private:
   Controller controller;
   Walker walker;
+  Selector selector;
   Distinguisher distinguisher;
   Lifter lifter;
   Navigator navigator;
