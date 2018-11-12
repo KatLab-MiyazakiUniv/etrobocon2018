@@ -52,6 +52,12 @@ void Explorer::setHasBlockIn(std::int8_t blockID)
   (*itr)->setHasBlock(true);
 }
 
+bool Explorer::hasBlock(std::int8_t id)
+{
+  auto itr = blockAreaNodeList->begin() + id;
+  return (*itr)->hasBlock();
+}
+
 std::vector<int> Explorer::searchRoute(std::int8_t start, std::int8_t end)
 {
   auto startItr = blockAreaNodeList->begin() + start;
@@ -139,4 +145,3 @@ std::vector<Node*>* Explorer::getBlockAreaNodeList()
 {
   return blockAreaNodeList;
 }
-

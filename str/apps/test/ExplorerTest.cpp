@@ -60,6 +60,19 @@ namespace etrobocon2018_test {
     }
   }
 
+  TEST(ExplorerTest, checkNodeHadBlockTest)
+  {
+    Explorer obj;
+    obj.createBlockArea();
+
+    bool actual = obj.hasBlock(0);
+    ASSERT_FALSE(actual);
+
+    obj.setHasBlockIn(0);
+    actual = obj.hasBlock(0);
+    ASSERT_TRUE(actual);
+  }
+
   // ノード0からノード1のルートを返す
   TEST(ExplorerTest, searchRouteFrom0To1Test)
   {
