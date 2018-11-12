@@ -95,6 +95,9 @@ std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, Blo
 
   // updateRoute(route);
   {
+    // updateRoute(std::vector<int>)を利用するとメモリ肥大化をしてしまう
+    // おそらく仮引数routeへの代入が問題
+    // 関数内の文字列をまるまるコピペし、中括弧でくくる突貫工事で対応した
     for (auto itr = routeBeforeOne_.begin(); itr != routeBeforeOne_.end(); itr++)
         (* itr) = EMPTY_ID;
 
