@@ -51,24 +51,32 @@ void BlockSolver::run()
   moveOnLineToColor(45, targetBrightness - 10, Color::RED, false);
   Selector::BlockColor b_color = Selector::Undefined;
 
-  while(1) {
-    auto route = selector.exploreNextOperation(nowPlace, b_color);
+  while(!selector.isAlreadyAllBlockMoved()) {
+    std::vector<std::int8_t> route = selector.exploreNextOperation(nowPlace, b_color);
 
     // 目的地移動前にバックステップを行う必要がある場合
     if(selector.isBacksteppingBeforeNextOperation()) {
+      byeByeBlock();
     }
+
+    // 移動
+    moveRoute(route);
 
     if(selector.isMovingWithNext()) {
       // ブロックまで移動する場合
-      moveRoute(route);
       getBlockColor();
       b_color = convertSelectorColor(blockColor);
-    } else if(selector.isCarryingWithNext()) {
+    } else {
       // ブロックを移動する場合
-      moveRoute(route);
       b_color = Selector::Undefined;
     }
+
+    // 移動後にバックステップを行う必要がある場合
+    if(selector.isBackstepping()) {
+      byeByeBlock();
+    }
   }
+  spinParkingArea();
 }
 
 void BlockSolver::byeByeBlock()
@@ -94,6 +102,22 @@ void BlockSolver::moveRoute(std::vector<int8_t> route)
   }
   controller.speakerPlayTone(controller.noteFs4, 300);
   return;
+}
+
+void BlockSolver::spinParkingArea()
+{
+  std::int8_t diffDirection = static_cast<std::int8_t>(BlockSideBySide::Direction::WEST)
+                              - static_cast<std::int8_t>(nowDirection);
+  passCircle(Color::GREEN);
+  if(diffDirection == -1 || diffDirection == 3) {
+    // 左方向に行く場合
+    navigator.spin(110, false);
+    nowDirection = getChangeDirection(-1);
+  } else {
+    // 右方向に行く場合
+    navigator.spin(90, true);
+    nowDirection = getChangeDirection(1);
+  }
 }
 
 void BlockSolver::moveDirection(const std::int8_t& nextPlace, bool remove_block)

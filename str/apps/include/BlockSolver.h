@@ -64,6 +64,7 @@ class BlockSolver {
   BlockSideBySide::Direction getChangeDirection(std::int8_t angle);
 
   Selector::BlockColor convertSelectorColor(const Color& gameColor);
+  void spinParkingArea();
 
  private:
   Controller controller;

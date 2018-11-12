@@ -7,10 +7,10 @@
 #define __SELECTOR__
 
 #include "Explorer.h"
-#include <vector>
-#include <deque>
 #include <algorithm>
 #include <cstdlib>
+#include <deque>
+#include <vector>
 
 /**
  * @brief ブロック選択クラス
@@ -21,7 +21,9 @@
  * </p>
  *
  * <p>
- * このクラスのインスタンス保持者 (以下ユーザ) は、最初に {@link #setBlockPositionList(std::vector<std::int8_t>)} を実行して、このクラスにブロックの位置を設定してください。
+ * このクラスのインスタンス保持者 (以下ユーザ) は、最初に {@link
+ * #setBlockPositionList(std::vector<std::int8_t>)}
+ * を実行して、このクラスにブロックの位置を設定してください。
  * </p>
  *
  * <p>
@@ -50,7 +52,8 @@
  *      この戻り値が真の場合、ユーザは運搬状態として動作する必要があります。 </li>
  * <li> {@link #isAlreadyAllBlockMoved()} <br />
  *      全てブロックを運搬し終えた場合は真を返す真偽値を取得できます。
- *      この戻り値が真の場合、位置コード11へのルートを探索するため、ユーザは次の動作に備える必要があります。 </li>
+ *      この戻り値が真の場合、位置コード11へのルートを探索するため、ユーザは次の動作に備える必要があります。
+ * </li>
  * </ul>
  *
  * <p> Example1: when you get some values </p>
@@ -87,7 +90,7 @@
  *     std::int8_t currentPosition;
  *     Selector::BlockColor color;
  *
- *     while (selector.isAlreadyAllBlockMoved())
+ *     while (!selector.isAlreadyAllBlockMoved())
  *     {
  *       currentPosition = this->getCurrent();
  *       color = this->getColor();
@@ -116,39 +119,32 @@ class Selector {
    * 各ブロック置き場における位置コストのリストを作成し、そのサイズを元にノードリストを初期化しています。
    * </p>
    */
-  Selector() :
-      blockPositionList(MAX_BLOCK_COUNT),
+  Selector()
+    : blockPositionList(MAX_BLOCK_COUNT),
       movedBlockPositionList(MAX_BLOCK_COUNT, EMPTY_ID),
       evacuatedBlockPositionList(MAX_BLOCK_COUNT, EMPTY_ID),
       nodePositionCostList(TOTAL_NODE_COUNT),
       routeBeforeOne_(TOTAL_NODE_COUNT, EMPTY_ID)
   {
     // 各ノードにおける位置コストのリスト
-    std::vector<int> nodePositionCostList_{
-        {
-            4, 3, 3, 4,
-            3, 2, 2, 3,
-            1, 2, 2, 3,
-            4, 3, 3, 4
-        }
-    };
+    std::vector<int> nodePositionCostList_{ { 4, 3, 3, 4, 3, 2, 2, 3, 1, 2, 2, 3, 4, 3, 3, 4 } };
 
-    for (unsigned int i = 0; i < nodePositionCostList_.size(); i++)
-        nodePositionCostList[i] = nodePositionCostList_[i];
+    for(unsigned int i = 0; i < nodePositionCostList_.size(); i++)
+      nodePositionCostList[i] = nodePositionCostList_[i];
 
     explorer.createBlockArea();
   }
 
-  enum NextOperationOfSearchingRouteIs {Evacuating, Moving, Carrying};
+  enum NextOperationOfSearchingRouteIs { Evacuating, Moving, Carrying };
 
-  enum BlockColor {Blue, Red, Yellow, Green, Undefined};
+  enum BlockColor { Blue, Red, Yellow, Green, Undefined };
 
   /**
    * <p> 目的地までのルート探索および動作判定を行います。 </p>
    *
    * <p>
-   * 現在地とブロックの色を選択すると、次に移動すべきブロック置き場 (目的地) までのルートを取得します。
-   * また、内部変数の真偽値に、次の動作を設定します。
+   * 現在地とブロックの色を選択すると、次に移動すべきブロック置き場 (目的地)
+   * までのルートを取得します。 また、内部変数の真偽値に、次の動作を設定します。
    * </p>
    *
    * <p>
@@ -157,10 +153,11 @@ class Selector {
    * </p>
    *
    * @param currentPosition 現在地
-   * @param color 取得したブロックの色 <br /> 取得していない場合は {@link Selector::Undefined} を設定する必要があります。
+   * @param color 取得したブロックの色 <br /> 取得していない場合は {@link Selector::Undefined}
+   * を設定する必要があります。
    * @return 現在地から目的地までの位置コードのリスト <br /> 最小で要素数1です。
    */
-  std::vector<int> exploreNextOperation(std::int8_t currentPosition, BlockColor color);
+  std::vector<int8_t> exploreNextOperation(std::int8_t currentPosition, BlockColor color);
 
   std::int8_t searchBlockPosition(std::int8_t currentPosition);
 
@@ -186,7 +183,7 @@ class Selector {
 
   void prepareSearching(std::vector<std::int8_t> list);
 
-  std::vector<int> searchRoute(std::int8_t start, std::int8_t end);
+  std::vector<int8_t> searchRoute(std::int8_t start, std::int8_t end);
 
   void setNext(NextOperationOfSearchingRouteIs next);
 
@@ -202,8 +199,7 @@ class Selector {
 
   std::int8_t getPositionOfCenterQuadirilateral(BlockColor color);
 
-  [[deprecated("memory is enlarged if this is used!!!")]]
-  void updateRoute(std::vector<int> route);
+  [[deprecated("memory is enlarged if this is used!!!")]] void updateRoute(std::vector<int> route);
 
   std::vector<int> extractRoute();
 
@@ -222,7 +218,8 @@ class Selector {
    * <p> ノードが空であることを示すのノードID </p>
    *
    * <p>
-   * {@link #blockPositionList} および {@link #movedBlockPositionList} のリサイズによる例外処理の利用が原因となるメモリ肥大化を防ぐため、
+   * {@link #blockPositionList} および {@link #movedBlockPositionList}
+   * のリサイズによる例外処理の利用が原因となるメモリ肥大化を防ぐため、
    * ノードが存在しないことを示すIDが必要になりました。
    * </p>
    */
@@ -261,4 +258,4 @@ class Selector {
   Explorer explorer;
 };
 
-#endif // SELECTOR
+#endif  // SELECTOR
