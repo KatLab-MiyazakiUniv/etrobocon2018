@@ -89,7 +89,7 @@ void Parking::runParallel(int16_t brightness, int16_t black, int16_t white, int1
     }
 
     if(count > 80) {  // 250
-      waitThreeTimes();
+      // waitThreeTimes();
       basicWalker.reset();
       basicWalker.setPidWithoutTarget(14.0, 1.0, 0.1);
       basicWalker.goStraight(60, 200);

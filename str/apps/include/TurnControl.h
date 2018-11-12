@@ -19,7 +19,7 @@ class TurnControl : public Pid {
   TurnControl();
   /** ターン制御をするためのターン値(turn)を計算する
    * @return ターン値(turn) */
-  std::int8_t calculateTurnForPid(std::int8_t forward, std::int8_t light_value);
+  std::int8_t calculateTurnForPid(std::int8_t forward, std::int16_t light_value);
 
  private:
   double turn;

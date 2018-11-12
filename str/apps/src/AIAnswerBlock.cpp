@@ -75,8 +75,8 @@ void AIAnswerBlock::block01()
   navigator.moveToColor(250, target_brightness, Color::RED, 30, true);  // 左エッジ
   throwBlock(false);                                                    // 左に放る
 
-  navigator.moveOnLine(100, target_brightness, 30, false);  // 右エッジ
-  navigator.move(100);
+  navigator.moveOnLine(60, target_brightness, 30, false);  // 右エッジ
+  navigator.move(150);
   navigator.moveToColor(200, target_brightness, Color::BLUE, 30, false);  // 右エッジ
   throwBlock(true);                                                       // 右に放る
 
