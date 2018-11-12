@@ -53,12 +53,12 @@
  *      この戻り値が真の場合、位置コード11へのルートを探索するため、ユーザは次の動作に備える必要があります。 </li>
  * </ul>
  *
- * <p> Example </p>
+ * <p> Example1: when you get some values </p>
  *
  * <pre>
  *     {@code
  *     Selector selector;
- *     std::vector<std::int8_t> initializedBlockPositionList{{0, 2, 10, 14}};
+ *     std::vector<std::int8_t> initializedBlockPositionList = {0, 2, 10, 14};
  *
  *     selector.setBlockPositionList(initializedBlockPositionList);
  *
@@ -72,6 +72,38 @@
  *     bool isMoving = selector.isMovingWithNext();
  *     bool isCarrying = selector.isCarryingWithNext();
  *     bool isClearGame = selector.isAlreadyAllBlockMoved();
+ *     }
+ * </pre>
+ *
+ * <p> Example2: when you use it while you solve puzzle </p>
+ *
+ * <pre>
+ *     {@code
+ *     Selector selector;
+ *     std::vector<std::int8_t> initializedBlockPositionList = {0, 2, 10, 14};
+ *
+ *     selector.setBlockPositionList(initializedBlockPositionList);
+ *
+ *     std::int8_t currentPosition;
+ *     Selector::BlockColor color;
+ *
+ *     while (selector.isAlreadyAllBlockMoved())
+ *     {
+ *       currentPosition = this->getCurrent();
+ *       color = this->getColor();
+ *
+ *       if (selector.isBacksteppingBeforeNextOperation()) this->backstep();
+ *
+ *       this->run(obj.exploreNextOperation(currentPosition, color));
+ *
+ *       if (selector.isEvacuatingWithNext()) this->evacuate();
+ *       else if (selector.isMovingWithNext()) this->move();
+ *       else if (selector.isCarryingWithNext()) this->carry();
+ *
+ *       if (selector.isBackstepping()) this->backstep();
+ *     }
+ *
+ *     this->lookPerpendicularParkingArea();
  *     }
  * </pre>
  */
@@ -170,11 +202,12 @@ class Selector {
 
   std::int8_t getPositionOfCenterQuadirilateral(BlockColor color);
 
+  [[deprecated("memory is enlarged if this is used!!!")]]
   void updateRoute(std::vector<int> route);
 
   std::vector<int> extractRoute();
 
-//  private:
+ private:
   /**
    * <p> ブロック並べエリアにおけるブロック置き場の総数 </p>
    */
