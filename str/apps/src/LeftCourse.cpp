@@ -15,11 +15,11 @@ void LeftCourse::setFirstCode(int32_t code)
  */
 void LeftCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t gray)
 {
-  runNormalCourse(brightness);
+  // runNormalCourse(brightness);
 
   controller.printDisplay(3, "Finished NormalArea");
 
-  AnswerGo(brightness, black, white, gray);
+  aiAnswerGo(brightness, black, white, gray);
   // Puzzle
   // runBlockRange();
   // controller.printDisplay(3, "Finished Puzzle");
@@ -27,10 +27,9 @@ void LeftCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t g
   // Park
   // solveAiAnser();
   runParking(brightness, black, white, gray);
-  // runGoStraight();
 }
 
-void LeftCourse::AnswerGo(int16_t brightness, int16_t black, int16_t white, int16_t gray)
+void LeftCourse::aiAnswerGo(int16_t brightness, int16_t black, int16_t white, int16_t gray)
 {
   AIAnswer ai_answer{ controller, walker, white, black, gray, brightness };
   ai_answer.run();

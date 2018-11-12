@@ -188,12 +188,32 @@ void Navigator::moveOnLine(float distance, std::int16_t target, std::int8_t pwm,
   reset();
 }
 
+void Navigator::moveToColorCheck(float distance, Color target_color, std::int8_t pwm)
+{
+  reset();
+  float radius = 0.0f;
+  while(radius < distance) {
+    color = distinguisher.getColor();
+    odometry.update(walker.get_count_L(), walker.get_count_R());
+    radius = odometry.getCoordinate().radius;
+    walker.run(pwm, 0);
+    if(color == target_color) {
+      controller.speakerPlayTone(NOTE_A4, 300);
+      break;
+    }
+    controller.tslpTsk(4);  // 4msec周期
+  }
+  walker.run(0, 0);
+  reset();
+  color = Color::NONE;
+}
+
 void Navigator::moveToColor(float distance, std::int16_t target_brightness, Color target_color,
                             std::int8_t speed, bool is_leftside_line)
 {
   reset();  // 距離の初期化
   float radius = 0.0f;
-  line_tracer.isLeftsideLine(is_leftside_line);  // 左エッジか否か
+  line_tracer.isLeftsideLine(is_leftside_line);  // 左エッジか右エッジか設定
   // ライントレースで用いるPID値のセット
   line_tracer.speedControl.setPid(2.0, 0.8, 0.1, speed);
   line_tracer.turnControl.setPid(1.1, 0.1, 0.2, target_brightness);

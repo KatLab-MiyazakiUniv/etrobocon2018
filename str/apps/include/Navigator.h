@@ -68,6 +68,8 @@ class Navigator {
                    std::int8_t speed = 20, bool is_leftside_line = true);
   //! 光センサの値を取得する
   std::int16_t getBrightness();
+  //! 指定した距離特定の色を探しながら進む（ライントレースしない）
+  void moveToColorCheck(float distance, Color target_color, std::int8_t pwm = 20);
   //! 現在位置の周辺における光センサ値を取得する
   std::int8_t getNearbyBrightness(float distance = 20.0f);
   //! 2値化処理を実行する

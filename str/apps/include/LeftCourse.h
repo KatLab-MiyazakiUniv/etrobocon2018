@@ -49,7 +49,8 @@ class LeftCourse {
    */
   void runParking(int16_t brightness, int16_t black, int16_t white, int16_t gray);
 
-  void AnswerGo(std::int16_t brightness, std::int16_t black, std::int16_t white, std::int16_t gray);
+  void aiAnswerGo(std::int16_t brightness, std::int16_t black, std::int16_t white,
+                  std::int16_t gray);
 
   void runGoBlack();
 

@@ -42,6 +42,8 @@ class AIAnswer {
   void solveDigitalNumber();
   //! 数字に応じてブロックを動かす
   void shiftAIAnswerBlock(std::int8_t analog_number, std::int8_t digital_number);
+  //! 数字を無視してAIアンサーのブロック並べへ行く
+  void throughNumber();
 };
 
 #endif
