@@ -18,9 +18,9 @@ namespace etrobocon2018_test {
    protected:
     virtual void SetUp() {}
     Controller controller;
-    std::vector<std::int8_t> ipcv;
-    RightCourse rc{ controller, ipcv };
+    std::int32_t firstCode = 11111;
+    RightCourse rc{ controller, firstCode };
   };
 
-  //TEST_F(RightCourseTest, runTest) { rc.run(30, 0, 100, 50); }
+  // TEST_F(RightCourseTest, runTest) { rc.run(30, 0, 100, 50); }
 }  // namespace etrobocon2018_test

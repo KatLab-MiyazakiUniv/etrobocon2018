@@ -61,13 +61,15 @@ file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${SOURCE_DIR}/BlockArea.cpp
     ${SOURCE_DIR}/BlockStrategy.cpp
     ${SOURCE_DIR}/InitialPositionCodeDecoder.cpp
-    ${SOURCE_DIR}/Node.cpp
+    ${SOURCE_DIR}/Selector.cpp
     ${SOURCE_DIR}/Explorer.cpp
+    ${SOURCE_DIR}/Node.cpp
     ${SOURCE_DIR}/LPF.cpp
     ${SOURCE_DIR}/MotorAngle.cpp
     ${SOURCE_DIR}/WheelOdometry.cpp
     ${SOURCE_DIR}/Navigator.cpp
     ${SOURCE_DIR}/AIAnswer.cpp
+    ${SOURCE_DIR}/BlockSolver.cpp
     )
 add_library(${PROJECT_LIB_NAME} ${SRC_FILES})
 

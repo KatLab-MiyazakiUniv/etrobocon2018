@@ -27,6 +27,9 @@
                 "memory": "cpp",
                 "ratio": "cpp",
                 "system_error": "cpp",
-                "map": "cpp"
+                "map": "cpp",
+                "__string": "cpp",
+                "deque": "cpp",
+                "ios": "cpp"
         }
 }

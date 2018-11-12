@@ -9,25 +9,28 @@ SpeedControl.o \
 TurnControl.o \
 Walker.o \
 NormalCourse.o \
-FirstCode.o \
 Parking.o \
 BasicWalker.o \
 Controller.o \
 Lifter.o \
 Distinguisher.o \
-InitialPositionCodeDecoder.o \
+Selector.o \
 Explorer.o \
 Node.o \
 LPF.o \
 MotorAngle.o \
 WheelOdometry.o \
 Navigator.o \
-AIAnswer.o \
 AIAnswerBlock.o \
+FirstCode.o
 
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \
     RightCourse.o \
+    BlockArea.o \
+    BlockSolver.o \
+    BlockStrategy.o \
+    InitialPositionCodeDecoder.o
 
 endif
 
@@ -35,7 +38,7 @@ ifeq ($(side),left)
 
     APPL_CXXOBJS += LeftNormalCourse.o \
     LeftCourse.o \
-
+    AIAnswer.o
 
 endif
 

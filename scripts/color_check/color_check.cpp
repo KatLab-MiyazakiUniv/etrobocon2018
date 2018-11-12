@@ -59,6 +59,7 @@ void main_task(intptr_t unused)
     // controller.printDisplay(5, "Color Distance: %lf", distinguisher.last_distance);
     controller.printDisplay(6, "Color Number: %d", result);
     controller.printDisplay(7, "Color Name: %s", color_name[static_cast<int>(result)]);
+    controller.printDisplay(8, "%d", controller.getBrightness());
 
     controller.tslpTsk(4);
   }

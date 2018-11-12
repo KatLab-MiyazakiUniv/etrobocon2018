@@ -5,7 +5,7 @@
  * \section intro_sec こんにちは！
  * @b
  * このページは片山研究所モデルベース開発推進事業部が開発している、ETロボコン2017アドバンスドクラス用のプログラムのドキュメントです！
- * 詳しくはコチラ→ https://github.com/KatLab-MiyazakiUniv/etrobocon2018	
+ * 詳しくはコチラ→ https://github.com/KatLab-MiyazakiUniv/etrobocon2018
  */
 
 /*
@@ -38,7 +38,6 @@ void EtRobocon2018::start(int bluetooth_command)
 #ifdef IS_RIGHT_COURSE
   ui.inputFirstCode();
   firstCode = ui.getFirstCode();
-  ipcd.decode(firstCode);
 #else
 #endif
   ui.setBrightnessWithColor(light_white, "white");
@@ -59,11 +58,10 @@ void EtRobocon2018::loop()
   // Rコースを走らせるときは1, Lコースを走らせるときは0
   auto brightness = target_brightness;
 #ifdef IS_RIGHT_COURSE
-  RightCourse rightCourse{ controller, ipcd.getInitialPositionCodeList() };
+  RightCourse rightCourse{ controller, firstCode };
   rightCourse.run(brightness, light_black, light_white, light_gray);
 #else
   LeftCourse leftCourse{ controller };
-  leftCourse.setFirstCode(firstCode);
   leftCourse.run(brightness, light_black, light_white, light_gray);
 #endif
 }
