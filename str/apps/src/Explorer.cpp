@@ -53,7 +53,7 @@ bool Explorer::hasBlock(std::int8_t id)
   return (*itr)->hasBlock();
 }
 
-std::vector<int8_t> Explorer::searchRoute(std::int8_t start, std::int8_t end)
+std::vector<int> Explorer::searchRoute(std::int8_t start, std::int8_t end)
 {
   auto startItr = blockAreaNodeList->begin() + start;
   auto endItr = blockAreaNodeList->begin() + end;
@@ -70,7 +70,7 @@ std::vector<int8_t> Explorer::searchRoute(std::int8_t start, std::int8_t end)
   std::vector<Node*> around;
   Node* endNode = calculateNeighborCost((*startItr), &around, 1, end);
 
-  std::vector<int8_t> route = { endNode->getNodeID() };
+  std::vector<int> route = { endNode->getNodeID() };
   Node* parent = endNode->getParentNode();
   while(parent != nullptr) {
     route.push_back(parent->getNodeID());

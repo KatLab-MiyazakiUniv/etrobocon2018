@@ -12,20 +12,21 @@ void BlockSolver::demo()
   moveOnLineToColor(45, targetBrightness - 10, Color::RED, false);
 
   // ブロックがある0番までの移動
-  std::vector<int8_t> route{ 8, 12, 13 };
+  std::vector<int> route{ 8, 12, 13 };
   moveRoute(route);
 
   // ブロック読み取り(青だとする。)
   getBlockColor();
   if(blockColor == Color::BLUE) {
     // 青ブロックを10番まで移動。その後、9に戻る
-    moveRoute({ 13, 9, 10 });
+    std::vector<int> route2 = { 13, 9, 10 };
+    moveRoute(route2);
     byeByeBlock();
   }
 
   // 9番までの移動とパーキングの方を向く。
-  route = { 10, 9, 5, 6, 7, 11 };
-  moveRoute(route);
+  std::vector<int> route3 = { 10, 9, 5, 6, 7, 11 };
+  moveRoute(route3);
   passCircle(Color::GREEN);
   navigator.spin(90, false);
 }
@@ -52,7 +53,7 @@ void BlockSolver::run()
   Selector::BlockColor b_color = Selector::Undefined;
 
   while(!selector.isAlreadyAllBlockMoved()) {
-    std::vector<std::int8_t> route = selector.exploreNextOperation(nowPlace, b_color);
+    auto route = selector.exploreNextOperation(nowPlace, b_color);
 
     // 目的地移動前にバックステップを行う必要がある場合
     if(selector.isBacksteppingBeforeNextOperation()) {
@@ -87,7 +88,7 @@ void BlockSolver::byeByeBlock()
   moveDirection(returnPlace, true);
 }
 
-void BlockSolver::moveRoute(std::vector<int8_t> route)
+void BlockSolver::moveRoute(std::vector<int>& route)
 {
   bool isFirst = true;
   for(auto next_n : route) {

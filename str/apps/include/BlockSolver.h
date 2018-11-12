@@ -39,7 +39,7 @@ class BlockSolver {
   void run();
 
   //! ルートを移動します。
-  void moveRoute(std::vector<int8_t> route);
+  void moveRoute(std::vector<int>& route);
 
   //! ブロックの色を取得し、blockColorに格納します。
   void getBlockColor();

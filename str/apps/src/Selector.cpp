@@ -1,6 +1,6 @@
 #include "Selector.h"
 
-std::vector<int8_t> Selector::exploreNextOperation(std::int8_t currentPosition, BlockColor color)
+std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, BlockColor color)
 {
   const std::int8_t shelterWhenPathBlocked = 12;
   const std::int8_t shelterWhenAllNodeInitialPositionsIsFromCenter = 12;
@@ -93,7 +93,7 @@ std::vector<int8_t> Selector::exploreNextOperation(std::int8_t currentPosition, 
 
   explorer.resetBlockArea();
   for(auto position : blockPositionList) explorer.setHasBlockIn(position);
-  std::vector<int8_t> route = searchRoute(start, next);
+  std::vector<int> route = searchRoute(start, next);
 
   // updateRoute(route);
   {
@@ -239,10 +239,10 @@ void Selector::prepareSearching(std::vector<std::int8_t> list)
   }
 }
 
-std::vector<int8_t> Selector::searchRoute(std::int8_t start, std::int8_t end)
+std::vector<int> Selector::searchRoute(std::int8_t start, std::int8_t end)
 {
   if(start == end) {
-    std::vector<int8_t> only{ 1 };
+    std::vector<int> only{ 1 };
     only[0] = start;
     return only;
   } else {

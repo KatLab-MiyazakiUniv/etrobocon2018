@@ -7,10 +7,10 @@
 #define __EXPLORER__
 
 #include "Node.h"
-#include <algorithm>
-#include <array>
-#include <cstdlib>
 #include <vector>
+#include <array>
+#include <algorithm>
+#include <cstdlib>
 
 /**
  * <p> ルート探索クラス <p>
@@ -174,7 +174,7 @@ class Explorer {
    * @param end 向かいたい位置の位置コード
    * @return ブロック置き場の位置コードのリスト
    */
-  std::vector<int8_t> searchRoute(std::int8_t start, std::int8_t end);
+  std::vector<int> searchRoute(std::int8_t start, std::int8_t end);
 
   /**
    * <p> ブロック置き場における隣接ノードのコストを計算します </p>

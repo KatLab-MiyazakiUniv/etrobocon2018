@@ -7,10 +7,10 @@
 #define __SELECTOR__
 
 #include "Explorer.h"
+#include <vector>
+#include <deque>
 #include <algorithm>
 #include <cstdlib>
-#include <deque>
-#include <vector>
 
 /**
  * @brief ブロック選択クラス
@@ -157,7 +157,7 @@ class Selector {
    * を設定する必要があります。
    * @return 現在地から目的地までの位置コードのリスト <br /> 最小で要素数1です。
    */
-  std::vector<int8_t> exploreNextOperation(std::int8_t currentPosition, BlockColor color);
+  std::vector<int> exploreNextOperation(std::int8_t currentPosition, BlockColor color);
 
   std::int8_t searchBlockPosition(std::int8_t currentPosition);
 
@@ -183,7 +183,7 @@ class Selector {
 
   void prepareSearching(std::vector<std::int8_t> list);
 
-  std::vector<int8_t> searchRoute(std::int8_t start, std::int8_t end);
+  std::vector<int> searchRoute(std::int8_t start, std::int8_t end);
 
   void setNext(NextOperationOfSearchingRouteIs next);
 
