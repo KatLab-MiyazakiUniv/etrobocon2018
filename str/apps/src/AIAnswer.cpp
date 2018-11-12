@@ -8,6 +8,7 @@
 void AIAnswer::run()
 {
   throughNumber();  // 数字の箇所まで進む
+  // moveToDigitalNumber();
   // solveDigitalNumber();
   // navigator.spin(90); // 90度左回転
   // navigator.move(600);

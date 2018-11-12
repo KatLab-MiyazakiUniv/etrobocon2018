@@ -83,5 +83,5 @@ void AIAnswerBlock::block01()
   navigator.moveOnLine(100, target_brightness, 30, false);  // 右エッジ
   navigator.move(50);                                       // 5cmただ進む
   navigator.spin(110, false);                               // 100度左回転
-  navigator.moveOnLine(800, target_brightness, 30, true);   // 左エッジ
+  navigator.moveOnLine(750, target_brightness, 30, true);   // 左エッジ
 }

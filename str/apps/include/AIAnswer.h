@@ -25,13 +25,13 @@ class AIAnswer {
 
  public:
   AIAnswer(Controller& controller, Walker& walker, std::int16_t white_, std::int16_t black_,
-           std::int16_t gray_, std::int16_t brightness_)
+           std::int16_t gray_, std::int16_t brightness)
     : navigator(controller, walker),
-      ai_answer_block(controller, walker, brightness_),
+      ai_answer_block(controller, walker, brightness),
       white(white_),
       black(black_),
       gray(gray_),
-      target_brightness(brightness_),
+      target_brightness(brightness),
       solve_number(0)
   {
   }
