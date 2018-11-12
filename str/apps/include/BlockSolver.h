@@ -30,6 +30,9 @@ class BlockSolver {
   {
   }
 
+  //! デモです。アリアに従って移動します。
+  void demo();
+
   //! ブロック並べを攻略します。
   void run();
 

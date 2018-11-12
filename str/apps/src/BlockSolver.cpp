@@ -5,7 +5,7 @@
  */
 #include "BlockSolver.h"
 
-void BlockSolver::run()
+void BlockSolver::demo()
 {
   // 最初の8番までのライントレース
   navigator.moveOnLine(500, targetBrightness, 55);
@@ -29,6 +29,8 @@ void BlockSolver::run()
   passCircle(Color::GREEN);
   navigator.spin(90, false);
 }
+
+void BlockSolver::run() {}
 
 void BlockSolver::byeByeBlock()
 {
