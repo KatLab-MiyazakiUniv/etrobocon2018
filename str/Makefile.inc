@@ -14,6 +14,7 @@ BasicWalker.o \
 Controller.o \
 Lifter.o \
 Distinguisher.o \
+Selector.o \
 Explorer.o \
 Node.o \
 LPF.o \
