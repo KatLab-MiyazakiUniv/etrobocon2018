@@ -13,7 +13,7 @@
 #include <cstdlib>
 
 /**
- * <p> ブロック選択クラス <p>
+ * @brief ブロック選択クラス
  *
  * <p>
  * ETロボコン2018における、ブロック並べエリアにおけるルート探索、および次の動作の確認を行います。
@@ -27,7 +27,7 @@
  * <p>
  * ユーザは、次の7つのメンバ関数を随時呼出す必要があります。
  * 1つのルート取得関数でルートを取得し、残りの6つの真偽値判定関数で移動前後の振舞いを判定してください。
- * <p>
+ * </p>
  *
  * <ul>
  * <li> {@link #exploreNextOperation()} <br />
@@ -53,12 +53,12 @@
  *      この戻り値が真の場合、位置コード11へのルートを探索するため、ユーザは次の動作に備える必要があります。 </li>
  * </ul>
  *
- * <p> Example </p>
+ * <p> Example1: when you get some values </p>
  *
  * <pre>
  *     {@code
  *     Selector selector;
- *     std::vector<std::int8_t> initializedBlockPositionList{{0, 2, 10, 14}};
+ *     std::vector<std::int8_t> initializedBlockPositionList = {0, 2, 10, 14};
  *
  *     selector.setBlockPositionList(initializedBlockPositionList);
  *
@@ -74,6 +74,38 @@
  *     bool isClearGame = selector.isAlreadyAllBlockMoved();
  *     }
  * </pre>
+ *
+ * <p> Example2: when you use it while you solve puzzle </p>
+ *
+ * <pre>
+ *     {@code
+ *     Selector selector;
+ *     std::vector<std::int8_t> initializedBlockPositionList = {0, 2, 10, 14};
+ *
+ *     selector.setBlockPositionList(initializedBlockPositionList);
+ *
+ *     std::int8_t currentPosition;
+ *     Selector::BlockColor color;
+ *
+ *     while (selector.isAlreadyAllBlockMoved())
+ *     {
+ *       currentPosition = this->getCurrent();
+ *       color = this->getColor();
+ *
+ *       if (selector.isBacksteppingBeforeNextOperation()) this->backstep();
+ *
+ *       this->run(obj.exploreNextOperation(currentPosition, color));
+ *
+ *       if (selector.isEvacuatingWithNext()) this->evacuate();
+ *       else if (selector.isMovingWithNext()) this->move();
+ *       else if (selector.isCarryingWithNext()) this->carry();
+ *
+ *       if (selector.isBackstepping()) this->backstep();
+ *     }
+ *
+ *     this->lookPerpendicularParkingArea();
+ *     }
+ * </pre>
  */
 class Selector {
  public:
@@ -86,9 +118,10 @@ class Selector {
    */
   Selector() :
       blockPositionList(MAX_BLOCK_COUNT),
-      movedBlockPositionList(MAX_BLOCK_COUNT),
-      evacuatedBlockPositionList(MAX_BLOCK_COUNT),
-      nodePositionCostList(TOTAL_NODE_COUNT)
+      movedBlockPositionList(MAX_BLOCK_COUNT, EMPTY_ID),
+      evacuatedBlockPositionList(MAX_BLOCK_COUNT, EMPTY_ID),
+      nodePositionCostList(TOTAL_NODE_COUNT),
+      routeBeforeOne_(TOTAL_NODE_COUNT, EMPTY_ID)
   {
     // 各ノードにおける位置コストのリスト
     std::vector<int> nodePositionCostList_{
@@ -101,19 +134,7 @@ class Selector {
     };
 
     for (unsigned int i = 0; i < nodePositionCostList_.size(); i++)
-    {
-      nodePositionCostList[i] = nodePositionCostList_[i];
-    }
-
-    for (auto itr = movedBlockPositionList.begin(); itr != movedBlockPositionList.end(); itr++)
-    {
-      (* itr) = EMPTY_ID;
-    }
-
-    for (auto itr = evacuatedBlockPositionList.begin(); itr != evacuatedBlockPositionList.end(); itr++)
-    {
-      (* itr) = EMPTY_ID;
-    }
+        nodePositionCostList[i] = nodePositionCostList_[i];
 
     explorer.createBlockArea();
   }
@@ -143,6 +164,8 @@ class Selector {
 
   std::int8_t searchBlockPosition(std::int8_t currentPosition);
 
+  std::int8_t searchMostPoorCostShelter(std::int8_t currentPosition);
+
   bool isAlreadyMovedNode(std::int8_t position);
 
   bool isAlreadyAllBlockMoved();
@@ -158,6 +181,8 @@ class Selector {
   void pushEvacuatedBlockPosition(std::int8_t position);
 
   std::int8_t popEvacuatedBlockPosition();
+
+  bool canFindBlockInEvacuatedList(std::int8_t position);
 
   void prepareSearching(std::vector<std::int8_t> list);
 
@@ -176,6 +201,11 @@ class Selector {
   bool isBackstepping();
 
   std::int8_t getPositionOfCenterQuadirilateral(BlockColor color);
+
+  [[deprecated("memory is enlarged if this is used!!!")]]
+  void updateRoute(std::vector<int> route);
+
+  std::vector<int> extractRoute();
 
  private:
   /**
@@ -208,9 +238,15 @@ class Selector {
 
   bool backsteppingBeforeNextOeperationFlag = false;
 
+  bool isCarriedToShelter = false;
+
+  bool isClearGame = false;
+
   std::int8_t movedCount = 0;
 
   std::int8_t evacuatedSize = 0;
+
+  std::int8_t lastBlock = EMPTY_ID;
 
   std::vector<std::int8_t> blockPositionList;
 
@@ -219,6 +255,8 @@ class Selector {
   std::deque<std::int8_t> evacuatedBlockPositionList;
 
   std::vector<int> nodePositionCostList;
+
+  std::vector<int> routeBeforeOne_;
 
   Explorer explorer;
 };
