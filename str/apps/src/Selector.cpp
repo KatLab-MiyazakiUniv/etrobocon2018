@@ -6,10 +6,13 @@ std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, Blo
   const std::int8_t goal = 11;
   auto nextBlock = searchBlockPosition(currentPosition);
   auto nextMovedPosition = getPositionOfCenterQuadirilateral(color);
+  auto routeBeforeOne = extractRoute();
   auto next = nextBlock;
+  auto start = currentPosition;
   bool isGoingToCarryBlock = false;
   bool isGoingToEvacuateBlock = false;
   backsteppingFlag = false;
+  backsteppingBeforeNextOeperationFlag = false;
 
   if (currentPosition == 8 && nextBlock == 8)
   {
@@ -50,7 +53,7 @@ std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, Blo
   {
     if (color == Undefined)
     {
-      if (!evacuatingFlag && evacuatedSize > 0)
+      if (evacuatedSize > 0 && (!evacuatingFlag || carryingFlag))
       {
         setNext(Moving);
         next = popEvacuatedBlockPosition();
@@ -62,22 +65,47 @@ std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, Blo
     }
     else
     {
-      setNext(Carrying);
-      next = nextMovedPosition;
-      isGoingToCarryBlock = true;
+      if (explorer.hasBlock(nextMovedPosition))
+      {
+        pushEvacuatedBlockPosition(currentPosition);
+        start = routeBeforeOne[routeBeforeOne.size() - 2];
+        next = nextMovedPosition;
+        setNext(Moving);
+        backsteppingBeforeNextOeperationFlag = true;
+      }
+      else
+      {
+        setNext(Carrying);
+        next = nextMovedPosition;
+        isGoingToCarryBlock = true;
+      }
     }
   }
 
   if (evacuatingFlag || carryingFlag) backsteppingFlag = true;
 
-  if (isGoingToCarryBlock || isGoingToEvacuateBlock)
+  if ((isGoingToCarryBlock || isGoingToEvacuateBlock) && !backsteppingBeforeNextOeperationFlag)
   {
     changeBlockPosition(currentPosition, next);
   }
 
   explorer.resetBlockArea();
   for (auto position: blockPositionList) explorer.setHasBlockIn(position);
-  auto route = searchRoute(currentPosition, next);
+  std::vector<int> route = searchRoute(start, next);
+
+  // updateRoute(route);
+  {
+    for (auto itr = routeBeforeOne_.begin(); itr != routeBeforeOne_.end(); itr++)
+        (* itr) = EMPTY_ID;
+
+    int count = 0;
+
+    for (auto node : route)
+    {
+      routeBeforeOne_[count] = node;
+      count++;
+    }
+  }
 
   if (isGoingToCarryBlock)
   {
@@ -165,10 +193,8 @@ void Selector::pushEvacuatedBlockPosition(std::int8_t position)
 
 std::int8_t Selector::popEvacuatedBlockPosition()
 {
-  auto position = evacuatedBlockPositionList[0];
-  evacuatedBlockPositionList.pop_front();
   evacuatedSize--;
-  return position;
+  return evacuatedBlockPositionList[evacuatedSize];
 }
 
 void Selector::prepareSearching(std::vector<std::int8_t> list)
@@ -276,4 +302,34 @@ std::int8_t Selector::getPositionOfCenterQuadirilateral(BlockColor color)
   }
 
   return node;
+}
+
+[[deprecated("memory is enlarged if this is used!!!")]]
+void Selector::updateRoute(std::vector<int> route)
+{
+  for (auto itr = routeBeforeOne_.begin(); itr != routeBeforeOne_.end(); itr++)
+      (* itr) = EMPTY_ID;
+
+  int count = 0;
+
+  for (auto node : route)
+  {
+    routeBeforeOne_[count] = node;
+    count++;
+  }
+}
+
+std::vector<int> Selector::extractRoute()
+{
+  std::vector<int> route(TOTAL_NODE_COUNT, EMPTY_ID);
+
+  for (int i = 0; i < TOTAL_NODE_COUNT; i++)
+  {
+    if (routeBeforeOne_[i] == EMPTY_ID)
+        route.pop_back();
+    else
+        route[i] = routeBeforeOne_[i];
+  }
+
+  return route;
 }

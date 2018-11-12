@@ -13,7 +13,7 @@
 #include <cstdlib>
 
 /**
- * <p> ブロック選択クラス <p>
+ * @brief ブロック選択クラス
  *
  * <p>
  * ETロボコン2018における、ブロック並べエリアにおけるルート探索、および次の動作の確認を行います。
@@ -27,7 +27,7 @@
  * <p>
  * ユーザは、次の7つのメンバ関数を随時呼出す必要があります。
  * 1つのルート取得関数でルートを取得し、残りの6つの真偽値判定関数で移動前後の振舞いを判定してください。
- * <p>
+ * </p>
  *
  * <ul>
  * <li> {@link #exploreNextOperation()} <br />
@@ -86,9 +86,10 @@ class Selector {
    */
   Selector() :
       blockPositionList(MAX_BLOCK_COUNT),
-      movedBlockPositionList(MAX_BLOCK_COUNT),
-      evacuatedBlockPositionList(MAX_BLOCK_COUNT),
-      nodePositionCostList(TOTAL_NODE_COUNT)
+      movedBlockPositionList(MAX_BLOCK_COUNT, EMPTY_ID),
+      evacuatedBlockPositionList(MAX_BLOCK_COUNT, EMPTY_ID),
+      nodePositionCostList(TOTAL_NODE_COUNT),
+      routeBeforeOne_(TOTAL_NODE_COUNT, EMPTY_ID)
   {
     // 各ノードにおける位置コストのリスト
     std::vector<int> nodePositionCostList_{
@@ -101,19 +102,7 @@ class Selector {
     };
 
     for (unsigned int i = 0; i < nodePositionCostList_.size(); i++)
-    {
-      nodePositionCostList[i] = nodePositionCostList_[i];
-    }
-
-    for (auto itr = movedBlockPositionList.begin(); itr != movedBlockPositionList.end(); itr++)
-    {
-      (* itr) = EMPTY_ID;
-    }
-
-    for (auto itr = evacuatedBlockPositionList.begin(); itr != evacuatedBlockPositionList.end(); itr++)
-    {
-      (* itr) = EMPTY_ID;
-    }
+        nodePositionCostList[i] = nodePositionCostList_[i];
 
     explorer.createBlockArea();
   }
@@ -177,6 +166,10 @@ class Selector {
 
   std::int8_t getPositionOfCenterQuadirilateral(BlockColor color);
 
+  void updateRoute(std::vector<int> route);
+
+  std::vector<int> extractRoute();
+
  private:
   /**
    * <p> ブロック並べエリアにおけるブロック置き場の総数 </p>
@@ -219,6 +212,8 @@ class Selector {
   std::deque<std::int8_t> evacuatedBlockPositionList;
 
   std::vector<int> nodePositionCostList;
+
+  std::vector<int> routeBeforeOne_;
 
   Explorer explorer;
 };

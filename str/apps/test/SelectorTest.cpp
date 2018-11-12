@@ -166,6 +166,44 @@ namespace etrobocon2018_test {
     ASSERT_TRUE(obj.isCarryingWithNext());
   }
 
+  // 初期値において軌跡はないものとする
+  TEST(SelectorTest, checkThereAreNotNodeInInitialRouteTest)
+  {
+    Selector obj;
+    unsigned int expected = 0;
+
+    // あってもなくても関係なし
+    obj.setBlockPositionList(std::vector<std::int8_t>({1, 2, 3}));
+
+    auto actual = obj.extractRoute();
+
+    ASSERT_EQ(expected, actual.size());
+  }
+
+  // 設定した軌跡を返す
+  TEST(SelectorTest, getSomeNodeInRouteWhenRouteIsSetTest)
+  {
+    Selector obj;
+    std::vector<int> expectedList = {0, 1, 2, 3, 7, 11, 15, 14, 13, 12, 8, 4, 5, 6, 10, 9};
+
+
+    obj.updateRoute(expectedList);
+    auto actual = obj.extractRoute();
+
+    ASSERT_EQ(expectedList.size(), actual.size());
+    for (unsigned int i = 0; i < actual.size(); i++)
+        EXPECT_EQ(expectedList[i], actual[i]);
+
+
+    expectedList = {8, 9, 10, 11};
+    obj.updateRoute(expectedList);
+    actual = obj.extractRoute();
+
+    ASSERT_EQ(expectedList.size(), actual.size());
+    for (unsigned int i = 0; i < actual.size(); i++)
+        EXPECT_EQ(expectedList[i], actual[i]);
+  }
+
   // 色を設定すると中央四角形における次に置くべき位置コードを取得する
   TEST(SelectorTest, getNextPositionInCenterIfColorSetInNodeIDTest)
   {
@@ -187,8 +225,8 @@ namespace etrobocon2018_test {
     ASSERT_EQ(-1, actual);
   }
 
-  // 疑似キュー配列のプッシュ機能およびポップ機能を確認する
-  TEST(SelectorTest, checkPushingAndPoppingByPseudoQueueTest)
+  // 疑似スタック配列のプッシュ機能およびポップ機能を確認する
+  TEST(SelectorTest, checkPushingAndPoppingByPseudoStackTest)
   {
     Selector obj;
 
@@ -197,16 +235,16 @@ namespace etrobocon2018_test {
     obj.pushEvacuatedBlockPosition(30);
 
     auto actual = obj.popEvacuatedBlockPosition();
-    ASSERT_EQ(10, actual);
+    ASSERT_EQ(30, actual);
     actual = obj.popEvacuatedBlockPosition();
     ASSERT_EQ(20, actual);
 
     obj.pushEvacuatedBlockPosition(40);
 
     actual = obj.popEvacuatedBlockPosition();
-    ASSERT_EQ(30, actual);
-    actual = obj.popEvacuatedBlockPosition();
     ASSERT_EQ(40, actual);
+    actual = obj.popEvacuatedBlockPosition();
+    ASSERT_EQ(10, actual);
   }
 
   // シナリオテストでノードを探索する
@@ -264,6 +302,7 @@ namespace etrobocon2018_test {
     // 8に移動する
     auto actualMovingToBlue = obj.exploreNextOperation(8, Selector::Undefined);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToBlue.size(), actualMovingToBlue.size());
     for (unsigned int i = 0; i < actualMovingToBlue.size(); i++)
         EXPECT_EQ(actualMovingToBlue[i], expectedMovingToBlue[i]);
@@ -280,6 +319,7 @@ namespace etrobocon2018_test {
     // 10に運搬する
     auto actualCarryingBlue = obj.exploreNextOperation(8, Selector::Blue);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingBlue.size(), actualCarryingBlue.size());
     for (unsigned int i = 0; i < actualCarryingBlue.size(); i++)
         EXPECT_EQ(actualCarryingBlue[i], expectedCarryingBlue[i]);
@@ -296,6 +336,7 @@ namespace etrobocon2018_test {
     // 9に移動する
     auto actualMovingToRed = obj.exploreNextOperation(14, Selector::Undefined);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToRed.size(), actualMovingToRed.size());
     for (unsigned int i = 0; i < actualMovingToRed.size(); i++)
         EXPECT_EQ(actualMovingToRed[i], expectedMovingToRed[i]);
@@ -312,6 +353,7 @@ namespace etrobocon2018_test {
     // 6に運搬する
     auto actualCarryingRed = obj.exploreNextOperation(9, Selector::Red);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingRed.size(), actualCarryingRed.size());
     for (unsigned int i = 0; i < actualCarryingRed.size(); i++)
         EXPECT_EQ(actualCarryingRed[i], expectedCarryingRed[i]);
@@ -328,6 +370,7 @@ namespace etrobocon2018_test {
     // 11に移動する
     auto actualMovingToYellow = obj.exploreNextOperation(5, Selector::Undefined);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToYellow.size(), actualMovingToYellow.size());
     for (unsigned int i = 0; i < actualMovingToYellow.size(); i++)
         EXPECT_EQ(actualMovingToYellow[i], expectedMovingToYellow[i]);
@@ -344,6 +387,7 @@ namespace etrobocon2018_test {
     // 9に運搬する
     auto actualCarryingYellow = obj.exploreNextOperation(11, Selector::Yellow);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingYellow.size(), actualCarryingYellow.size());
     for (unsigned int i = 0; i < actualCarryingYellow.size(); i++)
         EXPECT_EQ(actualCarryingYellow[i], expectedCarryingYellow[i]);
@@ -360,6 +404,7 @@ namespace etrobocon2018_test {
     // 15に移動する
     auto actualMovingToGreen = obj.exploreNextOperation(5, Selector::Undefined);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToGreen.size(), actualMovingToGreen.size());
     for (unsigned int i = 0; i < actualMovingToGreen.size(); i++)
         EXPECT_EQ(actualMovingToGreen[i], expectedMovingToGreen[i]);
@@ -376,6 +421,7 @@ namespace etrobocon2018_test {
     // 5に運搬する
     auto actualCarryingGreen = obj.exploreNextOperation(15, Selector::Green);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingGreen.size(), actualCarryingGreen.size());
     for (unsigned int i = 0; i < actualCarryingGreen.size(); i++)
         EXPECT_EQ(actualCarryingGreen[i], expectedCarryingGreen[i]);
@@ -392,6 +438,7 @@ namespace etrobocon2018_test {
     // 11に移動する
     auto actualMovingTo11 = obj.exploreNextOperation(4, Selector::Undefined);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingTo11.size(), actualMovingTo11.size());
     for (unsigned int i = 0; i < actualMovingTo11.size(); i++)
         EXPECT_EQ(actualMovingTo11[i], expectedMovingTo11[i]);
@@ -428,11 +475,13 @@ namespace etrobocon2018_test {
 
     // 8に移動する
     obj.exploreNextOperation(8, Selector::Undefined);
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_FALSE(obj.isAlreadyAllBlockMoved());
 
     // 12に一時避難する
     auto actualEvacuatingBlue = obj.exploreNextOperation(8, Selector::Blue);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedEvacuatingBlue.size(), actualEvacuatingBlue.size());
     for (unsigned int i = 0; i < actualEvacuatingBlue.size(); i++)
         EXPECT_EQ(actualEvacuatingBlue[i], expectedEvacuatingBlue[i]);
@@ -449,6 +498,7 @@ namespace etrobocon2018_test {
     // 9に移動する
     auto actualMovingToRed = obj.exploreNextOperation(8, Selector::Undefined);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToRed.size(), actualMovingToRed.size());
     for (unsigned int i = 0; i < actualMovingToRed.size(); i++)
         EXPECT_EQ(actualMovingToRed[i], expectedMovingToRed[i]);
@@ -465,6 +515,7 @@ namespace etrobocon2018_test {
     // 6に運搬する
     auto actualCarryingRed = obj.exploreNextOperation(9, Selector::Red);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingRed.size(), actualCarryingRed.size());
     for (unsigned int i = 0; i < actualCarryingRed.size(); i++)
         EXPECT_EQ(actualCarryingRed[i], expectedCarryingRed[i]);
@@ -481,6 +532,7 @@ namespace etrobocon2018_test {
     // 12に戻る
     auto actualReturningToBlue = obj.exploreNextOperation(10, Selector::Undefined);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedReturningToBlue.size(), actualReturningToBlue.size());
     for (unsigned int i = 0; i < actualReturningToBlue.size(); i++)
         EXPECT_EQ(actualReturningToBlue[i], expectedReturningToBlue[i]);
@@ -497,6 +549,7 @@ namespace etrobocon2018_test {
     // 10に運搬する
     auto actualCarryingBlue = obj.exploreNextOperation(12, Selector::Blue);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingBlue.size(), actualCarryingBlue.size());
     for (unsigned int i = 0; i < actualCarryingBlue.size(); i++)
         EXPECT_EQ(actualCarryingBlue[i], expectedCarryingBlue[i]);
@@ -513,7 +566,8 @@ namespace etrobocon2018_test {
     // 13に移動する
     auto actualMovingToYellow = obj.exploreNextOperation(9, Selector::Undefined);
 
-    // ASSERT_EQ(expectedMovingToYellow.size(), actualMovingToYellow.size());
+    ASSERT_EQ(expectedMovingToYellow.size(), actualMovingToYellow.size());
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     for (unsigned int i = 0; i < actualMovingToYellow.size(); i++)
         EXPECT_EQ(actualMovingToYellow[i], expectedMovingToYellow[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
@@ -529,6 +583,7 @@ namespace etrobocon2018_test {
     // 9に運搬する
     auto actualCarryingYellow = obj.exploreNextOperation(13, Selector::Yellow);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingYellow.size(), actualCarryingYellow.size());
     for (unsigned int i = 0; i < actualCarryingYellow.size(); i++)
         EXPECT_EQ(actualCarryingYellow[i], expectedCarryingYellow[i]);
@@ -545,6 +600,7 @@ namespace etrobocon2018_test {
     // 4に移動する
     auto actualMovingToGreen = obj.exploreNextOperation(13, Selector::Undefined);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToGreen.size(), actualMovingToGreen.size());
     for (unsigned int i = 0; i < actualMovingToGreen.size(); i++)
         EXPECT_EQ(actualMovingToGreen[i], expectedMovingToGreen[i]);
@@ -561,6 +617,7 @@ namespace etrobocon2018_test {
     // 5に運搬する
     auto actualCarryingGreen = obj.exploreNextOperation(4, Selector::Green);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingGreen.size(), actualCarryingGreen.size());
     for (unsigned int i = 0; i < actualCarryingGreen.size(); i++)
         EXPECT_EQ(actualCarryingGreen[i], expectedCarryingGreen[i]);
@@ -577,6 +634,7 @@ namespace etrobocon2018_test {
     // 11に移動する
     auto actualMovingTo11 = obj.exploreNextOperation(4, Selector::Undefined);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingTo11.size(), actualMovingTo11.size());
     for (unsigned int i = 0; i < actualMovingTo11.size(); i++)
         EXPECT_EQ(actualMovingTo11[i], expectedMovingTo11[i]);
@@ -613,11 +671,13 @@ namespace etrobocon2018_test {
 
     // 8に移動する
     obj.exploreNextOperation(8, Selector::Undefined);
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_FALSE(obj.isAlreadyAllBlockMoved());
 
     // 12に一時避難する
     auto actualEvacuatingBlue = obj.exploreNextOperation(8, Selector::Blue);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedEvacuatingBlue.size(), actualEvacuatingBlue.size());
     for (unsigned int i = 0; i < actualEvacuatingBlue.size(); i++)
         EXPECT_EQ(actualEvacuatingBlue[i], expectedEvacuatingBlue[i]);
@@ -634,6 +694,7 @@ namespace etrobocon2018_test {
     // 10に移動する
     auto actualMovingToGreen = obj.exploreNextOperation(8, Selector::Undefined);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToGreen.size(), actualMovingToGreen.size());
     for (unsigned int i = 0; i < actualMovingToGreen.size(); i++)
         EXPECT_EQ(actualMovingToGreen[i], expectedMovingToGreen[i]);
@@ -650,6 +711,7 @@ namespace etrobocon2018_test {
     // 5に運搬する
     auto actualCarryingGreen = obj.exploreNextOperation(10, Selector::Green);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingGreen.size(), actualCarryingGreen.size());
     for (unsigned int i = 0; i < actualCarryingGreen.size(); i++)
         EXPECT_EQ(actualCarryingGreen[i], expectedCarryingGreen[i]);
@@ -666,6 +728,7 @@ namespace etrobocon2018_test {
     // 12に移動する
     auto actualReturningToBlue = obj.exploreNextOperation(9, Selector::Undefined);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedReturningToBlue.size(), actualReturningToBlue.size());
     for (unsigned int i = 0; i < actualReturningToBlue.size(); i++)
         EXPECT_EQ(actualReturningToBlue[i], expectedReturningToBlue[i]);
@@ -682,6 +745,7 @@ namespace etrobocon2018_test {
     // 10に運搬する
     auto actualCarryingBlue = obj.exploreNextOperation(12, Selector::Blue);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingBlue.size(), actualCarryingBlue.size());
     for (unsigned int i = 0; i < actualCarryingBlue.size(); i++)
         EXPECT_EQ(actualCarryingBlue[i], expectedCarryingBlue[i]);
@@ -698,6 +762,7 @@ namespace etrobocon2018_test {
     // 6に移動する
     auto actualMovingToYellow = obj.exploreNextOperation(14, Selector::Undefined);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToYellow.size(), actualMovingToYellow.size());
     for (unsigned int i = 0; i < actualMovingToYellow.size(); i++)
         EXPECT_EQ(actualMovingToYellow[i], expectedMovingToYellow[i]);
@@ -714,6 +779,7 @@ namespace etrobocon2018_test {
     // 9に運搬する
     auto actualCarryingYellow = obj.exploreNextOperation(6, Selector::Yellow);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingYellow.size(), actualCarryingYellow.size());
     for (unsigned int i = 0; i < actualCarryingYellow.size(); i++)
         EXPECT_EQ(actualCarryingYellow[i], expectedCarryingYellow[i]);
@@ -730,6 +796,7 @@ namespace etrobocon2018_test {
     // 3に移動する
     auto actualMovingToRed = obj.exploreNextOperation(13, Selector::Undefined);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToRed.size(), actualMovingToRed.size());
     for (unsigned int i = 0; i < actualMovingToRed.size(); i++)
         EXPECT_EQ(actualMovingToRed[i], expectedMovingToRed[i]);
@@ -746,6 +813,7 @@ namespace etrobocon2018_test {
     // 6に運搬する
     auto actualCarryingRed = obj.exploreNextOperation(3, Selector::Red);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingRed.size(), actualCarryingRed.size());
     for (unsigned int i = 0; i < actualCarryingRed.size(); i++)
         EXPECT_EQ(actualCarryingRed[i], expectedCarryingRed[i]);
@@ -777,7 +845,7 @@ namespace etrobocon2018_test {
   }
 
   // 運搬先の運搬先の運搬先が埋まっている場合の一連のルートを探索する
-  TEST(SelectorTest, DISABLED_searchRouteWhenNextOfNextOfNextMovedPositionIsBuried)
+  TEST(SelectorTest, searchRouteWhenNextOfNextOfNextMovedPositionIsBuried)
   {
     Selector obj;
     std::vector<std::int8_t> blockList{{5, 6, 8, 10}};
@@ -786,33 +854,109 @@ namespace etrobocon2018_test {
     // std::vector<int> expectedEvacuatingBlue = {8, 12};
     // std::vector<int> expectedMovingToRed = {8, 9, 10};
     std::vector<int> expectedMovingToGreen = {9, 13, 14, 15, 11, 7, 6};
-    std::vector<int> expectedCarryingGreen = {10, 9, 5};
-    std::vector<int> expectedReturningToBlue = {9, 13, 12};
+    std::vector<int> expectedMovingToYellow = {7, 3, 2, 1, 5};
+    std::vector<int> expectedCarryingYellow = {5, 9};
+    std::vector<int> expectedReturningToGreen = {5, 6};
+    std::vector<int> expectedCarryingGreen = {6, 5};
+    std::vector<int> expectedReturningToRed = {6, 10};
+    std::vector<int> expectedCarryingRed = {10, 6};
+    std::vector<int> expectedReturningToBlue = {10, 14, 13, 12};
     std::vector<int> expectedCarryingBlue = {12, 13, 14, 10};
-    std::vector<int> expectedMovingToYellow = {14, 15, 11, 7, 6};
-    std::vector<int> expectedCarryingYellow = {6, 7, 11, 15, 14, 13, 9};
-    std::vector<int> expectedMovingToRed = {13, 14, 15, 11, 7, 3};
-    std::vector<int> expectedCarryingRed = {3, 7, 6};
-    std::vector<int> expectedMovingTo11 = {7, 11};
+    std::vector<int> expectedMovingTo11 = {14, 15, 11};
 
     obj.setBlockPositionList(blockList);
 
     // 8に移動する
     obj.exploreNextOperation(8, Selector::Undefined);
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_FALSE(obj.isAlreadyAllBlockMoved());
 
     // 12に一時避難する
     obj.exploreNextOperation(8, Selector::Blue);
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
+    ASSERT_EQ(5, obj.getBlockPositionList()[0]);
+    ASSERT_EQ(6, obj.getBlockPositionList()[1]);
+    ASSERT_EQ(12, obj.getBlockPositionList()[2]);
+    ASSERT_EQ(10, obj.getBlockPositionList()[3]);
     ASSERT_FALSE(obj.isAlreadyAllBlockMoved());
 
     // 10に移動する
     obj.exploreNextOperation(8, Selector::Undefined);
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
+    ASSERT_FALSE(obj.isAlreadyAllBlockMoved());
+
+    // 6に移動する
+    auto actualMovingToGreen = obj.exploreNextOperation(10, Selector::Red);
+
+    ASSERT_TRUE(obj.isBacksteppingBeforeNextOperation());
+    ASSERT_EQ(expectedMovingToGreen.size(), actualMovingToGreen.size());
+    for (unsigned int i = 0; i < actualMovingToGreen.size(); i++)
+        EXPECT_EQ(actualMovingToGreen[i], expectedMovingToGreen[i]);
+    ASSERT_FALSE(obj.isEvacuatingWithNext());
+    ASSERT_TRUE(obj.isMovingWithNext());
+    ASSERT_FALSE(obj.isCarryingWithNext());
+    ASSERT_FALSE(obj.isBackstepping());
+    ASSERT_EQ(5, obj.getBlockPositionList()[0]);
+    ASSERT_EQ(6, obj.getBlockPositionList()[1]);
+    ASSERT_EQ(12, obj.getBlockPositionList()[2]);
+    ASSERT_EQ(10, obj.getBlockPositionList()[3]);
     ASSERT_FALSE(obj.isAlreadyAllBlockMoved());
 
     // 5に移動する
-    auto actualCarryingGreen = obj.exploreNextOperation(10, Selector::Green);
+    auto actualMovingToYellow = obj.exploreNextOperation(6, Selector::Green);
 
     ASSERT_TRUE(obj.isBacksteppingBeforeNextOperation());
+    ASSERT_EQ(expectedMovingToYellow.size(), actualMovingToYellow.size());
+    for (unsigned int i = 0; i < actualMovingToYellow.size(); i++)
+        EXPECT_EQ(actualMovingToYellow[i], expectedMovingToYellow[i]);
+    ASSERT_FALSE(obj.isEvacuatingWithNext());
+    ASSERT_TRUE(obj.isMovingWithNext());
+    ASSERT_FALSE(obj.isCarryingWithNext());
+    ASSERT_FALSE(obj.isBackstepping());
+    ASSERT_EQ(5, obj.getBlockPositionList()[0]);
+    ASSERT_EQ(6, obj.getBlockPositionList()[1]);
+    ASSERT_EQ(12, obj.getBlockPositionList()[2]);
+    ASSERT_EQ(10, obj.getBlockPositionList()[3]);
+    ASSERT_FALSE(obj.isAlreadyAllBlockMoved());
+
+    // 9に運搬する
+    auto actualCarryingYellow = obj.exploreNextOperation(5, Selector::Yellow);
+
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
+    ASSERT_EQ(expectedCarryingYellow.size(), actualCarryingYellow.size());
+    for (unsigned int i = 0; i < actualCarryingYellow.size(); i++)
+        EXPECT_EQ(actualCarryingYellow[i], expectedCarryingYellow[i]);
+    ASSERT_FALSE(obj.isEvacuatingWithNext());
+    ASSERT_FALSE(obj.isMovingWithNext());
+    ASSERT_TRUE(obj.isCarryingWithNext());
+    ASSERT_TRUE(obj.isBackstepping());
+    ASSERT_EQ(9, obj.getBlockPositionList()[0]);
+    ASSERT_EQ(6, obj.getBlockPositionList()[1]);
+    ASSERT_EQ(12, obj.getBlockPositionList()[2]);
+    ASSERT_EQ(10, obj.getBlockPositionList()[3]);
+    ASSERT_FALSE(obj.isAlreadyAllBlockMoved());
+
+    // 6に戻る
+    auto actualReturningToGreen = obj.exploreNextOperation(5, Selector::Undefined);
+
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
+    ASSERT_EQ(expectedReturningToGreen.size(), actualReturningToGreen.size());
+    for (unsigned int i = 0; i < actualReturningToGreen.size(); i++)
+        EXPECT_EQ(actualReturningToGreen[i], expectedReturningToGreen[i]);
+    ASSERT_FALSE(obj.isEvacuatingWithNext());
+    ASSERT_TRUE(obj.isMovingWithNext());
+    ASSERT_FALSE(obj.isCarryingWithNext());
+    ASSERT_FALSE(obj.isBackstepping());
+    ASSERT_EQ(9, obj.getBlockPositionList()[0]);
+    ASSERT_EQ(6, obj.getBlockPositionList()[1]);
+    ASSERT_EQ(12, obj.getBlockPositionList()[2]);
+    ASSERT_EQ(10, obj.getBlockPositionList()[3]);
+    ASSERT_FALSE(obj.isAlreadyAllBlockMoved());
+
+    // 5に運搬する
+    auto actualCarryingGreen = obj.exploreNextOperation(6, Selector::Green);
+
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingGreen.size(), actualCarryingGreen.size());
     for (unsigned int i = 0; i < actualCarryingGreen.size(); i++)
         EXPECT_EQ(actualCarryingGreen[i], expectedCarryingGreen[i]);
@@ -820,44 +964,92 @@ namespace etrobocon2018_test {
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
     ASSERT_TRUE(obj.isBackstepping());
-    ASSERT_EQ(3, obj.getBlockPositionList()[0]);
-    ASSERT_EQ(6, obj.getBlockPositionList()[1]);
+    ASSERT_EQ(9, obj.getBlockPositionList()[0]);
+    ASSERT_EQ(5, obj.getBlockPositionList()[1]);
     ASSERT_EQ(12, obj.getBlockPositionList()[2]);
-    ASSERT_EQ(5, obj.getBlockPositionList()[3]);
+    ASSERT_EQ(10, obj.getBlockPositionList()[3]);
     ASSERT_FALSE(obj.isAlreadyAllBlockMoved());
 
-    // // 12に移動する
-    // auto actualReturningToBlue = obj.exploreNextOperation(9, Selector::Undefined);
-    //
-    // ASSERT_EQ(expectedReturningToBlue.size(), actualReturningToBlue.size());
-    // for (unsigned int i = 0; i < actualReturningToBlue.size(); i++)
-    //     EXPECT_EQ(actualReturningToBlue[i], expectedReturningToBlue[i]);
-    // ASSERT_FALSE(obj.isEvacuatingWithNext());
-    // ASSERT_TRUE(obj.isMovingWithNext());
-    // ASSERT_FALSE(obj.isCarryingWithNext());
-    // ASSERT_FALSE(obj.isBackstepping());
-    // ASSERT_EQ(3, obj.getBlockPositionList()[0]);
-    // ASSERT_EQ(6, obj.getBlockPositionList()[1]);
-    // ASSERT_EQ(12, obj.getBlockPositionList()[2]);
-    // ASSERT_EQ(5, obj.getBlockPositionList()[3]);
-    // ASSERT_FALSE(obj.isAlreadyAllBlockMoved());
-    //
-    // // 10に運搬する
-    // auto actualCarryingBlue = obj.exploreNextOperation(12, Selector::Blue);
-    //
-    // ASSERT_EQ(expectedCarryingBlue.size(), actualCarryingBlue.size());
-    // for (unsigned int i = 0; i < actualCarryingBlue.size(); i++)
-    //     EXPECT_EQ(actualCarryingBlue[i], expectedCarryingBlue[i]);
-    // ASSERT_FALSE(obj.isEvacuatingWithNext());
-    // ASSERT_FALSE(obj.isMovingWithNext());
-    // ASSERT_TRUE(obj.isCarryingWithNext());
-    // ASSERT_TRUE(obj.isBackstepping());
-    // ASSERT_EQ(3, obj.getBlockPositionList()[0]);
-    // ASSERT_EQ(6, obj.getBlockPositionList()[1]);
-    // ASSERT_EQ(10, obj.getBlockPositionList()[2]);
-    // ASSERT_EQ(5, obj.getBlockPositionList()[3]);
-    // ASSERT_FALSE(obj.isAlreadyAllBlockMoved());
+    // 10に戻る
+    auto actualReturningToRed = obj.exploreNextOperation(6, Selector::Undefined);
 
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
+    ASSERT_EQ(expectedReturningToRed.size(), actualReturningToRed.size());
+    for (unsigned int i = 0; i < actualReturningToRed.size(); i++)
+        EXPECT_EQ(actualReturningToRed[i], expectedReturningToRed[i]);
+    ASSERT_FALSE(obj.isEvacuatingWithNext());
+    ASSERT_TRUE(obj.isMovingWithNext());
+    ASSERT_FALSE(obj.isCarryingWithNext());
+    ASSERT_FALSE(obj.isBackstepping());
+    ASSERT_EQ(9, obj.getBlockPositionList()[0]);
+    ASSERT_EQ(5, obj.getBlockPositionList()[1]);
+    ASSERT_EQ(12, obj.getBlockPositionList()[2]);
+    ASSERT_EQ(10, obj.getBlockPositionList()[3]);
+    ASSERT_FALSE(obj.isAlreadyAllBlockMoved());
+
+    // 6に運搬する
+    auto actualCarryingRed = obj.exploreNextOperation(10, Selector::Red);
+
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
+    ASSERT_EQ(expectedCarryingRed.size(), actualCarryingRed.size());
+    for (unsigned int i = 0; i < actualCarryingRed.size(); i++)
+        EXPECT_EQ(actualCarryingRed[i], expectedCarryingRed[i]);
+    ASSERT_FALSE(obj.isEvacuatingWithNext());
+    ASSERT_FALSE(obj.isMovingWithNext());
+    ASSERT_TRUE(obj.isCarryingWithNext());
+    ASSERT_TRUE(obj.isBackstepping());
+    ASSERT_EQ(9, obj.getBlockPositionList()[0]);
+    ASSERT_EQ(5, obj.getBlockPositionList()[1]);
+    ASSERT_EQ(12, obj.getBlockPositionList()[2]);
+    ASSERT_EQ(6, obj.getBlockPositionList()[3]);
+    ASSERT_FALSE(obj.isAlreadyAllBlockMoved());
+
+    // 12に戻る
+    auto actualReturningToBlue = obj.exploreNextOperation(10, Selector::Undefined);
+
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
+    ASSERT_EQ(expectedReturningToBlue.size(), actualReturningToBlue.size());
+    for (unsigned int i = 0; i < actualReturningToBlue.size(); i++)
+        EXPECT_EQ(actualReturningToBlue[i], expectedReturningToBlue[i]);
+    ASSERT_FALSE(obj.isEvacuatingWithNext());
+    ASSERT_TRUE(obj.isMovingWithNext());
+    ASSERT_FALSE(obj.isCarryingWithNext());
+    ASSERT_FALSE(obj.isBackstepping());
+    ASSERT_EQ(9, obj.getBlockPositionList()[0]);
+    ASSERT_EQ(5, obj.getBlockPositionList()[1]);
+    ASSERT_EQ(12, obj.getBlockPositionList()[2]);
+    ASSERT_EQ(6, obj.getBlockPositionList()[3]);
+    ASSERT_FALSE(obj.isAlreadyAllBlockMoved());
+
+    // 10に運搬する
+    auto actualCarryingBlue = obj.exploreNextOperation(12, Selector::Blue);
+
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
+    ASSERT_EQ(expectedCarryingBlue.size(), actualCarryingBlue.size());
+    for (unsigned int i = 0; i < actualCarryingBlue.size(); i++)
+        EXPECT_EQ(actualCarryingBlue[i], expectedCarryingBlue[i]);
+    ASSERT_FALSE(obj.isEvacuatingWithNext());
+    ASSERT_FALSE(obj.isMovingWithNext());
+    ASSERT_TRUE(obj.isCarryingWithNext());
+    ASSERT_TRUE(obj.isBackstepping());
+    ASSERT_EQ(9, obj.getBlockPositionList()[0]);
+    ASSERT_EQ(5, obj.getBlockPositionList()[1]);
+    ASSERT_EQ(10, obj.getBlockPositionList()[2]);
+    ASSERT_EQ(6, obj.getBlockPositionList()[3]);
+    ASSERT_TRUE(obj.isAlreadyAllBlockMoved());
+
+    // 11に移動する
+    auto actualMovingTo11 = obj.exploreNextOperation(14, Selector::Undefined);
+
+    ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
+    ASSERT_EQ(expectedMovingTo11.size(), actualMovingTo11.size());
+    for (unsigned int i = 0; i < actualMovingTo11.size(); i++)
+        EXPECT_EQ(actualMovingTo11[i], expectedMovingTo11[i]);
+    ASSERT_FALSE(obj.isEvacuatingWithNext());
+    ASSERT_TRUE(obj.isMovingWithNext());
+    ASSERT_FALSE(obj.isCarryingWithNext());
+    ASSERT_FALSE(obj.isBackstepping());
+    ASSERT_TRUE(obj.isAlreadyAllBlockMoved());
   }
 
 }  // namespace etrobocon2018_test
