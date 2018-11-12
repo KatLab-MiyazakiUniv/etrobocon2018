@@ -3,6 +3,7 @@
 std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, BlockColor color)
 {
   const std::int8_t shelterWhenPathBlocked = 12;
+  const std::int8_t shelterWhenAllNodeInitialPositionsIsFromCenter = 12;
   const std::int8_t goal = 11;
   auto nextBlock = searchBlockPosition(currentPosition);
   auto nextMovedPosition = getPositionOfCenterQuadirilateral(color);
@@ -12,6 +13,8 @@ std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, Blo
   backsteppingFlag = false;
   backsteppingBeforeNextOeperationFlag = false;
   isClearGame = !isAlreadyMovedNode(EMPTY_ID);
+
+
 
   if (currentPosition == 8 && nextBlock == 8)
   {
@@ -33,6 +36,11 @@ std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, Blo
         next = searchMostPoorCostShelter(currentPosition);
         pushEvacuatedBlockPosition(next);
       }
+      // else if (explorer.hasBlock(4) && explorer.hasBlock(9) && explorer.hasBlock(12))
+      // {
+      //   // もし最初の位置コード8のブロックを囲むように周りにブロックが存在した場合
+      //   // 現在は未実装
+      // }
       else
       {
         setNext(Carrying);
@@ -40,12 +48,13 @@ std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, Blo
       }
     }
   }
-  else if (isClearGame)
+  else if (lastBlock != EMPTY_ID && std::distance(movedBlockPositionList.begin(), std::find(movedBlockPositionList.begin(), movedBlockPositionList.end(), EMPTY_ID)) == 3)
   {
     setNext(Moving);
-    next = goal;
+    next = lastBlock;
+    lastBlock = EMPTY_ID;
   }
-  else
+  else if (!isClearGame)
   {
     if (color == Undefined)
     {
@@ -54,11 +63,11 @@ std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, Blo
         setNext(Moving);
         next = popEvacuatedBlockPosition();
       }
-      else if (evacuatedSize > 0 && isCarriedToSelter)
+      else if (evacuatedSize > 0 && isCarriedToShelter)
       {
         setNext(Moving);
         next = popEvacuatedBlockPosition();
-        isCarriedToSelter = false;
+        isCarriedToShelter = false;
       }
       else
       {
@@ -67,13 +76,19 @@ std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, Blo
     }
     else
     {
-      if (explorer.hasBlock(nextMovedPosition))
+      if (explorer.hasBlock(5) && explorer.hasBlock(6) && explorer.hasBlock(9) && explorer.hasBlock(10))
+      {
+        setNext(Evacuating);
+        next = shelterWhenAllNodeInitialPositionsIsFromCenter;
+        lastBlock = shelterWhenAllNodeInitialPositionsIsFromCenter;
+      }
+      else if (explorer.hasBlock(nextMovedPosition))
       {
         if (canFindBlockInEvacuatedList(nextMovedPosition))
         {
           next = searchMostPoorCostShelter(currentPosition);
           setNext(Evacuating);
-          isCarriedToSelter = true;
+          isCarriedToShelter = true;
         }
         else
         {
@@ -91,13 +106,18 @@ std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, Blo
       }
     }
   }
+  else // if (isClearGame)
+  {
+    setNext(Moving);
+    next = goal;
+  }
+
+
 
   if (evacuatingFlag || carryingFlag) backsteppingFlag = true;
 
   if ((evacuatingFlag || carryingFlag) && !backsteppingBeforeNextOeperationFlag)
-  {
-    changeBlockPosition(currentPosition, next);
-  }
+      changeBlockPosition(currentPosition, next);
 
   explorer.resetBlockArea();
   for (auto position: blockPositionList) explorer.setHasBlockIn(position);
@@ -120,10 +140,7 @@ std::vector<int> Selector::exploreNextOperation(std::int8_t currentPosition, Blo
     }
   }
 
-  if (carryingFlag)
-  {
-    addMovedBlockPosition(next);
-  }
+  if (carryingFlag) addMovedBlockPosition(next);
 
   return route;
 }

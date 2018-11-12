@@ -205,13 +205,15 @@ class Selector {
 
   bool backsteppingBeforeNextOeperationFlag = false;
 
-  bool isCarriedToSelter = false;
+  bool isCarriedToShelter = false;
 
   bool isClearGame = false;
 
   std::int8_t movedCount = 0;
 
   std::int8_t evacuatedSize = 0;
+
+  std::int8_t lastBlock = EMPTY_ID;
 
   std::vector<std::int8_t> blockPositionList;
 
