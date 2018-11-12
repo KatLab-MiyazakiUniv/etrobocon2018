@@ -29,7 +29,6 @@ class BlockSolver {
       blockStrategy(ipc),
       targetBrightness(targetBrightness_)
   {
-    selector.setBlockPositionList(blockStrategy.decodedColorBlockCodeList);
   }
 
   //! デモです。アリアに従って移動します。
@@ -78,6 +77,7 @@ class BlockSolver {
   BlockSideBySide::BlockStrategy blockStrategy;
   std::int16_t targetBrightness;
   std::int8_t nowPlace = 8;
+
   Color convertColor(const BlockSideBySide::GameColor& gameColor);
 };
 
