@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: Motor クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
+      <li><a href="inherits.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="class_motor-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">Motor クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_mock_controller_8h_source.html">MockController.h</a>&gt;</code></p>
+<div class="dynheader">
+Motor 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motor__coll__graph.png" border="0" usemap="#_motor_coll__map" alt="Collaboration graph"/></div>
+<map name="_motor_coll__map" id="_motor_coll__map">
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a3e00c03e32641e0126655dccbf94fcc3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor.html#a3e00c03e32641e0126655dccbf94fcc3">getCount</a> ()</td></tr>
+<tr class="separator:a3e00c03e32641e0126655dccbf94fcc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae744997c22ab078a068eddc2692adf19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor.html#ae744997c22ab078a068eddc2692adf19">setPWM</a> (int pwm)</td></tr>
+<tr class="separator:ae744997c22ab078a068eddc2692adf19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a015fd5308d4d27e5dcf7f9ea3d5c03f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor.html#a015fd5308d4d27e5dcf7f9ea3d5c03f6">stop</a> ()</td></tr>
+<tr class="separator:a015fd5308d4d27e5dcf7f9ea3d5c03f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e15bdd1b60545cacf209ab45f61165"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor.html#a41e15bdd1b60545cacf209ab45f61165">reset</a> ()</td></tr>
+<tr class="separator:a41e15bdd1b60545cacf209ab45f61165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a357281191950d6dcfbc7ffabbd4bfca4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor.html#a357281191950d6dcfbc7ffabbd4bfca4">setBrake</a> (bool isBrake)</td></tr>
+<tr class="separator:a357281191950d6dcfbc7ffabbd4bfca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:aba8c3bd6e51fdb9e10bb46240f7c7fe5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor.html#aba8c3bd6e51fdb9e10bb46240f7c7fe5">count</a> = 0.0</td></tr>
+<tr class="separator:aba8c3bd6e51fdb9e10bb46240f7c7fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00008">8</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="a3e00c03e32641e0126655dccbf94fcc3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Motor::getCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00011">11</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{ <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code" href="class_motor.html#aba8c3bd6e51fdb9e10bb46240f7c7fe5">count</a>); };</div>
+<div class="ttc" id="class_motor_html_aba8c3bd6e51fdb9e10bb46240f7c7fe5"><div class="ttname"><a href="class_motor.html#aba8c3bd6e51fdb9e10bb46240f7c7fe5">Motor::count</a></div><div class="ttdeci">double count</div><div class="ttdef"><b>Definition:</b> <a href="_mock_controller_8h_source.html#l00010">MockController.h:10</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a41e15bdd1b60545cacf209ab45f61165"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Motor::reset </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00018">18</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a357281191950d6dcfbc7ffabbd4bfca4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Motor::setBrake </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isBrake</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00019">19</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ae744997c22ab078a068eddc2692adf19"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Motor::setPWM </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pwm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00012">12</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_motor.html#aba8c3bd6e51fdb9e10bb46240f7c7fe5">count</a> += pwm * 0.05;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// std::cout &lt;&lt; count &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  };</div>
+<div class="ttc" id="class_motor_html_aba8c3bd6e51fdb9e10bb46240f7c7fe5"><div class="ttname"><a href="class_motor.html#aba8c3bd6e51fdb9e10bb46240f7c7fe5">Motor::count</a></div><div class="ttdeci">double count</div><div class="ttdef"><b>Definition:</b> <a href="_mock_controller_8h_source.html#l00010">MockController.h:10</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a015fd5308d4d27e5dcf7f9ea3d5c03f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Motor::stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00017">17</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a class="anchor" id="aba8c3bd6e51fdb9e10bb46240f7c7fe5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Motor::count = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00010">10</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/apps/test/<a class="el" href="_mock_controller_8h_source.html">MockController.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

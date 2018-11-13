@@ -1,0 +1,29 @@
+<map id="LPF::sensor" name="LPF::sensor">
+<area shape="rect" id="node2" href="$class_turn_control.html#a4de8a0d2496220ab73f078ac0f3fd1a1" title="TurnControl::calculateTurn\lForPid" alt="" coords="147,534,323,575"/>
+<area shape="rect" id="node28" href="$namespaceetrobocon2018__test.html#ab6326b2447620e63839e0ed2ae4f4144" title="etrobocon2018_test\l::TEST" alt="" coords="167,599,303,641"/>
+<area shape="rect" id="node3" href="$class_line_tracer_walker.html#a4b5b94728a9b0d145a67816ad1fadc02" title="LineTracerWalker::runLine" alt="" coords="371,541,546,568"/>
+<area shape="rect" id="node4" href="$class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a" title="指定した色のブロック置き場までライントレースします。 " alt="" coords="610,95,798,137"/>
+<area shape="rect" id="node10" href="$class_left_course.html#ae76ee13a3a287b5bbe6b90c2ad9bd368" title="LeftCourse::runGoStraight" alt="" coords="617,453,791,480"/>
+<area shape="rect" id="node12" href="$class_left_normal_course.html#a735173d6fe4db035e57ecbd9b1424d9e" title="LeftNormalCourse::runNormal\lCourse" alt="" coords="606,505,802,546"/>
+<area shape="rect" id="node14" href="$class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="625,331,783,357"/>
+<area shape="rect" id="node22" href="$class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd" title="指定した距離分ライントレースして指定した色があると停止する " alt="" coords="622,403,786,429"/>
+<area shape="rect" id="node23" href="$class_parking.html#a0ced699cd4a26fa9d3f0084be7aad329" title="Parking::runParpendicular" alt="" coords="619,571,789,597"/>
+<area shape="rect" id="node24" href="$class_parking.html#a1c8534b97e4fb30fb02eb3c2f9ff95a0" title="Parking::runParallel" alt="" coords="637,621,771,648"/>
+<area shape="rect" id="node25" href="$class_right_course.html#a804b99d8ed8922af394d029d65e0008c" title="RightCourse::moveBlockAreaTo8" alt="" coords="595,672,813,699"/>
+<area shape="rect" id="node26" href="$class_right_course.html#a06e136e501549c2a13709e044755e7df" title="RightCourse::runPuzzle" alt="" coords="623,723,785,749"/>
+<area shape="rect" id="node27" href="$class_right_course.html#a0718c3e06bc3377fdb7a3334029323fb" title="RightCourse::runNormalCourse" alt="" coords="601,773,807,800"/>
+<area shape="rect" id="node5" href="$class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="1379,103,1511,129"/>
+<area shape="rect" id="node6" href="$class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1386,27,1505,53"/>
+<area shape="rect" id="node7" href="$class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="879,77,1063,104"/>
+<area shape="rect" id="node8" href="$class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="1141,77,1318,104"/>
+<area shape="rect" id="node9" href="$class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="1146,27,1313,53"/>
+<area shape="rect" id="node11" href="$class_left_course.html#af1faf09b5d0ac101ceb1fec6e60bfe1a" title="LeftCourse::runGoBlack" alt="" coords="889,483,1052,509"/>
+<area shape="rect" id="node13" href="$class_left_course.html#a9bbbc6e2b68c99c5baaa9b8a7a951cb6" title="LeftCourse::runNormalCourse" alt="" coords="873,533,1069,560"/>
+<area shape="rect" id="node15" href="$class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="883,331,1059,357"/>
+<area shape="rect" id="node17" href="$class_a_i_answer.html#a81cbdae4bd9ff02c895f2ccef9920f90" title="デジタル数字の場所まで行く " alt="" coords="862,280,1079,307"/>
+<area shape="rect" id="node18" href="$class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="870,179,1071,205"/>
+<area shape="rect" id="node19" href="$class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="888,432,1053,459"/>
+<area shape="rect" id="node21" href="$class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="888,381,1053,408"/>
+<area shape="rect" id="node16" href="$class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="1177,356,1282,383"/>
+<area shape="rect" id="node20" href="$class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="1128,432,1331,459"/>
+</map>

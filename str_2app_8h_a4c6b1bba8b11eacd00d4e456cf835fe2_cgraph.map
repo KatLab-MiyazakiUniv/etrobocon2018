@@ -1,0 +1,6 @@
+<map id="sensor_log_task" name="sensor_log_task">
+<area shape="rect" id="node2" href="$class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3" title="Controller::printDisplay" alt="" coords="175,5,329,32"/>
+<area shape="rect" id="node3" href="$classev3api_1_1_clock.html#a044403e10e530c8857cae901cdeb9999" title="ev3api::Clock::now" alt="" coords="185,56,319,83"/>
+<area shape="rect" id="node5" href="$classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="171,107,333,133"/>
+<area shape="rect" id="node4" href="$classev3api_1_1_clock.html#a4e0631ed1cccad6401b473dcf64f4fe1" title="ev3api::Clock::getTim" alt="" coords="382,56,533,83"/>
+</map>

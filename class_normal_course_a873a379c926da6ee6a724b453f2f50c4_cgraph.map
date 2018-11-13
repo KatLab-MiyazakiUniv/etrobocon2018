@@ -1,0 +1,9 @@
+<map id="NormalCourse::runOrStop" name="NormalCourse::runOrStop">
+<area shape="rect" id="node2" href="$class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961" title="LineTracerWalker::getForward" alt="" coords="227,5,424,32"/>
+<area shape="rect" id="node3" href="$class_walker.html#a665540aeed857d2e35565e1949e6abec" title="Walker::run" alt="" coords="281,56,370,83"/>
+<area shape="rect" id="node8" href="$class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390" title="LineTracerWalker::getTurn" alt="" coords="237,107,413,133"/>
+<area shape="rect" id="node4" href="$class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3" title="Controller::printDisplay" alt="" coords="473,5,628,32"/>
+<area shape="rect" id="node5" href="$class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="473,56,629,83"/>
+<area shape="rect" id="node7" href="$classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="888,81,1048,108"/>
+<area shape="rect" id="node6" href="$classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="678,56,839,83"/>
+</map>

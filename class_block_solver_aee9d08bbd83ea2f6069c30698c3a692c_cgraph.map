@@ -1,0 +1,51 @@
+<map id="BlockSolver::run" name="BlockSolver::run">
+<area shape="rect" id="node2" href="$class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a" title="指定した色のブロック置き場までライントレースします。 " alt="" coords="707,249,895,290"/>
+<area shape="rect" id="node18" href="$class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="193,619,359,645"/>
+<area shape="rect" id="node24" href="$class_selector.html#a54b24940aa1eeb1c2432512f9cf09220" title="Selector::setBlockPositionList" alt="" coords="177,887,375,913"/>
+<area shape="rect" id="node25" href="$class_selector.html#a6f69a6d37a65e30cbef65e1d9e2ef3df" title="Selector::isAlreadyAllBlock\lMoved" alt="" coords="186,938,366,979"/>
+<area shape="rect" id="node26" href="$class_selector.html#a0fdb154d0341aed4c2df2a38a8bd0676" title="Selector::exploreNextOperation" alt="" coords="174,1069,378,1096"/>
+<area shape="rect" id="node42" href="$class_selector.html#abd53d5bd964153b08b9c043b2faf2598" title="Selector::isBackstepping\lBeforeNextOperation" alt="" coords="193,1121,359,1162"/>
+<area shape="rect" id="node43" href="$class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="187,695,365,721"/>
+<area shape="rect" id="node44" href="$class_selector.html#abe89790dcf13c5662040b4b842c32840" title="Selector::isMovingWithNext" alt="" coords="183,1187,369,1213"/>
+<area shape="rect" id="node45" href="$class_block_solver.html#ab82a21046107a859adbb5a144ceaa63e" title="ブロックの色を取得し、blockColorに格納します。 " alt="" coords="445,416,627,443"/>
+<area shape="rect" id="node48" href="$class_block_solver.html#ad662ef850e3f661b3eb3ce7eca51eb2c" title="BlockSolver::convertSelector\lColor" alt="" coords="181,1238,371,1279"/>
+<area shape="rect" id="node49" href="$class_selector.html#a0e18f38bafc319ff91256ccb8d6d9cad" title="Selector::isBackstepping" alt="" coords="193,1304,359,1331"/>
+<area shape="rect" id="node50" href="$class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="439,644,633,671"/>
+<area shape="rect" id="node3" href="$class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="998,467,1127,493"/>
+<area shape="rect" id="node4" href="$class_walker.html#a796b87e4f28d73c966b58a7866b018c9" title="Walker::reset" alt="" coords="1013,264,1113,291"/>
+<area shape="rect" id="node6" href="$class_pid.html#a9e85f222ae86697aacdeaa4f7b0644f6" title="Pid::setPid" alt="" coords="1019,7,1106,33"/>
+<area shape="rect" id="node8" href="$class_distinguisher.html#a3634f5227cc6a492952f1283339636dc" title="Distinguisher::getColor" alt="" coords="985,416,1140,443"/>
+<area shape="rect" id="node9" href="$class_line_tracer_walker.html#a4b5b94728a9b0d145a67816ad1fadc02" title="LineTracerWalker::runLine" alt="" coords="975,61,1150,88"/>
+<area shape="rect" id="node11" href="$class_walker.html#aa263348b7d132ddfd0c25f11eec4b367" title="Walker::get_count_L" alt="" coords="991,315,1134,341"/>
+<area shape="rect" id="node12" href="$class_walker.html#ac67a8f1fe17fb1365df515ca6e713373" title="Walker::get_count_R" alt="" coords="990,365,1135,392"/>
+<area shape="rect" id="node13" href="$class_controller.html#aca9bc8f5a0a390d709d6dd2e5fd9b665" title="Controller::getBrightness" alt="" coords="979,112,1146,139"/>
+<area shape="rect" id="node14" href="$class_walker.html#a665540aeed857d2e35565e1949e6abec" title="Walker::run" alt="" coords="1018,517,1107,544"/>
+<area shape="rect" id="node15" href="$class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961" title="LineTracerWalker::getForward" alt="" coords="964,163,1161,189"/>
+<area shape="rect" id="node16" href="$class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390" title="LineTracerWalker::getTurn" alt="" coords="975,213,1151,240"/>
+<area shape="rect" id="node17" href="$class_controller.html#a5674a4689bb73d50483bf19c617ac213" title="Controller::buttonIsPressedBack" alt="" coords="957,568,1168,595"/>
+<area shape="rect" id="node5" href="$classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="1247,264,1385,291"/>
+<area shape="rect" id="node7" href="$struct_pid_parameter.html#a1680f231922aee58280e54af46cdb7b1" title="PidParameter::set" alt="" coords="1253,5,1379,32"/>
+<area shape="rect" id="node10" href="$class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="1217,57,1415,98"/>
+<area shape="rect" id="node19" href="$class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="444,593,628,620"/>
+<area shape="rect" id="node21" href="$class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3" title="Controller::speakerPlayTone" alt="" coords="969,644,1156,671"/>
+<area shape="rect" id="node20" href="$class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="720,568,883,595"/>
+<area shape="rect" id="node22" href="$class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46" title="指定した角度まで走行体を回転させる(基本左エッジ) " alt="" coords="746,517,857,544"/>
+<area shape="rect" id="node23" href="$class_block_solver.html#ab9844e0fc35307a10230b83651563bd0" title="次に向かうべき方角を切り替えます。 " alt="" coords="694,720,909,747"/>
+<area shape="rect" id="node27" href="$class_selector.html#aa3691c1a35cd0c7ee24f552d139511e2" title="Selector::searchBlockPosition" alt="" coords="437,1297,635,1324"/>
+<area shape="rect" id="node28" href="$class_selector.html#a2d53e8e7ff20d156a945925054af3c3e" title="Selector::isAlreadyMovedNode" alt="" coords="700,1221,903,1248"/>
+<area shape="rect" id="node29" href="$class_explorer.html#a53c637c90b158016c5be1fcb01165a1e" title="Explorer::resetBlockArea" alt="" coords="718,1297,885,1324"/>
+<area shape="rect" id="node30" href="$class_explorer.html#aee7149934ae124c0e6a7b90478da70a5" title="Explorer::setHasBlockIn" alt="" coords="719,1348,883,1375"/>
+<area shape="rect" id="node31" href="$class_selector.html#aa1e4bb6da63b4d61c92293be39123392" title="Selector::getPositionOfCenter\lQuadirilateral" alt="" coords="438,1517,634,1558"/>
+<area shape="rect" id="node32" href="$class_selector.html#a09627de92b8ca05a3bd75ed0342f7f52" title="Selector::extractRoute" alt="" coords="459,1583,613,1609"/>
+<area shape="rect" id="node33" href="$class_selector.html#af6800cd8af21f608d536ac1406c46391" title="Selector::setNext" alt="" coords="474,796,598,823"/>
+<area shape="rect" id="node34" href="$class_explorer.html#a1d2bca3a7689895975a8734557e320e6" title="Explorer::hasBlock" alt="" coords="735,1436,867,1463"/>
+<area shape="rect" id="node35" href="$class_selector.html#a7f2d96d7904828c5f54f1307f11a5ecb" title="Selector::pushEvacuatedBlock\lPosition" alt="" coords="435,847,637,889"/>
+<area shape="rect" id="node36" href="$class_selector.html#ac3f2b39e32ab217f6c36a31e230e51c1" title="Selector::searchMostPoor\lCostShelter" alt="" coords="449,1399,623,1441"/>
+<area shape="rect" id="node37" href="$class_selector.html#ae8eac1014b1d6a5d51f3a255ed8db538" title="Selector::popEvacuatedBlock\lPosition" alt="" coords="439,913,633,954"/>
+<area shape="rect" id="node38" href="$class_selector.html#a8422a89cbe5be70c6785d3a469b5c07c" title="Selector::canFindBlockIn\lEvacuatedList" alt="" coords="452,978,620,1019"/>
+<area shape="rect" id="node39" href="$class_selector.html#ae11a06ee61ea4c0fcc84e6c914ddb0fe" title="Selector::changeBlockPosition" alt="" coords="436,1044,636,1071"/>
+<area shape="rect" id="node40" href="$class_selector.html#afd2086b7dbe7b5d284c8adee5ea82b7f" title="Selector::searchRoute" alt="" coords="460,1095,612,1121"/>
+<area shape="rect" id="node41" href="$class_selector.html#a1fbc56ebc86bb0c2fddb0a6c3a9c8029" title="Selector::addMovedBlockPosition" alt="" coords="427,1145,645,1172"/>
+<area shape="rect" id="node46" href="$class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102" title="Lifter::liftUp" alt="" coords="756,365,847,392"/>
+<area shape="rect" id="node47" href="$class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5" title="Lifter::liftDown" alt="" coords="748,416,855,443"/>
+</map>

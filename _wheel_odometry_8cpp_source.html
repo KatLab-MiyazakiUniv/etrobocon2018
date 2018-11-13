@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: str/apps/src/WheelOdometry.cpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="dir_5a8a96784cd33ffb845d840025aa312a.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">WheelOdometry.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_wheel_odometry_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_wheel_odometry_8h.html">WheelOdometry.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="struct_coordinate.html#a772936f3dede6ccb0528a719342ebaa6">    9</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="struct_coordinate.html#a772936f3dede6ccb0528a719342ebaa6">Coordinate::update</a>(<span class="keywordtype">float</span> distance, <span class="keywordtype">float</span> angle)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="comment">// 移動角度</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">float</span> theta = angle / 2.0f;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="comment">// 直交座標の更新</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="struct_coordinate.html#a514c8968b1d03f65e76c9cc9566ee4cc">x</a> += distance * std::cos(<a class="code" href="struct_coordinate.html#a68e11ffb1900e4b02f5d0201da17a2d3">arg</a> + theta);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="struct_coordinate.html#a1a7d11305e68c5bfba2b9d4569d4b6ef">y</a> += distance * std::sin(<a class="code" href="struct_coordinate.html#a68e11ffb1900e4b02f5d0201da17a2d3">arg</a> + theta);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="struct_coordinate.html#aae37bc802d8959f91686fa247073eea9">radius</a> += distance;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="struct_coordinate.html#a68e11ffb1900e4b02f5d0201da17a2d3">arg</a> += theta;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="struct_coordinate.html#ac6e8a112850a5768760a108bd4b965c6">   28</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="struct_coordinate.html#ac6e8a112850a5768760a108bd4b965c6">Coordinate::reset</a>()</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="struct_coordinate.html#aae37bc802d8959f91686fa247073eea9">radius</a> = 0.0f;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="struct_coordinate.html#a68e11ffb1900e4b02f5d0201da17a2d3">arg</a> = 0.0f;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="struct_coordinate.html#a514c8968b1d03f65e76c9cc9566ee4cc">x</a> = 0.0f;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="struct_coordinate.html#a1a7d11305e68c5bfba2b9d4569d4b6ef">y</a> = 0.0f;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28">   43</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28">WheelOdometry::velocity</a>(std::int32_t left_motor, std::int32_t right_motor)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="comment">// 回転速度から走行体の速度へ変換するときに必要な係数</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">float</span> transform = 3.14f * <span class="keyword">property</span>.radius_wheel / 180.0f;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="comment">// 走行体の回転角の差を求める(LPF処理つき)</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">float</span> angle = motor_angle.<a class="code" href="class_motor_angle.html#a8bf992a88ac06b1b5731fb99912ff9bd">relativeAngleMean</a>(left_motor, right_motor);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordflow">return</span> transform * angle / <span class="keyword">property</span>.dt;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_wheel_odometry.html#a83b1fdffc3eed4dd9cf81b1fe993c973">   60</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="class_wheel_odometry.html#a83b1fdffc3eed4dd9cf81b1fe993c973">WheelOdometry::angularVelocity</a>(std::int32_t left_motor, std::int32_t right_motor)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="comment">// 回転速度から角速度へ変換するときに必要な係数</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">float</span> transform = <span class="keyword">property</span>.radius_wheel / <span class="keyword">property</span>.between_wheels;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="comment">// 走行体の回転角の差を求める(右モータ - 左モータ), LPF処理つき</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">float</span> angle = motor_angle.<a class="code" href="class_motor_angle.html#aae319910dcaa118d1a7f7ca66ee2bdc1">angularDifference</a>(left_motor, right_motor);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">return</span> transform * angle / <span class="keyword">property</span>.dt;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_wheel_odometry.html#a93592d64412c84dc3b0bdd6468de0657">   75</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_coordinate.html">Coordinate</a>&amp; <a class="code" href="class_wheel_odometry.html#a93592d64412c84dc3b0bdd6468de0657">WheelOdometry::reset</a>()</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  coordinate.<a class="code" href="struct_coordinate.html#ac6e8a112850a5768760a108bd4b965c6">reset</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  motor_angle.<a class="code" href="class_motor_angle.html#a20ae8007014e6368805dad79459bcf54">reset</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">return</span> coordinate;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_wheel_odometry.html#a61d5310dcb3118542a9a27902d85d592">   89</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_coordinate.html">Coordinate</a>&amp; <a class="code" href="class_wheel_odometry.html#a61d5310dcb3118542a9a27902d85d592">WheelOdometry::update</a>(std::int32_t left_motor, std::int32_t right_motor)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="comment">// 走行体の移動距離を計算する</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">float</span> distance = <a class="code" href="class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28">velocity</a>(left_motor, right_motor) * <span class="keyword">property</span>.dt;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="comment">// 走行体の旋回角度を計算する</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">float</span> angle = <a class="code" href="class_wheel_odometry.html#a83b1fdffc3eed4dd9cf81b1fe993c973">angularVelocity</a>(left_motor, right_motor) * <span class="keyword">property</span>.dt;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="comment">// 走行体の位置情報を更新する</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  coordinate.<a class="code" href="struct_coordinate.html#a772936f3dede6ccb0528a719342ebaa6">update</a>(distance, angle);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">return</span> coordinate;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_wheel_odometry.html#ad12bfc89fa25fbf0b6c72bed5d61122e">  107</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="class_wheel_odometry.html#ad12bfc89fa25fbf0b6c72bed5d61122e">WheelOdometry::getRotationAngle</a>(std::int32_t left_motor, std::int32_t right_motor)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="comment">// モータの角度から回転角度へ変換するときに必要な係数</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">float</span> transform = 2.0f * <span class="keyword">property</span>.radius_wheel / <span class="keyword">property</span>.between_wheels;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="comment">// モータの角度を絶対値で取得する</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  left_motor = motor_angle.<a class="code" href="class_motor_angle.html#a5079b35fb08cc66b9bf0d101d963366a">absoluteValueOfAngle</a>(left_motor);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  right_motor = motor_angle.<a class="code" href="class_motor_angle.html#a5079b35fb08cc66b9bf0d101d963366a">absoluteValueOfAngle</a>(right_motor);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="comment">// モータの角度の平均値を求める</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordtype">float</span> mean = motor_angle.<a class="code" href="class_motor_angle.html#acb61bad045644641b2d47c33e148a7b6">absoluteAngleMean</a>(left_motor, right_motor);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">return</span> transform * mean;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="class_wheel_odometry.html#a3a2c52e52341f83c32085b30b3e4954e">  126</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_coordinate.html">Coordinate</a>&amp; <a class="code" href="class_wheel_odometry.html#a3a2c52e52341f83c32085b30b3e4954e">WheelOdometry::getCoordinate</a>()</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;{</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordflow">return</span> coordinate;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="class_wheel_odometry.html#a1b3ca9feac03da8eb1d7b39864f18d8a">  135</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="class_wheel_odometry.html#a1b3ca9feac03da8eb1d7b39864f18d8a">WheelOdometry::getPointX</a>()</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordflow">return</span> coordinate.<a class="code" href="struct_coordinate.html#a514c8968b1d03f65e76c9cc9566ee4cc">x</a>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="class_wheel_odometry.html#af11468b438a6714ecd89e5d344fe8013">  144</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="class_wheel_odometry.html#af11468b438a6714ecd89e5d344fe8013">WheelOdometry::getPointY</a>()</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;{</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordflow">return</span> coordinate.<a class="code" href="struct_coordinate.html#a1a7d11305e68c5bfba2b9d4569d4b6ef">y</a>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
+<div class="ttc" id="class_motor_angle_html_a8bf992a88ac06b1b5731fb99912ff9bd"><div class="ttname"><a href="class_motor_angle.html#a8bf992a88ac06b1b5731fb99912ff9bd">MotorAngle::relativeAngleMean</a></div><div class="ttdeci">float relativeAngleMean(std::int32_t current_left_motor, std::int32_t current_right_motor)</div><div class="ttdoc">左右モータの相対角度の平均値を計算する </div><div class="ttdef"><b>Definition:</b> <a href="_motor_angle_8cpp_source.html#l00051">MotorAngle.cpp:51</a></div></div>
+<div class="ttc" id="class_wheel_odometry_html_a1b3ca9feac03da8eb1d7b39864f18d8a"><div class="ttname"><a href="class_wheel_odometry.html#a1b3ca9feac03da8eb1d7b39864f18d8a">WheelOdometry::getPointX</a></div><div class="ttdeci">float getPointX()</div><div class="ttdoc">走行体の位置x座標を返す </div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8cpp_source.html#l00135">WheelOdometry.cpp:135</a></div></div>
+<div class="ttc" id="class_wheel_odometry_html_a83b1fdffc3eed4dd9cf81b1fe993c973"><div class="ttname"><a href="class_wheel_odometry.html#a83b1fdffc3eed4dd9cf81b1fe993c973">WheelOdometry::angularVelocity</a></div><div class="ttdeci">float angularVelocity(std::int32_t left_motor, std::int32_t right_motor)</div><div class="ttdoc">走行体の旋回角速度を求める </div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8cpp_source.html#l00060">WheelOdometry.cpp:60</a></div></div>
+<div class="ttc" id="class_motor_angle_html_a20ae8007014e6368805dad79459bcf54"><div class="ttname"><a href="class_motor_angle.html#a20ae8007014e6368805dad79459bcf54">MotorAngle::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">左右モータ角度の過去値を0にリセットする </div><div class="ttdef"><b>Definition:</b> <a href="_motor_angle_8cpp_source.html#l00026">MotorAngle.cpp:26</a></div></div>
+<div class="ttc" id="class_wheel_odometry_html_a3a2c52e52341f83c32085b30b3e4954e"><div class="ttname"><a href="class_wheel_odometry.html#a3a2c52e52341f83c32085b30b3e4954e">WheelOdometry::getCoordinate</a></div><div class="ttdeci">const Coordinate &amp; getCoordinate()</div><div class="ttdoc">走行体の位置情報を返す </div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8cpp_source.html#l00126">WheelOdometry.cpp:126</a></div></div>
+<div class="ttc" id="class_wheel_odometry_html_ad12bfc89fa25fbf0b6c72bed5d61122e"><div class="ttname"><a href="class_wheel_odometry.html#ad12bfc89fa25fbf0b6c72bed5d61122e">WheelOdometry::getRotationAngle</a></div><div class="ttdeci">float getRotationAngle(std::int32_t left_motor, std::int32_t right_motor)</div><div class="ttdoc">走行体の回転角度を返す </div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8cpp_source.html#l00107">WheelOdometry.cpp:107</a></div></div>
+<div class="ttc" id="class_motor_angle_html_aae319910dcaa118d1a7f7ca66ee2bdc1"><div class="ttname"><a href="class_motor_angle.html#aae319910dcaa118d1a7f7ca66ee2bdc1">MotorAngle::angularDifference</a></div><div class="ttdeci">float angularDifference(std::int32_t left_motor, std::int32_t right_motor)</div><div class="ttdoc">左右モータ角度の差を計算する(右手系/反時計回りが正) </div><div class="ttdef"><b>Definition:</b> <a href="_motor_angle_8cpp_source.html#l00072">MotorAngle.cpp:72</a></div></div>
+<div class="ttc" id="class_motor_angle_html_a5079b35fb08cc66b9bf0d101d963366a"><div class="ttname"><a href="class_motor_angle.html#a5079b35fb08cc66b9bf0d101d963366a">MotorAngle::absoluteValueOfAngle</a></div><div class="ttdeci">std::int32_t absoluteValueOfAngle(std::int32_t motor)</div><div class="ttdoc">モータ角度の絶対値を計算する </div><div class="ttdef"><b>Definition:</b> <a href="_motor_angle_8cpp_source.html#l00083">MotorAngle.cpp:83</a></div></div>
+<div class="ttc" id="struct_coordinate_html_aae37bc802d8959f91686fa247073eea9"><div class="ttname"><a href="struct_coordinate.html#aae37bc802d8959f91686fa247073eea9">Coordinate::radius</a></div><div class="ttdeci">float radius</div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8h_source.html#l00017">WheelOdometry.h:17</a></div></div>
+<div class="ttc" id="struct_coordinate_html_ac6e8a112850a5768760a108bd4b965c6"><div class="ttname"><a href="struct_coordinate.html#ac6e8a112850a5768760a108bd4b965c6">Coordinate::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">走行体の位置情報を初期化する </div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8cpp_source.html#l00028">WheelOdometry.cpp:28</a></div></div>
+<div class="ttc" id="class_wheel_odometry_html_a61d5310dcb3118542a9a27902d85d592"><div class="ttname"><a href="class_wheel_odometry.html#a61d5310dcb3118542a9a27902d85d592">WheelOdometry::update</a></div><div class="ttdeci">const Coordinate &amp; update(std::int32_t left_motor, std::int32_t right_motor)</div><div class="ttdoc">走行体の位置情報を更新する </div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8cpp_source.html#l00089">WheelOdometry.cpp:89</a></div></div>
+<div class="ttc" id="class_motor_angle_html_acb61bad045644641b2d47c33e148a7b6"><div class="ttname"><a href="class_motor_angle.html#acb61bad045644641b2d47c33e148a7b6">MotorAngle::absoluteAngleMean</a></div><div class="ttdeci">float absoluteAngleMean(std::int32_t left_motor, std::int32_t right_motor)</div><div class="ttdoc">左右モータの絶対角度の平均値を計算する </div><div class="ttdef"><b>Definition:</b> <a href="_motor_angle_8cpp_source.html#l00039">MotorAngle.cpp:39</a></div></div>
+<div class="ttc" id="class_wheel_odometry_html_a7130bad653ccc5145a1c4b9da0b5ef28"><div class="ttname"><a href="class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28">WheelOdometry::velocity</a></div><div class="ttdeci">float velocity(std::int32_t left_motor, std::int32_t right_motor)</div><div class="ttdoc">走行体の旋回速度を求める </div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8cpp_source.html#l00043">WheelOdometry.cpp:43</a></div></div>
+<div class="ttc" id="struct_coordinate_html_a514c8968b1d03f65e76c9cc9566ee4cc"><div class="ttname"><a href="struct_coordinate.html#a514c8968b1d03f65e76c9cc9566ee4cc">Coordinate::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8h_source.html#l00019">WheelOdometry.h:19</a></div></div>
+<div class="ttc" id="class_wheel_odometry_html_a93592d64412c84dc3b0bdd6468de0657"><div class="ttname"><a href="class_wheel_odometry.html#a93592d64412c84dc3b0bdd6468de0657">WheelOdometry::reset</a></div><div class="ttdeci">const Coordinate &amp; reset()</div><div class="ttdoc">走行体の位置情報を初期化する </div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8cpp_source.html#l00075">WheelOdometry.cpp:75</a></div></div>
+<div class="ttc" id="struct_coordinate_html_a772936f3dede6ccb0528a719342ebaa6"><div class="ttname"><a href="struct_coordinate.html#a772936f3dede6ccb0528a719342ebaa6">Coordinate::update</a></div><div class="ttdeci">void update(float distance, float angle)</div><div class="ttdoc">走行体の位置情報を更新する </div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8cpp_source.html#l00009">WheelOdometry.cpp:9</a></div></div>
+<div class="ttc" id="class_wheel_odometry_html_af11468b438a6714ecd89e5d344fe8013"><div class="ttname"><a href="class_wheel_odometry.html#af11468b438a6714ecd89e5d344fe8013">WheelOdometry::getPointY</a></div><div class="ttdeci">float getPointY()</div><div class="ttdoc">走行体の位置y座標を返す </div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8cpp_source.html#l00144">WheelOdometry.cpp:144</a></div></div>
+<div class="ttc" id="_wheel_odometry_8h_html"><div class="ttname"><a href="_wheel_odometry_8h.html">WheelOdometry.h</a></div><div class="ttdoc">オドメトリ(Wheel odometry)手法を用いた速度/角度/自己位置推定 </div></div>
+<div class="ttc" id="struct_coordinate_html_a68e11ffb1900e4b02f5d0201da17a2d3"><div class="ttname"><a href="struct_coordinate.html#a68e11ffb1900e4b02f5d0201da17a2d3">Coordinate::arg</a></div><div class="ttdeci">float arg</div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8h_source.html#l00018">WheelOdometry.h:18</a></div></div>
+<div class="ttc" id="struct_coordinate_html_a1a7d11305e68c5bfba2b9d4569d4b6ef"><div class="ttname"><a href="struct_coordinate.html#a1a7d11305e68c5bfba2b9d4569d4b6ef">Coordinate::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8h_source.html#l00020">WheelOdometry.h:20</a></div></div>
+<div class="ttc" id="struct_coordinate_html"><div class="ttname"><a href="struct_coordinate.html">Coordinate</a></div><div class="ttdoc">走行体の位置情報をまとめた構造体 </div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8h_source.html#l00016">WheelOdometry.h:16</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

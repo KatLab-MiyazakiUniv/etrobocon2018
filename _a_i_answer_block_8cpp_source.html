@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: str/apps/src/AIAnswerBlock.cpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="dir_5a8a96784cd33ffb845d840025aa312a.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">AIAnswerBlock.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_a_i_answer_block_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_a_i_answer_block_8h.html">AIAnswerBlock.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702">AIAnswerBlock::throwBlock</a>(<span class="keywordtype">bool</span> angle_direction)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  navigator.<a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(35, angle_direction);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  lifter.<a class="code" href="class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102">liftUp</a>(55, 30);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  lifter.<a class="code" href="class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5">liftDown</a>(0, 3);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  navigator.<a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(150, angle_direction);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337">AIAnswerBlock::block00</a>()</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  navigator.<a class="code" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">moveOnLine</a>(250, target_brightness, 30, <span class="keyword">true</span>);  <span class="comment">// 左エッジ</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  navigator.<a class="code" href="class_navigator.html#a6f3901e766e383a66c47177257c46204">move</a>(100);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  navigator.<a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(100, <span class="keyword">true</span>);                                            <span class="comment">// 100度右回転</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  navigator.<a class="code" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd">moveToColor</a>(250, target_brightness, <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0">Color::RED</a>, 30, <span class="keyword">true</span>);  <span class="comment">// 左エッジ</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702">throwBlock</a>(<span class="keyword">false</span>);                                                    <span class="comment">// 左に放る</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  navigator.<a class="code" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">moveOnLine</a>(100, target_brightness, 30, <span class="keyword">false</span>);  <span class="comment">// 右エッジ</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  navigator.<a class="code" href="class_navigator.html#a6f3901e766e383a66c47177257c46204">move</a>(100);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  navigator.<a class="code" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd">moveToColor</a>(200, target_brightness, <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca1b3e1ee9bff86431dea6b181365ba65f">Color::BLUE</a>, 30, <span class="keyword">false</span>);  <span class="comment">// 右エッジ</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702">throwBlock</a>(<span class="keyword">true</span>);                                                       <span class="comment">// 右に放る</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  navigator.<a class="code" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">moveOnLine</a>(100, target_brightness, 30, <span class="keyword">false</span>);                <span class="comment">// 右エッジ</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  navigator.<a class="code" href="class_navigator.html#a6f3901e766e383a66c47177257c46204">move</a>(50);                                                     <span class="comment">// 5cmただ進む</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  navigator.<a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(100, <span class="keyword">false</span>);                                             <span class="comment">// 100度左回転</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  navigator.<a class="code" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">moveOnLine</a>(200, target_brightness, 30, <span class="keyword">false</span>);                <span class="comment">// 右エッジ</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  navigator.<a class="code" href="class_navigator.html#a6f3901e766e383a66c47177257c46204">move</a>(100);                                                    <span class="comment">// 10cmただ進む</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  navigator.<a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(100, <span class="keyword">true</span>);                                              <span class="comment">// 100度右回転</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  navigator.<a class="code" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd">moveToColor</a>(200, target_brightness, <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0">Color::GREEN</a>, 30, <span class="keyword">true</span>);  <span class="comment">// 左エッジ</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702">throwBlock</a>(<span class="keyword">false</span>);                                                      <span class="comment">// 左に放る</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  navigator.<a class="code" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">moveOnLine</a>(100, target_brightness, 30, <span class="keyword">false</span>);                  <span class="comment">// 右エッジ</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  navigator.<a class="code" href="class_navigator.html#a6f3901e766e383a66c47177257c46204">move</a>(150);                                                      <span class="comment">// 15cmただ進む</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  navigator.<a class="code" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd">moveToColor</a>(100, target_brightness, <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e">Color::YELLOW</a>, 30, <span class="keyword">false</span>);  <span class="comment">// 右エッジ</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702">throwBlock</a>(<span class="keyword">true</span>);                                                         <span class="comment">// 右に放る</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  navigator.<a class="code" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">moveOnLine</a>(100, target_brightness, 30, <span class="keyword">true</span>);  <span class="comment">// 左エッジ</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  navigator.<a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(100, <span class="keyword">false</span>);                              <span class="comment">// 100度左回転</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  navigator.<a class="code" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">moveOnLine</a>(200, target_brightness, 30, <span class="keyword">true</span>);  <span class="comment">// 左エッジ</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  navigator.<a class="code" href="class_navigator.html#a6f3901e766e383a66c47177257c46204">move</a>(100);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  navigator.<a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(100, <span class="keyword">true</span>);                                            <span class="comment">// 100度右回転</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  navigator.<a class="code" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd">moveToColor</a>(200, target_brightness, <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0">Color::RED</a>, 30, <span class="keyword">true</span>);  <span class="comment">// 左エッジ</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="comment">// navigator.move(100);</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702">throwBlock</a>(<span class="keyword">false</span>);  <span class="comment">// 左に放る</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  navigator.<a class="code" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">moveOnLine</a>(100, target_brightness, 30, <span class="keyword">false</span>);  <span class="comment">// 右エッジ</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  navigator.<a class="code" href="class_navigator.html#a6f3901e766e383a66c47177257c46204">move</a>(150);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  navigator.<a class="code" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd">moveToColor</a>(100, target_brightness, <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0">Color::RED</a>, 30, <span class="keyword">false</span>);  <span class="comment">// 右エッジ</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702">throwBlock</a>(<span class="keyword">true</span>);                                                      <span class="comment">// 右に放る</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  navigator.<a class="code" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">moveOnLine</a>(100, target_brightness, 30, <span class="keyword">true</span>);  <span class="comment">// 左エッジ</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  navigator.<a class="code" href="class_navigator.html#a6f3901e766e383a66c47177257c46204">move</a>(100);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  navigator.<a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(100, <span class="keyword">false</span>);  <span class="comment">// 100度左回転</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  navigator.<a class="code" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">moveOnLine</a>(150, target_brightness, 30, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">// ただブロックを00におくだけ</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da">   70</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da">AIAnswerBlock::block01</a>()</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  navigator.<a class="code" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">moveOnLine</a>(250, target_brightness, 30, <span class="keyword">true</span>);  <span class="comment">// 左エッジ</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  navigator.<a class="code" href="class_navigator.html#a6f3901e766e383a66c47177257c46204">move</a>(60);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  navigator.<a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(90, <span class="keyword">true</span>);                                             <span class="comment">// 90度右回転</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  navigator.<a class="code" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd">moveToColor</a>(250, target_brightness, <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0">Color::RED</a>, 30, <span class="keyword">true</span>);  <span class="comment">// 左エッジ</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702">throwBlock</a>(<span class="keyword">false</span>);                                                    <span class="comment">// 左に放る</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  navigator.<a class="code" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">moveOnLine</a>(60, target_brightness, 30, <span class="keyword">false</span>);  <span class="comment">// 右エッジ</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  navigator.<a class="code" href="class_navigator.html#a6f3901e766e383a66c47177257c46204">move</a>(150);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  navigator.<a class="code" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd">moveToColor</a>(200, target_brightness, <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca1b3e1ee9bff86431dea6b181365ba65f">Color::BLUE</a>, 30, <span class="keyword">false</span>);  <span class="comment">// 右エッジ</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <a class="code" href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702">throwBlock</a>(<span class="keyword">true</span>);                                                       <span class="comment">// 右に放る</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  navigator.<a class="code" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">moveOnLine</a>(100, target_brightness, 30, <span class="keyword">false</span>);  <span class="comment">// 右エッジ</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  navigator.<a class="code" href="class_navigator.html#a6f3901e766e383a66c47177257c46204">move</a>(50);                                       <span class="comment">// 5cmただ進む</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  navigator.<a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(110, <span class="keyword">false</span>);                               <span class="comment">// 110度左回転</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  navigator.<a class="code" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">moveOnLine</a>(750, target_brightness, 30, <span class="keyword">true</span>);   <span class="comment">// 左エッジ</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="ttc" id="class_navigator_html_aaf3dc68883c423aec19c383455525bbc"><div class="ttname"><a href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">Navigator::moveOnLine</a></div><div class="ttdeci">void moveOnLine(float distance, std::int16_t target, std::int8_t pwm=20, bool is_leftside_line=true)</div><div class="ttdoc">指定した距離だけライントレースする </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00163">Navigator.cpp:163</a></div></div>
+<div class="ttc" id="class_navigator_html_a6f3901e766e383a66c47177257c46204"><div class="ttname"><a href="class_navigator.html#a6f3901e766e383a66c47177257c46204">Navigator::move</a></div><div class="ttdeci">void move(float distance, std::int8_t pwm=20)</div><div class="ttdoc">指定した距離まで走行体を移動させる </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00048">Navigator.cpp:48</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1ca1b3e1ee9bff86431dea6b181365ba65f"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca1b3e1ee9bff86431dea6b181365ba65f">Color::BLUE</a></div></div>
+<div class="ttc" id="class_navigator_html_a7667a69d6609bd0cf39bd24be46fe9cd"><div class="ttname"><a href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd">Navigator::moveToColor</a></div><div class="ttdeci">void moveToColor(float distance, std::int16_t target_brightness, Color target_color, std::int8_t speed=20, bool is_leftside_line=true)</div><div class="ttdoc">指定した距離分ライントレースして指定した色があると停止する </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00211">Navigator.cpp:211</a></div></div>
+<div class="ttc" id="class_lifter_html_ad4dbe31608b7c1c52ae1c9eb8d2527d5"><div class="ttname"><a href="class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5">Lifter::liftDown</a></div><div class="ttdeci">void liftDown(std::uint8_t angle, std::int8_t pwm=20)</div><div class="ttdef"><b>Definition:</b> <a href="_lifter_8cpp_source.html#l00045">Lifter.cpp:45</a></div></div>
+<div class="ttc" id="_a_i_answer_block_8h_html"><div class="ttname"><a href="_a_i_answer_block_8h.html">AIAnswerBlock.h</a></div><div class="ttdoc">AIアンサーのブロックを並べる </div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e">Color::YELLOW</a></div></div>
+<div class="ttc" id="class_navigator_html_a81769b4f9b660f1d01de6ee9efc63a46"><div class="ttname"><a href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">Navigator::spin</a></div><div class="ttdeci">void spin(float angle, bool clockwise=false, std::int8_t pwm=10)</div><div class="ttdoc">指定した角度まで走行体を回転させる(基本左エッジ) </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00025">Navigator.cpp:25</a></div></div>
+<div class="ttc" id="class_a_i_answer_block_html_ac20e3be6742bcb20aa84d16a7ad72337"><div class="ttname"><a href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337">AIAnswerBlock::block00</a></div><div class="ttdeci">void block00()</div><div class="ttdoc">アナログ数字が0，デジタル数字が0 </div><div class="ttdef"><b>Definition:</b> <a href="_a_i_answer_block_8cpp_source.html#l00022">AIAnswerBlock.cpp:22</a></div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a7cdb871f18608b08dbb88541b32b6702"><div class="ttname"><a href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702">AIAnswerBlock::throwBlock</a></div><div class="ttdeci">void throwBlock(bool angle_direction=false)</div><div class="ttdoc">リフターを使ってブロックを放って後ろを向く </div><div class="ttdef"><b>Definition:</b> <a href="_a_i_answer_block_8cpp_source.html#l00014">AIAnswerBlock.cpp:14</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0">Color::GREEN</a></div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a62485c924bea9888b72e3c91cf8d07da"><div class="ttname"><a href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da">AIAnswerBlock::block01</a></div><div class="ttdeci">void block01()</div><div class="ttdoc">アナログ数字が0，デジタル数字が1 </div><div class="ttdef"><b>Definition:</b> <a href="_a_i_answer_block_8cpp_source.html#l00070">AIAnswerBlock.cpp:70</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0">Color::RED</a></div></div>
+<div class="ttc" id="class_lifter_html_a9ebc2a183bec70bc2c82e13d29a10102"><div class="ttname"><a href="class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102">Lifter::liftUp</a></div><div class="ttdeci">void liftUp(std::uint8_t angle, std::int8_t pwm=20)</div><div class="ttdef"><b>Definition:</b> <a href="_lifter_8cpp_source.html#l00033">Lifter.cpp:33</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

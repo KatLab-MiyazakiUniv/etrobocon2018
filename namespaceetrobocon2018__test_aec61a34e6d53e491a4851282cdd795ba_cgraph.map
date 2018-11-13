@@ -1,0 +1,7 @@
+<map id="etrobocon2018_test::TEST" name="etrobocon2018_test::TEST">
+<area shape="rect" id="node2" href="$class_self_localization.html#a13a84e776674b978d4f23a528f621eda" title="SelfLocalization::update" alt="" coords="198,35,359,61"/>
+<area shape="rect" id="node5" href="$class_self_localization.html#ae19f89b94c0bf61d0327a8d56f10dff7" title="SelfLocalization::getPointX" alt="" coords="189,85,368,112"/>
+<area shape="rect" id="node6" href="$class_self_localization.html#add371c55e00d96c08cd49f19e96c17d3" title="SelfLocalization::getPointY" alt="" coords="189,136,368,163"/>
+<area shape="rect" id="node3" href="$class_motor_angle.html#abe5eb31bff0514f32a0bb00751f16ccf" title="左右モータ角度の過去値を現在値へ更新する " alt="" coords="429,5,563,32"/>
+<area shape="rect" id="node4" href="$class_self_localization.html#a3b7b630ff7861c237c1aee94bc8a56bd" title="SelfLocalization::writing\l_current_coordinates" alt="" coords="416,57,576,98"/>
+</map>

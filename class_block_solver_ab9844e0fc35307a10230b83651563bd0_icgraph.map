@@ -1,0 +1,8 @@
+<map id="BlockSolver::getChangeDirection" name="BlockSolver::getChangeDirection">
+<area shape="rect" id="node2" href="$class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="513,56,690,83"/>
+<area shape="rect" id="node5" href="$class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="269,107,464,133"/>
+<area shape="rect" id="node6" href="$class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="275,5,459,32"/>
+<area shape="rect" id="node3" href="$class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="739,5,871,32"/>
+<area shape="rect" id="node4" href="$class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="746,56,865,83"/>
+<area shape="rect" id="node7" href="$class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="518,5,685,32"/>
+</map>

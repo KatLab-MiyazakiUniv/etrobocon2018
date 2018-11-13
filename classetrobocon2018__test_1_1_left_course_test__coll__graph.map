@@ -1,0 +1,8 @@
+<map id="etrobocon2018_test::LeftCourseTest" name="etrobocon2018_test::LeftCourseTest">
+<area shape="rect" id="node3" href="$class_left_course.html" title="{LeftCourse\n||+ LeftCourse()\l+ LeftCourse()\l+ setFirstCode()\l+ run()\l+ runNormalCourse()\l+ runBlockRange()\l+ runParking()\l+ aiAnswerGo()\l+ runGoBlack()\l+ runGoStraight()\l}" alt="" coords="77,337,221,546"/>
+<area shape="rect" id="node4" href="$class_controller.html" title="{Controller\n|+ noteFs6\l+ noteFs4\l+ noteFs6\l+ noteFs4\l+ countLimit\l+ counter\l+ exitCounter\l+ exitCountLimit\l+ brightness\l+ mock_r\l+ mock_g\l+ mock_b\l|+ Controller()\l+ speakerSetVolume()\l+ ledSetColorOrange()\l+ ledSetColorGreen()\l+ getBrightness()\l+ speakerPlayTone()\l+ buttonIsPressedBack()\l+ buttonIsPressedUp()\l+ buttonIsPressedDown()\l+ buttonIsPressedRight()\lほか 22 件…\l}" alt="" coords="245,249,416,634"/>
+<area shape="rect" id="node5" href="$class_motor.html" title="{Motor\n|+ count\l|+ getCount()\l+ setPWM()\l+ stop()\l+ reset()\l+ setBrake()\l}" alt="" coords="83,5,177,141"/>
+<area shape="rect" id="node6" href="$class_color_sensor.html" title="{ColorSensor\n|+ brightness\l|+ getBrightness()\l}" alt="" coords="203,35,325,112"/>
+<area shape="rect" id="node7" href="$class_touch_sensor.html" title="{TouchSensor\n||+ isPressed()\l}" alt="" coords="350,35,449,112"/>
+<area shape="rect" id="node8" href="$class_clock.html" title="{Clock\n||+ sleep()\l}" alt="" coords="477,35,549,112"/>
+</map>

@@ -1,0 +1,24 @@
+<map id="AIAnswerBlock::throwBlock" name="AIAnswerBlock::throwBlock">
+<area shape="rect" id="node2" href="$class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46" title="指定した角度まで走行体を回転させる(基本左エッジ) " alt="" coords="241,275,351,301"/>
+<area shape="rect" id="node21" href="$class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102" title="Lifter::liftUp" alt="" coords="251,427,341,453"/>
+<area shape="rect" id="node23" href="$class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5" title="Lifter::liftDown" alt="" coords="243,477,349,504"/>
+<area shape="rect" id="node3" href="$class_navigator.html#aeece0b738f289e4133a27bfa62ee15f2" title="座標とエンコーダの値を初期化する " alt="" coords="439,56,553,83"/>
+<area shape="rect" id="node9" href="$class_wheel_odometry.html#ad12bfc89fa25fbf0b6c72bed5d61122e" title="走行体の回転角度を返す " alt="" coords="401,158,591,199"/>
+<area shape="rect" id="node12" href="$class_walker.html#aa263348b7d132ddfd0c25f11eec4b367" title="Walker::get_count_L" alt="" coords="425,224,567,251"/>
+<area shape="rect" id="node14" href="$class_walker.html#ac67a8f1fe17fb1365df515ca6e713373" title="Walker::get_count_R" alt="" coords="423,275,569,301"/>
+<area shape="rect" id="node15" href="$class_walker.html#a665540aeed857d2e35565e1949e6abec" title="Walker::run" alt="" coords="451,325,541,352"/>
+<area shape="rect" id="node20" href="$class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="431,376,561,403"/>
+<area shape="rect" id="node4" href="$class_walker.html#a796b87e4f28d73c966b58a7866b018c9" title="Walker::reset" alt="" coords="695,5,795,32"/>
+<area shape="rect" id="node6" href="$class_wheel_odometry.html#a93592d64412c84dc3b0bdd6468de0657" title="走行体の位置情報を初期化する " alt="" coords="669,56,822,83"/>
+<area shape="rect" id="node5" href="$classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="911,5,1049,32"/>
+<area shape="rect" id="node7" href="$struct_coordinate.html#ac6e8a112850a5768760a108bd4b965c6" title="走行体の位置情報を初期化する " alt="" coords="919,56,1041,83"/>
+<area shape="rect" id="node8" href="$class_motor_angle.html#a20ae8007014e6368805dad79459bcf54" title="左右モータ角度の過去値を0にリセットする " alt="" coords="917,107,1043,133"/>
+<area shape="rect" id="node10" href="$class_motor_angle.html#a5079b35fb08cc66b9bf0d101d963366a" title="モータ角度の絶対値を計算する " alt="" coords="656,107,835,149"/>
+<area shape="rect" id="node11" href="$class_motor_angle.html#acb61bad045644641b2d47c33e148a7b6" title="左右モータの絶対角度の平均値を計算する " alt="" coords="640,173,851,200"/>
+<area shape="rect" id="node13" href="$classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="664,224,827,251"/>
+<area shape="rect" id="node16" href="$class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3" title="Controller::printDisplay" alt="" coords="668,275,823,301"/>
+<area shape="rect" id="node17" href="$class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="667,325,823,352"/>
+<area shape="rect" id="node19" href="$classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="1109,401,1269,428"/>
+<area shape="rect" id="node18" href="$classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="899,325,1061,352"/>
+<area shape="rect" id="node22" href="$class_lifter.html#af08c6ba362698bb2d6427416d622e34d" title="Lifter::getCurrentAngle" alt="" coords="419,477,573,504"/>
+</map>

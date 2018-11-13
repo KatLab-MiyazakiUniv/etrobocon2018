@@ -1,0 +1,51 @@
+<map id="ev3api::Motor::getCount" name="ev3api::Motor::getCount">
+<area shape="rect" id="node2" href="$str_2app_8h.html#a4c6b1bba8b11eacd00d4e456cf835fe2" title="sensor_log_task" alt="" coords="235,345,352,371"/>
+<area shape="rect" id="node3" href="$class_lifter.html#af08c6ba362698bb2d6427416d622e34d" title="Lifter::getCurrentAngle" alt="" coords="217,395,370,422"/>
+<area shape="rect" id="node15" href="$class_walker.html#aa263348b7d132ddfd0c25f11eec4b367" title="Walker::get_count_L" alt="" coords="222,953,365,979"/>
+<area shape="rect" id="node45" href="$class_walker.html#ac67a8f1fe17fb1365df515ca6e713373" title="Walker::get_count_R" alt="" coords="221,1007,366,1034"/>
+<area shape="rect" id="node48" href="$class_walker.html#a6fd0122fa4bd582a574397aa470446cc" title="Walker::moveAngle" alt="" coords="225,1058,361,1085"/>
+<area shape="rect" id="node49" href="$class_walker.html#a5ee3d6593656b064058949f31f525c31" title="Walker::angleChange" alt="" coords="220,1109,367,1135"/>
+<area shape="rect" id="node50" href="$classetrobocon2018__test_1_1_lifter_test.html#a8c4623d4074617dbec09113aca6772cc" title="etrobocon2018_test\l::LifterTest::getCount" alt="" coords="220,1160,367,1201"/>
+<area shape="rect" id="node4" href="$class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102" title="Lifter::liftUp" alt="" coords="483,395,573,422"/>
+<area shape="rect" id="node13" href="$class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5" title="Lifter::liftDown" alt="" coords="475,345,581,371"/>
+<area shape="rect" id="node14" href="$class_lifter.html#ae6ab937ebd53c52c8e7254630b0e5797" title="Lifter::defaultSet" alt="" coords="469,294,587,321"/>
+<area shape="rect" id="node5" href="$class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702" title="リフターを使ってブロックを放って後ろを向く " alt="" coords="702,446,887,473"/>
+<area shape="rect" id="node10" href="$class_block_solver.html#ab82a21046107a859adbb5a144ceaa63e" title="ブロックの色を取得し、blockColorに格納します。 " alt="" coords="958,33,1141,59"/>
+<area shape="rect" id="node6" href="$class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="967,699,1132,726"/>
+<area shape="rect" id="node8" href="$class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="967,893,1132,919"/>
+<area shape="rect" id="node7" href="$class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="1195,699,1397,726"/>
+<area shape="rect" id="node9" href="$class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="1243,943,1349,970"/>
+<area shape="rect" id="node11" href="$class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="1446,243,1578,270"/>
+<area shape="rect" id="node12" href="$class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1453,193,1571,219"/>
+<area shape="rect" id="node16" href="$class_basic_walker.html#ae558379490df673b0e4f1fa2e49947f9" title="BasicWalker::goStraightTo\lCheckBlackLine" alt="" coords="439,1004,617,1045"/>
+<area shape="rect" id="node17" href="$class_basic_walker.html#a44caadc89689b322fe9ec4c89600c4a7" title="BasicWalker::goStraight" alt="" coords="447,1222,609,1249"/>
+<area shape="rect" id="node18" href="$class_basic_walker.html#aea6900785459104bc0d589d9a4a5064c" title="BasicWalker::backStraight" alt="" coords="439,1323,617,1350"/>
+<area shape="rect" id="node19" href="$class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a" title="指定した色のブロック置き場までライントレースします。 " alt="" coords="701,127,889,168"/>
+<area shape="rect" id="node23" href="$class_left_course.html#ae76ee13a3a287b5bbe6b90c2ad9bd368" title="LeftCourse::runGoStraight" alt="" coords="441,1273,615,1299"/>
+<area shape="rect" id="node25" href="$class_left_course.html#a9bbbc6e2b68c99c5baaa9b8a7a951cb6" title="LeftCourse::runNormalCourse" alt="" coords="430,1374,626,1401"/>
+<area shape="rect" id="node26" href="$class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46" title="指定した角度まで走行体を回転させる(基本左エッジ) " alt="" coords="473,598,583,625"/>
+<area shape="rect" id="node31" href="$class_navigator.html#a6f3901e766e383a66c47177257c46204" title="指定した距離まで走行体を移動させる " alt="" coords="469,699,587,726"/>
+<area shape="rect" id="node35" href="$class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981" title="指定した距離まで走行体を後退させる " alt="" coords="471,547,585,574"/>
+<area shape="rect" id="node36" href="$class_navigator.html#ad038009d5adb19067c5427d35a603636" title="指定した距離まで黒色の点を検出しながら走行体を移動させる " alt="" coords="425,649,631,675"/>
+<area shape="rect" id="node37" href="$class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="449,750,607,777"/>
+<area shape="rect" id="node38" href="$class_navigator.html#a44c0a5ae8469d0595e1632d8a70e12d8" title="指定した距離特定の色を探しながら進む（ライントレースしない） " alt="" coords="427,801,629,827"/>
+<area shape="rect" id="node39" href="$class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd" title="指定した距離分ライントレースして指定した色があると停止する " alt="" coords="713,1121,877,1147"/>
+<area shape="rect" id="node40" href="$class_parking.html#a0ced699cd4a26fa9d3f0084be7aad329" title="Parking::runParpendicular" alt="" coords="443,1121,613,1147"/>
+<area shape="rect" id="node41" href="$class_parking.html#a1c8534b97e4fb30fb02eb3c2f9ff95a0" title="Parking::runParallel" alt="" coords="461,1171,595,1198"/>
+<area shape="rect" id="node42" href="$class_right_course.html#a804b99d8ed8922af394d029d65e0008c" title="RightCourse::moveBlockAreaTo8" alt="" coords="419,902,637,929"/>
+<area shape="rect" id="node43" href="$class_right_course.html#a06e136e501549c2a13709e044755e7df" title="RightCourse::runPuzzle" alt="" coords="447,953,609,979"/>
+<area shape="rect" id="node44" href="$class_right_course.html#a0718c3e06bc3377fdb7a3334029323fb" title="RightCourse::runNormalCourse" alt="" coords="425,1070,631,1097"/>
+<area shape="rect" id="node20" href="$class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="957,218,1141,245"/>
+<area shape="rect" id="node21" href="$class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="1207,243,1385,270"/>
+<area shape="rect" id="node22" href="$class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="1213,193,1379,219"/>
+<area shape="rect" id="node24" href="$class_left_course.html#af1faf09b5d0ac101ceb1fec6e60bfe1a" title="LeftCourse::runGoBlack" alt="" coords="713,1433,876,1459"/>
+<area shape="rect" id="node27" href="$class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="707,969,883,995"/>
+<area shape="rect" id="node28" href="$class_a_i_answer.html#a81cbdae4bd9ff02c895f2ccef9920f90" title="デジタル数字の場所まで行く " alt="" coords="686,817,903,843"/>
+<area shape="rect" id="node29" href="$class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="694,649,895,675"/>
+<area shape="rect" id="node30" href="$class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="952,294,1147,321"/>
+<area shape="rect" id="node32" href="$class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="713,345,876,371"/>
+<area shape="rect" id="node33" href="$class_navigator.html#a4615989552b06b3d0fe35cf52ded3cd8" title="現在位置の周辺における光センサ値を取得する " alt="" coords="691,497,899,523"/>
+<area shape="rect" id="node34" href="$namespaceetrobocon2018__test.html#af6b8f0446c102883a66568a2ccca886d" title="etrobocon2018_test\l::TEST" alt="" coords="727,751,863,792"/>
+<area shape="rect" id="node46" href="$class_basic_walker.html#a2d3c05994639c88e59a91bed10026866" title="BasicWalker::spin" alt="" coords="464,1542,592,1569"/>
+<area shape="rect" id="node47" href="$class_basic_walker.html#ab7c0ca04bcf1345e3b6f75f80919d3ec" title="BasicWalker::spinToCheck\lBlackLine" alt="" coords="437,1476,619,1517"/>
+</map>

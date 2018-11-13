@@ -1,0 +1,7 @@
+<map id="クラス階層図" name="クラス階層図">
+<area shape="rect" id="node1" href="$classev3api_1_1_sensor.html" title="ev3api::Sensor" alt="" coords="5,81,115,108"/>
+<area shape="rect" id="node2" href="$classev3api_1_1_color_sensor.html" title="ev3api::ColorSensor" alt="" coords="166,5,306,32"/>
+<area shape="rect" id="node3" href="$classev3api_1_1_gyro_sensor.html" title="ev3api::GyroSensor" alt="" coords="167,56,305,83"/>
+<area shape="rect" id="node4" href="$classev3api_1_1_sonar_sensor.html" title="ev3api::SonarSensor" alt="" coords="165,107,307,133"/>
+<area shape="rect" id="node5" href="$classev3api_1_1_touch_sensor.html" title="ev3api::TouchSensor" alt="" coords="163,157,309,184"/>
+</map>

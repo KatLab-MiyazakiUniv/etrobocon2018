@@ -1,0 +1,4 @@
+<map id="Controller::getRawColor" name="Controller::getRawColor">
+<area shape="rect" id="node2" href="$classev3api_1_1_color_sensor.html#a010cb55b6119147496637bc5b2189582" title="ev3api::ColorSensor\l::getRawColor" alt="" coords="217,5,357,46"/>
+<area shape="rect" id="node3" href="$classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92" title="ev3api::Sensor::getPort" alt="" coords="406,12,565,39"/>
+</map>

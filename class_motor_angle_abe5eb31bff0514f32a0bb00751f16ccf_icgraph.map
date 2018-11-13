@@ -1,0 +1,35 @@
+<map id="MotorAngle::update" name="MotorAngle::update">
+<area shape="rect" id="node2" href="$class_motor_angle.html#a8bf992a88ac06b1b5731fb99912ff9bd" title="左右モータの相対角度の平均値を計算する " alt="" coords="189,204,392,231"/>
+<area shape="rect" id="node30" href="$class_self_localization.html#a13a84e776674b978d4f23a528f621eda" title="SelfLocalization::update" alt="" coords="210,297,371,324"/>
+<area shape="rect" id="node3" href="$class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28" title="走行体の旋回速度を求める " alt="" coords="441,204,610,231"/>
+<area shape="rect" id="node29" href="$namespaceetrobocon2018__test.html#a6ea5aec8c78a52b96793ca326a4012b8" title="etrobocon2018_test\l::TEST" alt="" coords="457,138,593,179"/>
+<area shape="rect" id="node4" href="$class_wheel_odometry.html#a61d5310dcb3118542a9a27902d85d592" title="走行体の位置情報を更新する " alt="" coords="659,233,821,260"/>
+<area shape="rect" id="node28" href="$namespaceetrobocon2018__test.html#a89842d10a1e42a34d259e1aa7bd488b2" title="etrobocon2018_test\l::TEST" alt="" coords="672,167,808,209"/>
+<area shape="rect" id="node5" href="$class_navigator.html#a6f3901e766e383a66c47177257c46204" title="指定した距離まで走行体を移動させる " alt="" coords="914,233,1033,260"/>
+<area shape="rect" id="node22" href="$class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981" title="指定した距離まで走行体を後退させる " alt="" coords="916,384,1031,411"/>
+<area shape="rect" id="node23" href="$class_navigator.html#ad038009d5adb19067c5427d35a603636" title="指定した距離まで黒色の点を検出しながら走行体を移動させる " alt="" coords="870,300,1077,327"/>
+<area shape="rect" id="node24" href="$class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="894,157,1053,184"/>
+<area shape="rect" id="node25" href="$class_navigator.html#a44c0a5ae8469d0595e1632d8a70e12d8" title="指定した距離特定の色を探しながら進む（ライントレースしない） " alt="" coords="872,31,1075,57"/>
+<area shape="rect" id="node26" href="$class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd" title="指定した距離分ライントレースして指定した色があると停止する " alt="" coords="891,107,1055,133"/>
+<area shape="rect" id="node27" href="$namespaceetrobocon2018__test.html#a1e64510d3757a148a2a3ec509c8c951b" title="etrobocon2018_test\l::TEST" alt="" coords="905,435,1041,477"/>
+<area shape="rect" id="node6" href="$class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="1147,5,1323,32"/>
+<area shape="rect" id="node8" href="$class_a_i_answer.html#a81cbdae4bd9ff02c895f2ccef9920f90" title="デジタル数字の場所まで行く " alt="" coords="1126,208,1343,235"/>
+<area shape="rect" id="node9" href="$class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="1134,376,1335,403"/>
+<area shape="rect" id="node10" href="$class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="1152,107,1317,133"/>
+<area shape="rect" id="node12" href="$class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="1152,56,1317,83"/>
+<area shape="rect" id="node13" href="$class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="1153,259,1316,285"/>
+<area shape="rect" id="node20" href="$class_navigator.html#a4615989552b06b3d0fe35cf52ded3cd8" title="現在位置の周辺における光センサ値を取得する " alt="" coords="1131,427,1339,453"/>
+<area shape="rect" id="node21" href="$namespaceetrobocon2018__test.html#af6b8f0446c102883a66568a2ccca886d" title="etrobocon2018_test\l::TEST" alt="" coords="1167,310,1303,351"/>
+<area shape="rect" id="node7" href="$class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="1441,31,1546,57"/>
+<area shape="rect" id="node11" href="$class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="1392,107,1595,133"/>
+<area shape="rect" id="node14" href="$class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="1886,233,2018,260"/>
+<area shape="rect" id="node15" href="$class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="1643,360,1837,387"/>
+<area shape="rect" id="node17" href="$class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="1401,272,1585,299"/>
+<area shape="rect" id="node16" href="$class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1893,309,2011,336"/>
+<area shape="rect" id="node18" href="$class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="1651,259,1829,285"/>
+<area shape="rect" id="node19" href="$class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="1657,309,1823,336"/>
+<area shape="rect" id="node31" href="$namespaceetrobocon2018__test.html#af1ed69b4d340acfaee1054020192fd0b" title="etrobocon2018_test\l::straight" alt="" coords="457,321,593,362"/>
+<area shape="rect" id="node33" href="$namespaceetrobocon2018__test.html#aa9b155a5fad6144310e286ad016172a0" title="etrobocon2018_test\l::curve" alt="" coords="457,255,593,297"/>
+<area shape="rect" id="node34" href="$namespaceetrobocon2018__test.html#aec61a34e6d53e491a4851282cdd795ba" title="etrobocon2018_test\l::TEST" alt="" coords="457,386,593,427"/>
+<area shape="rect" id="node32" href="$namespaceetrobocon2018__test.html#a9bfb1877d03719f205c051cf7a532cb1" title="etrobocon2018_test\l::TEST" alt="" coords="672,303,808,345"/>
+</map>

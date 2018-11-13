@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: ev3api::Clock クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
+      <li><a href="inherits.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceev3api.html">ev3api</a></li><li class="navelem"><a class="el" href="classev3api_1_1_clock.html">Clock</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-static-methods">静的限定公開メンバ関数</a> &#124;
+<a href="classev3api_1_1_clock-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">ev3api::Clock クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_clock_8h_source.html">Clock.h</a>&gt;</code></p>
+<div class="dynheader">
+ev3api::Clock 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_clock__coll__graph.png" border="0" usemap="#ev3api_1_1_clock_coll__map" alt="Collaboration graph"/></div>
+<map name="ev3api_1_1_clock_coll__map" id="ev3api_1_1_clock_coll__map">
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a14501814029d4e1829632ac0fdfd0926"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_clock.html#a14501814029d4e1829632ac0fdfd0926">Clock</a> (void)</td></tr>
+<tr class="separator:a14501814029d4e1829632ac0fdfd0926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae68ba47fe6d8f4a7f515001c10547ac4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_clock.html#ae68ba47fe6d8f4a7f515001c10547ac4">reset</a> (void)</td></tr>
+<tr class="separator:ae68ba47fe6d8f4a7f515001c10547ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a044403e10e530c8857cae901cdeb9999"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_clock.html#a044403e10e530c8857cae901cdeb9999">now</a> (void) const </td></tr>
+<tr class="separator:a044403e10e530c8857cae901cdeb9999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d0dff1843a33d71945a1e13f85e20c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_clock.html#a3d0dff1843a33d71945a1e13f85e20c8">wait</a> (uint32_t duration)</td></tr>
+<tr class="separator:a3d0dff1843a33d71945a1e13f85e20c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34ff6f7b273edf33eeae7abc1754e319"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_clock.html#a34ff6f7b273edf33eeae7abc1754e319">sleep</a> (uint32_t duration)</td></tr>
+<tr class="separator:a34ff6f7b273edf33eeae7abc1754e319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+静的限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a4e0631ed1cccad6401b473dcf64f4fe1"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_clock.html#a4e0631ed1cccad6401b473dcf64f4fe1">getTim</a> ()</td></tr>
+<tr class="separator:a4e0631ed1cccad6401b473dcf64f4fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>EV3 クロッククラス </p>
+
+<p> <a class="el" href="_clock_8h_source.html">Clock.h</a> の <a class="el" href="_clock_8h_source.html#l00016">16</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a class="anchor" id="a14501814029d4e1829632ac0fdfd0926"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Clock::Clock </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>コンストラクタ 開始時間をシステムクロックで初期化する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">-</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>- </dd></dl>
+
+<p> <a class="el" href="_clock_8cpp_source.html">Clock.cpp</a> の <a class="el" href="_clock_8cpp_source.html#l00013">13</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;:mStartClock(<a class="code" href="classev3api_1_1_clock.html#a4e0631ed1cccad6401b473dcf64f4fe1">getTim</a>())</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{}</div>
+<div class="ttc" id="classev3api_1_1_clock_html_a4e0631ed1cccad6401b473dcf64f4fe1"><div class="ttname"><a href="classev3api_1_1_clock.html#a4e0631ed1cccad6401b473dcf64f4fe1">ev3api::Clock::getTim</a></div><div class="ttdeci">static uint32_t getTim()</div><div class="ttdef"><b>Definition:</b> <a href="_clock_8cpp_source.html#l00031">Clock.cpp:31</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="a4e0631ed1cccad6401b473dcf64f4fe1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Clock::getTim </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>システムクロック取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">-</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>システムクロック現在値 </dd></dl>
+
+<p> <a class="el" href="_clock_8cpp_source.html">Clock.cpp</a> の <a class="el" href="_clock_8cpp_source.html#l00031">31</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    SYSTIM time;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    get_tim(&amp;time);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// We&#39;re using a 32-bitter and can assume that we</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// don&#39;t need to do any locking here.</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(time);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_clock_a4e0631ed1cccad6401b473dcf64f4fe1_icgraph.png" border="0" usemap="#classev3api_1_1_clock_a4e0631ed1cccad6401b473dcf64f4fe1_icgraph" alt=""/></div>
+<map name="classev3api_1_1_clock_a4e0631ed1cccad6401b473dcf64f4fe1_icgraph" id="classev3api_1_1_clock_a4e0631ed1cccad6401b473dcf64f4fe1_icgraph">
+<area shape="rect" id="node2" href="classev3api_1_1_clock.html#ae68ba47fe6d8f4a7f515001c10547ac4" title="ev3api::Clock::reset" alt="" coords="205,5,344,32"/><area shape="rect" id="node3" href="classev3api_1_1_clock.html#a044403e10e530c8857cae901cdeb9999" title="ev3api::Clock::now" alt="" coords="207,56,342,83"/><area shape="rect" id="node4" href="str_2app_8h.html#a4c6b1bba8b11eacd00d4e456cf835fe2" title="sensor_log_task" alt="" coords="392,56,509,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a044403e10e530c8857cae901cdeb9999"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Clock::now </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>経過時間取得 開始時間からの経過時間を取得する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">-</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>経過時間[msec] </dd></dl>
+
+<p> <a class="el" href="_clock_8cpp_source.html">Clock.cpp</a> の <a class="el" href="_clock_8cpp_source.html#l00026">26</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="classev3api_1_1_clock.html#a4e0631ed1cccad6401b473dcf64f4fe1">getTim</a>() - mStartClock);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="ttc" id="classev3api_1_1_clock_html_a4e0631ed1cccad6401b473dcf64f4fe1"><div class="ttname"><a href="classev3api_1_1_clock.html#a4e0631ed1cccad6401b473dcf64f4fe1">ev3api::Clock::getTim</a></div><div class="ttdeci">static uint32_t getTim()</div><div class="ttdef"><b>Definition:</b> <a href="_clock_8cpp_source.html#l00031">Clock.cpp:31</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_clock_a044403e10e530c8857cae901cdeb9999_cgraph.png" border="0" usemap="#classev3api_1_1_clock_a044403e10e530c8857cae901cdeb9999_cgraph" alt=""/></div>
+<map name="classev3api_1_1_clock_a044403e10e530c8857cae901cdeb9999_cgraph" id="classev3api_1_1_clock_a044403e10e530c8857cae901cdeb9999_cgraph">
+<area shape="rect" id="node2" href="classev3api_1_1_clock.html#a4e0631ed1cccad6401b473dcf64f4fe1" title="ev3api::Clock::getTim" alt="" coords="190,5,341,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_clock_a044403e10e530c8857cae901cdeb9999_icgraph.png" border="0" usemap="#classev3api_1_1_clock_a044403e10e530c8857cae901cdeb9999_icgraph" alt=""/></div>
+<map name="classev3api_1_1_clock_a044403e10e530c8857cae901cdeb9999_icgraph" id="classev3api_1_1_clock_a044403e10e530c8857cae901cdeb9999_icgraph">
+<area shape="rect" id="node2" href="str_2app_8h.html#a4c6b1bba8b11eacd00d4e456cf835fe2" title="sensor_log_task" alt="" coords="189,5,307,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae68ba47fe6d8f4a7f515001c10547ac4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Clock::reset </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>リセット 開始時間を現在のシステムクロックでリセットする </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">-</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>- </dd></dl>
+
+<p> <a class="el" href="_clock_8cpp_source.html">Clock.cpp</a> の <a class="el" href="_clock_8cpp_source.html#l00019">19</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    mStartClock = <a class="code" href="classev3api_1_1_clock.html#a4e0631ed1cccad6401b473dcf64f4fe1">getTim</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="ttc" id="classev3api_1_1_clock_html_a4e0631ed1cccad6401b473dcf64f4fe1"><div class="ttname"><a href="classev3api_1_1_clock.html#a4e0631ed1cccad6401b473dcf64f4fe1">ev3api::Clock::getTim</a></div><div class="ttdeci">static uint32_t getTim()</div><div class="ttdef"><b>Definition:</b> <a href="_clock_8cpp_source.html#l00031">Clock.cpp:31</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_clock_ae68ba47fe6d8f4a7f515001c10547ac4_cgraph.png" border="0" usemap="#classev3api_1_1_clock_ae68ba47fe6d8f4a7f515001c10547ac4_cgraph" alt=""/></div>
+<map name="classev3api_1_1_clock_ae68ba47fe6d8f4a7f515001c10547ac4_cgraph" id="classev3api_1_1_clock_ae68ba47fe6d8f4a7f515001c10547ac4_cgraph">
+<area shape="rect" id="node2" href="classev3api_1_1_clock.html#a4e0631ed1cccad6401b473dcf64f4fe1" title="ev3api::Clock::getTim" alt="" coords="193,5,343,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a34ff6f7b273edf33eeae7abc1754e319"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ev3api::Clock::sleep </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>duration</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>自タスクスリープ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">duration</td><td>スリープ時間[msec] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>- </dd></dl>
+
+<p> <a class="el" href="_clock_8h_source.html">Clock.h</a> の <a class="el" href="_clock_8h_source.html#l00058">58</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        tslp_tsk(duration);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_clock_a34ff6f7b273edf33eeae7abc1754e319_icgraph.png" border="0" usemap="#classev3api_1_1_clock_a34ff6f7b273edf33eeae7abc1754e319_icgraph" alt=""/></div>
+<map name="classev3api_1_1_clock_a34ff6f7b273edf33eeae7abc1754e319_icgraph" id="classev3api_1_1_clock_a34ff6f7b273edf33eeae7abc1754e319_icgraph">
+<area shape="rect" id="node2" href="class_walker.html#af913f99c575c9be615d03ec96460ce15" title="Walker::edgeChange" alt="" coords="196,5,340,32"/><area shape="rect" id="node3" href="class_walker.html#a6fd0122fa4bd582a574397aa470446cc" title="Walker::moveAngle" alt="" coords="200,56,336,83"/><area shape="rect" id="node4" href="class_walker.html#a5ee3d6593656b064058949f31f525c31" title="Walker::angleChange" alt="" coords="195,107,341,133"/><area shape="rect" id="node5" href="class_left_course.html#af1faf09b5d0ac101ceb1fec6e60bfe1a" title="LeftCourse::runGoBlack" alt="" coords="389,107,552,133"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3d0dff1843a33d71945a1e13f85e20c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ev3api::Clock::wait </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>duration</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>自タスク遅延 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">duration</td><td>遅延時間[msec] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>- </dd></dl>
+
+<p> <a class="el" href="_clock_8h_source.html">Clock.h</a> の <a class="el" href="_clock_8h_source.html#l00048">48</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        dly_tsk(duration);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/ev3-api/library/libcpp-ev3/include/<a class="el" href="_clock_8h_source.html">Clock.h</a></li>
+<li>str/ev3-api/library/libcpp-ev3/src/<a class="el" href="_clock_8cpp_source.html">Clock.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

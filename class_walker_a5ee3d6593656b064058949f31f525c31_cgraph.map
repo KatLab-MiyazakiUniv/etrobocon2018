@@ -1,0 +1,11 @@
+<map id="Walker::angleChange" name="Walker::angleChange">
+<area shape="rect" id="node2" href="$classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="200,5,363,32"/>
+<area shape="rect" id="node3" href="$class_walker.html#a665540aeed857d2e35565e1949e6abec" title="Walker::run" alt="" coords="435,81,525,108"/>
+<area shape="rect" id="node8" href="$classev3api_1_1_clock.html#a34ff6f7b273edf33eeae7abc1754e319" title="ev3api::Clock::sleep" alt="" coords="211,107,352,133"/>
+<area shape="rect" id="node9" href="$class_walker.html#a548b93fdfc6cb47eaa9ae8b8b8579c23" title="Walker::stop" alt="" coords="233,157,329,184"/>
+<area shape="rect" id="node4" href="$class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3" title="Controller::printDisplay" alt="" coords="599,132,753,159"/>
+<area shape="rect" id="node5" href="$class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="598,81,754,108"/>
+<area shape="rect" id="node7" href="$classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="1013,56,1173,83"/>
+<area shape="rect" id="node6" href="$classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="803,81,965,108"/>
+<area shape="rect" id="node10" href="$classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="411,183,549,209"/>
+</map>

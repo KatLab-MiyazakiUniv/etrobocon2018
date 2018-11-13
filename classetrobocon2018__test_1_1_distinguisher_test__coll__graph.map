@@ -1,0 +1,9 @@
+<map id="etrobocon2018_test::DistinguisherTest" name="etrobocon2018_test::DistinguisherTest">
+<area shape="rect" id="node3" href="$class_distinguisher.html" title="走行体のカラーセンサを用いて、RGB情報より色を推定するクラス。 " alt="" coords="78,417,220,524"/>
+<area shape="rect" id="node4" href="$struct_hsv.html" title="色とHsv情報を保持するクラス。 " alt="" coords="30,5,172,171"/>
+<area shape="rect" id="node5" href="$class_controller.html" title="{Controller\n|+ noteFs6\l+ noteFs4\l+ noteFs6\l+ noteFs4\l+ countLimit\l+ counter\l+ exitCounter\l+ exitCountLimit\l+ brightness\l+ mock_r\l+ mock_g\l+ mock_b\l|+ Controller()\l+ speakerSetVolume()\l+ ledSetColorOrange()\l+ ledSetColorGreen()\l+ getBrightness()\l+ speakerPlayTone()\l+ buttonIsPressedBack()\l+ buttonIsPressedUp()\l+ buttonIsPressedDown()\l+ buttonIsPressedRight()\lほか 22 件…\l}" alt="" coords="292,278,463,663"/>
+<area shape="rect" id="node6" href="$class_motor.html" title="{Motor\n|+ count\l|+ getCount()\l+ setPWM()\l+ stop()\l+ reset()\l+ setBrake()\l}" alt="" coords="197,20,291,156"/>
+<area shape="rect" id="node7" href="$class_color_sensor.html" title="{ColorSensor\n|+ brightness\l|+ getBrightness()\l}" alt="" coords="316,49,439,127"/>
+<area shape="rect" id="node8" href="$class_touch_sensor.html" title="{TouchSensor\n||+ isPressed()\l}" alt="" coords="463,49,563,127"/>
+<area shape="rect" id="node9" href="$class_clock.html" title="{Clock\n||+ sleep()\l}" alt="" coords="590,49,663,127"/>
+</map>

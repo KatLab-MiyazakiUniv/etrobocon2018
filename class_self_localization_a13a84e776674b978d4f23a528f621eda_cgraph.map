@@ -1,0 +1,4 @@
+<map id="SelfLocalization::update" name="SelfLocalization::update">
+<area shape="rect" id="node2" href="$class_motor_angle.html#abe5eb31bff0514f32a0bb00751f16ccf" title="左右モータ角度の過去値を現在値へ更新する " alt="" coords="229,5,363,32"/>
+<area shape="rect" id="node3" href="$class_self_localization.html#a3b7b630ff7861c237c1aee94bc8a56bd" title="SelfLocalization::writing\l_current_coordinates" alt="" coords="216,57,376,98"/>
+</map>

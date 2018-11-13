@@ -1,0 +1,5 @@
+<map id="etrobocon2018_test::TEST" name="etrobocon2018_test::TEST">
+<area shape="rect" id="node2" href="$class_wheel_odometry.html#ad12bfc89fa25fbf0b6c72bed5d61122e" title="走行体の回転角度を返す " alt="" coords="190,34,381,75"/>
+<area shape="rect" id="node3" href="$class_motor_angle.html#a5079b35fb08cc66b9bf0d101d963366a" title="モータ角度の絶対値を計算する " alt="" coords="445,5,624,46"/>
+<area shape="rect" id="node4" href="$class_motor_angle.html#acb61bad045644641b2d47c33e148a7b6" title="左右モータの絶対角度の平均値を計算する " alt="" coords="429,71,640,97"/>
+</map>

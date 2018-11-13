@@ -1,0 +1,4 @@
+<map id="Walker::setBrakeMotor" name="Walker::setBrakeMotor">
+<area shape="rect" id="node2" href="$classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="211,5,373,32"/>
+<area shape="rect" id="node3" href="$classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="421,5,581,32"/>
+</map>

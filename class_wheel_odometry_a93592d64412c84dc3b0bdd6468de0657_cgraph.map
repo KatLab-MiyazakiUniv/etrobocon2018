@@ -1,0 +1,4 @@
+<map id="WheelOdometry::reset" name="WheelOdometry::reset">
+<area shape="rect" id="node2" href="$struct_coordinate.html#ac6e8a112850a5768760a108bd4b965c6" title="走行体の位置情報を初期化する " alt="" coords="209,5,332,32"/>
+<area shape="rect" id="node3" href="$class_motor_angle.html#a20ae8007014e6368805dad79459bcf54" title="左右モータ角度の過去値を0にリセットする " alt="" coords="208,56,333,83"/>
+</map>

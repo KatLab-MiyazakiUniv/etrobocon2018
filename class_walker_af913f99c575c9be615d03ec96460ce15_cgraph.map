@@ -1,0 +1,8 @@
+<map id="Walker::edgeChange" name="Walker::edgeChange">
+<area shape="rect" id="node2" href="$class_walker.html#a665540aeed857d2e35565e1949e6abec" title="Walker::run" alt="" coords="223,56,313,83"/>
+<area shape="rect" id="node7" href="$classev3api_1_1_clock.html#a34ff6f7b273edf33eeae7abc1754e319" title="ev3api::Clock::sleep" alt="" coords="197,107,339,133"/>
+<area shape="rect" id="node3" href="$class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3" title="Controller::printDisplay" alt="" coords="388,5,543,32"/>
+<area shape="rect" id="node4" href="$class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="387,56,543,83"/>
+<area shape="rect" id="node6" href="$classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="803,81,963,108"/>
+<area shape="rect" id="node5" href="$classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="593,56,754,83"/>
+</map>

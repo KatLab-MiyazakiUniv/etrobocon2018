@@ -1,0 +1,6 @@
+<map id="SpeedControl::calculateSpeedForPid" name="SpeedControl::calculateSpeedForPid">
+<area shape="rect" id="node2" href="$class_speed_control.html#a07ca6a7a13bc9f703eaf8846ffdc3f60" title="SpeedControl::calcDistance4ms" alt="" coords="253,5,464,32"/>
+<area shape="rect" id="node3" href="$class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="308,56,409,83"/>
+<area shape="rect" id="node4" href="$class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="303,107,414,133"/>
+<area shape="rect" id="node5" href="$class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="303,157,415,184"/>
+</map>

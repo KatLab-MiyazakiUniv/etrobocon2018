@@ -1,0 +1,8 @@
+<map id="etrobocon2018_test::LifterTest" name="etrobocon2018_test::LifterTest">
+<area shape="rect" id="node3" href="$class_lifter.html" title="走行体のアームを操作するクラス。 " alt="" coords="77,373,212,509"/>
+<area shape="rect" id="node4" href="$class_controller.html" title="{Controller\n|+ noteFs6\l+ noteFs4\l+ noteFs6\l+ noteFs4\l+ countLimit\l+ counter\l+ exitCounter\l+ exitCountLimit\l+ brightness\l+ mock_r\l+ mock_g\l+ mock_b\l|+ Controller()\l+ speakerSetVolume()\l+ ledSetColorOrange()\l+ ledSetColorGreen()\l+ getBrightness()\l+ speakerPlayTone()\l+ buttonIsPressedBack()\l+ buttonIsPressedUp()\l+ buttonIsPressedDown()\l+ buttonIsPressedRight()\lほか 22 件…\l}" alt="" coords="237,249,408,634"/>
+<area shape="rect" id="node5" href="$class_motor.html" title="{Motor\n|+ count\l|+ getCount()\l+ setPWM()\l+ stop()\l+ reset()\l+ setBrake()\l}" alt="" coords="75,5,169,141"/>
+<area shape="rect" id="node6" href="$class_color_sensor.html" title="{ColorSensor\n|+ brightness\l|+ getBrightness()\l}" alt="" coords="195,35,317,112"/>
+<area shape="rect" id="node7" href="$class_touch_sensor.html" title="{TouchSensor\n||+ isPressed()\l}" alt="" coords="342,35,441,112"/>
+<area shape="rect" id="node8" href="$class_clock.html" title="{Clock\n||+ sleep()\l}" alt="" coords="469,35,541,112"/>
+</map>

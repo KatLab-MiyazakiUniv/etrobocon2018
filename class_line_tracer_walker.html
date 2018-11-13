@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: LineTracerWalker クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
+      <li><a href="inherits.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="class_line_tracer_walker-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">LineTracerWalker クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_line_tracer_walker_8h_source.html">LineTracerWalker.h</a>&gt;</code></p>
+<div class="dynheader">
+LineTracerWalker 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_line_tracer_walker__coll__graph.png" border="0" usemap="#_line_tracer_walker_coll__map" alt="Collaboration graph"/></div>
+<map name="_line_tracer_walker_coll__map" id="_line_tracer_walker_coll__map">
+<area shape="rect" id="node2" href="class_speed_control.html" title="PID制御による速度制御クラス " alt="" coords="5,209,173,330"/><area shape="rect" id="node3" href="class_pid.html" title="PID制御の計算を行うクラス " alt="" coords="151,6,255,157"/><area shape="rect" id="node4" href="class_turn_control.html" title="{TurnControl\n||+ TurnControl()\l+ calculateTurnForPid()\l}" alt="" coords="198,223,356,315"/></map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae7e6510ac4dfdf3e76e85bdfbf4594f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line_tracer_walker.html#ae7e6510ac4dfdf3e76e85bdfbf4594f1">LineTracerWalker</a> ()</td></tr>
+<tr class="separator:ae7e6510ac4dfdf3e76e85bdfbf4594f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b5b94728a9b0d145a67816ad1fadc02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line_tracer_walker.html#a4b5b94728a9b0d145a67816ad1fadc02">runLine</a> (int32_t countL, int32_t countR, int16_t light_value)</td></tr>
+<tr class="separator:a4b5b94728a9b0d145a67816ad1fadc02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7af6bb6d2bc87351f4824d09a0eda3d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line_tracer_walker.html#a7af6bb6d2bc87351f4824d09a0eda3d1">setForward</a> (int8_t setValue)</td></tr>
+<tr class="separator:a7af6bb6d2bc87351f4824d09a0eda3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9319a2e5fe665086cbcf966dbcd65034"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line_tracer_walker.html#a9319a2e5fe665086cbcf966dbcd65034">setTurn</a> (int8_t setValue)</td></tr>
+<tr class="separator:a9319a2e5fe665086cbcf966dbcd65034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f4b2a7a72cde7f8a4d9ed4f05237961"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961">getForward</a> ()</td></tr>
+<tr class="separator:a0f4b2a7a72cde7f8a4d9ed4f05237961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75c6e77a03e0fedc2ad1ccf72a6ef390"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390">getTurn</a> ()</td></tr>
+<tr class="separator:a75c6e77a03e0fedc2ad1ccf72a6ef390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f0f717138372f536dbb81a83aa6034"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line_tracer_walker.html#ab1f0f717138372f536dbb81a83aa6034">isLeftsideLine</a> (bool b)</td></tr>
+<tr class="separator:ab1f0f717138372f536dbb81a83aa6034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a466dcd31f0ccffa81d21401b13d8ffe7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_turn_control.html">TurnControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line_tracer_walker.html#a466dcd31f0ccffa81d21401b13d8ffe7">turnControl</a></td></tr>
+<tr class="separator:a466dcd31f0ccffa81d21401b13d8ffe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2cd2253acde19117b52d5f7d98de698"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_speed_control.html">SpeedControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line_tracer_walker.html#ac2cd2253acde19117b52d5f7d98de698">speedControl</a></td></tr>
+<tr class="separator:ac2cd2253acde19117b52d5f7d98de698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafb2becdcc66d5552b80633aa47e959e"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line_tracer_walker.html#aafb2becdcc66d5552b80633aa47e959e">minus</a></td></tr>
+<tr class="separator:aafb2becdcc66d5552b80633aa47e959e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a59aca75c8c99efb32b9baa62d914f379"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line_tracer_walker.html#a59aca75c8c99efb32b9baa62d914f379">forward</a></td></tr>
+<tr class="separator:a59aca75c8c99efb32b9baa62d914f379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a361d90c5269313f31a6696b022847aa0"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line_tracer_walker.html#a361d90c5269313f31a6696b022847aa0">turn</a></td></tr>
+<tr class="separator:a361d90c5269313f31a6696b022847aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>int main(){ lineTracerWalker.speedControl.setPid(6.0, 1.0, 0.5, 110.0); lineTracerWalker.turnControl.setPid(3.0, 1.0, 1.5, target_brightness); while(1){ auto luminance = controller.getBrightness(); lineTracerWalker.runLine(walker.get_count_L(), walker.get_count_R(), luminance); walker.run(lineTracerWalker.getForward(), lineTracerWalker.getTurn());</p>
+<p>controller.tlspTsk(4); } } </p>
+
+<p> <a class="el" href="_line_tracer_walker_8h_source.html">LineTracerWalker.h</a> の <a class="el" href="_line_tracer_walker_8h_source.html#l00021">21</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a class="anchor" id="ae7e6510ac4dfdf3e76e85bdfbf4594f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LineTracerWalker::LineTracerWalker </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_line_tracer_walker_8cpp_source.html">LineTracerWalker.cpp</a> の <a class="el" href="_line_tracer_walker_8cpp_source.html#l00003">3</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;: <a class="code" href="class_line_tracer_walker.html#aafb2becdcc66d5552b80633aa47e959e">minus</a>(-1), <a class="code" href="class_line_tracer_walker.html#a59aca75c8c99efb32b9baa62d914f379">forward</a>(30), <a class="code" href="class_line_tracer_walker.html#a361d90c5269313f31a6696b022847aa0">turn</a>(0) {}</div>
+<div class="ttc" id="class_line_tracer_walker_html_a361d90c5269313f31a6696b022847aa0"><div class="ttname"><a href="class_line_tracer_walker.html#a361d90c5269313f31a6696b022847aa0">LineTracerWalker::turn</a></div><div class="ttdeci">int8_t turn</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8h_source.html#l00036">LineTracerWalker.h:36</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_aafb2becdcc66d5552b80633aa47e959e"><div class="ttname"><a href="class_line_tracer_walker.html#aafb2becdcc66d5552b80633aa47e959e">LineTracerWalker::minus</a></div><div class="ttdeci">int8_t minus</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8h_source.html#l00032">LineTracerWalker.h:32</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_a59aca75c8c99efb32b9baa62d914f379"><div class="ttname"><a href="class_line_tracer_walker.html#a59aca75c8c99efb32b9baa62d914f379">LineTracerWalker::forward</a></div><div class="ttdeci">int8_t forward</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8h_source.html#l00035">LineTracerWalker.h:35</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="a0f4b2a7a72cde7f8a4d9ed4f05237961"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t LineTracerWalker::getForward </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_line_tracer_walker_8cpp_source.html">LineTracerWalker.cpp</a> の <a class="el" href="_line_tracer_walker_8cpp_source.html#l00021">21</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_line_tracer_walker.html#a59aca75c8c99efb32b9baa62d914f379">forward</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="ttc" id="class_line_tracer_walker_html_a59aca75c8c99efb32b9baa62d914f379"><div class="ttname"><a href="class_line_tracer_walker.html#a59aca75c8c99efb32b9baa62d914f379">LineTracerWalker::forward</a></div><div class="ttdeci">int8_t forward</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8h_source.html#l00035">LineTracerWalker.h:35</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_line_tracer_walker_a0f4b2a7a72cde7f8a4d9ed4f05237961_icgraph.png" border="0" usemap="#class_line_tracer_walker_a0f4b2a7a72cde7f8a4d9ed4f05237961_icgraph" alt=""/></div>
+<map name="class_line_tracer_walker_a0f4b2a7a72cde7f8a4d9ed4f05237961_icgraph" id="class_line_tracer_walker_a0f4b2a7a72cde7f8a4d9ed4f05237961_icgraph">
+<area shape="rect" id="node2" href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a" title="指定した色のブロック置き場までライントレースします。 " alt="" coords="266,91,454,132"/><area shape="rect" id="node8" href="class_left_course.html#ae76ee13a3a287b5bbe6b90c2ad9bd368" title="LeftCourse::runGoStraight" alt="" coords="273,254,447,281"/><area shape="rect" id="node10" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="281,381,439,408"/><area shape="rect" id="node18" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd" title="指定した距離分ライントレースして指定した色があると停止する " alt="" coords="278,432,442,458"/><area shape="rect" id="node19" href="class_normal_course.html#a873a379c926da6ee6a724b453f2f50c4" title="NormalCourse::runOrStop" alt="" coords="273,482,447,509"/><area shape="rect" id="node22" href="class_parking.html#a0ced699cd4a26fa9d3f0084be7aad329" title="Parking::runParpendicular" alt="" coords="275,533,445,560"/><area shape="rect" id="node23" href="class_parking.html#a1c8534b97e4fb30fb02eb3c2f9ff95a0" title="Parking::runParallel" alt="" coords="293,584,427,610"/><area shape="rect" id="node24" href="class_right_course.html#a804b99d8ed8922af394d029d65e0008c" title="RightCourse::moveBlockAreaTo8" alt="" coords="251,634,469,661"/><area shape="rect" id="node25" href="class_right_course.html#a06e136e501549c2a13709e044755e7df" title="RightCourse::runPuzzle" alt="" coords="279,685,441,712"/><area shape="rect" id="node3" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="1035,102,1167,129"/><area shape="rect" id="node4" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1042,26,1161,53"/><area shape="rect" id="node5" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="535,77,719,104"/><area shape="rect" id="node6" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="797,26,974,53"/><area shape="rect" id="node7" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="802,77,969,104"/><area shape="rect" id="node9" href="class_left_course.html#af1faf09b5d0ac101ceb1fec6e60bfe1a" title="LeftCourse::runGoBlack" alt="" coords="545,178,708,205"/><area shape="rect" id="node11" href="class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="539,280,715,306"/><area shape="rect" id="node13" href="class_a_i_answer.html#a81cbdae4bd9ff02c895f2ccef9920f90" title="デジタル数字の場所まで行く " alt="" coords="518,330,735,357"/><area shape="rect" id="node14" href="class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="526,381,727,408"/><area shape="rect" id="node15" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="544,482,709,509"/><area shape="rect" id="node17" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="544,432,709,458"/><area shape="rect" id="node12" href="class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="833,356,938,382"/><area shape="rect" id="node16" href="class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="784,482,987,509"/><area shape="rect" id="node20" href="class_left_course.html#a9bbbc6e2b68c99c5baaa9b8a7a951cb6" title="LeftCourse::runNormalCourse" alt="" coords="529,533,725,560"/><area shape="rect" id="node21" href="class_right_course.html#a0718c3e06bc3377fdb7a3334029323fb" title="RightCourse::runNormalCourse" alt="" coords="524,584,729,610"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a75c6e77a03e0fedc2ad1ccf72a6ef390"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t LineTracerWalker::getTurn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_line_tracer_walker_8cpp_source.html">LineTracerWalker.cpp</a> の <a class="el" href="_line_tracer_walker_8cpp_source.html#l00026">26</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_line_tracer_walker.html#a361d90c5269313f31a6696b022847aa0">turn</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="ttc" id="class_line_tracer_walker_html_a361d90c5269313f31a6696b022847aa0"><div class="ttname"><a href="class_line_tracer_walker.html#a361d90c5269313f31a6696b022847aa0">LineTracerWalker::turn</a></div><div class="ttdeci">int8_t turn</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8h_source.html#l00036">LineTracerWalker.h:36</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_line_tracer_walker_a75c6e77a03e0fedc2ad1ccf72a6ef390_icgraph.png" border="0" usemap="#class_line_tracer_walker_a75c6e77a03e0fedc2ad1ccf72a6ef390_icgraph" alt=""/></div>
+<map name="class_line_tracer_walker_a75c6e77a03e0fedc2ad1ccf72a6ef390_icgraph" id="class_line_tracer_walker_a75c6e77a03e0fedc2ad1ccf72a6ef390_icgraph">
+<area shape="rect" id="node2" href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a" title="指定した色のブロック置き場までライントレースします。 " alt="" coords="245,91,433,132"/><area shape="rect" id="node8" href="class_left_course.html#ae76ee13a3a287b5bbe6b90c2ad9bd368" title="LeftCourse::runGoStraight" alt="" coords="251,254,426,281"/><area shape="rect" id="node10" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="259,381,418,408"/><area shape="rect" id="node18" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd" title="指定した距離分ライントレースして指定した色があると停止する " alt="" coords="257,432,421,458"/><area shape="rect" id="node19" href="class_normal_course.html#a873a379c926da6ee6a724b453f2f50c4" title="NormalCourse::runOrStop" alt="" coords="252,482,425,509"/><area shape="rect" id="node22" href="class_parking.html#a0ced699cd4a26fa9d3f0084be7aad329" title="Parking::runParpendicular" alt="" coords="253,533,424,560"/><area shape="rect" id="node23" href="class_parking.html#a1c8534b97e4fb30fb02eb3c2f9ff95a0" title="Parking::runParallel" alt="" coords="271,584,406,610"/><area shape="rect" id="node24" href="class_right_course.html#a804b99d8ed8922af394d029d65e0008c" title="RightCourse::moveBlockAreaTo8" alt="" coords="230,634,447,661"/><area shape="rect" id="node25" href="class_right_course.html#a06e136e501549c2a13709e044755e7df" title="RightCourse::runPuzzle" alt="" coords="258,685,419,712"/><area shape="rect" id="node3" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="1014,102,1146,129"/><area shape="rect" id="node4" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1021,26,1139,53"/><area shape="rect" id="node5" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="513,77,697,104"/><area shape="rect" id="node6" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="775,26,953,53"/><area shape="rect" id="node7" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="781,77,947,104"/><area shape="rect" id="node9" href="class_left_course.html#af1faf09b5d0ac101ceb1fec6e60bfe1a" title="LeftCourse::runGoBlack" alt="" coords="524,178,687,205"/><area shape="rect" id="node11" href="class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="517,280,693,306"/><area shape="rect" id="node13" href="class_a_i_answer.html#a81cbdae4bd9ff02c895f2ccef9920f90" title="デジタル数字の場所まで行く " alt="" coords="497,330,714,357"/><area shape="rect" id="node14" href="class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="505,381,706,408"/><area shape="rect" id="node15" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="523,482,688,509"/><area shape="rect" id="node17" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="523,432,688,458"/><area shape="rect" id="node12" href="class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="811,356,917,382"/><area shape="rect" id="node16" href="class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="763,482,965,509"/><area shape="rect" id="node20" href="class_left_course.html#a9bbbc6e2b68c99c5baaa9b8a7a951cb6" title="LeftCourse::runNormalCourse" alt="" coords="507,533,703,560"/><area shape="rect" id="node21" href="class_right_course.html#a0718c3e06bc3377fdb7a3334029323fb" title="RightCourse::runNormalCourse" alt="" coords="503,584,708,610"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab1f0f717138372f536dbb81a83aa6034"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LineTracerWalker::isLeftsideLine </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_line_tracer_walker_8cpp_source.html">LineTracerWalker.cpp</a> の <a class="el" href="_line_tracer_walker_8cpp_source.html#l00031">31</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="comment">// Trueのときは線の左側なので-1</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">// Falseのときは線の右側なので+1</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="class_line_tracer_walker.html#aafb2becdcc66d5552b80633aa47e959e">minus</a> = (b == <span class="keyword">true</span>) ? -1 : 1;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="ttc" id="class_line_tracer_walker_html_aafb2becdcc66d5552b80633aa47e959e"><div class="ttname"><a href="class_line_tracer_walker.html#aafb2becdcc66d5552b80633aa47e959e">LineTracerWalker::minus</a></div><div class="ttdeci">int8_t minus</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8h_source.html#l00032">LineTracerWalker.h:32</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_line_tracer_walker_ab1f0f717138372f536dbb81a83aa6034_icgraph.png" border="0" usemap="#class_line_tracer_walker_ab1f0f717138372f536dbb81a83aa6034_icgraph" alt=""/></div>
+<map name="class_line_tracer_walker_ab1f0f717138372f536dbb81a83aa6034_icgraph" id="class_line_tracer_walker_ab1f0f717138372f536dbb81a83aa6034_icgraph">
+<area shape="rect" id="node2" href="class_left_normal_course.html#a5a07e4b41de72aaaff4796d286589902" title="LeftNormalCourse::LeftNormal\lCourse" alt="" coords="267,6,467,47"/><area shape="rect" id="node3" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="287,123,446,149"/><area shape="rect" id="node12" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd" title="指定した距離分ライントレースして指定した色があると停止する " alt="" coords="285,72,449,99"/><area shape="rect" id="node13" href="class_right_normal_course.html#a889f1172fbab1bbcd67bcf27f4d619e7" title="RightNormalCourse::\lRightNormalCourse" alt="" coords="294,174,439,215"/><area shape="rect" id="node4" href="class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="536,173,712,200"/><area shape="rect" id="node6" href="class_a_i_answer.html#a81cbdae4bd9ff02c895f2ccef9920f90" title="デジタル数字の場所まで行く " alt="" coords="515,275,733,301"/><area shape="rect" id="node7" href="class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="523,123,725,149"/><area shape="rect" id="node8" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="541,21,707,48"/><area shape="rect" id="node10" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="541,72,707,99"/><area shape="rect" id="node11" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="558,224,690,251"/><area shape="rect" id="node5" href="class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="830,123,935,149"/><area shape="rect" id="node9" href="class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="781,21,984,48"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b5b94728a9b0d145a67816ad1fadc02"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LineTracerWalker::runLine </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>countL</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>countR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&#160;</td>
+          <td class="paramname"><em>light_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_line_tracer_walker_8cpp_source.html">LineTracerWalker.cpp</a> の <a class="el" href="_line_tracer_walker_8cpp_source.html#l00005">5</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <a class="code" href="class_line_tracer_walker.html#a59aca75c8c99efb32b9baa62d914f379">forward</a> = <a class="code" href="class_line_tracer_walker.html#ac2cd2253acde19117b52d5f7d98de698">speedControl</a>.<a class="code" href="class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8">calculateSpeedForPid</a>(countL, countR);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <a class="code" href="class_line_tracer_walker.html#a361d90c5269313f31a6696b022847aa0">turn</a> = <a class="code" href="class_line_tracer_walker.html#a466dcd31f0ccffa81d21401b13d8ffe7">turnControl</a>.<a class="code" href="class_turn_control.html#a4de8a0d2496220ab73f078ac0f3fd1a1">calculateTurnForPid</a>(<a class="code" href="class_line_tracer_walker.html#a59aca75c8c99efb32b9baa62d914f379">forward</a>, light_value) * <a class="code" href="class_line_tracer_walker.html#aafb2becdcc66d5552b80633aa47e959e">minus</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
+<div class="ttc" id="class_turn_control_html_a4de8a0d2496220ab73f078ac0f3fd1a1"><div class="ttname"><a href="class_turn_control.html#a4de8a0d2496220ab73f078ac0f3fd1a1">TurnControl::calculateTurnForPid</a></div><div class="ttdeci">std::int8_t calculateTurnForPid(std::int8_t forward, std::int16_t light_value)</div><div class="ttdef"><b>Definition:</b> <a href="_turn_control_8cpp_source.html#l00011">TurnControl.cpp:11</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_a361d90c5269313f31a6696b022847aa0"><div class="ttname"><a href="class_line_tracer_walker.html#a361d90c5269313f31a6696b022847aa0">LineTracerWalker::turn</a></div><div class="ttdeci">int8_t turn</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8h_source.html#l00036">LineTracerWalker.h:36</a></div></div>
+<div class="ttc" id="class_speed_control_html_a4dc24488ce1566fe7b2dc1ecaf1a7bc8"><div class="ttname"><a href="class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8">SpeedControl::calculateSpeedForPid</a></div><div class="ttdeci">std::int32_t calculateSpeedForPid(std::int32_t curAngleL, std::int32_t curAngleR)</div><div class="ttdef"><b>Definition:</b> <a href="_speed_control_8cpp_source.html#l00024">SpeedControl.cpp:24</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_aafb2becdcc66d5552b80633aa47e959e"><div class="ttname"><a href="class_line_tracer_walker.html#aafb2becdcc66d5552b80633aa47e959e">LineTracerWalker::minus</a></div><div class="ttdeci">int8_t minus</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8h_source.html#l00032">LineTracerWalker.h:32</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_a59aca75c8c99efb32b9baa62d914f379"><div class="ttname"><a href="class_line_tracer_walker.html#a59aca75c8c99efb32b9baa62d914f379">LineTracerWalker::forward</a></div><div class="ttdeci">int8_t forward</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8h_source.html#l00035">LineTracerWalker.h:35</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_a466dcd31f0ccffa81d21401b13d8ffe7"><div class="ttname"><a href="class_line_tracer_walker.html#a466dcd31f0ccffa81d21401b13d8ffe7">LineTracerWalker::turnControl</a></div><div class="ttdeci">TurnControl turnControl</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8h_source.html#l00030">LineTracerWalker.h:30</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_ac2cd2253acde19117b52d5f7d98de698"><div class="ttname"><a href="class_line_tracer_walker.html#ac2cd2253acde19117b52d5f7d98de698">LineTracerWalker::speedControl</a></div><div class="ttdeci">SpeedControl speedControl</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8h_source.html#l00031">LineTracerWalker.h:31</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_line_tracer_walker_a4b5b94728a9b0d145a67816ad1fadc02_cgraph.png" border="0" usemap="#class_line_tracer_walker_a4b5b94728a9b0d145a67816ad1fadc02_cgraph" alt=""/></div>
+<map name="class_line_tracer_walker_a4b5b94728a9b0d145a67816ad1fadc02_cgraph" id="class_line_tracer_walker_a4b5b94728a9b0d145a67816ad1fadc02_cgraph">
+<area shape="rect" id="node2" href="class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="230,67,429,109"/><area shape="rect" id="node7" href="class_turn_control.html#a4de8a0d2496220ab73f078ac0f3fd1a1" title="TurnControl::calculateTurn\lForPid" alt="" coords="241,133,417,174"/><area shape="rect" id="node3" href="class_speed_control.html#a07ca6a7a13bc9f703eaf8846ffdc3f60" title="SpeedControl::calcDistance4ms" alt="" coords="477,5,688,32"/><area shape="rect" id="node4" href="class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="532,56,633,83"/><area shape="rect" id="node5" href="class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="527,107,638,133"/><area shape="rect" id="node6" href="class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="527,157,639,184"/><area shape="rect" id="node8" href="struct_l_p_f.html#ad97fc124a8e07e291135a150b2743489" title="現在のセンサ値にフィルタ処理を実行する " alt="" coords="536,208,629,235"/><area shape="rect" id="node9" href="struct_l_p_f.html#a0766bc31d399b7e6d1808b634cf86349" title="RCフィルタ(ローパスフィルタ)処理 " alt="" coords="737,208,839,235"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_line_tracer_walker_a4b5b94728a9b0d145a67816ad1fadc02_icgraph.png" border="0" usemap="#class_line_tracer_walker_a4b5b94728a9b0d145a67816ad1fadc02_icgraph" alt=""/></div>
+<map name="class_line_tracer_walker_a4b5b94728a9b0d145a67816ad1fadc02_icgraph" id="class_line_tracer_walker_a4b5b94728a9b0d145a67816ad1fadc02_icgraph">
+<area shape="rect" id="node2" href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a" title="指定した色のブロック置き場までライントレースします。 " alt="" coords="245,95,433,137"/><area shape="rect" id="node8" href="class_left_course.html#ae76ee13a3a287b5bbe6b90c2ad9bd368" title="LeftCourse::runGoStraight" alt="" coords="251,453,426,480"/><area shape="rect" id="node10" href="class_left_normal_course.html#a735173d6fe4db035e57ecbd9b1424d9e" title="LeftNormalCourse::runNormal\lCourse" alt="" coords="241,505,437,546"/><area shape="rect" id="node12" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="259,331,418,357"/><area shape="rect" id="node20" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd" title="指定した距離分ライントレースして指定した色があると停止する " alt="" coords="257,403,421,429"/><area shape="rect" id="node21" href="class_parking.html#a0ced699cd4a26fa9d3f0084be7aad329" title="Parking::runParpendicular" alt="" coords="253,571,424,597"/><area shape="rect" id="node22" href="class_parking.html#a1c8534b97e4fb30fb02eb3c2f9ff95a0" title="Parking::runParallel" alt="" coords="271,621,406,648"/><area shape="rect" id="node23" href="class_right_course.html#a804b99d8ed8922af394d029d65e0008c" title="RightCourse::moveBlockAreaTo8" alt="" coords="230,672,447,699"/><area shape="rect" id="node24" href="class_right_course.html#a06e136e501549c2a13709e044755e7df" title="RightCourse::runPuzzle" alt="" coords="258,723,419,749"/><area shape="rect" id="node25" href="class_right_course.html#a0718c3e06bc3377fdb7a3334029323fb" title="RightCourse::runNormalCourse" alt="" coords="236,773,441,800"/><area shape="rect" id="node3" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="1014,103,1146,129"/><area shape="rect" id="node4" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1021,27,1139,53"/><area shape="rect" id="node5" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="513,77,697,104"/><area shape="rect" id="node6" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="775,77,953,104"/><area shape="rect" id="node7" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="781,27,947,53"/><area shape="rect" id="node9" href="class_left_course.html#af1faf09b5d0ac101ceb1fec6e60bfe1a" title="LeftCourse::runGoBlack" alt="" coords="524,483,687,509"/><area shape="rect" id="node11" href="class_left_course.html#a9bbbc6e2b68c99c5baaa9b8a7a951cb6" title="LeftCourse::runNormalCourse" alt="" coords="507,533,703,560"/><area shape="rect" id="node13" href="class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="517,331,693,357"/><area shape="rect" id="node15" href="class_a_i_answer.html#a81cbdae4bd9ff02c895f2ccef9920f90" title="デジタル数字の場所まで行く " alt="" coords="497,280,714,307"/><area shape="rect" id="node16" href="class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="505,179,706,205"/><area shape="rect" id="node17" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="523,432,688,459"/><area shape="rect" id="node19" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="523,381,688,408"/><area shape="rect" id="node14" href="class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="811,356,917,383"/><area shape="rect" id="node18" href="class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="763,432,965,459"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7af6bb6d2bc87351f4824d09a0eda3d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LineTracerWalker::setForward </td>
+          <td>(</td>
+          <td class="paramtype">int8_t&#160;</td>
+          <td class="paramname"><em>setValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_line_tracer_walker_8cpp_source.html">LineTracerWalker.cpp</a> の <a class="el" href="_line_tracer_walker_8cpp_source.html#l00011">11</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="class_line_tracer_walker.html#a59aca75c8c99efb32b9baa62d914f379">forward</a> = setValue;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="ttc" id="class_line_tracer_walker_html_a59aca75c8c99efb32b9baa62d914f379"><div class="ttname"><a href="class_line_tracer_walker.html#a59aca75c8c99efb32b9baa62d914f379">LineTracerWalker::forward</a></div><div class="ttdeci">int8_t forward</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8h_source.html#l00035">LineTracerWalker.h:35</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_line_tracer_walker_a7af6bb6d2bc87351f4824d09a0eda3d1_icgraph.png" border="0" usemap="#class_line_tracer_walker_a7af6bb6d2bc87351f4824d09a0eda3d1_icgraph" alt=""/></div>
+<map name="class_line_tracer_walker_a7af6bb6d2bc87351f4824d09a0eda3d1_icgraph" id="class_line_tracer_walker_a7af6bb6d2bc87351f4824d09a0eda3d1_icgraph">
+<area shape="rect" id="node2" href="class_normal_course.html#a643fa714726cffb93ad81f919e5ff140" title="NormalCourse::stop" alt="" coords="251,45,389,72"/><area shape="rect" id="node3" href="class_left_normal_course.html#a735173d6fe4db035e57ecbd9b1424d9e" title="LeftNormalCourse::runNormal\lCourse" alt="" coords="438,5,634,46"/><area shape="rect" id="node5" href="class_right_normal_course.html#a3b6eb8a4d381e05de31c891f279d06cb" title="RightNormalCourse::\lrunNormalCourse" alt="" coords="463,70,609,111"/><area shape="rect" id="node4" href="class_left_course.html#a9bbbc6e2b68c99c5baaa9b8a7a951cb6" title="LeftCourse::runNormalCourse" alt="" coords="687,12,883,39"/><area shape="rect" id="node6" href="class_right_course.html#a0718c3e06bc3377fdb7a3334029323fb" title="RightCourse::runNormalCourse" alt="" coords="683,69,888,96"/><area shape="rect" id="node7" href="namespaceetrobocon2018__test.html#a31528842c872b8c4f0ed6dd0c3a12267" title="etrobocon2018_test\l::TEST" alt="" coords="717,121,853,162"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9319a2e5fe665086cbcf966dbcd65034"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LineTracerWalker::setTurn </td>
+          <td>(</td>
+          <td class="paramtype">int8_t&#160;</td>
+          <td class="paramname"><em>setValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_line_tracer_walker_8cpp_source.html">LineTracerWalker.cpp</a> の <a class="el" href="_line_tracer_walker_8cpp_source.html#l00016">16</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <a class="code" href="class_line_tracer_walker.html#a361d90c5269313f31a6696b022847aa0">turn</a> = setValue;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="ttc" id="class_line_tracer_walker_html_a361d90c5269313f31a6696b022847aa0"><div class="ttname"><a href="class_line_tracer_walker.html#a361d90c5269313f31a6696b022847aa0">LineTracerWalker::turn</a></div><div class="ttdeci">int8_t turn</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8h_source.html#l00036">LineTracerWalker.h:36</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a class="anchor" id="a59aca75c8c99efb32b9baa62d914f379"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t LineTracerWalker::forward</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_line_tracer_walker_8h_source.html">LineTracerWalker.h</a> の <a class="el" href="_line_tracer_walker_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="aafb2becdcc66d5552b80633aa47e959e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t LineTracerWalker::minus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_line_tracer_walker_8h_source.html">LineTracerWalker.h</a> の <a class="el" href="_line_tracer_walker_8h_source.html#l00032">32</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac2cd2253acde19117b52d5f7d98de698"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_speed_control.html">SpeedControl</a> LineTracerWalker::speedControl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_line_tracer_walker_8h_source.html">LineTracerWalker.h</a> の <a class="el" href="_line_tracer_walker_8h_source.html#l00031">31</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="a361d90c5269313f31a6696b022847aa0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t LineTracerWalker::turn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_line_tracer_walker_8h_source.html">LineTracerWalker.h</a> の <a class="el" href="_line_tracer_walker_8h_source.html#l00036">36</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="a466dcd31f0ccffa81d21401b13d8ffe7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_turn_control.html">TurnControl</a> LineTracerWalker::turnControl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_line_tracer_walker_8h_source.html">LineTracerWalker.h</a> の <a class="el" href="_line_tracer_walker_8h_source.html#l00030">30</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/apps/include/<a class="el" href="_line_tracer_walker_8h_source.html">LineTracerWalker.h</a></li>
+<li>str/apps/src/<a class="el" href="_line_tracer_walker_8cpp_source.html">LineTracerWalker.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

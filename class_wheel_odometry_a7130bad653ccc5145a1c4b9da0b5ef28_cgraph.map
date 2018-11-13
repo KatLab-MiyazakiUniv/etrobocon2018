@@ -1,0 +1,4 @@
+<map id="WheelOdometry::velocity" name="WheelOdometry::velocity">
+<area shape="rect" id="node2" href="$class_motor_angle.html#a8bf992a88ac06b1b5731fb99912ff9bd" title="左右モータの相対角度の平均値を計算する " alt="" coords="224,5,427,32"/>
+<area shape="rect" id="node3" href="$class_motor_angle.html#abe5eb31bff0514f32a0bb00751f16ccf" title="左右モータ角度の過去値を現在値へ更新する " alt="" coords="475,5,610,32"/>
+</map>

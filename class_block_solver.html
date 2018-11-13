@@ -1,0 +1,996 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: BlockSolver クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
+      <li><a href="inherits.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="class_block_solver-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">BlockSolver クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_block_solver_8h_source.html">BlockSolver.h</a>&gt;</code></p>
+<div class="dynheader">
+BlockSolver 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver__coll__graph.png" border="0" usemap="#_block_solver_coll__map" alt="Collaboration graph"/></div>
+<map name="_block_solver_coll__map" id="_block_solver_coll__map">
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a688db0a388a50ab23a30be496ac7f2f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block_solver.html#a688db0a388a50ab23a30be496ac7f2f9">BlockSolver</a> ()=default</td></tr>
+<tr class="separator:a688db0a388a50ab23a30be496ac7f2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7c3415adff5021c4e0bd7bf7ea0347a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block_solver.html#ad7c3415adff5021c4e0bd7bf7ea0347a">BlockSolver</a> (<a class="el" href="class_controller.html">Controller</a> &amp;controller_, <a class="el" href="class_walker.html">Walker</a> &amp;walker_, std::int32_t ipc_, const std::int16_t &amp;targetBrightness_)</td></tr>
+<tr class="separator:ad7c3415adff5021c4e0bd7bf7ea0347a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41efe2f0239b54a897b413b57574580c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c">demo</a> ()</td></tr>
+<tr class="memdesc:a41efe2f0239b54a897b413b57574580c"><td class="mdescLeft">&#160;</td><td class="mdescRight">デモです。アリアに従って移動します。  <a href="#a41efe2f0239b54a897b413b57574580c">[詳解]</a><br/></td></tr>
+<tr class="separator:a41efe2f0239b54a897b413b57574580c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee9d08bbd83ea2f6069c30698c3a692c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c">run</a> ()</td></tr>
+<tr class="memdesc:aee9d08bbd83ea2f6069c30698c3a692c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ブロック並べを攻略します。  <a href="#aee9d08bbd83ea2f6069c30698c3a692c">[詳解]</a><br/></td></tr>
+<tr class="separator:aee9d08bbd83ea2f6069c30698c3a692c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3492de2fb6eb0b7245c935174dcb8f00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00">moveRoute</a> (std::vector&lt; int &gt; &amp;route)</td></tr>
+<tr class="memdesc:a3492de2fb6eb0b7245c935174dcb8f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">ルートを移動します。  <a href="#a3492de2fb6eb0b7245c935174dcb8f00">[詳解]</a><br/></td></tr>
+<tr class="separator:a3492de2fb6eb0b7245c935174dcb8f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab82a21046107a859adbb5a144ceaa63e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block_solver.html#ab82a21046107a859adbb5a144ceaa63e">getBlockColor</a> ()</td></tr>
+<tr class="memdesc:ab82a21046107a859adbb5a144ceaa63e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ブロックの色を取得し、blockColorに格納します。  <a href="#ab82a21046107a859adbb5a144ceaa63e">[詳解]</a><br/></td></tr>
+<tr class="separator:ab82a21046107a859adbb5a144ceaa63e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21459836e6da2c1fa7bac850e333da4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d">passCircle</a> (const <a class="el" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> &amp;circle_color)</td></tr>
+<tr class="memdesc:a21459836e6da2c1fa7bac850e333da4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ブロック置き場を乗り越えます。  <a href="#a21459836e6da2c1fa7bac850e333da4d">[詳解]</a><br/></td></tr>
+<tr class="separator:a21459836e6da2c1fa7bac850e333da4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad407edc5f70054b3739bf34f6e3bda5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a">moveOnLineToColor</a> (std::int8_t pwm, std::int16_t target, const <a class="el" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> &amp;circle_color, bool isRight)</td></tr>
+<tr class="memdesc:ad407edc5f70054b3739bf34f6e3bda5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した色のブロック置き場までライントレースします。  <a href="#ad407edc5f70054b3739bf34f6e3bda5a">[詳解]</a><br/></td></tr>
+<tr class="separator:ad407edc5f70054b3739bf34f6e3bda5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51709fac70958ce6d8d4091e41ab4b49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49">moveDirection</a> (const std::int8_t &amp;nextPlace, bool remove_block=false)</td></tr>
+<tr class="memdesc:a51709fac70958ce6d8d4091e41ab4b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した方角へ移動します。  <a href="#a51709fac70958ce6d8d4091e41ab4b49">[詳解]</a><br/></td></tr>
+<tr class="separator:a51709fac70958ce6d8d4091e41ab4b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af35d5db675b4ef020c678c263425f1b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2">byeByeBlock</a> ()</td></tr>
+<tr class="memdesc:af35d5db675b4ef020c678c263425f1b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。  <a href="#af35d5db675b4ef020c678c263425f1b2">[詳解]</a><br/></td></tr>
+<tr class="separator:af35d5db675b4ef020c678c263425f1b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9844e0fc35307a10230b83651563bd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_block_side_by_side.html#aac357c5656b856b05705e75f30b1cfb1">BlockSideBySide::Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block_solver.html#ab9844e0fc35307a10230b83651563bd0">getChangeDirection</a> (std::int8_t angle)</td></tr>
+<tr class="memdesc:ab9844e0fc35307a10230b83651563bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">次に向かうべき方角を切り替えます。  <a href="#ab9844e0fc35307a10230b83651563bd0">[詳解]</a><br/></td></tr>
+<tr class="separator:ab9844e0fc35307a10230b83651563bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad662ef850e3f661b3eb3ce7eca51eb2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8f">Selector::BlockColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block_solver.html#ad662ef850e3f661b3eb3ce7eca51eb2c">convertSelectorColor</a> (const <a class="el" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> &amp;gameColor)</td></tr>
+<tr class="separator:ad662ef850e3f661b3eb3ce7eca51eb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3baa91b5cf2eca22b64aafb841dbe2a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1">spinParkingArea</a> ()</td></tr>
+<tr class="separator:a3baa91b5cf2eca22b64aafb841dbe2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a5778630678d204ee365a1ac7fc8f47db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_block_side_by_side.html#aac357c5656b856b05705e75f30b1cfb1">BlockSideBySide::Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block_solver.html#a5778630678d204ee365a1ac7fc8f47db">nowDirection</a> = <a class="el" href="namespace_block_side_by_side.html#aac357c5656b856b05705e75f30b1cfb1a83c9f5692281bf59471b13dfddb3af91">BlockSideBySide::Direction::WEST</a></td></tr>
+<tr class="memdesc:a5778630678d204ee365a1ac7fc8f47db"><td class="mdescLeft">&#160;</td><td class="mdescRight">今向いてる方角です。  <a href="#a5778630678d204ee365a1ac7fc8f47db">[詳解]</a><br/></td></tr>
+<tr class="separator:a5778630678d204ee365a1ac7fc8f47db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p> <a class="el" href="_block_solver_8h_source.html">BlockSolver.h</a> の <a class="el" href="_block_solver_8h_source.html#l00019">19</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a class="anchor" id="a688db0a388a50ab23a30be496ac7f2f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BlockSolver::BlockSolver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad7c3415adff5021c4e0bd7bf7ea0347a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BlockSolver::BlockSolver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_controller.html">Controller</a> &amp;&#160;</td>
+          <td class="paramname"><em>controller_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_walker.html">Walker</a> &amp;&#160;</td>
+          <td class="paramname"><em>walker_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>ipc_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::int16_t &amp;&#160;</td>
+          <td class="paramname"><em>targetBrightness_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_block_solver_8h_source.html">BlockSolver.h</a> の <a class="el" href="_block_solver_8h_source.html#l00022">22</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    : controller(controller_),</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      walker(walker_),</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      distinguisher(controller_),</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      lifter(controller_),</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      navigator(controller_, walker_),</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      blockStrategy(ipc_),</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      targetBrightness(targetBrightness_),</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      ipc(ipc_)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="af35d5db675b4ef020c678c263425f1b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::byeByeBlock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 </p>
+
+<p> <a class="el" href="_block_solver_8cpp_source.html">BlockSolver.cpp</a> の <a class="el" href="_block_solver_8cpp_source.html#l00090">90</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  std::int8_t returnPlace = blockStrategy.<a class="code" href="class_block_side_by_side_1_1_block_strategy.html#a2a7219fbfeee3f9d45f4af43b8920444">blockArea</a>.<a class="code" href="class_block_side_by_side_1_1_block_area.html#acb42f216ea486e848a3607e8445813f8">colorBlockPlaceArray</a>[nowPlace]</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                                -&gt;black_line[<a class="code" href="class_block_solver.html#ab9844e0fc35307a10230b83651563bd0">getChangeDirection</a>(2)]</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                                -&gt;getPlaceCord();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49">moveDirection</a>(returnPlace, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
+<div class="ttc" id="class_block_side_by_side_1_1_block_area_html_acb42f216ea486e848a3607e8445813f8"><div class="ttname"><a href="class_block_side_by_side_1_1_block_area.html#acb42f216ea486e848a3607e8445813f8">BlockSideBySide::BlockArea::colorBlockPlaceArray</a></div><div class="ttdeci">std::array&lt; std::shared_ptr&lt; ColorBlockPlace &gt;, 16 &gt; colorBlockPlaceArray</div><div class="ttdef"><b>Definition:</b> <a href="_block_area_8h_source.html#l00053">BlockArea.h:53</a></div></div>
+<div class="ttc" id="class_block_side_by_side_1_1_block_strategy_html_a2a7219fbfeee3f9d45f4af43b8920444"><div class="ttname"><a href="class_block_side_by_side_1_1_block_strategy.html#a2a7219fbfeee3f9d45f4af43b8920444">BlockSideBySide::BlockStrategy::blockArea</a></div><div class="ttdeci">BlockArea blockArea</div><div class="ttdef"><b>Definition:</b> <a href="_block_strategy_8h_source.html#l00026">BlockStrategy.h:26</a></div></div>
+<div class="ttc" id="class_block_solver_html_a51709fac70958ce6d8d4091e41ab4b49"><div class="ttname"><a href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49">BlockSolver::moveDirection</a></div><div class="ttdeci">void moveDirection(const std::int8_t &amp;nextPlace, bool remove_block=false)</div><div class="ttdoc">指定した方角へ移動します。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00131">BlockSolver.cpp:131</a></div></div>
+<div class="ttc" id="class_block_solver_html_ab9844e0fc35307a10230b83651563bd0"><div class="ttname"><a href="class_block_solver.html#ab9844e0fc35307a10230b83651563bd0">BlockSolver::getChangeDirection</a></div><div class="ttdeci">BlockSideBySide::Direction getChangeDirection(std::int8_t angle)</div><div class="ttdoc">次に向かうべき方角を切り替えます。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00198">BlockSolver.cpp:198</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_af35d5db675b4ef020c678c263425f1b2_cgraph.png" border="0" usemap="#class_block_solver_af35d5db675b4ef020c678c263425f1b2_cgraph" alt=""/></div>
+<map name="class_block_solver_af35d5db675b4ef020c678c263425f1b2_cgraph" id="class_block_solver_af35d5db675b4ef020c678c263425f1b2_cgraph">
+<area shape="rect" id="node2" href="class_block_solver.html#ab9844e0fc35307a10230b83651563bd0" title="次に向かうべき方角を切り替えます。 " alt="" coords="465,284,679,311"/><area shape="rect" id="node3" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="232,423,416,449"/><area shape="rect" id="node4" href="class_block_side_by_side_1_1_block_area.html#ad76fa2dcf0679af589e0a8554d98af3b" title="BlockSideBySide::BlockArea\l::getDirection" alt="" coords="477,386,667,427"/><area shape="rect" id="node5" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="491,503,653,529"/><area shape="rect" id="node6" href="class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3" title="Controller::speakerPlayTone" alt="" coords="729,309,916,336"/><area shape="rect" id="node32" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46" title="指定した角度まで走行体を回転させる(基本左エッジ) " alt="" coords="767,629,878,656"/><area shape="rect" id="node36" href="class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981" title="指定した距離まで走行体を後退させる " alt="" coords="765,731,880,757"/><area shape="rect" id="node37" href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a" title="指定した色のブロック置き場までライントレースします。 " alt="" coords="729,411,917,453"/><area shape="rect" id="node7" href="class_navigator.html#a6f3901e766e383a66c47177257c46204" title="指定した距離まで走行体を移動させる " alt="" coords="763,680,882,707"/><area shape="rect" id="node14" href="class_walker.html#a665540aeed857d2e35565e1949e6abec" title="Walker::run" alt="" coords="1026,579,1115,605"/><area shape="rect" id="node29" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="1006,528,1135,555"/><area shape="rect" id="node30" href="class_distinguisher.html#a3634f5227cc6a492952f1283339636dc" title="Distinguisher::getColor" alt="" coords="993,477,1148,504"/><area shape="rect" id="node31" href="class_controller.html#a5674a4689bb73d50483bf19c617ac213" title="Controller::buttonIsPressedBack" alt="" coords="965,56,1176,83"/><area shape="rect" id="node8" href="class_navigator.html#aeece0b738f289e4133a27bfa62ee15f2" title="座標とエンコーダの値を初期化する " alt="" coords="1013,731,1128,757"/><area shape="rect" id="node19" href="class_wheel_odometry.html#a61d5310dcb3118542a9a27902d85d592" title="走行体の位置情報を更新する " alt="" coords="989,832,1152,859"/><area shape="rect" id="node25" href="class_walker.html#aa263348b7d132ddfd0c25f11eec4b367" title="Walker::get_count_L" alt="" coords="999,680,1142,707"/><area shape="rect" id="node27" href="class_walker.html#ac67a8f1fe17fb1365df515ca6e713373" title="Walker::get_count_R" alt="" coords="998,629,1143,656"/><area shape="rect" id="node28" href="class_wheel_odometry.html#a3a2c52e52341f83c32085b30b3e4954e" title="走行体の位置情報を返す " alt="" coords="968,781,1173,808"/><area shape="rect" id="node9" href="class_walker.html#a796b87e4f28d73c966b58a7866b018c9" title="Walker::reset" alt="" coords="1281,477,1381,504"/><area shape="rect" id="node11" href="class_wheel_odometry.html#a93592d64412c84dc3b0bdd6468de0657" title="走行体の位置情報を初期化する " alt="" coords="1254,731,1407,757"/><area shape="rect" id="node10" href="classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="1521,477,1660,504"/><area shape="rect" id="node12" href="struct_coordinate.html#ac6e8a112850a5768760a108bd4b965c6" title="走行体の位置情報を初期化する " alt="" coords="1529,731,1652,757"/><area shape="rect" id="node13" href="class_motor_angle.html#a20ae8007014e6368805dad79459bcf54" title="左右モータ角度の過去値を0にリセットする " alt="" coords="1528,680,1653,707"/><area shape="rect" id="node15" href="class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3" title="Controller::printDisplay" alt="" coords="1253,528,1408,555"/><area shape="rect" id="node16" href="class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="1253,579,1409,605"/><area shape="rect" id="node18" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="1744,604,1904,631"/><area shape="rect" id="node17" href="classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="1510,579,1671,605"/><area shape="rect" id="node20" href="class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28" title="走行体の旋回速度を求める " alt="" coords="1246,883,1415,909"/><area shape="rect" id="node22" href="class_wheel_odometry.html#a83b1fdffc3eed4dd9cf81b1fe993c973" title="走行体の旋回角速度を求める " alt="" coords="1224,781,1437,808"/><area shape="rect" id="node24" href="struct_coordinate.html#a772936f3dede6ccb0528a719342ebaa6" title="走行体の位置情報を更新する " alt="" coords="1265,832,1397,859"/><area shape="rect" id="node21" href="class_motor_angle.html#a8bf992a88ac06b1b5731fb99912ff9bd" title="左右モータの相対角度の平均値を計算する " alt="" coords="1489,883,1692,909"/><area shape="rect" id="node23" href="class_motor_angle.html#aae319910dcaa118d1a7f7ca66ee2bdc1" title="左右モータ角度の差を計算する(右手系/反時計回りが正) " alt="" coords="1491,781,1690,808"/><area shape="rect" id="node26" href="classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="1249,680,1412,707"/><area shape="rect" id="node33" href="class_wheel_odometry.html#ad12bfc89fa25fbf0b6c72bed5d61122e" title="走行体の回転角度を返す " alt="" coords="975,361,1166,402"/><area shape="rect" id="node34" href="class_motor_angle.html#a5079b35fb08cc66b9bf0d101d963366a" title="モータ角度の絶対値を計算する " alt="" coords="1241,411,1420,453"/><area shape="rect" id="node35" href="class_motor_angle.html#acb61bad045644641b2d47c33e148a7b6" title="左右モータの絶対角度の平均値を計算する " alt="" coords="1225,360,1436,387"/><area shape="rect" id="node38" href="class_pid.html#a9e85f222ae86697aacdeaa4f7b0644f6" title="Pid::setPid" alt="" coords="1027,309,1114,336"/><area shape="rect" id="node40" href="class_line_tracer_walker.html#a4b5b94728a9b0d145a67816ad1fadc02" title="LineTracerWalker::runLine" alt="" coords="983,107,1158,133"/><area shape="rect" id="node47" href="class_controller.html#aca9bc8f5a0a390d709d6dd2e5fd9b665" title="Controller::getBrightness" alt="" coords="987,157,1154,184"/><area shape="rect" id="node49" href="class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961" title="LineTracerWalker::getForward" alt="" coords="972,208,1169,235"/><area shape="rect" id="node50" href="class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390" title="LineTracerWalker::getTurn" alt="" coords="983,259,1159,285"/><area shape="rect" id="node39" href="struct_pid_parameter.html#a1680f231922aee58280e54af46cdb7b1" title="PidParameter::set" alt="" coords="1267,309,1394,336"/><area shape="rect" id="node41" href="class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="1231,99,1430,141"/><area shape="rect" id="node46" href="class_turn_control.html#a4de8a0d2496220ab73f078ac0f3fd1a1" title="TurnControl::calculateTurn\lForPid" alt="" coords="1243,34,1419,75"/><area shape="rect" id="node42" href="class_speed_control.html#a07ca6a7a13bc9f703eaf8846ffdc3f60" title="SpeedControl::calcDistance4ms" alt="" coords="1485,157,1696,184"/><area shape="rect" id="node43" href="class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="1540,107,1641,133"/><area shape="rect" id="node44" href="class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="1535,5,1646,32"/><area shape="rect" id="node45" href="class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="1535,56,1647,83"/><area shape="rect" id="node48" href="classev3api_1_1_color_sensor.html#a010cb55b6119147496637bc5b2189582" title="ev3api::ColorSensor\l::getRawColor" alt="" coords="1261,165,1401,206"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_af35d5db675b4ef020c678c263425f1b2_icgraph.png" border="0" usemap="#class_block_solver_af35d5db675b4ef020c678c263425f1b2_icgraph" alt=""/></div>
+<map name="class_block_solver_af35d5db675b4ef020c678c263425f1b2_icgraph" id="class_block_solver_af35d5db675b4ef020c678c263425f1b2_icgraph">
+<area shape="rect" id="node2" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="233,5,365,32"/><area shape="rect" id="node3" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="239,56,358,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad662ef850e3f661b3eb3ce7eca51eb2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8f">Selector::BlockColor</a> BlockSolver::convertSelectorColor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> &amp;&#160;</td>
+          <td class="paramname"><em>gameColor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_block_solver_8cpp_source.html">BlockSolver.cpp</a> の <a class="el" href="_block_solver_8cpp_source.html#l00034">34</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">if</span>(gameColor == <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0">Color::RED</a>) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> Selector::BlockColor::Red;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(gameColor == <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca1b3e1ee9bff86431dea6b181365ba65f">Color::BLUE</a>) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> Selector::BlockColor::Blue;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(gameColor == <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0">Color::GREEN</a>) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> Selector::BlockColor::Green;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(gameColor == <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e">Color::YELLOW</a>) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> Selector::BlockColor::Yellow;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">return</span> Selector::BlockColor::Undefined;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1ca1b3e1ee9bff86431dea6b181365ba65f"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca1b3e1ee9bff86431dea6b181365ba65f">Color::BLUE</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e">Color::YELLOW</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0">Color::GREEN</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0">Color::RED</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_ad662ef850e3f661b3eb3ce7eca51eb2c_icgraph.png" border="0" usemap="#class_block_solver_ad662ef850e3f661b3eb3ce7eca51eb2c_icgraph" alt=""/></div>
+<map name="class_block_solver_ad662ef850e3f661b3eb3ce7eca51eb2c_icgraph" id="class_block_solver_ad662ef850e3f661b3eb3ce7eca51eb2c_icgraph">
+<area shape="rect" id="node2" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="246,12,365,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a41efe2f0239b54a897b413b57574580c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::demo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デモです。アリアに従って移動します。 </p>
+
+<p> <a class="el" href="_block_solver_8cpp_source.html">BlockSolver.cpp</a> の <a class="el" href="_block_solver_8cpp_source.html#l00008">8</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="comment">// 最初の8番までのライントレース</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  navigator.<a class="code" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">moveOnLine</a>(500, targetBrightness, 55);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a">moveOnLineToColor</a>(45, targetBrightness - 10, <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0">Color::RED</a>, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="comment">// ブロックがある0番までの移動</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  std::vector&lt;int&gt; route{ 8, 12, 13 };</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00">moveRoute</a>(route);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="comment">// ブロック読み取り(青だとする。)</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="class_block_solver.html#ab82a21046107a859adbb5a144ceaa63e">getBlockColor</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">if</span>(blockColor == <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca1b3e1ee9bff86431dea6b181365ba65f">Color::BLUE</a>) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// 青ブロックを10番まで移動。その後、9に戻る</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::vector&lt;int&gt; route2 = { 13, 9, 10 };</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00">moveRoute</a>(route2);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2">byeByeBlock</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="comment">// 9番までの移動とパーキングの方を向く。</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  std::vector&lt;int&gt; route3 = { 10, 9, 5, 6, 7, 11 };</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00">moveRoute</a>(route3);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d">passCircle</a>(<a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0">Color::GREEN</a>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  navigator.<a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(90, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="ttc" id="class_block_solver_html_af35d5db675b4ef020c678c263425f1b2"><div class="ttname"><a href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2">BlockSolver::byeByeBlock</a></div><div class="ttdeci">void byeByeBlock()</div><div class="ttdoc">バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00090">BlockSolver.cpp:90</a></div></div>
+<div class="ttc" id="class_navigator_html_aaf3dc68883c423aec19c383455525bbc"><div class="ttname"><a href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">Navigator::moveOnLine</a></div><div class="ttdeci">void moveOnLine(float distance, std::int16_t target, std::int8_t pwm=20, bool is_leftside_line=true)</div><div class="ttdoc">指定した距離だけライントレースする </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00163">Navigator.cpp:163</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1ca1b3e1ee9bff86431dea6b181365ba65f"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca1b3e1ee9bff86431dea6b181365ba65f">Color::BLUE</a></div></div>
+<div class="ttc" id="class_block_solver_html_a21459836e6da2c1fa7bac850e333da4d"><div class="ttname"><a href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d">BlockSolver::passCircle</a></div><div class="ttdeci">void passCircle(const Color &amp;circle_color)</div><div class="ttdoc">ブロック置き場を乗り越えます。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00257">BlockSolver.cpp:257</a></div></div>
+<div class="ttc" id="class_navigator_html_a81769b4f9b660f1d01de6ee9efc63a46"><div class="ttname"><a href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">Navigator::spin</a></div><div class="ttdeci">void spin(float angle, bool clockwise=false, std::int8_t pwm=10)</div><div class="ttdoc">指定した角度まで走行体を回転させる(基本左エッジ) </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00025">Navigator.cpp:25</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0">Color::GREEN</a></div></div>
+<div class="ttc" id="class_block_solver_html_ab82a21046107a859adbb5a144ceaa63e"><div class="ttname"><a href="class_block_solver.html#ab82a21046107a859adbb5a144ceaa63e">BlockSolver::getBlockColor</a></div><div class="ttdeci">void getBlockColor()</div><div class="ttdoc">ブロックの色を取得し、blockColorに格納します。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00247">BlockSolver.cpp:247</a></div></div>
+<div class="ttc" id="class_block_solver_html_ad407edc5f70054b3739bf34f6e3bda5a"><div class="ttname"><a href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a">BlockSolver::moveOnLineToColor</a></div><div class="ttdeci">void moveOnLineToColor(std::int8_t pwm, std::int16_t target, const Color &amp;circle_color, bool isRight)</div><div class="ttdoc">指定した色のブロック置き場までライントレースします。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00209">BlockSolver.cpp:209</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0">Color::RED</a></div></div>
+<div class="ttc" id="class_block_solver_html_a3492de2fb6eb0b7245c935174dcb8f00"><div class="ttname"><a href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00">BlockSolver::moveRoute</a></div><div class="ttdeci">void moveRoute(std::vector&lt; int &gt; &amp;route)</div><div class="ttdoc">ルートを移動します。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00098">BlockSolver.cpp:98</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a41efe2f0239b54a897b413b57574580c_cgraph.png" border="0" usemap="#class_block_solver_a41efe2f0239b54a897b413b57574580c_cgraph" alt=""/></div>
+<map name="class_block_solver_a41efe2f0239b54a897b413b57574580c_cgraph" id="class_block_solver_a41efe2f0239b54a897b413b57574580c_cgraph">
+<area shape="rect" id="node2" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="925,471,1083,497"/><area shape="rect" id="node31" href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a" title="指定した色のブロック置き場までライントレースします。 " alt="" coords="910,306,1098,347"/><area shape="rect" id="node34" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="193,892,359,919"/><area shape="rect" id="node37" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="672,547,835,573"/><area shape="rect" id="node40" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46" title="指定した角度まで走行体を回転させる(基本左エッジ) " alt="" coords="949,715,1059,741"/><area shape="rect" id="node46" href="class_block_solver.html#ab82a21046107a859adbb5a144ceaa63e" title="ブロックの色を取得し、blockColorに格納します。 " alt="" coords="662,816,845,843"/><area shape="rect" id="node50" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="187,496,365,523"/><area shape="rect" id="node3" href="class_navigator.html#aeece0b738f289e4133a27bfa62ee15f2" title="座標とエンコーダの値を初期化する " alt="" coords="1196,765,1311,792"/><area shape="rect" id="node7" href="class_pid.html#a9e85f222ae86697aacdeaa4f7b0644f6" title="Pid::setPid" alt="" coords="1210,157,1297,184"/><area shape="rect" id="node9" href="class_line_tracer_walker.html#ab1f0f717138372f536dbb81a83aa6034" title="LineTracerWalker::isLeftsideLine" alt="" coords="1147,360,1359,387"/><area shape="rect" id="node10" href="class_wheel_odometry.html#a61d5310dcb3118542a9a27902d85d592" title="走行体の位置情報を更新する " alt="" coords="1172,613,1335,640"/><area shape="rect" id="node14" href="class_walker.html#aa263348b7d132ddfd0c25f11eec4b367" title="Walker::get_count_L" alt="" coords="1182,664,1325,691"/><area shape="rect" id="node16" href="class_walker.html#ac67a8f1fe17fb1365df515ca6e713373" title="Walker::get_count_R" alt="" coords="1181,715,1326,741"/><area shape="rect" id="node17" href="class_wheel_odometry.html#a3a2c52e52341f83c32085b30b3e4954e" title="走行体の位置情報を返す " alt="" coords="1151,563,1356,589"/><area shape="rect" id="node18" href="class_line_tracer_walker.html#a4b5b94728a9b0d145a67816ad1fadc02" title="LineTracerWalker::runLine" alt="" coords="1166,107,1341,133"/><area shape="rect" id="node21" href="class_navigator.html#afb7b715a50d0c80877c4c5f14061a456" title="光センサの値を取得する " alt="" coords="1170,411,1337,437"/><area shape="rect" id="node24" href="class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961" title="LineTracerWalker::getForward" alt="" coords="1155,309,1352,336"/><area shape="rect" id="node25" href="class_walker.html#a665540aeed857d2e35565e1949e6abec" title="Walker::run" alt="" coords="1209,512,1298,539"/><area shape="rect" id="node29" href="class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390" title="LineTracerWalker::getTurn" alt="" coords="1165,259,1341,285"/><area shape="rect" id="node30" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="1189,816,1318,843"/><area shape="rect" id="node4" href="class_walker.html#a796b87e4f28d73c966b58a7866b018c9" title="Walker::reset" alt="" coords="1465,512,1565,539"/><area shape="rect" id="node6" href="class_wheel_odometry.html#a93592d64412c84dc3b0bdd6468de0657" title="走行体の位置情報を初期化する " alt="" coords="1438,765,1591,792"/><area shape="rect" id="node5" href="classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="1671,512,1809,539"/><area shape="rect" id="node8" href="struct_pid_parameter.html#a1680f231922aee58280e54af46cdb7b1" title="PidParameter::set" alt="" coords="1451,165,1578,192"/><area shape="rect" id="node11" href="class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28" title="走行体の旋回速度を求める " alt="" coords="1430,613,1599,640"/><area shape="rect" id="node12" href="class_wheel_odometry.html#a83b1fdffc3eed4dd9cf81b1fe993c973" title="走行体の旋回角速度を求める " alt="" coords="1408,664,1621,691"/><area shape="rect" id="node13" href="struct_coordinate.html#a772936f3dede6ccb0528a719342ebaa6" title="走行体の位置情報を更新する " alt="" coords="1449,563,1581,589"/><area shape="rect" id="node15" href="classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="1433,715,1596,741"/><area shape="rect" id="node19" href="class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="1415,99,1614,141"/><area shape="rect" id="node20" href="class_turn_control.html#a4de8a0d2496220ab73f078ac0f3fd1a1" title="TurnControl::calculateTurn\lForPid" alt="" coords="1427,34,1603,75"/><area shape="rect" id="node22" href="class_controller.html#aca9bc8f5a0a390d709d6dd2e5fd9b665" title="Controller::getBrightness" alt="" coords="1431,288,1598,315"/><area shape="rect" id="node23" href="classev3api_1_1_color_sensor.html#a010cb55b6119147496637bc5b2189582" title="ev3api::ColorSensor\l::getRawColor" alt="" coords="1670,281,1810,322"/><area shape="rect" id="node26" href="class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3" title="Controller::printDisplay" alt="" coords="1437,411,1592,437"/><area shape="rect" id="node27" href="class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="1437,461,1593,488"/><area shape="rect" id="node28" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="1435,984,1595,1011"/><area shape="rect" id="node32" href="class_distinguisher.html#a3634f5227cc6a492952f1283339636dc" title="Distinguisher::getColor" alt="" coords="1176,56,1331,83"/><area shape="rect" id="node33" href="class_controller.html#a5674a4689bb73d50483bf19c617ac213" title="Controller::buttonIsPressedBack" alt="" coords="1148,5,1359,32"/><area shape="rect" id="node35" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="413,597,597,624"/><area shape="rect" id="node38" href="class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3" title="Controller::speakerPlayTone" alt="" coords="911,917,1097,944"/><area shape="rect" id="node36" href="class_block_side_by_side_1_1_block_area.html#ad76fa2dcf0679af589e0a8554d98af3b" title="BlockSideBySide::BlockArea\l::getDirection" alt="" coords="658,699,849,741"/><area shape="rect" id="node44" href="class_block_solver.html#ab9844e0fc35307a10230b83651563bd0" title="次に向かうべき方角を切り替えます。 " alt="" coords="646,496,861,523"/><area shape="rect" id="node45" href="class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981" title="指定した距離まで走行体を後退させる " alt="" coords="947,664,1061,691"/><area shape="rect" id="node39" href="class_navigator.html#a6f3901e766e383a66c47177257c46204" title="指定した距離まで走行体を移動させる " alt="" coords="945,613,1063,640"/><area shape="rect" id="node41" href="class_wheel_odometry.html#ad12bfc89fa25fbf0b6c72bed5d61122e" title="走行体の回転角度を返す " alt="" coords="1158,918,1349,959"/><area shape="rect" id="node42" href="class_motor_angle.html#a5079b35fb08cc66b9bf0d101d963366a" title="モータ角度の絶対値を計算する " alt="" coords="1425,863,1604,905"/><area shape="rect" id="node43" href="class_motor_angle.html#acb61bad045644641b2d47c33e148a7b6" title="左右モータの絶対角度の平均値を計算する " alt="" coords="1409,929,1620,956"/><area shape="rect" id="node47" href="class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102" title="Lifter::liftUp" alt="" coords="959,867,1049,893"/><area shape="rect" id="node49" href="class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5" title="Lifter::liftDown" alt="" coords="951,816,1057,843"/><area shape="rect" id="node48" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d" title="Lifter::getCurrentAngle" alt="" coords="1177,867,1330,893"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab82a21046107a859adbb5a144ceaa63e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::getBlockColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ブロックの色を取得し、blockColorに格納します。 </p>
+
+<p> <a class="el" href="_block_solver_8cpp_source.html">BlockSolver.cpp</a> の <a class="el" href="_block_solver_8cpp_source.html#l00247">247</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;{</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="comment">//ブロックの色をチェックして保持する</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  controller.<a class="code" href="class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3">speakerPlayTone</a>(controller.<a class="code" href="class_controller.html#ab7c5ed29a3e87e63ab1f399183c40e61">noteFs4</a>, 100);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  lifter.<a class="code" href="class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102">liftUp</a>(45, 10);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  blockColor = distinguisher.<a class="code" href="class_distinguisher.html#a3634f5227cc6a492952f1283339636dc">getColor</a>();</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  lifter.<a class="code" href="class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5">liftDown</a>(0, 3);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  lifter.<a class="code" href="class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102">liftUp</a>(1.5, 5);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}</div>
+<div class="ttc" id="class_controller_html_afe78dbb9fa2ce597920f71ce6bb031f3"><div class="ttname"><a href="class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3">Controller::speakerPlayTone</a></div><div class="ttdeci">void speakerPlayTone(uint16_t frequency, int32_t duration)</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8cpp_source.html#l00009">Controller.cpp:9</a></div></div>
+<div class="ttc" id="class_lifter_html_ad4dbe31608b7c1c52ae1c9eb8d2527d5"><div class="ttname"><a href="class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5">Lifter::liftDown</a></div><div class="ttdeci">void liftDown(std::uint8_t angle, std::int8_t pwm=20)</div><div class="ttdef"><b>Definition:</b> <a href="_lifter_8cpp_source.html#l00045">Lifter.cpp:45</a></div></div>
+<div class="ttc" id="class_controller_html_ab7c5ed29a3e87e63ab1f399183c40e61"><div class="ttname"><a href="class_controller.html#ab7c5ed29a3e87e63ab1f399183c40e61">Controller::noteFs4</a></div><div class="ttdeci">uint16_t noteFs4</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00041">Controller.h:41</a></div></div>
+<div class="ttc" id="class_lifter_html_a9ebc2a183bec70bc2c82e13d29a10102"><div class="ttname"><a href="class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102">Lifter::liftUp</a></div><div class="ttdeci">void liftUp(std::uint8_t angle, std::int8_t pwm=20)</div><div class="ttdef"><b>Definition:</b> <a href="_lifter_8cpp_source.html#l00033">Lifter.cpp:33</a></div></div>
+<div class="ttc" id="class_distinguisher_html_a3634f5227cc6a492952f1283339636dc"><div class="ttname"><a href="class_distinguisher.html#a3634f5227cc6a492952f1283339636dc">Distinguisher::getColor</a></div><div class="ttdeci">Color getColor()</div><div class="ttdef"><b>Definition:</b> <a href="_distinguisher_8cpp_source.html#l00004">Distinguisher.cpp:4</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_ab82a21046107a859adbb5a144ceaa63e_cgraph.png" border="0" usemap="#class_block_solver_ab82a21046107a859adbb5a144ceaa63e_cgraph" alt=""/></div>
+<map name="class_block_solver_ab82a21046107a859adbb5a144ceaa63e_cgraph" id="class_block_solver_ab82a21046107a859adbb5a144ceaa63e_cgraph">
+<area shape="rect" id="node2" href="class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3" title="Controller::speakerPlayTone" alt="" coords="237,5,424,32"/><area shape="rect" id="node3" href="class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102" title="Lifter::liftUp" alt="" coords="285,56,376,83"/><area shape="rect" id="node8" href="class_distinguisher.html#a3634f5227cc6a492952f1283339636dc" title="Distinguisher::getColor" alt="" coords="253,157,408,184"/><area shape="rect" id="node9" href="class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5" title="Lifter::liftDown" alt="" coords="277,107,384,133"/><area shape="rect" id="node4" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d" title="Lifter::getCurrentAngle" alt="" coords="475,31,629,57"/><area shape="rect" id="node6" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="472,81,632,108"/><area shape="rect" id="node7" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="487,132,617,159"/><area shape="rect" id="node5" href="classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="680,31,843,57"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_ab82a21046107a859adbb5a144ceaa63e_icgraph.png" border="0" usemap="#class_block_solver_ab82a21046107a859adbb5a144ceaa63e_icgraph" alt=""/></div>
+<map name="class_block_solver_ab82a21046107a859adbb5a144ceaa63e_icgraph" id="class_block_solver_ab82a21046107a859adbb5a144ceaa63e_icgraph">
+<area shape="rect" id="node2" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="238,5,370,32"/><area shape="rect" id="node3" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="245,56,363,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab9844e0fc35307a10230b83651563bd0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_block_side_by_side.html#aac357c5656b856b05705e75f30b1cfb1">BlockSideBySide::Direction</a> BlockSolver::getChangeDirection </td>
+          <td>(</td>
+          <td class="paramtype">std::int8_t&#160;</td>
+          <td class="paramname"><em>angle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>次に向かうべき方角を切り替えます。 </p>
+
+<p> <a class="el" href="_block_solver_8cpp_source.html">BlockSolver.cpp</a> の <a class="el" href="_block_solver_8cpp_source.html#l00198">198</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;{</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  std::int8_t tmp = <span class="keyword">static_cast&lt;</span>std::int8_t<span class="keyword">&gt;</span>(<a class="code" href="class_block_solver.html#a5778630678d204ee365a1ac7fc8f47db">nowDirection</a>) + angle;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="keywordflow">if</span>(tmp &gt; 3) {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    tmp = tmp % 4;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(tmp &lt; 0) {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    tmp = 4 + angle;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="namespace_block_side_by_side.html#aac357c5656b856b05705e75f30b1cfb1">BlockSideBySide::Direction</a><span class="keyword">&gt;</span>(tmp);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;}</div>
+<div class="ttc" id="namespace_block_side_by_side_html_aac357c5656b856b05705e75f30b1cfb1"><div class="ttname"><a href="namespace_block_side_by_side.html#aac357c5656b856b05705e75f30b1cfb1">BlockSideBySide::Direction</a></div><div class="ttdeci">Direction</div><div class="ttdef"><b>Definition:</b> <a href="_block_area_8h_source.html#l00019">BlockArea.h:19</a></div></div>
+<div class="ttc" id="class_block_solver_html_a5778630678d204ee365a1ac7fc8f47db"><div class="ttname"><a href="class_block_solver.html#a5778630678d204ee365a1ac7fc8f47db">BlockSolver::nowDirection</a></div><div class="ttdeci">BlockSideBySide::Direction nowDirection</div><div class="ttdoc">今向いてる方角です。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8h_source.html#l00058">BlockSolver.h:58</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_ab9844e0fc35307a10230b83651563bd0_icgraph.png" border="0" usemap="#class_block_solver_ab9844e0fc35307a10230b83651563bd0_icgraph" alt=""/></div>
+<map name="class_block_solver_ab9844e0fc35307a10230b83651563bd0_icgraph" id="class_block_solver_ab9844e0fc35307a10230b83651563bd0_icgraph">
+<area shape="rect" id="node2" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="513,56,690,83"/><area shape="rect" id="node5" href="class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="269,107,464,133"/><area shape="rect" id="node6" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="275,5,459,32"/><area shape="rect" id="node3" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="739,5,871,32"/><area shape="rect" id="node4" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="746,56,865,83"/><area shape="rect" id="node7" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="518,5,685,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a51709fac70958ce6d8d4091e41ab4b49"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::moveDirection </td>
+          <td>(</td>
+          <td class="paramtype">const std::int8_t &amp;&#160;</td>
+          <td class="paramname"><em>nextPlace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>remove_block</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定した方角へ移動します。 </p>
+
+<p> <a class="el" href="_block_solver_8cpp_source.html">BlockSolver.cpp</a> の <a class="el" href="_block_solver_8cpp_source.html#l00131">131</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;{</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  std::int8_t offset = 5;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keyword">auto</span> nextDirection = blockStrategy.<a class="code" href="class_block_side_by_side_1_1_block_strategy.html#a2a7219fbfeee3f9d45f4af43b8920444">blockArea</a>.<a class="code" href="class_block_side_by_side_1_1_block_area.html#ad76fa2dcf0679af589e0a8554d98af3b">getDirection</a>(nowPlace, nextPlace);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keyword">auto</span> nowColor = convertColor(blockStrategy.<a class="code" href="class_block_side_by_side_1_1_block_strategy.html#a2a7219fbfeee3f9d45f4af43b8920444">blockArea</a>.<a class="code" href="class_block_side_by_side_1_1_block_area.html#acb42f216ea486e848a3607e8445813f8">colorBlockPlaceArray</a>[nowPlace]-&gt;getColor());</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keyword">auto</span> nextColor</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      = convertColor(blockStrategy.<a class="code" href="class_block_side_by_side_1_1_block_strategy.html#a2a7219fbfeee3f9d45f4af43b8920444">blockArea</a>.<a class="code" href="class_block_side_by_side_1_1_block_area.html#acb42f216ea486e848a3607e8445813f8">colorBlockPlaceArray</a>[nextPlace]-&gt;getColor());</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  std::int8_t diffDirection</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      = <span class="keyword">static_cast&lt;</span>std::int8_t<span class="keyword">&gt;</span>(nextDirection) - static_cast&lt;std::int8_t&gt;(<a class="code" href="class_block_solver.html#a5778630678d204ee365a1ac7fc8f47db">nowDirection</a>);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  std::int16_t black_line_length = 250;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">if</span>(nextDirection == <a class="code" href="namespace_block_side_by_side.html#aac357c5656b856b05705e75f30b1cfb1a45ac78bf3d4882ac520f4e7fb08d55c5">BlockSideBySide::Direction::EAST</a></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;     || nextDirection == <a class="code" href="namespace_block_side_by_side.html#aac357c5656b856b05705e75f30b1cfb1a83c9f5692281bf59471b13dfddb3af91">BlockSideBySide::Direction::WEST</a>) {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    black_line_length = 300;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordflow">if</span>(diffDirection == 0) {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment">// 前方向に行く場合</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d">passCircle</a>(nowColor);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(diffDirection == -1 || diffDirection == 3) {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="comment">// 左方向に行く場合</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d">passCircle</a>(nowColor);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    navigator.<a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(110, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="comment">// spinToBlack(false);</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="class_block_solver.html#a5778630678d204ee365a1ac7fc8f47db">nowDirection</a> = <a class="code" href="class_block_solver.html#ab9844e0fc35307a10230b83651563bd0">getChangeDirection</a>(-1);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(diffDirection == 1 || diffDirection == -3) {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">// 右方向に行く場合</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d">passCircle</a>(nowColor);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    navigator.<a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(90, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="comment">// spinToBlack(true);</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="class_block_solver.html#a5778630678d204ee365a1ac7fc8f47db">nowDirection</a> = <a class="code" href="class_block_solver.html#ab9844e0fc35307a10230b83651563bd0">getChangeDirection</a>(1);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(remove_block == <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">// 後方向に行く場合</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    black_line_length -= 100;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    navigator.<a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(170, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="comment">// spinToBlack(true);</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <a class="code" href="class_block_solver.html#a5778630678d204ee365a1ac7fc8f47db">nowDirection</a> = <a class="code" href="class_block_solver.html#ab9844e0fc35307a10230b83651563bd0">getChangeDirection</a>(2);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="comment">// 後方向に行く場合</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    black_line_length -= 200;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    navigator.<a class="code" href="class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981">back</a>(100);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="comment">// spinToBlack(true);</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    navigator.<a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(170, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="class_block_solver.html#a5778630678d204ee365a1ac7fc8f47db">nowDirection</a> = <a class="code" href="class_block_solver.html#ab9844e0fc35307a10230b83651563bd0">getChangeDirection</a>(2);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  controller.<a class="code" href="class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3">speakerPlayTone</a>(controller.<a class="code" href="class_controller.html#ab7c5ed29a3e87e63ab1f399183c40e61">noteFs4</a>, 150);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="comment">//navigator.moveOnLine(black_line_length - 40, targetBrightness - offset, 30);</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <a class="code" href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a">moveOnLineToColor</a>(30, targetBrightness - offset, nextColor, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  nowPlace = nextPlace;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
+<div class="ttc" id="class_controller_html_afe78dbb9fa2ce597920f71ce6bb031f3"><div class="ttname"><a href="class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3">Controller::speakerPlayTone</a></div><div class="ttdeci">void speakerPlayTone(uint16_t frequency, int32_t duration)</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8cpp_source.html#l00009">Controller.cpp:9</a></div></div>
+<div class="ttc" id="class_block_side_by_side_1_1_block_area_html_acb42f216ea486e848a3607e8445813f8"><div class="ttname"><a href="class_block_side_by_side_1_1_block_area.html#acb42f216ea486e848a3607e8445813f8">BlockSideBySide::BlockArea::colorBlockPlaceArray</a></div><div class="ttdeci">std::array&lt; std::shared_ptr&lt; ColorBlockPlace &gt;, 16 &gt; colorBlockPlaceArray</div><div class="ttdef"><b>Definition:</b> <a href="_block_area_8h_source.html#l00053">BlockArea.h:53</a></div></div>
+<div class="ttc" id="class_block_side_by_side_1_1_block_strategy_html_a2a7219fbfeee3f9d45f4af43b8920444"><div class="ttname"><a href="class_block_side_by_side_1_1_block_strategy.html#a2a7219fbfeee3f9d45f4af43b8920444">BlockSideBySide::BlockStrategy::blockArea</a></div><div class="ttdeci">BlockArea blockArea</div><div class="ttdef"><b>Definition:</b> <a href="_block_strategy_8h_source.html#l00026">BlockStrategy.h:26</a></div></div>
+<div class="ttc" id="class_block_side_by_side_1_1_block_area_html_ad76fa2dcf0679af589e0a8554d98af3b"><div class="ttname"><a href="class_block_side_by_side_1_1_block_area.html#ad76fa2dcf0679af589e0a8554d98af3b">BlockSideBySide::BlockArea::getDirection</a></div><div class="ttdeci">BlockSideBySide::Direction getDirection(std::int8_t n1, std::int8_t n2)</div><div class="ttdef"><b>Definition:</b> <a href="_block_area_8cpp_source.html#l00003">BlockArea.cpp:3</a></div></div>
+<div class="ttc" id="class_block_solver_html_ab9844e0fc35307a10230b83651563bd0"><div class="ttname"><a href="class_block_solver.html#ab9844e0fc35307a10230b83651563bd0">BlockSolver::getChangeDirection</a></div><div class="ttdeci">BlockSideBySide::Direction getChangeDirection(std::int8_t angle)</div><div class="ttdoc">次に向かうべき方角を切り替えます。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00198">BlockSolver.cpp:198</a></div></div>
+<div class="ttc" id="namespace_block_side_by_side_html_aac357c5656b856b05705e75f30b1cfb1a45ac78bf3d4882ac520f4e7fb08d55c5"><div class="ttname"><a href="namespace_block_side_by_side.html#aac357c5656b856b05705e75f30b1cfb1a45ac78bf3d4882ac520f4e7fb08d55c5">BlockSideBySide::Direction::EAST</a></div></div>
+<div class="ttc" id="class_block_solver_html_a21459836e6da2c1fa7bac850e333da4d"><div class="ttname"><a href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d">BlockSolver::passCircle</a></div><div class="ttdeci">void passCircle(const Color &amp;circle_color)</div><div class="ttdoc">ブロック置き場を乗り越えます。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00257">BlockSolver.cpp:257</a></div></div>
+<div class="ttc" id="namespace_block_side_by_side_html_aac357c5656b856b05705e75f30b1cfb1a83c9f5692281bf59471b13dfddb3af91"><div class="ttname"><a href="namespace_block_side_by_side.html#aac357c5656b856b05705e75f30b1cfb1a83c9f5692281bf59471b13dfddb3af91">BlockSideBySide::Direction::WEST</a></div></div>
+<div class="ttc" id="class_navigator_html_a3bf1d4776b128ac7c383b682a7d99981"><div class="ttname"><a href="class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981">Navigator::back</a></div><div class="ttdeci">void back(float distance, std::int8_t pwm=10)</div><div class="ttdoc">指定した距離まで走行体を後退させる </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00072">Navigator.cpp:72</a></div></div>
+<div class="ttc" id="class_controller_html_ab7c5ed29a3e87e63ab1f399183c40e61"><div class="ttname"><a href="class_controller.html#ab7c5ed29a3e87e63ab1f399183c40e61">Controller::noteFs4</a></div><div class="ttdeci">uint16_t noteFs4</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00041">Controller.h:41</a></div></div>
+<div class="ttc" id="class_navigator_html_a81769b4f9b660f1d01de6ee9efc63a46"><div class="ttname"><a href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">Navigator::spin</a></div><div class="ttdeci">void spin(float angle, bool clockwise=false, std::int8_t pwm=10)</div><div class="ttdoc">指定した角度まで走行体を回転させる(基本左エッジ) </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00025">Navigator.cpp:25</a></div></div>
+<div class="ttc" id="class_block_solver_html_ad407edc5f70054b3739bf34f6e3bda5a"><div class="ttname"><a href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a">BlockSolver::moveOnLineToColor</a></div><div class="ttdeci">void moveOnLineToColor(std::int8_t pwm, std::int16_t target, const Color &amp;circle_color, bool isRight)</div><div class="ttdoc">指定した色のブロック置き場までライントレースします。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00209">BlockSolver.cpp:209</a></div></div>
+<div class="ttc" id="class_block_solver_html_a5778630678d204ee365a1ac7fc8f47db"><div class="ttname"><a href="class_block_solver.html#a5778630678d204ee365a1ac7fc8f47db">BlockSolver::nowDirection</a></div><div class="ttdeci">BlockSideBySide::Direction nowDirection</div><div class="ttdoc">今向いてる方角です。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8h_source.html#l00058">BlockSolver.h:58</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a51709fac70958ce6d8d4091e41ab4b49_cgraph.png" border="0" usemap="#class_block_solver_a51709fac70958ce6d8d4091e41ab4b49_cgraph" alt=""/></div>
+<map name="class_block_solver_a51709fac70958ce6d8d4091e41ab4b49_cgraph" id="class_block_solver_a51709fac70958ce6d8d4091e41ab4b49_cgraph">
+<area shape="rect" id="node2" href="class_block_side_by_side_1_1_block_area.html#ad76fa2dcf0679af589e0a8554d98af3b" title="BlockSideBySide::BlockArea\l::getDirection" alt="" coords="250,158,441,199"/><area shape="rect" id="node3" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="264,376,427,403"/><area shape="rect" id="node4" href="class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3" title="Controller::speakerPlayTone" alt="" coords="503,224,689,251"/><area shape="rect" id="node30" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46" title="指定した角度まで走行体を回転させる(基本左エッジ) " alt="" coords="541,325,651,352"/><area shape="rect" id="node34" href="class_block_solver.html#ab9844e0fc35307a10230b83651563bd0" title="次に向かうべき方角を切り替えます。 " alt="" coords="238,477,453,504"/><area shape="rect" id="node35" href="class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981" title="指定した距離まで走行体を後退させる " alt="" coords="539,173,653,200"/><area shape="rect" id="node36" href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a" title="指定した色のブロック置き場までライントレースします。 " alt="" coords="502,529,690,570"/><area shape="rect" id="node5" href="class_navigator.html#a6f3901e766e383a66c47177257c46204" title="指定した距離まで走行体を移動させる " alt="" coords="537,275,655,301"/><area shape="rect" id="node12" href="class_walker.html#a665540aeed857d2e35565e1949e6abec" title="Walker::run" alt="" coords="799,427,889,453"/><area shape="rect" id="node27" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="779,376,909,403"/><area shape="rect" id="node28" href="class_distinguisher.html#a3634f5227cc6a492952f1283339636dc" title="Distinguisher::getColor" alt="" coords="767,477,921,504"/><area shape="rect" id="node29" href="class_controller.html#a5674a4689bb73d50483bf19c617ac213" title="Controller::buttonIsPressedBack" alt="" coords="739,832,949,859"/><area shape="rect" id="node6" href="class_navigator.html#aeece0b738f289e4133a27bfa62ee15f2" title="座標とエンコーダの値を初期化する " alt="" coords="787,224,901,251"/><area shape="rect" id="node17" href="class_wheel_odometry.html#a61d5310dcb3118542a9a27902d85d592" title="走行体の位置情報を更新する " alt="" coords="763,173,925,200"/><area shape="rect" id="node23" href="class_walker.html#aa263348b7d132ddfd0c25f11eec4b367" title="Walker::get_count_L" alt="" coords="773,275,915,301"/><area shape="rect" id="node25" href="class_walker.html#ac67a8f1fe17fb1365df515ca6e713373" title="Walker::get_count_R" alt="" coords="771,325,917,352"/><area shape="rect" id="node26" href="class_wheel_odometry.html#a3a2c52e52341f83c32085b30b3e4954e" title="走行体の位置情報を返す " alt="" coords="741,56,947,83"/><area shape="rect" id="node7" href="class_walker.html#a796b87e4f28d73c966b58a7866b018c9" title="Walker::reset" alt="" coords="1054,427,1154,453"/><area shape="rect" id="node9" href="class_wheel_odometry.html#a93592d64412c84dc3b0bdd6468de0657" title="走行体の位置情報を初期化する " alt="" coords="1027,275,1181,301"/><area shape="rect" id="node8" href="classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="1295,427,1433,453"/><area shape="rect" id="node10" href="struct_coordinate.html#ac6e8a112850a5768760a108bd4b965c6" title="走行体の位置情報を初期化する " alt="" coords="1303,249,1425,276"/><area shape="rect" id="node11" href="class_motor_angle.html#a20ae8007014e6368805dad79459bcf54" title="左右モータ角度の過去値を0にリセットする " alt="" coords="1301,300,1427,327"/><area shape="rect" id="node13" href="class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3" title="Controller::printDisplay" alt="" coords="1027,376,1181,403"/><area shape="rect" id="node14" href="class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="1026,528,1182,555"/><area shape="rect" id="node16" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="1517,503,1677,529"/><area shape="rect" id="node15" href="classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="1283,528,1445,555"/><area shape="rect" id="node18" href="class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28" title="走行体の旋回速度を求める " alt="" coords="1019,123,1189,149"/><area shape="rect" id="node20" href="class_wheel_odometry.html#a83b1fdffc3eed4dd9cf81b1fe993c973" title="走行体の旋回角速度を求める " alt="" coords="997,173,1211,200"/><area shape="rect" id="node22" href="struct_coordinate.html#a772936f3dede6ccb0528a719342ebaa6" title="走行体の位置情報を更新する " alt="" coords="1038,224,1170,251"/><area shape="rect" id="node19" href="class_motor_angle.html#a8bf992a88ac06b1b5731fb99912ff9bd" title="左右モータの相対角度の平均値を計算する " alt="" coords="1263,123,1465,149"/><area shape="rect" id="node21" href="class_motor_angle.html#aae319910dcaa118d1a7f7ca66ee2bdc1" title="左右モータ角度の差を計算する(右手系/反時計回りが正) " alt="" coords="1265,173,1463,200"/><area shape="rect" id="node24" href="classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="1023,325,1185,352"/><area shape="rect" id="node31" href="class_wheel_odometry.html#ad12bfc89fa25fbf0b6c72bed5d61122e" title="走行体の回転角度を返す " alt="" coords="749,107,939,149"/><area shape="rect" id="node32" href="class_motor_angle.html#a5079b35fb08cc66b9bf0d101d963366a" title="モータ角度の絶対値を計算する " alt="" coords="1015,57,1193,98"/><area shape="rect" id="node33" href="class_motor_angle.html#acb61bad045644641b2d47c33e148a7b6" title="左右モータの絶対角度の平均値を計算する " alt="" coords="999,5,1209,32"/><area shape="rect" id="node37" href="class_pid.html#a9e85f222ae86697aacdeaa4f7b0644f6" title="Pid::setPid" alt="" coords="801,731,887,757"/><area shape="rect" id="node39" href="class_line_tracer_walker.html#a4b5b94728a9b0d145a67816ad1fadc02" title="LineTracerWalker::runLine" alt="" coords="757,781,931,808"/><area shape="rect" id="node47" href="class_controller.html#aca9bc8f5a0a390d709d6dd2e5fd9b665" title="Controller::getBrightness" alt="" coords="761,680,927,707"/><area shape="rect" id="node49" href="class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961" title="LineTracerWalker::getForward" alt="" coords="745,579,943,605"/><area shape="rect" id="node50" href="class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390" title="LineTracerWalker::getTurn" alt="" coords="756,629,932,656"/><area shape="rect" id="node38" href="struct_pid_parameter.html#a1680f231922aee58280e54af46cdb7b1" title="PidParameter::set" alt="" coords="1041,727,1167,753"/><area shape="rect" id="node40" href="class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="1005,843,1203,885"/><area shape="rect" id="node45" href="class_turn_control.html#a4de8a0d2496220ab73f078ac0f3fd1a1" title="TurnControl::calculateTurn\lForPid" alt="" coords="1016,778,1192,819"/><area shape="rect" id="node41" href="class_speed_control.html#a07ca6a7a13bc9f703eaf8846ffdc3f60" title="SpeedControl::calcDistance4ms" alt="" coords="1259,919,1469,945"/><area shape="rect" id="node42" href="class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="1313,817,1415,844"/><area shape="rect" id="node43" href="class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="1309,868,1419,895"/><area shape="rect" id="node44" href="class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="1308,767,1420,793"/><area shape="rect" id="node46" href="struct_l_p_f.html#ad97fc124a8e07e291135a150b2743489" title="現在のセンサ値にフィルタ処理を実行する " alt="" coords="1317,716,1411,743"/><area shape="rect" id="node48" href="classev3api_1_1_color_sensor.html#a010cb55b6119147496637bc5b2189582" title="ev3api::ColorSensor\l::getRawColor" alt="" coords="1034,661,1174,702"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a51709fac70958ce6d8d4091e41ab4b49_icgraph.png" border="0" usemap="#class_block_solver_a51709fac70958ce6d8d4091e41ab4b49_icgraph" alt=""/></div>
+<map name="class_block_solver_a51709fac70958ce6d8d4091e41ab4b49_icgraph" id="class_block_solver_a51709fac70958ce6d8d4091e41ab4b49_icgraph">
+<area shape="rect" id="node2" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="238,5,415,32"/><area shape="rect" id="node5" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="243,56,410,83"/><area shape="rect" id="node3" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="465,5,597,32"/><area shape="rect" id="node4" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="471,56,590,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad407edc5f70054b3739bf34f6e3bda5a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::moveOnLineToColor </td>
+          <td>(</td>
+          <td class="paramtype">std::int8_t&#160;</td>
+          <td class="paramname"><em>pwm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::int16_t&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> &amp;&#160;</td>
+          <td class="paramname"><em>circle_color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isRight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定した色のブロック置き場までライントレースします。 </p>
+
+<p> <a class="el" href="_block_solver_8cpp_source.html">BlockSolver.cpp</a> の <a class="el" href="_block_solver_8cpp_source.html#l00209">209</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;{</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  std::int8_t buf = 1;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  controller.<a class="code" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">tslpTsk</a>(50);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  <span class="keywordflow">if</span>(isRight == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    buf = -1;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  walker.<a class="code" href="class_walker.html#a796b87e4f28d73c966b58a7866b018c9">reset</a>();</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="comment">// ライントレースで用いるPID値のセット</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  lineTracer.<a class="code" href="class_line_tracer_walker.html#ac2cd2253acde19117b52d5f7d98de698">speedControl</a>.<a class="code" href="class_pid.html#a9e85f222ae86697aacdeaa4f7b0644f6">setPid</a>(2.0, 0.8, 0.1, pwm);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  lineTracer.<a class="code" href="class_line_tracer_walker.html#a466dcd31f0ccffa81d21401b13d8ffe7">turnControl</a>.<a class="code" href="class_pid.html#a9e85f222ae86697aacdeaa4f7b0644f6">setPid</a>(1.1, 0.1, 0.2, target);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> tmp;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  std::int8_t count = 0;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="comment">// navigator.move(15);</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <span class="keywordflow">while</span>(1) {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    tmp = distinguisher.<a class="code" href="class_distinguisher.html#a3634f5227cc6a492952f1283339636dc">getColor</a>();</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="comment">// controller.printDisplay(10, &quot;%4d %4d %4d&quot;, pwm, turn, target);</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    lineTracer.<a class="code" href="class_line_tracer_walker.html#a4b5b94728a9b0d145a67816ad1fadc02">runLine</a>(walker.<a class="code" href="class_walker.html#aa263348b7d132ddfd0c25f11eec4b367">get_count_L</a>(), walker.<a class="code" href="class_walker.html#ac67a8f1fe17fb1365df515ca6e713373">get_count_R</a>(), controller.<a class="code" href="class_controller.html#aca9bc8f5a0a390d709d6dd2e5fd9b665">getBrightness</a>());</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">if</span>(circle_color == tmp) {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      count++;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      <span class="keywordflow">if</span>(count &gt; 0) {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        count--;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      walker.<a class="code" href="class_walker.html#a665540aeed857d2e35565e1949e6abec">run</a>(lineTracer.<a class="code" href="class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961">getForward</a>(), lineTracer.<a class="code" href="class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390">getTurn</a>() * buf);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">if</span>(count &gt;= 2 || controller.<a class="code" href="class_controller.html#a5674a4689bb73d50483bf19c617ac213">buttonIsPressedBack</a>()) {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      walker.<a class="code" href="class_walker.html#a665540aeed857d2e35565e1949e6abec">run</a>(0, 0);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    controller.<a class="code" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">tslpTsk</a>(4);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  walker.<a class="code" href="class_walker.html#a665540aeed857d2e35565e1949e6abec">run</a>(0, 0);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  controller.<a class="code" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">tslpTsk</a>(50);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
+<div class="ttc" id="class_controller_html_ae9aec1dda0c67029d9e2ddfebe31b530"><div class="ttname"><a href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">Controller::tslpTsk</a></div><div class="ttdeci">void tslpTsk(int16_t time)</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8cpp_source.html#l00074">Controller.cpp:74</a></div></div>
+<div class="ttc" id="class_pid_html_a9e85f222ae86697aacdeaa4f7b0644f6"><div class="ttname"><a href="class_pid.html#a9e85f222ae86697aacdeaa4f7b0644f6">Pid::setPid</a></div><div class="ttdeci">void setPid(double p_gain_, double i_gain_, double d_gain_, double target_)</div><div class="ttdef"><b>Definition:</b> <a href="_pid_8cpp_source.html#l00040">Pid.cpp:40</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1c"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a></div><div class="ttdeci">Color</div><div class="ttdef"><b>Definition:</b> <a href="_distinguisher_8h_source.html#l00016">Distinguisher.h:16</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_a4b5b94728a9b0d145a67816ad1fadc02"><div class="ttname"><a href="class_line_tracer_walker.html#a4b5b94728a9b0d145a67816ad1fadc02">LineTracerWalker::runLine</a></div><div class="ttdeci">void runLine(int32_t countL, int32_t countR, int16_t light_value)</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8cpp_source.html#l00005">LineTracerWalker.cpp:5</a></div></div>
+<div class="ttc" id="class_controller_html_a5674a4689bb73d50483bf19c617ac213"><div class="ttname"><a href="class_controller.html#a5674a4689bb73d50483bf19c617ac213">Controller::buttonIsPressedBack</a></div><div class="ttdeci">bool buttonIsPressedBack()</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8cpp_source.html#l00024">Controller.cpp:24</a></div></div>
+<div class="ttc" id="class_walker_html_a665540aeed857d2e35565e1949e6abec"><div class="ttname"><a href="class_walker.html#a665540aeed857d2e35565e1949e6abec">Walker::run</a></div><div class="ttdeci">void run(std::int8_t pwm, std::int8_t turn)</div><div class="ttdef"><b>Definition:</b> <a href="_walker_8cpp_source.html#l00030">Walker.cpp:30</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_a0f4b2a7a72cde7f8a4d9ed4f05237961"><div class="ttname"><a href="class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961">LineTracerWalker::getForward</a></div><div class="ttdeci">int8_t getForward()</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8cpp_source.html#l00021">LineTracerWalker.cpp:21</a></div></div>
+<div class="ttc" id="class_controller_html_aca9bc8f5a0a390d709d6dd2e5fd9b665"><div class="ttname"><a href="class_controller.html#aca9bc8f5a0a390d709d6dd2e5fd9b665">Controller::getBrightness</a></div><div class="ttdeci">int16_t getBrightness()</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8cpp_source.html#l00059">Controller.cpp:59</a></div></div>
+<div class="ttc" id="class_walker_html_a796b87e4f28d73c966b58a7866b018c9"><div class="ttname"><a href="class_walker.html#a796b87e4f28d73c966b58a7866b018c9">Walker::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition:</b> <a href="_walker_8cpp_source.html#l00015">Walker.cpp:15</a></div></div>
+<div class="ttc" id="class_walker_html_ac67a8f1fe17fb1365df515ca6e713373"><div class="ttname"><a href="class_walker.html#ac67a8f1fe17fb1365df515ca6e713373">Walker::get_count_R</a></div><div class="ttdeci">std::int32_t get_count_R()</div><div class="ttdef"><b>Definition:</b> <a href="_walker_8cpp_source.html#l00054">Walker.cpp:54</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_a75c6e77a03e0fedc2ad1ccf72a6ef390"><div class="ttname"><a href="class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390">LineTracerWalker::getTurn</a></div><div class="ttdeci">int8_t getTurn()</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8cpp_source.html#l00026">LineTracerWalker.cpp:26</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_a466dcd31f0ccffa81d21401b13d8ffe7"><div class="ttname"><a href="class_line_tracer_walker.html#a466dcd31f0ccffa81d21401b13d8ffe7">LineTracerWalker::turnControl</a></div><div class="ttdeci">TurnControl turnControl</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8h_source.html#l00030">LineTracerWalker.h:30</a></div></div>
+<div class="ttc" id="class_distinguisher_html_a3634f5227cc6a492952f1283339636dc"><div class="ttname"><a href="class_distinguisher.html#a3634f5227cc6a492952f1283339636dc">Distinguisher::getColor</a></div><div class="ttdeci">Color getColor()</div><div class="ttdef"><b>Definition:</b> <a href="_distinguisher_8cpp_source.html#l00004">Distinguisher.cpp:4</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_ac2cd2253acde19117b52d5f7d98de698"><div class="ttname"><a href="class_line_tracer_walker.html#ac2cd2253acde19117b52d5f7d98de698">LineTracerWalker::speedControl</a></div><div class="ttdeci">SpeedControl speedControl</div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8h_source.html#l00031">LineTracerWalker.h:31</a></div></div>
+<div class="ttc" id="class_walker_html_aa263348b7d132ddfd0c25f11eec4b367"><div class="ttname"><a href="class_walker.html#aa263348b7d132ddfd0c25f11eec4b367">Walker::get_count_L</a></div><div class="ttdeci">std::int32_t get_count_L()</div><div class="ttdef"><b>Definition:</b> <a href="_walker_8cpp_source.html#l00049">Walker.cpp:49</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_ad407edc5f70054b3739bf34f6e3bda5a_cgraph.png" border="0" usemap="#class_block_solver_ad407edc5f70054b3739bf34f6e3bda5a_cgraph" alt=""/></div>
+<map name="class_block_solver_ad407edc5f70054b3739bf34f6e3bda5a_cgraph" id="class_block_solver_ad407edc5f70054b3739bf34f6e3bda5a_cgraph">
+<area shape="rect" id="node2" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="283,5,413,32"/><area shape="rect" id="node3" href="class_walker.html#a796b87e4f28d73c966b58a7866b018c9" title="Walker::reset" alt="" coords="298,56,398,83"/><area shape="rect" id="node5" href="class_pid.html#a9e85f222ae86697aacdeaa4f7b0644f6" title="Pid::setPid" alt="" coords="305,107,391,133"/><area shape="rect" id="node7" href="class_distinguisher.html#a3634f5227cc6a492952f1283339636dc" title="Distinguisher::getColor" alt="" coords="271,157,425,184"/><area shape="rect" id="node8" href="class_line_tracer_walker.html#a4b5b94728a9b0d145a67816ad1fadc02" title="LineTracerWalker::runLine" alt="" coords="261,208,435,235"/><area shape="rect" id="node17" href="class_walker.html#aa263348b7d132ddfd0c25f11eec4b367" title="Walker::get_count_L" alt="" coords="277,259,419,285"/><area shape="rect" id="node19" href="class_walker.html#ac67a8f1fe17fb1365df515ca6e713373" title="Walker::get_count_R" alt="" coords="275,309,421,336"/><area shape="rect" id="node20" href="class_controller.html#aca9bc8f5a0a390d709d6dd2e5fd9b665" title="Controller::getBrightness" alt="" coords="265,360,431,387"/><area shape="rect" id="node23" href="class_walker.html#a665540aeed857d2e35565e1949e6abec" title="Walker::run" alt="" coords="303,411,393,437"/><area shape="rect" id="node28" href="class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961" title="LineTracerWalker::getForward" alt="" coords="249,461,447,488"/><area shape="rect" id="node29" href="class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390" title="LineTracerWalker::getTurn" alt="" coords="260,512,436,539"/><area shape="rect" id="node30" href="class_controller.html#a5674a4689bb73d50483bf19c617ac213" title="Controller::buttonIsPressedBack" alt="" coords="243,563,453,589"/><area shape="rect" id="node4" href="classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="532,56,671,83"/><area shape="rect" id="node6" href="struct_pid_parameter.html#a1680f231922aee58280e54af46cdb7b1" title="PidParameter::set" alt="" coords="538,107,665,133"/><area shape="rect" id="node9" href="class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="502,225,701,266"/><area shape="rect" id="node14" href="class_turn_control.html#a4de8a0d2496220ab73f078ac0f3fd1a1" title="TurnControl::calculateTurn\lForPid" alt="" coords="513,159,689,201"/><area shape="rect" id="node10" href="class_speed_control.html#a07ca6a7a13bc9f703eaf8846ffdc3f60" title="SpeedControl::calcDistance4ms" alt="" coords="749,292,960,319"/><area shape="rect" id="node11" href="class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="804,140,905,167"/><area shape="rect" id="node12" href="class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="799,191,910,217"/><area shape="rect" id="node13" href="class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="799,241,911,268"/><area shape="rect" id="node15" href="struct_l_p_f.html#ad97fc124a8e07e291135a150b2743489" title="現在のセンサ値にフィルタ処理を実行する " alt="" coords="808,89,901,116"/><area shape="rect" id="node16" href="struct_l_p_f.html#a0766bc31d399b7e6d1808b634cf86349" title="RCフィルタ(ローパスフィルタ)処理 " alt="" coords="1037,89,1139,116"/><area shape="rect" id="node18" href="classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="520,292,683,319"/><area shape="rect" id="node21" href="classev3api_1_1_color_sensor.html#a010cb55b6119147496637bc5b2189582" title="ev3api::ColorSensor\l::getRawColor" alt="" coords="531,345,671,386"/><area shape="rect" id="node22" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92" title="ev3api::Sensor::getPort" alt="" coords="775,352,934,379"/><area shape="rect" id="node24" href="class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3" title="Controller::printDisplay" alt="" coords="524,411,679,437"/><area shape="rect" id="node25" href="class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="523,512,679,539"/><area shape="rect" id="node27" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="1008,487,1168,513"/><area shape="rect" id="node26" href="classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="774,512,935,539"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_ad407edc5f70054b3739bf34f6e3bda5a_icgraph.png" border="0" usemap="#class_block_solver_ad407edc5f70054b3739bf34f6e3bda5a_icgraph" alt=""/></div>
+<map name="class_block_solver_ad407edc5f70054b3739bf34f6e3bda5a_icgraph" id="class_block_solver_ad407edc5f70054b3739bf34f6e3bda5a_icgraph">
+<area shape="rect" id="node2" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="702,26,834,53"/><area shape="rect" id="node3" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="709,77,827,103"/><area shape="rect" id="node4" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="243,51,427,78"/><area shape="rect" id="node5" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="475,26,653,53"/><area shape="rect" id="node6" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="481,77,647,103"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3492de2fb6eb0b7245c935174dcb8f00"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::moveRoute </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>route</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ルートを移動します。 </p>
+
+<p> <a class="el" href="_block_solver_8cpp_source.html">BlockSolver.cpp</a> の <a class="el" href="_block_solver_8cpp_source.html#l00098">98</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">bool</span> isFirst = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordflow">for</span>(<span class="keyword">auto</span> next_n : route) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span>(isFirst == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      isFirst = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(next_n == nowPlace) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    controller.<a class="code" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">tslpTsk</a>(50);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49">moveDirection</a>(next_n);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  controller.<a class="code" href="class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3">speakerPlayTone</a>(controller.<a class="code" href="class_controller.html#ab7c5ed29a3e87e63ab1f399183c40e61">noteFs4</a>, 300);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="ttc" id="class_controller_html_afe78dbb9fa2ce597920f71ce6bb031f3"><div class="ttname"><a href="class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3">Controller::speakerPlayTone</a></div><div class="ttdeci">void speakerPlayTone(uint16_t frequency, int32_t duration)</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8cpp_source.html#l00009">Controller.cpp:9</a></div></div>
+<div class="ttc" id="class_controller_html_ae9aec1dda0c67029d9e2ddfebe31b530"><div class="ttname"><a href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">Controller::tslpTsk</a></div><div class="ttdeci">void tslpTsk(int16_t time)</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8cpp_source.html#l00074">Controller.cpp:74</a></div></div>
+<div class="ttc" id="class_block_solver_html_a51709fac70958ce6d8d4091e41ab4b49"><div class="ttname"><a href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49">BlockSolver::moveDirection</a></div><div class="ttdeci">void moveDirection(const std::int8_t &amp;nextPlace, bool remove_block=false)</div><div class="ttdoc">指定した方角へ移動します。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00131">BlockSolver.cpp:131</a></div></div>
+<div class="ttc" id="class_controller_html_ab7c5ed29a3e87e63ab1f399183c40e61"><div class="ttname"><a href="class_controller.html#ab7c5ed29a3e87e63ab1f399183c40e61">Controller::noteFs4</a></div><div class="ttdeci">uint16_t noteFs4</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00041">Controller.h:41</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a3492de2fb6eb0b7245c935174dcb8f00_cgraph.png" border="0" usemap="#class_block_solver_a3492de2fb6eb0b7245c935174dcb8f00_cgraph" alt=""/></div>
+<map name="class_block_solver_a3492de2fb6eb0b7245c935174dcb8f00_cgraph" id="class_block_solver_a3492de2fb6eb0b7245c935174dcb8f00_cgraph">
+<area shape="rect" id="node2" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="995,411,1125,437"/><area shape="rect" id="node3" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="221,511,405,537"/><area shape="rect" id="node6" href="class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3" title="Controller::speakerPlayTone" alt="" coords="719,680,905,707"/><area shape="rect" id="node4" href="class_block_side_by_side_1_1_block_area.html#ad76fa2dcf0679af589e0a8554d98af3b" title="BlockSideBySide::BlockArea\l::getDirection" alt="" coords="466,445,657,486"/><area shape="rect" id="node5" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="480,561,643,588"/><area shape="rect" id="node31" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46" title="指定した角度まで走行体を回転させる(基本左エッジ) " alt="" coords="757,528,867,555"/><area shape="rect" id="node35" href="class_block_solver.html#ab9844e0fc35307a10230b83651563bd0" title="次に向かうべき方角を切り替えます。 " alt="" coords="454,511,669,537"/><area shape="rect" id="node36" href="class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981" title="指定した距離まで走行体を後退させる " alt="" coords="755,731,869,757"/><area shape="rect" id="node37" href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a" title="指定した色のブロック置き場までライントレースします。 " alt="" coords="718,259,906,301"/><area shape="rect" id="node7" href="class_navigator.html#a6f3901e766e383a66c47177257c46204" title="指定した距離まで走行体を移動させる " alt="" coords="753,579,871,605"/><area shape="rect" id="node14" href="class_walker.html#a665540aeed857d2e35565e1949e6abec" title="Walker::run" alt="" coords="1015,629,1105,656"/><area shape="rect" id="node29" href="class_distinguisher.html#a3634f5227cc6a492952f1283339636dc" title="Distinguisher::getColor" alt="" coords="983,360,1137,387"/><area shape="rect" id="node30" href="class_controller.html#a5674a4689bb73d50483bf19c617ac213" title="Controller::buttonIsPressedBack" alt="" coords="955,309,1165,336"/><area shape="rect" id="node8" href="class_navigator.html#aeece0b738f289e4133a27bfa62ee15f2" title="座標とエンコーダの値を初期化する " alt="" coords="1003,680,1117,707"/><area shape="rect" id="node19" href="class_wheel_odometry.html#a61d5310dcb3118542a9a27902d85d592" title="走行体の位置情報を更新する " alt="" coords="979,731,1141,757"/><area shape="rect" id="node25" href="class_walker.html#aa263348b7d132ddfd0c25f11eec4b367" title="Walker::get_count_L" alt="" coords="989,528,1131,555"/><area shape="rect" id="node27" href="class_walker.html#ac67a8f1fe17fb1365df515ca6e713373" title="Walker::get_count_R" alt="" coords="987,579,1133,605"/><area shape="rect" id="node28" href="class_wheel_odometry.html#a3a2c52e52341f83c32085b30b3e4954e" title="走行体の位置情報を返す " alt="" coords="957,781,1163,808"/><area shape="rect" id="node9" href="class_walker.html#a796b87e4f28d73c966b58a7866b018c9" title="Walker::reset" alt="" coords="1270,477,1370,504"/><area shape="rect" id="node11" href="class_wheel_odometry.html#a93592d64412c84dc3b0bdd6468de0657" title="走行体の位置情報を初期化する " alt="" coords="1243,731,1397,757"/><area shape="rect" id="node10" href="classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="1511,477,1649,504"/><area shape="rect" id="node12" href="struct_coordinate.html#ac6e8a112850a5768760a108bd4b965c6" title="走行体の位置情報を初期化する " alt="" coords="1519,731,1641,757"/><area shape="rect" id="node13" href="class_motor_angle.html#a20ae8007014e6368805dad79459bcf54" title="左右モータ角度の過去値を0にリセットする " alt="" coords="1517,680,1643,707"/><area shape="rect" id="node15" href="class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3" title="Controller::printDisplay" alt="" coords="1243,680,1397,707"/><area shape="rect" id="node16" href="class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="1242,629,1398,656"/><area shape="rect" id="node18" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="1733,604,1893,631"/><area shape="rect" id="node17" href="classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="1499,629,1661,656"/><area shape="rect" id="node20" href="class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28" title="走行体の旋回速度を求める " alt="" coords="1235,883,1405,909"/><area shape="rect" id="node22" href="class_wheel_odometry.html#a83b1fdffc3eed4dd9cf81b1fe993c973" title="走行体の旋回角速度を求める " alt="" coords="1213,781,1427,808"/><area shape="rect" id="node24" href="struct_coordinate.html#a772936f3dede6ccb0528a719342ebaa6" title="走行体の位置情報を更新する " alt="" coords="1254,832,1386,859"/><area shape="rect" id="node21" href="class_motor_angle.html#a8bf992a88ac06b1b5731fb99912ff9bd" title="左右モータの相対角度の平均値を計算する " alt="" coords="1479,883,1681,909"/><area shape="rect" id="node23" href="class_motor_angle.html#aae319910dcaa118d1a7f7ca66ee2bdc1" title="左右モータ角度の差を計算する(右手系/反時計回りが正) " alt="" coords="1481,781,1679,808"/><area shape="rect" id="node26" href="classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="1239,528,1401,555"/><area shape="rect" id="node32" href="class_wheel_odometry.html#ad12bfc89fa25fbf0b6c72bed5d61122e" title="走行体の回転角度を返す " alt="" coords="965,462,1155,503"/><area shape="rect" id="node33" href="class_motor_angle.html#a5079b35fb08cc66b9bf0d101d963366a" title="モータ角度の絶対値を計算する " alt="" coords="1231,361,1409,402"/><area shape="rect" id="node34" href="class_motor_angle.html#acb61bad045644641b2d47c33e148a7b6" title="左右モータの絶対角度の平均値を計算する " alt="" coords="1215,427,1425,453"/><area shape="rect" id="node38" href="class_pid.html#a9e85f222ae86697aacdeaa4f7b0644f6" title="Pid::setPid" alt="" coords="1017,56,1103,83"/><area shape="rect" id="node40" href="class_line_tracer_walker.html#a4b5b94728a9b0d145a67816ad1fadc02" title="LineTracerWalker::runLine" alt="" coords="973,107,1147,133"/><area shape="rect" id="node47" href="class_controller.html#aca9bc8f5a0a390d709d6dd2e5fd9b665" title="Controller::getBrightness" alt="" coords="977,157,1143,184"/><area shape="rect" id="node49" href="class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961" title="LineTracerWalker::getForward" alt="" coords="961,5,1159,32"/><area shape="rect" id="node50" href="class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390" title="LineTracerWalker::getTurn" alt="" coords="972,208,1148,235"/><area shape="rect" id="node39" href="struct_pid_parameter.html#a1680f231922aee58280e54af46cdb7b1" title="PidParameter::set" alt="" coords="1257,16,1383,43"/><area shape="rect" id="node41" href="class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="1221,133,1419,174"/><area shape="rect" id="node46" href="class_turn_control.html#a4de8a0d2496220ab73f078ac0f3fd1a1" title="TurnControl::calculateTurn\lForPid" alt="" coords="1232,67,1408,109"/><area shape="rect" id="node42" href="class_speed_control.html#a07ca6a7a13bc9f703eaf8846ffdc3f60" title="SpeedControl::calcDistance4ms" alt="" coords="1475,191,1685,217"/><area shape="rect" id="node43" href="class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="1529,89,1631,116"/><area shape="rect" id="node44" href="class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="1525,140,1635,167"/><area shape="rect" id="node45" href="class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="1524,39,1636,65"/><area shape="rect" id="node48" href="classev3api_1_1_color_sensor.html#a010cb55b6119147496637bc5b2189582" title="ev3api::ColorSensor\l::getRawColor" alt="" coords="1250,198,1390,239"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a3492de2fb6eb0b7245c935174dcb8f00_icgraph.png" border="0" usemap="#class_block_solver_a3492de2fb6eb0b7245c935174dcb8f00_icgraph" alt=""/></div>
+<map name="class_block_solver_a3492de2fb6eb0b7245c935174dcb8f00_icgraph" id="class_block_solver_a3492de2fb6eb0b7245c935174dcb8f00_icgraph">
+<area shape="rect" id="node2" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="222,5,354,32"/><area shape="rect" id="node3" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="229,56,347,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a21459836e6da2c1fa7bac850e333da4d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::passCircle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> &amp;&#160;</td>
+          <td class="paramname"><em>circle_color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ブロック置き場を乗り越えます。 </p>
+
+<p> <a class="el" href="_block_solver_8cpp_source.html">BlockSolver.cpp</a> の <a class="el" href="_block_solver_8cpp_source.html#l00257">257</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;{</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  controller.<a class="code" href="class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3">speakerPlayTone</a>(controller.<a class="code" href="class_controller.html#ab7c5ed29a3e87e63ab1f399183c40e61">noteFs4</a>, 100);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  navigator.<a class="code" href="class_navigator.html#a6f3901e766e383a66c47177257c46204">move</a>(90, 5);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  walker.<a class="code" href="class_walker.html#a665540aeed857d2e35565e1949e6abec">run</a>(5, 0);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> tmp;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  std::int8_t count = 0;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="keywordflow">while</span>(1) {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    tmp = distinguisher.<a class="code" href="class_distinguisher.html#a3634f5227cc6a492952f1283339636dc">getColor</a>();</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965">Color::BLACK</a> == tmp || <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d">Color::WHITE</a> == tmp) {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      count++;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      <span class="keywordflow">if</span>(count &gt; 0) {</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        count--;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">if</span>(count &gt;= 1 || controller.<a class="code" href="class_controller.html#a5674a4689bb73d50483bf19c617ac213">buttonIsPressedBack</a>()) {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;      walker.<a class="code" href="class_walker.html#a665540aeed857d2e35565e1949e6abec">run</a>(0, 0);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    controller.<a class="code" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">tslpTsk</a>(4);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  }</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  navigator.<a class="code" href="class_navigator.html#a6f3901e766e383a66c47177257c46204">move</a>(10, 5);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;}</div>
+<div class="ttc" id="class_controller_html_afe78dbb9fa2ce597920f71ce6bb031f3"><div class="ttname"><a href="class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3">Controller::speakerPlayTone</a></div><div class="ttdeci">void speakerPlayTone(uint16_t frequency, int32_t duration)</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8cpp_source.html#l00009">Controller.cpp:9</a></div></div>
+<div class="ttc" id="class_controller_html_ae9aec1dda0c67029d9e2ddfebe31b530"><div class="ttname"><a href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">Controller::tslpTsk</a></div><div class="ttdeci">void tslpTsk(int16_t time)</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8cpp_source.html#l00074">Controller.cpp:74</a></div></div>
+<div class="ttc" id="class_navigator_html_a6f3901e766e383a66c47177257c46204"><div class="ttname"><a href="class_navigator.html#a6f3901e766e383a66c47177257c46204">Navigator::move</a></div><div class="ttdeci">void move(float distance, std::int8_t pwm=20)</div><div class="ttdoc">指定した距離まで走行体を移動させる </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00048">Navigator.cpp:48</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1c"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a></div><div class="ttdeci">Color</div><div class="ttdef"><b>Definition:</b> <a href="_distinguisher_8h_source.html#l00016">Distinguisher.h:16</a></div></div>
+<div class="ttc" id="class_controller_html_a5674a4689bb73d50483bf19c617ac213"><div class="ttname"><a href="class_controller.html#a5674a4689bb73d50483bf19c617ac213">Controller::buttonIsPressedBack</a></div><div class="ttdeci">bool buttonIsPressedBack()</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8cpp_source.html#l00024">Controller.cpp:24</a></div></div>
+<div class="ttc" id="class_walker_html_a665540aeed857d2e35565e1949e6abec"><div class="ttname"><a href="class_walker.html#a665540aeed857d2e35565e1949e6abec">Walker::run</a></div><div class="ttdeci">void run(std::int8_t pwm, std::int8_t turn)</div><div class="ttdef"><b>Definition:</b> <a href="_walker_8cpp_source.html#l00030">Walker.cpp:30</a></div></div>
+<div class="ttc" id="class_controller_html_ab7c5ed29a3e87e63ab1f399183c40e61"><div class="ttname"><a href="class_controller.html#ab7c5ed29a3e87e63ab1f399183c40e61">Controller::noteFs4</a></div><div class="ttdeci">uint16_t noteFs4</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00041">Controller.h:41</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965">Color::BLACK</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d">Color::WHITE</a></div></div>
+<div class="ttc" id="class_distinguisher_html_a3634f5227cc6a492952f1283339636dc"><div class="ttname"><a href="class_distinguisher.html#a3634f5227cc6a492952f1283339636dc">Distinguisher::getColor</a></div><div class="ttdeci">Color getColor()</div><div class="ttdef"><b>Definition:</b> <a href="_distinguisher_8cpp_source.html#l00004">Distinguisher.cpp:4</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a21459836e6da2c1fa7bac850e333da4d_cgraph.png" border="0" usemap="#class_block_solver_a21459836e6da2c1fa7bac850e333da4d_cgraph" alt=""/></div>
+<map name="class_block_solver_a21459836e6da2c1fa7bac850e333da4d_cgraph" id="class_block_solver_a21459836e6da2c1fa7bac850e333da4d_cgraph">
+<area shape="rect" id="node2" href="class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3" title="Controller::speakerPlayTone" alt="" coords="228,157,415,184"/><area shape="rect" id="node3" href="class_navigator.html#a6f3901e766e383a66c47177257c46204" title="指定した距離まで走行体を移動させる " alt="" coords="262,259,381,285"/><area shape="rect" id="node10" href="class_walker.html#a665540aeed857d2e35565e1949e6abec" title="Walker::run" alt="" coords="533,107,622,133"/><area shape="rect" id="node26" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="513,411,642,437"/><area shape="rect" id="node27" href="class_distinguisher.html#a3634f5227cc6a492952f1283339636dc" title="Distinguisher::getColor" alt="" coords="244,360,399,387"/><area shape="rect" id="node28" href="class_controller.html#a5674a4689bb73d50483bf19c617ac213" title="Controller::buttonIsPressedBack" alt="" coords="216,411,427,437"/><area shape="rect" id="node4" href="class_navigator.html#aeece0b738f289e4133a27bfa62ee15f2" title="座標とエンコーダの値を初期化する " alt="" coords="520,157,635,184"/><area shape="rect" id="node15" href="class_wheel_odometry.html#a61d5310dcb3118542a9a27902d85d592" title="走行体の位置情報を更新する " alt="" coords="496,360,659,387"/><area shape="rect" id="node22" href="class_walker.html#aa263348b7d132ddfd0c25f11eec4b367" title="Walker::get_count_L" alt="" coords="506,309,649,336"/><area shape="rect" id="node24" href="class_walker.html#ac67a8f1fe17fb1365df515ca6e713373" title="Walker::get_count_R" alt="" coords="505,208,650,235"/><area shape="rect" id="node25" href="class_wheel_odometry.html#a3a2c52e52341f83c32085b30b3e4954e" title="走行体の位置情報を返す " alt="" coords="475,259,680,285"/><area shape="rect" id="node5" href="class_walker.html#a796b87e4f28d73c966b58a7866b018c9" title="Walker::reset" alt="" coords="785,157,885,184"/><area shape="rect" id="node7" href="class_wheel_odometry.html#a93592d64412c84dc3b0bdd6468de0657" title="走行体の位置情報を初期化する " alt="" coords="758,208,911,235"/><area shape="rect" id="node6" href="classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="1021,157,1160,184"/><area shape="rect" id="node8" href="struct_coordinate.html#ac6e8a112850a5768760a108bd4b965c6" title="走行体の位置情報を初期化する " alt="" coords="1029,259,1152,285"/><area shape="rect" id="node9" href="class_motor_angle.html#a20ae8007014e6368805dad79459bcf54" title="左右モータ角度の過去値を0にリセットする " alt="" coords="1028,208,1153,235"/><area shape="rect" id="node11" href="class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3" title="Controller::printDisplay" alt="" coords="757,5,912,32"/><area shape="rect" id="node12" href="class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="757,56,913,83"/><area shape="rect" id="node14" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="1240,81,1400,108"/><area shape="rect" id="node13" href="classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="1010,56,1171,83"/><area shape="rect" id="node16" href="class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28" title="走行体の旋回速度を求める " alt="" coords="750,411,919,437"/><area shape="rect" id="node19" href="class_wheel_odometry.html#a83b1fdffc3eed4dd9cf81b1fe993c973" title="走行体の旋回角速度を求める " alt="" coords="728,309,941,336"/><area shape="rect" id="node21" href="struct_coordinate.html#a772936f3dede6ccb0528a719342ebaa6" title="走行体の位置情報を更新する " alt="" coords="769,360,901,387"/><area shape="rect" id="node17" href="class_motor_angle.html#a8bf992a88ac06b1b5731fb99912ff9bd" title="左右モータの相対角度の平均値を計算する " alt="" coords="989,411,1192,437"/><area shape="rect" id="node18" href="class_motor_angle.html#abe5eb31bff0514f32a0bb00751f16ccf" title="左右モータ角度の過去値を現在値へ更新する " alt="" coords="1253,411,1387,437"/><area shape="rect" id="node20" href="class_motor_angle.html#aae319910dcaa118d1a7f7ca66ee2bdc1" title="左右モータ角度の差を計算する(右手系/反時計回りが正) " alt="" coords="991,309,1190,336"/><area shape="rect" id="node23" href="classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="753,259,916,285"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a21459836e6da2c1fa7bac850e333da4d_icgraph.png" border="0" usemap="#class_block_solver_a21459836e6da2c1fa7bac850e333da4d_icgraph" alt=""/></div>
+<map name="class_block_solver_a21459836e6da2c1fa7bac850e333da4d_icgraph" id="class_block_solver_a21459836e6da2c1fa7bac850e333da4d_icgraph">
+<area shape="rect" id="node2" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="686,23,818,50"/><area shape="rect" id="node3" href="class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="216,111,411,138"/><area shape="rect" id="node5" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="221,49,405,75"/><area shape="rect" id="node4" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="693,74,811,101"/><area shape="rect" id="node6" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="459,23,637,50"/><area shape="rect" id="node7" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="465,74,631,101"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aee9d08bbd83ea2f6069c30698c3a692c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ブロック並べを攻略します。 </p>
+
+<p> <a class="el" href="_block_solver_8cpp_source.html">BlockSolver.cpp</a> の <a class="el" href="_block_solver_8cpp_source.html#l00048">48</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">// 最初の8番までのライントレース</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="comment">//navigator.moveOnLine(500, targetBrightness, 60);</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a">moveOnLineToColor</a>(50, targetBrightness - 10, <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0">Color::RED</a>, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  std::vector&lt;int&gt; route{ 8, 9, 10, 11 };</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00">moveRoute</a>(route);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="comment">//spinParkingArea();</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="class_selector.html">Selector</a> selector;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  selector.<a class="code" href="class_selector.html#a54b24940aa1eeb1c2432512f9cf09220">setBlockPositionList</a>({ 8, 9, 11, 15 });  <span class="comment">// ipcd.getInitialPositionCodeList());</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8f">Selector::BlockColor</a> b_color = <a class="code" href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8fab7cc2aa17800a3f942d5f391692c9a1d">Selector::Undefined</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">while</span>(!selector.<a class="code" href="class_selector.html#a6f69a6d37a65e30cbef65e1d9e2ef3df">isAlreadyAllBlockMoved</a>()) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">auto</span> route = selector.<a class="code" href="class_selector.html#a0fdb154d0341aed4c2df2a38a8bd0676">exploreNextOperation</a>(nowPlace, <a class="code" href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8fab7cc2aa17800a3f942d5f391692c9a1d">Selector::Undefined</a>);  <span class="comment">// b_color);</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// 目的地移動前にバックステップを行う必要がある場合</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">if</span>(selector.<a class="code" href="class_selector.html#abd53d5bd964153b08b9c043b2faf2598">isBacksteppingBeforeNextOperation</a>()) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <a class="code" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2">byeByeBlock</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">// 移動</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00">moveRoute</a>(route);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span>(selector.<a class="code" href="class_selector.html#abe89790dcf13c5662040b4b842c32840">isMovingWithNext</a>()) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="comment">// ブロックまで移動する場合</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <a class="code" href="class_block_solver.html#ab82a21046107a859adbb5a144ceaa63e">getBlockColor</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      b_color = <a class="code" href="class_block_solver.html#ad662ef850e3f661b3eb3ce7eca51eb2c">convertSelectorColor</a>(blockColor);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="comment">// ブロックを移動する場合</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      b_color = <a class="code" href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8fab7cc2aa17800a3f942d5f391692c9a1d">Selector::Undefined</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">// 移動後にバックステップを行う必要がある場合</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span>(selector.<a class="code" href="class_selector.html#a0e18f38bafc319ff91256ccb8d6d9cad">isBackstepping</a>()) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <a class="code" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2">byeByeBlock</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <a class="code" href="class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1">spinParkingArea</a>();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="ttc" id="class_selector_html_a0e18f38bafc319ff91256ccb8d6d9cad"><div class="ttname"><a href="class_selector.html#a0e18f38bafc319ff91256ccb8d6d9cad">Selector::isBackstepping</a></div><div class="ttdeci">bool isBackstepping()</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00294">Selector.cpp:294</a></div></div>
+<div class="ttc" id="class_block_solver_html_af35d5db675b4ef020c678c263425f1b2"><div class="ttname"><a href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2">BlockSolver::byeByeBlock</a></div><div class="ttdeci">void byeByeBlock()</div><div class="ttdoc">バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00090">BlockSolver.cpp:90</a></div></div>
+<div class="ttc" id="class_block_solver_html_a3baa91b5cf2eca22b64aafb841dbe2a1"><div class="ttname"><a href="class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1">BlockSolver::spinParkingArea</a></div><div class="ttdeci">void spinParkingArea()</div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00115">BlockSolver.cpp:115</a></div></div>
+<div class="ttc" id="class_selector_html_a75ae44b29383943b8fb09dc3f928aa8f"><div class="ttname"><a href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8f">Selector::BlockColor</a></div><div class="ttdeci">BlockColor</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8h_source.html#l00140">Selector.h:140</a></div></div>
+<div class="ttc" id="class_selector_html_a54b24940aa1eeb1c2432512f9cf09220"><div class="ttname"><a href="class_selector.html#a54b24940aa1eeb1c2432512f9cf09220">Selector::setBlockPositionList</a></div><div class="ttdeci">void setBlockPositionList(std::vector&lt; std::int8_t &gt; list)</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00196">Selector.cpp:196</a></div></div>
+<div class="ttc" id="class_selector_html_abe89790dcf13c5662040b4b842c32840"><div class="ttname"><a href="class_selector.html#abe89790dcf13c5662040b4b842c32840">Selector::isMovingWithNext</a></div><div class="ttdeci">bool isMovingWithNext()</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00284">Selector.cpp:284</a></div></div>
+<div class="ttc" id="class_selector_html_a75ae44b29383943b8fb09dc3f928aa8fab7cc2aa17800a3f942d5f391692c9a1d"><div class="ttname"><a href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8fab7cc2aa17800a3f942d5f391692c9a1d">Selector::Undefined</a></div><div class="ttdef"><b>Definition:</b> <a href="_selector_8h_source.html#l00140">Selector.h:140</a></div></div>
+<div class="ttc" id="class_selector_html_a0fdb154d0341aed4c2df2a38a8bd0676"><div class="ttname"><a href="class_selector.html#a0fdb154d0341aed4c2df2a38a8bd0676">Selector::exploreNextOperation</a></div><div class="ttdeci">std::vector&lt; int &gt; exploreNextOperation(std::int8_t currentPosition, BlockColor color)</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00003">Selector.cpp:3</a></div></div>
+<div class="ttc" id="class_block_solver_html_ab82a21046107a859adbb5a144ceaa63e"><div class="ttname"><a href="class_block_solver.html#ab82a21046107a859adbb5a144ceaa63e">BlockSolver::getBlockColor</a></div><div class="ttdeci">void getBlockColor()</div><div class="ttdoc">ブロックの色を取得し、blockColorに格納します。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00247">BlockSolver.cpp:247</a></div></div>
+<div class="ttc" id="class_block_solver_html_ad407edc5f70054b3739bf34f6e3bda5a"><div class="ttname"><a href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a">BlockSolver::moveOnLineToColor</a></div><div class="ttdeci">void moveOnLineToColor(std::int8_t pwm, std::int16_t target, const Color &amp;circle_color, bool isRight)</div><div class="ttdoc">指定した色のブロック置き場までライントレースします。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00209">BlockSolver.cpp:209</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0">Color::RED</a></div></div>
+<div class="ttc" id="class_selector_html_a6f69a6d37a65e30cbef65e1d9e2ef3df"><div class="ttname"><a href="class_selector.html#a6f69a6d37a65e30cbef65e1d9e2ef3df">Selector::isAlreadyAllBlockMoved</a></div><div class="ttdeci">bool isAlreadyAllBlockMoved()</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00183">Selector.cpp:183</a></div></div>
+<div class="ttc" id="class_block_solver_html_a3492de2fb6eb0b7245c935174dcb8f00"><div class="ttname"><a href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00">BlockSolver::moveRoute</a></div><div class="ttdeci">void moveRoute(std::vector&lt; int &gt; &amp;route)</div><div class="ttdoc">ルートを移動します。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00098">BlockSolver.cpp:98</a></div></div>
+<div class="ttc" id="class_selector_html_abd53d5bd964153b08b9c043b2faf2598"><div class="ttname"><a href="class_selector.html#abd53d5bd964153b08b9c043b2faf2598">Selector::isBacksteppingBeforeNextOperation</a></div><div class="ttdeci">bool isBacksteppingBeforeNextOperation()</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00299">Selector.cpp:299</a></div></div>
+<div class="ttc" id="class_block_solver_html_ad662ef850e3f661b3eb3ce7eca51eb2c"><div class="ttname"><a href="class_block_solver.html#ad662ef850e3f661b3eb3ce7eca51eb2c">BlockSolver::convertSelectorColor</a></div><div class="ttdeci">Selector::BlockColor convertSelectorColor(const Color &amp;gameColor)</div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00034">BlockSolver.cpp:34</a></div></div>
+<div class="ttc" id="class_selector_html"><div class="ttname"><a href="class_selector.html">Selector</a></div><div class="ttdoc">ブロック選択クラス </div><div class="ttdef"><b>Definition:</b> <a href="_selector_8h_source.html#l00113">Selector.h:113</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_aee9d08bbd83ea2f6069c30698c3a692c_cgraph.png" border="0" usemap="#class_block_solver_aee9d08bbd83ea2f6069c30698c3a692c_cgraph" alt=""/></div>
+<map name="class_block_solver_aee9d08bbd83ea2f6069c30698c3a692c_cgraph" id="class_block_solver_aee9d08bbd83ea2f6069c30698c3a692c_cgraph">
+<area shape="rect" id="node2" href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a" title="指定した色のブロック置き場までライントレースします。 " alt="" coords="707,249,895,290"/><area shape="rect" id="node18" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="193,619,359,645"/><area shape="rect" id="node24" href="class_selector.html#a54b24940aa1eeb1c2432512f9cf09220" title="Selector::setBlockPositionList" alt="" coords="177,887,375,913"/><area shape="rect" id="node25" href="class_selector.html#a6f69a6d37a65e30cbef65e1d9e2ef3df" title="Selector::isAlreadyAllBlock\lMoved" alt="" coords="186,938,366,979"/><area shape="rect" id="node26" href="class_selector.html#a0fdb154d0341aed4c2df2a38a8bd0676" title="Selector::exploreNextOperation" alt="" coords="174,1069,378,1096"/><area shape="rect" id="node42" href="class_selector.html#abd53d5bd964153b08b9c043b2faf2598" title="Selector::isBackstepping\lBeforeNextOperation" alt="" coords="193,1121,359,1162"/><area shape="rect" id="node43" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="187,695,365,721"/><area shape="rect" id="node44" href="class_selector.html#abe89790dcf13c5662040b4b842c32840" title="Selector::isMovingWithNext" alt="" coords="183,1187,369,1213"/><area shape="rect" id="node45" href="class_block_solver.html#ab82a21046107a859adbb5a144ceaa63e" title="ブロックの色を取得し、blockColorに格納します。 " alt="" coords="445,416,627,443"/><area shape="rect" id="node48" href="class_block_solver.html#ad662ef850e3f661b3eb3ce7eca51eb2c" title="BlockSolver::convertSelector\lColor" alt="" coords="181,1238,371,1279"/><area shape="rect" id="node49" href="class_selector.html#a0e18f38bafc319ff91256ccb8d6d9cad" title="Selector::isBackstepping" alt="" coords="193,1304,359,1331"/><area shape="rect" id="node50" href="class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="439,644,633,671"/><area shape="rect" id="node3" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="998,467,1127,493"/><area shape="rect" id="node4" href="class_walker.html#a796b87e4f28d73c966b58a7866b018c9" title="Walker::reset" alt="" coords="1013,264,1113,291"/><area shape="rect" id="node6" href="class_pid.html#a9e85f222ae86697aacdeaa4f7b0644f6" title="Pid::setPid" alt="" coords="1019,7,1106,33"/><area shape="rect" id="node8" href="class_distinguisher.html#a3634f5227cc6a492952f1283339636dc" title="Distinguisher::getColor" alt="" coords="985,416,1140,443"/><area shape="rect" id="node9" href="class_line_tracer_walker.html#a4b5b94728a9b0d145a67816ad1fadc02" title="LineTracerWalker::runLine" alt="" coords="975,61,1150,88"/><area shape="rect" id="node11" href="class_walker.html#aa263348b7d132ddfd0c25f11eec4b367" title="Walker::get_count_L" alt="" coords="991,315,1134,341"/><area shape="rect" id="node12" href="class_walker.html#ac67a8f1fe17fb1365df515ca6e713373" title="Walker::get_count_R" alt="" coords="990,365,1135,392"/><area shape="rect" id="node13" href="class_controller.html#aca9bc8f5a0a390d709d6dd2e5fd9b665" title="Controller::getBrightness" alt="" coords="979,112,1146,139"/><area shape="rect" id="node14" href="class_walker.html#a665540aeed857d2e35565e1949e6abec" title="Walker::run" alt="" coords="1018,517,1107,544"/><area shape="rect" id="node15" href="class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961" title="LineTracerWalker::getForward" alt="" coords="964,163,1161,189"/><area shape="rect" id="node16" href="class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390" title="LineTracerWalker::getTurn" alt="" coords="975,213,1151,240"/><area shape="rect" id="node17" href="class_controller.html#a5674a4689bb73d50483bf19c617ac213" title="Controller::buttonIsPressedBack" alt="" coords="957,568,1168,595"/><area shape="rect" id="node5" href="classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="1247,264,1385,291"/><area shape="rect" id="node7" href="struct_pid_parameter.html#a1680f231922aee58280e54af46cdb7b1" title="PidParameter::set" alt="" coords="1253,5,1379,32"/><area shape="rect" id="node10" href="class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="1217,57,1415,98"/><area shape="rect" id="node19" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="444,593,628,620"/><area shape="rect" id="node21" href="class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3" title="Controller::speakerPlayTone" alt="" coords="969,644,1156,671"/><area shape="rect" id="node20" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="720,568,883,595"/><area shape="rect" id="node22" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46" title="指定した角度まで走行体を回転させる(基本左エッジ) " alt="" coords="746,517,857,544"/><area shape="rect" id="node23" href="class_block_solver.html#ab9844e0fc35307a10230b83651563bd0" title="次に向かうべき方角を切り替えます。 " alt="" coords="694,720,909,747"/><area shape="rect" id="node27" href="class_selector.html#aa3691c1a35cd0c7ee24f552d139511e2" title="Selector::searchBlockPosition" alt="" coords="437,1297,635,1324"/><area shape="rect" id="node28" href="class_selector.html#a2d53e8e7ff20d156a945925054af3c3e" title="Selector::isAlreadyMovedNode" alt="" coords="700,1221,903,1248"/><area shape="rect" id="node29" href="class_explorer.html#a53c637c90b158016c5be1fcb01165a1e" title="Explorer::resetBlockArea" alt="" coords="718,1297,885,1324"/><area shape="rect" id="node30" href="class_explorer.html#aee7149934ae124c0e6a7b90478da70a5" title="Explorer::setHasBlockIn" alt="" coords="719,1348,883,1375"/><area shape="rect" id="node31" href="class_selector.html#aa1e4bb6da63b4d61c92293be39123392" title="Selector::getPositionOfCenter\lQuadirilateral" alt="" coords="438,1517,634,1558"/><area shape="rect" id="node32" href="class_selector.html#a09627de92b8ca05a3bd75ed0342f7f52" title="Selector::extractRoute" alt="" coords="459,1583,613,1609"/><area shape="rect" id="node33" href="class_selector.html#af6800cd8af21f608d536ac1406c46391" title="Selector::setNext" alt="" coords="474,796,598,823"/><area shape="rect" id="node34" href="class_explorer.html#a1d2bca3a7689895975a8734557e320e6" title="Explorer::hasBlock" alt="" coords="735,1436,867,1463"/><area shape="rect" id="node35" href="class_selector.html#a7f2d96d7904828c5f54f1307f11a5ecb" title="Selector::pushEvacuatedBlock\lPosition" alt="" coords="435,847,637,889"/><area shape="rect" id="node36" href="class_selector.html#ac3f2b39e32ab217f6c36a31e230e51c1" title="Selector::searchMostPoor\lCostShelter" alt="" coords="449,1399,623,1441"/><area shape="rect" id="node37" href="class_selector.html#ae8eac1014b1d6a5d51f3a255ed8db538" title="Selector::popEvacuatedBlock\lPosition" alt="" coords="439,913,633,954"/><area shape="rect" id="node38" href="class_selector.html#a8422a89cbe5be70c6785d3a469b5c07c" title="Selector::canFindBlockIn\lEvacuatedList" alt="" coords="452,978,620,1019"/><area shape="rect" id="node39" href="class_selector.html#ae11a06ee61ea4c0fcc84e6c914ddb0fe" title="Selector::changeBlockPosition" alt="" coords="436,1044,636,1071"/><area shape="rect" id="node40" href="class_selector.html#afd2086b7dbe7b5d284c8adee5ea82b7f" title="Selector::searchRoute" alt="" coords="460,1095,612,1121"/><area shape="rect" id="node41" href="class_selector.html#a1fbc56ebc86bb0c2fddb0a6c3a9c8029" title="Selector::addMovedBlockPosition" alt="" coords="427,1145,645,1172"/><area shape="rect" id="node46" href="class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102" title="Lifter::liftUp" alt="" coords="756,365,847,392"/><area shape="rect" id="node47" href="class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5" title="Lifter::liftDown" alt="" coords="748,416,855,443"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3baa91b5cf2eca22b64aafb841dbe2a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::spinParkingArea </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_block_solver_8cpp_source.html">BlockSolver.cpp</a> の <a class="el" href="_block_solver_8cpp_source.html#l00115">115</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  std::int8_t diffDirection = <span class="keyword">static_cast&lt;</span>std::int8_t<span class="keyword">&gt;</span>(<a class="code" href="namespace_block_side_by_side.html#aac357c5656b856b05705e75f30b1cfb1a83c9f5692281bf59471b13dfddb3af91">BlockSideBySide::Direction::WEST</a>)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                              - static_cast&lt;std::int8_t&gt;(<a class="code" href="class_block_solver.html#a5778630678d204ee365a1ac7fc8f47db">nowDirection</a>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <a class="code" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d">passCircle</a>(<a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0">Color::GREEN</a>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordflow">if</span>(diffDirection == -1 || diffDirection == 3) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">// 左方向に行く場合</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    navigator.<a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(110, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="class_block_solver.html#a5778630678d204ee365a1ac7fc8f47db">nowDirection</a> = <a class="code" href="class_block_solver.html#ab9844e0fc35307a10230b83651563bd0">getChangeDirection</a>(-1);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">// 右方向に行く場合</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    navigator.<a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(90, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="class_block_solver.html#a5778630678d204ee365a1ac7fc8f47db">nowDirection</a> = <a class="code" href="class_block_solver.html#ab9844e0fc35307a10230b83651563bd0">getChangeDirection</a>(1);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
+<div class="ttc" id="class_block_solver_html_ab9844e0fc35307a10230b83651563bd0"><div class="ttname"><a href="class_block_solver.html#ab9844e0fc35307a10230b83651563bd0">BlockSolver::getChangeDirection</a></div><div class="ttdeci">BlockSideBySide::Direction getChangeDirection(std::int8_t angle)</div><div class="ttdoc">次に向かうべき方角を切り替えます。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00198">BlockSolver.cpp:198</a></div></div>
+<div class="ttc" id="class_block_solver_html_a21459836e6da2c1fa7bac850e333da4d"><div class="ttname"><a href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d">BlockSolver::passCircle</a></div><div class="ttdeci">void passCircle(const Color &amp;circle_color)</div><div class="ttdoc">ブロック置き場を乗り越えます。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8cpp_source.html#l00257">BlockSolver.cpp:257</a></div></div>
+<div class="ttc" id="namespace_block_side_by_side_html_aac357c5656b856b05705e75f30b1cfb1a83c9f5692281bf59471b13dfddb3af91"><div class="ttname"><a href="namespace_block_side_by_side.html#aac357c5656b856b05705e75f30b1cfb1a83c9f5692281bf59471b13dfddb3af91">BlockSideBySide::Direction::WEST</a></div></div>
+<div class="ttc" id="class_navigator_html_a81769b4f9b660f1d01de6ee9efc63a46"><div class="ttname"><a href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">Navigator::spin</a></div><div class="ttdeci">void spin(float angle, bool clockwise=false, std::int8_t pwm=10)</div><div class="ttdoc">指定した角度まで走行体を回転させる(基本左エッジ) </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00025">Navigator.cpp:25</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0">Color::GREEN</a></div></div>
+<div class="ttc" id="class_block_solver_html_a5778630678d204ee365a1ac7fc8f47db"><div class="ttname"><a href="class_block_solver.html#a5778630678d204ee365a1ac7fc8f47db">BlockSolver::nowDirection</a></div><div class="ttdeci">BlockSideBySide::Direction nowDirection</div><div class="ttdoc">今向いてる方角です。 </div><div class="ttdef"><b>Definition:</b> <a href="_block_solver_8h_source.html#l00058">BlockSolver.h:58</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a3baa91b5cf2eca22b64aafb841dbe2a1_cgraph.png" border="0" usemap="#class_block_solver_a3baa91b5cf2eca22b64aafb841dbe2a1_cgraph" alt=""/></div>
+<map name="class_block_solver_a3baa91b5cf2eca22b64aafb841dbe2a1_cgraph" id="class_block_solver_a3baa91b5cf2eca22b64aafb841dbe2a1_cgraph">
+<area shape="rect" id="node2" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="275,324,437,351"/><area shape="rect" id="node30" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46" title="指定した角度まで走行体を回転させる(基本左エッジ) " alt="" coords="562,223,673,249"/><area shape="rect" id="node34" href="class_block_solver.html#ab9844e0fc35307a10230b83651563bd0" title="次に向かうべき方角を切り替えます。 " alt="" coords="249,375,463,401"/><area shape="rect" id="node3" href="class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3" title="Controller::speakerPlayTone" alt="" coords="524,324,711,351"/><area shape="rect" id="node4" href="class_navigator.html#a6f3901e766e383a66c47177257c46204" title="指定した距離まで走行体を移動させる " alt="" coords="558,425,677,452"/><area shape="rect" id="node11" href="class_walker.html#a665540aeed857d2e35565e1949e6abec" title="Walker::run" alt="" coords="829,197,918,224"/><area shape="rect" id="node27" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="809,476,938,503"/><area shape="rect" id="node28" href="class_distinguisher.html#a3634f5227cc6a492952f1283339636dc" title="Distinguisher::getColor" alt="" coords="540,273,695,300"/><area shape="rect" id="node29" href="class_controller.html#a5674a4689bb73d50483bf19c617ac213" title="Controller::buttonIsPressedBack" alt="" coords="512,375,723,401"/><area shape="rect" id="node5" href="class_navigator.html#aeece0b738f289e4133a27bfa62ee15f2" title="座標とエンコーダの値を初期化する " alt="" coords="816,273,931,300"/><area shape="rect" id="node16" href="class_wheel_odometry.html#a61d5310dcb3118542a9a27902d85d592" title="走行体の位置情報を更新する " alt="" coords="792,527,955,553"/><area shape="rect" id="node23" href="class_walker.html#aa263348b7d132ddfd0c25f11eec4b367" title="Walker::get_count_L" alt="" coords="802,375,945,401"/><area shape="rect" id="node25" href="class_walker.html#ac67a8f1fe17fb1365df515ca6e713373" title="Walker::get_count_R" alt="" coords="801,324,946,351"/><area shape="rect" id="node26" href="class_wheel_odometry.html#a3a2c52e52341f83c32085b30b3e4954e" title="走行体の位置情報を返す " alt="" coords="771,425,976,452"/><area shape="rect" id="node6" href="class_walker.html#a796b87e4f28d73c966b58a7866b018c9" title="Walker::reset" alt="" coords="1081,324,1181,351"/><area shape="rect" id="node8" href="class_wheel_odometry.html#a93592d64412c84dc3b0bdd6468de0657" title="走行体の位置情報を初期化する " alt="" coords="1054,273,1207,300"/><area shape="rect" id="node7" href="classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="1317,324,1456,351"/><area shape="rect" id="node9" href="struct_coordinate.html#ac6e8a112850a5768760a108bd4b965c6" title="走行体の位置情報を初期化する " alt="" coords="1325,223,1448,249"/><area shape="rect" id="node10" href="class_motor_angle.html#a20ae8007014e6368805dad79459bcf54" title="左右モータ角度の過去値を0にリセットする " alt="" coords="1324,273,1449,300"/><area shape="rect" id="node12" href="class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3" title="Controller::printDisplay" alt="" coords="1053,223,1208,249"/><area shape="rect" id="node13" href="class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="1053,172,1209,199"/><area shape="rect" id="node15" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="1536,147,1696,173"/><area shape="rect" id="node14" href="classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="1306,172,1467,199"/><area shape="rect" id="node17" href="class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28" title="走行体の旋回速度を求める " alt="" coords="1046,527,1215,553"/><area shape="rect" id="node20" href="class_wheel_odometry.html#a83b1fdffc3eed4dd9cf81b1fe993c973" title="走行体の旋回角速度を求める " alt="" coords="1024,577,1237,604"/><area shape="rect" id="node22" href="struct_coordinate.html#a772936f3dede6ccb0528a719342ebaa6" title="走行体の位置情報を更新する " alt="" coords="1065,476,1197,503"/><area shape="rect" id="node18" href="class_motor_angle.html#a8bf992a88ac06b1b5731fb99912ff9bd" title="左右モータの相対角度の平均値を計算する " alt="" coords="1285,527,1488,553"/><area shape="rect" id="node19" href="class_motor_angle.html#abe5eb31bff0514f32a0bb00751f16ccf" title="左右モータ角度の過去値を現在値へ更新する " alt="" coords="1549,527,1683,553"/><area shape="rect" id="node21" href="class_motor_angle.html#aae319910dcaa118d1a7f7ca66ee2bdc1" title="左右モータ角度の差を計算する(右手系/反時計回りが正) " alt="" coords="1287,577,1486,604"/><area shape="rect" id="node24" href="classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="1049,375,1212,401"/><area shape="rect" id="node31" href="class_wheel_odometry.html#ad12bfc89fa25fbf0b6c72bed5d61122e" title="走行体の回転角度を返す " alt="" coords="778,63,969,105"/><area shape="rect" id="node32" href="class_motor_angle.html#a5079b35fb08cc66b9bf0d101d963366a" title="モータ角度の絶対値を計算する " alt="" coords="1041,5,1220,46"/><area shape="rect" id="node33" href="class_motor_angle.html#acb61bad045644641b2d47c33e148a7b6" title="左右モータの絶対角度の平均値を計算する " alt="" coords="1025,71,1236,97"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a3baa91b5cf2eca22b64aafb841dbe2a1_icgraph.png" border="0" usemap="#class_block_solver_a3baa91b5cf2eca22b64aafb841dbe2a1_icgraph" alt=""/></div>
+<map name="class_block_solver_a3baa91b5cf2eca22b64aafb841dbe2a1_icgraph" id="class_block_solver_a3baa91b5cf2eca22b64aafb841dbe2a1_icgraph">
+<area shape="rect" id="node2" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="249,5,367,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a class="anchor" id="a5778630678d204ee365a1ac7fc8f47db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_block_side_by_side.html#aac357c5656b856b05705e75f30b1cfb1">BlockSideBySide::Direction</a> BlockSolver::nowDirection = <a class="el" href="namespace_block_side_by_side.html#aac357c5656b856b05705e75f30b1cfb1a83c9f5692281bf59471b13dfddb3af91">BlockSideBySide::Direction::WEST</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>今向いてる方角です。 </p>
+
+<p> <a class="el" href="_block_solver_8h_source.html">BlockSolver.h</a> の <a class="el" href="_block_solver_8h_source.html#l00058">58</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/apps/include/<a class="el" href="_block_solver_8h_source.html">BlockSolver.h</a></li>
+<li>str/apps/src/<a class="el" href="_block_solver_8cpp_source.html">BlockSolver.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

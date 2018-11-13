@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: str/apps/src/BlockSolver.cpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="dir_5a8a96784cd33ffb845d840025aa312a.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">BlockSolver.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>ブロック並べ解決  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_block_solver_8h_source.html">BlockSolver.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+BlockSolver.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_block_solver_8cpp__incl.png" border="0" usemap="#str_2apps_2src_2_block_solver_8cpp" alt=""/></div>
+<map name="str_2apps_2src_2_block_solver_8cpp" id="str_2apps_2src_2_block_solver_8cpp">
+<area shape="rect" id="node2" href="_block_solver_8h.html" title="ブロック並べ解決 " alt="" coords="1435,80,1537,107"/><area shape="rect" id="node3" href="_block_strategy_8h.html" title="BlockStrategy.h" alt="" coords="1884,155,1999,181"/><area shape="rect" id="node12" href="_controller_8h.html" title="Controller.h" alt="" coords="793,304,881,331"/><area shape="rect" id="node36" href="_distinguisher_8h.html" title="走行体のカラーセンサを用いて、RGB情報より色を推定するクラス。 " alt="" coords="1593,229,1703,256"/><area shape="rect" id="node38" href="_lifter_8h.html" title="走行体のアームを操作するクラス。 " alt="" coords="907,229,969,256"/><area shape="rect" id="node39" href="_navigator_8h.html" title="走行制御と回転制御を実行するクラス " alt="" coords="1343,155,1432,181"/><area shape="rect" id="node47" href="_selector_8h.html" title="ブロック選択クラス " alt="" coords="2299,155,2380,181"/><area shape="rect" id="node4" href="_block_area_8h.html" title="BlockArea.h" alt="" coords="1803,229,1896,256"/><area shape="rect" id="node9" href="_initial_position_code_decoder_8h.html" title="初期位置コードデコーダークラス " alt="" coords="2073,229,2263,256"/><area shape="rect" id="node13" href="ev3api_8h.html" title="ev3api.h" alt="" coords="914,528,984,555"/><area shape="rect" id="node29" href="_clock_8h.html" title="Clock.h" alt="" coords="1035,453,1101,480"/><area shape="rect" id="node30" href="_color_sensor_8h.html" title="ColorSensor.h" alt="" coords="719,379,824,405"/><area shape="rect" id="node33" href="_motor_8h.html" title="Motor.h" alt="" coords="776,453,843,480"/><area shape="rect" id="node34" href="_touch_sensor_8h.html" title="TouchSensor.h" alt="" coords="849,379,959,405"/><area shape="rect" id="node31" href="_sensor_8h.html" title="Sensor.h" alt="" coords="867,453,940,480"/><area shape="rect" id="node32" href="_port_8h.html" title="モータ/センサポート関連定義 " alt="" coords="830,528,887,555"/><area shape="rect" id="node40" href="_line_tracer_walker_8h.html" title="LineTracerWalker.h" alt="" coords="1374,229,1508,256"/><area shape="rect" id="node43" href="_walker_8h.html" title="Walker.h" alt="" coords="995,229,1068,256"/><area shape="rect" id="node44" href="_wheel_odometry_8h.html" title="オドメトリ(Wheel odometry)手法を用いた速度/角度/自己位置推定 " alt="" coords="1142,229,1268,256"/><area shape="rect" id="node41" href="_speed_control_8h.html" title="PID制御による速度制御クラス " alt="" coords="1499,304,1609,331"/><area shape="rect" id="node42" href="_turn_control_8h.html" title="PID制御によるターン制御クラス " alt="" coords="1373,304,1475,331"/><area shape="rect" id="node45" href="_motor_angle_8h.html" title="左右モータの回転角に関するクラス(旧Distance.h, SelfLocalization内のMotorAngle) " alt="" coords="1008,304,1107,331"/><area shape="rect" id="node46" href="_robot_property_8h.html" title="走行体の車輪半径やトレッド幅等をまとめた構造体 " alt="" coords="1181,304,1297,331"/><area shape="rect" id="node48" href="_explorer_8h.html" title="ルート探索クラス " alt="" coords="2339,229,2420,256"/></map>
+</div>
+</div>
+<p><a href="_block_solver_8cpp_source.html">[ソースコード]</a></p>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ブロック並べ解決 </p>
+<dl class="section author"><dt>著者</dt><dd>Futa.H </dd></dl>
+
+<p> <a class="el" href="_block_solver_8cpp_source.html">BlockSolver.cpp</a> に定義があります。</p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

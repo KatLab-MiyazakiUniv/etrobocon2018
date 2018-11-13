@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: WheelOdometry クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
+      <li><a href="inherits.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_wheel_odometry-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">WheelOdometry クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_wheel_odometry_8h_source.html">WheelOdometry.h</a>&gt;</code></p>
+<div class="dynheader">
+WheelOdometry 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wheel_odometry__coll__graph.png" border="0" usemap="#_wheel_odometry_coll__map" alt="Collaboration graph"/></div>
+<map name="_wheel_odometry_coll__map" id="_wheel_odometry_coll__map">
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ad8f77b49218e2a66713815cdf971627d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wheel_odometry.html#ad8f77b49218e2a66713815cdf971627d">WheelOdometry</a> (float diameter=99.0, float tread=147.5, float cycle=0.04)</td></tr>
+<tr class="separator:ad8f77b49218e2a66713815cdf971627d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7130bad653ccc5145a1c4b9da0b5ef28"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28">velocity</a> (std::int32_t left_motor, std::int32_t right_motor)</td></tr>
+<tr class="memdesc:a7130bad653ccc5145a1c4b9da0b5ef28"><td class="mdescLeft">&#160;</td><td class="mdescRight">走行体の旋回速度を求める  <a href="#a7130bad653ccc5145a1c4b9da0b5ef28">[詳解]</a><br/></td></tr>
+<tr class="separator:a7130bad653ccc5145a1c4b9da0b5ef28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83b1fdffc3eed4dd9cf81b1fe993c973"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wheel_odometry.html#a83b1fdffc3eed4dd9cf81b1fe993c973">angularVelocity</a> (std::int32_t left_motor, std::int32_t right_motor)</td></tr>
+<tr class="memdesc:a83b1fdffc3eed4dd9cf81b1fe993c973"><td class="mdescLeft">&#160;</td><td class="mdescRight">走行体の旋回角速度を求める  <a href="#a83b1fdffc3eed4dd9cf81b1fe993c973">[詳解]</a><br/></td></tr>
+<tr class="separator:a83b1fdffc3eed4dd9cf81b1fe993c973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93592d64412c84dc3b0bdd6468de0657"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_coordinate.html">Coordinate</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wheel_odometry.html#a93592d64412c84dc3b0bdd6468de0657">reset</a> ()</td></tr>
+<tr class="memdesc:a93592d64412c84dc3b0bdd6468de0657"><td class="mdescLeft">&#160;</td><td class="mdescRight">走行体の位置情報を初期化する  <a href="#a93592d64412c84dc3b0bdd6468de0657">[詳解]</a><br/></td></tr>
+<tr class="separator:a93592d64412c84dc3b0bdd6468de0657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d5310dcb3118542a9a27902d85d592"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_coordinate.html">Coordinate</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wheel_odometry.html#a61d5310dcb3118542a9a27902d85d592">update</a> (std::int32_t left_motor, std::int32_t right_motor)</td></tr>
+<tr class="memdesc:a61d5310dcb3118542a9a27902d85d592"><td class="mdescLeft">&#160;</td><td class="mdescRight">走行体の位置情報を更新する  <a href="#a61d5310dcb3118542a9a27902d85d592">[詳解]</a><br/></td></tr>
+<tr class="separator:a61d5310dcb3118542a9a27902d85d592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad12bfc89fa25fbf0b6c72bed5d61122e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wheel_odometry.html#ad12bfc89fa25fbf0b6c72bed5d61122e">getRotationAngle</a> (std::int32_t left_motor, std::int32_t right_motor)</td></tr>
+<tr class="memdesc:ad12bfc89fa25fbf0b6c72bed5d61122e"><td class="mdescLeft">&#160;</td><td class="mdescRight">走行体の回転角度を返す  <a href="#ad12bfc89fa25fbf0b6c72bed5d61122e">[詳解]</a><br/></td></tr>
+<tr class="separator:ad12bfc89fa25fbf0b6c72bed5d61122e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a2c52e52341f83c32085b30b3e4954e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_coordinate.html">Coordinate</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wheel_odometry.html#a3a2c52e52341f83c32085b30b3e4954e">getCoordinate</a> ()</td></tr>
+<tr class="memdesc:a3a2c52e52341f83c32085b30b3e4954e"><td class="mdescLeft">&#160;</td><td class="mdescRight">走行体の位置情報を返す  <a href="#a3a2c52e52341f83c32085b30b3e4954e">[詳解]</a><br/></td></tr>
+<tr class="separator:a3a2c52e52341f83c32085b30b3e4954e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b3ca9feac03da8eb1d7b39864f18d8a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wheel_odometry.html#a1b3ca9feac03da8eb1d7b39864f18d8a">getPointX</a> ()</td></tr>
+<tr class="memdesc:a1b3ca9feac03da8eb1d7b39864f18d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">走行体の位置x座標を返す  <a href="#a1b3ca9feac03da8eb1d7b39864f18d8a">[詳解]</a><br/></td></tr>
+<tr class="separator:a1b3ca9feac03da8eb1d7b39864f18d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11468b438a6714ecd89e5d344fe8013"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wheel_odometry.html#af11468b438a6714ecd89e5d344fe8013">getPointY</a> ()</td></tr>
+<tr class="memdesc:af11468b438a6714ecd89e5d344fe8013"><td class="mdescLeft">&#160;</td><td class="mdescRight">走行体の位置y座標を返す  <a href="#af11468b438a6714ecd89e5d344fe8013">[詳解]</a><br/></td></tr>
+<tr class="separator:af11468b438a6714ecd89e5d344fe8013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p> <a class="el" href="_wheel_odometry_8h_source.html">WheelOdometry.h</a> の <a class="el" href="_wheel_odometry_8h_source.html#l00028">28</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a class="anchor" id="ad8f77b49218e2a66713815cdf971627d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WheelOdometry::WheelOdometry </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>diameter</em> = <code>99.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tread</em> = <code>147.5</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>cycle</em> = <code>0.04</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_wheel_odometry_8h_source.html">WheelOdometry.h</a> の <a class="el" href="_wheel_odometry_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    : motor_angle(), property(diameter, tread, cycle), coordinate()</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="a83b1fdffc3eed4dd9cf81b1fe993c973"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float WheelOdometry::angularVelocity </td>
+          <td>(</td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>left_motor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>right_motor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>走行体の旋回角速度を求める </p>
+<p>左右モータの回転角から走行体の角速度を求める</p>
+<p>[<a class="el" href="class_wheel_odometry.html#a83b1fdffc3eed4dd9cf81b1fe993c973" title="走行体の旋回角速度を求める ">WheelOdometry::angularVelocity</a>] </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left_motor</td><td>左モータの回転角 </td></tr>
+    <tr><td class="paramname">right_motor</td><td>右モータの回転角 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>走行体の角速度 [deg / sec] </dd></dl>
+
+<p> <a class="el" href="_wheel_odometry_8cpp_source.html">WheelOdometry.cpp</a> の <a class="el" href="_wheel_odometry_8cpp_source.html#l00060">60</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="comment">// 回転速度から角速度へ変換するときに必要な係数</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">float</span> transform = <span class="keyword">property</span>.radius_wheel / <span class="keyword">property</span>.between_wheels;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="comment">// 走行体の回転角の差を求める(右モータ - 左モータ), LPF処理つき</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">float</span> angle = motor_angle.<a class="code" href="class_motor_angle.html#aae319910dcaa118d1a7f7ca66ee2bdc1">angularDifference</a>(left_motor, right_motor);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">return</span> transform * angle / <span class="keyword">property</span>.dt;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="ttc" id="class_motor_angle_html_aae319910dcaa118d1a7f7ca66ee2bdc1"><div class="ttname"><a href="class_motor_angle.html#aae319910dcaa118d1a7f7ca66ee2bdc1">MotorAngle::angularDifference</a></div><div class="ttdeci">float angularDifference(std::int32_t left_motor, std::int32_t right_motor)</div><div class="ttdoc">左右モータ角度の差を計算する(右手系/反時計回りが正) </div><div class="ttdef"><b>Definition:</b> <a href="_motor_angle_8cpp_source.html#l00072">MotorAngle.cpp:72</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wheel_odometry_a83b1fdffc3eed4dd9cf81b1fe993c973_cgraph.png" border="0" usemap="#class_wheel_odometry_a83b1fdffc3eed4dd9cf81b1fe993c973_cgraph" alt=""/></div>
+<map name="class_wheel_odometry_a83b1fdffc3eed4dd9cf81b1fe993c973_cgraph" id="class_wheel_odometry_a83b1fdffc3eed4dd9cf81b1fe993c973_cgraph">
+<area shape="rect" id="node2" href="class_motor_angle.html#aae319910dcaa118d1a7f7ca66ee2bdc1" title="左右モータ角度の差を計算する(右手系/反時計回りが正) " alt="" coords="267,5,466,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wheel_odometry_a83b1fdffc3eed4dd9cf81b1fe993c973_icgraph.png" border="0" usemap="#class_wheel_odometry_a83b1fdffc3eed4dd9cf81b1fe993c973_icgraph" alt=""/></div>
+<map name="class_wheel_odometry_a83b1fdffc3eed4dd9cf81b1fe993c973_icgraph" id="class_wheel_odometry_a83b1fdffc3eed4dd9cf81b1fe993c973_icgraph">
+<area shape="rect" id="node2" href="class_wheel_odometry.html#a61d5310dcb3118542a9a27902d85d592" title="走行体の位置情報を更新する " alt="" coords="267,233,429,260"/><area shape="rect" id="node26" href="namespaceetrobocon2018__test.html#aba07a7acffc5e9cb3df1ad4752e8ebb8" title="etrobocon2018_test\l::TEST" alt="" coords="280,285,416,326"/><area shape="rect" id="node3" href="class_navigator.html#a6f3901e766e383a66c47177257c46204" title="指定した距離まで走行体を移動させる " alt="" coords="522,233,641,260"/><area shape="rect" id="node20" href="class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981" title="指定した距離まで走行体を後退させる " alt="" coords="524,403,639,429"/><area shape="rect" id="node21" href="class_navigator.html#ad038009d5adb19067c5427d35a603636" title="指定した距離まで黒色の点を検出しながら走行体を移動させる " alt="" coords="478,329,685,356"/><area shape="rect" id="node22" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="502,157,661,184"/><area shape="rect" id="node23" href="class_navigator.html#a44c0a5ae8469d0595e1632d8a70e12d8" title="指定した距離特定の色を探しながら進む（ライントレースしない） " alt="" coords="480,31,683,57"/><area shape="rect" id="node24" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd" title="指定した距離分ライントレースして指定した色があると停止する " alt="" coords="499,107,663,133"/><area shape="rect" id="node25" href="namespaceetrobocon2018__test.html#a1e64510d3757a148a2a3ec509c8c951b" title="etrobocon2018_test\l::TEST" alt="" coords="513,454,649,495"/><area shape="rect" id="node4" href="class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="755,5,931,32"/><area shape="rect" id="node6" href="class_a_i_answer.html#a81cbdae4bd9ff02c895f2ccef9920f90" title="デジタル数字の場所まで行く " alt="" coords="734,208,951,235"/><area shape="rect" id="node7" href="class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="742,376,943,403"/><area shape="rect" id="node8" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="760,107,925,133"/><area shape="rect" id="node10" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="760,56,925,83"/><area shape="rect" id="node11" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="761,259,924,285"/><area shape="rect" id="node18" href="class_navigator.html#a4615989552b06b3d0fe35cf52ded3cd8" title="現在位置の周辺における光センサ値を取得する " alt="" coords="739,427,947,453"/><area shape="rect" id="node19" href="namespaceetrobocon2018__test.html#af6b8f0446c102883a66568a2ccca886d" title="etrobocon2018_test\l::TEST" alt="" coords="775,310,911,351"/><area shape="rect" id="node5" href="class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="1049,31,1154,57"/><area shape="rect" id="node9" href="class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="1000,107,1203,133"/><area shape="rect" id="node12" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="1494,233,1626,260"/><area shape="rect" id="node13" href="class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="1251,360,1445,387"/><area shape="rect" id="node15" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="1009,271,1193,297"/><area shape="rect" id="node14" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1501,309,1619,336"/><area shape="rect" id="node16" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="1259,259,1437,285"/><area shape="rect" id="node17" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="1265,309,1431,336"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a2c52e52341f83c32085b30b3e4954e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_coordinate.html">Coordinate</a> &amp; WheelOdometry::getCoordinate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>走行体の位置情報を返す </p>
+<p>[<a class="el" href="class_wheel_odometry.html#a3a2c52e52341f83c32085b30b3e4954e" title="走行体の位置情報を返す ">WheelOdometry::getCoordinate</a>] </p>
+
+<p> <a class="el" href="_wheel_odometry_8cpp_source.html">WheelOdometry.cpp</a> の <a class="el" href="_wheel_odometry_8cpp_source.html#l00126">126</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;{</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordflow">return</span> coordinate;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wheel_odometry_a3a2c52e52341f83c32085b30b3e4954e_icgraph.png" border="0" usemap="#class_wheel_odometry_a3a2c52e52341f83c32085b30b3e4954e_icgraph" alt=""/></div>
+<map name="class_wheel_odometry_a3a2c52e52341f83c32085b30b3e4954e_icgraph" id="class_wheel_odometry_a3a2c52e52341f83c32085b30b3e4954e_icgraph">
+<area shape="rect" id="node2" href="class_navigator.html#a6f3901e766e383a66c47177257c46204" title="指定した距離まで走行体を移動させる " alt="" coords="301,208,419,235"/><area shape="rect" id="node19" href="class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981" title="指定した距離まで走行体を後退させる " alt="" coords="303,343,417,369"/><area shape="rect" id="node20" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="281,157,439,184"/><area shape="rect" id="node21" href="class_navigator.html#a44c0a5ae8469d0595e1632d8a70e12d8" title="指定した距離特定の色を探しながら進む（ライントレースしない） " alt="" coords="259,31,461,57"/><area shape="rect" id="node22" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd" title="指定した距離分ライントレースして指定した色があると停止する " alt="" coords="278,107,442,133"/><area shape="rect" id="node23" href="namespaceetrobocon2018__test.html#a0494155175cc3f0c961362efc07cd341" title="etrobocon2018_test\l::TEST" alt="" coords="292,394,428,435"/><area shape="rect" id="node3" href="class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="531,5,707,32"/><area shape="rect" id="node5" href="class_a_i_answer.html#a81cbdae4bd9ff02c895f2ccef9920f90" title="デジタル数字の場所まで行く " alt="" coords="510,208,727,235"/><area shape="rect" id="node6" href="class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="518,259,719,285"/><area shape="rect" id="node7" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="536,107,701,133"/><area shape="rect" id="node9" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="536,56,701,83"/><area shape="rect" id="node10" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="537,376,700,403"/><area shape="rect" id="node17" href="class_navigator.html#a4615989552b06b3d0fe35cf52ded3cd8" title="現在位置の周辺における光センサ値を取得する " alt="" coords="515,427,723,453"/><area shape="rect" id="node18" href="namespaceetrobocon2018__test.html#af6b8f0446c102883a66568a2ccca886d" title="etrobocon2018_test\l::TEST" alt="" coords="551,310,687,351"/><area shape="rect" id="node4" href="class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="825,31,930,57"/><area shape="rect" id="node8" href="class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="776,107,979,133"/><area shape="rect" id="node11" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="1270,300,1402,327"/><area shape="rect" id="node12" href="class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="1027,427,1221,453"/><area shape="rect" id="node14" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="785,376,969,403"/><area shape="rect" id="node13" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1277,376,1395,403"/><area shape="rect" id="node15" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="1035,325,1213,352"/><area shape="rect" id="node16" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="1041,376,1207,403"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1b3ca9feac03da8eb1d7b39864f18d8a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float WheelOdometry::getPointX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>走行体の位置x座標を返す </p>
+<p>[<a class="el" href="class_wheel_odometry.html#a1b3ca9feac03da8eb1d7b39864f18d8a" title="走行体の位置x座標を返す ">WheelOdometry::getPointX</a>] </p>
+
+<p> <a class="el" href="_wheel_odometry_8cpp_source.html">WheelOdometry.cpp</a> の <a class="el" href="_wheel_odometry_8cpp_source.html#l00135">135</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordflow">return</span> coordinate.<a class="code" href="struct_coordinate.html#a514c8968b1d03f65e76c9cc9566ee4cc">x</a>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<div class="ttc" id="struct_coordinate_html_a514c8968b1d03f65e76c9cc9566ee4cc"><div class="ttname"><a href="struct_coordinate.html#a514c8968b1d03f65e76c9cc9566ee4cc">Coordinate::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8h_source.html#l00019">WheelOdometry.h:19</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wheel_odometry_a1b3ca9feac03da8eb1d7b39864f18d8a_icgraph.png" border="0" usemap="#class_wheel_odometry_a1b3ca9feac03da8eb1d7b39864f18d8a_icgraph" alt=""/></div>
+<map name="class_wheel_odometry_a1b3ca9feac03da8eb1d7b39864f18d8a_icgraph" id="class_wheel_odometry_a1b3ca9feac03da8eb1d7b39864f18d8a_icgraph">
+<area shape="rect" id="node2" href="namespaceetrobocon2018__test.html#a2ec60643804f428dc10d779e12aa0d6e" title="etrobocon2018_test\l::TEST" alt="" coords="235,5,371,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af11468b438a6714ecd89e5d344fe8013"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float WheelOdometry::getPointY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>走行体の位置y座標を返す </p>
+<p>[<a class="el" href="class_wheel_odometry.html#af11468b438a6714ecd89e5d344fe8013" title="走行体の位置y座標を返す ">WheelOdometry::getPointY</a>] </p>
+
+<p> <a class="el" href="_wheel_odometry_8cpp_source.html">WheelOdometry.cpp</a> の <a class="el" href="_wheel_odometry_8cpp_source.html#l00144">144</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;{</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordflow">return</span> coordinate.<a class="code" href="struct_coordinate.html#a1a7d11305e68c5bfba2b9d4569d4b6ef">y</a>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
+<div class="ttc" id="struct_coordinate_html_a1a7d11305e68c5bfba2b9d4569d4b6ef"><div class="ttname"><a href="struct_coordinate.html#a1a7d11305e68c5bfba2b9d4569d4b6ef">Coordinate::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8h_source.html#l00020">WheelOdometry.h:20</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wheel_odometry_af11468b438a6714ecd89e5d344fe8013_icgraph.png" border="0" usemap="#class_wheel_odometry_af11468b438a6714ecd89e5d344fe8013_icgraph" alt=""/></div>
+<map name="class_wheel_odometry_af11468b438a6714ecd89e5d344fe8013_icgraph" id="class_wheel_odometry_af11468b438a6714ecd89e5d344fe8013_icgraph">
+<area shape="rect" id="node2" href="namespaceetrobocon2018__test.html#a6e22be4a4cb9bbf8f066475a43704fd4" title="etrobocon2018_test\l::TEST" alt="" coords="235,5,371,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad12bfc89fa25fbf0b6c72bed5d61122e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float WheelOdometry::getRotationAngle </td>
+          <td>(</td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>left_motor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>right_motor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>走行体の回転角度を返す </p>
+<p>[<a class="el" href="class_wheel_odometry.html#ad12bfc89fa25fbf0b6c72bed5d61122e" title="走行体の回転角度を返す ">WheelOdometry::getRotationAngle</a>] </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left_motor</td><td>左モータの回転角 </td></tr>
+    <tr><td class="paramname">right_motor</td><td>右モータの回転角 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>走行体の回転角度 [deg] </dd></dl>
+
+<p> <a class="el" href="_wheel_odometry_8cpp_source.html">WheelOdometry.cpp</a> の <a class="el" href="_wheel_odometry_8cpp_source.html#l00107">107</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="comment">// モータの角度から回転角度へ変換するときに必要な係数</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">float</span> transform = 2.0f * <span class="keyword">property</span>.radius_wheel / <span class="keyword">property</span>.between_wheels;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="comment">// モータの角度を絶対値で取得する</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  left_motor = motor_angle.<a class="code" href="class_motor_angle.html#a5079b35fb08cc66b9bf0d101d963366a">absoluteValueOfAngle</a>(left_motor);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  right_motor = motor_angle.<a class="code" href="class_motor_angle.html#a5079b35fb08cc66b9bf0d101d963366a">absoluteValueOfAngle</a>(right_motor);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="comment">// モータの角度の平均値を求める</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordtype">float</span> mean = motor_angle.<a class="code" href="class_motor_angle.html#acb61bad045644641b2d47c33e148a7b6">absoluteAngleMean</a>(left_motor, right_motor);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">return</span> transform * mean;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="ttc" id="class_motor_angle_html_a5079b35fb08cc66b9bf0d101d963366a"><div class="ttname"><a href="class_motor_angle.html#a5079b35fb08cc66b9bf0d101d963366a">MotorAngle::absoluteValueOfAngle</a></div><div class="ttdeci">std::int32_t absoluteValueOfAngle(std::int32_t motor)</div><div class="ttdoc">モータ角度の絶対値を計算する </div><div class="ttdef"><b>Definition:</b> <a href="_motor_angle_8cpp_source.html#l00083">MotorAngle.cpp:83</a></div></div>
+<div class="ttc" id="class_motor_angle_html_acb61bad045644641b2d47c33e148a7b6"><div class="ttname"><a href="class_motor_angle.html#acb61bad045644641b2d47c33e148a7b6">MotorAngle::absoluteAngleMean</a></div><div class="ttdeci">float absoluteAngleMean(std::int32_t left_motor, std::int32_t right_motor)</div><div class="ttdoc">左右モータの絶対角度の平均値を計算する </div><div class="ttdef"><b>Definition:</b> <a href="_motor_angle_8cpp_source.html#l00039">MotorAngle.cpp:39</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wheel_odometry_ad12bfc89fa25fbf0b6c72bed5d61122e_cgraph.png" border="0" usemap="#class_wheel_odometry_ad12bfc89fa25fbf0b6c72bed5d61122e_cgraph" alt=""/></div>
+<map name="class_wheel_odometry_ad12bfc89fa25fbf0b6c72bed5d61122e_cgraph" id="class_wheel_odometry_ad12bfc89fa25fbf0b6c72bed5d61122e_cgraph">
+<area shape="rect" id="node2" href="class_motor_angle.html#a5079b35fb08cc66b9bf0d101d963366a" title="モータ角度の絶対値を計算する " alt="" coords="261,5,440,46"/><area shape="rect" id="node3" href="class_motor_angle.html#acb61bad045644641b2d47c33e148a7b6" title="左右モータの絶対角度の平均値を計算する " alt="" coords="245,71,456,97"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wheel_odometry_ad12bfc89fa25fbf0b6c72bed5d61122e_icgraph.png" border="0" usemap="#class_wheel_odometry_ad12bfc89fa25fbf0b6c72bed5d61122e_icgraph" alt=""/></div>
+<map name="class_wheel_odometry_ad12bfc89fa25fbf0b6c72bed5d61122e_icgraph" id="class_wheel_odometry_ad12bfc89fa25fbf0b6c72bed5d61122e_icgraph">
+<area shape="rect" id="node2" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46" title="指定した角度まで走行体を回転させる(基本左エッジ) " alt="" coords="258,208,369,235"/><area shape="rect" id="node17" href="namespaceetrobocon2018__test.html#ae7062a0312e084096b9b6fb2be6959e7" title="etrobocon2018_test\l::TEST" alt="" coords="245,259,381,301"/><area shape="rect" id="node3" href="class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="697,5,873,32"/><area shape="rect" id="node5" href="class_a_i_answer.html#a81cbdae4bd9ff02c895f2ccef9920f90" title="デジタル数字の場所まで行く " alt="" coords="430,208,647,235"/><area shape="rect" id="node6" href="class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="438,259,639,285"/><area shape="rect" id="node7" href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702" title="リフターを使ってブロックを放って後ろを向く " alt="" coords="446,107,631,133"/><area shape="rect" id="node8" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="703,132,868,159"/><area shape="rect" id="node10" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="703,56,868,83"/><area shape="rect" id="node11" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="958,360,1090,387"/><area shape="rect" id="node12" href="class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="441,436,636,463"/><area shape="rect" id="node14" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="447,360,631,387"/><area shape="rect" id="node4" href="class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="971,31,1077,57"/><area shape="rect" id="node9" href="class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="923,132,1125,159"/><area shape="rect" id="node13" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="965,411,1083,437"/><area shape="rect" id="node15" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="697,411,874,437"/><area shape="rect" id="node16" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="702,360,869,387"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a93592d64412c84dc3b0bdd6468de0657"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_coordinate.html">Coordinate</a> &amp; WheelOdometry::reset </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>走行体の位置情報を初期化する </p>
+<p>[<a class="el" href="class_wheel_odometry.html#a93592d64412c84dc3b0bdd6468de0657" title="走行体の位置情報を初期化する ">WheelOdometry::reset</a>] </p>
+
+<p> <a class="el" href="_wheel_odometry_8cpp_source.html">WheelOdometry.cpp</a> の <a class="el" href="_wheel_odometry_8cpp_source.html#l00075">75</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  coordinate.<a class="code" href="struct_coordinate.html#ac6e8a112850a5768760a108bd4b965c6">reset</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  motor_angle.<a class="code" href="class_motor_angle.html#a20ae8007014e6368805dad79459bcf54">reset</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">return</span> coordinate;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="ttc" id="class_motor_angle_html_a20ae8007014e6368805dad79459bcf54"><div class="ttname"><a href="class_motor_angle.html#a20ae8007014e6368805dad79459bcf54">MotorAngle::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">左右モータ角度の過去値を0にリセットする </div><div class="ttdef"><b>Definition:</b> <a href="_motor_angle_8cpp_source.html#l00026">MotorAngle.cpp:26</a></div></div>
+<div class="ttc" id="struct_coordinate_html_ac6e8a112850a5768760a108bd4b965c6"><div class="ttname"><a href="struct_coordinate.html#ac6e8a112850a5768760a108bd4b965c6">Coordinate::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">走行体の位置情報を初期化する </div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8cpp_source.html#l00028">WheelOdometry.cpp:28</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wheel_odometry_a93592d64412c84dc3b0bdd6468de0657_cgraph.png" border="0" usemap="#class_wheel_odometry_a93592d64412c84dc3b0bdd6468de0657_cgraph" alt=""/></div>
+<map name="class_wheel_odometry_a93592d64412c84dc3b0bdd6468de0657_cgraph" id="class_wheel_odometry_a93592d64412c84dc3b0bdd6468de0657_cgraph">
+<area shape="rect" id="node2" href="struct_coordinate.html#ac6e8a112850a5768760a108bd4b965c6" title="走行体の位置情報を初期化する " alt="" coords="209,5,332,32"/><area shape="rect" id="node3" href="class_motor_angle.html#a20ae8007014e6368805dad79459bcf54" title="左右モータ角度の過去値を0にリセットする " alt="" coords="208,56,333,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wheel_odometry_a93592d64412c84dc3b0bdd6468de0657_icgraph.png" border="0" usemap="#class_wheel_odometry_a93592d64412c84dc3b0bdd6468de0657_icgraph" alt=""/></div>
+<map name="class_wheel_odometry_a93592d64412c84dc3b0bdd6468de0657_icgraph" id="class_wheel_odometry_a93592d64412c84dc3b0bdd6468de0657_icgraph">
+<area shape="rect" id="node2" href="class_navigator.html#aeece0b738f289e4133a27bfa62ee15f2" title="座標とエンコーダの値を初期化する " alt="" coords="219,490,333,516"/><area shape="rect" id="node27" href="namespaceetrobocon2018__test.html#a1e64510d3757a148a2a3ec509c8c951b" title="etrobocon2018_test\l::TEST" alt="" coords="208,541,344,582"/><area shape="rect" id="node3" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46" title="指定した角度まで走行体を回転させる(基本左エッジ) " alt="" coords="441,287,551,314"/><area shape="rect" id="node18" href="class_navigator.html#a6f3901e766e383a66c47177257c46204" title="指定した距離まで走行体を移動させる " alt="" coords="437,642,555,668"/><area shape="rect" id="node22" href="class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981" title="指定した距離まで走行体を後退させる " alt="" coords="439,860,553,887"/><area shape="rect" id="node23" href="class_navigator.html#ad038009d5adb19067c5427d35a603636" title="指定した距離まで黒色の点を検出しながら走行体を移動させる " alt="" coords="393,566,599,592"/><area shape="rect" id="node24" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="417,490,575,516"/><area shape="rect" id="node25" href="class_navigator.html#a44c0a5ae8469d0595e1632d8a70e12d8" title="指定した距離特定の色を探しながら進む（ライントレースしない） " alt="" coords="395,439,597,466"/><area shape="rect" id="node26" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd" title="指定した距離分ライントレースして指定した色があると停止する " alt="" coords="675,84,839,111"/><area shape="rect" id="node4" href="class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="669,439,845,466"/><area shape="rect" id="node6" href="class_a_i_answer.html#a81cbdae4bd9ff02c895f2ccef9920f90" title="デジタル数字の場所まで行く " alt="" coords="649,540,866,567"/><area shape="rect" id="node7" href="class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="657,591,858,618"/><area shape="rect" id="node8" href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702" title="リフターを使ってブロックを放って後ろを向く " alt="" coords="665,135,850,162"/><area shape="rect" id="node9" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="929,135,1095,162"/><area shape="rect" id="node11" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="929,236,1095,263"/><area shape="rect" id="node12" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="1409,616,1541,643"/><area shape="rect" id="node13" href="class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="915,566,1109,592"/><area shape="rect" id="node15" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="920,718,1104,744"/><area shape="rect" id="node5" href="class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="1206,312,1311,339"/><area shape="rect" id="node10" href="class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="1157,135,1360,162"/><area shape="rect" id="node14" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1415,718,1534,744"/><area shape="rect" id="node16" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="1170,667,1347,694"/><area shape="rect" id="node17" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="1175,718,1342,744"/><area shape="rect" id="node19" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="676,743,839,770"/><area shape="rect" id="node20" href="class_navigator.html#a4615989552b06b3d0fe35cf52ded3cd8" title="現在位置の周辺における光センサ値を取得する " alt="" coords="653,860,861,887"/><area shape="rect" id="node21" href="namespaceetrobocon2018__test.html#af6b8f0446c102883a66568a2ccca886d" title="etrobocon2018_test\l::TEST" alt="" coords="689,794,825,836"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a61d5310dcb3118542a9a27902d85d592"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_coordinate.html">Coordinate</a> &amp; WheelOdometry::update </td>
+          <td>(</td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>left_motor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>right_motor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>走行体の位置情報を更新する </p>
+<p>[<a class="el" href="class_wheel_odometry.html#a61d5310dcb3118542a9a27902d85d592" title="走行体の位置情報を更新する ">WheelOdometry::update</a>] </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left_motor</td><td>左モータの回転角 </td></tr>
+    <tr><td class="paramname">right_motor</td><td>右モータの回転角 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>走行体の位置情報 </dd></dl>
+
+<p> <a class="el" href="_wheel_odometry_8cpp_source.html">WheelOdometry.cpp</a> の <a class="el" href="_wheel_odometry_8cpp_source.html#l00089">89</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="comment">// 走行体の移動距離を計算する</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">float</span> distance = <a class="code" href="class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28">velocity</a>(left_motor, right_motor) * <span class="keyword">property</span>.dt;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="comment">// 走行体の旋回角度を計算する</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">float</span> angle = <a class="code" href="class_wheel_odometry.html#a83b1fdffc3eed4dd9cf81b1fe993c973">angularVelocity</a>(left_motor, right_motor) * <span class="keyword">property</span>.dt;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="comment">// 走行体の位置情報を更新する</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  coordinate.<a class="code" href="struct_coordinate.html#a772936f3dede6ccb0528a719342ebaa6">update</a>(distance, angle);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">return</span> coordinate;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="ttc" id="class_wheel_odometry_html_a83b1fdffc3eed4dd9cf81b1fe993c973"><div class="ttname"><a href="class_wheel_odometry.html#a83b1fdffc3eed4dd9cf81b1fe993c973">WheelOdometry::angularVelocity</a></div><div class="ttdeci">float angularVelocity(std::int32_t left_motor, std::int32_t right_motor)</div><div class="ttdoc">走行体の旋回角速度を求める </div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8cpp_source.html#l00060">WheelOdometry.cpp:60</a></div></div>
+<div class="ttc" id="class_wheel_odometry_html_a7130bad653ccc5145a1c4b9da0b5ef28"><div class="ttname"><a href="class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28">WheelOdometry::velocity</a></div><div class="ttdeci">float velocity(std::int32_t left_motor, std::int32_t right_motor)</div><div class="ttdoc">走行体の旋回速度を求める </div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8cpp_source.html#l00043">WheelOdometry.cpp:43</a></div></div>
+<div class="ttc" id="struct_coordinate_html_a772936f3dede6ccb0528a719342ebaa6"><div class="ttname"><a href="struct_coordinate.html#a772936f3dede6ccb0528a719342ebaa6">Coordinate::update</a></div><div class="ttdeci">void update(float distance, float angle)</div><div class="ttdoc">走行体の位置情報を更新する </div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8cpp_source.html#l00009">WheelOdometry.cpp:9</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wheel_odometry_a61d5310dcb3118542a9a27902d85d592_cgraph.png" border="0" usemap="#class_wheel_odometry_a61d5310dcb3118542a9a27902d85d592_cgraph" alt=""/></div>
+<map name="class_wheel_odometry_a61d5310dcb3118542a9a27902d85d592_cgraph" id="class_wheel_odometry_a61d5310dcb3118542a9a27902d85d592_cgraph">
+<area shape="rect" id="node2" href="class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28" title="走行体の旋回速度を求める " alt="" coords="238,5,407,32"/><area shape="rect" id="node5" href="class_wheel_odometry.html#a83b1fdffc3eed4dd9cf81b1fe993c973" title="走行体の旋回角速度を求める " alt="" coords="216,56,429,83"/><area shape="rect" id="node7" href="struct_coordinate.html#a772936f3dede6ccb0528a719342ebaa6" title="走行体の位置情報を更新する " alt="" coords="257,107,389,133"/><area shape="rect" id="node3" href="class_motor_angle.html#a8bf992a88ac06b1b5731fb99912ff9bd" title="左右モータの相対角度の平均値を計算する " alt="" coords="477,5,680,32"/><area shape="rect" id="node4" href="class_motor_angle.html#abe5eb31bff0514f32a0bb00751f16ccf" title="左右モータ角度の過去値を現在値へ更新する " alt="" coords="729,5,863,32"/><area shape="rect" id="node6" href="class_motor_angle.html#aae319910dcaa118d1a7f7ca66ee2bdc1" title="左右モータ角度の差を計算する(右手系/反時計回りが正) " alt="" coords="479,56,678,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wheel_odometry_a61d5310dcb3118542a9a27902d85d592_icgraph.png" border="0" usemap="#class_wheel_odometry_a61d5310dcb3118542a9a27902d85d592_icgraph" alt=""/></div>
+<map name="class_wheel_odometry_a61d5310dcb3118542a9a27902d85d592_icgraph" id="class_wheel_odometry_a61d5310dcb3118542a9a27902d85d592_icgraph">
+<area shape="rect" id="node2" href="class_navigator.html#a6f3901e766e383a66c47177257c46204" title="指定した距離まで走行体を移動させる " alt="" coords="261,233,379,260"/><area shape="rect" id="node19" href="class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981" title="指定した距離まで走行体を後退させる " alt="" coords="263,403,377,429"/><area shape="rect" id="node20" href="class_navigator.html#ad038009d5adb19067c5427d35a603636" title="指定した距離まで黒色の点を検出しながら走行体を移動させる " alt="" coords="217,329,423,356"/><area shape="rect" id="node21" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="241,157,399,184"/><area shape="rect" id="node22" href="class_navigator.html#a44c0a5ae8469d0595e1632d8a70e12d8" title="指定した距離特定の色を探しながら進む（ライントレースしない） " alt="" coords="219,31,421,57"/><area shape="rect" id="node23" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd" title="指定した距離分ライントレースして指定した色があると停止する " alt="" coords="238,107,402,133"/><area shape="rect" id="node24" href="namespaceetrobocon2018__test.html#a1e64510d3757a148a2a3ec509c8c951b" title="etrobocon2018_test\l::TEST" alt="" coords="252,454,388,495"/><area shape="rect" id="node3" href="class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="493,5,669,32"/><area shape="rect" id="node5" href="class_a_i_answer.html#a81cbdae4bd9ff02c895f2ccef9920f90" title="デジタル数字の場所まで行く " alt="" coords="473,208,690,235"/><area shape="rect" id="node6" href="class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="481,376,682,403"/><area shape="rect" id="node7" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="499,107,664,133"/><area shape="rect" id="node9" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="499,56,664,83"/><area shape="rect" id="node10" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="500,259,663,285"/><area shape="rect" id="node17" href="class_navigator.html#a4615989552b06b3d0fe35cf52ded3cd8" title="現在位置の周辺における光センサ値を取得する " alt="" coords="477,427,685,453"/><area shape="rect" id="node18" href="namespaceetrobocon2018__test.html#af6b8f0446c102883a66568a2ccca886d" title="etrobocon2018_test\l::TEST" alt="" coords="513,310,649,351"/><area shape="rect" id="node4" href="class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="787,31,893,57"/><area shape="rect" id="node8" href="class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="739,107,941,133"/><area shape="rect" id="node11" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="1233,233,1365,260"/><area shape="rect" id="node12" href="class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="989,360,1184,387"/><area shape="rect" id="node14" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="748,271,932,297"/><area shape="rect" id="node13" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1239,309,1358,336"/><area shape="rect" id="node15" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="998,259,1175,285"/><area shape="rect" id="node16" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="1003,309,1170,336"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7130bad653ccc5145a1c4b9da0b5ef28"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float WheelOdometry::velocity </td>
+          <td>(</td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>left_motor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>right_motor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>走行体の旋回速度を求める </p>
+<p>左右モータの回転角から走行体の速度を算出する</p>
+<p>[<a class="el" href="class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28" title="走行体の旋回速度を求める ">WheelOdometry::velocity</a>] </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left_motor</td><td>左モータの回転角 </td></tr>
+    <tr><td class="paramname">right_motor</td><td>右モータの回転角 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>走行体の前進速度 [mm / sec] </dd></dl>
+
+<p> <a class="el" href="_wheel_odometry_8cpp_source.html">WheelOdometry.cpp</a> の <a class="el" href="_wheel_odometry_8cpp_source.html#l00043">43</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="comment">// 回転速度から走行体の速度へ変換するときに必要な係数</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">float</span> transform = 3.14f * <span class="keyword">property</span>.radius_wheel / 180.0f;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="comment">// 走行体の回転角の差を求める(LPF処理つき)</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">float</span> angle = motor_angle.<a class="code" href="class_motor_angle.html#a8bf992a88ac06b1b5731fb99912ff9bd">relativeAngleMean</a>(left_motor, right_motor);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordflow">return</span> transform * angle / <span class="keyword">property</span>.dt;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="ttc" id="class_motor_angle_html_a8bf992a88ac06b1b5731fb99912ff9bd"><div class="ttname"><a href="class_motor_angle.html#a8bf992a88ac06b1b5731fb99912ff9bd">MotorAngle::relativeAngleMean</a></div><div class="ttdeci">float relativeAngleMean(std::int32_t current_left_motor, std::int32_t current_right_motor)</div><div class="ttdoc">左右モータの相対角度の平均値を計算する </div><div class="ttdef"><b>Definition:</b> <a href="_motor_angle_8cpp_source.html#l00051">MotorAngle.cpp:51</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wheel_odometry_a7130bad653ccc5145a1c4b9da0b5ef28_cgraph.png" border="0" usemap="#class_wheel_odometry_a7130bad653ccc5145a1c4b9da0b5ef28_cgraph" alt=""/></div>
+<map name="class_wheel_odometry_a7130bad653ccc5145a1c4b9da0b5ef28_cgraph" id="class_wheel_odometry_a7130bad653ccc5145a1c4b9da0b5ef28_cgraph">
+<area shape="rect" id="node2" href="class_motor_angle.html#a8bf992a88ac06b1b5731fb99912ff9bd" title="左右モータの相対角度の平均値を計算する " alt="" coords="224,5,427,32"/><area shape="rect" id="node3" href="class_motor_angle.html#abe5eb31bff0514f32a0bb00751f16ccf" title="左右モータ角度の過去値を現在値へ更新する " alt="" coords="475,5,610,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wheel_odometry_a7130bad653ccc5145a1c4b9da0b5ef28_icgraph.png" border="0" usemap="#class_wheel_odometry_a7130bad653ccc5145a1c4b9da0b5ef28_icgraph" alt=""/></div>
+<map name="class_wheel_odometry_a7130bad653ccc5145a1c4b9da0b5ef28_icgraph" id="class_wheel_odometry_a7130bad653ccc5145a1c4b9da0b5ef28_icgraph">
+<area shape="rect" id="node2" href="class_wheel_odometry.html#a61d5310dcb3118542a9a27902d85d592" title="走行体の位置情報を更新する " alt="" coords="224,233,387,260"/><area shape="rect" id="node26" href="namespaceetrobocon2018__test.html#a89842d10a1e42a34d259e1aa7bd488b2" title="etrobocon2018_test\l::TEST" alt="" coords="237,285,373,326"/><area shape="rect" id="node3" href="class_navigator.html#a6f3901e766e383a66c47177257c46204" title="指定した距離まで走行体を移動させる " alt="" coords="479,233,598,260"/><area shape="rect" id="node20" href="class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981" title="指定した距離まで走行体を後退させる " alt="" coords="481,403,596,429"/><area shape="rect" id="node21" href="class_navigator.html#ad038009d5adb19067c5427d35a603636" title="指定した距離まで黒色の点を検出しながら走行体を移動させる " alt="" coords="435,329,642,356"/><area shape="rect" id="node22" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="459,157,618,184"/><area shape="rect" id="node23" href="class_navigator.html#a44c0a5ae8469d0595e1632d8a70e12d8" title="指定した距離特定の色を探しながら進む（ライントレースしない） " alt="" coords="437,31,640,57"/><area shape="rect" id="node24" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd" title="指定した距離分ライントレースして指定した色があると停止する " alt="" coords="457,107,621,133"/><area shape="rect" id="node25" href="namespaceetrobocon2018__test.html#a1e64510d3757a148a2a3ec509c8c951b" title="etrobocon2018_test\l::TEST" alt="" coords="471,454,607,495"/><area shape="rect" id="node4" href="class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="712,5,888,32"/><area shape="rect" id="node6" href="class_a_i_answer.html#a81cbdae4bd9ff02c895f2ccef9920f90" title="デジタル数字の場所まで行く " alt="" coords="691,208,909,235"/><area shape="rect" id="node7" href="class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="699,376,901,403"/><area shape="rect" id="node8" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="717,107,883,133"/><area shape="rect" id="node10" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="717,56,883,83"/><area shape="rect" id="node11" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="719,259,881,285"/><area shape="rect" id="node18" href="class_navigator.html#a4615989552b06b3d0fe35cf52ded3cd8" title="現在位置の周辺における光センサ値を取得する " alt="" coords="696,427,904,453"/><area shape="rect" id="node19" href="namespaceetrobocon2018__test.html#af6b8f0446c102883a66568a2ccca886d" title="etrobocon2018_test\l::TEST" alt="" coords="732,310,868,351"/><area shape="rect" id="node5" href="class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="1006,31,1111,57"/><area shape="rect" id="node9" href="class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="957,107,1160,133"/><area shape="rect" id="node12" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="1451,233,1583,260"/><area shape="rect" id="node13" href="class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="1208,360,1403,387"/><area shape="rect" id="node15" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="967,271,1151,297"/><area shape="rect" id="node14" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1458,309,1577,336"/><area shape="rect" id="node16" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="1217,259,1394,285"/><area shape="rect" id="node17" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="1222,309,1389,336"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/apps/include/<a class="el" href="_wheel_odometry_8h_source.html">WheelOdometry.h</a></li>
+<li>str/apps/src/<a class="el" href="_wheel_odometry_8cpp_source.html">WheelOdometry.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<map id="Navigator::reset" name="Navigator::reset">
+<area shape="rect" id="node2" href="$class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46" title="指定した角度まで走行体を回転させる(基本左エッジ) " alt="" coords="217,287,327,314"/>
+<area shape="rect" id="node17" href="$class_navigator.html#a6f3901e766e383a66c47177257c46204" title="指定した距離まで走行体を移動させる " alt="" coords="213,642,331,668"/>
+<area shape="rect" id="node21" href="$class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981" title="指定した距離まで走行体を後退させる " alt="" coords="215,860,329,887"/>
+<area shape="rect" id="node22" href="$class_navigator.html#ad038009d5adb19067c5427d35a603636" title="指定した距離まで黒色の点を検出しながら走行体を移動させる " alt="" coords="169,566,375,592"/>
+<area shape="rect" id="node23" href="$class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="193,490,351,516"/>
+<area shape="rect" id="node24" href="$class_navigator.html#a44c0a5ae8469d0595e1632d8a70e12d8" title="指定した距離特定の色を探しながら進む（ライントレースしない） " alt="" coords="171,439,373,466"/>
+<area shape="rect" id="node25" href="$class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd" title="指定した距離分ライントレースして指定した色があると停止する " alt="" coords="451,84,615,111"/>
+<area shape="rect" id="node3" href="$class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="445,439,621,466"/>
+<area shape="rect" id="node5" href="$class_a_i_answer.html#a81cbdae4bd9ff02c895f2ccef9920f90" title="デジタル数字の場所まで行く " alt="" coords="425,540,642,567"/>
+<area shape="rect" id="node6" href="$class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="433,591,634,618"/>
+<area shape="rect" id="node7" href="$class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702" title="リフターを使ってブロックを放って後ろを向く " alt="" coords="441,135,626,162"/>
+<area shape="rect" id="node8" href="$class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="705,135,871,162"/>
+<area shape="rect" id="node10" href="$class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="705,236,871,263"/>
+<area shape="rect" id="node11" href="$class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="1185,616,1317,643"/>
+<area shape="rect" id="node12" href="$class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="691,566,885,592"/>
+<area shape="rect" id="node14" href="$class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="696,718,880,744"/>
+<area shape="rect" id="node4" href="$class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="982,312,1087,339"/>
+<area shape="rect" id="node9" href="$class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="933,135,1136,162"/>
+<area shape="rect" id="node13" href="$class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1191,718,1310,744"/>
+<area shape="rect" id="node15" href="$class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="946,667,1123,694"/>
+<area shape="rect" id="node16" href="$class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="951,718,1118,744"/>
+<area shape="rect" id="node18" href="$class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="452,743,615,770"/>
+<area shape="rect" id="node19" href="$class_navigator.html#a4615989552b06b3d0fe35cf52ded3cd8" title="現在位置の周辺における光センサ値を取得する " alt="" coords="429,860,637,887"/>
+<area shape="rect" id="node20" href="$namespaceetrobocon2018__test.html#af6b8f0446c102883a66568a2ccca886d" title="etrobocon2018_test\l::TEST" alt="" coords="465,794,601,836"/>
+</map>

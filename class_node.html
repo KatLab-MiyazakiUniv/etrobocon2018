@@ -1,0 +1,968 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: Node クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
+      <li><a href="inherits.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_node-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">Node クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_node_8h_source.html">Node.h</a>&gt;</code></p>
+<div class="dynheader">
+Node 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_node__coll__graph.png" border="0" usemap="#_node_coll__map" alt="Collaboration graph"/></div>
+<map name="_node_coll__map" id="_node_coll__map">
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ad7a34779cad45d997bfd6d3d8043c75f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#ad7a34779cad45d997bfd6d3d8043c75f">Node</a> ()</td></tr>
+<tr class="separator:ad7a34779cad45d997bfd6d3d8043c75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13498b09c687fee6449d9a0affaaa295"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a13498b09c687fee6449d9a0affaaa295">Node</a> (std::int8_t id)</td></tr>
+<tr class="separator:a13498b09c687fee6449d9a0affaaa295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d497cb660433ba5402a69f08a55aadf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a6d497cb660433ba5402a69f08a55aadf">Node</a> (std::vector&lt; <a class="el" href="class_node.html">Node</a> * &gt; *nodes)</td></tr>
+<tr class="separator:a6d497cb660433ba5402a69f08a55aadf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95a9ff995692cc85c0dbf9ab83e75df4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a95a9ff995692cc85c0dbf9ab83e75df4">operator==</a> (<a class="el" href="class_node.html">Node</a> &amp;obj)</td></tr>
+<tr class="separator:a95a9ff995692cc85c0dbf9ab83e75df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a626e216ccdb70bf61abf7b8ed171f604"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a626e216ccdb70bf61abf7b8ed171f604">operator!=</a> (<a class="el" href="class_node.html">Node</a> &amp;obj)</td></tr>
+<tr class="separator:a626e216ccdb70bf61abf7b8ed171f604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2732845c57eae88e1a0926519cb16a75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a2732845c57eae88e1a0926519cb16a75">setNeighbors</a> (std::vector&lt; <a class="el" href="class_node.html">Node</a> * &gt; *nodes)</td></tr>
+<tr class="separator:a2732845c57eae88e1a0926519cb16a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe3674b0a418930da42abd2f023a4b4c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_node.html">Node</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#afe3674b0a418930da42abd2f023a4b4c">getNeighbors</a> ()</td></tr>
+<tr class="separator:afe3674b0a418930da42abd2f023a4b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4499664cb91fd5d4ff2beca381d0e6b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a4499664cb91fd5d4ff2beca381d0e6b0">setNodeID</a> (std::int8_t nodeNumber)</td></tr>
+<tr class="separator:a4499664cb91fd5d4ff2beca381d0e6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc4776c4da27dd7c7618f28568546f22"><td class="memItemLeft" align="right" valign="top">std::int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#acc4776c4da27dd7c7618f28568546f22">getNodeID</a> ()</td></tr>
+<tr class="separator:acc4776c4da27dd7c7618f28568546f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b928df3a2779650a721669b3f932dc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a6b928df3a2779650a721669b3f932dc7">setHasBlock</a> (bool exists)</td></tr>
+<tr class="separator:a6b928df3a2779650a721669b3f932dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7047a06d5c2eb285d28c33b24115fe25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a7047a06d5c2eb285d28c33b24115fe25">hasBlock</a> ()</td></tr>
+<tr class="separator:a7047a06d5c2eb285d28c33b24115fe25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a969ac68799e8d14cd9af1f479597e7a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a969ac68799e8d14cd9af1f479597e7a6">setPosition</a> (std::int8_t x, std::int8_t y)</td></tr>
+<tr class="separator:a969ac68799e8d14cd9af1f479597e7a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70b60a7138583a7205d9f7c287017a92"><td class="memItemLeft" align="right" valign="top">std::int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a70b60a7138583a7205d9f7c287017a92">getPositionX</a> ()</td></tr>
+<tr class="separator:a70b60a7138583a7205d9f7c287017a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ded21af940258180390b9c1c0015154"><td class="memItemLeft" align="right" valign="top">std::int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a3ded21af940258180390b9c1c0015154">getPositionY</a> ()</td></tr>
+<tr class="separator:a3ded21af940258180390b9c1c0015154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad916f8953f6b38ef3514a37f75f9c20d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#ad916f8953f6b38ef3514a37f75f9c20d">setParentNode</a> (<a class="el" href="class_node.html">Node</a> *parent)</td></tr>
+<tr class="separator:ad916f8953f6b38ef3514a37f75f9c20d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49c84e314cd987257880970217b7e01d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a49c84e314cd987257880970217b7e01d">getParentNode</a> ()</td></tr>
+<tr class="separator:a49c84e314cd987257880970217b7e01d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6235d6f4721ea281343e9a73fd8b5fa4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a6235d6f4721ea281343e9a73fd8b5fa4">setScore</a> (std::int32_t score_)</td></tr>
+<tr class="separator:a6235d6f4721ea281343e9a73fd8b5fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a268164af093b84d3be75ce579d83cd0e"><td class="memItemLeft" align="right" valign="top">std::int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a268164af093b84d3be75ce579d83cd0e">getScore</a> ()</td></tr>
+<tr class="separator:a268164af093b84d3be75ce579d83cd0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7f94b2cd060542128155a65798c5a21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#aa7f94b2cd060542128155a65798c5a21">setRealCost</a> (std::int32_t cost)</td></tr>
+<tr class="separator:aa7f94b2cd060542128155a65798c5a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c67d872f04ee400c7e7d5a2a9d54cf6"><td class="memItemLeft" align="right" valign="top">std::int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a5c67d872f04ee400c7e7d5a2a9d54cf6">getRealCost</a> ()</td></tr>
+<tr class="separator:a5c67d872f04ee400c7e7d5a2a9d54cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed661b14cfb80013b73808e175a8515"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#abed661b14cfb80013b73808e175a8515">setBeClosed</a> (bool closed_)</td></tr>
+<tr class="separator:abed661b14cfb80013b73808e175a8515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcb1350b937db6cddbda3118e4d7a4eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#abcb1350b937db6cddbda3118e4d7a4eb">isClosed</a> ()</td></tr>
+<tr class="separator:abcb1350b937db6cddbda3118e4d7a4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>A*アルゴリズムにおけるノードクラス </p>
+<p>ノード、およびノード間の関係を作成できる。 <a class="el" href="class_node.html#a2732845c57eae88e1a0926519cb16a75">setNeighbors(std::vector&lt;Node*&gt;*)</a> で関係があるノードのポインタのリストのポインタを設定できる。 このセッターを駆使することで、双方向グラフを作成できる。 作成方法は、Example1とExample2を参照すればよい。 </p>
+<p>なお、Example1は簡単な双方向グラフのため、3つのインスタンスのポインタを直接設定している。 Example2はノードと関係がたくさんあるため、ノードのポインタのリストを用いて、また隣接ノードIDの二重リストを用いて、動的に生成している。 Example2の手法を用いれば、多角形が存在するグラフでも簡単に生成できると考えられる。 </p>
+<p>現在は、Node間のコストを表現できない。 ノードのポインタをキーに、コストを値にしたハッシュをメンバ変数に保持することで、表現できると考える。 一方で、このクラスが保持する必要性は必ずしもないため、このクラスのインスタンス保持者が持てばよいという発想も間違いではない。 </p>
+<p>Example1 </p>
+<p>Example1 <br/>
+ node2に2つのneighborsが存在する場合 (node1 - node2 - node3) </p>
+<pre>
+<div class="fragment"><div class="line"><a class="code" href="class_node.html">Node</a> node1(1);</div>
+<div class="line"><a class="code" href="class_node.html">Node</a> node2(2);</div>
+<div class="line"><a class="code" href="class_node.html">Node</a> node3(3);</div>
+<div class="line"></div>
+<div class="line">std::vector&lt;Node*&gt; neighbors1 = {&amp;node2}; <span class="comment">// node1-&gt;node2</span></div>
+<div class="line">std::vector&lt;Node*&gt; neighbors2 = {&amp;node1, &amp;node3}; <span class="comment">// node1&lt;-node2-&gt;node3</span></div>
+<div class="line">std::vector&lt;Node*&gt; neighbors3 = {&amp;node2}; <span class="comment">// node2&lt;-node3</span></div>
+<div class="line"></div>
+<div class="line">node1.setNeighbors(&amp;neighbors1);</div>
+<div class="line">node2.setNeighbors(&amp;neighbors2);</div>
+<div class="line">node3.setNeighbors(&amp;neighbors3);</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">auto</span> actual1 = node1.getNeighbors();</div>
+<div class="line"><span class="keyword">auto</span> actual2 = node2.getNeighbors();</div>
+<div class="line"><span class="keyword">auto</span> actual3 = node3.getNeighbors();</div>
+<div class="line"></div>
+<div class="line">ASSERT_EQ(&amp;node1, actual1-&gt;at(0)-&gt;getNeighbors()-&gt;at(0)); <span class="comment">// node1-&gt;node2-&gt;node1</span></div>
+<div class="line">ASSERT_EQ(&amp;node2, actual2-&gt;at(0)-&gt;getNeighbors()-&gt;at(0)); <span class="comment">// node2-&gt;node1-&gt;node2</span></div>
+<div class="line">ASSERT_EQ(&amp;node2, actual2-&gt;at(1)-&gt;getNeighbors()-&gt;at(0)); <span class="comment">// node2-&gt;node3-&gt;node2</span></div>
+<div class="line">ASSERT_EQ(&amp;node3, actual3-&gt;at(0)-&gt;getNeighbors()-&gt;at(1)); <span class="comment">// node3-&gt;node2-&gt;node3</span></div>
+</div><!-- fragment --> 
+</pre><p>Example2 <br/>
+ ETロボコン2018のブロック並べエリアの場合&lt;br&gt;<br/>
+</p>
+<p>0 - 1 - 2 - 3 <br/>
+ | | | | <br/>
+ 4 - 5 - 6 - 7 <br/>
+ | | | | <br/>
+ 8 - 9 - 10- 11<br/>
+ | | | | <br/>
+ 12- 13- 14- 15 </p>
+<pre>
+<div class="fragment"><div class="line">std::vector&lt;std::vector&lt;int&gt;&gt; neighborsIDList = {</div>
+<div class="line">    {1, 4},</div>
+<div class="line">    {0, 2, 5},</div>
+<div class="line">    {1, 3, 6},</div>
+<div class="line">    {2, 7},</div>
+<div class="line">    {0, 5, 8},</div>
+<div class="line">    {1, 4, 6, 9},</div>
+<div class="line">    {2, 5, 7, 10},</div>
+<div class="line">    {3, 6, 11},</div>
+<div class="line">    {4, 9, 12},</div>
+<div class="line">    {5, 8, 10, 13},</div>
+<div class="line">    {6, 9, 11, 14},</div>
+<div class="line">    {7, 10, 15},</div>
+<div class="line">    {8, 13},</div>
+<div class="line">    {9, 12, 14},</div>
+<div class="line">    {10, 13, 15},</div>
+<div class="line">    {11, 14}};</div>
+<div class="line"><span class="keywordtype">int</span> nodeCount = neighborsIDList.size();</div>
+<div class="line"></div>
+<div class="line">std::vector&lt;Node&gt; nodes(nodeCount);</div>
+<div class="line">std::vector&lt;Node*&gt; nodePtrs(nodeCount);</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nodeCount; i++)</div>
+<div class="line">{</div>
+<div class="line">  nodes[i].setNodeID(i);</div>
+<div class="line">  nodePtrs[i] = &amp;nodes[i];</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line">std::vector&lt;std::vector&lt;Node*&gt;&gt; neighbors(nodeCount);</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nodeCount; i++)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> nodeID : neighborsIDList[i])</div>
+<div class="line">  {</div>
+<div class="line">    neighbors[i].push_back(nodePtrs[nodeID]);</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nodeCount; i++)</div>
+<div class="line">{</div>
+<div class="line">  nodePtrs[i]-&gt;setNeighbors(&amp;neighbors[i]);</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">auto</span> actual0 = nodePtrs[0]-&gt;getNeighbors();</div>
+<div class="line"><span class="keyword">auto</span> actual1 = nodePtrs[1]-&gt;getNeighbors();</div>
+<div class="line"><span class="keyword">auto</span> actual2 = nodePtrs[2]-&gt;getNeighbors();</div>
+<div class="line"><span class="keyword">auto</span> actual3 = nodePtrs[3]-&gt;getNeighbors();</div>
+<div class="line"><span class="keyword">auto</span> actual4 = nodePtrs[4]-&gt;getNeighbors();</div>
+<div class="line"><span class="keyword">auto</span> actual5 = nodePtrs[5]-&gt;getNeighbors();</div>
+<div class="line"><span class="keyword">auto</span> actual6 = nodePtrs[6]-&gt;getNeighbors();</div>
+<div class="line"><span class="keyword">auto</span> actual7 = nodePtrs[7]-&gt;getNeighbors();</div>
+<div class="line"><span class="keyword">auto</span> actual8 = nodePtrs[8]-&gt;getNeighbors();</div>
+<div class="line"><span class="keyword">auto</span> actual9 = nodePtrs[9]-&gt;getNeighbors();</div>
+<div class="line"><span class="keyword">auto</span> actual10 = nodePtrs[10]-&gt;getNeighbors();</div>
+<div class="line"><span class="keyword">auto</span> actual11 = nodePtrs[11]-&gt;getNeighbors();</div>
+<div class="line"><span class="keyword">auto</span> actual12 = nodePtrs[12]-&gt;getNeighbors();</div>
+<div class="line"><span class="keyword">auto</span> actual13 = nodePtrs[13]-&gt;getNeighbors();</div>
+<div class="line"><span class="keyword">auto</span> actual14 = nodePtrs[14]-&gt;getNeighbors();</div>
+<div class="line"><span class="keyword">auto</span> actual15 = nodePtrs[15]-&gt;getNeighbors();</div>
+</div><!-- fragment --> 
+</pre> 
+<p> <a class="el" href="_node_8h_source.html">Node.h</a> の <a class="el" href="_node_8h_source.html#l00142">142</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a class="anchor" id="ad7a34779cad45d997bfd6d3d8043c75f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Node::Node </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>隣接ノードが</p>
+<div class="fragment"><div class="line"><span class="keyword">nullptr</span> </div>
+</div><!-- fragment --><p> のデフォルトコンストラクタ </p>
+<p><a class="el" href="class_node.html">Node</a> 型の <a class="el" href="">std::vector</a> を作る際などにご利用ください。 </p>
+
+<p> <a class="el" href="_node_8h_source.html">Node.h</a> の <a class="el" href="_node_8h_source.html#l00167">167</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      : nodeID(0), blockExists(<span class="keyword">false</span>), neighbors(<span class="keyword">nullptr</span>), parentNode(<span class="keyword">nullptr</span>), score(99), closed(<span class="keyword">false</span>) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a13498b09c687fee6449d9a0affaaa295"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Node::Node </td>
+          <td>(</td>
+          <td class="paramtype">std::int8_t&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ノードIDを設定できるコンストラクタ </p>
+
+<p> <a class="el" href="_node_8h_source.html">Node.h</a> の <a class="el" href="_node_8h_source.html#l00173">173</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      : nodeID(<span class="keywordtype">id</span>), blockExists(<span class="keyword">false</span>), neighbors(<span class="keyword">nullptr</span>), parentNode(<span class="keyword">nullptr</span>), score(99), closed(<span class="keyword">false</span>) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a6d497cb660433ba5402a69f08a55aadf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Node::Node </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_node.html">Node</a> * &gt; *&#160;</td>
+          <td class="paramname"><em>nodes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>隣接ノードを設定できるコンストラクタ </p>
+
+<p> <a class="el" href="_node_8h_source.html">Node.h</a> の <a class="el" href="_node_8h_source.html#l00179">179</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      : nodeID(0), blockExists(<span class="keyword">false</span>), neighbors(nodes), parentNode(<span class="keyword">nullptr</span>), score(99), closed(<span class="keyword">false</span>) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="afe3674b0a418930da42abd2f023a4b4c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_node.html">Node</a> * &gt; * Node::getNeighbors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>隣接ノードを取得する </p>
+<dl class="section return"><dt>戻り値</dt><dd>隣接するノードポインタのポインタ </dd></dl>
+
+<p> <a class="el" href="_node_8cpp_source.html">Node.cpp</a> の <a class="el" href="_node_8cpp_source.html#l00008">8</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordflow">return</span> neighbors;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_node_afe3674b0a418930da42abd2f023a4b4c_icgraph.png" border="0" usemap="#class_node_afe3674b0a418930da42abd2f023a4b4c_icgraph" alt=""/></div>
+<map name="class_node_afe3674b0a418930da42abd2f023a4b4c_icgraph" id="class_node_afe3674b0a418930da42abd2f023a4b4c_icgraph">
+<area shape="rect" id="node2" href="namespaceetrobocon2018__test.html#af8275e156c017ebec6db575077fb570c" title="etrobocon2018_test\l::TEST" alt="" coords="192,5,328,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="acc4776c4da27dd7c7618f28568546f22"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::int8_t Node::getNodeID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ノードIDを設定する </p>
+<p>別のノードと異なる、一意のIDであるか否かは未検証である。 一意性は、このクラスのインスタンス保持者が責任を持つ。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>ノードIDの番号 </dd></dl>
+
+<p> <a class="el" href="_node_8cpp_source.html">Node.cpp</a> の <a class="el" href="_node_8cpp_source.html#l00018">18</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">return</span> nodeID;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_node_acc4776c4da27dd7c7618f28568546f22_icgraph.png" border="0" usemap="#class_node_acc4776c4da27dd7c7618f28568546f22_icgraph" alt=""/></div>
+<map name="class_node_acc4776c4da27dd7c7618f28568546f22_icgraph" id="class_node_acc4776c4da27dd7c7618f28568546f22_icgraph">
+<area shape="rect" id="node2" href="class_explorer.html#a38468adb7fd2b5ae688f1bca495d12de" title="Explorer::searchRoute" alt="" coords="437,101,589,128"/><area shape="rect" id="node12" href="class_explorer.html#a28a1f4268214e99cef86b39faf416ae0" title="Explorer::calculateNeighborCost" alt="" coords="179,127,389,153"/><area shape="rect" id="node13" href="namespaceetrobocon2018__test.html#adb4476f3f82a7eb57a7b250377e6aef6" title="etrobocon2018_test\l::TEST" alt="" coords="216,178,352,219"/><area shape="rect" id="node3" href="class_selector.html#aa3691c1a35cd0c7ee24f552d139511e2" title="Selector::searchBlockPosition" alt="" coords="637,13,835,40"/><area shape="rect" id="node8" href="class_selector.html#ac3f2b39e32ab217f6c36a31e230e51c1" title="Selector::searchMostPoor\lCostShelter" alt="" coords="649,65,823,106"/><area shape="rect" id="node9" href="class_selector.html#afd2086b7dbe7b5d284c8adee5ea82b7f" title="Selector::searchRoute" alt="" coords="660,131,812,157"/><area shape="rect" id="node11" href="namespaceetrobocon2018__test.html#a5030a01b8334e033a1bd8d9e8eae9d70" title="etrobocon2018_test\l::TEST" alt="" coords="668,182,804,223"/><area shape="rect" id="node4" href="class_selector.html#a0fdb154d0341aed4c2df2a38a8bd0676" title="Selector::exploreNextOperation" alt="" coords="883,72,1087,99"/><area shape="rect" id="node7" href="namespaceetrobocon2018__test.html#a5083cb7238fca0c225a82a47de1cc9dc" title="etrobocon2018_test\l::TEST" alt="" coords="917,6,1053,47"/><area shape="rect" id="node5" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1145,43,1263,69"/><area shape="rect" id="node6" href="namespaceetrobocon2018__test.html#ae32033e90cf0cb2b8eb06ba8c281d1b5" title="etrobocon2018_test\l::TEST" alt="" coords="1136,94,1272,135"/><area shape="rect" id="node10" href="namespaceetrobocon2018__test.html#a10ce8ce9da4f3a5064eb3996cd54faa9" title="etrobocon2018_test\l::TEST" alt="" coords="917,123,1053,165"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a49c84e314cd987257880970217b7e01d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_node.html">Node</a> * Node::getParentNode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>親ノードを取得する </p>
+<p>これは <a class="el" href="class_explorer.html">Explorer</a> クラスで利用する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>親ノードのポインタ </dd></dl>
+
+<p> <a class="el" href="_node_8cpp_source.html">Node.cpp</a> の <a class="el" href="_node_8cpp_source.html#l00054">54</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">return</span> parentNode;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_node_a49c84e314cd987257880970217b7e01d_icgraph.png" border="0" usemap="#class_node_a49c84e314cd987257880970217b7e01d_icgraph" alt=""/></div>
+<map name="class_node_a49c84e314cd987257880970217b7e01d_icgraph" id="class_node_a49c84e314cd987257880970217b7e01d_icgraph">
+<area shape="rect" id="node2" href="class_explorer.html#a38468adb7fd2b5ae688f1bca495d12de" title="Explorer::searchRoute" alt="" coords="461,101,613,128"/><area shape="rect" id="node12" href="class_explorer.html#a28a1f4268214e99cef86b39faf416ae0" title="Explorer::calculateNeighborCost" alt="" coords="203,127,413,153"/><area shape="rect" id="node3" href="class_selector.html#aa3691c1a35cd0c7ee24f552d139511e2" title="Selector::searchBlockPosition" alt="" coords="661,13,859,40"/><area shape="rect" id="node8" href="class_selector.html#ac3f2b39e32ab217f6c36a31e230e51c1" title="Selector::searchMostPoor\lCostShelter" alt="" coords="673,65,847,106"/><area shape="rect" id="node9" href="class_selector.html#afd2086b7dbe7b5d284c8adee5ea82b7f" title="Selector::searchRoute" alt="" coords="684,131,836,157"/><area shape="rect" id="node11" href="namespaceetrobocon2018__test.html#a5030a01b8334e033a1bd8d9e8eae9d70" title="etrobocon2018_test\l::TEST" alt="" coords="692,182,828,223"/><area shape="rect" id="node4" href="class_selector.html#a0fdb154d0341aed4c2df2a38a8bd0676" title="Selector::exploreNextOperation" alt="" coords="907,72,1111,99"/><area shape="rect" id="node7" href="namespaceetrobocon2018__test.html#a5083cb7238fca0c225a82a47de1cc9dc" title="etrobocon2018_test\l::TEST" alt="" coords="941,6,1077,47"/><area shape="rect" id="node5" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1169,43,1287,69"/><area shape="rect" id="node6" href="namespaceetrobocon2018__test.html#ae32033e90cf0cb2b8eb06ba8c281d1b5" title="etrobocon2018_test\l::TEST" alt="" coords="1160,94,1296,135"/><area shape="rect" id="node10" href="namespaceetrobocon2018__test.html#a10ce8ce9da4f3a5064eb3996cd54faa9" title="etrobocon2018_test\l::TEST" alt="" coords="941,123,1077,165"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a70b60a7138583a7205d9f7c287017a92"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::int8_t Node::getPositionX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ノード位置のX軸を取得する </p>
+<p><a class="el" href="">Position</a> 構造体はクラス内にネスト化しているため、これだけでは利用価値が小さい。 <a class="el" href="class_node.html#a3ded21af940258180390b9c1c0015154">getPositionY()</a> も参照する必要がある。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>ノード位置のX軸 </dd></dl>
+
+<p> <a class="el" href="_node_8cpp_source.html">Node.cpp</a> の <a class="el" href="_node_8cpp_source.html#l00039">39</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordflow">return</span> position.x;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_node_a70b60a7138583a7205d9f7c287017a92_icgraph.png" border="0" usemap="#class_node_a70b60a7138583a7205d9f7c287017a92_icgraph" alt=""/></div>
+<map name="class_node_a70b60a7138583a7205d9f7c287017a92_icgraph" id="class_node_a70b60a7138583a7205d9f7c287017a92_icgraph">
+<area shape="rect" id="node2" href="namespaceetrobocon2018__test.html#aee4173bfc70c1889dccfd8fcadff3760" title="etrobocon2018_test\l::TEST" alt="" coords="189,5,325,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ded21af940258180390b9c1c0015154"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::int8_t Node::getPositionY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ノード位置のY軸を取得する </p>
+<p><a class="el" href="">Position</a> 構造体はクラス内にネスト化しているため、これだけでは利用価値が小さい。 <a class="el" href="class_node.html#a70b60a7138583a7205d9f7c287017a92">getPositionX()</a> も参照する必要がある。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>ノード位置のY軸 </dd></dl>
+
+<p> <a class="el" href="_node_8cpp_source.html">Node.cpp</a> の <a class="el" href="_node_8cpp_source.html#l00044">44</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">return</span> position.y;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_node_a3ded21af940258180390b9c1c0015154_icgraph.png" border="0" usemap="#class_node_a3ded21af940258180390b9c1c0015154_icgraph" alt=""/></div>
+<map name="class_node_a3ded21af940258180390b9c1c0015154_icgraph" id="class_node_a3ded21af940258180390b9c1c0015154_icgraph">
+<area shape="rect" id="node2" href="namespaceetrobocon2018__test.html#aee4173bfc70c1889dccfd8fcadff3760" title="etrobocon2018_test\l::TEST" alt="" coords="189,5,325,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5c67d872f04ee400c7e7d5a2a9d54cf6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::int32_t Node::getRealCost </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A*アルゴリズムで用いる実コストを取得する </p>
+<p>これは <a class="el" href="class_explorer.html">Explorer</a> クラスで利用する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>実コスト </dd></dl>
+
+<p> <a class="el" href="_node_8cpp_source.html">Node.cpp</a> の <a class="el" href="_node_8cpp_source.html#l00074">74</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordflow">return</span> realCost;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a268164af093b84d3be75ce579d83cd0e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::int32_t Node::getScore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A*アルゴリズムで用いるスコアを取得する </p>
+<p>これは <a class="el" href="class_explorer.html">Explorer</a> クラスで利用する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>親ノードのポインタ </dd></dl>
+
+<p> <a class="el" href="_node_8cpp_source.html">Node.cpp</a> の <a class="el" href="_node_8cpp_source.html#l00064">64</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">return</span> score;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_node_a268164af093b84d3be75ce579d83cd0e_icgraph.png" border="0" usemap="#class_node_a268164af093b84d3be75ce579d83cd0e_icgraph" alt=""/></div>
+<map name="class_node_a268164af093b84d3be75ce579d83cd0e_icgraph" id="class_node_a268164af093b84d3be75ce579d83cd0e_icgraph">
+<area shape="rect" id="node2" href="class_explorer.html#a28a1f4268214e99cef86b39faf416ae0" title="Explorer::calculateNeighborCost" alt="" coords="168,100,379,127"/><area shape="rect" id="node3" href="class_explorer.html#a38468adb7fd2b5ae688f1bca495d12de" title="Explorer::searchRoute" alt="" coords="427,100,579,127"/><area shape="rect" id="node4" href="class_selector.html#aa3691c1a35cd0c7ee24f552d139511e2" title="Selector::searchBlockPosition" alt="" coords="627,12,824,39"/><area shape="rect" id="node9" href="class_selector.html#ac3f2b39e32ab217f6c36a31e230e51c1" title="Selector::searchMostPoor\lCostShelter" alt="" coords="639,63,812,105"/><area shape="rect" id="node10" href="class_selector.html#afd2086b7dbe7b5d284c8adee5ea82b7f" title="Selector::searchRoute" alt="" coords="649,129,801,156"/><area shape="rect" id="node12" href="namespaceetrobocon2018__test.html#a5030a01b8334e033a1bd8d9e8eae9d70" title="etrobocon2018_test\l::TEST" alt="" coords="657,181,793,222"/><area shape="rect" id="node5" href="class_selector.html#a0fdb154d0341aed4c2df2a38a8bd0676" title="Selector::exploreNextOperation" alt="" coords="873,71,1077,97"/><area shape="rect" id="node8" href="namespaceetrobocon2018__test.html#a5083cb7238fca0c225a82a47de1cc9dc" title="etrobocon2018_test\l::TEST" alt="" coords="907,5,1043,46"/><area shape="rect" id="node6" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1134,41,1253,68"/><area shape="rect" id="node7" href="namespaceetrobocon2018__test.html#ae32033e90cf0cb2b8eb06ba8c281d1b5" title="etrobocon2018_test\l::TEST" alt="" coords="1125,93,1261,134"/><area shape="rect" id="node11" href="namespaceetrobocon2018__test.html#a10ce8ce9da4f3a5064eb3996cd54faa9" title="etrobocon2018_test\l::TEST" alt="" coords="907,122,1043,163"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7047a06d5c2eb285d28c33b24115fe25"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Node::hasBlock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ブロックを保持している場合は真を返す真偽値を取得する </p>
+<dl class="section return"><dt>戻り値</dt><dd>ブロックを保持している場合は真を返す真偽値 </dd></dl>
+
+<p> <a class="el" href="_node_8cpp_source.html">Node.cpp</a> の <a class="el" href="_node_8cpp_source.html#l00028">28</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">return</span> blockExists;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_node_a7047a06d5c2eb285d28c33b24115fe25_icgraph.png" border="0" usemap="#class_node_a7047a06d5c2eb285d28c33b24115fe25_icgraph" alt=""/></div>
+<map name="class_node_a7047a06d5c2eb285d28c33b24115fe25_icgraph" id="class_node_a7047a06d5c2eb285d28c33b24115fe25_icgraph">
+<area shape="rect" id="node2" href="namespaceetrobocon2018__test.html#a147d83d65d3316f53b452e8c314b33d1" title="etrobocon2018_test\l::TEST" alt="" coords="168,5,304,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abcb1350b937db6cddbda3118e4d7a4eb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Node::isClosed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A*アルゴリズムで用いる開閉を取得する </p>
+<p>これは <a class="el" href="class_explorer.html">Explorer</a> クラスで利用する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>探索ノードを閉じている場合は真を示す真偽値 </dd></dl>
+
+<p> <a class="el" href="_node_8cpp_source.html">Node.cpp</a> の <a class="el" href="_node_8cpp_source.html#l00084">84</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordflow">return</span> closed;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a626e216ccdb70bf61abf7b8ed171f604"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Node::operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a> &amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>オブジェクトのポインタが等しくない場合に真を返す </p>
+
+<p> <a class="el" href="_node_8h_source.html">Node.h</a> の <a class="el" href="_node_8h_source.html#l00193">193</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">this</span> != &amp;obj;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a95a9ff995692cc85c0dbf9ab83e75df4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Node::operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a> &amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>オブジェクトのポインタが等しい場合に真を返す </p>
+
+<p> <a class="el" href="_node_8h_source.html">Node.h</a> の <a class="el" href="_node_8h_source.html#l00185">185</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">this</span> == &amp;obj;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="abed661b14cfb80013b73808e175a8515"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Node::setBeClosed </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>closed_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A*アルゴリズムで用いる開閉を設定する </p>
+<p>これは <a class="el" href="class_explorer.html">Explorer</a> クラスで利用する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">closed_</td><td>探索ノードを閉じている場合は真を示す真偽値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="_node_8cpp_source.html">Node.cpp</a> の <a class="el" href="_node_8cpp_source.html#l00079">79</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  closed = closed_;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_node_abed661b14cfb80013b73808e175a8515_icgraph.png" border="0" usemap="#class_node_abed661b14cfb80013b73808e175a8515_icgraph" alt=""/></div>
+<map name="class_node_abed661b14cfb80013b73808e175a8515_icgraph" id="class_node_abed661b14cfb80013b73808e175a8515_icgraph">
+<area shape="rect" id="node2" href="class_explorer.html#a28a1f4268214e99cef86b39faf416ae0" title="Explorer::calculateNeighborCost" alt="" coords="189,100,400,127"/><area shape="rect" id="node3" href="class_explorer.html#a38468adb7fd2b5ae688f1bca495d12de" title="Explorer::searchRoute" alt="" coords="448,100,600,127"/><area shape="rect" id="node4" href="class_selector.html#aa3691c1a35cd0c7ee24f552d139511e2" title="Selector::searchBlockPosition" alt="" coords="648,12,845,39"/><area shape="rect" id="node9" href="class_selector.html#ac3f2b39e32ab217f6c36a31e230e51c1" title="Selector::searchMostPoor\lCostShelter" alt="" coords="660,63,833,105"/><area shape="rect" id="node10" href="class_selector.html#afd2086b7dbe7b5d284c8adee5ea82b7f" title="Selector::searchRoute" alt="" coords="671,129,823,156"/><area shape="rect" id="node12" href="namespaceetrobocon2018__test.html#a5030a01b8334e033a1bd8d9e8eae9d70" title="etrobocon2018_test\l::TEST" alt="" coords="679,181,815,222"/><area shape="rect" id="node5" href="class_selector.html#a0fdb154d0341aed4c2df2a38a8bd0676" title="Selector::exploreNextOperation" alt="" coords="894,71,1098,97"/><area shape="rect" id="node8" href="namespaceetrobocon2018__test.html#a5083cb7238fca0c225a82a47de1cc9dc" title="etrobocon2018_test\l::TEST" alt="" coords="928,5,1064,46"/><area shape="rect" id="node6" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1155,41,1274,68"/><area shape="rect" id="node7" href="namespaceetrobocon2018__test.html#ae32033e90cf0cb2b8eb06ba8c281d1b5" title="etrobocon2018_test\l::TEST" alt="" coords="1147,93,1283,134"/><area shape="rect" id="node11" href="namespaceetrobocon2018__test.html#a10ce8ce9da4f3a5064eb3996cd54faa9" title="etrobocon2018_test\l::TEST" alt="" coords="928,122,1064,163"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6b928df3a2779650a721669b3f932dc7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Node::setHasBlock </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>exists</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ブロックを保持している場合は真を返す真偽値を設定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exists</td><td>ブロックを保持している場合は真を返す真偽値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="_node_8cpp_source.html">Node.cpp</a> の <a class="el" href="_node_8cpp_source.html#l00023">23</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  blockExists = exists;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_node_a6b928df3a2779650a721669b3f932dc7_icgraph.png" border="0" usemap="#class_node_a6b928df3a2779650a721669b3f932dc7_icgraph" alt=""/></div>
+<map name="class_node_a6b928df3a2779650a721669b3f932dc7_icgraph" id="class_node_a6b928df3a2779650a721669b3f932dc7_icgraph">
+<area shape="rect" id="node2" href="namespaceetrobocon2018__test.html#ac6e46d761beccdc1e04b218281ec3129" title="etrobocon2018_test\l::TEST" alt="" coords="189,5,325,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2732845c57eae88e1a0926519cb16a75"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Node::setNeighbors </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_node.html">Node</a> * &gt; *&#160;</td>
+          <td class="paramname"><em>nodes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>隣接ノードを設定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodes</td><td>隣接するノードポインタのポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="_node_8cpp_source.html">Node.cpp</a> の <a class="el" href="_node_8cpp_source.html#l00003">3</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  neighbors = nodes;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_node_a2732845c57eae88e1a0926519cb16a75_icgraph.png" border="0" usemap="#class_node_a2732845c57eae88e1a0926519cb16a75_icgraph" alt=""/></div>
+<map name="class_node_a2732845c57eae88e1a0926519cb16a75_icgraph" id="class_node_a2732845c57eae88e1a0926519cb16a75_icgraph">
+<area shape="rect" id="node2" href="namespaceetrobocon2018__test.html#af1729628aa00be2aeb4095acad646fc3" title="etrobocon2018_test\l::TEST" alt="" coords="192,5,328,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4499664cb91fd5d4ff2beca381d0e6b0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Node::setNodeID </td>
+          <td>(</td>
+          <td class="paramtype">std::int8_t&#160;</td>
+          <td class="paramname"><em>nodeNumber</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ノードIDを設定する </p>
+<p>できるだけ別のノードと異なる、一意の数値が望ましい。 一意性は、このクラスのインスタンス保持者が責任を持つ。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodeNumber</td><td>ノードIDの番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="_node_8cpp_source.html">Node.cpp</a> の <a class="el" href="_node_8cpp_source.html#l00013">13</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  nodeID = nodeNumber;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_node_a4499664cb91fd5d4ff2beca381d0e6b0_icgraph.png" border="0" usemap="#class_node_a4499664cb91fd5d4ff2beca381d0e6b0_icgraph" alt=""/></div>
+<map name="class_node_a4499664cb91fd5d4ff2beca381d0e6b0_icgraph" id="class_node_a4499664cb91fd5d4ff2beca381d0e6b0_icgraph">
+<area shape="rect" id="node2" href="class_explorer.html#a5807592365f49ad3d76249a9a406dd68" title="Explorer::createBlockArea" alt="" coords="179,35,354,61"/><area shape="rect" id="node5" href="namespaceetrobocon2018__test.html#afa86a5da4201debd8569bb8b89b0562c" title="etrobocon2018_test\l::TEST" alt="" coords="199,86,335,127"/><area shape="rect" id="node3" href="class_selector.html#a55730d11cba896e63144c0f0e1cdafd2" title="Selector::Selector" alt="" coords="407,5,534,32"/><area shape="rect" id="node4" href="namespaceetrobocon2018__test.html#a56c22afc06463bd4d68edff97bc5a5e9" title="etrobocon2018_test\l::TEST" alt="" coords="403,57,539,98"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad916f8953f6b38ef3514a37f75f9c20d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Node::setParentNode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>parent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>親ノードを設定する </p>
+<p>これは <a class="el" href="class_explorer.html">Explorer</a> クラスで利用する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>親ノードのポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="_node_8cpp_source.html">Node.cpp</a> の <a class="el" href="_node_8cpp_source.html#l00049">49</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  parentNode = parent;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a969ac68799e8d14cd9af1f479597e7a6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Node::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">std::int8_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::int8_t&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ノード位置を設定する </p>
+<p>他のノードとの相対的な位置であり、絶対的な指標は存在しない。 このため、設定する際は他のノードについても考える必要がある。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>ノード位置のX軸 </td></tr>
+    <tr><td class="paramname">y</td><td>ノード位置のY軸 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="_node_8cpp_source.html">Node.cpp</a> の <a class="el" href="_node_8cpp_source.html#l00033">33</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  position.x = x;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  position.y = y;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_node_a969ac68799e8d14cd9af1f479597e7a6_icgraph.png" border="0" usemap="#class_node_a969ac68799e8d14cd9af1f479597e7a6_icgraph" alt=""/></div>
+<map name="class_node_a969ac68799e8d14cd9af1f479597e7a6_icgraph" id="class_node_a969ac68799e8d14cd9af1f479597e7a6_icgraph">
+<area shape="rect" id="node2" href="namespaceetrobocon2018__test.html#aa726014072ed816eb0092d788850f4ef" title="etrobocon2018_test\l::TEST" alt="" coords="181,5,317,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa7f94b2cd060542128155a65798c5a21"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Node::setRealCost </td>
+          <td>(</td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>cost</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A*アルゴリズムで用いる実コストを設定する </p>
+<p>これは <a class="el" href="class_explorer.html">Explorer</a> クラスで利用する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cost</td><td>実コスト </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="_node_8cpp_source.html">Node.cpp</a> の <a class="el" href="_node_8cpp_source.html#l00069">69</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  realCost = cost;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a6235d6f4721ea281343e9a73fd8b5fa4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Node::setScore </td>
+          <td>(</td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>score_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A*アルゴリズムで用いるスコアを設定する </p>
+<p>これは <a class="el" href="class_explorer.html">Explorer</a> クラスで利用する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">score_</td><td>スコア </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="_node_8cpp_source.html">Node.cpp</a> の <a class="el" href="_node_8cpp_source.html#l00059">59</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  score = score_;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/apps/include/<a class="el" href="_node_8h_source.html">Node.h</a></li>
+<li>str/apps/src/<a class="el" href="_node_8cpp_source.html">Node.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

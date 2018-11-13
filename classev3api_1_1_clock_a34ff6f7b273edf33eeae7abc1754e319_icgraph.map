@@ -1,0 +1,6 @@
+<map id="ev3api::Clock::sleep" name="ev3api::Clock::sleep">
+<area shape="rect" id="node2" href="$class_walker.html#af913f99c575c9be615d03ec96460ce15" title="Walker::edgeChange" alt="" coords="196,5,340,32"/>
+<area shape="rect" id="node3" href="$class_walker.html#a6fd0122fa4bd582a574397aa470446cc" title="Walker::moveAngle" alt="" coords="200,56,336,83"/>
+<area shape="rect" id="node4" href="$class_walker.html#a5ee3d6593656b064058949f31f525c31" title="Walker::angleChange" alt="" coords="195,107,341,133"/>
+<area shape="rect" id="node5" href="$class_left_course.html#af1faf09b5d0ac101ceb1fec6e60bfe1a" title="LeftCourse::runGoBlack" alt="" coords="389,107,552,133"/>
+</map>

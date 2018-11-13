@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: str/apps/src/Lifter.cpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="dir_5a8a96784cd33ffb845d840025aa312a.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Lifter.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_lifter_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_lifter_8h.html">Lifter.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keywordtype">void</span> Lifter::terminate()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="comment">//    msg_f(&quot;Stopped.&quot;, 1);</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#afb9dba50d4895868575f6c953c83f32e">stop</a>();</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">void</span> Lifter::reset()</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad">reset</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df">setBrake</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  default_count = controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e">getCount</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d">   16</a></span>&#160;std::int8_t <a class="code" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d">Lifter::getCurrentAngle</a>()</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  std::int32_t current_angle = controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e">getCount</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordflow">return</span> current_angle - default_count;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;std::int8_t Lifter::limitPwm(std::int8_t pwm)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">if</span>(pwm &gt; 100) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> 100;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(pwm &lt; 1) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> pwm = 1;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> pwm;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102">   33</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102">Lifter::liftUp</a>(std::uint8_t angle, std::int8_t pwm)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordflow">while</span>(1) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d">getCurrentAngle</a>() &gt; angle) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19">setPWM</a>(limitPwm(pwm));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    controller.<a class="code" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">tslpTsk</a>(4);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19">setPWM</a>(0);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5">Lifter::liftDown</a>(std::uint8_t angle, std::int8_t pwm)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordflow">while</span>(1) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d">getCurrentAngle</a>() &lt; -angle) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19">setPWM</a>(-limitPwm(pwm));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    controller.<a class="code" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">tslpTsk</a>(4);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19">setPWM</a>(0);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_lifter.html#ae6ab937ebd53c52c8e7254630b0e5797">   57</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_lifter.html#ae6ab937ebd53c52c8e7254630b0e5797">Lifter::defaultSet</a>(std::int8_t pwm)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  std::int8_t sign;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d">getCurrentAngle</a>() &lt; 0) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    sign = 1;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    sign = -1;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">while</span>(1) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span>((sign == 1 &amp;&amp; <a class="code" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d">getCurrentAngle</a>() &gt;= 0) || (sign == -1 &amp;&amp; <a class="code" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d">getCurrentAngle</a>() &lt;= 0)) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19">setPWM</a>(sign * limitPwm(pwm));</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    controller.<a class="code" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">tslpTsk</a>(4);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19">setPWM</a>(0);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="ttc" id="classev3api_1_1_motor_html_ae744997c22ab078a068eddc2692adf19"><div class="ttname"><a href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19">ev3api::Motor::setPWM</a></div><div class="ttdeci">void setPWM(int pwm)</div><div class="ttdef"><b>Definition:</b> <a href="_motor_8cpp_source.html#l00031">Motor.cpp:31</a></div></div>
+<div class="ttc" id="class_controller_html_ae9aec1dda0c67029d9e2ddfebe31b530"><div class="ttname"><a href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">Controller::tslpTsk</a></div><div class="ttdeci">void tslpTsk(int16_t time)</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8cpp_source.html#l00074">Controller.cpp:74</a></div></div>
+<div class="ttc" id="class_controller_html_a84196b437fe0194e4d3f15f16b8cddc7"><div class="ttname"><a href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">Controller::liftMotor</a></div><div class="ttdeci">Motor liftMotor</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00044">Controller.h:44</a></div></div>
+<div class="ttc" id="classev3api_1_1_motor_html_aefbceb61e09c200e813d03985aedc8df"><div class="ttname"><a href="classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df">ev3api::Motor::setBrake</a></div><div class="ttdeci">void setBrake(bool brake)</div><div class="ttdef"><b>Definition:</b> <a href="_motor_8cpp_source.html#l00047">Motor.cpp:47</a></div></div>
+<div class="ttc" id="classev3api_1_1_motor_html_ad523541d8a7319ae905dc17ff7c2ffad"><div class="ttname"><a href="classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad">ev3api::Motor::reset</a></div><div class="ttdeci">void reset(void)</div><div class="ttdef"><b>Definition:</b> <a href="_motor_8h_source.html#l00055">Motor.h:55</a></div></div>
+<div class="ttc" id="class_lifter_html_ae6ab937ebd53c52c8e7254630b0e5797"><div class="ttname"><a href="class_lifter.html#ae6ab937ebd53c52c8e7254630b0e5797">Lifter::defaultSet</a></div><div class="ttdeci">void defaultSet(std::int8_t pwm=20)</div><div class="ttdef"><b>Definition:</b> <a href="_lifter_8cpp_source.html#l00057">Lifter.cpp:57</a></div></div>
+<div class="ttc" id="class_lifter_html_ad4dbe31608b7c1c52ae1c9eb8d2527d5"><div class="ttname"><a href="class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5">Lifter::liftDown</a></div><div class="ttdeci">void liftDown(std::uint8_t angle, std::int8_t pwm=20)</div><div class="ttdef"><b>Definition:</b> <a href="_lifter_8cpp_source.html#l00045">Lifter.cpp:45</a></div></div>
+<div class="ttc" id="class_lifter_html_af08c6ba362698bb2d6427416d622e34d"><div class="ttname"><a href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d">Lifter::getCurrentAngle</a></div><div class="ttdeci">std::int8_t getCurrentAngle()</div><div class="ttdef"><b>Definition:</b> <a href="_lifter_8cpp_source.html#l00016">Lifter.cpp:16</a></div></div>
+<div class="ttc" id="classev3api_1_1_motor_html_afb9dba50d4895868575f6c953c83f32e"><div class="ttname"><a href="classev3api_1_1_motor.html#afb9dba50d4895868575f6c953c83f32e">ev3api::Motor::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdef"><b>Definition:</b> <a href="_motor_8h_source.html#l00097">Motor.h:97</a></div></div>
+<div class="ttc" id="_lifter_8h_html"><div class="ttname"><a href="_lifter_8h.html">Lifter.h</a></div><div class="ttdoc">走行体のアームを操作するクラス。 </div></div>
+<div class="ttc" id="class_lifter_html_a9ebc2a183bec70bc2c82e13d29a10102"><div class="ttname"><a href="class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102">Lifter::liftUp</a></div><div class="ttdeci">void liftUp(std::uint8_t angle, std::int8_t pwm=20)</div><div class="ttdef"><b>Definition:</b> <a href="_lifter_8cpp_source.html#l00033">Lifter.cpp:33</a></div></div>
+<div class="ttc" id="classev3api_1_1_motor_html_a210a6184259bbce461026499fe35822e"><div class="ttname"><a href="classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e">ev3api::Motor::getCount</a></div><div class="ttdeci">int32_t getCount(void) const </div><div class="ttdef"><b>Definition:</b> <a href="_motor_8h_source.html#l00067">Motor.h:67</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<map id="Controller::ledSetColorOrange" name="Controller::ledSetColorOrange">
+<area shape="rect" id="node2" href="$class_et_robocon2018.html#acd95e596c5333d78f33e2e00dba846e5" title="EtRobocon2018::start" alt="" coords="280,5,429,32"/>
+<area shape="rect" id="node4" href="$class_navigator.html#ad038009d5adb19067c5427d35a603636" title="指定した距離まで黒色の点を検出しながら走行体を移動させる " alt="" coords="251,56,458,83"/>
+<area shape="rect" id="node3" href="$str_2app_8cpp.html#a4754344fc3fec0a802660bb5dcdefad9" title="main_task" alt="" coords="567,5,649,32"/>
+<area shape="rect" id="node5" href="$class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="507,56,709,83"/>
+</map>

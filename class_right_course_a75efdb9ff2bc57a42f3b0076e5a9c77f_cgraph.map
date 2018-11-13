@@ -1,0 +1,8 @@
+<map id="RightCourse::run" name="RightCourse::run">
+<area shape="rect" id="node2" href="$class_right_course.html#a4221b099650e7cd3abc9c4942019d249" title="RightCourse::runNormalCourse" alt="" coords="177,5,383,32"/>
+<area shape="rect" id="node3" href="$class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="215,56,345,83"/>
+<area shape="rect" id="node4" href="$class_right_course.html#ad4279ebae4c2574a03fadc9fd90a813b" title="RightCourse::solveBlockPuzzle" alt="" coords="177,107,383,133"/>
+<area shape="rect" id="node7" href="$class_right_course.html#ac3e385dbd3360fae9670ed0a5bbddfc9" title="RightCourse::runParking" alt="" coords="197,157,363,184"/>
+<area shape="rect" id="node5" href="$class_walker.html#a796b87e4f28d73c966b58a7866b018c9" title="Walker::reset" alt="" coords="433,107,533,133"/>
+<area shape="rect" id="node6" href="$classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="581,107,720,133"/>
+</map>

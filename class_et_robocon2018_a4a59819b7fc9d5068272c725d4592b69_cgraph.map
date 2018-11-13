@@ -1,0 +1,5 @@
+<map id="EtRobocon2018::waitStarter" name="EtRobocon2018::waitStarter">
+<area shape="rect" id="node2" href="$classev3api_1_1_touch_sensor.html#ae09cb8f7750789cf76998fcc0449e624" title="ev3api::TouchSensor\l::isPressed" alt="" coords="241,5,386,46"/>
+<area shape="rect" id="node4" href="$class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="249,71,378,97"/>
+<area shape="rect" id="node3" href="$classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92" title="ev3api::Sensor::getPort" alt="" coords="435,12,594,39"/>
+</map>

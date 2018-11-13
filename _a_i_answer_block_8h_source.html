@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: str/apps/include/AIAnswerBlock.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="dir_716c0c37d4fad24b6b8f48e824f3bc1d.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">AIAnswerBlock.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_a_i_answer_block_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef AI_ANSWER_BLOCK_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AI_ANSWER_BLOCK_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="_lifter_8h.html">Lifter.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_navigator_8h.html">Navigator.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_a_i_answer_block.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_a_i_answer_block.html">AIAnswerBlock</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="class_navigator.html">Navigator</a> navigator;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  std::int16_t target_brightness;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="class_lifter.html">Lifter</a> lifter;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="comment">// Distinguisher distingish_color;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_a_i_answer_block.html#aebf172727e0b19e2de01084fb2fce52f">   19</a></span>&#160;  <a class="code" href="class_a_i_answer_block.html#aebf172727e0b19e2de01084fb2fce52f">AIAnswerBlock</a>(<a class="code" href="class_controller.html">Controller</a>&amp; controller, <a class="code" href="class_walker.html">Walker</a>&amp; walker, std::int16_t brightness)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    : navigator(controller, walker), target_brightness(brightness), lifter(controller)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702">throwBlock</a>(<span class="keywordtype">bool</span> angle_direction = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337">block00</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da">block01</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a82aa152188b88159b398c4944d2b7f06">block02</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a9186719d2956c3fd1edd5cd9deed0ee5">block03</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#ac4c2e84316b4f90af4dc5763eae92c4c">block04</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#afde4dce31723131a8bd4f32743edadde">block05</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#abbffbfe243a0a09fa99e76ec8f0a005a">block06</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#af4e46a48355f2f2b4e0dd42b74cebf5c">block07</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a3520250acb2eac1529e35180c7fe275a">block10</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#accdcc0894fc215e94f5bf191ddf909e6">block11</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#ae404c61eae5e5feee50743368ceef7ce">block12</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#ab5a67bf9199c9f648b84dcc9387cd52b">block13</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#adc465eb7f84fd42228f73b7a429e87f3">block14</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#ae40cacd2d712412b63a4b4207648f69d">block15</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#abbce8dfe1dd1e4b14dc940dee87c5f90">block16</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a6580e6c00869148b91d28193163b1ef1">block17</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#adbfdfaea955f53eb7452a20679494367">block20</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a1c1148356e4e52243a3dd9cc408b9657">block21</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#adede0377d1f69a365d3e8ea73287ea83">block22</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a3f0ea5d9407c739c40f5d51e9431d31e">block23</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a01d32c6892202c4eb2ab6c020135a03c">block24</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a10ec141cf07cc6c5b07d3d25c774030a">block25</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a12ab36bcaf60a2a020f6fb290bd94712">block26</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a5e251f1b29c9d877e81875baf9202fd3">block27</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a78f2fd5356d15bf72fe034d60f6496f8">block30</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#aef3f9626fe995f19fc33008e205de022">block31</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a84d1643a8da84f900f7bb3f5afc875f6">block32</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#af85419e023297ebb6e6b2a30ef166e50">block33</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#af36ef5435a411984ace659f44340ee46">block34</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#aee85167173ca0da8952ac36c74832416">block35</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a8f11b0706f0a1a13ecde96585a9c1d6d">block36</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a024e1357f611d6bd46663456311b5f00">block37</a>();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#abcaaa833133f10175e9cfc7a96d853e3">block40</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a94048307658d321c91bf6550bd0bbcb5">block41</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a3c66cdd53e458e393155b0e51d20afe7">block42</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#aa7d3fc663201787a42bea19f2a52fb90">block43</a>();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a5f046f20752e2e62c7a0b518634eeae6">block44</a>();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a5c236c912ec022aa26793db22d24ef6b">block45</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a3909bb698ba2398e9ef839db820a04ea">block46</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a63ef57adc01189955729d0256990abe8">block47</a>();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#aa755c9e4d1fba8c9016841f623f70ceb">block50</a>();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a4f33a1a3ec6c66a2f59cc4fa52bfda04">block51</a>();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a49b85e703580bd627c7ae89b1a9b5013">block52</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a014e6461e38a7a216531527adc5fe0f6">block53</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a64819fd0fc0b08814893bd2263118619">block54</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#aef7b5c5a748dc231ed9586044df76ed6">block55</a>();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#ae00acbf51521bb3cafc696865fcc8edc">block56</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#adf08e94d4be655a9e708db330bef9c4c">block57</a>();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#af6a7a82323d96b06f611811c4b982940">block60</a>();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a2e49dc149dd7b9ee49f2914633f5b097">block61</a>();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#aaa540c012b572df02f28c3bc572b78ec">block62</a>();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#abf96567e3bc27d352da2ba82817cf28e">block63</a>();</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a4a14eb211209ab62d724b862cf6573eb">block64</a>();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#ae13a3aa7d11135b9cec1d0c276c192cd">block65</a>();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a76bae67aabfe3b8c4599ce7f5ff5e392">block66</a>();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#aef9177ac200345920da2e018429eba3e">block67</a>();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a534dbf17beebe7c7b5b1c3ad2ea1db6c">block70</a>();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#aead6554e051c6dd8d2b570fdd74860e8">block71</a>();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#aa45ae29b4dc53aacd19bcdc7894cd547">block72</a>();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#acf677d2ca87433e7c2f1dd251d104c44">block73</a>();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#af9be5aa185a36e0151e4878bfd289a3c">block74</a>();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a884a4cf55d6bf929beba826cccae25c7">block75</a>();</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#a14b88bf4af7f772a0a90659657681a6a">block76</a>();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_a_i_answer_block.html#aed3d882af524ccde51bc27f3ca342ff1">block77</a>();</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;};</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_a_i_answer_block_html_ab5a67bf9199c9f648b84dcc9387cd52b"><div class="ttname"><a href="class_a_i_answer_block.html#ab5a67bf9199c9f648b84dcc9387cd52b">AIAnswerBlock::block13</a></div><div class="ttdeci">void block13()</div><div class="ttdoc">アナログ数字が1，デジタル数字が3 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a3c66cdd53e458e393155b0e51d20afe7"><div class="ttname"><a href="class_a_i_answer_block.html#a3c66cdd53e458e393155b0e51d20afe7">AIAnswerBlock::block42</a></div><div class="ttdeci">void block42()</div><div class="ttdoc">アナログ数字が4，デジタル数字が2 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_abcaaa833133f10175e9cfc7a96d853e3"><div class="ttname"><a href="class_a_i_answer_block.html#abcaaa833133f10175e9cfc7a96d853e3">AIAnswerBlock::block40</a></div><div class="ttdeci">void block40()</div><div class="ttdoc">アナログ数字が4，デジタル数字が0 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_aee85167173ca0da8952ac36c74832416"><div class="ttname"><a href="class_a_i_answer_block.html#aee85167173ca0da8952ac36c74832416">AIAnswerBlock::block35</a></div><div class="ttdeci">void block35()</div><div class="ttdoc">アナログ数字が3，デジタル数字が5 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_aa755c9e4d1fba8c9016841f623f70ceb"><div class="ttname"><a href="class_a_i_answer_block.html#aa755c9e4d1fba8c9016841f623f70ceb">AIAnswerBlock::block50</a></div><div class="ttdeci">void block50()</div><div class="ttdoc">アナログ数字が5，デジタル数字が0 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_accdcc0894fc215e94f5bf191ddf909e6"><div class="ttname"><a href="class_a_i_answer_block.html#accdcc0894fc215e94f5bf191ddf909e6">AIAnswerBlock::block11</a></div><div class="ttdeci">void block11()</div><div class="ttdoc">アナログ数字が1，デジタル数字が1 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html"><div class="ttname"><a href="class_a_i_answer_block.html">AIAnswerBlock</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_i_answer_block_8h_source.html#l00011">AIAnswerBlock.h:11</a></div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a024e1357f611d6bd46663456311b5f00"><div class="ttname"><a href="class_a_i_answer_block.html#a024e1357f611d6bd46663456311b5f00">AIAnswerBlock::block37</a></div><div class="ttdeci">void block37()</div><div class="ttdoc">アナログ数字が3，デジタル数字が7 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a014e6461e38a7a216531527adc5fe0f6"><div class="ttname"><a href="class_a_i_answer_block.html#a014e6461e38a7a216531527adc5fe0f6">AIAnswerBlock::block53</a></div><div class="ttdeci">void block53()</div><div class="ttdoc">アナログ数字が5，デジタル数字が3 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a63ef57adc01189955729d0256990abe8"><div class="ttname"><a href="class_a_i_answer_block.html#a63ef57adc01189955729d0256990abe8">AIAnswerBlock::block47</a></div><div class="ttdeci">void block47()</div><div class="ttdoc">アナログ数字が4，デジタル数字が7 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a84d1643a8da84f900f7bb3f5afc875f6"><div class="ttname"><a href="class_a_i_answer_block.html#a84d1643a8da84f900f7bb3f5afc875f6">AIAnswerBlock::block32</a></div><div class="ttdeci">void block32()</div><div class="ttdoc">アナログ数字が3，デジタル数字が2 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_ae13a3aa7d11135b9cec1d0c276c192cd"><div class="ttname"><a href="class_a_i_answer_block.html#ae13a3aa7d11135b9cec1d0c276c192cd">AIAnswerBlock::block65</a></div><div class="ttdeci">void block65()</div><div class="ttdoc">アナログ数字が6，デジタル数字が5 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a64819fd0fc0b08814893bd2263118619"><div class="ttname"><a href="class_a_i_answer_block.html#a64819fd0fc0b08814893bd2263118619">AIAnswerBlock::block54</a></div><div class="ttdeci">void block54()</div><div class="ttdoc">アナログ数字が5，デジタル数字が4 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_adc465eb7f84fd42228f73b7a429e87f3"><div class="ttname"><a href="class_a_i_answer_block.html#adc465eb7f84fd42228f73b7a429e87f3">AIAnswerBlock::block14</a></div><div class="ttdeci">void block14()</div><div class="ttdoc">アナログ数字が1，デジタル数字が4 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_aa7d3fc663201787a42bea19f2a52fb90"><div class="ttname"><a href="class_a_i_answer_block.html#aa7d3fc663201787a42bea19f2a52fb90">AIAnswerBlock::block43</a></div><div class="ttdeci">void block43()</div><div class="ttdoc">アナログ数字が4，デジタル数字が3 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_abf96567e3bc27d352da2ba82817cf28e"><div class="ttname"><a href="class_a_i_answer_block.html#abf96567e3bc27d352da2ba82817cf28e">AIAnswerBlock::block63</a></div><div class="ttdeci">void block63()</div><div class="ttdoc">アナログ数字が6，デジタル数字が3 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a5e251f1b29c9d877e81875baf9202fd3"><div class="ttname"><a href="class_a_i_answer_block.html#a5e251f1b29c9d877e81875baf9202fd3">AIAnswerBlock::block27</a></div><div class="ttdeci">void block27()</div><div class="ttdoc">アナログ数字が2，デジタル数字が7 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a1c1148356e4e52243a3dd9cc408b9657"><div class="ttname"><a href="class_a_i_answer_block.html#a1c1148356e4e52243a3dd9cc408b9657">AIAnswerBlock::block21</a></div><div class="ttdeci">void block21()</div><div class="ttdoc">アナログ数字が2，デジタル数字が1 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a12ab36bcaf60a2a020f6fb290bd94712"><div class="ttname"><a href="class_a_i_answer_block.html#a12ab36bcaf60a2a020f6fb290bd94712">AIAnswerBlock::block26</a></div><div class="ttdeci">void block26()</div><div class="ttdoc">アナログ数字が2，デジタル数字が6 </div></div>
+<div class="ttc" id="class_lifter_html"><div class="ttname"><a href="class_lifter.html">Lifter</a></div><div class="ttdoc">走行体のアームを操作するクラス。 </div><div class="ttdef"><b>Definition:</b> <a href="_lifter_8h_source.html#l00020">Lifter.h:20</a></div></div>
+<div class="ttc" id="class_a_i_answer_block_html_af4e46a48355f2f2b4e0dd42b74cebf5c"><div class="ttname"><a href="class_a_i_answer_block.html#af4e46a48355f2f2b4e0dd42b74cebf5c">AIAnswerBlock::block07</a></div><div class="ttdeci">void block07()</div><div class="ttdoc">アナログ数字が0，デジタル数字が7 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_aead6554e051c6dd8d2b570fdd74860e8"><div class="ttname"><a href="class_a_i_answer_block.html#aead6554e051c6dd8d2b570fdd74860e8">AIAnswerBlock::block71</a></div><div class="ttdeci">void block71()</div><div class="ttdoc">アナログ数字が7，デジタル数字が1 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a4f33a1a3ec6c66a2f59cc4fa52bfda04"><div class="ttname"><a href="class_a_i_answer_block.html#a4f33a1a3ec6c66a2f59cc4fa52bfda04">AIAnswerBlock::block51</a></div><div class="ttdeci">void block51()</div><div class="ttdoc">アナログ数字が5，デジタル数字が1 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_af6a7a82323d96b06f611811c4b982940"><div class="ttname"><a href="class_a_i_answer_block.html#af6a7a82323d96b06f611811c4b982940">AIAnswerBlock::block60</a></div><div class="ttdeci">void block60()</div><div class="ttdoc">アナログ数字が6，デジタル数字が0 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a01d32c6892202c4eb2ab6c020135a03c"><div class="ttname"><a href="class_a_i_answer_block.html#a01d32c6892202c4eb2ab6c020135a03c">AIAnswerBlock::block24</a></div><div class="ttdeci">void block24()</div><div class="ttdoc">アナログ数字が2，デジタル数字が4 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_ac4c2e84316b4f90af4dc5763eae92c4c"><div class="ttname"><a href="class_a_i_answer_block.html#ac4c2e84316b4f90af4dc5763eae92c4c">AIAnswerBlock::block04</a></div><div class="ttdeci">void block04()</div><div class="ttdoc">アナログ数字が0，デジタル数字が4 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_af85419e023297ebb6e6b2a30ef166e50"><div class="ttname"><a href="class_a_i_answer_block.html#af85419e023297ebb6e6b2a30ef166e50">AIAnswerBlock::block33</a></div><div class="ttdeci">void block33()</div><div class="ttdoc">アナログ数字が3，デジタル数字が3 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a8f11b0706f0a1a13ecde96585a9c1d6d"><div class="ttname"><a href="class_a_i_answer_block.html#a8f11b0706f0a1a13ecde96585a9c1d6d">AIAnswerBlock::block36</a></div><div class="ttdeci">void block36()</div><div class="ttdoc">アナログ数字が3，デジタル数字が6 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a82aa152188b88159b398c4944d2b7f06"><div class="ttname"><a href="class_a_i_answer_block.html#a82aa152188b88159b398c4944d2b7f06">AIAnswerBlock::block02</a></div><div class="ttdeci">void block02()</div><div class="ttdoc">アナログ数字が0，デジタル数字が2 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a76bae67aabfe3b8c4599ce7f5ff5e392"><div class="ttname"><a href="class_a_i_answer_block.html#a76bae67aabfe3b8c4599ce7f5ff5e392">AIAnswerBlock::block66</a></div><div class="ttdeci">void block66()</div><div class="ttdoc">アナログ数字が6，デジタル数字が6 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a6580e6c00869148b91d28193163b1ef1"><div class="ttname"><a href="class_a_i_answer_block.html#a6580e6c00869148b91d28193163b1ef1">AIAnswerBlock::block17</a></div><div class="ttdeci">void block17()</div><div class="ttdoc">アナログ数字が1，デジタル数字が7 </div></div>
+<div class="ttc" id="class_navigator_html"><div class="ttname"><a href="class_navigator.html">Navigator</a></div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8h_source.html#l00016">Navigator.h:16</a></div></div>
+<div class="ttc" id="class_a_i_answer_block_html_adbfdfaea955f53eb7452a20679494367"><div class="ttname"><a href="class_a_i_answer_block.html#adbfdfaea955f53eb7452a20679494367">AIAnswerBlock::block20</a></div><div class="ttdeci">void block20()</div><div class="ttdoc">アナログ数字が2，デジタル数字が0 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a3909bb698ba2398e9ef839db820a04ea"><div class="ttname"><a href="class_a_i_answer_block.html#a3909bb698ba2398e9ef839db820a04ea">AIAnswerBlock::block46</a></div><div class="ttdeci">void block46()</div><div class="ttdoc">アナログ数字が4，デジタル数字が6 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a3520250acb2eac1529e35180c7fe275a"><div class="ttname"><a href="class_a_i_answer_block.html#a3520250acb2eac1529e35180c7fe275a">AIAnswerBlock::block10</a></div><div class="ttdeci">void block10()</div><div class="ttdoc">アナログ数字が1，デジタル数字が0 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_af9be5aa185a36e0151e4878bfd289a3c"><div class="ttname"><a href="class_a_i_answer_block.html#af9be5aa185a36e0151e4878bfd289a3c">AIAnswerBlock::block74</a></div><div class="ttdeci">void block74()</div><div class="ttdoc">アナログ数字が7，デジタル数字が4 </div></div>
+<div class="ttc" id="class_controller_html"><div class="ttname"><a href="class_controller.html">Controller</a></div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00029">Controller.h:29</a></div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a3f0ea5d9407c739c40f5d51e9431d31e"><div class="ttname"><a href="class_a_i_answer_block.html#a3f0ea5d9407c739c40f5d51e9431d31e">AIAnswerBlock::block23</a></div><div class="ttdeci">void block23()</div><div class="ttdoc">アナログ数字が2，デジタル数字が3 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_abbffbfe243a0a09fa99e76ec8f0a005a"><div class="ttname"><a href="class_a_i_answer_block.html#abbffbfe243a0a09fa99e76ec8f0a005a">AIAnswerBlock::block06</a></div><div class="ttdeci">void block06()</div><div class="ttdoc">アナログ数字が0，デジタル数字が6 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_aef3f9626fe995f19fc33008e205de022"><div class="ttname"><a href="class_a_i_answer_block.html#aef3f9626fe995f19fc33008e205de022">AIAnswerBlock::block31</a></div><div class="ttdeci">void block31()</div><div class="ttdoc">アナログ数字が3，デジタル数字が1 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_af36ef5435a411984ace659f44340ee46"><div class="ttname"><a href="class_a_i_answer_block.html#af36ef5435a411984ace659f44340ee46">AIAnswerBlock::block34</a></div><div class="ttdeci">void block34()</div><div class="ttdoc">アナログ数字が3，デジタル数字が4 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a78f2fd5356d15bf72fe034d60f6496f8"><div class="ttname"><a href="class_a_i_answer_block.html#a78f2fd5356d15bf72fe034d60f6496f8">AIAnswerBlock::block30</a></div><div class="ttdeci">void block30()</div><div class="ttdoc">アナログ数字が3，デジタル数字が0 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_aef9177ac200345920da2e018429eba3e"><div class="ttname"><a href="class_a_i_answer_block.html#aef9177ac200345920da2e018429eba3e">AIAnswerBlock::block67</a></div><div class="ttdeci">void block67()</div><div class="ttdoc">アナログ数字が6，デジタル数字が7 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a884a4cf55d6bf929beba826cccae25c7"><div class="ttname"><a href="class_a_i_answer_block.html#a884a4cf55d6bf929beba826cccae25c7">AIAnswerBlock::block75</a></div><div class="ttdeci">void block75()</div><div class="ttdoc">アナログ数字が7，デジタル数字が5 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_ac20e3be6742bcb20aa84d16a7ad72337"><div class="ttname"><a href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337">AIAnswerBlock::block00</a></div><div class="ttdeci">void block00()</div><div class="ttdoc">アナログ数字が0，デジタル数字が0 </div><div class="ttdef"><b>Definition:</b> <a href="_a_i_answer_block_8cpp_source.html#l00022">AIAnswerBlock.cpp:22</a></div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a4a14eb211209ab62d724b862cf6573eb"><div class="ttname"><a href="class_a_i_answer_block.html#a4a14eb211209ab62d724b862cf6573eb">AIAnswerBlock::block64</a></div><div class="ttdeci">void block64()</div><div class="ttdoc">アナログ数字が6，デジタル数字が4 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a7cdb871f18608b08dbb88541b32b6702"><div class="ttname"><a href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702">AIAnswerBlock::throwBlock</a></div><div class="ttdeci">void throwBlock(bool angle_direction=false)</div><div class="ttdoc">リフターを使ってブロックを放って後ろを向く </div><div class="ttdef"><b>Definition:</b> <a href="_a_i_answer_block_8cpp_source.html#l00014">AIAnswerBlock.cpp:14</a></div></div>
+<div class="ttc" id="class_a_i_answer_block_html_ae404c61eae5e5feee50743368ceef7ce"><div class="ttname"><a href="class_a_i_answer_block.html#ae404c61eae5e5feee50743368ceef7ce">AIAnswerBlock::block12</a></div><div class="ttdeci">void block12()</div><div class="ttdoc">アナログ数字が1，デジタル数字が2 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_aed3d882af524ccde51bc27f3ca342ff1"><div class="ttname"><a href="class_a_i_answer_block.html#aed3d882af524ccde51bc27f3ca342ff1">AIAnswerBlock::block77</a></div><div class="ttdeci">void block77()</div><div class="ttdoc">アナログ数字が7，デジタル数字が7 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_adf08e94d4be655a9e708db330bef9c4c"><div class="ttname"><a href="class_a_i_answer_block.html#adf08e94d4be655a9e708db330bef9c4c">AIAnswerBlock::block57</a></div><div class="ttdeci">void block57()</div><div class="ttdoc">アナログ数字が5，デジタル数字が7 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_afde4dce31723131a8bd4f32743edadde"><div class="ttname"><a href="class_a_i_answer_block.html#afde4dce31723131a8bd4f32743edadde">AIAnswerBlock::block05</a></div><div class="ttdeci">void block05()</div><div class="ttdoc">アナログ数字が0，デジタル数字が5 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_aef7b5c5a748dc231ed9586044df76ed6"><div class="ttname"><a href="class_a_i_answer_block.html#aef7b5c5a748dc231ed9586044df76ed6">AIAnswerBlock::block55</a></div><div class="ttdeci">void block55()</div><div class="ttdoc">アナログ数字が5，デジタル数字が5 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a5c236c912ec022aa26793db22d24ef6b"><div class="ttname"><a href="class_a_i_answer_block.html#a5c236c912ec022aa26793db22d24ef6b">AIAnswerBlock::block45</a></div><div class="ttdeci">void block45()</div><div class="ttdoc">アナログ数字が4，デジタル数字が5 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_acf677d2ca87433e7c2f1dd251d104c44"><div class="ttname"><a href="class_a_i_answer_block.html#acf677d2ca87433e7c2f1dd251d104c44">AIAnswerBlock::block73</a></div><div class="ttdeci">void block73()</div><div class="ttdoc">アナログ数字が7，デジタル数字が3 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a2e49dc149dd7b9ee49f2914633f5b097"><div class="ttname"><a href="class_a_i_answer_block.html#a2e49dc149dd7b9ee49f2914633f5b097">AIAnswerBlock::block61</a></div><div class="ttdeci">void block61()</div><div class="ttdoc">アナログ数字が6，デジタル数字が1 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a534dbf17beebe7c7b5b1c3ad2ea1db6c"><div class="ttname"><a href="class_a_i_answer_block.html#a534dbf17beebe7c7b5b1c3ad2ea1db6c">AIAnswerBlock::block70</a></div><div class="ttdeci">void block70()</div><div class="ttdoc">アナログ数字が7，デジタル数字が0 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a5f046f20752e2e62c7a0b518634eeae6"><div class="ttname"><a href="class_a_i_answer_block.html#a5f046f20752e2e62c7a0b518634eeae6">AIAnswerBlock::block44</a></div><div class="ttdeci">void block44()</div><div class="ttdoc">アナログ数字が4，デジタル数字が4 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a62485c924bea9888b72e3c91cf8d07da"><div class="ttname"><a href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da">AIAnswerBlock::block01</a></div><div class="ttdeci">void block01()</div><div class="ttdoc">アナログ数字が0，デジタル数字が1 </div><div class="ttdef"><b>Definition:</b> <a href="_a_i_answer_block_8cpp_source.html#l00070">AIAnswerBlock.cpp:70</a></div></div>
+<div class="ttc" id="class_a_i_answer_block_html_ae00acbf51521bb3cafc696865fcc8edc"><div class="ttname"><a href="class_a_i_answer_block.html#ae00acbf51521bb3cafc696865fcc8edc">AIAnswerBlock::block56</a></div><div class="ttdeci">void block56()</div><div class="ttdoc">アナログ数字が5，デジタル数字が6 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a94048307658d321c91bf6550bd0bbcb5"><div class="ttname"><a href="class_a_i_answer_block.html#a94048307658d321c91bf6550bd0bbcb5">AIAnswerBlock::block41</a></div><div class="ttdeci">void block41()</div><div class="ttdoc">アナログ数字が4，デジタル数字が1 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_aaa540c012b572df02f28c3bc572b78ec"><div class="ttname"><a href="class_a_i_answer_block.html#aaa540c012b572df02f28c3bc572b78ec">AIAnswerBlock::block62</a></div><div class="ttdeci">void block62()</div><div class="ttdoc">アナログ数字が6，デジタル数字が2 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_abbce8dfe1dd1e4b14dc940dee87c5f90"><div class="ttname"><a href="class_a_i_answer_block.html#abbce8dfe1dd1e4b14dc940dee87c5f90">AIAnswerBlock::block16</a></div><div class="ttdeci">void block16()</div><div class="ttdoc">アナログ数字が1，デジタル数字が6 </div></div>
+<div class="ttc" id="_lifter_8h_html"><div class="ttname"><a href="_lifter_8h.html">Lifter.h</a></div><div class="ttdoc">走行体のアームを操作するクラス。 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a9186719d2956c3fd1edd5cd9deed0ee5"><div class="ttname"><a href="class_a_i_answer_block.html#a9186719d2956c3fd1edd5cd9deed0ee5">AIAnswerBlock::block03</a></div><div class="ttdeci">void block03()</div><div class="ttdoc">アナログ数字が0，デジタル数字が3 </div></div>
+<div class="ttc" id="class_walker_html"><div class="ttname"><a href="class_walker.html">Walker</a></div><div class="ttdef"><b>Definition:</b> <a href="_walker_8h_source.html#l00007">Walker.h:7</a></div></div>
+<div class="ttc" id="class_a_i_answer_block_html_adede0377d1f69a365d3e8ea73287ea83"><div class="ttname"><a href="class_a_i_answer_block.html#adede0377d1f69a365d3e8ea73287ea83">AIAnswerBlock::block22</a></div><div class="ttdeci">void block22()</div><div class="ttdoc">アナログ数字が2，デジタル数字が2 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_ae40cacd2d712412b63a4b4207648f69d"><div class="ttname"><a href="class_a_i_answer_block.html#ae40cacd2d712412b63a4b4207648f69d">AIAnswerBlock::block15</a></div><div class="ttdeci">void block15()</div><div class="ttdoc">アナログ数字が1，デジタル数字が5 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a10ec141cf07cc6c5b07d3d25c774030a"><div class="ttname"><a href="class_a_i_answer_block.html#a10ec141cf07cc6c5b07d3d25c774030a">AIAnswerBlock::block25</a></div><div class="ttdeci">void block25()</div><div class="ttdoc">アナログ数字が2，デジタル数字が5 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a14b88bf4af7f772a0a90659657681a6a"><div class="ttname"><a href="class_a_i_answer_block.html#a14b88bf4af7f772a0a90659657681a6a">AIAnswerBlock::block76</a></div><div class="ttdeci">void block76()</div><div class="ttdoc">アナログ数字が7，デジタル数字が6 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_a49b85e703580bd627c7ae89b1a9b5013"><div class="ttname"><a href="class_a_i_answer_block.html#a49b85e703580bd627c7ae89b1a9b5013">AIAnswerBlock::block52</a></div><div class="ttdeci">void block52()</div><div class="ttdoc">アナログ数字が5，デジタル数字が2 </div></div>
+<div class="ttc" id="_navigator_8h_html"><div class="ttname"><a href="_navigator_8h.html">Navigator.h</a></div><div class="ttdoc">走行制御と回転制御を実行するクラス </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_aa45ae29b4dc53aacd19bcdc7894cd547"><div class="ttname"><a href="class_a_i_answer_block.html#aa45ae29b4dc53aacd19bcdc7894cd547">AIAnswerBlock::block72</a></div><div class="ttdeci">void block72()</div><div class="ttdoc">アナログ数字が7，デジタル数字が2 </div></div>
+<div class="ttc" id="class_a_i_answer_block_html_aebf172727e0b19e2de01084fb2fce52f"><div class="ttname"><a href="class_a_i_answer_block.html#aebf172727e0b19e2de01084fb2fce52f">AIAnswerBlock::AIAnswerBlock</a></div><div class="ttdeci">AIAnswerBlock(Controller &amp;controller, Walker &amp;walker, std::int16_t brightness)</div><div class="ttdef"><b>Definition:</b> <a href="_a_i_answer_block_8h_source.html#l00019">AIAnswerBlock.h:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

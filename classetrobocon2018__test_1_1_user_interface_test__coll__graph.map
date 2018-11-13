@@ -1,0 +1,7 @@
+<map id="etrobocon2018_test::UserInterfaceTest" name="etrobocon2018_test::UserInterfaceTest">
+<area shape="rect" id="node3" href="$class_controller.html" title="{Controller\n|+ noteFs6\l+ noteFs4\l+ noteFs6\l+ noteFs4\l+ countLimit\l+ counter\l+ exitCounter\l+ exitCountLimit\l+ brightness\l+ mock_r\l+ mock_g\l+ mock_b\l|+ Controller()\l+ speakerSetVolume()\l+ ledSetColorOrange()\l+ ledSetColorGreen()\l+ getBrightness()\l+ speakerPlayTone()\l+ buttonIsPressedBack()\l+ buttonIsPressedUp()\l+ buttonIsPressedDown()\l+ buttonIsPressedRight()\lほか 22 件…\l}" alt="" coords="167,249,337,634"/>
+<area shape="rect" id="node4" href="$class_motor.html" title="{Motor\n|+ count\l|+ getCount()\l+ setPWM()\l+ stop()\l+ reset()\l+ setBrake()\l}" alt="" coords="5,5,99,141"/>
+<area shape="rect" id="node5" href="$class_color_sensor.html" title="{ColorSensor\n|+ brightness\l|+ getBrightness()\l}" alt="" coords="124,35,247,112"/>
+<area shape="rect" id="node6" href="$class_touch_sensor.html" title="{TouchSensor\n||+ isPressed()\l}" alt="" coords="271,35,371,112"/>
+<area shape="rect" id="node7" href="$class_clock.html" title="{Clock\n||+ sleep()\l}" alt="" coords="398,35,471,112"/>
+</map>

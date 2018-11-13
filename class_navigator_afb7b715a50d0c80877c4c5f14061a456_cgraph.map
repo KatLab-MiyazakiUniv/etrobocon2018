@@ -1,0 +1,5 @@
+<map id="Navigator::getBrightness" name="Navigator::getBrightness">
+<area shape="rect" id="node2" href="$class_controller.html#aca9bc8f5a0a390d709d6dd2e5fd9b665" title="Controller::getBrightness" alt="" coords="222,12,389,39"/>
+<area shape="rect" id="node3" href="$classev3api_1_1_color_sensor.html#a010cb55b6119147496637bc5b2189582" title="ev3api::ColorSensor\l::getRawColor" alt="" coords="438,5,578,46"/>
+<area shape="rect" id="node4" href="$classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92" title="ev3api::Sensor::getPort" alt="" coords="627,12,786,39"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="etrobocon2018_test::TEST" name="etrobocon2018_test::TEST">
+<area shape="rect" id="node2" href="$class_node.html#a969ac68799e8d14cd9af1f479597e7a6" title="Node::setPosition" alt="" coords="194,5,321,32"/>
+<area shape="rect" id="node3" href="$class_node.html#a70b60a7138583a7205d9f7c287017a92" title="Node::getPositionX" alt="" coords="190,56,325,83"/>
+<area shape="rect" id="node4" href="$class_node.html#a3ded21af940258180390b9c1c0015154" title="Node::getPositionY" alt="" coords="190,107,325,133"/>
+</map>

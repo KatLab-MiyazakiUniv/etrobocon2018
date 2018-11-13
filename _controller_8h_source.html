@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: str/apps/include/Controller.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="dir_716c0c37d4fad24b6b8f48e824f3bc1d.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Controller.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_controller_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __CONTROLLER__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __CONTROLLER__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ev3api_8h.html">ev3api.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_clock_8h.html">Clock.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_color_sensor_8h.html">ColorSensor.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_motor_8h.html">Motor.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_touch_sensor_8h.html">TouchSensor.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;stdarg.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * touch_sensor = EV3_PORT_1;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * sonar_sensor = EV3_PORT_2;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * color_sensor = EV3_PORT_3;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * gyro_sensor  = EV3_PORT_4;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * left_motor   = EV3_PORT_C;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * right_motor  = EV3_PORT_B;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * lift_motor   = EV3_PORT_A;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * tail_motor   = EV3_PORT_D;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using namespace </span>ev3api;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_controller_8h.html#ad6e21cf567f3484d137058762b3d9e91">init_f</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_controller_8h.html#a0a6d184db0f324ec8dfdd059b9b526a8">msg_f</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, int32_t line);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_controller.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_controller.html">Controller</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_controller.html#a95c56822d667e94b031451729ce069a9">   31</a></span>&#160;  <a class="code" href="class_controller.html#a95c56822d667e94b031451729ce069a9">Controller</a>()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    : touchSensor(<a class="code" href="_port_8h.html#a8d17f8fabb486d5815d626610983e82daa0bafbc5d1a37affbad146654a13527f">PORT_1</a>),</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      colorSensor(<a class="code" href="_port_8h.html#a8d17f8fabb486d5815d626610983e82dac955981798afdb1cdd6c0fa3ccb09ae5">PORT_3</a>),</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      liftMotor(<a class="code" href="_port_8h.html#a01d16e2109729e564c90cd6d211c0938aeb6782d9dfedf3c6a78ffdb1624fa454">PORT_A</a>),</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      rightWheel(<a class="code" href="_port_8h.html#a01d16e2109729e564c90cd6d211c0938a16ada472d473fbd0207b99e9e4d68f4a">PORT_B</a>),</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      leftWheel(<a class="code" href="_port_8h.html#a01d16e2109729e564c90cd6d211c0938a627cc690c37f97527dd2f07aa22092d9">PORT_C</a>),</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      tailMotor(<a class="code" href="_port_8h.html#a01d16e2109729e564c90cd6d211c0938af7242fe75227a46a190645663f91ce69">PORT_D</a>)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_controller.html#ac9ef84ce6b7535d06589fbaffcdf931b">   40</a></span>&#160;  uint16_t noteFs6 = NOTE_FS6;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_controller.html#ab7c5ed29a3e87e63ab1f399183c40e61">   41</a></span>&#160;  uint16_t noteFs4 = NOTE_FS4;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_controller.html#a5e19c12fa264d296fafb2996459ddae2">   42</a></span>&#160;  <a class="code" href="classev3api_1_1_touch_sensor.html">TouchSensor</a> <a class="code" href="class_controller.html#a5e19c12fa264d296fafb2996459ddae2">touchSensor</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_controller.html#ac252a70d6b3b606bd5ce313767b74b96">   43</a></span>&#160;  <a class="code" href="classev3api_1_1_color_sensor.html">ColorSensor</a> <a class="code" href="class_controller.html#ac252a70d6b3b606bd5ce313767b74b96">colorSensor</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">   44</a></span>&#160;  <a class="code" href="classev3api_1_1_motor.html">Motor</a> <a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_controller.html#a6091a6af8538a5b4e7469b3591740c79">   45</a></span>&#160;  <a class="code" href="classev3api_1_1_motor.html">Motor</a> <a class="code" href="class_controller.html#a6091a6af8538a5b4e7469b3591740c79">rightWheel</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_controller.html#ab6df4e895058247563c3aa3e392c543d">   46</a></span>&#160;  <a class="code" href="classev3api_1_1_motor.html">Motor</a> <a class="code" href="class_controller.html#ab6df4e895058247563c3aa3e392c543d">leftWheel</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_controller.html#a7ee53fa166c8100bd346830647e4d3e3">   47</a></span>&#160;  <a class="code" href="classev3api_1_1_motor.html">Motor</a> <a class="code" href="class_controller.html#a7ee53fa166c8100bd346830647e4d3e3">tailMotor</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_controller.html#a55147b5c14f76de55eb646d25ccb746f">   48</a></span>&#160;  <a class="code" href="classev3api_1_1_clock.html">Clock</a> <a class="code" href="class_controller.html#a55147b5c14f76de55eb646d25ccb746f">clock</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">void</span> speakerSetVolume(uint8_t volume);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">void</span> ledSetColorOrange();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> ledSetColorGreen();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  int16_t getBrightness();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">void</span> speakerPlayTone(uint16_t frequency, int32_t duration);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">bool</span> buttonIsPressedBack();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">bool</span> buttonIsPressedUp();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">bool</span> buttonIsPressedDown();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">bool</span> buttonIsPressedRight();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">bool</span> buttonIsPressedLeft();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">bool</span> buttonIsPressedEnter();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">float</span> measureBatteryVoltage();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">void</span> tslpTsk(int16_t time);  <span class="comment">// 4msec周期起動</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">void</span> printDisplay(int8_t row, <span class="keyword">const</span> <span class="keywordtype">char</span>* format, ...);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">void</span> getRawColor(uint16_t&amp; r, uint16_t&amp; g, uint16_t&amp; b);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  rgb_raw_t rgb;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">char</span> msg[32];</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_controller_html_a5e19c12fa264d296fafb2996459ddae2"><div class="ttname"><a href="class_controller.html#a5e19c12fa264d296fafb2996459ddae2">Controller::touchSensor</a></div><div class="ttdeci">TouchSensor touchSensor</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00042">Controller.h:42</a></div></div>
+<div class="ttc" id="class_controller_html_a84196b437fe0194e4d3f15f16b8cddc7"><div class="ttname"><a href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">Controller::liftMotor</a></div><div class="ttdeci">Motor liftMotor</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00044">Controller.h:44</a></div></div>
+<div class="ttc" id="_port_8h_html_a8d17f8fabb486d5815d626610983e82daa0bafbc5d1a37affbad146654a13527f"><div class="ttname"><a href="_port_8h.html#a8d17f8fabb486d5815d626610983e82daa0bafbc5d1a37affbad146654a13527f">PORT_1</a></div><div class="ttdef"><b>Definition:</b> <a href="_port_8h_source.html#l00020">Port.h:20</a></div></div>
+<div class="ttc" id="_controller_8h_html_a0a6d184db0f324ec8dfdd059b9b526a8"><div class="ttname"><a href="_controller_8h.html#a0a6d184db0f324ec8dfdd059b9b526a8">msg_f</a></div><div class="ttdeci">void msg_f(const char *str, int32_t line)</div><div class="ttdef"><b>Definition:</b> <a href="util_8cpp_source.html#l00017">util.cpp:17</a></div></div>
+<div class="ttc" id="class_controller_html_a95c56822d667e94b031451729ce069a9"><div class="ttname"><a href="class_controller.html#a95c56822d667e94b031451729ce069a9">Controller::Controller</a></div><div class="ttdeci">Controller()</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00031">Controller.h:31</a></div></div>
+<div class="ttc" id="class_controller_html_a55147b5c14f76de55eb646d25ccb746f"><div class="ttname"><a href="class_controller.html#a55147b5c14f76de55eb646d25ccb746f">Controller::clock</a></div><div class="ttdeci">Clock clock</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00048">Controller.h:48</a></div></div>
+<div class="ttc" id="_color_sensor_8h_html"><div class="ttname"><a href="_color_sensor_8h.html">ColorSensor.h</a></div></div>
+<div class="ttc" id="_port_8h_html_a01d16e2109729e564c90cd6d211c0938a16ada472d473fbd0207b99e9e4d68f4a"><div class="ttname"><a href="_port_8h.html#a01d16e2109729e564c90cd6d211c0938a16ada472d473fbd0207b99e9e4d68f4a">PORT_B</a></div><div class="ttdef"><b>Definition:</b> <a href="_port_8h_source.html#l00032">Port.h:32</a></div></div>
+<div class="ttc" id="_port_8h_html_a8d17f8fabb486d5815d626610983e82dac955981798afdb1cdd6c0fa3ccb09ae5"><div class="ttname"><a href="_port_8h.html#a8d17f8fabb486d5815d626610983e82dac955981798afdb1cdd6c0fa3ccb09ae5">PORT_3</a></div><div class="ttdef"><b>Definition:</b> <a href="_port_8h_source.html#l00022">Port.h:22</a></div></div>
+<div class="ttc" id="_clock_8h_html"><div class="ttname"><a href="_clock_8h.html">Clock.h</a></div></div>
+<div class="ttc" id="_port_8h_html_a01d16e2109729e564c90cd6d211c0938a627cc690c37f97527dd2f07aa22092d9"><div class="ttname"><a href="_port_8h.html#a01d16e2109729e564c90cd6d211c0938a627cc690c37f97527dd2f07aa22092d9">PORT_C</a></div><div class="ttdef"><b>Definition:</b> <a href="_port_8h_source.html#l00033">Port.h:33</a></div></div>
+<div class="ttc" id="_touch_sensor_8h_html"><div class="ttname"><a href="_touch_sensor_8h.html">TouchSensor.h</a></div></div>
+<div class="ttc" id="_motor_8h_html"><div class="ttname"><a href="_motor_8h.html">Motor.h</a></div></div>
+<div class="ttc" id="class_controller_html"><div class="ttname"><a href="class_controller.html">Controller</a></div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00029">Controller.h:29</a></div></div>
+<div class="ttc" id="classev3api_1_1_touch_sensor_html"><div class="ttname"><a href="classev3api_1_1_touch_sensor.html">ev3api::TouchSensor</a></div><div class="ttdef"><b>Definition:</b> <a href="_touch_sensor_8h_source.html#l00016">TouchSensor.h:16</a></div></div>
+<div class="ttc" id="classev3api_1_1_color_sensor_html"><div class="ttname"><a href="classev3api_1_1_color_sensor.html">ev3api::ColorSensor</a></div><div class="ttdef"><b>Definition:</b> <a href="_color_sensor_8h_source.html#l00016">ColorSensor.h:16</a></div></div>
+<div class="ttc" id="_controller_8h_html_ad6e21cf567f3484d137058762b3d9e91"><div class="ttname"><a href="_controller_8h.html#ad6e21cf567f3484d137058762b3d9e91">init_f</a></div><div class="ttdeci">void init_f(const char *str)</div><div class="ttdef"><b>Definition:</b> <a href="util_8cpp_source.html#l00006">util.cpp:6</a></div></div>
+<div class="ttc" id="classev3api_1_1_motor_html"><div class="ttname"><a href="classev3api_1_1_motor.html">ev3api::Motor</a></div><div class="ttdef"><b>Definition:</b> <a href="_motor_8h_source.html#l00017">Motor.h:17</a></div></div>
+<div class="ttc" id="class_controller_html_a7ee53fa166c8100bd346830647e4d3e3"><div class="ttname"><a href="class_controller.html#a7ee53fa166c8100bd346830647e4d3e3">Controller::tailMotor</a></div><div class="ttdeci">Motor tailMotor</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00047">Controller.h:47</a></div></div>
+<div class="ttc" id="class_controller_html_ac252a70d6b3b606bd5ce313767b74b96"><div class="ttname"><a href="class_controller.html#ac252a70d6b3b606bd5ce313767b74b96">Controller::colorSensor</a></div><div class="ttdeci">ColorSensor colorSensor</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00043">Controller.h:43</a></div></div>
+<div class="ttc" id="ev3api_8h_html"><div class="ttname"><a href="ev3api_8h.html">ev3api.h</a></div></div>
+<div class="ttc" id="class_controller_html_ab6df4e895058247563c3aa3e392c543d"><div class="ttname"><a href="class_controller.html#ab6df4e895058247563c3aa3e392c543d">Controller::leftWheel</a></div><div class="ttdeci">Motor leftWheel</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00046">Controller.h:46</a></div></div>
+<div class="ttc" id="classev3api_1_1_clock_html"><div class="ttname"><a href="classev3api_1_1_clock.html">ev3api::Clock</a></div><div class="ttdef"><b>Definition:</b> <a href="_clock_8h_source.html#l00016">Clock.h:16</a></div></div>
+<div class="ttc" id="_port_8h_html_a01d16e2109729e564c90cd6d211c0938af7242fe75227a46a190645663f91ce69"><div class="ttname"><a href="_port_8h.html#a01d16e2109729e564c90cd6d211c0938af7242fe75227a46a190645663f91ce69">PORT_D</a></div><div class="ttdef"><b>Definition:</b> <a href="_port_8h_source.html#l00034">Port.h:34</a></div></div>
+<div class="ttc" id="_port_8h_html_a01d16e2109729e564c90cd6d211c0938aeb6782d9dfedf3c6a78ffdb1624fa454"><div class="ttname"><a href="_port_8h.html#a01d16e2109729e564c90cd6d211c0938aeb6782d9dfedf3c6a78ffdb1624fa454">PORT_A</a></div><div class="ttdef"><b>Definition:</b> <a href="_port_8h_source.html#l00031">Port.h:31</a></div></div>
+<div class="ttc" id="class_controller_html_a6091a6af8538a5b4e7469b3591740c79"><div class="ttname"><a href="class_controller.html#a6091a6af8538a5b4e7469b3591740c79">Controller::rightWheel</a></div><div class="ttdeci">Motor rightWheel</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00045">Controller.h:45</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

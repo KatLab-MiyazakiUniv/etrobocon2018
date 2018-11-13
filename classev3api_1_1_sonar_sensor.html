@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: ev3api::SonarSensor クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
+      <li><a href="inherits.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceev3api.html">ev3api</a></li><li class="navelem"><a class="el" href="classev3api_1_1_sonar_sensor.html">SonarSensor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="classev3api_1_1_sonar_sensor-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">ev3api::SonarSensor クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_sonar_sensor_8h_source.html">SonarSensor.h</a>&gt;</code></p>
+<div class="dynheader">
+ev3api::SonarSensor の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_sonar_sensor__inherit__graph.png" border="0" usemap="#ev3api_1_1_sonar_sensor_inherit__map" alt="Inheritance graph"/></div>
+<map name="ev3api_1_1_sonar_sensor_inherit__map" id="ev3api_1_1_sonar_sensor_inherit__map">
+<area shape="rect" id="node2" href="classev3api_1_1_sensor.html" title="{ev3api::Sensor\n||# getPort()\l# Sensor()\l# ~Sensor()\l}" alt="" coords="21,5,131,112"/></map>
+</div>
+<div class="dynheader">
+ev3api::SonarSensor 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_sonar_sensor__coll__graph.png" border="0" usemap="#ev3api_1_1_sonar_sensor_coll__map" alt="Collaboration graph"/></div>
+<map name="ev3api_1_1_sonar_sensor_coll__map" id="ev3api_1_1_sonar_sensor_coll__map">
+<area shape="rect" id="node2" href="classev3api_1_1_sensor.html" title="{ev3api::Sensor\n||# getPort()\l# Sensor()\l# ~Sensor()\l}" alt="" coords="21,5,131,112"/></map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ac37ab8eaae93776c489428d06e845661"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_sonar_sensor.html#ac37ab8eaae93776c489428d06e845661">SonarSensor</a> (<a class="el" href="_port_8h.html#a8d17f8fabb486d5815d626610983e82d">ePortS</a> port)</td></tr>
+<tr class="separator:ac37ab8eaae93776c489428d06e845661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb2b9447cf733a621c29f6eddb5e1e1d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_sonar_sensor.html#acb2b9447cf733a621c29f6eddb5e1e1d">~SonarSensor</a> (void)</td></tr>
+<tr class="separator:acb2b9447cf733a621c29f6eddb5e1e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae025c41419ca5f25aecc941f3820270c"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_sonar_sensor.html#ae025c41419ca5f25aecc941f3820270c">getDistance</a> (void) const </td></tr>
+<tr class="separator:ae025c41419ca5f25aecc941f3820270c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4ed5f56d4e22ca1be1f81e0e1624734"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_sonar_sensor.html#ad4ed5f56d4e22ca1be1f81e0e1624734">listen</a> (void) const </td></tr>
+<tr class="separator:ad4ed5f56d4e22ca1be1f81e0e1624734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_methods_classev3api_1_1_sensor"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classev3api_1_1_sensor')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classev3api_1_1_sensor.html">ev3api::Sensor</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:a64d6d733ff9da9b9beafa68efed0cf92 inherit pro_methods_classev3api_1_1_sensor"><td class="memItemLeft" align="right" valign="top">sensor_port_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92">getPort</a> (void) const </td></tr>
+<tr class="separator:a64d6d733ff9da9b9beafa68efed0cf92 inherit pro_methods_classev3api_1_1_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a899f1e5feb7728657e70e0e2dc767ade inherit pro_methods_classev3api_1_1_sensor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_sensor.html#a899f1e5feb7728657e70e0e2dc767ade">Sensor</a> (<a class="el" href="_port_8h.html#a8d17f8fabb486d5815d626610983e82d">ePortS</a> port, sensor_type_t type)</td></tr>
+<tr class="separator:a899f1e5feb7728657e70e0e2dc767ade inherit pro_methods_classev3api_1_1_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4db83c281e5c852e9d3e342f56bae1f6 inherit pro_methods_classev3api_1_1_sensor"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_sensor.html#a4db83c281e5c852e9d3e342f56bae1f6">~Sensor</a> (void)</td></tr>
+<tr class="separator:a4db83c281e5c852e9d3e342f56bae1f6 inherit pro_methods_classev3api_1_1_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>EV3 ソナー(超音波)センサクラス </p>
+
+<p> <a class="el" href="_sonar_sensor_8h_source.html">SonarSensor.h</a> の <a class="el" href="_sonar_sensor_8h_source.html#l00016">16</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a class="anchor" id="ac37ab8eaae93776c489428d06e845661"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SonarSensor::SonarSensor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_port_8h.html#a8d17f8fabb486d5815d626610983e82d">ePortS</a>&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>ソナーセンサ接続ポート </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>- </dd></dl>
+
+<p> <a class="el" href="_sonar_sensor_8cpp_source.html">SonarSensor.cpp</a> の <a class="el" href="_sonar_sensor_8cpp_source.html#l00013">13</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<a class="code" href="classev3api_1_1_sensor.html#a899f1e5feb7728657e70e0e2dc767ade">Sensor</a>(port, ULTRASONIC_SENSOR)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    (void)ev3_ultrasonic_sensor_get_distance(<a class="code" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92">getPort</a>());</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="ttc" id="classev3api_1_1_sensor_html_a899f1e5feb7728657e70e0e2dc767ade"><div class="ttname"><a href="classev3api_1_1_sensor.html#a899f1e5feb7728657e70e0e2dc767ade">ev3api::Sensor::Sensor</a></div><div class="ttdeci">Sensor(ePortS port, sensor_type_t type)</div><div class="ttdef"><b>Definition:</b> <a href="_sensor_8h_source.html#l00034">Sensor.h:34</a></div></div>
+<div class="ttc" id="classev3api_1_1_sensor_html_a64d6d733ff9da9b9beafa68efed0cf92"><div class="ttname"><a href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92">ev3api::Sensor::getPort</a></div><div class="ttdeci">sensor_port_t getPort(void) const </div><div class="ttdef"><b>Definition:</b> <a href="_sensor_8h_source.html#l00026">Sensor.h:26</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_sonar_sensor_ac37ab8eaae93776c489428d06e845661_cgraph.png" border="0" usemap="#classev3api_1_1_sonar_sensor_ac37ab8eaae93776c489428d06e845661_cgraph" alt=""/></div>
+<map name="classev3api_1_1_sonar_sensor_ac37ab8eaae93776c489428d06e845661_cgraph" id="classev3api_1_1_sonar_sensor_ac37ab8eaae93776c489428d06e845661_cgraph">
+<area shape="rect" id="node2" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92" title="ev3api::Sensor::getPort" alt="" coords="198,12,357,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="acb2b9447cf733a621c29f6eddb5e1e1d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SonarSensor::~SonarSensor </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>デストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">-</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>- </dd></dl>
+
+<p> <a class="el" href="_sonar_sensor_8cpp_source.html">SonarSensor.cpp</a> の <a class="el" href="_sonar_sensor_8cpp_source.html#l00022">22</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">//uart_sensor_config(getPort(), 3);</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="ae025c41419ca5f25aecc941f3820270c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t SonarSensor::getDistance </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>距離を測定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">-</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>距離 [cm] </dd></dl>
+
+<p> <a class="el" href="_sonar_sensor_8cpp_source.html">SonarSensor.cpp</a> の <a class="el" href="_sonar_sensor_8cpp_source.html#l00029">29</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> ev3_ultrasonic_sensor_get_distance(<a class="code" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92">getPort</a>());</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="ttc" id="classev3api_1_1_sensor_html_a64d6d733ff9da9b9beafa68efed0cf92"><div class="ttname"><a href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92">ev3api::Sensor::getPort</a></div><div class="ttdeci">sensor_port_t getPort(void) const </div><div class="ttdef"><b>Definition:</b> <a href="_sensor_8h_source.html#l00026">Sensor.h:26</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_sonar_sensor_ae025c41419ca5f25aecc941f3820270c_cgraph.png" border="0" usemap="#classev3api_1_1_sonar_sensor_ae025c41419ca5f25aecc941f3820270c_cgraph" alt=""/></div>
+<map name="classev3api_1_1_sonar_sensor_ae025c41419ca5f25aecc941f3820270c_cgraph" id="classev3api_1_1_sonar_sensor_ae025c41419ca5f25aecc941f3820270c_cgraph">
+<area shape="rect" id="node2" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92" title="ev3api::Sensor::getPort" alt="" coords="198,12,357,39"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_sonar_sensor_ae025c41419ca5f25aecc941f3820270c_icgraph.png" border="0" usemap="#classev3api_1_1_sonar_sensor_ae025c41419ca5f25aecc941f3820270c_icgraph" alt=""/></div>
+<map name="classev3api_1_1_sonar_sensor_ae025c41419ca5f25aecc941f3820270c_icgraph" id="classev3api_1_1_sonar_sensor_ae025c41419ca5f25aecc941f3820270c_icgraph">
+<area shape="rect" id="node2" href="scripts_2sensor__check_2app_8cpp.html#a4754344fc3fec0a802660bb5dcdefad9" title="main_task" alt="" coords="197,12,280,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad4ed5f56d4e22ca1be1f81e0e1624734"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SonarSensor::listen </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>超音波信号を検出する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">-</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true 超音波信号を検出した </dd>
+<dd>
+false 超音波信号を検出しなかった </dd></dl>
+
+<p> <a class="el" href="_sonar_sensor_8cpp_source.html">SonarSensor.cpp</a> の <a class="el" href="_sonar_sensor_8cpp_source.html#l00036">36</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> ev3_ultrasonic_sensor_listen(<a class="code" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92">getPort</a>());</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="ttc" id="classev3api_1_1_sensor_html_a64d6d733ff9da9b9beafa68efed0cf92"><div class="ttname"><a href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92">ev3api::Sensor::getPort</a></div><div class="ttdeci">sensor_port_t getPort(void) const </div><div class="ttdef"><b>Definition:</b> <a href="_sensor_8h_source.html#l00026">Sensor.h:26</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_sonar_sensor_ad4ed5f56d4e22ca1be1f81e0e1624734_cgraph.png" border="0" usemap="#classev3api_1_1_sonar_sensor_ad4ed5f56d4e22ca1be1f81e0e1624734_cgraph" alt=""/></div>
+<map name="classev3api_1_1_sonar_sensor_ad4ed5f56d4e22ca1be1f81e0e1624734_cgraph" id="classev3api_1_1_sonar_sensor_ad4ed5f56d4e22ca1be1f81e0e1624734_cgraph">
+<area shape="rect" id="node2" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92" title="ev3api::Sensor::getPort" alt="" coords="198,12,357,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/ev3-api/library/libcpp-ev3/include/<a class="el" href="_sonar_sensor_8h_source.html">SonarSensor.h</a></li>
+<li>str/ev3-api/library/libcpp-ev3/src/<a class="el" href="_sonar_sensor_8cpp_source.html">SonarSensor.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<map id="Lifter::liftDown" name="Lifter::liftDown">
+<area shape="rect" id="node2" href="$class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702" title="リフターを使ってブロックを放って後ろを向く " alt="" coords="161,56,346,83"/>
+<area shape="rect" id="node7" href="$class_block_solver.html#ab82a21046107a859adbb5a144ceaa63e" title="ブロックの色を取得し、blockColorに格納します。 " alt="" coords="162,107,345,133"/>
+<area shape="rect" id="node3" href="$class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="395,5,560,32"/>
+<area shape="rect" id="node5" href="$class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="395,56,560,83"/>
+<area shape="rect" id="node4" href="$class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="608,5,811,32"/>
+<area shape="rect" id="node6" href="$class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="657,56,762,83"/>
+<area shape="rect" id="node8" href="$class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="411,107,543,133"/>
+<area shape="rect" id="node9" href="$class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="418,157,537,184"/>
+</map>

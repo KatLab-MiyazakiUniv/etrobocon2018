@@ -1,0 +1,10 @@
+<map id="BlockSolver::getBlockColor" name="BlockSolver::getBlockColor">
+<area shape="rect" id="node2" href="$class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3" title="Controller::speakerPlayTone" alt="" coords="237,5,424,32"/>
+<area shape="rect" id="node3" href="$class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102" title="Lifter::liftUp" alt="" coords="285,56,376,83"/>
+<area shape="rect" id="node8" href="$class_distinguisher.html#a3634f5227cc6a492952f1283339636dc" title="Distinguisher::getColor" alt="" coords="253,157,408,184"/>
+<area shape="rect" id="node9" href="$class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5" title="Lifter::liftDown" alt="" coords="277,107,384,133"/>
+<area shape="rect" id="node4" href="$class_lifter.html#af08c6ba362698bb2d6427416d622e34d" title="Lifter::getCurrentAngle" alt="" coords="475,31,629,57"/>
+<area shape="rect" id="node6" href="$classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="472,81,632,108"/>
+<area shape="rect" id="node7" href="$class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="487,132,617,159"/>
+<area shape="rect" id="node5" href="$classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="680,31,843,57"/>
+</map>

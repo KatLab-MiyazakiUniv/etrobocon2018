@@ -1,0 +1,11 @@
+<map id="Selector::searchBlockPosition" name="Selector::searchBlockPosition">
+<area shape="rect" id="node2" href="$class_selector.html#a2d53e8e7ff20d156a945925054af3c3e" title="Selector::isAlreadyMovedNode" alt="" coords="251,5,453,32"/>
+<area shape="rect" id="node3" href="$class_explorer.html#a53c637c90b158016c5be1fcb01165a1e" title="Explorer::resetBlockArea" alt="" coords="269,56,435,83"/>
+<area shape="rect" id="node4" href="$class_explorer.html#aee7149934ae124c0e6a7b90478da70a5" title="Explorer::setHasBlockIn" alt="" coords="270,107,434,133"/>
+<area shape="rect" id="node5" href="$class_explorer.html#a38468adb7fd2b5ae688f1bca495d12de" title="Explorer::searchRoute" alt="" coords="276,157,428,184"/>
+<area shape="rect" id="node6" href="$class_explorer.html#a28a1f4268214e99cef86b39faf416ae0" title="Explorer::calculateNeighborCost" alt="" coords="501,157,712,184"/>
+<area shape="rect" id="node7" href="$class_node.html#acc4776c4da27dd7c7618f28568546f22" title="Node::getNodeID" alt="" coords="773,93,897,120"/>
+<area shape="rect" id="node9" href="$class_node.html#a49c84e314cd987257880970217b7e01d" title="Node::getParentNode" alt="" coords="761,245,909,272"/>
+<area shape="rect" id="node8" href="$class_node.html#abed661b14cfb80013b73808e175a8515" title="Node::setBeClosed" alt="" coords="767,144,903,171"/>
+<area shape="rect" id="node10" href="$class_node.html#a268164af093b84d3be75ce579d83cd0e" title="Node::getScore" alt="" coords="778,195,891,221"/>
+</map>

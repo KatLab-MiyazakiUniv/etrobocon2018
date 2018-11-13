@@ -1,0 +1,10 @@
+<map id="EtRobocon2018::start" name="EtRobocon2018::start">
+<area shape="rect" id="node2" href="$class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3" title="Controller::printDisplay" alt="" coords="224,5,379,32"/>
+<area shape="rect" id="node3" href="$class_controller.html#a3843d004fc1e44c63cd746b8822c2990" title="Controller::ledSetColorOrange" alt="" coords="203,56,399,83"/>
+<area shape="rect" id="node4" href="$class_et_robocon2018.html#a4a59819b7fc9d5068272c725d4592b69" title="EtRobocon2018::waitStarter" alt="" coords="208,107,395,133"/>
+<area shape="rect" id="node8" href="$class_controller.html#a1d690be9e14008230edb6ee8530485bf" title="Controller::ledSetColorGreen" alt="" coords="207,157,396,184"/>
+<area shape="rect" id="node9" href="$class_et_robocon2018.html#a57b11ce3aa3817092bf59224d3084085" title="EtRobocon2018::loop" alt="" coords="228,208,375,235"/>
+<area shape="rect" id="node5" href="$classev3api_1_1_touch_sensor.html#ae09cb8f7750789cf76998fcc0449e624" title="ev3api::TouchSensor\l::isPressed" alt="" coords="449,70,594,111"/>
+<area shape="rect" id="node7" href="$class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="457,136,586,163"/>
+<area shape="rect" id="node6" href="$classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92" title="ev3api::Sensor::getPort" alt="" coords="643,77,802,104"/>
+</map>

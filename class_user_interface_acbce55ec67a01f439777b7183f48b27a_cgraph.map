@@ -1,0 +1,8 @@
+<map id="UserInterface::setBrightness" name="UserInterface::setBrightness">
+<area shape="rect" id="node2" href="$class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="271,5,401,32"/>
+<area shape="rect" id="node3" href="$class_controller.html#ad1e858bf584915b7283a7726daf87de7" title="Controller::buttonIsPressed\lEnter" alt="" coords="245,57,427,98"/>
+<area shape="rect" id="node4" href="$class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3" title="Controller::speakerPlayTone" alt="" coords="243,123,429,149"/>
+<area shape="rect" id="node5" href="$class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3" title="Controller::printDisplay" alt="" coords="259,173,413,200"/>
+<area shape="rect" id="node6" href="$classev3api_1_1_color_sensor.html#a3716db0fc8d37fa67fe8c302aa2f3406" title="ev3api::ColorSensor\l::getBrightness" alt="" coords="266,225,406,266"/>
+<area shape="rect" id="node7" href="$classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92" title="ev3api::Sensor::getPort" alt="" coords="478,232,637,259"/>
+</map>

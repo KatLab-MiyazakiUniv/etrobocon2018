@@ -1,0 +1,675 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: Explorer クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
+      <li><a href="inherits.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_explorer-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">Explorer クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_explorer_8h_source.html">Explorer.h</a>&gt;</code></p>
+<div class="dynheader">
+Explorer 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_explorer__coll__graph.png" border="0" usemap="#_explorer_coll__map" alt="Collaboration graph"/></div>
+<map name="_explorer_coll__map" id="_explorer_coll__map">
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:acbedef0262785b6983d1fe9b4f2c6242"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_explorer.html#acbedef0262785b6983d1fe9b4f2c6242">Explorer</a> ()</td></tr>
+<tr class="separator:acbedef0262785b6983d1fe9b4f2c6242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5807592365f49ad3d76249a9a406dd68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_explorer.html#a5807592365f49ad3d76249a9a406dd68">createBlockArea</a> ()</td></tr>
+<tr class="separator:a5807592365f49ad3d76249a9a406dd68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c637c90b158016c5be1fcb01165a1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_explorer.html#a53c637c90b158016c5be1fcb01165a1e">resetBlockArea</a> ()</td></tr>
+<tr class="separator:a53c637c90b158016c5be1fcb01165a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee7149934ae124c0e6a7b90478da70a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_explorer.html#aee7149934ae124c0e6a7b90478da70a5">setHasBlockIn</a> (std::int8_t blockID)</td></tr>
+<tr class="separator:aee7149934ae124c0e6a7b90478da70a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2bca3a7689895975a8734557e320e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_explorer.html#a1d2bca3a7689895975a8734557e320e6">hasBlock</a> (std::int8_t id)</td></tr>
+<tr class="separator:a1d2bca3a7689895975a8734557e320e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38468adb7fd2b5ae688f1bca495d12de"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_explorer.html#a38468adb7fd2b5ae688f1bca495d12de">searchRoute</a> (std::int8_t start, std::int8_t end)</td></tr>
+<tr class="separator:a38468adb7fd2b5ae688f1bca495d12de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28a1f4268214e99cef86b39faf416ae0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_explorer.html#a28a1f4268214e99cef86b39faf416ae0">calculateNeighborCost</a> (<a class="el" href="class_node.html">Node</a> *parent, std::vector&lt; <a class="el" href="class_node.html">Node</a> * &gt; *around, std::int32_t realCost, std::int8_t end)</td></tr>
+<tr class="separator:a28a1f4268214e99cef86b39faf416ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3791b9361ce9613cfde3cfa89f886fb4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_node.html">Node</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_explorer.html#a3791b9361ce9613cfde3cfa89f886fb4">getBlockAreaNodeList</a> ()</td></tr>
+<tr class="separator:a3791b9361ce9613cfde3cfa89f886fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ルート探索クラス </p>
+<p>ETロボコン2018における、ブロック並べエリアのブロック置き場をノードとしたルート探索を行います。 斜め移動は考慮していません。 </p>
+<p>このクラスを利用して、別のブロック並べエリアを作成する場合は、次の4つの変数値を編集してください。 </p>
+<ul>
+<li>
+隣接ノードIDのリスト (デフォルトコンストラクタ内における<div class="fragment"><div class="line">neighborsIDList_ </div>
+</div><!-- fragment --> の初期化値)  </li>
+<li>
+相対的なノード位置のリスト (デフォルトコンストラクタ内における<div class="fragment"><div class="line">currentPosition </div>
+</div><!-- fragment --> の初期化値)  </li>
+<li>
+ブロック並べエリアにおけるノード総数 (<a class="el" href="">TOTAL_NODE_COUNT</a>)  </li>
+<li>
+ブロック並べエリアにおける各ブロック置き場が隣接するブロック置き場の最大数 (<a class="el" href="">MAX_NEIGHBOR_COUNT</a>)  </li>
+</ul>
+<p>Example </p>
+<pre>
+<div class="fragment"><div class="line"><a class="code" href="class_explorer.html">Explorer</a> explorer;</div>
+<div class="line">explorer.<a class="code" href="class_explorer.html#a5807592365f49ad3d76249a9a406dd68">createBlockArea</a>();</div>
+<div class="line"></div>
+<div class="line">explorer.<a class="code" href="class_explorer.html#a53c637c90b158016c5be1fcb01165a1e">resetBlockArea</a>(); <span class="comment">// 内部のフラグを初期化</span></div>
+<div class="line">explorer.<a class="code" href="class_explorer.html#aee7149934ae124c0e6a7b90478da70a5">setHasBlockIn</a>(8);</div>
+<div class="line">explorer.<a class="code" href="class_explorer.html#aee7149934ae124c0e6a7b90478da70a5">setHasBlockIn</a>(9);</div>
+<div class="line">explorer.<a class="code" href="class_explorer.html#aee7149934ae124c0e6a7b90478da70a5">setHasBlockIn</a>(11);</div>
+<div class="line">explorer.<a class="code" href="class_explorer.html#aee7149934ae124c0e6a7b90478da70a5">setHasBlockIn</a>(15);</div>
+<div class="line"><span class="keyword">auto</span> route = explorer.<a class="code" href="class_explorer.html#a38468adb7fd2b5ae688f1bca495d12de">searchRoute</a>(8, 10); <span class="comment">// == {8, 12, 13, 14, 10}</span></div>
+</div><!-- fragment --> 
+</pre> 
+<p> <a class="el" href="_explorer_8h_source.html">Explorer.h</a> の <a class="el" href="_explorer_8h_source.html#l00052">52</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a class="anchor" id="acbedef0262785b6983d1fe9b4f2c6242"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Explorer::Explorer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>デフォルトコンストラクタ </p>
+<p>各ブロック置き場における隣接ノードIDのリスト、およびノード位置リストを作成し、そのサイズを元にノードリストを初期化しています。 </p>
+
+<p> <a class="el" href="_explorer_8h_source.html">Explorer.h</a> の <a class="el" href="_explorer_8h_source.html#l00076">76</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    : blockAreaNodeList(<span class="keyword">nullptr</span>), neighborPtrs(TOTAL_NODE_COUNT), neighborsIDList(TOTAL_NODE_COUNT)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">// 隣接ノードIDのリスト</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::vector&lt;std::array&lt;std::int8_t, MAX_NEIGHBOR_COUNT&gt;&gt; neighborsIDList_{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      { { 1, 4, EMPTY_ID, EMPTY_ID },</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        { 0, 2, 5, EMPTY_ID },</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        { 1, 3, 6, EMPTY_ID },</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        { 2, 7, EMPTY_ID, EMPTY_ID },</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        { 0, 5, 8, EMPTY_ID },</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        { 1, 4, 6, 9 },</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        { 2, 5, 7, 10 },</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        { 3, 6, 11, EMPTY_ID },</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        { 4, 9, 12, EMPTY_ID },</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        { 5, 8, 10, 13 },</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        { 6, 9, 11, 14 },</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        { 7, 10, 15, EMPTY_ID },</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        { 8, 13, EMPTY_ID, EMPTY_ID },</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        { 9, 12, 14, EMPTY_ID },</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        { 10, 13, 15, EMPTY_ID },</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        { 11, 14, EMPTY_ID, EMPTY_ID } }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    };</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">// 相対的なノード位置のリスト</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    std::vector&lt;std::array&lt;std::int8_t, 2&gt;&gt; currentPosition</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        = { { 0, 0 }, { 1, 0 }, { 2, 0 }, { 3, 0 },</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            { 0, 1 }, { 1, 1 }, { 2, 1 }, { 3, 1 },</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            { 0, 2 }, { 1, 2 }, { 2, 2 }, { 3, 2 },</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            { 0, 3 }, { 1, 3 }, { 2, 3 }, { 3, 3 } };</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">// 以降は触れなくてよい</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; neighborsIDList_.size(); i++) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      neighborsIDList[i] = neighborsIDList_[i];</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; neighborsIDList.size(); i++) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      Position position;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      position.x = currentPosition[i][0];</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      position.y = currentPosition[i][1];</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      positionList.push_back(position);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="a28a1f4268214e99cef86b39faf416ae0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_node.html">Node</a> * Explorer::calculateNeighborCost </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_node.html">Node</a> * &gt; *&#160;</td>
+          <td class="paramname"><em>around</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>realCost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::int8_t&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ブロック置き場における隣接ノードのコストを計算します </p>
+<p>これはA*アルゴリズムで用いる再帰的な内部処理です。 <a class="el" href="class_explorer.html#a38468adb7fd2b5ae688f1bca495d12de">searchRoute(std::int8_t, std::int8_t)</a> でのみ利用しています。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>親ノードのポインタ </td></tr>
+    <tr><td class="paramname">around</td><td>周辺ノード </td></tr>
+    <tr><td class="paramname">realCost</td><td>実コスト </td></tr>
+    <tr><td class="paramname">end</td><td>終端ノードのノードID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>終端ノードのポインタ </dd></dl>
+
+<p> <a class="el" href="_explorer_8cpp_source.html">Explorer.cpp</a> の <a class="el" href="_explorer_8cpp_source.html#l00085">85</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">auto</span> currentItr = blockAreaNodeList-&gt;begin() + parent-&gt;<a class="code" href="class_node.html#acc4776c4da27dd7c7618f28568546f22">getNodeID</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">auto</span> endItr = blockAreaNodeList-&gt;begin() + end;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  parent-&gt;<a class="code" href="class_node.html#abed661b14cfb80013b73808e175a8515">setBeClosed</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordflow">for</span>(<span class="keyword">auto</span> itr = (*currentItr)-&gt;getNeighbors()-&gt;begin();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      itr != (*currentItr)-&gt;getNeighbors()-&gt;end(); itr++) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">if</span>((*itr)-&gt;isClosed() || (*itr) == parent-&gt;<a class="code" href="class_node.html#a49c84e314cd987257880970217b7e01d">getParentNode</a>()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">int</span> estimatedCostX = std::abs((*endItr)-&gt;getPositionX() - (*itr)-&gt;getPositionX());</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">int</span> estimatedCostY = std::abs((*endItr)-&gt;getPositionY() - (*itr)-&gt;getPositionY());</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">int</span> score = realCost + estimatedCostX + estimatedCostY;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span>((*itr)-&gt;hasBlock() &amp;&amp; (*itr)-&gt;getNodeID() != end) score += 99;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    (*itr)-&gt;setScore(score);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    (*itr)-&gt;setRealCost(realCost);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    (*itr)-&gt;setParentNode(parent);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    around-&gt;push_back((*itr));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  std::int32_t min = 999;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  std::int32_t minCost = 999;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <a class="code" href="class_node.html">Node</a>* minNode = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordflow">for</span>(<span class="keyword">auto</span> itr = around-&gt;begin(); itr != around-&gt;end(); itr++) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">if</span>((*itr)-&gt;isClosed() || (*itr) == parent-&gt;<a class="code" href="class_node.html#a49c84e314cd987257880970217b7e01d">getParentNode</a>()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">int</span> score = (*itr)-&gt;<a class="code" href="class_node.html#a268164af093b84d3be75ce579d83cd0e">getScore</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">if</span>(score &gt; min || (score == min &amp;&amp; (*itr)-&gt;getRealCost() &gt;= minCost)) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    min = score;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    minCost = (*itr)-&gt;getRealCost();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    minNode = (*itr);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">if</span>(minNode-&gt;<a class="code" href="class_node.html#acc4776c4da27dd7c7618f28568546f22">getNodeID</a>() != end) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    std::int8_t cost = 0;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="class_node.html">Node</a>* node = minNode;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">while</span>(node-&gt;<a class="code" href="class_node.html#a49c84e314cd987257880970217b7e01d">getParentNode</a>() == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      cost++;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      node = node-&gt;<a class="code" href="class_node.html#a49c84e314cd987257880970217b7e01d">getParentNode</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    minNode = <a class="code" href="class_explorer.html#a28a1f4268214e99cef86b39faf416ae0">calculateNeighborCost</a>(minNode, around, realCost + 1, end);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordflow">return</span> minNode;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="ttc" id="class_node_html_a49c84e314cd987257880970217b7e01d"><div class="ttname"><a href="class_node.html#a49c84e314cd987257880970217b7e01d">Node::getParentNode</a></div><div class="ttdeci">Node * getParentNode()</div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00054">Node.cpp:54</a></div></div>
+<div class="ttc" id="class_node_html"><div class="ttname"><a href="class_node.html">Node</a></div><div class="ttdef"><b>Definition:</b> <a href="_node_8h_source.html#l00142">Node.h:142</a></div></div>
+<div class="ttc" id="class_explorer_html_a28a1f4268214e99cef86b39faf416ae0"><div class="ttname"><a href="class_explorer.html#a28a1f4268214e99cef86b39faf416ae0">Explorer::calculateNeighborCost</a></div><div class="ttdeci">Node * calculateNeighborCost(Node *parent, std::vector&lt; Node * &gt; *around, std::int32_t realCost, std::int8_t end)</div><div class="ttdef"><b>Definition:</b> <a href="_explorer_8cpp_source.html#l00085">Explorer.cpp:85</a></div></div>
+<div class="ttc" id="class_node_html_abed661b14cfb80013b73808e175a8515"><div class="ttname"><a href="class_node.html#abed661b14cfb80013b73808e175a8515">Node::setBeClosed</a></div><div class="ttdeci">void setBeClosed(bool closed_)</div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00079">Node.cpp:79</a></div></div>
+<div class="ttc" id="class_node_html_acc4776c4da27dd7c7618f28568546f22"><div class="ttname"><a href="class_node.html#acc4776c4da27dd7c7618f28568546f22">Node::getNodeID</a></div><div class="ttdeci">std::int8_t getNodeID()</div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00018">Node.cpp:18</a></div></div>
+<div class="ttc" id="class_node_html_a268164af093b84d3be75ce579d83cd0e"><div class="ttname"><a href="class_node.html#a268164af093b84d3be75ce579d83cd0e">Node::getScore</a></div><div class="ttdeci">std::int32_t getScore()</div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00064">Node.cpp:64</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_explorer_a28a1f4268214e99cef86b39faf416ae0_cgraph.png" border="0" usemap="#class_explorer_a28a1f4268214e99cef86b39faf416ae0_cgraph" alt=""/></div>
+<map name="class_explorer_a28a1f4268214e99cef86b39faf416ae0_cgraph" id="class_explorer_a28a1f4268214e99cef86b39faf416ae0_cgraph">
+<area shape="rect" id="node2" href="class_node.html#acc4776c4da27dd7c7618f28568546f22" title="Node::getNodeID" alt="" coords="277,5,401,32"/><area shape="rect" id="node3" href="class_node.html#abed661b14cfb80013b73808e175a8515" title="Node::setBeClosed" alt="" coords="271,56,407,83"/><area shape="rect" id="node4" href="class_node.html#a49c84e314cd987257880970217b7e01d" title="Node::getParentNode" alt="" coords="265,107,413,133"/><area shape="rect" id="node5" href="class_node.html#a268164af093b84d3be75ce579d83cd0e" title="Node::getScore" alt="" coords="282,157,395,184"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_explorer_a28a1f4268214e99cef86b39faf416ae0_icgraph.png" border="0" usemap="#class_explorer_a28a1f4268214e99cef86b39faf416ae0_icgraph" alt=""/></div>
+<map name="class_explorer_a28a1f4268214e99cef86b39faf416ae0_icgraph" id="class_explorer_a28a1f4268214e99cef86b39faf416ae0_icgraph">
+<area shape="rect" id="node2" href="class_explorer.html#a38468adb7fd2b5ae688f1bca495d12de" title="Explorer::searchRoute" alt="" coords="264,100,416,127"/><area shape="rect" id="node3" href="class_selector.html#aa3691c1a35cd0c7ee24f552d139511e2" title="Selector::searchBlockPosition" alt="" coords="464,12,661,39"/><area shape="rect" id="node8" href="class_selector.html#ac3f2b39e32ab217f6c36a31e230e51c1" title="Selector::searchMostPoor\lCostShelter" alt="" coords="476,63,649,105"/><area shape="rect" id="node9" href="class_selector.html#afd2086b7dbe7b5d284c8adee5ea82b7f" title="Selector::searchRoute" alt="" coords="487,129,639,156"/><area shape="rect" id="node11" href="namespaceetrobocon2018__test.html#a5030a01b8334e033a1bd8d9e8eae9d70" title="etrobocon2018_test\l::TEST" alt="" coords="495,181,631,222"/><area shape="rect" id="node4" href="class_selector.html#a0fdb154d0341aed4c2df2a38a8bd0676" title="Selector::exploreNextOperation" alt="" coords="710,71,914,97"/><area shape="rect" id="node7" href="namespaceetrobocon2018__test.html#a5083cb7238fca0c225a82a47de1cc9dc" title="etrobocon2018_test\l::TEST" alt="" coords="744,5,880,46"/><area shape="rect" id="node5" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="971,41,1090,68"/><area shape="rect" id="node6" href="namespaceetrobocon2018__test.html#ae32033e90cf0cb2b8eb06ba8c281d1b5" title="etrobocon2018_test\l::TEST" alt="" coords="963,93,1099,134"/><area shape="rect" id="node10" href="namespaceetrobocon2018__test.html#a10ce8ce9da4f3a5064eb3996cd54faa9" title="etrobocon2018_test\l::TEST" alt="" coords="744,122,880,163"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5807592365f49ad3d76249a9a406dd68"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Explorer::createBlockArea </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ブロックエリアのノードリストを作成します </p>
+<p>作成方法は、 <a class="el" href="class_node.html">Node</a> クラスのドキュメントを参考にしました。 </p>
+
+<p> <a class="el" href="_explorer_8cpp_source.html">Explorer.cpp</a> の <a class="el" href="_explorer_8cpp_source.html#l00003">3</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">int</span> nodeCount = neighborsIDList.size();</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="comment">// ノードのポインタのリストを作成</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nodeCount; i++) {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_node.html">Node</a> node;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    node.<a class="code" href="class_node.html#a4499664cb91fd5d4ff2beca381d0e6b0">setNodeID</a>(i);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    nodeList.push_back(node);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    nodePtrs.push_back(&amp;nodeList[i]);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">//nodePtrs.push_back(&amp;node);</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="comment">// 隣接ノードのポインタのリストをノード分リスト化</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nodeCount; i++) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> nodeID : neighborsIDList[i]) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      <span class="keywordflow">if</span>(nodeID == EMPTY_ID) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      neighborPtrs[i].push_back(nodePtrs[nodeID]);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="comment">// 隣接ノードのポインタのリストを格納</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nodeCount; i++) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    nodePtrs[i]-&gt;setNeighbors(&amp;neighborPtrs[i]);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    nodePtrs[i]-&gt;setPosition(positionList[i].x, positionList[i].y);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="comment">// 各ノードのポインタを格納</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  blockAreaNodeList = &amp;nodePtrs;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="ttc" id="class_node_html_a4499664cb91fd5d4ff2beca381d0e6b0"><div class="ttname"><a href="class_node.html#a4499664cb91fd5d4ff2beca381d0e6b0">Node::setNodeID</a></div><div class="ttdeci">void setNodeID(std::int8_t nodeNumber)</div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00013">Node.cpp:13</a></div></div>
+<div class="ttc" id="class_node_html"><div class="ttname"><a href="class_node.html">Node</a></div><div class="ttdef"><b>Definition:</b> <a href="_node_8h_source.html#l00142">Node.h:142</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_explorer_a5807592365f49ad3d76249a9a406dd68_cgraph.png" border="0" usemap="#class_explorer_a5807592365f49ad3d76249a9a406dd68_cgraph" alt=""/></div>
+<map name="class_explorer_a5807592365f49ad3d76249a9a406dd68_cgraph" id="class_explorer_a5807592365f49ad3d76249a9a406dd68_cgraph">
+<area shape="rect" id="node2" href="class_node.html#a4499664cb91fd5d4ff2beca381d0e6b0" title="Node::setNodeID" alt="" coords="230,5,354,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_explorer_a5807592365f49ad3d76249a9a406dd68_icgraph.png" border="0" usemap="#class_explorer_a5807592365f49ad3d76249a9a406dd68_icgraph" alt=""/></div>
+<map name="class_explorer_a5807592365f49ad3d76249a9a406dd68_icgraph" id="class_explorer_a5807592365f49ad3d76249a9a406dd68_icgraph">
+<area shape="rect" id="node2" href="class_selector.html#a55730d11cba896e63144c0f0e1cdafd2" title="Selector::Selector" alt="" coords="234,5,361,32"/><area shape="rect" id="node3" href="namespaceetrobocon2018__test.html#a56c22afc06463bd4d68edff97bc5a5e9" title="etrobocon2018_test\l::TEST" alt="" coords="229,57,365,98"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3791b9361ce9613cfde3cfa89f886fb4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_node.html">Node</a> * &gt; * Explorer::getBlockAreaNodeList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ブロック置き場のノードのポインタのリストのポインタを取得します </p>
+<dl class="section return"><dt>戻り値</dt><dd>ブロック置き場のノードのポインタのリストのポインタ </dd></dl>
+
+<p> <a class="el" href="_explorer_8cpp_source.html">Explorer.cpp</a> の <a class="el" href="_explorer_8cpp_source.html#l00136">136</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordflow">return</span> blockAreaNodeList;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_explorer_a3791b9361ce9613cfde3cfa89f886fb4_icgraph.png" border="0" usemap="#class_explorer_a3791b9361ce9613cfde3cfa89f886fb4_icgraph" alt=""/></div>
+<map name="class_explorer_a3791b9361ce9613cfde3cfa89f886fb4_icgraph" id="class_explorer_a3791b9361ce9613cfde3cfa89f886fb4_icgraph">
+<area shape="rect" id="node2" href="namespaceetrobocon2018__test.html#ac89c519e043a898bf196b2bdd0e6efb9" title="etrobocon2018_test\l::TEST" alt="" coords="261,5,397,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1d2bca3a7689895975a8734557e320e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Explorer::hasBlock </td>
+          <td>(</td>
+          <td class="paramtype">std::int8_t&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ブロック置き場のノードがブロックを保持している場合は真を返す真偽値判定を行います </p>
+<p>引数でブロックの数以上の数値を入力した場合、何かしらのエラーが発生します。 それに関する責任をこの関数は持ちません。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>ブロック置き場のノードID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>ブロック置き場のノードがブロックを保持している場合は真を返す真偽値 </dd></dl>
+
+<p> <a class="el" href="_explorer_8cpp_source.html">Explorer.cpp</a> の <a class="el" href="_explorer_8cpp_source.html#l00050">50</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">auto</span> itr = blockAreaNodeList-&gt;begin() + id;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">return</span> (*itr)-&gt;hasBlock();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_explorer_a1d2bca3a7689895975a8734557e320e6_icgraph.png" border="0" usemap="#class_explorer_a1d2bca3a7689895975a8734557e320e6_icgraph" alt=""/></div>
+<map name="class_explorer_a1d2bca3a7689895975a8734557e320e6_icgraph" id="class_explorer_a1d2bca3a7689895975a8734557e320e6_icgraph">
+<area shape="rect" id="node2" href="class_selector.html#a0fdb154d0341aed4c2df2a38a8bd0676" title="Selector::exploreNextOperation" alt="" coords="409,35,613,61"/><area shape="rect" id="node5" href="class_selector.html#ac3f2b39e32ab217f6c36a31e230e51c1" title="Selector::searchMostPoor\lCostShelter" alt="" coords="187,57,360,98"/><area shape="rect" id="node6" href="namespaceetrobocon2018__test.html#ab07edd73e3a192902a31bdf72c2bf05b" title="etrobocon2018_test\l::TEST" alt="" coords="205,122,341,163"/><area shape="rect" id="node3" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="670,5,789,32"/><area shape="rect" id="node4" href="namespaceetrobocon2018__test.html#ae32033e90cf0cb2b8eb06ba8c281d1b5" title="etrobocon2018_test\l::TEST" alt="" coords="661,57,797,98"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a53c637c90b158016c5be1fcb01165a1e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Explorer::resetBlockArea </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ブロックエリアのノードリストにおける探索時のフラグなどを初期化します </p>
+
+<p> <a class="el" href="_explorer_8cpp_source.html">Explorer.cpp</a> の <a class="el" href="_explorer_8cpp_source.html#l00033">33</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordflow">for</span>(<span class="keyword">auto</span> itr = blockAreaNodeList-&gt;begin(); itr &lt;= blockAreaNodeList-&gt;end(); itr++) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    (*itr)-&gt;setBeClosed(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    (*itr)-&gt;setHasBlock(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    (*itr)-&gt;setScore(0);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    (*itr)-&gt;setRealCost(0);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    (*itr)-&gt;setParentNode(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_explorer_a53c637c90b158016c5be1fcb01165a1e_icgraph.png" border="0" usemap="#class_explorer_a53c637c90b158016c5be1fcb01165a1e_icgraph" alt=""/></div>
+<map name="class_explorer_a53c637c90b158016c5be1fcb01165a1e_icgraph" id="class_explorer_a53c637c90b158016c5be1fcb01165a1e_icgraph">
+<area shape="rect" id="node2" href="class_selector.html#a0fdb154d0341aed4c2df2a38a8bd0676" title="Selector::exploreNextOperation" alt="" coords="467,39,671,66"/><area shape="rect" id="node5" href="class_selector.html#aa3691c1a35cd0c7ee24f552d139511e2" title="Selector::searchBlockPosition" alt="" coords="221,98,419,125"/><area shape="rect" id="node7" href="class_selector.html#ac3f2b39e32ab217f6c36a31e230e51c1" title="Selector::searchMostPoor\lCostShelter" alt="" coords="233,32,407,73"/><area shape="rect" id="node8" href="class_selector.html#a53a60ecbad05dff891bd15a91d6a62fc" title="Selector::prepareSearching" alt="" coords="231,149,409,175"/><area shape="rect" id="node10" href="namespaceetrobocon2018__test.html#a893f0cce1310ca32a9fc361565cf11fd" title="etrobocon2018_test\l::TEST" alt="" coords="252,200,388,241"/><area shape="rect" id="node3" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="729,10,847,37"/><area shape="rect" id="node4" href="namespaceetrobocon2018__test.html#ae32033e90cf0cb2b8eb06ba8c281d1b5" title="etrobocon2018_test\l::TEST" alt="" coords="720,61,856,103"/><area shape="rect" id="node6" href="namespaceetrobocon2018__test.html#a5083cb7238fca0c225a82a47de1cc9dc" title="etrobocon2018_test\l::TEST" alt="" coords="501,91,637,132"/><area shape="rect" id="node9" href="namespaceetrobocon2018__test.html#a10ce8ce9da4f3a5064eb3996cd54faa9" title="etrobocon2018_test\l::TEST" alt="" coords="501,156,637,197"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a38468adb7fd2b5ae688f1bca495d12de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; int &gt; Explorer::searchRoute </td>
+          <td>(</td>
+          <td class="paramtype">std::int8_t&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::int8_t&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ブロック置き場エリアにおける移動ルートを探索します </p>
+<p>スタート位置と向かいたい位置を入力すると、</p>
+<div class="fragment"><div class="line">std::vector&lt;int&gt; </div>
+</div><!-- fragment --><p> 型のリストを返します。 これは、ブロック置き場の位置コードのリストであり、隣接ノードが連なっています。 たとえば、位置コード8から位置コード10に移動したい場合は、</p>
+<div class="fragment"><div class="line">{8, 9, 10} </div>
+</div><!-- fragment --><p> を返します。 もし位置コード9にブロックが存在している場合は、</p>
+<div class="fragment"><div class="line">{8, 12, 13, 14, 10} </div>
+</div><!-- fragment --><p> を返します。 斜め移動は未対応です。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>スタート位置の位置コード </td></tr>
+    <tr><td class="paramname">end</td><td>向かいたい位置の位置コード </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>ブロック置き場の位置コードのリスト </dd></dl>
+
+<p> <a class="el" href="_explorer_8cpp_source.html">Explorer.cpp</a> の <a class="el" href="_explorer_8cpp_source.html#l00056">56</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">auto</span> startItr = blockAreaNodeList-&gt;begin() + start;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">auto</span> endItr = blockAreaNodeList-&gt;begin() + end;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">int</span> estimatedCostX = std::abs((*endItr)-&gt;getPositionX() - (*startItr)-&gt;getPositionX());</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">int</span> estimatedCostY = std::abs((*endItr)-&gt;getPositionY() - (*startItr)-&gt;getPositionY());</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">int</span> score = estimatedCostX + estimatedCostY;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordflow">if</span>((*startItr)-&gt;hasBlock()) score += 99;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  (*startItr)-&gt;setScore(score);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  (*startItr)-&gt;setRealCost(0);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  (*startItr)-&gt;setParentNode(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  std::vector&lt;Node*&gt; around;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="class_node.html">Node</a>* endNode = <a class="code" href="class_explorer.html#a28a1f4268214e99cef86b39faf416ae0">calculateNeighborCost</a>((*startItr), &amp;around, 1, end);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  std::vector&lt;int&gt; route = { endNode-&gt;<a class="code" href="class_node.html#acc4776c4da27dd7c7618f28568546f22">getNodeID</a>() };</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <a class="code" href="class_node.html">Node</a>* parent = endNode-&gt;<a class="code" href="class_node.html#a49c84e314cd987257880970217b7e01d">getParentNode</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordflow">while</span>(parent != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    route.push_back(parent-&gt;<a class="code" href="class_node.html#acc4776c4da27dd7c7618f28568546f22">getNodeID</a>());</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    parent = parent-&gt;<a class="code" href="class_node.html#a49c84e314cd987257880970217b7e01d">getParentNode</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  std::reverse(route.begin(), route.end());</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordflow">return</span> route;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="ttc" id="class_node_html_a49c84e314cd987257880970217b7e01d"><div class="ttname"><a href="class_node.html#a49c84e314cd987257880970217b7e01d">Node::getParentNode</a></div><div class="ttdeci">Node * getParentNode()</div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00054">Node.cpp:54</a></div></div>
+<div class="ttc" id="class_node_html"><div class="ttname"><a href="class_node.html">Node</a></div><div class="ttdef"><b>Definition:</b> <a href="_node_8h_source.html#l00142">Node.h:142</a></div></div>
+<div class="ttc" id="class_explorer_html_a28a1f4268214e99cef86b39faf416ae0"><div class="ttname"><a href="class_explorer.html#a28a1f4268214e99cef86b39faf416ae0">Explorer::calculateNeighborCost</a></div><div class="ttdeci">Node * calculateNeighborCost(Node *parent, std::vector&lt; Node * &gt; *around, std::int32_t realCost, std::int8_t end)</div><div class="ttdef"><b>Definition:</b> <a href="_explorer_8cpp_source.html#l00085">Explorer.cpp:85</a></div></div>
+<div class="ttc" id="class_node_html_acc4776c4da27dd7c7618f28568546f22"><div class="ttname"><a href="class_node.html#acc4776c4da27dd7c7618f28568546f22">Node::getNodeID</a></div><div class="ttdeci">std::int8_t getNodeID()</div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00018">Node.cpp:18</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_explorer_a38468adb7fd2b5ae688f1bca495d12de_cgraph.png" border="0" usemap="#class_explorer_a38468adb7fd2b5ae688f1bca495d12de_cgraph" alt=""/></div>
+<map name="class_explorer_a38468adb7fd2b5ae688f1bca495d12de_cgraph" id="class_explorer_a38468adb7fd2b5ae688f1bca495d12de_cgraph">
+<area shape="rect" id="node2" href="class_explorer.html#a28a1f4268214e99cef86b39faf416ae0" title="Explorer::calculateNeighborCost" alt="" coords="205,69,416,96"/><area shape="rect" id="node3" href="class_node.html#acc4776c4da27dd7c7618f28568546f22" title="Node::getNodeID" alt="" coords="477,5,601,32"/><area shape="rect" id="node5" href="class_node.html#a49c84e314cd987257880970217b7e01d" title="Node::getParentNode" alt="" coords="465,157,613,184"/><area shape="rect" id="node4" href="class_node.html#abed661b14cfb80013b73808e175a8515" title="Node::setBeClosed" alt="" coords="471,56,607,83"/><area shape="rect" id="node6" href="class_node.html#a268164af093b84d3be75ce579d83cd0e" title="Node::getScore" alt="" coords="482,107,595,133"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_explorer_a38468adb7fd2b5ae688f1bca495d12de_icgraph.png" border="0" usemap="#class_explorer_a38468adb7fd2b5ae688f1bca495d12de_icgraph" alt=""/></div>
+<map name="class_explorer_a38468adb7fd2b5ae688f1bca495d12de_icgraph" id="class_explorer_a38468adb7fd2b5ae688f1bca495d12de_icgraph">
+<area shape="rect" id="node2" href="class_selector.html#aa3691c1a35cd0c7ee24f552d139511e2" title="Selector::searchBlockPosition" alt="" coords="205,12,403,39"/><area shape="rect" id="node7" href="class_selector.html#ac3f2b39e32ab217f6c36a31e230e51c1" title="Selector::searchMostPoor\lCostShelter" alt="" coords="217,63,391,105"/><area shape="rect" id="node8" href="class_selector.html#afd2086b7dbe7b5d284c8adee5ea82b7f" title="Selector::searchRoute" alt="" coords="228,129,380,156"/><area shape="rect" id="node10" href="namespaceetrobocon2018__test.html#a5030a01b8334e033a1bd8d9e8eae9d70" title="etrobocon2018_test\l::TEST" alt="" coords="236,181,372,222"/><area shape="rect" id="node3" href="class_selector.html#a0fdb154d0341aed4c2df2a38a8bd0676" title="Selector::exploreNextOperation" alt="" coords="451,71,655,97"/><area shape="rect" id="node6" href="namespaceetrobocon2018__test.html#a5083cb7238fca0c225a82a47de1cc9dc" title="etrobocon2018_test\l::TEST" alt="" coords="485,5,621,46"/><area shape="rect" id="node4" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="713,41,831,68"/><area shape="rect" id="node5" href="namespaceetrobocon2018__test.html#ae32033e90cf0cb2b8eb06ba8c281d1b5" title="etrobocon2018_test\l::TEST" alt="" coords="704,93,840,134"/><area shape="rect" id="node9" href="namespaceetrobocon2018__test.html#a10ce8ce9da4f3a5064eb3996cd54faa9" title="etrobocon2018_test\l::TEST" alt="" coords="485,122,621,163"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aee7149934ae124c0e6a7b90478da70a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Explorer::setHasBlockIn </td>
+          <td>(</td>
+          <td class="paramtype">std::int8_t&#160;</td>
+          <td class="paramname"><em>blockID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ブロックが存在するブロック置き場の位置コードを設定します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">blockID</td><td>ブロック置き場の位置コード </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="_explorer_8cpp_source.html">Explorer.cpp</a> の <a class="el" href="_explorer_8cpp_source.html#l00044">44</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">auto</span> itr = blockAreaNodeList-&gt;begin() + blockID;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  (*itr)-&gt;setHasBlock(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_explorer_aee7149934ae124c0e6a7b90478da70a5_icgraph.png" border="0" usemap="#class_explorer_aee7149934ae124c0e6a7b90478da70a5_icgraph" alt=""/></div>
+<map name="class_explorer_aee7149934ae124c0e6a7b90478da70a5_icgraph" id="class_explorer_aee7149934ae124c0e6a7b90478da70a5_icgraph">
+<area shape="rect" id="node2" href="class_selector.html#a0fdb154d0341aed4c2df2a38a8bd0676" title="Selector::exploreNextOperation" alt="" coords="465,40,669,66"/><area shape="rect" id="node5" href="class_selector.html#aa3691c1a35cd0c7ee24f552d139511e2" title="Selector::searchBlockPosition" alt="" coords="219,98,416,125"/><area shape="rect" id="node7" href="class_selector.html#ac3f2b39e32ab217f6c36a31e230e51c1" title="Selector::searchMostPoor\lCostShelter" alt="" coords="231,32,404,74"/><area shape="rect" id="node8" href="class_selector.html#a53a60ecbad05dff891bd15a91d6a62fc" title="Selector::prepareSearching" alt="" coords="228,149,407,176"/><area shape="rect" id="node10" href="namespaceetrobocon2018__test.html#ab07edd73e3a192902a31bdf72c2bf05b" title="etrobocon2018_test\l::TEST" alt="" coords="249,200,385,242"/><area shape="rect" id="node3" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="726,10,845,37"/><area shape="rect" id="node4" href="namespaceetrobocon2018__test.html#ae32033e90cf0cb2b8eb06ba8c281d1b5" title="etrobocon2018_test\l::TEST" alt="" coords="717,62,853,103"/><area shape="rect" id="node6" href="namespaceetrobocon2018__test.html#a5083cb7238fca0c225a82a47de1cc9dc" title="etrobocon2018_test\l::TEST" alt="" coords="499,91,635,132"/><area shape="rect" id="node9" href="namespaceetrobocon2018__test.html#a10ce8ce9da4f3a5064eb3996cd54faa9" title="etrobocon2018_test\l::TEST" alt="" coords="499,156,635,198"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/apps/include/<a class="el" href="_explorer_8h_source.html">Explorer.h</a></li>
+<li>str/apps/src/<a class="el" href="_explorer_8cpp_source.html">Explorer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

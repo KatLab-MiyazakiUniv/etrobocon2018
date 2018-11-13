@@ -1,0 +1,5 @@
+<map id="ev3api::Clock::getTim" name="ev3api::Clock::getTim">
+<area shape="rect" id="node2" href="$classev3api_1_1_clock.html#ae68ba47fe6d8f4a7f515001c10547ac4" title="ev3api::Clock::reset" alt="" coords="205,5,344,32"/>
+<area shape="rect" id="node3" href="$classev3api_1_1_clock.html#a044403e10e530c8857cae901cdeb9999" title="ev3api::Clock::now" alt="" coords="207,56,342,83"/>
+<area shape="rect" id="node4" href="$str_2app_8h.html#a4c6b1bba8b11eacd00d4e456cf835fe2" title="sensor_log_task" alt="" coords="392,56,509,83"/>
+</map>

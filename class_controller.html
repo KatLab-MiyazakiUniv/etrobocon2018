@@ -1,0 +1,1573 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: Controller クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
+      <li><a href="inherits.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="class_controller-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">Controller クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_controller_8h_source.html">Controller.h</a>&gt;</code></p>
+<div class="dynheader">
+Controller 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller__coll__graph.png" border="0" usemap="#_controller_coll__map" alt="Collaboration graph"/></div>
+<map name="_controller_coll__map" id="_controller_coll__map">
+<area shape="rect" id="node2" href="class_motor.html" title="{Motor\n|+ count\l|+ getCount()\l+ setPWM()\l+ stop()\l+ reset()\l+ setBrake()\l}" alt="" coords="5,5,99,141"/><area shape="rect" id="node3" href="class_color_sensor.html" title="{ColorSensor\n|+ brightness\l|+ getBrightness()\l}" alt="" coords="124,35,247,112"/><area shape="rect" id="node4" href="class_touch_sensor.html" title="{TouchSensor\n||+ isPressed()\l}" alt="" coords="271,35,371,112"/><area shape="rect" id="node5" href="class_clock.html" title="{Clock\n||+ sleep()\l}" alt="" coords="398,35,471,112"/></map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a95c56822d667e94b031451729ce069a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a95c56822d667e94b031451729ce069a9">Controller</a> ()</td></tr>
+<tr class="separator:a95c56822d667e94b031451729ce069a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe0d8421a214918062ce17f65a229c70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#afe0d8421a214918062ce17f65a229c70">speakerSetVolume</a> (uint8_t volume)</td></tr>
+<tr class="separator:afe0d8421a214918062ce17f65a229c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3843d004fc1e44c63cd746b8822c2990"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a3843d004fc1e44c63cd746b8822c2990">ledSetColorOrange</a> ()</td></tr>
+<tr class="separator:a3843d004fc1e44c63cd746b8822c2990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d690be9e14008230edb6ee8530485bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a1d690be9e14008230edb6ee8530485bf">ledSetColorGreen</a> ()</td></tr>
+<tr class="separator:a1d690be9e14008230edb6ee8530485bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca9bc8f5a0a390d709d6dd2e5fd9b665"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#aca9bc8f5a0a390d709d6dd2e5fd9b665">getBrightness</a> ()</td></tr>
+<tr class="separator:aca9bc8f5a0a390d709d6dd2e5fd9b665"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe78dbb9fa2ce597920f71ce6bb031f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3">speakerPlayTone</a> (uint16_t frequency, int32_t duration)</td></tr>
+<tr class="separator:afe78dbb9fa2ce597920f71ce6bb031f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5674a4689bb73d50483bf19c617ac213"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a5674a4689bb73d50483bf19c617ac213">buttonIsPressedBack</a> ()</td></tr>
+<tr class="separator:a5674a4689bb73d50483bf19c617ac213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6c05b9804b91a9bd5fd50a17b4fb729"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ab6c05b9804b91a9bd5fd50a17b4fb729">buttonIsPressedUp</a> ()</td></tr>
+<tr class="separator:ab6c05b9804b91a9bd5fd50a17b4fb729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5fbb86e851a1d6602e68f4327870c5d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#aa5fbb86e851a1d6602e68f4327870c5d">buttonIsPressedDown</a> ()</td></tr>
+<tr class="separator:aa5fbb86e851a1d6602e68f4327870c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a22a0a31fb55dba1feac199cc9656ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a6a22a0a31fb55dba1feac199cc9656ee">buttonIsPressedRight</a> ()</td></tr>
+<tr class="separator:a6a22a0a31fb55dba1feac199cc9656ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c541c01b9a02403c43fac24b8c882ac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a3c541c01b9a02403c43fac24b8c882ac">buttonIsPressedLeft</a> ()</td></tr>
+<tr class="separator:a3c541c01b9a02403c43fac24b8c882ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1e858bf584915b7283a7726daf87de7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ad1e858bf584915b7283a7726daf87de7">buttonIsPressedEnter</a> ()</td></tr>
+<tr class="separator:ad1e858bf584915b7283a7726daf87de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4e64990a6ea658380e1f48dc8c71471"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ab4e64990a6ea658380e1f48dc8c71471">measureBatteryVoltage</a> ()</td></tr>
+<tr class="separator:ab4e64990a6ea658380e1f48dc8c71471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9aec1dda0c67029d9e2ddfebe31b530"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">tslpTsk</a> (int16_t time)</td></tr>
+<tr class="separator:ae9aec1dda0c67029d9e2ddfebe31b530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e0f2b19656800f5f86cd2e390efc7a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3">printDisplay</a> (int8_t row, const char *format,...)</td></tr>
+<tr class="separator:a1e0f2b19656800f5f86cd2e390efc7a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bd258b3a9d0689cd600e7ec51b867a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a5bd258b3a9d0689cd600e7ec51b867a8">getRawColor</a> (uint16_t &amp;r, uint16_t &amp;g, uint16_t &amp;b)</td></tr>
+<tr class="separator:a5bd258b3a9d0689cd600e7ec51b867a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95c56822d667e94b031451729ce069a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a95c56822d667e94b031451729ce069a9">Controller</a> ()</td></tr>
+<tr class="separator:a95c56822d667e94b031451729ce069a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e6cc64001e722afdcc130b9fbf5efae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a1e6cc64001e722afdcc130b9fbf5efae">speakerSetVolume</a> (int volume)</td></tr>
+<tr class="separator:a1e6cc64001e722afdcc130b9fbf5efae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3843d004fc1e44c63cd746b8822c2990"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a3843d004fc1e44c63cd746b8822c2990">ledSetColorOrange</a> ()</td></tr>
+<tr class="separator:a3843d004fc1e44c63cd746b8822c2990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d690be9e14008230edb6ee8530485bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a1d690be9e14008230edb6ee8530485bf">ledSetColorGreen</a> ()</td></tr>
+<tr class="separator:a1d690be9e14008230edb6ee8530485bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a592fca2802b9cea70ef24eba17db7ec8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a592fca2802b9cea70ef24eba17db7ec8">getBrightness</a> ()</td></tr>
+<tr class="separator:a592fca2802b9cea70ef24eba17db7ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15be89f5e43d8765a9866ced99fd0b3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a15be89f5e43d8765a9866ced99fd0b3d">speakerPlayTone</a> (int frequency, int duration)</td></tr>
+<tr class="separator:a15be89f5e43d8765a9866ced99fd0b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5674a4689bb73d50483bf19c617ac213"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a5674a4689bb73d50483bf19c617ac213">buttonIsPressedBack</a> ()</td></tr>
+<tr class="separator:a5674a4689bb73d50483bf19c617ac213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac76ebafce820fed07b3f3248445cf1c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ac76ebafce820fed07b3f3248445cf1c6">getRawColor</a> (std::uint16_t &amp;r, std::uint16_t &amp;g, std::uint16_t &amp;b)</td></tr>
+<tr class="separator:ac76ebafce820fed07b3f3248445cf1c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6c05b9804b91a9bd5fd50a17b4fb729"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ab6c05b9804b91a9bd5fd50a17b4fb729">buttonIsPressedUp</a> ()</td></tr>
+<tr class="separator:ab6c05b9804b91a9bd5fd50a17b4fb729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5fbb86e851a1d6602e68f4327870c5d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#aa5fbb86e851a1d6602e68f4327870c5d">buttonIsPressedDown</a> ()</td></tr>
+<tr class="separator:aa5fbb86e851a1d6602e68f4327870c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a22a0a31fb55dba1feac199cc9656ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a6a22a0a31fb55dba1feac199cc9656ee">buttonIsPressedRight</a> ()</td></tr>
+<tr class="separator:a6a22a0a31fb55dba1feac199cc9656ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c541c01b9a02403c43fac24b8c882ac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a3c541c01b9a02403c43fac24b8c882ac">buttonIsPressedLeft</a> ()</td></tr>
+<tr class="separator:a3c541c01b9a02403c43fac24b8c882ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1e858bf584915b7283a7726daf87de7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ad1e858bf584915b7283a7726daf87de7">buttonIsPressedEnter</a> ()</td></tr>
+<tr class="separator:ad1e858bf584915b7283a7726daf87de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c68b1076bc4d456d69e92075a141cb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a2c68b1076bc4d456d69e92075a141cb3">tslpTsk</a> (int time)</td></tr>
+<tr class="separator:a2c68b1076bc4d456d69e92075a141cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a036762bd8c526d02433a629f8226629b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a036762bd8c526d02433a629f8226629b">printDisplay</a> (int row, const char *format,...)</td></tr>
+<tr class="separator:a036762bd8c526d02433a629f8226629b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cc137ee604806ebd1ff60926a622a2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a3cc137ee604806ebd1ff60926a622a2b">setMockRgb</a> (std::uint16_t r, std::uint16_t g, std::uint16_t b)</td></tr>
+<tr class="separator:a3cc137ee604806ebd1ff60926a622a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:ac9ef84ce6b7535d06589fbaffcdf931b"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ac9ef84ce6b7535d06589fbaffcdf931b">noteFs6</a> = NOTE_FS6</td></tr>
+<tr class="separator:ac9ef84ce6b7535d06589fbaffcdf931b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7c5ed29a3e87e63ab1f399183c40e61"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ab7c5ed29a3e87e63ab1f399183c40e61">noteFs4</a> = NOTE_FS4</td></tr>
+<tr class="separator:ab7c5ed29a3e87e63ab1f399183c40e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e19c12fa264d296fafb2996459ddae2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classev3api_1_1_touch_sensor.html">TouchSensor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a5e19c12fa264d296fafb2996459ddae2">touchSensor</a></td></tr>
+<tr class="separator:a5e19c12fa264d296fafb2996459ddae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac252a70d6b3b606bd5ce313767b74b96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classev3api_1_1_color_sensor.html">ColorSensor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ac252a70d6b3b606bd5ce313767b74b96">colorSensor</a></td></tr>
+<tr class="separator:ac252a70d6b3b606bd5ce313767b74b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84196b437fe0194e4d3f15f16b8cddc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classev3api_1_1_motor.html">Motor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a></td></tr>
+<tr class="separator:a84196b437fe0194e4d3f15f16b8cddc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6091a6af8538a5b4e7469b3591740c79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classev3api_1_1_motor.html">Motor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a6091a6af8538a5b4e7469b3591740c79">rightWheel</a></td></tr>
+<tr class="separator:a6091a6af8538a5b4e7469b3591740c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6df4e895058247563c3aa3e392c543d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classev3api_1_1_motor.html">Motor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ab6df4e895058247563c3aa3e392c543d">leftWheel</a></td></tr>
+<tr class="separator:ab6df4e895058247563c3aa3e392c543d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ee53fa166c8100bd346830647e4d3e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classev3api_1_1_motor.html">Motor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a7ee53fa166c8100bd346830647e4d3e3">tailMotor</a></td></tr>
+<tr class="separator:a7ee53fa166c8100bd346830647e4d3e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55147b5c14f76de55eb646d25ccb746f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classev3api_1_1_clock.html">Clock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a55147b5c14f76de55eb646d25ccb746f">clock</a></td></tr>
+<tr class="separator:a55147b5c14f76de55eb646d25ccb746f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a243fc48d4292eb3cbeb187723c8283c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a243fc48d4292eb3cbeb187723c8283c4">noteFs6</a> = 0</td></tr>
+<tr class="separator:a243fc48d4292eb3cbeb187723c8283c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a607e880f8185c7f496c69a347cc469d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a607e880f8185c7f496c69a347cc469d2">noteFs4</a> = 0</td></tr>
+<tr class="separator:a607e880f8185c7f496c69a347cc469d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae89b55ad9f808b471cb44c3097b43838"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ae89b55ad9f808b471cb44c3097b43838">countLimit</a> = 100</td></tr>
+<tr class="separator:ae89b55ad9f808b471cb44c3097b43838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a382ec475a4774918d331bebfd5ef8abf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a382ec475a4774918d331bebfd5ef8abf">counter</a> = 0</td></tr>
+<tr class="separator:a382ec475a4774918d331bebfd5ef8abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad22015c6265eaf5781a03301400ccda1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ad22015c6265eaf5781a03301400ccda1">exitCounter</a> = 0</td></tr>
+<tr class="separator:ad22015c6265eaf5781a03301400ccda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fc548c8f80294c1074444a587b5c93f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a1fc548c8f80294c1074444a587b5c93f">exitCountLimit</a> = 1000</td></tr>
+<tr class="separator:a1fc548c8f80294c1074444a587b5c93f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24797d327988eeb5a370ebc9474c1959"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a24797d327988eeb5a370ebc9474c1959">brightness</a> = 0</td></tr>
+<tr class="separator:a24797d327988eeb5a370ebc9474c1959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a575b2277044ce049b32004b5706c7c04"><td class="memItemLeft" align="right" valign="top">std::uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a575b2277044ce049b32004b5706c7c04">mock_r</a></td></tr>
+<tr class="separator:a575b2277044ce049b32004b5706c7c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef8ff49d64f06fe47e004eb8721765ad"><td class="memItemLeft" align="right" valign="top">std::uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#aef8ff49d64f06fe47e004eb8721765ad">mock_g</a></td></tr>
+<tr class="separator:aef8ff49d64f06fe47e004eb8721765ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40c59804e9ea9ad0cefb50d21555b35"><td class="memItemLeft" align="right" valign="top">std::uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ae40c59804e9ea9ad0cefb50d21555b35">mock_b</a></td></tr>
+<tr class="separator:ae40c59804e9ea9ad0cefb50d21555b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00029">29</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a class="anchor" id="a95c56822d667e94b031451729ce069a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Controller::Controller </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00031">31</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    : <a class="code" href="class_controller.html#a5e19c12fa264d296fafb2996459ddae2">touchSensor</a>(<a class="code" href="_port_8h.html#a8d17f8fabb486d5815d626610983e82daa0bafbc5d1a37affbad146654a13527f">PORT_1</a>),</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      <a class="code" href="class_controller.html#ac252a70d6b3b606bd5ce313767b74b96">colorSensor</a>(<a class="code" href="_port_8h.html#a8d17f8fabb486d5815d626610983e82dac955981798afdb1cdd6c0fa3ccb09ae5">PORT_3</a>),</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>(<a class="code" href="_port_8h.html#a01d16e2109729e564c90cd6d211c0938aeb6782d9dfedf3c6a78ffdb1624fa454">PORT_A</a>),</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <a class="code" href="class_controller.html#a6091a6af8538a5b4e7469b3591740c79">rightWheel</a>(<a class="code" href="_port_8h.html#a01d16e2109729e564c90cd6d211c0938a16ada472d473fbd0207b99e9e4d68f4a">PORT_B</a>),</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <a class="code" href="class_controller.html#ab6df4e895058247563c3aa3e392c543d">leftWheel</a>(<a class="code" href="_port_8h.html#a01d16e2109729e564c90cd6d211c0938a627cc690c37f97527dd2f07aa22092d9">PORT_C</a>),</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <a class="code" href="class_controller.html#a7ee53fa166c8100bd346830647e4d3e3">tailMotor</a>(<a class="code" href="_port_8h.html#a01d16e2109729e564c90cd6d211c0938af7242fe75227a46a190645663f91ce69">PORT_D</a>)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="ttc" id="class_controller_html_a5e19c12fa264d296fafb2996459ddae2"><div class="ttname"><a href="class_controller.html#a5e19c12fa264d296fafb2996459ddae2">Controller::touchSensor</a></div><div class="ttdeci">TouchSensor touchSensor</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00042">Controller.h:42</a></div></div>
+<div class="ttc" id="class_controller_html_a84196b437fe0194e4d3f15f16b8cddc7"><div class="ttname"><a href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">Controller::liftMotor</a></div><div class="ttdeci">Motor liftMotor</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00044">Controller.h:44</a></div></div>
+<div class="ttc" id="_port_8h_html_a8d17f8fabb486d5815d626610983e82daa0bafbc5d1a37affbad146654a13527f"><div class="ttname"><a href="_port_8h.html#a8d17f8fabb486d5815d626610983e82daa0bafbc5d1a37affbad146654a13527f">PORT_1</a></div><div class="ttdef"><b>Definition:</b> <a href="_port_8h_source.html#l00020">Port.h:20</a></div></div>
+<div class="ttc" id="_port_8h_html_a01d16e2109729e564c90cd6d211c0938a16ada472d473fbd0207b99e9e4d68f4a"><div class="ttname"><a href="_port_8h.html#a01d16e2109729e564c90cd6d211c0938a16ada472d473fbd0207b99e9e4d68f4a">PORT_B</a></div><div class="ttdef"><b>Definition:</b> <a href="_port_8h_source.html#l00032">Port.h:32</a></div></div>
+<div class="ttc" id="_port_8h_html_a8d17f8fabb486d5815d626610983e82dac955981798afdb1cdd6c0fa3ccb09ae5"><div class="ttname"><a href="_port_8h.html#a8d17f8fabb486d5815d626610983e82dac955981798afdb1cdd6c0fa3ccb09ae5">PORT_3</a></div><div class="ttdef"><b>Definition:</b> <a href="_port_8h_source.html#l00022">Port.h:22</a></div></div>
+<div class="ttc" id="_port_8h_html_a01d16e2109729e564c90cd6d211c0938a627cc690c37f97527dd2f07aa22092d9"><div class="ttname"><a href="_port_8h.html#a01d16e2109729e564c90cd6d211c0938a627cc690c37f97527dd2f07aa22092d9">PORT_C</a></div><div class="ttdef"><b>Definition:</b> <a href="_port_8h_source.html#l00033">Port.h:33</a></div></div>
+<div class="ttc" id="class_controller_html_a7ee53fa166c8100bd346830647e4d3e3"><div class="ttname"><a href="class_controller.html#a7ee53fa166c8100bd346830647e4d3e3">Controller::tailMotor</a></div><div class="ttdeci">Motor tailMotor</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00047">Controller.h:47</a></div></div>
+<div class="ttc" id="class_controller_html_ac252a70d6b3b606bd5ce313767b74b96"><div class="ttname"><a href="class_controller.html#ac252a70d6b3b606bd5ce313767b74b96">Controller::colorSensor</a></div><div class="ttdeci">ColorSensor colorSensor</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00043">Controller.h:43</a></div></div>
+<div class="ttc" id="class_controller_html_ab6df4e895058247563c3aa3e392c543d"><div class="ttname"><a href="class_controller.html#ab6df4e895058247563c3aa3e392c543d">Controller::leftWheel</a></div><div class="ttdeci">Motor leftWheel</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00046">Controller.h:46</a></div></div>
+<div class="ttc" id="_port_8h_html_a01d16e2109729e564c90cd6d211c0938af7242fe75227a46a190645663f91ce69"><div class="ttname"><a href="_port_8h.html#a01d16e2109729e564c90cd6d211c0938af7242fe75227a46a190645663f91ce69">PORT_D</a></div><div class="ttdef"><b>Definition:</b> <a href="_port_8h_source.html#l00034">Port.h:34</a></div></div>
+<div class="ttc" id="_port_8h_html_a01d16e2109729e564c90cd6d211c0938aeb6782d9dfedf3c6a78ffdb1624fa454"><div class="ttname"><a href="_port_8h.html#a01d16e2109729e564c90cd6d211c0938aeb6782d9dfedf3c6a78ffdb1624fa454">PORT_A</a></div><div class="ttdef"><b>Definition:</b> <a href="_port_8h_source.html#l00031">Port.h:31</a></div></div>
+<div class="ttc" id="class_controller_html_a6091a6af8538a5b4e7469b3591740c79"><div class="ttname"><a href="class_controller.html#a6091a6af8538a5b4e7469b3591740c79">Controller::rightWheel</a></div><div class="ttdeci">Motor rightWheel</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00045">Controller.h:45</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a95c56822d667e94b031451729ce069a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Controller::Controller </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00049">49</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{ <a class="code" href="class_controller.html#a575b2277044ce049b32004b5706c7c04">mock_r</a> = <a class="code" href="class_controller.html#aef8ff49d64f06fe47e004eb8721765ad">mock_g</a> = <a class="code" href="class_controller.html#ae40c59804e9ea9ad0cefb50d21555b35">mock_b</a> = 0; }</div>
+<div class="ttc" id="class_controller_html_a575b2277044ce049b32004b5706c7c04"><div class="ttname"><a href="class_controller.html#a575b2277044ce049b32004b5706c7c04">Controller::mock_r</a></div><div class="ttdeci">std::uint16_t mock_r</div><div class="ttdef"><b>Definition:</b> <a href="_mock_controller_8h_source.html#l00095">MockController.h:95</a></div></div>
+<div class="ttc" id="class_controller_html_aef8ff49d64f06fe47e004eb8721765ad"><div class="ttname"><a href="class_controller.html#aef8ff49d64f06fe47e004eb8721765ad">Controller::mock_g</a></div><div class="ttdeci">std::uint16_t mock_g</div><div class="ttdef"><b>Definition:</b> <a href="_mock_controller_8h_source.html#l00095">MockController.h:95</a></div></div>
+<div class="ttc" id="class_controller_html_ae40c59804e9ea9ad0cefb50d21555b35"><div class="ttname"><a href="class_controller.html#ae40c59804e9ea9ad0cefb50d21555b35">Controller::mock_b</a></div><div class="ttdeci">std::uint16_t mock_b</div><div class="ttdef"><b>Definition:</b> <a href="_mock_controller_8h_source.html#l00095">MockController.h:95</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="a5674a4689bb73d50483bf19c617ac213"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::buttonIsPressedBack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00024">24</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordflow">return</span> ev3_button_is_pressed(BACK_BUTTON);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller_a5674a4689bb73d50483bf19c617ac213_icgraph.png" border="0" usemap="#class_controller_a5674a4689bb73d50483bf19c617ac213_icgraph" alt=""/></div>
+<map name="class_controller_a5674a4689bb73d50483bf19c617ac213_icgraph" id="class_controller_a5674a4689bb73d50483bf19c617ac213_icgraph">
+<area shape="rect" id="node2" href="str_2app_8h.html#ab874c34d9d66b14d189a9a3f2d065991" title="main_task" alt="" coords="325,102,408,128"/><area shape="rect" id="node3" href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a" title="指定した色のブロック置き場までライントレースします。 " alt="" coords="273,204,461,245"/><area shape="rect" id="node9" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="285,152,448,179"/><area shape="rect" id="node11" href="class_left_course.html#af1faf09b5d0ac101ceb1fec6e60bfe1a" title="LeftCourse::runGoBlack" alt="" coords="528,319,691,346"/><area shape="rect" id="node12" href="class_left_course.html#ae76ee13a3a287b5bbe6b90c2ad9bd368" title="LeftCourse::runGoStraight" alt="" coords="279,270,454,296"/><area shape="rect" id="node13" href="class_left_course.html#a9bbbc6e2b68c99c5baaa9b8a7a951cb6" title="LeftCourse::runNormalCourse" alt="" coords="269,371,465,398"/><area shape="rect" id="node14" href="class_parking.html#a0ced699cd4a26fa9d3f0084be7aad329" title="Parking::runParpendicular" alt="" coords="281,422,452,448"/><area shape="rect" id="node15" href="class_parking.html#a1c8534b97e4fb30fb02eb3c2f9ff95a0" title="Parking::runParallel" alt="" coords="299,472,434,499"/><area shape="rect" id="node16" href="class_right_course.html#a0718c3e06bc3377fdb7a3334029323fb" title="RightCourse::runNormalCourse" alt="" coords="264,523,469,550"/><area shape="rect" id="node4" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="993,184,1125,211"/><area shape="rect" id="node5" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="999,83,1118,110"/><area shape="rect" id="node6" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="517,155,701,182"/><area shape="rect" id="node7" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="758,159,935,186"/><area shape="rect" id="node8" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="763,108,930,135"/><area shape="rect" id="node10" href="class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="749,7,944,34"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5674a4689bb73d50483bf19c617ac213"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::buttonIsPressedBack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00055">55</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="class_controller.html#a382ec475a4774918d331bebfd5ef8abf">counter</a>++;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_controller.html#a382ec475a4774918d331bebfd5ef8abf">counter</a> &gt;= <a class="code" href="class_controller.html#ae89b55ad9f808b471cb44c3097b43838">countLimit</a>) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  };</div>
+<div class="ttc" id="class_controller_html_a382ec475a4774918d331bebfd5ef8abf"><div class="ttname"><a href="class_controller.html#a382ec475a4774918d331bebfd5ef8abf">Controller::counter</a></div><div class="ttdeci">int counter</div><div class="ttdef"><b>Definition:</b> <a href="_mock_controller_8h_source.html#l00091">MockController.h:91</a></div></div>
+<div class="ttc" id="class_controller_html_ae89b55ad9f808b471cb44c3097b43838"><div class="ttname"><a href="class_controller.html#ae89b55ad9f808b471cb44c3097b43838">Controller::countLimit</a></div><div class="ttdeci">int countLimit</div><div class="ttdef"><b>Definition:</b> <a href="_mock_controller_8h_source.html#l00090">MockController.h:90</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aa5fbb86e851a1d6602e68f4327870c5d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::buttonIsPressedDown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00039">39</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordflow">return</span> ev3_button_is_pressed(DOWN_BUTTON);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller_aa5fbb86e851a1d6602e68f4327870c5d_icgraph.png" border="0" usemap="#class_controller_aa5fbb86e851a1d6602e68f4327870c5d_icgraph" alt=""/></div>
+<map name="class_controller_aa5fbb86e851a1d6602e68f4327870c5d_icgraph" id="class_controller_aa5fbb86e851a1d6602e68f4327870c5d_icgraph">
+<area shape="rect" id="node2" href="class_user_interface.html#adcc934c3cd846f3967d5a47c6b99c023" title="UserInterface::inputFirstCode" alt="" coords="269,5,464,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa5fbb86e851a1d6602e68f4327870c5d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::buttonIsPressedDown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00072">72</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{ <span class="keywordflow">return</span> <span class="keyword">false</span>; };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ad1e858bf584915b7283a7726daf87de7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::buttonIsPressedEnter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00029">29</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">return</span> ev3_button_is_pressed(ENTER_BUTTON);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller_ad1e858bf584915b7283a7726daf87de7_icgraph.png" border="0" usemap="#class_controller_ad1e858bf584915b7283a7726daf87de7_icgraph" alt=""/></div>
+<map name="class_controller_ad1e858bf584915b7283a7726daf87de7_icgraph" id="class_controller_ad1e858bf584915b7283a7726daf87de7_icgraph">
+<area shape="rect" id="node2" href="class_user_interface.html#acbce55ec67a01f439777b7183f48b27a" title="UserInterface::setBrightness" alt="" coords="237,15,427,41"/><area shape="rect" id="node4" href="class_user_interface.html#a96c293c2c791b0d5d04dbc7cc39d73d6" title="UserInterface::setBrightness\lWithColor" alt="" coords="237,67,427,109"/><area shape="rect" id="node6" href="class_user_interface.html#adcc934c3cd846f3967d5a47c6b99c023" title="UserInterface::inputFirstCode" alt="" coords="235,133,429,160"/><area shape="rect" id="node3" href="namespaceetrobocon2018__test.html#a22c8c2b6b7a7b34c5d767de069ea878b" title="etrobocon2018_test\l::TEST_F" alt="" coords="477,5,613,46"/><area shape="rect" id="node5" href="namespaceetrobocon2018__test.html#a6a68f74008ec706cdb724b7cbf636fa3" title="etrobocon2018_test\l::TEST_F" alt="" coords="477,70,613,111"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad1e858bf584915b7283a7726daf87de7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::buttonIsPressedEnter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00075">75</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_controller.html#a382ec475a4774918d331bebfd5ef8abf">counter</a> = 0;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    counter++;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">if</span>(counter &gt;= 10) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  };</div>
+<div class="ttc" id="class_controller_html_a382ec475a4774918d331bebfd5ef8abf"><div class="ttname"><a href="class_controller.html#a382ec475a4774918d331bebfd5ef8abf">Controller::counter</a></div><div class="ttdeci">int counter</div><div class="ttdef"><b>Definition:</b> <a href="_mock_controller_8h_source.html#l00091">MockController.h:91</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a3c541c01b9a02403c43fac24b8c882ac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::buttonIsPressedLeft </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00049">49</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordflow">return</span> ev3_button_is_pressed(LEFT_BUTTON);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller_a3c541c01b9a02403c43fac24b8c882ac_icgraph.png" border="0" usemap="#class_controller_a3c541c01b9a02403c43fac24b8c882ac_icgraph" alt=""/></div>
+<map name="class_controller_a3c541c01b9a02403c43fac24b8c882ac_icgraph" id="class_controller_a3c541c01b9a02403c43fac24b8c882ac_icgraph">
+<area shape="rect" id="node2" href="class_user_interface.html#adcc934c3cd846f3967d5a47c6b99c023" title="UserInterface::inputFirstCode" alt="" coords="256,5,451,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3c541c01b9a02403c43fac24b8c882ac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::buttonIsPressedLeft </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00074">74</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{ <span class="keywordflow">return</span> <span class="keyword">false</span>; };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a6a22a0a31fb55dba1feac199cc9656ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::buttonIsPressedRight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00044">44</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">return</span> ev3_button_is_pressed(RIGHT_BUTTON);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller_a6a22a0a31fb55dba1feac199cc9656ee_icgraph.png" border="0" usemap="#class_controller_a6a22a0a31fb55dba1feac199cc9656ee_icgraph" alt=""/></div>
+<map name="class_controller_a6a22a0a31fb55dba1feac199cc9656ee_icgraph" id="class_controller_a6a22a0a31fb55dba1feac199cc9656ee_icgraph">
+<area shape="rect" id="node2" href="class_user_interface.html#adcc934c3cd846f3967d5a47c6b99c023" title="UserInterface::inputFirstCode" alt="" coords="235,12,429,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6a22a0a31fb55dba1feac199cc9656ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::buttonIsPressedRight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00073">73</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{ <span class="keywordflow">return</span> <span class="keyword">false</span>; };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ab6c05b9804b91a9bd5fd50a17b4fb729"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::buttonIsPressedUp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00034">34</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">return</span> ev3_button_is_pressed(UP_BUTTON);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller_ab6c05b9804b91a9bd5fd50a17b4fb729_icgraph.png" border="0" usemap="#class_controller_ab6c05b9804b91a9bd5fd50a17b4fb729_icgraph" alt=""/></div>
+<map name="class_controller_ab6c05b9804b91a9bd5fd50a17b4fb729_icgraph" id="class_controller_ab6c05b9804b91a9bd5fd50a17b4fb729_icgraph">
+<area shape="rect" id="node2" href="class_user_interface.html#adcc934c3cd846f3967d5a47c6b99c023" title="UserInterface::inputFirstCode" alt="" coords="253,5,448,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6c05b9804b91a9bd5fd50a17b4fb729"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::buttonIsPressedUp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00071">71</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{ <span class="keywordflow">return</span> <span class="keyword">false</span>; };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aca9bc8f5a0a390d709d6dd2e5fd9b665"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t Controller::getBrightness </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00059">59</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="class_controller.html#ac252a70d6b3b606bd5ce313767b74b96">colorSensor</a>.<a class="code" href="classev3api_1_1_color_sensor.html#a010cb55b6119147496637bc5b2189582">getRawColor</a>(rgb);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  int16_t luminance = 0.298912 * rgb.r + 0.586611 * rgb.g + 0.114478 * rgb.b;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordflow">return</span> luminance;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="ttc" id="classev3api_1_1_color_sensor_html_a010cb55b6119147496637bc5b2189582"><div class="ttname"><a href="classev3api_1_1_color_sensor.html#a010cb55b6119147496637bc5b2189582">ev3api::ColorSensor::getRawColor</a></div><div class="ttdeci">void getRawColor(rgb_raw_t &amp;rgb) const </div><div class="ttdef"><b>Definition:</b> <a href="_color_sensor_8cpp_source.html#l00048">ColorSensor.cpp:48</a></div></div>
+<div class="ttc" id="class_controller_html_ac252a70d6b3b606bd5ce313767b74b96"><div class="ttname"><a href="class_controller.html#ac252a70d6b3b606bd5ce313767b74b96">Controller::colorSensor</a></div><div class="ttdeci">ColorSensor colorSensor</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00043">Controller.h:43</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller_aca9bc8f5a0a390d709d6dd2e5fd9b665_cgraph.png" border="0" usemap="#class_controller_aca9bc8f5a0a390d709d6dd2e5fd9b665_cgraph" alt=""/></div>
+<map name="class_controller_aca9bc8f5a0a390d709d6dd2e5fd9b665_cgraph" id="class_controller_aca9bc8f5a0a390d709d6dd2e5fd9b665_cgraph">
+<area shape="rect" id="node2" href="classev3api_1_1_color_sensor.html#a010cb55b6119147496637bc5b2189582" title="ev3api::ColorSensor\l::getRawColor" alt="" coords="222,5,362,46"/><area shape="rect" id="node3" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92" title="ev3api::Sensor::getPort" alt="" coords="411,12,570,39"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller_aca9bc8f5a0a390d709d6dd2e5fd9b665_icgraph.png" border="0" usemap="#class_controller_aca9bc8f5a0a390d709d6dd2e5fd9b665_icgraph" alt=""/></div>
+<map name="class_controller_aca9bc8f5a0a390d709d6dd2e5fd9b665_icgraph" id="class_controller_aca9bc8f5a0a390d709d6dd2e5fd9b665_icgraph">
+<area shape="rect" id="node2" href="str_2app_8h.html#ab874c34d9d66b14d189a9a3f2d065991" title="main_task" alt="" coords="289,5,372,32"/><area shape="rect" id="node3" href="class_basic_walker.html#ab7c0ca04bcf1345e3b6f75f80919d3ec" title="BasicWalker::spinToCheck\lBlackLine" alt="" coords="240,57,421,98"/><area shape="rect" id="node4" href="class_basic_walker.html#ae558379490df673b0e4f1fa2e49947f9" title="BasicWalker::goStraightTo\lCheckBlackLine" alt="" coords="241,122,420,163"/><area shape="rect" id="node5" href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a" title="指定した色のブロック置き場までライントレースします。 " alt="" coords="237,187,425,229"/><area shape="rect" id="node11" href="class_left_course.html#af1faf09b5d0ac101ceb1fec6e60bfe1a" title="LeftCourse::runGoBlack" alt="" coords="511,303,673,329"/><area shape="rect" id="node12" href="class_left_course.html#ae76ee13a3a287b5bbe6b90c2ad9bd368" title="LeftCourse::runGoStraight" alt="" coords="243,304,418,331"/><area shape="rect" id="node13" href="class_left_course.html#a9bbbc6e2b68c99c5baaa9b8a7a951cb6" title="LeftCourse::runNormalCourse" alt="" coords="233,355,429,381"/><area shape="rect" id="node14" href="class_navigator.html#afb7b715a50d0c80877c4c5f14061a456" title="光センサの値を取得する " alt="" coords="247,405,414,432"/><area shape="rect" id="node27" href="class_parking.html#a0ced699cd4a26fa9d3f0084be7aad329" title="Parking::runParpendicular" alt="" coords="245,456,416,483"/><area shape="rect" id="node28" href="class_parking.html#a1c8534b97e4fb30fb02eb3c2f9ff95a0" title="Parking::runParallel" alt="" coords="263,507,398,533"/><area shape="rect" id="node29" href="class_right_course.html#a804b99d8ed8922af394d029d65e0008c" title="RightCourse::moveBlockAreaTo8" alt="" coords="222,557,439,584"/><area shape="rect" id="node30" href="class_right_course.html#a06e136e501549c2a13709e044755e7df" title="RightCourse::runPuzzle" alt="" coords="250,608,411,635"/><area shape="rect" id="node31" href="class_right_course.html#a0718c3e06bc3377fdb7a3334029323fb" title="RightCourse::runNormalCourse" alt="" coords="228,659,433,685"/><area shape="rect" id="node32" href="class_user_interface.html#a96c293c2c791b0d5d04dbc7cc39d73d6" title="UserInterface::setBrightness\lWithColor" alt="" coords="236,710,425,751"/><area shape="rect" id="node6" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="1046,224,1178,251"/><area shape="rect" id="node7" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1053,148,1171,175"/><area shape="rect" id="node8" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="500,195,684,221"/><area shape="rect" id="node9" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="765,199,942,225"/><area shape="rect" id="node10" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="770,148,937,175"/><area shape="rect" id="node15" href="class_navigator.html#a4615989552b06b3d0fe35cf52ded3cd8" title="現在位置の周辺における光センサ値を取得する " alt="" coords="488,355,696,381"/><area shape="rect" id="node16" href="class_navigator.html#a14875a281f8b6ee5a280227b0cdb9867" title="2値化処理を実行する " alt="" coords="516,405,668,432"/><area shape="rect" id="node19" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="513,456,671,483"/><area shape="rect" id="node26" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd" title="指定した距離分ライントレースして指定した色があると停止する " alt="" coords="510,553,674,580"/><area shape="rect" id="node17" href="class_navigator.html#ad038009d5adb19067c5427d35a603636" title="指定した距離まで黒色の点を検出しながら走行体を移動させる " alt="" coords="750,300,957,327"/><area shape="rect" id="node18" href="class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="1011,351,1213,377"/><area shape="rect" id="node20" href="class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="765,503,941,529"/><area shape="rect" id="node22" href="class_a_i_answer.html#a81cbdae4bd9ff02c895f2ccef9920f90" title="デジタル数字の場所まで行く " alt="" coords="745,452,962,479"/><area shape="rect" id="node23" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="771,604,936,631"/><area shape="rect" id="node25" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="771,553,936,580"/><area shape="rect" id="node21" href="class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="1059,528,1165,555"/><area shape="rect" id="node24" href="class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="1011,604,1213,631"/><area shape="rect" id="node33" href="namespaceetrobocon2018__test.html#a6a68f74008ec706cdb724b7cbf636fa3" title="etrobocon2018_test\l::TEST_F" alt="" coords="524,710,660,751"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a592fca2802b9cea70ef24eba17db7ec8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Controller::getBrightness </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00053">53</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="class_controller.html#a24797d327988eeb5a370ebc9474c1959">brightness</a>; };</div>
+<div class="ttc" id="class_controller_html_a24797d327988eeb5a370ebc9474c1959"><div class="ttname"><a href="class_controller.html#a24797d327988eeb5a370ebc9474c1959">Controller::brightness</a></div><div class="ttdeci">int brightness</div><div class="ttdef"><b>Definition:</b> <a href="_mock_controller_8h_source.html#l00094">MockController.h:94</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ac76ebafce820fed07b3f3248445cf1c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::getRawColor </td>
+          <td>(</td>
+          <td class="paramtype">std::uint16_t &amp;&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::uint16_t &amp;&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::uint16_t &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00063">63</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    r = <a class="code" href="class_controller.html#a575b2277044ce049b32004b5706c7c04">mock_r</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    g = <a class="code" href="class_controller.html#aef8ff49d64f06fe47e004eb8721765ad">mock_g</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    b = <a class="code" href="class_controller.html#ae40c59804e9ea9ad0cefb50d21555b35">mock_b</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  };</div>
+<div class="ttc" id="class_controller_html_a575b2277044ce049b32004b5706c7c04"><div class="ttname"><a href="class_controller.html#a575b2277044ce049b32004b5706c7c04">Controller::mock_r</a></div><div class="ttdeci">std::uint16_t mock_r</div><div class="ttdef"><b>Definition:</b> <a href="_mock_controller_8h_source.html#l00095">MockController.h:95</a></div></div>
+<div class="ttc" id="class_controller_html_aef8ff49d64f06fe47e004eb8721765ad"><div class="ttname"><a href="class_controller.html#aef8ff49d64f06fe47e004eb8721765ad">Controller::mock_g</a></div><div class="ttdeci">std::uint16_t mock_g</div><div class="ttdef"><b>Definition:</b> <a href="_mock_controller_8h_source.html#l00095">MockController.h:95</a></div></div>
+<div class="ttc" id="class_controller_html_ae40c59804e9ea9ad0cefb50d21555b35"><div class="ttname"><a href="class_controller.html#ae40c59804e9ea9ad0cefb50d21555b35">Controller::mock_b</a></div><div class="ttdeci">std::uint16_t mock_b</div><div class="ttdef"><b>Definition:</b> <a href="_mock_controller_8h_source.html#l00095">MockController.h:95</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a5bd258b3a9d0689cd600e7ec51b867a8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::getRawColor </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t &amp;&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t &amp;&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00066">66</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <a class="code" href="class_controller.html#ac252a70d6b3b606bd5ce313767b74b96">colorSensor</a>.<a class="code" href="classev3api_1_1_color_sensor.html#a010cb55b6119147496637bc5b2189582">getRawColor</a>(rgb);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  r = rgb.r;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  g = rgb.g;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  b = rgb.b;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="ttc" id="classev3api_1_1_color_sensor_html_a010cb55b6119147496637bc5b2189582"><div class="ttname"><a href="classev3api_1_1_color_sensor.html#a010cb55b6119147496637bc5b2189582">ev3api::ColorSensor::getRawColor</a></div><div class="ttdeci">void getRawColor(rgb_raw_t &amp;rgb) const </div><div class="ttdef"><b>Definition:</b> <a href="_color_sensor_8cpp_source.html#l00048">ColorSensor.cpp:48</a></div></div>
+<div class="ttc" id="class_controller_html_ac252a70d6b3b606bd5ce313767b74b96"><div class="ttname"><a href="class_controller.html#ac252a70d6b3b606bd5ce313767b74b96">Controller::colorSensor</a></div><div class="ttdeci">ColorSensor colorSensor</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00043">Controller.h:43</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller_a5bd258b3a9d0689cd600e7ec51b867a8_cgraph.png" border="0" usemap="#class_controller_a5bd258b3a9d0689cd600e7ec51b867a8_cgraph" alt=""/></div>
+<map name="class_controller_a5bd258b3a9d0689cd600e7ec51b867a8_cgraph" id="class_controller_a5bd258b3a9d0689cd600e7ec51b867a8_cgraph">
+<area shape="rect" id="node2" href="classev3api_1_1_color_sensor.html#a010cb55b6119147496637bc5b2189582" title="ev3api::ColorSensor\l::getRawColor" alt="" coords="217,5,357,46"/><area shape="rect" id="node3" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92" title="ev3api::Sensor::getPort" alt="" coords="406,12,565,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1d690be9e14008230edb6ee8530485bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::ledSetColorGreen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00019">19</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  ev3_led_set_color(LED_GREEN);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller_a1d690be9e14008230edb6ee8530485bf_icgraph.png" border="0" usemap="#class_controller_a1d690be9e14008230edb6ee8530485bf_icgraph" alt=""/></div>
+<map name="class_controller_a1d690be9e14008230edb6ee8530485bf_icgraph" id="class_controller_a1d690be9e14008230edb6ee8530485bf_icgraph">
+<area shape="rect" id="node2" href="class_et_robocon2018.html#acd95e596c5333d78f33e2e00dba846e5" title="EtRobocon2018::start" alt="" coords="272,5,421,32"/><area shape="rect" id="node4" href="class_navigator.html#ad038009d5adb19067c5427d35a603636" title="指定した距離まで黒色の点を検出しながら走行体を移動させる " alt="" coords="243,56,450,83"/><area shape="rect" id="node3" href="str_2app_8cpp.html#a4754344fc3fec0a802660bb5dcdefad9" title="main_task" alt="" coords="559,5,641,32"/><area shape="rect" id="node5" href="class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="499,56,701,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1d690be9e14008230edb6ee8530485bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::ledSetColorGreen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00052">52</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a3843d004fc1e44c63cd746b8822c2990"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::ledSetColorOrange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00014">14</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  ev3_led_set_color(LED_ORANGE);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller_a3843d004fc1e44c63cd746b8822c2990_icgraph.png" border="0" usemap="#class_controller_a3843d004fc1e44c63cd746b8822c2990_icgraph" alt=""/></div>
+<map name="class_controller_a3843d004fc1e44c63cd746b8822c2990_icgraph" id="class_controller_a3843d004fc1e44c63cd746b8822c2990_icgraph">
+<area shape="rect" id="node2" href="class_et_robocon2018.html#acd95e596c5333d78f33e2e00dba846e5" title="EtRobocon2018::start" alt="" coords="280,5,429,32"/><area shape="rect" id="node4" href="class_navigator.html#ad038009d5adb19067c5427d35a603636" title="指定した距離まで黒色の点を検出しながら走行体を移動させる " alt="" coords="251,56,458,83"/><area shape="rect" id="node3" href="str_2app_8cpp.html#a4754344fc3fec0a802660bb5dcdefad9" title="main_task" alt="" coords="567,5,649,32"/><area shape="rect" id="node5" href="class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="507,56,709,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3843d004fc1e44c63cd746b8822c2990"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::ledSetColorOrange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00051">51</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ab4e64990a6ea658380e1f48dc8c71471"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Controller::measureBatteryVoltage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00054">54</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">return</span> ev3_battery_voltage_mV();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a1e0f2b19656800f5f86cd2e390efc7a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::printDisplay </td>
+          <td>(</td>
+          <td class="paramtype">int8_t&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00079">79</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  va_list arg;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  va_start(arg, format);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  vsprintf(msg, format, arg);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  va_end(arg);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keyword">const</span> int8_t line_height = 10;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  ev3_lcd_fill_rect(0, row * line_height, EV3_LCD_WIDTH, line_height, EV3_LCD_WHITE);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  ev3_lcd_draw_string(msg, 0, row * line_height);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller_a1e0f2b19656800f5f86cd2e390efc7a3_icgraph.png" border="0" usemap="#class_controller_a1e0f2b19656800f5f86cd2e390efc7a3_icgraph" alt=""/></div>
+<map name="class_controller_a1e0f2b19656800f5f86cd2e390efc7a3_icgraph" id="class_controller_a1e0f2b19656800f5f86cd2e390efc7a3_icgraph">
+<area shape="rect" id="node2" href="str_2app_8h.html#ab874c34d9d66b14d189a9a3f2d065991" title="main_task" alt="" coords="264,5,347,32"/><area shape="rect" id="node3" href="str_2app_8h.html#a4c6b1bba8b11eacd00d4e456cf835fe2" title="sensor_log_task" alt="" coords="247,56,364,83"/><area shape="rect" id="node4" href="class_et_robocon2018.html#acd95e596c5333d78f33e2e00dba846e5" title="EtRobocon2018::start" alt="" coords="231,107,380,133"/><area shape="rect" id="node6" href="class_left_course.html#ac86f055489b571842d7e4810fd16fb80" title="LeftCourse::run" alt="" coords="764,427,876,453"/><area shape="rect" id="node7" href="class_left_course.html#ae76ee13a3a287b5bbe6b90c2ad9bd368" title="LeftCourse::runGoStraight" alt="" coords="473,1876,647,1903"/><area shape="rect" id="node9" href="class_left_course.html#a9bbbc6e2b68c99c5baaa9b8a7a951cb6" title="LeftCourse::runNormalCourse" alt="" coords="722,680,918,707"/><area shape="rect" id="node10" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd" title="指定した距離分ライントレースして指定した色があると停止する " alt="" coords="478,1673,642,1700"/><area shape="rect" id="node15" href="class_parking.html#a0ced699cd4a26fa9d3f0084be7aad329" title="Parking::runParpendicular" alt="" coords="735,1151,905,1177"/><area shape="rect" id="node16" href="class_parking.html#a1c8534b97e4fb30fb02eb3c2f9ff95a0" title="Parking::runParallel" alt="" coords="493,427,627,453"/><area shape="rect" id="node17" href="class_right_course.html#a804b99d8ed8922af394d029d65e0008c" title="RightCourse::moveBlockAreaTo8" alt="" coords="451,477,669,504"/><area shape="rect" id="node18" href="class_right_course.html#a06e136e501549c2a13709e044755e7df" title="RightCourse::runPuzzle" alt="" coords="479,528,641,555"/><area shape="rect" id="node19" href="class_right_course.html#a0718c3e06bc3377fdb7a3334029323fb" title="RightCourse::runNormalCourse" alt="" coords="717,629,923,656"/><area shape="rect" id="node20" href="class_user_interface.html#acbce55ec67a01f439777b7183f48b27a" title="UserInterface::setBrightness" alt="" coords="211,157,400,184"/><area shape="rect" id="node22" href="class_user_interface.html#a96c293c2c791b0d5d04dbc7cc39d73d6" title="UserInterface::setBrightness\lWithColor" alt="" coords="211,209,400,250"/><area shape="rect" id="node24" href="class_user_interface.html#adcc934c3cd846f3967d5a47c6b99c023" title="UserInterface::inputFirstCode" alt="" coords="208,1217,403,1244"/><area shape="rect" id="node25" href="class_walker.html#ac898ceba9cd085a9fda42118fc4e9335" title="Walker::terminate" alt="" coords="243,1268,368,1295"/><area shape="rect" id="node26" href="class_walker.html#a548b93fdfc6cb47eaa9ae8b8b8579c23" title="Walker::stop" alt="" coords="512,1825,608,1852"/><area shape="rect" id="node28" href="class_walker.html#a665540aeed857d2e35565e1949e6abec" title="Walker::run" alt="" coords="261,1116,350,1143"/><area shape="rect" id="node5" href="str_2app_8cpp.html#a4754344fc3fec0a802660bb5dcdefad9" title="main_task" alt="" coords="519,92,601,119"/><area shape="rect" id="node8" href="class_left_course.html#af1faf09b5d0ac101ceb1fec6e60bfe1a" title="LeftCourse::runGoBlack" alt="" coords="991,1800,1153,1827"/><area shape="rect" id="node11" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="737,1673,903,1700"/><area shape="rect" id="node13" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="737,1623,903,1649"/><area shape="rect" id="node12" href="class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="971,1673,1173,1700"/><area shape="rect" id="node14" href="class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="1019,1572,1125,1599"/><area shape="rect" id="node21" href="namespaceetrobocon2018__test.html#a22c8c2b6b7a7b34c5d767de069ea878b" title="etrobocon2018_test\l::TEST_F" alt="" coords="492,143,628,185"/><area shape="rect" id="node23" href="namespaceetrobocon2018__test.html#a6a68f74008ec706cdb724b7cbf636fa3" title="etrobocon2018_test\l::TEST_F" alt="" coords="492,209,628,250"/><area shape="rect" id="node27" href="class_walker.html#a5ee3d6593656b064058949f31f525c31" title="Walker::angleChange" alt="" coords="747,1800,893,1827"/><area shape="rect" id="node29" href="class_basic_walker.html#a2d3c05994639c88e59a91bed10026866" title="BasicWalker::spin" alt="" coords="496,933,624,960"/><area shape="rect" id="node30" href="class_basic_walker.html#ab7c0ca04bcf1345e3b6f75f80919d3ec" title="BasicWalker::spinToCheck\lBlackLine" alt="" coords="469,985,651,1026"/><area shape="rect" id="node31" href="class_basic_walker.html#ae558379490df673b0e4f1fa2e49947f9" title="BasicWalker::goStraightTo\lCheckBlackLine" alt="" coords="471,1050,649,1091"/><area shape="rect" id="node32" href="class_basic_walker.html#a44caadc89689b322fe9ec4c89600c4a7" title="BasicWalker::goStraight" alt="" coords="479,1116,641,1143"/><area shape="rect" id="node33" href="class_basic_walker.html#aea6900785459104bc0d589d9a4a5064c" title="BasicWalker::backStraight" alt="" coords="471,1471,649,1497"/><area shape="rect" id="node34" href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a" title="指定した色のブロック置き場までライントレースします。 " alt="" coords="726,1253,914,1294"/><area shape="rect" id="node38" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="739,1420,901,1447"/><area shape="rect" id="node40" href="class_left_course.html#a9e0b7e2dd15c5ec45b93e65074ca93e6" title="LeftCourse::aiAnswerGo" alt="" coords="477,579,643,605"/><area shape="rect" id="node41" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46" title="指定した角度まで走行体を回転させる(基本左エッジ) " alt="" coords="505,1420,615,1447"/><area shape="rect" id="node43" href="class_navigator.html#a6f3901e766e383a66c47177257c46204" title="指定した距離まで走行体を移動させる " alt="" coords="501,1572,619,1599"/><area shape="rect" id="node44" href="class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981" title="指定した距離まで走行体を後退させる " alt="" coords="763,1201,877,1228"/><area shape="rect" id="node45" href="class_navigator.html#ad038009d5adb19067c5427d35a603636" title="指定した距離まで黒色の点を検出しながら走行体を移動させる " alt="" coords="457,781,663,808"/><area shape="rect" id="node46" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="481,1623,639,1649"/><area shape="rect" id="node47" href="class_navigator.html#a44c0a5ae8469d0595e1632d8a70e12d8" title="指定した距離特定の色を探しながら進む（ライントレースしない） " alt="" coords="459,1521,661,1548"/><area shape="rect" id="node48" href="class_normal_course.html#a873a379c926da6ee6a724b453f2f50c4" title="NormalCourse::runOrStop" alt="" coords="473,680,647,707"/><area shape="rect" id="node49" href="class_parking.html#af58a518d70113bcb3139718e51b4829c" title="Parking::waitThreeTimes" alt="" coords="477,1167,643,1193"/><area shape="rect" id="node50" href="class_walker.html#af913f99c575c9be615d03ec96460ce15" title="Walker::edgeChange" alt="" coords="488,883,632,909"/><area shape="rect" id="node35" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="1006,1445,1138,1472"/><area shape="rect" id="node36" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1222,1316,1341,1343"/><area shape="rect" id="node37" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="980,1315,1164,1341"/><area shape="rect" id="node39" href="class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="975,1369,1169,1396"/><area shape="rect" id="node42" href="class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="732,1521,908,1548"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a036762bd8c526d02433a629f8226629b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::printDisplay </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00089">89</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a3cc137ee604806ebd1ff60926a622a2b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::setMockRgb </td>
+          <td>(</td>
+          <td class="paramtype">std::uint16_t&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::uint16_t&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::uint16_t&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00096">96</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="class_controller.html#a575b2277044ce049b32004b5706c7c04">mock_r</a> = r;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="class_controller.html#aef8ff49d64f06fe47e004eb8721765ad">mock_g</a> = g;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="class_controller.html#ae40c59804e9ea9ad0cefb50d21555b35">mock_b</a> = b;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
+<div class="ttc" id="class_controller_html_a575b2277044ce049b32004b5706c7c04"><div class="ttname"><a href="class_controller.html#a575b2277044ce049b32004b5706c7c04">Controller::mock_r</a></div><div class="ttdeci">std::uint16_t mock_r</div><div class="ttdef"><b>Definition:</b> <a href="_mock_controller_8h_source.html#l00095">MockController.h:95</a></div></div>
+<div class="ttc" id="class_controller_html_aef8ff49d64f06fe47e004eb8721765ad"><div class="ttname"><a href="class_controller.html#aef8ff49d64f06fe47e004eb8721765ad">Controller::mock_g</a></div><div class="ttdeci">std::uint16_t mock_g</div><div class="ttdef"><b>Definition:</b> <a href="_mock_controller_8h_source.html#l00095">MockController.h:95</a></div></div>
+<div class="ttc" id="class_controller_html_ae40c59804e9ea9ad0cefb50d21555b35"><div class="ttname"><a href="class_controller.html#ae40c59804e9ea9ad0cefb50d21555b35">Controller::mock_b</a></div><div class="ttdeci">std::uint16_t mock_b</div><div class="ttdef"><b>Definition:</b> <a href="_mock_controller_8h_source.html#l00095">MockController.h:95</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller_a3cc137ee604806ebd1ff60926a622a2b_icgraph.png" border="0" usemap="#class_controller_a3cc137ee604806ebd1ff60926a622a2b_icgraph" alt=""/></div>
+<map name="class_controller_a3cc137ee604806ebd1ff60926a622a2b_icgraph" id="class_controller_a3cc137ee604806ebd1ff60926a622a2b_icgraph">
+<area shape="rect" id="node2" href="classetrobocon2018__test_1_1_distinguisher_test.html#a2e7ff9f1b7b16ed2f7295040434b7842" title="etrobocon2018_test\l::DistinguisherTest\l::setMockRgb" alt="" coords="213,4,349,60"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afe78dbb9fa2ce597920f71ce6bb031f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::speakerPlayTone </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>frequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>duration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00009">9</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  ev3_speaker_play_tone(frequency, duration);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller_afe78dbb9fa2ce597920f71ce6bb031f3_icgraph.png" border="0" usemap="#class_controller_afe78dbb9fa2ce597920f71ce6bb031f3_icgraph" alt=""/></div>
+<map name="class_controller_afe78dbb9fa2ce597920f71ce6bb031f3_icgraph" id="class_controller_afe78dbb9fa2ce597920f71ce6bb031f3_icgraph">
+<area shape="rect" id="node2" href="class_basic_walker.html#ab7c0ca04bcf1345e3b6f75f80919d3ec" title="BasicWalker::spinToCheck\lBlackLine" alt="" coords="259,5,440,46"/><area shape="rect" id="node3" href="class_basic_walker.html#ae558379490df673b0e4f1fa2e49947f9" title="BasicWalker::goStraightTo\lCheckBlackLine" alt="" coords="260,70,439,111"/><area shape="rect" id="node4" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="757,288,923,315"/><area shape="rect" id="node7" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="507,237,691,264"/><area shape="rect" id="node9" href="class_block_solver.html#ab82a21046107a859adbb5a144ceaa63e" title="ブロックの色を取得し、blockColorに格納します。 " alt="" coords="749,187,931,213"/><area shape="rect" id="node10" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="268,187,431,213"/><area shape="rect" id="node12" href="class_left_course.html#a9bbbc6e2b68c99c5baaa9b8a7a951cb6" title="LeftCourse::runNormalCourse" alt="" coords="251,339,447,365"/><area shape="rect" id="node13" href="class_navigator.html#a44c0a5ae8469d0595e1632d8a70e12d8" title="指定した距離特定の色を探しながら進む（ライントレースしない） " alt="" coords="248,440,451,467"/><area shape="rect" id="node16" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd" title="指定した距離分ライントレースして指定した色があると停止する " alt="" coords="267,389,431,416"/><area shape="rect" id="node20" href="class_parking.html#a1c8534b97e4fb30fb02eb3c2f9ff95a0" title="Parking::runParallel" alt="" coords="282,491,417,517"/><area shape="rect" id="node21" href="class_parking.html#af58a518d70113bcb3139718e51b4829c" title="Parking::waitThreeTimes" alt="" coords="266,541,433,568"/><area shape="rect" id="node23" href="class_right_course.html#a804b99d8ed8922af394d029d65e0008c" title="RightCourse::moveBlockAreaTo8" alt="" coords="241,592,458,619"/><area shape="rect" id="node24" href="class_right_course.html#a06e136e501549c2a13709e044755e7df" title="RightCourse::runPuzzle" alt="" coords="269,643,430,669"/><area shape="rect" id="node25" href="class_right_course.html#ae20e634de322557099f11de2cdb8d193" title="RightCourse::throughArea" alt="" coords="263,693,436,720"/><area shape="rect" id="node26" href="class_right_course.html#a0718c3e06bc3377fdb7a3334029323fb" title="RightCourse::runNormalCourse" alt="" coords="247,744,452,771"/><area shape="rect" id="node27" href="class_user_interface.html#acbce55ec67a01f439777b7183f48b27a" title="UserInterface::setBrightness" alt="" coords="255,795,444,821"/><area shape="rect" id="node29" href="class_user_interface.html#a96c293c2c791b0d5d04dbc7cc39d73d6" title="UserInterface::setBrightness\lWithColor" alt="" coords="255,846,444,887"/><area shape="rect" id="node31" href="class_user_interface.html#adcc934c3cd846f3967d5a47c6b99c023" title="UserInterface::inputFirstCode" alt="" coords="252,912,447,939"/><area shape="rect" id="node5" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="990,276,1122,303"/><area shape="rect" id="node6" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="997,212,1115,239"/><area shape="rect" id="node8" href="class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="751,237,929,264"/><area shape="rect" id="node11" href="class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="743,136,937,163"/><area shape="rect" id="node14" href="class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="511,491,687,517"/><area shape="rect" id="node15" href="class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="787,465,893,492"/><area shape="rect" id="node17" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="516,389,681,416"/><area shape="rect" id="node19" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="516,440,681,467"/><area shape="rect" id="node18" href="class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="739,389,941,416"/><area shape="rect" id="node22" href="class_parking.html#a0ced699cd4a26fa9d3f0084be7aad329" title="Parking::runParpendicular" alt="" coords="513,541,684,568"/><area shape="rect" id="node28" href="namespaceetrobocon2018__test.html#a22c8c2b6b7a7b34c5d767de069ea878b" title="etrobocon2018_test\l::TEST_F" alt="" coords="531,783,667,825"/><area shape="rect" id="node30" href="namespaceetrobocon2018__test.html#a6a68f74008ec706cdb724b7cbf636fa3" title="etrobocon2018_test\l::TEST_F" alt="" coords="531,849,667,890"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a15be89f5e43d8765a9866ced99fd0b3d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::speakerPlayTone </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>frequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>duration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00054">54</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="afe0d8421a214918062ce17f65a229c70"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::speakerSetVolume </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>volume</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00004">4</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  ev3_speaker_set_volume(volume);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller_afe0d8421a214918062ce17f65a229c70_icgraph.png" border="0" usemap="#class_controller_afe0d8421a214918062ce17f65a229c70_icgraph" alt=""/></div>
+<map name="class_controller_afe0d8421a214918062ce17f65a229c70_icgraph" id="class_controller_afe0d8421a214918062ce17f65a229c70_icgraph">
+<area shape="rect" id="node2" href="class_basic_walker.html#a582e0b4136e521278ebf909c2de4b013" title="BasicWalker::BasicWalker" alt="" coords="269,5,448,32"/><area shape="rect" id="node3" href="class_et_robocon2018.html#ab4080de8621c118f35f7b3a15f056373" title="EtRobocon2018::EtRobocon2018" alt="" coords="251,56,467,83"/><area shape="rect" id="node4" href="class_user_interface.html#adcc934c3cd846f3967d5a47c6b99c023" title="UserInterface::inputFirstCode" alt="" coords="261,107,456,133"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e6cc64001e722afdcc130b9fbf5efae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::speakerSetVolume </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>volume</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00050">50</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ae9aec1dda0c67029d9e2ddfebe31b530"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::tslpTsk </td>
+          <td>(</td>
+          <td class="paramtype">int16_t&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00074">74</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  tslp_tsk(time);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller_ae9aec1dda0c67029d9e2ddfebe31b530_icgraph.png" border="0" usemap="#class_controller_ae9aec1dda0c67029d9e2ddfebe31b530_icgraph" alt=""/></div>
+<map name="class_controller_ae9aec1dda0c67029d9e2ddfebe31b530_icgraph" id="class_controller_ae9aec1dda0c67029d9e2ddfebe31b530_icgraph">
+<area shape="rect" id="node2" href="str_2app_8h.html#ab874c34d9d66b14d189a9a3f2d065991" title="main_task" alt="" coords="252,5,335,32"/><area shape="rect" id="node3" href="class_basic_walker.html#a2d3c05994639c88e59a91bed10026866" title="BasicWalker::spin" alt="" coords="229,56,357,83"/><area shape="rect" id="node4" href="class_basic_walker.html#ab7c0ca04bcf1345e3b6f75f80919d3ec" title="BasicWalker::spinToCheck\lBlackLine" alt="" coords="203,107,384,149"/><area shape="rect" id="node5" href="class_basic_walker.html#ae558379490df673b0e4f1fa2e49947f9" title="BasicWalker::goStraightTo\lCheckBlackLine" alt="" coords="204,173,383,214"/><area shape="rect" id="node6" href="class_basic_walker.html#a44caadc89689b322fe9ec4c89600c4a7" title="BasicWalker::goStraight" alt="" coords="212,239,375,265"/><area shape="rect" id="node7" href="class_basic_walker.html#aea6900785459104bc0d589d9a4a5064c" title="BasicWalker::backStraight" alt="" coords="205,289,382,316"/><area shape="rect" id="node8" href="class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="969,367,1135,393"/><area shape="rect" id="node11" href="class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a" title="指定した色のブロック置き場までライントレースします。 " alt="" coords="466,351,654,393"/><area shape="rect" id="node13" href="class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="479,620,641,647"/><area shape="rect" id="node15" href="class_et_robocon2018.html#a4a59819b7fc9d5068272c725d4592b69" title="EtRobocon2018::waitStarter" alt="" coords="200,340,387,367"/><area shape="rect" id="node17" href="class_left_course.html#af1faf09b5d0ac101ceb1fec6e60bfe1a" title="LeftCourse::runGoBlack" alt="" coords="479,249,641,276"/><area shape="rect" id="node18" href="class_left_course.html#ae76ee13a3a287b5bbe6b90c2ad9bd368" title="LeftCourse::runGoStraight" alt="" coords="206,391,381,417"/><area shape="rect" id="node19" href="class_left_course.html#a9bbbc6e2b68c99c5baaa9b8a7a951cb6" title="LeftCourse::runNormalCourse" alt="" coords="195,644,391,671"/><area shape="rect" id="node20" href="class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102" title="Lifter::liftUp" alt="" coords="248,745,339,772"/><area shape="rect" id="node25" href="class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5" title="Lifter::liftDown" alt="" coords="240,695,347,721"/><area shape="rect" id="node26" href="class_lifter.html#ae6ab937ebd53c52c8e7254630b0e5797" title="Lifter::defaultSet" alt="" coords="234,796,353,823"/><area shape="rect" id="node27" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46" title="指定した角度まで走行体を回転させる(基本左エッジ) " alt="" coords="238,897,349,924"/><area shape="rect" id="node31" href="class_navigator.html#a6f3901e766e383a66c47177257c46204" title="指定した距離まで走行体を移動させる " alt="" coords="234,999,353,1025"/><area shape="rect" id="node34" href="class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981" title="指定した距離まで走行体を後退させる " alt="" coords="236,847,351,873"/><area shape="rect" id="node35" href="class_navigator.html#ad038009d5adb19067c5427d35a603636" title="指定した距離まで黒色の点を検出しながら走行体を移動させる " alt="" coords="190,1049,397,1076"/><area shape="rect" id="node36" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="214,1100,373,1127"/><area shape="rect" id="node37" href="class_navigator.html#a44c0a5ae8469d0595e1632d8a70e12d8" title="指定した距離特定の色を探しながら進む（ライントレースしない） " alt="" coords="192,948,395,975"/><area shape="rect" id="node38" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd" title="指定した距離分ライントレースして指定した色があると停止する " alt="" coords="478,1396,642,1423"/><area shape="rect" id="node39" href="class_parking.html#a0ced699cd4a26fa9d3f0084be7aad329" title="Parking::runParpendicular" alt="" coords="475,1497,645,1524"/><area shape="rect" id="node40" href="class_parking.html#a1c8534b97e4fb30fb02eb3c2f9ff95a0" title="Parking::runParallel" alt="" coords="226,1252,361,1279"/><area shape="rect" id="node41" href="class_parking.html#af58a518d70113bcb3139718e51b4829c" title="Parking::waitThreeTimes" alt="" coords="210,1201,377,1228"/><area shape="rect" id="node42" href="class_right_course.html#a75efdb9ff2bc57a42f3b0076e5a9c77f" title="RightCourse::run" alt="" coords="233,1353,354,1380"/><area shape="rect" id="node43" href="class_right_course.html#a804b99d8ed8922af394d029d65e0008c" title="RightCourse::moveBlockAreaTo8" alt="" coords="185,1404,402,1431"/><area shape="rect" id="node44" href="class_right_course.html#a06e136e501549c2a13709e044755e7df" title="RightCourse::runPuzzle" alt="" coords="213,1455,374,1481"/><area shape="rect" id="node45" href="class_right_course.html#a0718c3e06bc3377fdb7a3334029323fb" title="RightCourse::runNormalCourse" alt="" coords="191,1505,396,1532"/><area shape="rect" id="node46" href="class_user_interface.html#acbce55ec67a01f439777b7183f48b27a" title="UserInterface::setBrightness" alt="" coords="199,1556,388,1583"/><area shape="rect" id="node48" href="class_user_interface.html#a96c293c2c791b0d5d04dbc7cc39d73d6" title="UserInterface::setBrightness\lWithColor" alt="" coords="199,1607,388,1649"/><area shape="rect" id="node50" href="class_user_interface.html#adcc934c3cd846f3967d5a47c6b99c023" title="UserInterface::inputFirstCode" alt="" coords="196,1673,391,1700"/><area shape="rect" id="node9" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="1193,519,1325,545"/><area shape="rect" id="node10" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="1199,417,1318,444"/><area shape="rect" id="node12" href="class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="723,519,907,545"/><area shape="rect" id="node14" href="class_block_solver.html#a3baa91b5cf2eca22b64aafb841dbe2a1" title="BlockSolver::spinParkingArea" alt="" coords="717,620,912,647"/><area shape="rect" id="node16" href="class_et_robocon2018.html#acd95e596c5333d78f33e2e00dba846e5" title="EtRobocon2018::start" alt="" coords="485,199,635,225"/><area shape="rect" id="node21" href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702" title="リフターを使ってブロックを放って後ろを向く " alt="" coords="467,721,653,748"/><area shape="rect" id="node24" href="class_block_solver.html#ab82a21046107a859adbb5a144ceaa63e" title="ブロックの色を取得し、blockColorに格納します。 " alt="" coords="961,468,1143,495"/><area shape="rect" id="node22" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="732,1025,897,1052"/><area shape="rect" id="node23" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="732,1143,897,1169"/><area shape="rect" id="node28" href="class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="472,975,648,1001"/><area shape="rect" id="node29" href="class_a_i_answer.html#a81cbdae4bd9ff02c895f2ccef9920f90" title="デジタル数字の場所まで行く " alt="" coords="451,1193,669,1220"/><area shape="rect" id="node30" href="class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="459,1244,661,1271"/><area shape="rect" id="node32" href="class_navigator.html#a4615989552b06b3d0fe35cf52ded3cd8" title="現在位置の周辺における光センサ値を取得する " alt="" coords="456,823,664,849"/><area shape="rect" id="node33" href="namespaceetrobocon2018__test.html#af6b8f0446c102883a66568a2ccca886d" title="etrobocon2018_test\l::TEST" alt="" coords="492,1077,628,1118"/><area shape="rect" id="node47" href="namespaceetrobocon2018__test.html#a22c8c2b6b7a7b34c5d767de069ea878b" title="etrobocon2018_test\l::TEST_F" alt="" coords="492,1549,628,1590"/><area shape="rect" id="node49" href="namespaceetrobocon2018__test.html#a6a68f74008ec706cdb724b7cbf636fa3" title="etrobocon2018_test\l::TEST_F" alt="" coords="492,1614,628,1655"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2c68b1076bc4d456d69e92075a141cb3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::tslpTsk </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00084">84</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="class_controller.html#ad22015c6265eaf5781a03301400ccda1">exitCounter</a>++;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_controller.html#ad22015c6265eaf5781a03301400ccda1">exitCounter</a> &gt; <a class="code" href="class_controller.html#a1fc548c8f80294c1074444a587b5c93f">exitCountLimit</a>) std::exit(1);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  };  <span class="comment">// 4msec周期起動</span></div>
+<div class="ttc" id="class_controller_html_a1fc548c8f80294c1074444a587b5c93f"><div class="ttname"><a href="class_controller.html#a1fc548c8f80294c1074444a587b5c93f">Controller::exitCountLimit</a></div><div class="ttdeci">int exitCountLimit</div><div class="ttdef"><b>Definition:</b> <a href="_mock_controller_8h_source.html#l00093">MockController.h:93</a></div></div>
+<div class="ttc" id="class_controller_html_ad22015c6265eaf5781a03301400ccda1"><div class="ttname"><a href="class_controller.html#ad22015c6265eaf5781a03301400ccda1">Controller::exitCounter</a></div><div class="ttdeci">int exitCounter</div><div class="ttdef"><b>Definition:</b> <a href="_mock_controller_8h_source.html#l00092">MockController.h:92</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a class="anchor" id="a24797d327988eeb5a370ebc9474c1959"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Controller::brightness = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00094">94</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="a55147b5c14f76de55eb646d25ccb746f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classev3api_1_1_clock.html">Clock</a> Controller::clock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00048">48</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac252a70d6b3b606bd5ce313767b74b96"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classev3api_1_1_color_sensor.html">ColorSensor</a> Controller::colorSensor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00043">43</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="a382ec475a4774918d331bebfd5ef8abf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Controller::counter = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00091">91</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae89b55ad9f808b471cb44c3097b43838"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Controller::countLimit = 100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00090">90</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad22015c6265eaf5781a03301400ccda1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Controller::exitCounter = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00092">92</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1fc548c8f80294c1074444a587b5c93f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Controller::exitCountLimit = 1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00093">93</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6df4e895058247563c3aa3e392c543d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classev3api_1_1_motor.html">Motor</a> Controller::leftWheel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00046">46</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="a84196b437fe0194e4d3f15f16b8cddc7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classev3api_1_1_motor.html">Motor</a> Controller::liftMotor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00044">44</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae40c59804e9ea9ad0cefb50d21555b35"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint16_t Controller::mock_b</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00095">95</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="aef8ff49d64f06fe47e004eb8721765ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint16_t Controller::mock_g</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00095">95</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="a575b2277044ce049b32004b5706c7c04"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint16_t Controller::mock_r</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00095">95</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab7c5ed29a3e87e63ab1f399183c40e61"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Controller::noteFs4 = NOTE_FS4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00041">41</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="a607e880f8185c7f496c69a347cc469d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Controller::noteFs4 = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00048">48</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac9ef84ce6b7535d06589fbaffcdf931b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Controller::noteFs6 = NOTE_FS6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00040">40</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="a243fc48d4292eb3cbeb187723c8283c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Controller::noteFs6 = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_mock_controller_8h_source.html">MockController.h</a> の <a class="el" href="_mock_controller_8h_source.html#l00047">47</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6091a6af8538a5b4e7469b3591740c79"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classev3api_1_1_motor.html">Motor</a> Controller::rightWheel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00045">45</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7ee53fa166c8100bd346830647e4d3e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classev3api_1_1_motor.html">Motor</a> Controller::tailMotor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00047">47</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e19c12fa264d296fafb2996459ddae2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classev3api_1_1_touch_sensor.html">TouchSensor</a> Controller::touchSensor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00042">42</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/apps/include/<a class="el" href="_controller_8h_source.html">Controller.h</a></li>
+<li>str/apps/test/<a class="el" href="_mock_controller_8h_source.html">MockController.h</a></li>
+<li>str/apps/src/<a class="el" href="_controller_8cpp_source.html">Controller.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

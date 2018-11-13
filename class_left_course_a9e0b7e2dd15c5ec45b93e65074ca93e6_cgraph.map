@@ -1,0 +1,7 @@
+<map id="LeftCourse::aiAnswerGo" name="LeftCourse::aiAnswerGo">
+<area shape="rect" id="node2" href="$class_walker.html#a665540aeed857d2e35565e1949e6abec" title="Walker::run" alt="" coords="219,56,309,83"/>
+<area shape="rect" id="node3" href="$class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3" title="Controller::printDisplay" alt="" coords="359,5,513,32"/>
+<area shape="rect" id="node4" href="$class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="358,56,514,83"/>
+<area shape="rect" id="node6" href="$classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="773,81,933,108"/>
+<area shape="rect" id="node5" href="$classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="563,56,725,83"/>
+</map>

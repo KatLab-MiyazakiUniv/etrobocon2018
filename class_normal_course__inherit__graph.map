@@ -1,0 +1,4 @@
+<map id="NormalCourse" name="NormalCourse">
+<area shape="rect" id="node2" href="$class_left_normal_course.html" title="{LeftNormalCourse\n||+ LeftNormalCourse()\l+ runNormalCourse()\l+ statusCheck()\l+ getStatus()\l}" alt="" coords="5,206,152,327"/>
+<area shape="rect" id="node3" href="$class_right_normal_course.html" title="{RightNormalCourse\n||+ RightNormalCourse()\l+ runNormalCourse()\l+ statusCheck()\l+ getStatus()\l}" alt="" coords="177,206,335,327"/>
+</map>

@@ -1,0 +1,51 @@
+<map id="BlockSolver::demo" name="BlockSolver::demo">
+<area shape="rect" id="node2" href="$class_navigator.html#aaf3dc68883c423aec19c383455525bbc" title="指定した距離だけライントレースする " alt="" coords="925,471,1083,497"/>
+<area shape="rect" id="node31" href="$class_block_solver.html#ad407edc5f70054b3739bf34f6e3bda5a" title="指定した色のブロック置き場までライントレースします。 " alt="" coords="910,306,1098,347"/>
+<area shape="rect" id="node34" href="$class_block_solver.html#a3492de2fb6eb0b7245c935174dcb8f00" title="ルートを移動します。 " alt="" coords="193,892,359,919"/>
+<area shape="rect" id="node37" href="$class_block_solver.html#a21459836e6da2c1fa7bac850e333da4d" title="ブロック置き場を乗り越えます。 " alt="" coords="672,547,835,573"/>
+<area shape="rect" id="node40" href="$class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46" title="指定した角度まで走行体を回転させる(基本左エッジ) " alt="" coords="949,715,1059,741"/>
+<area shape="rect" id="node46" href="$class_block_solver.html#ab82a21046107a859adbb5a144ceaa63e" title="ブロックの色を取得し、blockColorに格納します。 " alt="" coords="662,816,845,843"/>
+<area shape="rect" id="node50" href="$class_block_solver.html#af35d5db675b4ef020c678c263425f1b2" title="バックして180ど回転し、来た方向へ戻ります。ブロックを放置するときに使います。 " alt="" coords="187,496,365,523"/>
+<area shape="rect" id="node3" href="$class_navigator.html#aeece0b738f289e4133a27bfa62ee15f2" title="座標とエンコーダの値を初期化する " alt="" coords="1196,765,1311,792"/>
+<area shape="rect" id="node7" href="$class_pid.html#a9e85f222ae86697aacdeaa4f7b0644f6" title="Pid::setPid" alt="" coords="1210,157,1297,184"/>
+<area shape="rect" id="node9" href="$class_line_tracer_walker.html#ab1f0f717138372f536dbb81a83aa6034" title="LineTracerWalker::isLeftsideLine" alt="" coords="1147,360,1359,387"/>
+<area shape="rect" id="node10" href="$class_wheel_odometry.html#a61d5310dcb3118542a9a27902d85d592" title="走行体の位置情報を更新する " alt="" coords="1172,613,1335,640"/>
+<area shape="rect" id="node14" href="$class_walker.html#aa263348b7d132ddfd0c25f11eec4b367" title="Walker::get_count_L" alt="" coords="1182,664,1325,691"/>
+<area shape="rect" id="node16" href="$class_walker.html#ac67a8f1fe17fb1365df515ca6e713373" title="Walker::get_count_R" alt="" coords="1181,715,1326,741"/>
+<area shape="rect" id="node17" href="$class_wheel_odometry.html#a3a2c52e52341f83c32085b30b3e4954e" title="走行体の位置情報を返す " alt="" coords="1151,563,1356,589"/>
+<area shape="rect" id="node18" href="$class_line_tracer_walker.html#a4b5b94728a9b0d145a67816ad1fadc02" title="LineTracerWalker::runLine" alt="" coords="1166,107,1341,133"/>
+<area shape="rect" id="node21" href="$class_navigator.html#afb7b715a50d0c80877c4c5f14061a456" title="光センサの値を取得する " alt="" coords="1170,411,1337,437"/>
+<area shape="rect" id="node24" href="$class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961" title="LineTracerWalker::getForward" alt="" coords="1155,309,1352,336"/>
+<area shape="rect" id="node25" href="$class_walker.html#a665540aeed857d2e35565e1949e6abec" title="Walker::run" alt="" coords="1209,512,1298,539"/>
+<area shape="rect" id="node29" href="$class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390" title="LineTracerWalker::getTurn" alt="" coords="1165,259,1341,285"/>
+<area shape="rect" id="node30" href="$class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="1189,816,1318,843"/>
+<area shape="rect" id="node4" href="$class_walker.html#a796b87e4f28d73c966b58a7866b018c9" title="Walker::reset" alt="" coords="1465,512,1565,539"/>
+<area shape="rect" id="node6" href="$class_wheel_odometry.html#a93592d64412c84dc3b0bdd6468de0657" title="走行体の位置情報を初期化する " alt="" coords="1438,765,1591,792"/>
+<area shape="rect" id="node5" href="$classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="1671,512,1809,539"/>
+<area shape="rect" id="node8" href="$struct_pid_parameter.html#a1680f231922aee58280e54af46cdb7b1" title="PidParameter::set" alt="" coords="1451,165,1578,192"/>
+<area shape="rect" id="node11" href="$class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28" title="走行体の旋回速度を求める " alt="" coords="1430,613,1599,640"/>
+<area shape="rect" id="node12" href="$class_wheel_odometry.html#a83b1fdffc3eed4dd9cf81b1fe993c973" title="走行体の旋回角速度を求める " alt="" coords="1408,664,1621,691"/>
+<area shape="rect" id="node13" href="$struct_coordinate.html#a772936f3dede6ccb0528a719342ebaa6" title="走行体の位置情報を更新する " alt="" coords="1449,563,1581,589"/>
+<area shape="rect" id="node15" href="$classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="1433,715,1596,741"/>
+<area shape="rect" id="node19" href="$class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="1415,99,1614,141"/>
+<area shape="rect" id="node20" href="$class_turn_control.html#a4de8a0d2496220ab73f078ac0f3fd1a1" title="TurnControl::calculateTurn\lForPid" alt="" coords="1427,34,1603,75"/>
+<area shape="rect" id="node22" href="$class_controller.html#aca9bc8f5a0a390d709d6dd2e5fd9b665" title="Controller::getBrightness" alt="" coords="1431,288,1598,315"/>
+<area shape="rect" id="node23" href="$classev3api_1_1_color_sensor.html#a010cb55b6119147496637bc5b2189582" title="ev3api::ColorSensor\l::getRawColor" alt="" coords="1670,281,1810,322"/>
+<area shape="rect" id="node26" href="$class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3" title="Controller::printDisplay" alt="" coords="1437,411,1592,437"/>
+<area shape="rect" id="node27" href="$class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="1437,461,1593,488"/>
+<area shape="rect" id="node28" href="$classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="1435,984,1595,1011"/>
+<area shape="rect" id="node32" href="$class_distinguisher.html#a3634f5227cc6a492952f1283339636dc" title="Distinguisher::getColor" alt="" coords="1176,56,1331,83"/>
+<area shape="rect" id="node33" href="$class_controller.html#a5674a4689bb73d50483bf19c617ac213" title="Controller::buttonIsPressedBack" alt="" coords="1148,5,1359,32"/>
+<area shape="rect" id="node35" href="$class_block_solver.html#a51709fac70958ce6d8d4091e41ab4b49" title="指定した方角へ移動します。 " alt="" coords="413,597,597,624"/>
+<area shape="rect" id="node38" href="$class_controller.html#afe78dbb9fa2ce597920f71ce6bb031f3" title="Controller::speakerPlayTone" alt="" coords="911,917,1097,944"/>
+<area shape="rect" id="node36" href="$class_block_side_by_side_1_1_block_area.html#ad76fa2dcf0679af589e0a8554d98af3b" title="BlockSideBySide::BlockArea\l::getDirection" alt="" coords="658,699,849,741"/>
+<area shape="rect" id="node44" href="$class_block_solver.html#ab9844e0fc35307a10230b83651563bd0" title="次に向かうべき方角を切り替えます。 " alt="" coords="646,496,861,523"/>
+<area shape="rect" id="node45" href="$class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981" title="指定した距離まで走行体を後退させる " alt="" coords="947,664,1061,691"/>
+<area shape="rect" id="node39" href="$class_navigator.html#a6f3901e766e383a66c47177257c46204" title="指定した距離まで走行体を移動させる " alt="" coords="945,613,1063,640"/>
+<area shape="rect" id="node41" href="$class_wheel_odometry.html#ad12bfc89fa25fbf0b6c72bed5d61122e" title="走行体の回転角度を返す " alt="" coords="1158,918,1349,959"/>
+<area shape="rect" id="node42" href="$class_motor_angle.html#a5079b35fb08cc66b9bf0d101d963366a" title="モータ角度の絶対値を計算する " alt="" coords="1425,863,1604,905"/>
+<area shape="rect" id="node43" href="$class_motor_angle.html#acb61bad045644641b2d47c33e148a7b6" title="左右モータの絶対角度の平均値を計算する " alt="" coords="1409,929,1620,956"/>
+<area shape="rect" id="node47" href="$class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102" title="Lifter::liftUp" alt="" coords="959,867,1049,893"/>
+<area shape="rect" id="node49" href="$class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5" title="Lifter::liftDown" alt="" coords="951,816,1057,843"/>
+<area shape="rect" id="node48" href="$class_lifter.html#af08c6ba362698bb2d6427416d622e34d" title="Lifter::getCurrentAngle" alt="" coords="1177,867,1330,893"/>
+</map>

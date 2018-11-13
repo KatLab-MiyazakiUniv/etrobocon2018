@@ -1,0 +1,5 @@
+<map id="etrobocon2018_test::TEST" name="etrobocon2018_test::TEST">
+<area shape="rect" id="node2" href="$class_selector.html#a99a6799374dcaa0121d923b039c67043" title="Selector::isEvacuatingWithNext" alt="" coords="189,5,397,32"/>
+<area shape="rect" id="node3" href="$class_selector.html#abe89790dcf13c5662040b4b842c32840" title="Selector::isMovingWithNext" alt="" coords="201,56,386,83"/>
+<area shape="rect" id="node4" href="$class_selector.html#abe99a33232127bdfe80c420724977241" title="Selector::isCarryingWithNext" alt="" coords="197,107,389,133"/>
+</map>

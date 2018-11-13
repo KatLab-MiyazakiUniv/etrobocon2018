@@ -1,0 +1,8 @@
+<map id="main_task" name="main_task">
+<area shape="rect" id="node2" href="$util_8cpp.html#a0a6d184db0f324ec8dfdd059b9b526a8" title="msg_f" alt="" coords="180,5,239,32"/>
+<area shape="rect" id="node3" href="$classev3api_1_1_color_sensor.html#ad4054c92f4c93eeed71f98d606988f1e" title="ev3api::ColorSensor\l::getColorNumber" alt="" coords="139,57,279,98"/>
+<area shape="rect" id="node5" href="$classev3api_1_1_color_sensor.html#a010cb55b6119147496637bc5b2189582" title="ev3api::ColorSensor\l::getRawColor" alt="" coords="139,122,279,163"/>
+<area shape="rect" id="node6" href="$classev3api_1_1_sonar_sensor.html#ae025c41419ca5f25aecc941f3820270c" title="ev3api::SonarSensor\l::getDistance" alt="" coords="138,187,281,229"/>
+<area shape="rect" id="node7" href="$classev3api_1_1_touch_sensor.html#ae09cb8f7750789cf76998fcc0449e624" title="ev3api::TouchSensor\l::isPressed" alt="" coords="137,253,282,294"/>
+<area shape="rect" id="node4" href="$classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92" title="ev3api::Sensor::getPort" alt="" coords="331,163,490,189"/>
+</map>

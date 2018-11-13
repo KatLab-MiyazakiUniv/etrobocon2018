@@ -1,0 +1,4 @@
+<map id="NormalCourse::runOrStop" name="NormalCourse::runOrStop">
+<area shape="rect" id="node2" href="$class_left_course.html#a9bbbc6e2b68c99c5baaa9b8a7a951cb6" title="LeftCourse::runNormalCourse" alt="" coords="231,5,427,32"/>
+<area shape="rect" id="node3" href="$class_right_course.html#a0718c3e06bc3377fdb7a3334029323fb" title="RightCourse::runNormalCourse" alt="" coords="227,56,432,83"/>
+</map>

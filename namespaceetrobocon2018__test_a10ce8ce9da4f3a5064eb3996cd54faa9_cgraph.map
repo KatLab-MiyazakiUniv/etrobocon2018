@@ -1,0 +1,12 @@
+<map id="etrobocon2018_test::TEST" name="etrobocon2018_test::TEST">
+<area shape="rect" id="node2" href="$class_selector.html#a53a60ecbad05dff891bd15a91d6a62fc" title="Selector::prepareSearching" alt="" coords="189,56,368,83"/>
+<area shape="rect" id="node5" href="$class_selector.html#afd2086b7dbe7b5d284c8adee5ea82b7f" title="Selector::searchRoute" alt="" coords="203,107,355,133"/>
+<area shape="rect" id="node3" href="$class_explorer.html#a53c637c90b158016c5be1fcb01165a1e" title="Explorer::resetBlockArea" alt="" coords="417,5,583,32"/>
+<area shape="rect" id="node4" href="$class_explorer.html#aee7149934ae124c0e6a7b90478da70a5" title="Explorer::setHasBlockIn" alt="" coords="418,56,582,83"/>
+<area shape="rect" id="node6" href="$class_explorer.html#a38468adb7fd2b5ae688f1bca495d12de" title="Explorer::searchRoute" alt="" coords="424,107,576,133"/>
+<area shape="rect" id="node7" href="$class_explorer.html#a28a1f4268214e99cef86b39faf416ae0" title="Explorer::calculateNeighborCost" alt="" coords="632,107,843,133"/>
+<area shape="rect" id="node8" href="$class_node.html#acc4776c4da27dd7c7618f28568546f22" title="Node::getNodeID" alt="" coords="903,43,1027,69"/>
+<area shape="rect" id="node10" href="$class_node.html#a49c84e314cd987257880970217b7e01d" title="Node::getParentNode" alt="" coords="891,195,1039,221"/>
+<area shape="rect" id="node9" href="$class_node.html#abed661b14cfb80013b73808e175a8515" title="Node::setBeClosed" alt="" coords="897,93,1033,120"/>
+<area shape="rect" id="node11" href="$class_node.html#a268164af093b84d3be75ce579d83cd0e" title="Node::getScore" alt="" coords="909,144,1022,171"/>
+</map>

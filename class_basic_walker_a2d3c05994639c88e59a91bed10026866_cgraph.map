@@ -1,0 +1,13 @@
+<map id="BasicWalker::spin" name="BasicWalker::spin">
+<area shape="rect" id="node2" href="$class_basic_walker.html#ace452995ca150076f383768b02164f7a" title="BasicWalker::reset" alt="" coords="188,5,321,32"/>
+<area shape="rect" id="node5" href="$class_walker.html#ac67a8f1fe17fb1365df515ca6e713373" title="Walker::get_count_R" alt="" coords="182,56,327,83"/>
+<area shape="rect" id="node7" href="$class_walker.html#a665540aeed857d2e35565e1949e6abec" title="Walker::run" alt="" coords="210,107,299,133"/>
+<area shape="rect" id="node12" href="$class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="190,157,319,184"/>
+<area shape="rect" id="node3" href="$class_walker.html#a796b87e4f28d73c966b58a7866b018c9" title="Walker::reset" alt="" coords="407,5,507,32"/>
+<area shape="rect" id="node4" href="$classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="599,5,737,32"/>
+<area shape="rect" id="node6" href="$classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="376,56,539,83"/>
+<area shape="rect" id="node8" href="$class_controller.html#a1e0f2b19656800f5f86cd2e390efc7a3" title="Controller::printDisplay" alt="" coords="380,107,535,133"/>
+<area shape="rect" id="node9" href="$class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="379,157,535,184"/>
+<area shape="rect" id="node11" href="$classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="797,183,957,209"/>
+<area shape="rect" id="node10" href="$classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="587,157,749,184"/>
+</map>

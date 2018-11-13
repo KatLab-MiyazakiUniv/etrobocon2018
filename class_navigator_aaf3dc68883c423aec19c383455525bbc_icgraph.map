@@ -1,0 +1,10 @@
+<map id="Navigator::moveOnLine" name="Navigator::moveOnLine">
+<area shape="rect" id="node2" href="$class_a_i_answer.html#a9605d6ba042475f5b5881650bb6dd380" title="数字を無視してAIアンサーのブロック並べへ行く " alt="" coords="235,5,411,32"/>
+<area shape="rect" id="node4" href="$class_a_i_answer.html#a81cbdae4bd9ff02c895f2ccef9920f90" title="デジタル数字の場所まで行く " alt="" coords="214,56,431,83"/>
+<area shape="rect" id="node5" href="$class_a_i_answer.html#a295c4f37f3a50926e894a973056595ad" title="デジタル数字を読み取る " alt="" coords="222,107,423,133"/>
+<area shape="rect" id="node6" href="$class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="240,208,405,235"/>
+<area shape="rect" id="node8" href="$class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="240,157,405,184"/>
+<area shape="rect" id="node9" href="$class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="257,259,389,285"/>
+<area shape="rect" id="node3" href="$class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="529,81,634,108"/>
+<area shape="rect" id="node7" href="$class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="480,208,683,235"/>
+</map>

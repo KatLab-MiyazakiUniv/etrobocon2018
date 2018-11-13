@@ -1,0 +1,12 @@
+<map id="etrobocon2018_test::TEST" name="etrobocon2018_test::TEST">
+<area shape="rect" id="node2" href="$class_wheel_odometry.html#a61d5310dcb3118542a9a27902d85d592" title="走行体の位置情報を更新する " alt="" coords="189,81,352,108"/>
+<area shape="rect" id="node9" href="$class_wheel_odometry.html#a93592d64412c84dc3b0bdd6468de0657" title="走行体の位置情報を初期化する " alt="" coords="194,157,347,184"/>
+<area shape="rect" id="node3" href="$class_wheel_odometry.html#a7130bad653ccc5145a1c4b9da0b5ef28" title="走行体の旋回速度を求める " alt="" coords="422,5,591,32"/>
+<area shape="rect" id="node6" href="$class_wheel_odometry.html#a83b1fdffc3eed4dd9cf81b1fe993c973" title="走行体の旋回角速度を求める " alt="" coords="400,56,613,83"/>
+<area shape="rect" id="node8" href="$struct_coordinate.html#a772936f3dede6ccb0528a719342ebaa6" title="走行体の位置情報を更新する " alt="" coords="441,107,573,133"/>
+<area shape="rect" id="node4" href="$class_motor_angle.html#a8bf992a88ac06b1b5731fb99912ff9bd" title="左右モータの相対角度の平均値を計算する " alt="" coords="661,5,864,32"/>
+<area shape="rect" id="node5" href="$class_motor_angle.html#abe5eb31bff0514f32a0bb00751f16ccf" title="左右モータ角度の過去値を現在値へ更新する " alt="" coords="913,5,1047,32"/>
+<area shape="rect" id="node7" href="$class_motor_angle.html#aae319910dcaa118d1a7f7ca66ee2bdc1" title="左右モータ角度の差を計算する(右手系/反時計回りが正) " alt="" coords="663,56,862,83"/>
+<area shape="rect" id="node10" href="$struct_coordinate.html#ac6e8a112850a5768760a108bd4b965c6" title="走行体の位置情報を初期化する " alt="" coords="445,157,568,184"/>
+<area shape="rect" id="node11" href="$class_motor_angle.html#a20ae8007014e6368805dad79459bcf54" title="左右モータ角度の過去値を0にリセットする " alt="" coords="444,208,569,235"/>
+</map>

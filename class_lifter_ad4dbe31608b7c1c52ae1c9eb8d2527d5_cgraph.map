@@ -1,0 +1,6 @@
+<map id="Lifter::liftDown" name="Lifter::liftDown">
+<area shape="rect" id="node2" href="$class_lifter.html#af08c6ba362698bb2d6427416d622e34d" title="Lifter::getCurrentAngle" alt="" coords="163,5,317,32"/>
+<area shape="rect" id="node4" href="$classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="160,56,320,83"/>
+<area shape="rect" id="node5" href="$class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="175,107,305,133"/>
+<area shape="rect" id="node3" href="$classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="368,5,531,32"/>
+</map>

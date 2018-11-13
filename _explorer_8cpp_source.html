@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: str/apps/src/Explorer.cpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="dir_5a8a96784cd33ffb845d840025aa312a.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Explorer.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_explorer_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_explorer_8h.html">Explorer.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_explorer.html#a5807592365f49ad3d76249a9a406dd68">    3</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_explorer.html#a5807592365f49ad3d76249a9a406dd68">Explorer::createBlockArea</a>()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">int</span> nodeCount = neighborsIDList.size();</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="comment">// ノードのポインタのリストを作成</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nodeCount; i++) {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_node.html">Node</a> node;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    node.<a class="code" href="class_node.html#a4499664cb91fd5d4ff2beca381d0e6b0">setNodeID</a>(i);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    nodeList.push_back(node);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    nodePtrs.push_back(&amp;nodeList[i]);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">//nodePtrs.push_back(&amp;node);</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="comment">// 隣接ノードのポインタのリストをノード分リスト化</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nodeCount; i++) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> nodeID : neighborsIDList[i]) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      <span class="keywordflow">if</span>(nodeID == EMPTY_ID) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      neighborPtrs[i].push_back(nodePtrs[nodeID]);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="comment">// 隣接ノードのポインタのリストを格納</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nodeCount; i++) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    nodePtrs[i]-&gt;setNeighbors(&amp;neighborPtrs[i]);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    nodePtrs[i]-&gt;setPosition(positionList[i].x, positionList[i].y);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="comment">// 各ノードのポインタを格納</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  blockAreaNodeList = &amp;nodePtrs;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_explorer.html#a53c637c90b158016c5be1fcb01165a1e">   33</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_explorer.html#a53c637c90b158016c5be1fcb01165a1e">Explorer::resetBlockArea</a>()</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordflow">for</span>(<span class="keyword">auto</span> itr = blockAreaNodeList-&gt;begin(); itr &lt;= blockAreaNodeList-&gt;end(); itr++) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    (*itr)-&gt;setBeClosed(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    (*itr)-&gt;setHasBlock(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    (*itr)-&gt;setScore(0);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    (*itr)-&gt;setRealCost(0);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    (*itr)-&gt;setParentNode(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_explorer.html#aee7149934ae124c0e6a7b90478da70a5">   44</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_explorer.html#aee7149934ae124c0e6a7b90478da70a5">Explorer::setHasBlockIn</a>(std::int8_t blockID)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">auto</span> itr = blockAreaNodeList-&gt;begin() + blockID;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  (*itr)-&gt;setHasBlock(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_explorer.html#a1d2bca3a7689895975a8734557e320e6">   50</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_explorer.html#a1d2bca3a7689895975a8734557e320e6">Explorer::hasBlock</a>(std::int8_t <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">auto</span> itr = blockAreaNodeList-&gt;begin() + id;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">return</span> (*itr)-&gt;hasBlock();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_explorer.html#a38468adb7fd2b5ae688f1bca495d12de">   56</a></span>&#160;std::vector&lt;int&gt; <a class="code" href="class_explorer.html#a38468adb7fd2b5ae688f1bca495d12de">Explorer::searchRoute</a>(std::int8_t start, std::int8_t end)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">auto</span> startItr = blockAreaNodeList-&gt;begin() + start;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">auto</span> endItr = blockAreaNodeList-&gt;begin() + end;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">int</span> estimatedCostX = std::abs((*endItr)-&gt;getPositionX() - (*startItr)-&gt;getPositionX());</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">int</span> estimatedCostY = std::abs((*endItr)-&gt;getPositionY() - (*startItr)-&gt;getPositionY());</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">int</span> score = estimatedCostX + estimatedCostY;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordflow">if</span>((*startItr)-&gt;hasBlock()) score += 99;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  (*startItr)-&gt;setScore(score);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  (*startItr)-&gt;setRealCost(0);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  (*startItr)-&gt;setParentNode(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  std::vector&lt;Node*&gt; around;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="class_node.html">Node</a>* endNode = <a class="code" href="class_explorer.html#a28a1f4268214e99cef86b39faf416ae0">calculateNeighborCost</a>((*startItr), &amp;around, 1, end);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  std::vector&lt;int&gt; route = { endNode-&gt;<a class="code" href="class_node.html#acc4776c4da27dd7c7618f28568546f22">getNodeID</a>() };</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <a class="code" href="class_node.html">Node</a>* parent = endNode-&gt;<a class="code" href="class_node.html#a49c84e314cd987257880970217b7e01d">getParentNode</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordflow">while</span>(parent != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    route.push_back(parent-&gt;<a class="code" href="class_node.html#acc4776c4da27dd7c7618f28568546f22">getNodeID</a>());</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    parent = parent-&gt;<a class="code" href="class_node.html#a49c84e314cd987257880970217b7e01d">getParentNode</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  std::reverse(route.begin(), route.end());</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordflow">return</span> route;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_explorer.html#a28a1f4268214e99cef86b39faf416ae0">   85</a></span>&#160;<a class="code" href="class_node.html">Node</a>* <a class="code" href="class_explorer.html#a28a1f4268214e99cef86b39faf416ae0">Explorer::calculateNeighborCost</a>(<a class="code" href="class_node.html">Node</a>* parent, std::vector&lt;Node*&gt;* around,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                      std::int32_t realCost, std::int8_t end)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">auto</span> currentItr = blockAreaNodeList-&gt;begin() + parent-&gt;<a class="code" href="class_node.html#acc4776c4da27dd7c7618f28568546f22">getNodeID</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">auto</span> endItr = blockAreaNodeList-&gt;begin() + end;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  parent-&gt;<a class="code" href="class_node.html#abed661b14cfb80013b73808e175a8515">setBeClosed</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordflow">for</span>(<span class="keyword">auto</span> itr = (*currentItr)-&gt;getNeighbors()-&gt;begin();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      itr != (*currentItr)-&gt;getNeighbors()-&gt;end(); itr++) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">if</span>((*itr)-&gt;isClosed() || (*itr) == parent-&gt;<a class="code" href="class_node.html#a49c84e314cd987257880970217b7e01d">getParentNode</a>()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">int</span> estimatedCostX = std::abs((*endItr)-&gt;getPositionX() - (*itr)-&gt;getPositionX());</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">int</span> estimatedCostY = std::abs((*endItr)-&gt;getPositionY() - (*itr)-&gt;getPositionY());</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">int</span> score = realCost + estimatedCostX + estimatedCostY;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span>((*itr)-&gt;hasBlock() &amp;&amp; (*itr)-&gt;getNodeID() != end) score += 99;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    (*itr)-&gt;setScore(score);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    (*itr)-&gt;setRealCost(realCost);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    (*itr)-&gt;setParentNode(parent);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    around-&gt;push_back((*itr));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  std::int32_t min = 999;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  std::int32_t minCost = 999;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <a class="code" href="class_node.html">Node</a>* minNode = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordflow">for</span>(<span class="keyword">auto</span> itr = around-&gt;begin(); itr != around-&gt;end(); itr++) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">if</span>((*itr)-&gt;isClosed() || (*itr) == parent-&gt;<a class="code" href="class_node.html#a49c84e314cd987257880970217b7e01d">getParentNode</a>()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">int</span> score = (*itr)-&gt;<a class="code" href="class_node.html#a268164af093b84d3be75ce579d83cd0e">getScore</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">if</span>(score &gt; min || (score == min &amp;&amp; (*itr)-&gt;getRealCost() &gt;= minCost)) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    min = score;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    minCost = (*itr)-&gt;getRealCost();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    minNode = (*itr);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">if</span>(minNode-&gt;<a class="code" href="class_node.html#acc4776c4da27dd7c7618f28568546f22">getNodeID</a>() != end) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    std::int8_t cost = 0;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="class_node.html">Node</a>* node = minNode;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">while</span>(node-&gt;<a class="code" href="class_node.html#a49c84e314cd987257880970217b7e01d">getParentNode</a>() == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      cost++;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      node = node-&gt;<a class="code" href="class_node.html#a49c84e314cd987257880970217b7e01d">getParentNode</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    minNode = <a class="code" href="class_explorer.html#a28a1f4268214e99cef86b39faf416ae0">calculateNeighborCost</a>(minNode, around, realCost + 1, end);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordflow">return</span> minNode;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="class_explorer.html#a3791b9361ce9613cfde3cfa89f886fb4">  136</a></span>&#160;std::vector&lt;Node*&gt;* <a class="code" href="class_explorer.html#a3791b9361ce9613cfde3cfa89f886fb4">Explorer::getBlockAreaNodeList</a>()</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordflow">return</span> blockAreaNodeList;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
+<div class="ttc" id="class_node_html_a4499664cb91fd5d4ff2beca381d0e6b0"><div class="ttname"><a href="class_node.html#a4499664cb91fd5d4ff2beca381d0e6b0">Node::setNodeID</a></div><div class="ttdeci">void setNodeID(std::int8_t nodeNumber)</div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00013">Node.cpp:13</a></div></div>
+<div class="ttc" id="class_node_html_a49c84e314cd987257880970217b7e01d"><div class="ttname"><a href="class_node.html#a49c84e314cd987257880970217b7e01d">Node::getParentNode</a></div><div class="ttdeci">Node * getParentNode()</div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00054">Node.cpp:54</a></div></div>
+<div class="ttc" id="class_node_html"><div class="ttname"><a href="class_node.html">Node</a></div><div class="ttdef"><b>Definition:</b> <a href="_node_8h_source.html#l00142">Node.h:142</a></div></div>
+<div class="ttc" id="class_explorer_html_a5807592365f49ad3d76249a9a406dd68"><div class="ttname"><a href="class_explorer.html#a5807592365f49ad3d76249a9a406dd68">Explorer::createBlockArea</a></div><div class="ttdeci">void createBlockArea()</div><div class="ttdef"><b>Definition:</b> <a href="_explorer_8cpp_source.html#l00003">Explorer.cpp:3</a></div></div>
+<div class="ttc" id="class_explorer_html_a3791b9361ce9613cfde3cfa89f886fb4"><div class="ttname"><a href="class_explorer.html#a3791b9361ce9613cfde3cfa89f886fb4">Explorer::getBlockAreaNodeList</a></div><div class="ttdeci">std::vector&lt; Node * &gt; * getBlockAreaNodeList()</div><div class="ttdef"><b>Definition:</b> <a href="_explorer_8cpp_source.html#l00136">Explorer.cpp:136</a></div></div>
+<div class="ttc" id="class_explorer_html_a1d2bca3a7689895975a8734557e320e6"><div class="ttname"><a href="class_explorer.html#a1d2bca3a7689895975a8734557e320e6">Explorer::hasBlock</a></div><div class="ttdeci">bool hasBlock(std::int8_t id)</div><div class="ttdef"><b>Definition:</b> <a href="_explorer_8cpp_source.html#l00050">Explorer.cpp:50</a></div></div>
+<div class="ttc" id="class_explorer_html_a28a1f4268214e99cef86b39faf416ae0"><div class="ttname"><a href="class_explorer.html#a28a1f4268214e99cef86b39faf416ae0">Explorer::calculateNeighborCost</a></div><div class="ttdeci">Node * calculateNeighborCost(Node *parent, std::vector&lt; Node * &gt; *around, std::int32_t realCost, std::int8_t end)</div><div class="ttdef"><b>Definition:</b> <a href="_explorer_8cpp_source.html#l00085">Explorer.cpp:85</a></div></div>
+<div class="ttc" id="class_explorer_html_aee7149934ae124c0e6a7b90478da70a5"><div class="ttname"><a href="class_explorer.html#aee7149934ae124c0e6a7b90478da70a5">Explorer::setHasBlockIn</a></div><div class="ttdeci">void setHasBlockIn(std::int8_t blockID)</div><div class="ttdef"><b>Definition:</b> <a href="_explorer_8cpp_source.html#l00044">Explorer.cpp:44</a></div></div>
+<div class="ttc" id="class_node_html_abed661b14cfb80013b73808e175a8515"><div class="ttname"><a href="class_node.html#abed661b14cfb80013b73808e175a8515">Node::setBeClosed</a></div><div class="ttdeci">void setBeClosed(bool closed_)</div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00079">Node.cpp:79</a></div></div>
+<div class="ttc" id="class_explorer_html_a38468adb7fd2b5ae688f1bca495d12de"><div class="ttname"><a href="class_explorer.html#a38468adb7fd2b5ae688f1bca495d12de">Explorer::searchRoute</a></div><div class="ttdeci">std::vector&lt; int &gt; searchRoute(std::int8_t start, std::int8_t end)</div><div class="ttdef"><b>Definition:</b> <a href="_explorer_8cpp_source.html#l00056">Explorer.cpp:56</a></div></div>
+<div class="ttc" id="class_node_html_acc4776c4da27dd7c7618f28568546f22"><div class="ttname"><a href="class_node.html#acc4776c4da27dd7c7618f28568546f22">Node::getNodeID</a></div><div class="ttdeci">std::int8_t getNodeID()</div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00018">Node.cpp:18</a></div></div>
+<div class="ttc" id="_explorer_8h_html"><div class="ttname"><a href="_explorer_8h.html">Explorer.h</a></div><div class="ttdoc">ルート探索クラス </div></div>
+<div class="ttc" id="class_explorer_html_a53c637c90b158016c5be1fcb01165a1e"><div class="ttname"><a href="class_explorer.html#a53c637c90b158016c5be1fcb01165a1e">Explorer::resetBlockArea</a></div><div class="ttdeci">void resetBlockArea()</div><div class="ttdef"><b>Definition:</b> <a href="_explorer_8cpp_source.html#l00033">Explorer.cpp:33</a></div></div>
+<div class="ttc" id="class_node_html_a268164af093b84d3be75ce579d83cd0e"><div class="ttname"><a href="class_node.html#a268164af093b84d3be75ce579d83cd0e">Node::getScore</a></div><div class="ttdeci">std::int32_t getScore()</div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00064">Node.cpp:64</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

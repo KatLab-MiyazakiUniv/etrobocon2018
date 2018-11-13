@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: ev3api::GyroSensor クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
+      <li><a href="inherits.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceev3api.html">ev3api</a></li><li class="navelem"><a class="el" href="classev3api_1_1_gyro_sensor.html">GyroSensor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="classev3api_1_1_gyro_sensor-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">ev3api::GyroSensor クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_gyro_sensor_8h_source.html">GyroSensor.h</a>&gt;</code></p>
+<div class="dynheader">
+ev3api::GyroSensor の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_gyro_sensor__inherit__graph.png" border="0" usemap="#ev3api_1_1_gyro_sensor_inherit__map" alt="Inheritance graph"/></div>
+<map name="ev3api_1_1_gyro_sensor_inherit__map" id="ev3api_1_1_gyro_sensor_inherit__map">
+<area shape="rect" id="node2" href="classev3api_1_1_sensor.html" title="{ev3api::Sensor\n||# getPort()\l# Sensor()\l# ~Sensor()\l}" alt="" coords="27,5,136,112"/></map>
+</div>
+<div class="dynheader">
+ev3api::GyroSensor 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_gyro_sensor__coll__graph.png" border="0" usemap="#ev3api_1_1_gyro_sensor_coll__map" alt="Collaboration graph"/></div>
+<map name="ev3api_1_1_gyro_sensor_coll__map" id="ev3api_1_1_gyro_sensor_coll__map">
+<area shape="rect" id="node2" href="classev3api_1_1_sensor.html" title="{ev3api::Sensor\n||# getPort()\l# Sensor()\l# ~Sensor()\l}" alt="" coords="27,5,136,112"/></map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae531673385f409a9438c43367c56fa33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_gyro_sensor.html#ae531673385f409a9438c43367c56fa33">GyroSensor</a> (<a class="el" href="_port_8h.html#a8d17f8fabb486d5815d626610983e82d">ePortS</a> port)</td></tr>
+<tr class="separator:ae531673385f409a9438c43367c56fa33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39716bd4b7d908145e4cc9697054ff4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_gyro_sensor.html#a39716bd4b7d908145e4cc9697054ff4a">setOffset</a> (int16_t offset)</td></tr>
+<tr class="separator:a39716bd4b7d908145e4cc9697054ff4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97b505d902fb927c2b15c5d28e9c1533"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_gyro_sensor.html#a97b505d902fb927c2b15c5d28e9c1533">reset</a> (void)</td></tr>
+<tr class="separator:a97b505d902fb927c2b15c5d28e9c1533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af779beaf80c1880881095cdb3f4f86cd"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_gyro_sensor.html#af779beaf80c1880881095cdb3f4f86cd">getAnglerVelocity</a> (void) const </td></tr>
+<tr class="separator:af779beaf80c1880881095cdb3f4f86cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae43a65d65e26bb9976efe7cc6a97f7a9"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_gyro_sensor.html#ae43a65d65e26bb9976efe7cc6a97f7a9">getAngle</a> (void) const </td></tr>
+<tr class="separator:ae43a65d65e26bb9976efe7cc6a97f7a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:ac3c90fe5c97d2d6395f3c4e858821b3c"><td class="memItemLeft" align="right" valign="top">static const int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_gyro_sensor.html#ac3c90fe5c97d2d6395f3c4e858821b3c">DEFAULT_OFFSET</a> = 0</td></tr>
+<tr class="separator:ac3c90fe5c97d2d6395f3c4e858821b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_methods_classev3api_1_1_sensor"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classev3api_1_1_sensor')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classev3api_1_1_sensor.html">ev3api::Sensor</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:a64d6d733ff9da9b9beafa68efed0cf92 inherit pro_methods_classev3api_1_1_sensor"><td class="memItemLeft" align="right" valign="top">sensor_port_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92">getPort</a> (void) const </td></tr>
+<tr class="separator:a64d6d733ff9da9b9beafa68efed0cf92 inherit pro_methods_classev3api_1_1_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a899f1e5feb7728657e70e0e2dc767ade inherit pro_methods_classev3api_1_1_sensor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_sensor.html#a899f1e5feb7728657e70e0e2dc767ade">Sensor</a> (<a class="el" href="_port_8h.html#a8d17f8fabb486d5815d626610983e82d">ePortS</a> port, sensor_type_t type)</td></tr>
+<tr class="separator:a899f1e5feb7728657e70e0e2dc767ade inherit pro_methods_classev3api_1_1_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4db83c281e5c852e9d3e342f56bae1f6 inherit pro_methods_classev3api_1_1_sensor"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classev3api_1_1_sensor.html#a4db83c281e5c852e9d3e342f56bae1f6">~Sensor</a> (void)</td></tr>
+<tr class="separator:a4db83c281e5c852e9d3e342f56bae1f6 inherit pro_methods_classev3api_1_1_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ジャイロセンサ </p>
+
+<p> <a class="el" href="_gyro_sensor_8h_source.html">GyroSensor.h</a> の <a class="el" href="_gyro_sensor_8h_source.html#l00016">16</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a class="anchor" id="ae531673385f409a9438c43367c56fa33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GyroSensor::GyroSensor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_port_8h.html#a8d17f8fabb486d5815d626610983e82d">ePortS</a>&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>コンストラクタ<br/>
+ ジャイロセンサの角位置を0リセットする </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>ジャイロセンサ接続ポート </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>- </dd></dl>
+
+<p> <a class="el" href="_gyro_sensor_8cpp_source.html">GyroSensor.cpp</a> の <a class="el" href="_gyro_sensor_8cpp_source.html#l00013">13</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<a class="code" href="classev3api_1_1_sensor.html#a899f1e5feb7728657e70e0e2dc767ade">Sensor</a>(port, GYRO_SENSOR),</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;mOffset(<a class="code" href="classev3api_1_1_gyro_sensor.html#ac3c90fe5c97d2d6395f3c4e858821b3c">DEFAULT_OFFSET</a>)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    ev3_gyro_sensor_reset(<a class="code" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92">getPort</a>());</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    (void)ev3_gyro_sensor_get_rate(<a class="code" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92">getPort</a>());</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="ttc" id="classev3api_1_1_gyro_sensor_html_ac3c90fe5c97d2d6395f3c4e858821b3c"><div class="ttname"><a href="classev3api_1_1_gyro_sensor.html#ac3c90fe5c97d2d6395f3c4e858821b3c">ev3api::GyroSensor::DEFAULT_OFFSET</a></div><div class="ttdeci">static const int16_t DEFAULT_OFFSET</div><div class="ttdef"><b>Definition:</b> <a href="_gyro_sensor_8h_source.html#l00022">GyroSensor.h:22</a></div></div>
+<div class="ttc" id="classev3api_1_1_sensor_html_a899f1e5feb7728657e70e0e2dc767ade"><div class="ttname"><a href="classev3api_1_1_sensor.html#a899f1e5feb7728657e70e0e2dc767ade">ev3api::Sensor::Sensor</a></div><div class="ttdeci">Sensor(ePortS port, sensor_type_t type)</div><div class="ttdef"><b>Definition:</b> <a href="_sensor_8h_source.html#l00034">Sensor.h:34</a></div></div>
+<div class="ttc" id="classev3api_1_1_sensor_html_a64d6d733ff9da9b9beafa68efed0cf92"><div class="ttname"><a href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92">ev3api::Sensor::getPort</a></div><div class="ttdeci">sensor_port_t getPort(void) const </div><div class="ttdef"><b>Definition:</b> <a href="_sensor_8h_source.html#l00026">Sensor.h:26</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_gyro_sensor_ae531673385f409a9438c43367c56fa33_cgraph.png" border="0" usemap="#classev3api_1_1_gyro_sensor_ae531673385f409a9438c43367c56fa33_cgraph" alt=""/></div>
+<map name="classev3api_1_1_gyro_sensor_ae531673385f409a9438c43367c56fa33_cgraph" id="classev3api_1_1_gyro_sensor_ae531673385f409a9438c43367c56fa33_cgraph">
+<area shape="rect" id="node2" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92" title="ev3api::Sensor::getPort" alt="" coords="193,12,351,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="ae43a65d65e26bb9976efe7cc6a97f7a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t GyroSensor::getAngle </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>角位置を測定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">-</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>角位置 [deg] </dd></dl>
+
+<p> <a class="el" href="_gyro_sensor_8cpp_source.html">GyroSensor.cpp</a> の <a class="el" href="_gyro_sensor_8cpp_source.html#l00046">46</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> ev3_gyro_sensor_get_angle(<a class="code" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92">getPort</a>());</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="ttc" id="classev3api_1_1_sensor_html_a64d6d733ff9da9b9beafa68efed0cf92"><div class="ttname"><a href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92">ev3api::Sensor::getPort</a></div><div class="ttdeci">sensor_port_t getPort(void) const </div><div class="ttdef"><b>Definition:</b> <a href="_sensor_8h_source.html#l00026">Sensor.h:26</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_gyro_sensor_ae43a65d65e26bb9976efe7cc6a97f7a9_cgraph.png" border="0" usemap="#classev3api_1_1_gyro_sensor_ae43a65d65e26bb9976efe7cc6a97f7a9_cgraph" alt=""/></div>
+<map name="classev3api_1_1_gyro_sensor_ae43a65d65e26bb9976efe7cc6a97f7a9_cgraph" id="classev3api_1_1_gyro_sensor_ae43a65d65e26bb9976efe7cc6a97f7a9_cgraph">
+<area shape="rect" id="node2" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92" title="ev3api::Sensor::getPort" alt="" coords="193,12,351,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af779beaf80c1880881095cdb3f4f86cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t GyroSensor::getAnglerVelocity </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>オフセット付き角速度取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">-</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>角速度 [deg/sec] </dd></dl>
+
+<p> <a class="el" href="_gyro_sensor_8cpp_source.html">GyroSensor.cpp</a> の <a class="el" href="_gyro_sensor_8cpp_source.html#l00039">39</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> ev3_gyro_sensor_get_rate(<a class="code" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92">getPort</a>()) - mOffset;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="ttc" id="classev3api_1_1_sensor_html_a64d6d733ff9da9b9beafa68efed0cf92"><div class="ttname"><a href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92">ev3api::Sensor::getPort</a></div><div class="ttdeci">sensor_port_t getPort(void) const </div><div class="ttdef"><b>Definition:</b> <a href="_sensor_8h_source.html#l00026">Sensor.h:26</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_gyro_sensor_af779beaf80c1880881095cdb3f4f86cd_cgraph.png" border="0" usemap="#classev3api_1_1_gyro_sensor_af779beaf80c1880881095cdb3f4f86cd_cgraph" alt=""/></div>
+<map name="classev3api_1_1_gyro_sensor_af779beaf80c1880881095cdb3f4f86cd_cgraph" id="classev3api_1_1_gyro_sensor_af779beaf80c1880881095cdb3f4f86cd_cgraph">
+<area shape="rect" id="node2" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92" title="ev3api::Sensor::getPort" alt="" coords="193,12,351,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a97b505d902fb927c2b15c5d28e9c1533"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GyroSensor::reset </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ジャイロセンサの角位置を0リセットする </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">-</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>- </dd></dl>
+
+<p> <a class="el" href="_gyro_sensor_8cpp_source.html">GyroSensor.cpp</a> の <a class="el" href="_gyro_sensor_8cpp_source.html#l00032">32</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    ev3_gyro_sensor_reset(<a class="code" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92">getPort</a>());</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="ttc" id="classev3api_1_1_sensor_html_a64d6d733ff9da9b9beafa68efed0cf92"><div class="ttname"><a href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92">ev3api::Sensor::getPort</a></div><div class="ttdeci">sensor_port_t getPort(void) const </div><div class="ttdef"><b>Definition:</b> <a href="_sensor_8h_source.html#l00026">Sensor.h:26</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classev3api_1_1_gyro_sensor_a97b505d902fb927c2b15c5d28e9c1533_cgraph.png" border="0" usemap="#classev3api_1_1_gyro_sensor_a97b505d902fb927c2b15c5d28e9c1533_cgraph" alt=""/></div>
+<map name="classev3api_1_1_gyro_sensor_a97b505d902fb927c2b15c5d28e9c1533_cgraph" id="classev3api_1_1_gyro_sensor_a97b505d902fb927c2b15c5d28e9c1533_cgraph">
+<area shape="rect" id="node2" href="classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92" title="ev3api::Sensor::getPort" alt="" coords="193,12,351,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a39716bd4b7d908145e4cc9697054ff4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GyroSensor::setOffset </td>
+          <td>(</td>
+          <td class="paramtype">int16_t&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>角速度に対するオフセットを設定する<br/>
+ オフセット値 = 角速度 0[deg/sec] のときのセンサ値 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>オフセット値 (0-1023) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>- </dd></dl>
+
+<p> <a class="el" href="_gyro_sensor_8cpp_source.html">GyroSensor.cpp</a> の <a class="el" href="_gyro_sensor_8cpp_source.html#l00024">24</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    mOffset = offset;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a class="anchor" id="ac3c90fe5c97d2d6395f3c4e858821b3c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int16_t ev3api::GyroSensor::DEFAULT_OFFSET = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ジャイロセンサオフセット初期値 </p>
+
+<p> <a class="el" href="_gyro_sensor_8h_source.html">GyroSensor.h</a> の <a class="el" href="_gyro_sensor_8h_source.html#l00022">22</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/ev3-api/library/libcpp-ev3/include/<a class="el" href="_gyro_sensor_8h_source.html">GyroSensor.h</a></li>
+<li>str/ev3-api/library/libcpp-ev3/src/<a class="el" href="_gyro_sensor_8cpp_source.html">GyroSensor.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

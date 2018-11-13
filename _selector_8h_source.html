@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: str/apps/include/Selector.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="dir_716c0c37d4fad24b6b8f48e824f3bc1d.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Selector.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_selector_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef __SELECTOR__</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __SELECTOR__</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_explorer_8h.html">Explorer.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;deque&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_selector.html">  113</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_selector.html">Selector</a> {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="class_selector.html#a55730d11cba896e63144c0f0e1cdafd2">  122</a></span>&#160;  <a class="code" href="class_selector.html#a55730d11cba896e63144c0f0e1cdafd2">Selector</a>()</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    : blockPositionList(MAX_BLOCK_COUNT),</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      movedBlockPositionList(MAX_BLOCK_COUNT, EMPTY_ID),</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      evacuatedBlockPositionList(MAX_BLOCK_COUNT, EMPTY_ID),</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      nodePositionCostList(TOTAL_NODE_COUNT),</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      routeBeforeOne_(TOTAL_NODE_COUNT, EMPTY_ID)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">// 各ノードにおける位置コストのリスト</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    std::vector&lt;int&gt; nodePositionCostList_{ { 4, 3, 3, 4, 3, 2, 2, 3, 1, 2, 2, 3, 4, 3, 3, 4 } };</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; nodePositionCostList_.size(); i++)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      nodePositionCostList[i] = nodePositionCostList_[i];</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    explorer.<a class="code" href="class_explorer.html#a5807592365f49ad3d76249a9a406dd68">createBlockArea</a>();</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="class_selector.html#a280fdfaa690c40cc15a7c6337e76d566">  138</a></span>&#160;  <span class="keyword">enum</span> <a class="code" href="class_selector.html#a280fdfaa690c40cc15a7c6337e76d566">NextOperationOfSearchingRouteIs</a> { <a class="code" href="class_selector.html#a280fdfaa690c40cc15a7c6337e76d566a2f297cd65be985656fe40c72d26cb2a9">Evacuating</a>, <a class="code" href="class_selector.html#a280fdfaa690c40cc15a7c6337e76d566ae97242b49e3effb7c89c271413a86730">Moving</a>, <a class="code" href="class_selector.html#a280fdfaa690c40cc15a7c6337e76d566a200637107865a5b897412b917f2b0ba9">Carrying</a> };</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8fa398a1d06c8d3456c33b19a5f50e7dcde">  140</a></span>&#160;  <span class="keyword">enum</span> <a class="code" href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8f">BlockColor</a> { <a class="code" href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8fa02f014cee90b9d174596dbd5fb1fdcef">Blue</a>, <a class="code" href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8fa6e02fd47d39e74f67455702a31e19d64">Red</a>, <a class="code" href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8fa398a1d06c8d3456c33b19a5f50e7dcde">Yellow</a>, <a class="code" href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8fa9f7e18b54c6fb7e324f17b7a98778aa0">Green</a>, <a class="code" href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8fab7cc2aa17800a3f942d5f391692c9a1d">Undefined</a> };</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  std::vector&lt;int&gt; <a class="code" href="class_selector.html#a0fdb154d0341aed4c2df2a38a8bd0676">exploreNextOperation</a>(std::int8_t currentPosition, <a class="code" href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8f">BlockColor</a> color);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  std::int8_t <a class="code" href="class_selector.html#aa3691c1a35cd0c7ee24f552d139511e2">searchBlockPosition</a>(std::int8_t currentPosition);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  std::int8_t <a class="code" href="class_selector.html#ac3f2b39e32ab217f6c36a31e230e51c1">searchMostPoorCostShelter</a>(std::int8_t currentPosition);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_selector.html#a2d53e8e7ff20d156a945925054af3c3e">isAlreadyMovedNode</a>(std::int8_t position);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_selector.html#a6f69a6d37a65e30cbef65e1d9e2ef3df">isAlreadyAllBlockMoved</a>();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_selector.html#ae11a06ee61ea4c0fcc84e6c914ddb0fe">changeBlockPosition</a>(std::int8_t beforePosition, std::int8_t afterPosition);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_selector.html#a54b24940aa1eeb1c2432512f9cf09220">setBlockPositionList</a>(std::vector&lt;std::int8_t&gt; list);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  std::vector&lt;std::int8_t&gt; <a class="code" href="class_selector.html#a372600fa399804c8eb161816fab4b842">getBlockPositionList</a>();</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_selector.html#a1fbc56ebc86bb0c2fddb0a6c3a9c8029">addMovedBlockPosition</a>(std::int8_t position);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_selector.html#a7f2d96d7904828c5f54f1307f11a5ecb">pushEvacuatedBlockPosition</a>(std::int8_t position);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  std::int8_t <a class="code" href="class_selector.html#ae8eac1014b1d6a5d51f3a255ed8db538">popEvacuatedBlockPosition</a>();</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_selector.html#a8422a89cbe5be70c6785d3a469b5c07c">canFindBlockInEvacuatedList</a>(std::int8_t position);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_selector.html#a53a60ecbad05dff891bd15a91d6a62fc">prepareSearching</a>(std::vector&lt;std::int8_t&gt; list);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  std::vector&lt;int&gt; <a class="code" href="class_selector.html#afd2086b7dbe7b5d284c8adee5ea82b7f">searchRoute</a>(std::int8_t start, std::int8_t end);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_selector.html#af6800cd8af21f608d536ac1406c46391">setNext</a>(<a class="code" href="class_selector.html#a280fdfaa690c40cc15a7c6337e76d566">NextOperationOfSearchingRouteIs</a> next);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_selector.html#a99a6799374dcaa0121d923b039c67043">isEvacuatingWithNext</a>();</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_selector.html#abe89790dcf13c5662040b4b842c32840">isMovingWithNext</a>();</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_selector.html#abe99a33232127bdfe80c420724977241">isCarryingWithNext</a>();</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_selector.html#abd53d5bd964153b08b9c043b2faf2598">isBacksteppingBeforeNextOperation</a>();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_selector.html#a0e18f38bafc319ff91256ccb8d6d9cad">isBackstepping</a>();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  std::int8_t <a class="code" href="class_selector.html#aa1e4bb6da63b4d61c92293be39123392">getPositionOfCenterQuadirilateral</a>(<a class="code" href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8f">BlockColor</a> color);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  [[deprecated(<span class="stringliteral">&quot;memory is enlarged if this is used!!!&quot;</span>)]] <span class="keywordtype">void</span> <a class="code" href="class_selector.html#a585ed3507593626cba74333f9da1f279">updateRoute</a>(std::vector&lt;int&gt; route);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  std::vector&lt;int&gt; <a class="code" href="class_selector.html#a09627de92b8ca05a3bd75ed0342f7f52">extractRoute</a>();</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> std::int8_t TOTAL_NODE_COUNT = 16;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> std::int8_t MAX_BLOCK_COUNT = 4;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="keyword">const</span> std::int8_t EMPTY_ID = -1;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keywordtype">bool</span> evacuatingFlag = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="keywordtype">bool</span> movingFlag = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="keywordtype">bool</span> carryingFlag = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  <span class="keywordtype">bool</span> backsteppingFlag = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordtype">bool</span> backsteppingBeforeNextOeperationFlag = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <span class="keywordtype">bool</span> isCarriedToShelter = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keywordtype">bool</span> isClearGame = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  std::int8_t movedCount = 0;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  std::int8_t evacuatedSize = 0;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  std::int8_t lastBlock = EMPTY_ID;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  std::vector&lt;std::int8_t&gt; blockPositionList;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  std::vector&lt;std::int8_t&gt; movedBlockPositionList;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  std::deque&lt;std::int8_t&gt; evacuatedBlockPositionList;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  std::vector&lt;int&gt; nodePositionCostList;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  std::vector&lt;int&gt; routeBeforeOne_;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <a class="code" href="class_explorer.html">Explorer</a> explorer;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;};</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="preprocessor">#endif  // SELECTOR</span></div>
+<div class="ttc" id="class_selector_html_a0e18f38bafc319ff91256ccb8d6d9cad"><div class="ttname"><a href="class_selector.html#a0e18f38bafc319ff91256ccb8d6d9cad">Selector::isBackstepping</a></div><div class="ttdeci">bool isBackstepping()</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00294">Selector.cpp:294</a></div></div>
+<div class="ttc" id="class_selector_html_ac3f2b39e32ab217f6c36a31e230e51c1"><div class="ttname"><a href="class_selector.html#ac3f2b39e32ab217f6c36a31e230e51c1">Selector::searchMostPoorCostShelter</a></div><div class="ttdeci">std::int8_t searchMostPoorCostShelter(std::int8_t currentPosition)</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00147">Selector.cpp:147</a></div></div>
+<div class="ttc" id="class_selector_html_a53a60ecbad05dff891bd15a91d6a62fc"><div class="ttname"><a href="class_selector.html#a53a60ecbad05dff891bd15a91d6a62fc">Selector::prepareSearching</a></div><div class="ttdeci">void prepareSearching(std::vector&lt; std::int8_t &gt; list)</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00233">Selector.cpp:233</a></div></div>
+<div class="ttc" id="class_selector_html_a280fdfaa690c40cc15a7c6337e76d566ae97242b49e3effb7c89c271413a86730"><div class="ttname"><a href="class_selector.html#a280fdfaa690c40cc15a7c6337e76d566ae97242b49e3effb7c89c271413a86730">Selector::Moving</a></div><div class="ttdef"><b>Definition:</b> <a href="_selector_8h_source.html#l00138">Selector.h:138</a></div></div>
+<div class="ttc" id="class_selector_html_afd2086b7dbe7b5d284c8adee5ea82b7f"><div class="ttname"><a href="class_selector.html#afd2086b7dbe7b5d284c8adee5ea82b7f">Selector::searchRoute</a></div><div class="ttdeci">std::vector&lt; int &gt; searchRoute(std::int8_t start, std::int8_t end)</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00242">Selector.cpp:242</a></div></div>
+<div class="ttc" id="class_selector_html_a280fdfaa690c40cc15a7c6337e76d566a2f297cd65be985656fe40c72d26cb2a9"><div class="ttname"><a href="class_selector.html#a280fdfaa690c40cc15a7c6337e76d566a2f297cd65be985656fe40c72d26cb2a9">Selector::Evacuating</a></div><div class="ttdef"><b>Definition:</b> <a href="_selector_8h_source.html#l00138">Selector.h:138</a></div></div>
+<div class="ttc" id="class_explorer_html_a5807592365f49ad3d76249a9a406dd68"><div class="ttname"><a href="class_explorer.html#a5807592365f49ad3d76249a9a406dd68">Explorer::createBlockArea</a></div><div class="ttdeci">void createBlockArea()</div><div class="ttdef"><b>Definition:</b> <a href="_explorer_8cpp_source.html#l00003">Explorer.cpp:3</a></div></div>
+<div class="ttc" id="class_explorer_html"><div class="ttname"><a href="class_explorer.html">Explorer</a></div><div class="ttdef"><b>Definition:</b> <a href="_explorer_8h_source.html#l00052">Explorer.h:52</a></div></div>
+<div class="ttc" id="class_selector_html_a585ed3507593626cba74333f9da1f279"><div class="ttname"><a href="class_selector.html#a585ed3507593626cba74333f9da1f279">Selector::updateRoute</a></div><div class="ttdeci">void updateRoute(std::vector&lt; int &gt; route)</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00334">Selector.cpp:334</a></div></div>
+<div class="ttc" id="class_selector_html_a372600fa399804c8eb161816fab4b842"><div class="ttname"><a href="class_selector.html#a372600fa399804c8eb161816fab4b842">Selector::getBlockPositionList</a></div><div class="ttdeci">std::vector&lt; std::int8_t &gt; getBlockPositionList()</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00203">Selector.cpp:203</a></div></div>
+<div class="ttc" id="class_selector_html_aa1e4bb6da63b4d61c92293be39123392"><div class="ttname"><a href="class_selector.html#aa1e4bb6da63b4d61c92293be39123392">Selector::getPositionOfCenterQuadirilateral</a></div><div class="ttdeci">std::int8_t getPositionOfCenterQuadirilateral(BlockColor color)</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00304">Selector.cpp:304</a></div></div>
+<div class="ttc" id="class_selector_html_a75ae44b29383943b8fb09dc3f928aa8f"><div class="ttname"><a href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8f">Selector::BlockColor</a></div><div class="ttdeci">BlockColor</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8h_source.html#l00140">Selector.h:140</a></div></div>
+<div class="ttc" id="class_selector_html_ae8eac1014b1d6a5d51f3a255ed8db538"><div class="ttname"><a href="class_selector.html#ae8eac1014b1d6a5d51f3a255ed8db538">Selector::popEvacuatedBlockPosition</a></div><div class="ttdeci">std::int8_t popEvacuatedBlockPosition()</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00220">Selector.cpp:220</a></div></div>
+<div class="ttc" id="class_selector_html_abe99a33232127bdfe80c420724977241"><div class="ttname"><a href="class_selector.html#abe99a33232127bdfe80c420724977241">Selector::isCarryingWithNext</a></div><div class="ttdeci">bool isCarryingWithNext()</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00289">Selector.cpp:289</a></div></div>
+<div class="ttc" id="class_selector_html_a8422a89cbe5be70c6785d3a469b5c07c"><div class="ttname"><a href="class_selector.html#a8422a89cbe5be70c6785d3a469b5c07c">Selector::canFindBlockInEvacuatedList</a></div><div class="ttdeci">bool canFindBlockInEvacuatedList(std::int8_t position)</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00226">Selector.cpp:226</a></div></div>
+<div class="ttc" id="class_selector_html_a54b24940aa1eeb1c2432512f9cf09220"><div class="ttname"><a href="class_selector.html#a54b24940aa1eeb1c2432512f9cf09220">Selector::setBlockPositionList</a></div><div class="ttdeci">void setBlockPositionList(std::vector&lt; std::int8_t &gt; list)</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00196">Selector.cpp:196</a></div></div>
+<div class="ttc" id="class_selector_html_a99a6799374dcaa0121d923b039c67043"><div class="ttname"><a href="class_selector.html#a99a6799374dcaa0121d923b039c67043">Selector::isEvacuatingWithNext</a></div><div class="ttdeci">bool isEvacuatingWithNext()</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00279">Selector.cpp:279</a></div></div>
+<div class="ttc" id="class_selector_html_a75ae44b29383943b8fb09dc3f928aa8fa9f7e18b54c6fb7e324f17b7a98778aa0"><div class="ttname"><a href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8fa9f7e18b54c6fb7e324f17b7a98778aa0">Selector::Green</a></div><div class="ttdef"><b>Definition:</b> <a href="_selector_8h_source.html#l00140">Selector.h:140</a></div></div>
+<div class="ttc" id="class_selector_html_a2d53e8e7ff20d156a945925054af3c3e"><div class="ttname"><a href="class_selector.html#a2d53e8e7ff20d156a945925054af3c3e">Selector::isAlreadyMovedNode</a></div><div class="ttdeci">bool isAlreadyMovedNode(std::int8_t position)</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00177">Selector.cpp:177</a></div></div>
+<div class="ttc" id="class_selector_html_abe89790dcf13c5662040b4b842c32840"><div class="ttname"><a href="class_selector.html#abe89790dcf13c5662040b4b842c32840">Selector::isMovingWithNext</a></div><div class="ttdeci">bool isMovingWithNext()</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00284">Selector.cpp:284</a></div></div>
+<div class="ttc" id="class_selector_html_a09627de92b8ca05a3bd75ed0342f7f52"><div class="ttname"><a href="class_selector.html#a09627de92b8ca05a3bd75ed0342f7f52">Selector::extractRoute</a></div><div class="ttdeci">std::vector&lt; int &gt; extractRoute()</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00347">Selector.cpp:347</a></div></div>
+<div class="ttc" id="class_selector_html_a7f2d96d7904828c5f54f1307f11a5ecb"><div class="ttname"><a href="class_selector.html#a7f2d96d7904828c5f54f1307f11a5ecb">Selector::pushEvacuatedBlockPosition</a></div><div class="ttdeci">void pushEvacuatedBlockPosition(std::int8_t position)</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00214">Selector.cpp:214</a></div></div>
+<div class="ttc" id="class_selector_html_a75ae44b29383943b8fb09dc3f928aa8fab7cc2aa17800a3f942d5f391692c9a1d"><div class="ttname"><a href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8fab7cc2aa17800a3f942d5f391692c9a1d">Selector::Undefined</a></div><div class="ttdef"><b>Definition:</b> <a href="_selector_8h_source.html#l00140">Selector.h:140</a></div></div>
+<div class="ttc" id="class_selector_html_a0fdb154d0341aed4c2df2a38a8bd0676"><div class="ttname"><a href="class_selector.html#a0fdb154d0341aed4c2df2a38a8bd0676">Selector::exploreNextOperation</a></div><div class="ttdeci">std::vector&lt; int &gt; exploreNextOperation(std::int8_t currentPosition, BlockColor color)</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00003">Selector.cpp:3</a></div></div>
+<div class="ttc" id="class_selector_html_a75ae44b29383943b8fb09dc3f928aa8fa02f014cee90b9d174596dbd5fb1fdcef"><div class="ttname"><a href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8fa02f014cee90b9d174596dbd5fb1fdcef">Selector::Blue</a></div><div class="ttdef"><b>Definition:</b> <a href="_selector_8h_source.html#l00140">Selector.h:140</a></div></div>
+<div class="ttc" id="class_selector_html_a55730d11cba896e63144c0f0e1cdafd2"><div class="ttname"><a href="class_selector.html#a55730d11cba896e63144c0f0e1cdafd2">Selector::Selector</a></div><div class="ttdeci">Selector()</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8h_source.html#l00122">Selector.h:122</a></div></div>
+<div class="ttc" id="class_selector_html_a75ae44b29383943b8fb09dc3f928aa8fa398a1d06c8d3456c33b19a5f50e7dcde"><div class="ttname"><a href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8fa398a1d06c8d3456c33b19a5f50e7dcde">Selector::Yellow</a></div><div class="ttdef"><b>Definition:</b> <a href="_selector_8h_source.html#l00140">Selector.h:140</a></div></div>
+<div class="ttc" id="_explorer_8h_html"><div class="ttname"><a href="_explorer_8h.html">Explorer.h</a></div><div class="ttdoc">ルート探索クラス </div></div>
+<div class="ttc" id="class_selector_html_a75ae44b29383943b8fb09dc3f928aa8fa6e02fd47d39e74f67455702a31e19d64"><div class="ttname"><a href="class_selector.html#a75ae44b29383943b8fb09dc3f928aa8fa6e02fd47d39e74f67455702a31e19d64">Selector::Red</a></div><div class="ttdef"><b>Definition:</b> <a href="_selector_8h_source.html#l00140">Selector.h:140</a></div></div>
+<div class="ttc" id="class_selector_html_a6f69a6d37a65e30cbef65e1d9e2ef3df"><div class="ttname"><a href="class_selector.html#a6f69a6d37a65e30cbef65e1d9e2ef3df">Selector::isAlreadyAllBlockMoved</a></div><div class="ttdeci">bool isAlreadyAllBlockMoved()</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00183">Selector.cpp:183</a></div></div>
+<div class="ttc" id="class_selector_html_a280fdfaa690c40cc15a7c6337e76d566a200637107865a5b897412b917f2b0ba9"><div class="ttname"><a href="class_selector.html#a280fdfaa690c40cc15a7c6337e76d566a200637107865a5b897412b917f2b0ba9">Selector::Carrying</a></div><div class="ttdef"><b>Definition:</b> <a href="_selector_8h_source.html#l00138">Selector.h:138</a></div></div>
+<div class="ttc" id="class_selector_html_abd53d5bd964153b08b9c043b2faf2598"><div class="ttname"><a href="class_selector.html#abd53d5bd964153b08b9c043b2faf2598">Selector::isBacksteppingBeforeNextOperation</a></div><div class="ttdeci">bool isBacksteppingBeforeNextOperation()</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00299">Selector.cpp:299</a></div></div>
+<div class="ttc" id="class_selector_html_a280fdfaa690c40cc15a7c6337e76d566"><div class="ttname"><a href="class_selector.html#a280fdfaa690c40cc15a7c6337e76d566">Selector::NextOperationOfSearchingRouteIs</a></div><div class="ttdeci">NextOperationOfSearchingRouteIs</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8h_source.html#l00138">Selector.h:138</a></div></div>
+<div class="ttc" id="class_selector_html_af6800cd8af21f608d536ac1406c46391"><div class="ttname"><a href="class_selector.html#af6800cd8af21f608d536ac1406c46391">Selector::setNext</a></div><div class="ttdeci">void setNext(NextOperationOfSearchingRouteIs next)</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00253">Selector.cpp:253</a></div></div>
+<div class="ttc" id="class_selector_html_ae11a06ee61ea4c0fcc84e6c914ddb0fe"><div class="ttname"><a href="class_selector.html#ae11a06ee61ea4c0fcc84e6c914ddb0fe">Selector::changeBlockPosition</a></div><div class="ttdeci">void changeBlockPosition(std::int8_t beforePosition, std::int8_t afterPosition)</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00188">Selector.cpp:188</a></div></div>
+<div class="ttc" id="class_selector_html_a1fbc56ebc86bb0c2fddb0a6c3a9c8029"><div class="ttname"><a href="class_selector.html#a1fbc56ebc86bb0c2fddb0a6c3a9c8029">Selector::addMovedBlockPosition</a></div><div class="ttdeci">void addMovedBlockPosition(std::int8_t position)</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00208">Selector.cpp:208</a></div></div>
+<div class="ttc" id="class_selector_html"><div class="ttname"><a href="class_selector.html">Selector</a></div><div class="ttdoc">ブロック選択クラス </div><div class="ttdef"><b>Definition:</b> <a href="_selector_8h_source.html#l00113">Selector.h:113</a></div></div>
+<div class="ttc" id="class_selector_html_aa3691c1a35cd0c7ee24f552d139511e2"><div class="ttname"><a href="class_selector.html#aa3691c1a35cd0c7ee24f552d139511e2">Selector::searchBlockPosition</a></div><div class="ttdeci">std::int8_t searchBlockPosition(std::int8_t currentPosition)</div><div class="ttdef"><b>Definition:</b> <a href="_selector_8cpp_source.html#l00118">Selector.cpp:118</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

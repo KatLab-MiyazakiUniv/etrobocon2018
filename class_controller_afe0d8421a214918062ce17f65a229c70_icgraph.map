@@ -1,0 +1,5 @@
+<map id="Controller::speakerSetVolume" name="Controller::speakerSetVolume">
+<area shape="rect" id="node2" href="$class_basic_walker.html#a582e0b4136e521278ebf909c2de4b013" title="BasicWalker::BasicWalker" alt="" coords="269,5,448,32"/>
+<area shape="rect" id="node3" href="$class_et_robocon2018.html#ab4080de8621c118f35f7b3a15f056373" title="EtRobocon2018::EtRobocon2018" alt="" coords="251,56,467,83"/>
+<area shape="rect" id="node4" href="$class_user_interface.html#adcc934c3cd846f3967d5a47c6b99c023" title="UserInterface::inputFirstCode" alt="" coords="261,107,456,133"/>
+</map>

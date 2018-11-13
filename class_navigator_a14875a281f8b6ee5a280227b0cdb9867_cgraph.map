@@ -1,0 +1,6 @@
+<map id="Navigator::binarization" name="Navigator::binarization">
+<area shape="rect" id="node2" href="$class_navigator.html#afb7b715a50d0c80877c4c5f14061a456" title="光センサの値を取得する " alt="" coords="206,12,373,39"/>
+<area shape="rect" id="node3" href="$class_controller.html#aca9bc8f5a0a390d709d6dd2e5fd9b665" title="Controller::getBrightness" alt="" coords="422,12,589,39"/>
+<area shape="rect" id="node4" href="$classev3api_1_1_color_sensor.html#a010cb55b6119147496637bc5b2189582" title="ev3api::ColorSensor\l::getRawColor" alt="" coords="638,5,778,46"/>
+<area shape="rect" id="node5" href="$classev3api_1_1_sensor.html#a64d6d733ff9da9b9beafa68efed0cf92" title="ev3api::Sensor::getPort" alt="" coords="827,12,986,39"/>
+</map>

@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: str/apps/include/Navigator.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="dir_716c0c37d4fad24b6b8f48e824f3bc1d.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Navigator.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_navigator_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef NAVIGATOR_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define NAVIGATOR_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="_controller_8h.html">Controller.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_distinguisher_8h.html">Distinguisher.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_line_tracer_walker_8h.html">LineTracerWalker.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_walker_8h.html">Walker.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_wheel_odometry_8h.html">WheelOdometry.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_navigator.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_navigator.html">Navigator</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <a class="code" href="class_controller.html">Controller</a> controller;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="class_walker.html">Walker</a> walker;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="class_wheel_odometry.html">WheelOdometry</a> odometry;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="class_line_tracer_walker.html">LineTracerWalker</a> line_tracer;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="class_distinguisher.html">Distinguisher</a> distinguisher;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> color;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_navigator.html#a2f6b3c2d86cb4706fa5c366eaad1ef19">   26</a></span>&#160;  <a class="code" href="class_navigator.html#a2f6b3c2d86cb4706fa5c366eaad1ef19">Navigator</a>(<span class="keyword">const</span> <a class="code" href="class_controller.html">Controller</a>&amp; controller_, <span class="keyword">const</span> <a class="code" href="class_walker.html">Walker</a>&amp; walker_)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    : controller(controller_),</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      walker(walker_),</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      odometry(),</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      line_tracer(),</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      distinguisher(controller),</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      color(<a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a>::<a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1cab50339a10e1de285ac99d4c3990b8693">NONE</a>)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_navigator.html#a31576e3fb14c80f042cbef0f79c7f963">   35</a></span>&#160;  <a class="code" href="class_navigator.html#a31576e3fb14c80f042cbef0f79c7f963">Navigator</a>(<span class="keyword">const</span> <a class="code" href="class_controller.html">Controller</a>&amp; controller_)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    : controller(controller_),</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      walker(),</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      odometry(),</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      line_tracer(),</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      distinguisher(controller),</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      color(<a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a>::<a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1cab50339a10e1de285ac99d4c3990b8693">NONE</a>)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  }</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_navigator.html#a59230ab4698882f754d5ce275a1a4030">   44</a></span>&#160;  <a class="code" href="class_navigator.html#a59230ab4698882f754d5ce275a1a4030">Navigator</a>()</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    : controller(),</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      walker(),</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      odometry(),</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      line_tracer(),</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      distinguisher(controller),</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      color(<a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a>::<a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1cab50339a10e1de285ac99d4c3990b8693">NONE</a>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_navigator.html#aeece0b738f289e4133a27bfa62ee15f2">reset</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">spin</a>(<span class="keywordtype">float</span> angle, <span class="keywordtype">bool</span> clockwise = <span class="keyword">false</span>, std::int8_t pwm = 10);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_navigator.html#a6f3901e766e383a66c47177257c46204">move</a>(<span class="keywordtype">float</span> distance, std::int8_t pwm = 20);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981">back</a>(<span class="keywordtype">float</span> distance, std::int8_t pwm = 10);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_navigator.html#ad038009d5adb19067c5427d35a603636">moveWhileDetecting</a>(<span class="keywordtype">float</span> distance, std::int16_t target, std::int8_t pwm = 10);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">moveOnLine</a>(<span class="keywordtype">float</span> distance, std::int16_t target, std::int8_t pwm = 20,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                  <span class="keywordtype">bool</span> is_leftside_line = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd">moveToColor</a>(<span class="keywordtype">float</span> distance, std::int16_t target_brightness, <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> target_color,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                   std::int8_t speed = 20, <span class="keywordtype">bool</span> is_leftside_line = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  std::int16_t <a class="code" href="class_navigator.html#afb7b715a50d0c80877c4c5f14061a456">getBrightness</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_navigator.html#a44c0a5ae8469d0595e1632d8a70e12d8">moveToColorCheck</a>(<span class="keywordtype">float</span> distance, <a class="code" href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> target_color, std::int8_t pwm = 20);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  std::int8_t <a class="code" href="class_navigator.html#a4615989552b06b3d0fe35cf52ded3cd8">getNearbyBrightness</a>(<span class="keywordtype">float</span> distance = 20.0f);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_navigator.html#a14875a281f8b6ee5a280227b0cdb9867">binarization</a>(std::int16_t target);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_navigator_html_aaf3dc68883c423aec19c383455525bbc"><div class="ttname"><a href="class_navigator.html#aaf3dc68883c423aec19c383455525bbc">Navigator::moveOnLine</a></div><div class="ttdeci">void moveOnLine(float distance, std::int16_t target, std::int8_t pwm=20, bool is_leftside_line=true)</div><div class="ttdoc">指定した距離だけライントレースする </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00163">Navigator.cpp:163</a></div></div>
+<div class="ttc" id="class_navigator_html_a6f3901e766e383a66c47177257c46204"><div class="ttname"><a href="class_navigator.html#a6f3901e766e383a66c47177257c46204">Navigator::move</a></div><div class="ttdeci">void move(float distance, std::int8_t pwm=20)</div><div class="ttdoc">指定した距離まで走行体を移動させる </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00048">Navigator.cpp:48</a></div></div>
+<div class="ttc" id="class_navigator_html_ad038009d5adb19067c5427d35a603636"><div class="ttname"><a href="class_navigator.html#ad038009d5adb19067c5427d35a603636">Navigator::moveWhileDetecting</a></div><div class="ttdeci">void moveWhileDetecting(float distance, std::int16_t target, std::int8_t pwm=10)</div><div class="ttdoc">指定した距離まで黒色の点を検出しながら走行体を移動させる </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00092">Navigator.cpp:92</a></div></div>
+<div class="ttc" id="class_wheel_odometry_html"><div class="ttname"><a href="class_wheel_odometry.html">WheelOdometry</a></div><div class="ttdef"><b>Definition:</b> <a href="_wheel_odometry_8h_source.html#l00028">WheelOdometry.h:28</a></div></div>
+<div class="ttc" id="class_navigator_html_a59230ab4698882f754d5ce275a1a4030"><div class="ttname"><a href="class_navigator.html#a59230ab4698882f754d5ce275a1a4030">Navigator::Navigator</a></div><div class="ttdeci">Navigator()</div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8h_source.html#l00044">Navigator.h:44</a></div></div>
+<div class="ttc" id="class_navigator_html_a7667a69d6609bd0cf39bd24be46fe9cd"><div class="ttname"><a href="class_navigator.html#a7667a69d6609bd0cf39bd24be46fe9cd">Navigator::moveToColor</a></div><div class="ttdeci">void moveToColor(float distance, std::int16_t target_brightness, Color target_color, std::int8_t speed=20, bool is_leftside_line=true)</div><div class="ttdoc">指定した距離分ライントレースして指定した色があると停止する </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00211">Navigator.cpp:211</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1c"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a></div><div class="ttdeci">Color</div><div class="ttdef"><b>Definition:</b> <a href="_distinguisher_8h_source.html#l00016">Distinguisher.h:16</a></div></div>
+<div class="ttc" id="class_navigator_html_aeece0b738f289e4133a27bfa62ee15f2"><div class="ttname"><a href="class_navigator.html#aeece0b738f289e4133a27bfa62ee15f2">Navigator::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">座標とエンコーダの値を初期化する </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00012">Navigator.cpp:12</a></div></div>
+<div class="ttc" id="_controller_8h_html"><div class="ttname"><a href="_controller_8h.html">Controller.h</a></div></div>
+<div class="ttc" id="class_navigator_html"><div class="ttname"><a href="class_navigator.html">Navigator</a></div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8h_source.html#l00016">Navigator.h:16</a></div></div>
+<div class="ttc" id="class_navigator_html_a4615989552b06b3d0fe35cf52ded3cd8"><div class="ttname"><a href="class_navigator.html#a4615989552b06b3d0fe35cf52ded3cd8">Navigator::getNearbyBrightness</a></div><div class="ttdeci">std::int8_t getNearbyBrightness(float distance=20.0f)</div><div class="ttdoc">現在位置の周辺における光センサ値を取得する </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00126">Navigator.cpp:126</a></div></div>
+<div class="ttc" id="class_navigator_html_afb7b715a50d0c80877c4c5f14061a456"><div class="ttname"><a href="class_navigator.html#afb7b715a50d0c80877c4c5f14061a456">Navigator::getBrightness</a></div><div class="ttdeci">std::int16_t getBrightness()</div><div class="ttdoc">光センサの値を取得する </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00115">Navigator.cpp:115</a></div></div>
+<div class="ttc" id="class_navigator_html_a3bf1d4776b128ac7c383b682a7d99981"><div class="ttname"><a href="class_navigator.html#a3bf1d4776b128ac7c383b682a7d99981">Navigator::back</a></div><div class="ttdeci">void back(float distance, std::int8_t pwm=10)</div><div class="ttdoc">指定した距離まで走行体を後退させる </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00072">Navigator.cpp:72</a></div></div>
+<div class="ttc" id="class_controller_html"><div class="ttname"><a href="class_controller.html">Controller</a></div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00029">Controller.h:29</a></div></div>
+<div class="ttc" id="class_navigator_html_a2f6b3c2d86cb4706fa5c366eaad1ef19"><div class="ttname"><a href="class_navigator.html#a2f6b3c2d86cb4706fa5c366eaad1ef19">Navigator::Navigator</a></div><div class="ttdeci">Navigator(const Controller &amp;controller_, const Walker &amp;walker_)</div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8h_source.html#l00026">Navigator.h:26</a></div></div>
+<div class="ttc" id="_walker_8h_html"><div class="ttname"><a href="_walker_8h.html">Walker.h</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html"><div class="ttname"><a href="_distinguisher_8h.html">Distinguisher.h</a></div><div class="ttdoc">走行体のカラーセンサを用いて、RGB情報より色を推定するクラス。 </div></div>
+<div class="ttc" id="class_navigator_html_a81769b4f9b660f1d01de6ee9efc63a46"><div class="ttname"><a href="class_navigator.html#a81769b4f9b660f1d01de6ee9efc63a46">Navigator::spin</a></div><div class="ttdeci">void spin(float angle, bool clockwise=false, std::int8_t pwm=10)</div><div class="ttdoc">指定した角度まで走行体を回転させる(基本左エッジ) </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00025">Navigator.cpp:25</a></div></div>
+<div class="ttc" id="_distinguisher_8h_html_ab87bacfdad76e61b9412d7124be44c1cab50339a10e1de285ac99d4c3990b8693"><div class="ttname"><a href="_distinguisher_8h.html#ab87bacfdad76e61b9412d7124be44c1cab50339a10e1de285ac99d4c3990b8693">Color::NONE</a></div></div>
+<div class="ttc" id="class_distinguisher_html"><div class="ttname"><a href="class_distinguisher.html">Distinguisher</a></div><div class="ttdoc">走行体のカラーセンサを用いて、RGB情報より色を推定するクラス。 </div><div class="ttdef"><b>Definition:</b> <a href="_distinguisher_8h_source.html#l00055">Distinguisher.h:55</a></div></div>
+<div class="ttc" id="_wheel_odometry_8h_html"><div class="ttname"><a href="_wheel_odometry_8h.html">WheelOdometry.h</a></div><div class="ttdoc">オドメトリ(Wheel odometry)手法を用いた速度/角度/自己位置推定 </div></div>
+<div class="ttc" id="class_navigator_html_a31576e3fb14c80f042cbef0f79c7f963"><div class="ttname"><a href="class_navigator.html#a31576e3fb14c80f042cbef0f79c7f963">Navigator::Navigator</a></div><div class="ttdeci">Navigator(const Controller &amp;controller_)</div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8h_source.html#l00035">Navigator.h:35</a></div></div>
+<div class="ttc" id="class_walker_html"><div class="ttname"><a href="class_walker.html">Walker</a></div><div class="ttdef"><b>Definition:</b> <a href="_walker_8h_source.html#l00007">Walker.h:7</a></div></div>
+<div class="ttc" id="_line_tracer_walker_8h_html"><div class="ttname"><a href="_line_tracer_walker_8h.html">LineTracerWalker.h</a></div></div>
+<div class="ttc" id="class_navigator_html_a14875a281f8b6ee5a280227b0cdb9867"><div class="ttname"><a href="class_navigator.html#a14875a281f8b6ee5a280227b0cdb9867">Navigator::binarization</a></div><div class="ttdeci">bool binarization(std::int16_t target)</div><div class="ttdoc">2値化処理を実行する </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00149">Navigator.cpp:149</a></div></div>
+<div class="ttc" id="class_navigator_html_a44c0a5ae8469d0595e1632d8a70e12d8"><div class="ttname"><a href="class_navigator.html#a44c0a5ae8469d0595e1632d8a70e12d8">Navigator::moveToColorCheck</a></div><div class="ttdeci">void moveToColorCheck(float distance, Color target_color, std::int8_t pwm=20)</div><div class="ttdoc">指定した距離特定の色を探しながら進む（ライントレースしない） </div><div class="ttdef"><b>Definition:</b> <a href="_navigator_8cpp_source.html#l00191">Navigator.cpp:191</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html"><div class="ttname"><a href="class_line_tracer_walker.html">LineTracerWalker</a></div><div class="ttdef"><b>Definition:</b> <a href="_line_tracer_walker_8h_source.html#l00021">LineTracerWalker.h:21</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

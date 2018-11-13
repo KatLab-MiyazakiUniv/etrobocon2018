@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: Lifter クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
+      <li><a href="inherits.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="class_lifter-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">Lifter クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>走行体のアームを操作するクラス。  
+ <a href="class_lifter.html#details">[詳解]</a></p>
+
+<p><code>#include &quot;<a class="el" href="_lifter_8h_source.html">Lifter.h</a>&quot;</code></p>
+<div class="dynheader">
+Lifter 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lifter__coll__graph.png" border="0" usemap="#_lifter_coll__map" alt="Collaboration graph"/></div>
+<map name="_lifter_coll__map" id="_lifter_coll__map">
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a449caaab7cd95c1bc458b18760af1f45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lifter.html#a449caaab7cd95c1bc458b18760af1f45">Lifter</a> (<a class="el" href="class_controller.html">Controller</a> &amp;controller_)</td></tr>
+<tr class="separator:a449caaab7cd95c1bc458b18760af1f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ebc2a183bec70bc2c82e13d29a10102"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102">liftUp</a> (std::uint8_t angle, std::int8_t pwm=20)</td></tr>
+<tr class="separator:a9ebc2a183bec70bc2c82e13d29a10102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4dbe31608b7c1c52ae1c9eb8d2527d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5">liftDown</a> (std::uint8_t angle, std::int8_t pwm=20)</td></tr>
+<tr class="separator:ad4dbe31608b7c1c52ae1c9eb8d2527d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af08c6ba362698bb2d6427416d622e34d"><td class="memItemLeft" align="right" valign="top">std::int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d">getCurrentAngle</a> ()</td></tr>
+<tr class="separator:af08c6ba362698bb2d6427416d622e34d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6ab937ebd53c52c8e7254630b0e5797"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lifter.html#ae6ab937ebd53c52c8e7254630b0e5797">defaultSet</a> (std::int8_t pwm=20)</td></tr>
+<tr class="separator:ae6ab937ebd53c52c8e7254630b0e5797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a99f5f41a646344f3a29cb4ba8cfc415c"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lifter.html#a99f5f41a646344f3a29cb4ba8cfc415c">etrobocon2018_test::LifterTest</a></td></tr>
+<tr class="separator:a99f5f41a646344f3a29cb4ba8cfc415c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>走行体のアームを操作するクラス。 </p>
+
+<p> <a class="el" href="_lifter_8h_source.html">Lifter.h</a> の <a class="el" href="_lifter_8h_source.html#l00020">20</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a class="anchor" id="a449caaab7cd95c1bc458b18760af1f45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Lifter::Lifter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_controller.html">Controller</a> &amp;&#160;</td>
+          <td class="paramname"><em>controller_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller_</td><td>ev3apiを持つControllerクラス。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="_lifter_8h_source.html">Lifter.h</a> の <a class="el" href="_lifter_8h_source.html#l00026">26</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;: controller(controller_) { reset(); }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="ae6ab937ebd53c52c8e7254630b0e5797"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lifter::defaultSet </td>
+          <td>(</td>
+          <td class="paramtype">std::int8_t&#160;</td>
+          <td class="paramname"><em>pwm</em> = <code>20</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>アームを初期位置にもどす。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pwm</td><td>アームを動かすPWM値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="_lifter_8cpp_source.html">Lifter.cpp</a> の <a class="el" href="_lifter_8cpp_source.html#l00057">57</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  std::int8_t sign;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d">getCurrentAngle</a>() &lt; 0) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    sign = 1;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    sign = -1;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">while</span>(1) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span>((sign == 1 &amp;&amp; <a class="code" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d">getCurrentAngle</a>() &gt;= 0) || (sign == -1 &amp;&amp; <a class="code" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d">getCurrentAngle</a>() &lt;= 0)) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19">setPWM</a>(sign * limitPwm(pwm));</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    controller.<a class="code" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">tslpTsk</a>(4);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19">setPWM</a>(0);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}<div class="ttc" id="classev3api_1_1_motor_html_ae744997c22ab078a068eddc2692adf19"><div class="ttname"><a href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19">ev3api::Motor::setPWM</a></div><div class="ttdeci">void setPWM(int pwm)</div><div class="ttdef"><b>Definition:</b> <a href="_motor_8cpp_source.html#l00031">Motor.cpp:31</a></div></div>
+<div class="ttc" id="class_controller_html_ae9aec1dda0c67029d9e2ddfebe31b530"><div class="ttname"><a href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">Controller::tslpTsk</a></div><div class="ttdeci">void tslpTsk(int16_t time)</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8cpp_source.html#l00074">Controller.cpp:74</a></div></div>
+<div class="ttc" id="class_controller_html_a84196b437fe0194e4d3f15f16b8cddc7"><div class="ttname"><a href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">Controller::liftMotor</a></div><div class="ttdeci">Motor liftMotor</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00044">Controller.h:44</a></div></div>
+<div class="ttc" id="class_lifter_html_af08c6ba362698bb2d6427416d622e34d"><div class="ttname"><a href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d">Lifter::getCurrentAngle</a></div><div class="ttdeci">std::int8_t getCurrentAngle()</div><div class="ttdef"><b>Definition:</b> <a href="_lifter_8cpp_source.html#l00016">Lifter.cpp:16</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lifter_ae6ab937ebd53c52c8e7254630b0e5797_cgraph.png" border="0" usemap="#class_lifter_ae6ab937ebd53c52c8e7254630b0e5797_cgraph" alt=""/></div>
+<map name="class_lifter_ae6ab937ebd53c52c8e7254630b0e5797_cgraph" id="class_lifter_ae6ab937ebd53c52c8e7254630b0e5797_cgraph">
+<area shape="rect" id="node2" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d" title="Lifter::getCurrentAngle" alt="" coords="177,5,330,32"/><area shape="rect" id="node4" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="173,56,333,83"/><area shape="rect" id="node5" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="189,107,318,133"/><area shape="rect" id="node3" href="classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="381,5,544,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af08c6ba362698bb2d6427416d622e34d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::int8_t Lifter::getCurrentAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>現在の角度取得。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>現在の角度取得。 </dd></dl>
+
+<p> <a class="el" href="_lifter_8cpp_source.html">Lifter.cpp</a> の <a class="el" href="_lifter_8cpp_source.html#l00016">16</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  std::int32_t current_angle = controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e">getCount</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordflow">return</span> current_angle - default_count;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="ttc" id="class_controller_html_a84196b437fe0194e4d3f15f16b8cddc7"><div class="ttname"><a href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">Controller::liftMotor</a></div><div class="ttdeci">Motor liftMotor</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00044">Controller.h:44</a></div></div>
+<div class="ttc" id="classev3api_1_1_motor_html_a210a6184259bbce461026499fe35822e"><div class="ttname"><a href="classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e">ev3api::Motor::getCount</a></div><div class="ttdeci">int32_t getCount(void) const </div><div class="ttdef"><b>Definition:</b> <a href="_motor_8h_source.html#l00067">Motor.h:67</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lifter_af08c6ba362698bb2d6427416d622e34d_cgraph.png" border="0" usemap="#class_lifter_af08c6ba362698bb2d6427416d622e34d_cgraph" alt=""/></div>
+<map name="class_lifter_af08c6ba362698bb2d6427416d622e34d_cgraph" id="class_lifter_af08c6ba362698bb2d6427416d622e34d_cgraph">
+<area shape="rect" id="node2" href="classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="208,5,371,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lifter_af08c6ba362698bb2d6427416d622e34d_icgraph.png" border="0" usemap="#class_lifter_af08c6ba362698bb2d6427416d622e34d_icgraph" alt=""/></div>
+<map name="class_lifter_af08c6ba362698bb2d6427416d622e34d_icgraph" id="class_lifter_af08c6ba362698bb2d6427416d622e34d_icgraph">
+<area shape="rect" id="node2" href="class_lifter.html#a9ebc2a183bec70bc2c82e13d29a10102" title="Lifter::liftUp" alt="" coords="223,107,313,133"/><area shape="rect" id="node11" href="class_lifter.html#ad4dbe31608b7c1c52ae1c9eb8d2527d5" title="Lifter::liftDown" alt="" coords="215,56,321,83"/><area shape="rect" id="node12" href="class_lifter.html#ae6ab937ebd53c52c8e7254630b0e5797" title="Lifter::defaultSet" alt="" coords="209,157,327,184"/><area shape="rect" id="node3" href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702" title="リフターを使ってブロックを放って後ろを向く " alt="" coords="377,56,562,83"/><area shape="rect" id="node8" href="class_block_solver.html#ab82a21046107a859adbb5a144ceaa63e" title="ブロックの色を取得し、blockColorに格納します。 " alt="" coords="378,107,561,133"/><area shape="rect" id="node4" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="611,5,776,32"/><area shape="rect" id="node6" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="611,56,776,83"/><area shape="rect" id="node5" href="class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="824,5,1027,32"/><area shape="rect" id="node7" href="class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="873,56,978,83"/><area shape="rect" id="node9" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="627,107,759,133"/><area shape="rect" id="node10" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="634,157,753,184"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad4dbe31608b7c1c52ae1c9eb8d2527d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lifter::liftDown </td>
+          <td>(</td>
+          <td class="paramtype">std::uint8_t&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::int8_t&#160;</td>
+          <td class="paramname"><em>pwm</em> = <code>20</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>アームを下げる。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>変化する角度。 </td></tr>
+    <tr><td class="paramname">pwm</td><td>アームを動かすPWM値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="_lifter_8cpp_source.html">Lifter.cpp</a> の <a class="el" href="_lifter_8cpp_source.html#l00045">45</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordflow">while</span>(1) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d">getCurrentAngle</a>() &lt; -angle) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19">setPWM</a>(-limitPwm(pwm));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    controller.<a class="code" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">tslpTsk</a>(4);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19">setPWM</a>(0);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="classev3api_1_1_motor_html_ae744997c22ab078a068eddc2692adf19"><div class="ttname"><a href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19">ev3api::Motor::setPWM</a></div><div class="ttdeci">void setPWM(int pwm)</div><div class="ttdef"><b>Definition:</b> <a href="_motor_8cpp_source.html#l00031">Motor.cpp:31</a></div></div>
+<div class="ttc" id="class_controller_html_ae9aec1dda0c67029d9e2ddfebe31b530"><div class="ttname"><a href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">Controller::tslpTsk</a></div><div class="ttdeci">void tslpTsk(int16_t time)</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8cpp_source.html#l00074">Controller.cpp:74</a></div></div>
+<div class="ttc" id="class_controller_html_a84196b437fe0194e4d3f15f16b8cddc7"><div class="ttname"><a href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">Controller::liftMotor</a></div><div class="ttdeci">Motor liftMotor</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00044">Controller.h:44</a></div></div>
+<div class="ttc" id="class_lifter_html_af08c6ba362698bb2d6427416d622e34d"><div class="ttname"><a href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d">Lifter::getCurrentAngle</a></div><div class="ttdeci">std::int8_t getCurrentAngle()</div><div class="ttdef"><b>Definition:</b> <a href="_lifter_8cpp_source.html#l00016">Lifter.cpp:16</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lifter_ad4dbe31608b7c1c52ae1c9eb8d2527d5_cgraph.png" border="0" usemap="#class_lifter_ad4dbe31608b7c1c52ae1c9eb8d2527d5_cgraph" alt=""/></div>
+<map name="class_lifter_ad4dbe31608b7c1c52ae1c9eb8d2527d5_cgraph" id="class_lifter_ad4dbe31608b7c1c52ae1c9eb8d2527d5_cgraph">
+<area shape="rect" id="node2" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d" title="Lifter::getCurrentAngle" alt="" coords="163,5,317,32"/><area shape="rect" id="node4" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="160,56,320,83"/><area shape="rect" id="node5" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="175,107,305,133"/><area shape="rect" id="node3" href="classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="368,5,531,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lifter_ad4dbe31608b7c1c52ae1c9eb8d2527d5_icgraph.png" border="0" usemap="#class_lifter_ad4dbe31608b7c1c52ae1c9eb8d2527d5_icgraph" alt=""/></div>
+<map name="class_lifter_ad4dbe31608b7c1c52ae1c9eb8d2527d5_icgraph" id="class_lifter_ad4dbe31608b7c1c52ae1c9eb8d2527d5_icgraph">
+<area shape="rect" id="node2" href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702" title="リフターを使ってブロックを放って後ろを向く " alt="" coords="161,56,346,83"/><area shape="rect" id="node7" href="class_block_solver.html#ab82a21046107a859adbb5a144ceaa63e" title="ブロックの色を取得し、blockColorに格納します。 " alt="" coords="162,107,345,133"/><area shape="rect" id="node3" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="395,5,560,32"/><area shape="rect" id="node5" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="395,56,560,83"/><area shape="rect" id="node4" href="class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="608,5,811,32"/><area shape="rect" id="node6" href="class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="657,56,762,83"/><area shape="rect" id="node8" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="411,107,543,133"/><area shape="rect" id="node9" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="418,157,537,184"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9ebc2a183bec70bc2c82e13d29a10102"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lifter::liftUp </td>
+          <td>(</td>
+          <td class="paramtype">std::uint8_t&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::int8_t&#160;</td>
+          <td class="paramname"><em>pwm</em> = <code>20</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>アームを上げる。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>変化する角度。 </td></tr>
+    <tr><td class="paramname">pwm</td><td>アームを動かすPWM値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="_lifter_8cpp_source.html">Lifter.cpp</a> の <a class="el" href="_lifter_8cpp_source.html#l00033">33</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordflow">while</span>(1) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d">getCurrentAngle</a>() &gt; angle) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19">setPWM</a>(limitPwm(pwm));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    controller.<a class="code" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">tslpTsk</a>(4);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  controller.<a class="code" href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">liftMotor</a>.<a class="code" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19">setPWM</a>(0);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="ttc" id="classev3api_1_1_motor_html_ae744997c22ab078a068eddc2692adf19"><div class="ttname"><a href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19">ev3api::Motor::setPWM</a></div><div class="ttdeci">void setPWM(int pwm)</div><div class="ttdef"><b>Definition:</b> <a href="_motor_8cpp_source.html#l00031">Motor.cpp:31</a></div></div>
+<div class="ttc" id="class_controller_html_ae9aec1dda0c67029d9e2ddfebe31b530"><div class="ttname"><a href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530">Controller::tslpTsk</a></div><div class="ttdeci">void tslpTsk(int16_t time)</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8cpp_source.html#l00074">Controller.cpp:74</a></div></div>
+<div class="ttc" id="class_controller_html_a84196b437fe0194e4d3f15f16b8cddc7"><div class="ttname"><a href="class_controller.html#a84196b437fe0194e4d3f15f16b8cddc7">Controller::liftMotor</a></div><div class="ttdeci">Motor liftMotor</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00044">Controller.h:44</a></div></div>
+<div class="ttc" id="class_lifter_html_af08c6ba362698bb2d6427416d622e34d"><div class="ttname"><a href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d">Lifter::getCurrentAngle</a></div><div class="ttdeci">std::int8_t getCurrentAngle()</div><div class="ttdef"><b>Definition:</b> <a href="_lifter_8cpp_source.html#l00016">Lifter.cpp:16</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lifter_a9ebc2a183bec70bc2c82e13d29a10102_cgraph.png" border="0" usemap="#class_lifter_a9ebc2a183bec70bc2c82e13d29a10102_cgraph" alt=""/></div>
+<map name="class_lifter_a9ebc2a183bec70bc2c82e13d29a10102_cgraph" id="class_lifter_a9ebc2a183bec70bc2c82e13d29a10102_cgraph">
+<area shape="rect" id="node2" href="class_lifter.html#af08c6ba362698bb2d6427416d622e34d" title="Lifter::getCurrentAngle" alt="" coords="147,5,301,32"/><area shape="rect" id="node4" href="classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="144,56,304,83"/><area shape="rect" id="node5" href="class_controller.html#ae9aec1dda0c67029d9e2ddfebe31b530" title="Controller::tslpTsk" alt="" coords="159,107,289,133"/><area shape="rect" id="node3" href="classev3api_1_1_motor.html#a210a6184259bbce461026499fe35822e" title="ev3api::Motor::getCount" alt="" coords="352,5,515,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lifter_a9ebc2a183bec70bc2c82e13d29a10102_icgraph.png" border="0" usemap="#class_lifter_a9ebc2a183bec70bc2c82e13d29a10102_icgraph" alt=""/></div>
+<map name="class_lifter_a9ebc2a183bec70bc2c82e13d29a10102_icgraph" id="class_lifter_a9ebc2a183bec70bc2c82e13d29a10102_icgraph">
+<area shape="rect" id="node2" href="class_a_i_answer_block.html#a7cdb871f18608b08dbb88541b32b6702" title="リフターを使ってブロックを放って後ろを向く " alt="" coords="145,56,330,83"/><area shape="rect" id="node7" href="class_block_solver.html#ab82a21046107a859adbb5a144ceaa63e" title="ブロックの色を取得し、blockColorに格納します。 " alt="" coords="146,107,329,133"/><area shape="rect" id="node3" href="class_a_i_answer_block.html#ac20e3be6742bcb20aa84d16a7ad72337" title="アナログ数字が0，デジタル数字が0 " alt="" coords="379,5,544,32"/><area shape="rect" id="node5" href="class_a_i_answer_block.html#a62485c924bea9888b72e3c91cf8d07da" title="アナログ数字が0，デジタル数字が1 " alt="" coords="379,56,544,83"/><area shape="rect" id="node4" href="class_a_i_answer.html#a57080e6871f6bf8d08e8390734ef030e" title="数字に応じてブロックを動かす " alt="" coords="592,5,795,32"/><area shape="rect" id="node6" href="class_a_i_answer.html#affae65f26aa1770a586e33f9d97cc3c2" title="AIAnswer::run" alt="" coords="641,56,746,83"/><area shape="rect" id="node8" href="class_block_solver.html#a41efe2f0239b54a897b413b57574580c" title="デモです。アリアに従って移動します。 " alt="" coords="395,107,527,133"/><area shape="rect" id="node9" href="class_block_solver.html#aee9d08bbd83ea2f6069c30698c3a692c" title="ブロック並べを攻略します。 " alt="" coords="402,157,521,184"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">フレンドと関連関数の詳解</h2>
+<a class="anchor" id="a99f5f41a646344f3a29cb4ba8cfc415c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classetrobocon2018__test_1_1_lifter_test.html">etrobocon2018_test::LifterTest</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_lifter_8h_source.html">Lifter.h</a> の <a class="el" href="_lifter_8h_source.html#l00021">21</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/apps/include/<a class="el" href="_lifter_8h_source.html">Lifter.h</a></li>
+<li>str/apps/src/<a class="el" href="_lifter_8cpp_source.html">Lifter.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

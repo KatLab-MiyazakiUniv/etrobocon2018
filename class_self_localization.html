@@ -1,0 +1,739 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>etrobocon2018 feat.KatLab: SelfLocalization クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">etrobocon2018 feat.KatLab
+   &#160;<span id="projectnumber">770af34cce41ae9c30c41303275e1add2daae0c3
+(with uncommitted changes)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li><a href="namespaces.html"><span>名前空間</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
+      <li><a href="inherits.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>名前空間</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="class_self_localization-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">SelfLocalization クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_self_localization_8h_source.html">SelfLocalization.h</a>&gt;</code></p>
+<div class="dynheader">
+SelfLocalization 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_self_localization__coll__graph.png" border="0" usemap="#_self_localization_coll__map" alt="Collaboration graph"/></div>
+<map name="_self_localization_coll__map" id="_self_localization_coll__map">
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a2f85240baca6e921eccd0713444e8ec9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_self_localization.html#a2f85240baca6e921eccd0713444e8ec9">SelfLocalization</a> (std::int32_t left_motor_sl, std::int32_t right_motor_sl, bool save=true)</td></tr>
+<tr class="separator:a2f85240baca6e921eccd0713444e8ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13a84e776674b978d4f23a528f621eda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_self_localization.html#a13a84e776674b978d4f23a528f621eda">update</a> (std::int32_t left_motor_sl, std::int32_t right_motor_sl)</td></tr>
+<tr class="separator:a13a84e776674b978d4f23a528f621eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7b630ff7861c237c1aee94bc8a56bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_self_localization.html#a3b7b630ff7861c237c1aee94bc8a56bd">writing_current_coordinates</a> ()</td></tr>
+<tr class="separator:a3b7b630ff7861c237c1aee94bc8a56bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e2c24bc3c33228450fa316c005ade32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_self_localization.html#a5e2c24bc3c33228450fa316c005ade32">approached_target_coordinates</a> (float target_x, float target_y, float target_radius)</td></tr>
+<tr class="separator:a5e2c24bc3c33228450fa316c005ade32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae19f89b94c0bf61d0327a8d56f10dff7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_self_localization.html#ae19f89b94c0bf61d0327a8d56f10dff7">getPointX</a> ()</td></tr>
+<tr class="separator:ae19f89b94c0bf61d0327a8d56f10dff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add371c55e00d96c08cd49f19e96c17d3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_self_localization.html#add371c55e00d96c08cd49f19e96c17d3">getPointY</a> ()</td></tr>
+<tr class="separator:add371c55e00d96c08cd49f19e96c17d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade6c5e86b0b2e1f987c47d604f652816"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_self_localization.html#ade6c5e86b0b2e1f987c47d604f652816">is_over_target_line_of_x</a> (float target_x)</td></tr>
+<tr class="separator:ade6c5e86b0b2e1f987c47d604f652816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae37fd12c169601f175e38f8a0bac7ff1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_self_localization.html#ae37fd12c169601f175e38f8a0bac7ff1">is_over_target_line_of_y</a> (float target_y)</td></tr>
+<tr class="separator:ae37fd12c169601f175e38f8a0bac7ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeb8d0684a4057c7c7e15dcacf9504fe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_self_localization.html#abeb8d0684a4057c7c7e15dcacf9504fe">is_below_target_line_of_x</a> (float target_x)</td></tr>
+<tr class="separator:abeb8d0684a4057c7c7e15dcacf9504fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f2c2033c145921f52609b6583a623c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_self_localization.html#a8f2c2033c145921f52609b6583a623c6">is_below_target_line_of_y</a> (float target_y)</td></tr>
+<tr class="separator:a8f2c2033c145921f52609b6583a623c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1529f9d1a7c6729ec771702e3174bc4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_self_localization.html#ab1529f9d1a7c6729ec771702e3174bc4">calculate_between_ev3_and_border</a> (float _start_x, float _start_y, float _goal_x, float _goal_y, float _current_x, float _current_y)</td></tr>
+<tr class="separator:ab1529f9d1a7c6729ec771702e3174bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfc0d573399ac0f96e4d909807562888"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_self_localization.html#adfc0d573399ac0f96e4d909807562888">file_close</a> ()</td></tr>
+<tr class="separator:adfc0d573399ac0f96e4d909807562888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55291484c632478e4082d898c4b779aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_self_localization.html#a55291484c632478e4082d898c4b779aa">init_normal_vector</a> (float _start_x, float _start_y, float _goal_x, float _goal_y, float _current_x, float _current_y)</td></tr>
+<tr class="separator:a55291484c632478e4082d898c4b779aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b0e878f693afaafd5dbf756e1347493"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_self_localization.html#a9b0e878f693afaafd5dbf756e1347493">is_over_normal_vector</a> (float _current_x, float _current_y)</td></tr>
+<tr class="separator:a9b0e878f693afaafd5dbf756e1347493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ea475599c77503b159c98779ade302b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_self_localization.html#a8ea475599c77503b159c98779ade302b">calculate_current_angle</a> ()</td></tr>
+<tr class="separator:a8ea475599c77503b159c98779ade302b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a47c7428cb256bec359853ef9b8c9476e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_self_localization.html#a47c7428cb256bec359853ef9b8c9476e">current_angle_degree</a></td></tr>
+<tr class="separator:a47c7428cb256bec359853ef9b8c9476e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p> <a class="el" href="_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="_self_localization_8h_source.html#l00045">45</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a class="anchor" id="a2f85240baca6e921eccd0713444e8ec9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SelfLocalization::SelfLocalization </td>
+          <td>(</td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>left_motor_sl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>right_motor_sl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>save</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="_self_localization_8cpp_source.html#l00019">19</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  : left(left_motor_sl), right(right_motor_sl)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="comment">//メンバ変数の初期化 基本的に0</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  between_wheels = 12.7;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  moving_distance_mean = 0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  turning_angle = 0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  current_x = current_y = current_angle = 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  errno = 0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  isSave = save;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="a5e2c24bc3c33228450fa316c005ade32"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SelfLocalization::approached_target_coordinates </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>target_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>target_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>target_radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="_self_localization_8cpp_source.html#l00072">72</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">float</span> distance = std::sqrt((target_x - current_x) * (target_x - current_x)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                             + (target_y - current_y) * (target_y - current_y));</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">if</span>(distance &lt; target_radius) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ab1529f9d1a7c6729ec771702e3174bc4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::calculate_between_ev3_and_border </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_start_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_start_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_goal_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_goal_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_current_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_current_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="_self_localization_8cpp_source.html#l00084">84</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">float</span> a, b, c;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  a = _goal_y - _start_y;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  b = -(_goal_x - _start_x);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  c = -b * _start_y - a * _start_x;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordflow">return</span> (a * _current_x + b * _current_y + c) / std::sqrt(a * a + b * b);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_self_localization_ab1529f9d1a7c6729ec771702e3174bc4_icgraph.png" border="0" usemap="#class_self_localization_ab1529f9d1a7c6729ec771702e3174bc4_icgraph" alt=""/></div>
+<map name="class_self_localization_ab1529f9d1a7c6729ec771702e3174bc4_icgraph" id="class_self_localization_ab1529f9d1a7c6729ec771702e3174bc4_icgraph">
+<area shape="rect" id="node2" href="namespaceetrobocon2018__test.html#a413de017ec6ebfa74419827633f4e163" title="etrobocon2018_test\l::TEST" alt="" coords="232,5,368,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8ea475599c77503b159c98779ade302b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SelfLocalization::calculate_current_angle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="_self_localization_8cpp_source.html#l00097">97</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="class_self_localization.html#a47c7428cb256bec359853ef9b8c9476e">current_angle_degree</a> = int(current_angle * 180 / 3.14);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="ttc" id="class_self_localization_html_a47c7428cb256bec359853ef9b8c9476e"><div class="ttname"><a href="class_self_localization.html#a47c7428cb256bec359853ef9b8c9476e">SelfLocalization::current_angle_degree</a></div><div class="ttdeci">int current_angle_degree</div><div class="ttdef"><b>Definition:</b> <a href="_self_localization_8h_source.html#l00060">SelfLocalization.h:60</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_self_localization_a8ea475599c77503b159c98779ade302b_icgraph.png" border="0" usemap="#class_self_localization_a8ea475599c77503b159c98779ade302b_icgraph" alt=""/></div>
+<map name="class_self_localization_a8ea475599c77503b159c98779ade302b_icgraph" id="class_self_localization_a8ea475599c77503b159c98779ade302b_icgraph">
+<area shape="rect" id="node2" href="namespaceetrobocon2018__test.html#a9bfb1877d03719f205c051cf7a532cb1" title="etrobocon2018_test\l::TEST" alt="" coords="229,5,365,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="adfc0d573399ac0f96e4d909807562888"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SelfLocalization::file_close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="_self_localization_8cpp_source.html#l00145">145</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  fclose(fp);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ae19f89b94c0bf61d0327a8d56f10dff7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::getPointX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="_self_localization_8cpp_source.html#l00055">55</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">return</span> current_x;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_self_localization_ae19f89b94c0bf61d0327a8d56f10dff7_icgraph.png" border="0" usemap="#class_self_localization_ae19f89b94c0bf61d0327a8d56f10dff7_icgraph" alt=""/></div>
+<map name="class_self_localization_ae19f89b94c0bf61d0327a8d56f10dff7_icgraph" id="class_self_localization_ae19f89b94c0bf61d0327a8d56f10dff7_icgraph">
+<area shape="rect" id="node2" href="namespaceetrobocon2018__test.html#aec61a34e6d53e491a4851282cdd795ba" title="etrobocon2018_test\l::TEST" alt="" coords="232,5,368,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="add371c55e00d96c08cd49f19e96c17d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::getPointY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="_self_localization_8cpp_source.html#l00060">60</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">return</span> current_y;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_self_localization_add371c55e00d96c08cd49f19e96c17d3_icgraph.png" border="0" usemap="#class_self_localization_add371c55e00d96c08cd49f19e96c17d3_icgraph" alt=""/></div>
+<map name="class_self_localization_add371c55e00d96c08cd49f19e96c17d3_icgraph" id="class_self_localization_add371c55e00d96c08cd49f19e96c17d3_icgraph">
+<area shape="rect" id="node2" href="namespaceetrobocon2018__test.html#aec61a34e6d53e491a4851282cdd795ba" title="etrobocon2018_test\l::TEST" alt="" coords="232,5,368,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a55291484c632478e4082d898c4b779aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SelfLocalization::init_normal_vector </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_start_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_start_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_goal_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_goal_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_current_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_current_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="_self_localization_8cpp_source.html#l00121">121</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  start_x = _start_x;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  start_y = _start_y;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  goal_x = _goal_x;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  goal_y = _goal_y;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  is_below_normal_vector = (start_y &lt; goal_y);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_self_localization_a55291484c632478e4082d898c4b779aa_icgraph.png" border="0" usemap="#class_self_localization_a55291484c632478e4082d898c4b779aa_icgraph" alt=""/></div>
+<map name="class_self_localization_a55291484c632478e4082d898c4b779aa_icgraph" id="class_self_localization_a55291484c632478e4082d898c4b779aa_icgraph">
+<area shape="rect" id="node2" href="namespaceetrobocon2018__test.html#a915de11f63197207364c42295203e321" title="etrobocon2018_test\l::TEST" alt="" coords="192,5,328,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abeb8d0684a4057c7c7e15dcacf9504fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SelfLocalization::is_below_target_line_of_x </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>target_x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="_self_localization_8cpp_source.html#l00111">111</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;{</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordflow">return</span> target_x &gt; current_x;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a8f2c2033c145921f52609b6583a623c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SelfLocalization::is_below_target_line_of_y </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>target_y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="_self_localization_8cpp_source.html#l00115">115</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordflow">return</span> target_y &gt; current_y;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a9b0e878f693afaafd5dbf756e1347493"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SelfLocalization::is_over_normal_vector </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_current_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_current_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="_self_localization_8cpp_source.html#l00133">133</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;{</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordtype">float</span> k = (start_x - goal_x) / (goal_y - start_y);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordtype">float</span> border_y = k * _current_x + goal_y - k * goal_x;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordflow">if</span>(is_below_normal_vector) {  <span class="comment">// init時に機体が法線より下の場合</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">return</span> _current_y &gt;= border_y;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  } <span class="keywordflow">else</span> {  <span class="comment">// init時に機体が法線以上にある場合</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">return</span> _current_y &lt; border_y;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_self_localization_a9b0e878f693afaafd5dbf756e1347493_icgraph.png" border="0" usemap="#class_self_localization_a9b0e878f693afaafd5dbf756e1347493_icgraph" alt=""/></div>
+<map name="class_self_localization_a9b0e878f693afaafd5dbf756e1347493_icgraph" id="class_self_localization_a9b0e878f693afaafd5dbf756e1347493_icgraph">
+<area shape="rect" id="node2" href="namespaceetrobocon2018__test.html#a915de11f63197207364c42295203e321" title="etrobocon2018_test\l::TEST" alt="" coords="197,5,333,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ade6c5e86b0b2e1f987c47d604f652816"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SelfLocalization::is_over_target_line_of_x </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>target_x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="_self_localization_8cpp_source.html#l00102">102</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordflow">return</span> target_x &lt; current_x;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ae37fd12c169601f175e38f8a0bac7ff1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SelfLocalization::is_over_target_line_of_y </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>target_y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="_self_localization_8cpp_source.html#l00106">106</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;{</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordflow">return</span> target_y &lt; current_y;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a13a84e776674b978d4f23a528f621eda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SelfLocalization::update </td>
+          <td>(</td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>left_motor_sl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>right_motor_sl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="_self_localization_8cpp_source.html#l00032">32</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">//左車輪の回転角</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  left.<a class="code" href="class_motor_angle.html#abe5eb31bff0514f32a0bb00751f16ccf">update</a>(left_motor_sl);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="comment">//右車輪の回転角</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  right.<a class="code" href="class_motor_angle.html#abe5eb31bff0514f32a0bb00751f16ccf">update</a>(right_motor_sl);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="comment">//移動距離と、車体の回転角</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  moving_distance_mean = (right.<a class="code" href="class_motor_angle.html#a71e534f3db2ae2909568092f0c543973">moving_distance</a> + left.<a class="code" href="class_motor_angle.html#a71e534f3db2ae2909568092f0c543973">moving_distance</a>) / 2.0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  turning_angle = (right.<a class="code" href="class_motor_angle.html#a71e534f3db2ae2909568092f0c543973">moving_distance</a> - left.<a class="code" href="class_motor_angle.html#a71e534f3db2ae2909568092f0c543973">moving_distance</a>) / between_wheels;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="comment">//座標</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  current_x += (moving_distance_mean * std::cos(current_angle + (turning_angle / 2.0)));</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  current_y += (moving_distance_mean * std::sin(current_angle + (turning_angle / 2.0)));</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  current_angle += turning_angle;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">//保存</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordflow">if</span>(isSave == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="class_self_localization.html#a3b7b630ff7861c237c1aee94bc8a56bd">writing_current_coordinates</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="ttc" id="class_self_localization_html_a3b7b630ff7861c237c1aee94bc8a56bd"><div class="ttname"><a href="class_self_localization.html#a3b7b630ff7861c237c1aee94bc8a56bd">SelfLocalization::writing_current_coordinates</a></div><div class="ttdeci">void writing_current_coordinates()</div><div class="ttdef"><b>Definition:</b> <a href="_self_localization_8cpp_source.html#l00065">SelfLocalization.cpp:65</a></div></div>
+<div class="ttc" id="class_motor_angle_html_a71e534f3db2ae2909568092f0c543973"><div class="ttname"><a href="class_motor_angle.html#a71e534f3db2ae2909568092f0c543973">MotorAngle::moving_distance</a></div><div class="ttdeci">float moving_distance</div><div class="ttdef"><b>Definition:</b> <a href="_self_localization_8h_source.html#l00027">SelfLocalization.h:27</a></div></div>
+<div class="ttc" id="class_motor_angle_html_abe5eb31bff0514f32a0bb00751f16ccf"><div class="ttname"><a href="class_motor_angle.html#abe5eb31bff0514f32a0bb00751f16ccf">MotorAngle::update</a></div><div class="ttdeci">void update(std::int32_t left_motor, std::int32_t right_motor)</div><div class="ttdoc">左右モータ角度の過去値を現在値へ更新する </div><div class="ttdef"><b>Definition:</b> <a href="_motor_angle_8cpp_source.html#l00014">MotorAngle.cpp:14</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_self_localization_a13a84e776674b978d4f23a528f621eda_cgraph.png" border="0" usemap="#class_self_localization_a13a84e776674b978d4f23a528f621eda_cgraph" alt=""/></div>
+<map name="class_self_localization_a13a84e776674b978d4f23a528f621eda_cgraph" id="class_self_localization_a13a84e776674b978d4f23a528f621eda_cgraph">
+<area shape="rect" id="node2" href="class_motor_angle.html#abe5eb31bff0514f32a0bb00751f16ccf" title="左右モータ角度の過去値を現在値へ更新する " alt="" coords="229,5,363,32"/><area shape="rect" id="node3" href="class_self_localization.html#a3b7b630ff7861c237c1aee94bc8a56bd" title="SelfLocalization::writing\l_current_coordinates" alt="" coords="216,57,376,98"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_self_localization_a13a84e776674b978d4f23a528f621eda_icgraph.png" border="0" usemap="#class_self_localization_a13a84e776674b978d4f23a528f621eda_icgraph" alt=""/></div>
+<map name="class_self_localization_a13a84e776674b978d4f23a528f621eda_icgraph" id="class_self_localization_a13a84e776674b978d4f23a528f621eda_icgraph">
+<area shape="rect" id="node2" href="namespaceetrobocon2018__test.html#af1ed69b4d340acfaee1054020192fd0b" title="etrobocon2018_test\l::straight" alt="" coords="216,5,352,46"/><area shape="rect" id="node4" href="namespaceetrobocon2018__test.html#aa9b155a5fad6144310e286ad016172a0" title="etrobocon2018_test\l::curve" alt="" coords="216,70,352,111"/><area shape="rect" id="node5" href="namespaceetrobocon2018__test.html#aec61a34e6d53e491a4851282cdd795ba" title="etrobocon2018_test\l::TEST" alt="" coords="216,135,352,177"/><area shape="rect" id="node3" href="namespaceetrobocon2018__test.html#a9bfb1877d03719f205c051cf7a532cb1" title="etrobocon2018_test\l::TEST" alt="" coords="400,38,536,79"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3b7b630ff7861c237c1aee94bc8a56bd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SelfLocalization::writing_current_coordinates </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="_self_localization_8cpp_source.html#l00065">65</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  fprintf(fp, <span class="stringliteral">&quot;%f %f\n&quot;</span>, current_x, current_y);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_self_localization_a3b7b630ff7861c237c1aee94bc8a56bd_icgraph.png" border="0" usemap="#class_self_localization_a3b7b630ff7861c237c1aee94bc8a56bd_icgraph" alt=""/></div>
+<map name="class_self_localization_a3b7b630ff7861c237c1aee94bc8a56bd_icgraph" id="class_self_localization_a3b7b630ff7861c237c1aee94bc8a56bd_icgraph">
+<area shape="rect" id="node2" href="class_self_localization.html#a13a84e776674b978d4f23a528f621eda" title="SelfLocalization::update" alt="" coords="214,77,375,104"/><area shape="rect" id="node3" href="namespaceetrobocon2018__test.html#af1ed69b4d340acfaee1054020192fd0b" title="etrobocon2018_test\l::straight" alt="" coords="424,5,560,46"/><area shape="rect" id="node5" href="namespaceetrobocon2018__test.html#aa9b155a5fad6144310e286ad016172a0" title="etrobocon2018_test\l::curve" alt="" coords="424,70,560,111"/><area shape="rect" id="node6" href="namespaceetrobocon2018__test.html#aec61a34e6d53e491a4851282cdd795ba" title="etrobocon2018_test\l::TEST" alt="" coords="424,135,560,177"/><area shape="rect" id="node4" href="namespaceetrobocon2018__test.html#a9bfb1877d03719f205c051cf7a532cb1" title="etrobocon2018_test\l::TEST" alt="" coords="608,38,744,79"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a class="anchor" id="a47c7428cb256bec359853ef9b8c9476e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SelfLocalization::current_angle_degree</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="_self_localization_8h_source.html#l00060">60</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/apps/include/<a class="el" href="_self_localization_8h_source.html">SelfLocalization.h</a></li>
+<li>str/apps/src/<a class="el" href="_self_localization_8cpp_source.html">SelfLocalization.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>
