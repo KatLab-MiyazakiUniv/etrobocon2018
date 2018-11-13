@@ -78,7 +78,7 @@ namespace etrobocon2018_test {
     blockSolver.moveDirection(5);
     ASSERT_EQ(static_cast<int>(blockSolver.nowDirection), 2);
   }
-  TEST(BlockSolverTest, run)
+  TEST(BlockSolverTest, runrun)
   {
     Controller controller;
     Walker walker{ controller };

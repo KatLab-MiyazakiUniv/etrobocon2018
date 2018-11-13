@@ -40,7 +40,7 @@
  *     Explorer explorer;
  *     explorer.createBlockArea();
  *
- *     explorer.resetBlocArea(); // 内部のフラグを初期化
+ *     explorer.resetBlockArea(); // 内部のフラグを初期化
  *     explorer.setHasBlockIn(8);
  *     explorer.setHasBlockIn(9);
  *     explorer.setHasBlockIn(11);

@@ -8,9 +8,9 @@ void Explorer::createBlockArea()
   for(int i = 0; i < nodeCount; i++) {
     Node node;
     node.setNodeID(i);
-    // nodeList.push_back(node);
-    // nodePtrs.push_back(&nodeList[i]);
-    nodePtrs.push_back(&node);
+    nodeList.push_back(node);
+    nodePtrs.push_back(&nodeList[i]);
+    //nodePtrs.push_back(&node);
   }
   // 隣接ノードのポインタのリストをノード分リスト化
   for(int i = 0; i < nodeCount; i++) {
@@ -32,7 +32,7 @@ void Explorer::createBlockArea()
 
 void Explorer::resetBlockArea()
 {
-  for(auto itr = blockAreaNodeList->begin(); itr != blockAreaNodeList->end(); itr++) {
+  for(auto itr = blockAreaNodeList->begin(); itr <= blockAreaNodeList->end(); itr++) {
     (*itr)->setBeClosed(false);
     (*itr)->setHasBlock(false);
     (*itr)->setScore(0);

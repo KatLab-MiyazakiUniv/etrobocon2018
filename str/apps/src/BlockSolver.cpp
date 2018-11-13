@@ -48,17 +48,19 @@ Selector::BlockColor BlockSolver::convertSelectorColor(const Color& gameColor)
 void BlockSolver::run()
 {
   // 最初の8番までのライントレース
-  navigator.moveOnLine(500, targetBrightness, 55);
-  moveOnLineToColor(45, targetBrightness - 10, Color::RED, false);
-  Selector selector;
+  //navigator.moveOnLine(500, targetBrightness, 60);
+  moveOnLineToColor(50, targetBrightness - 10, Color::RED, false);
+  std::vector<int> route{ 8, 9, 10, 11 };
+  moveRoute(route);
+  //spinParkingArea();
 
-  InitialPositionCodeDecoder ipcd;
-  ipcd.decode(354721);
-  selector.setBlockPositionList(ipcd.getInitialPositionCodeList());
+  return;
+  Selector selector;
+  selector.setBlockPositionList({ 8, 9, 11, 15 });  // ipcd.getInitialPositionCodeList());
 
   Selector::BlockColor b_color = Selector::Undefined;
   while(!selector.isAlreadyAllBlockMoved()) {
-    auto route = selector.exploreNextOperation(nowPlace, b_color);
+    auto route = selector.exploreNextOperation(nowPlace, Selector::Undefined);  // b_color);
 
     // 目的地移動前にバックステップを行う必要がある場合
     if(selector.isBacksteppingBeforeNextOperation()) {
@@ -174,7 +176,7 @@ void BlockSolver::moveDirection(const std::int8_t& nextPlace, bool remove_block)
     nowDirection = getChangeDirection(2);
   }
   controller.speakerPlayTone(controller.noteFs4, 150);
-  navigator.moveOnLine(black_line_length - 40, targetBrightness - offset, 30);
+  //navigator.moveOnLine(black_line_length - 40, targetBrightness - offset, 30);
   moveOnLineToColor(30, targetBrightness - offset, nextColor, false);
   nowPlace = nextPlace;
 }
