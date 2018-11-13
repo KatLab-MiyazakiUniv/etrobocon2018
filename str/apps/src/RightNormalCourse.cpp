@@ -17,13 +17,14 @@ RightNormalCourse::RightNormalCourse()
  * マイナス値は入れないほうがいい
  *lineTracerWalker.speedControl.setPid ( 2.0, 4.8, 0.024, 速度mm/s );
  */
-bool RightNormalCourse::runNormalCourse(int16_t target_brightness, int16_t black, int16_t white, int16_t gray)
+bool RightNormalCourse::runNormalCourse(int16_t target_brightness, int16_t black, int16_t white,
+                                        int16_t gray)
 {
   switch(status) {
     case RightStatus::STRAIGHT_LONG:
       lineTracerWalker.speedControl.setPid(8.0, 1.0, 0.1, 180.0);
       lineTracerWalker.turnControl.setPid(2.0, 1.0, 0.1, target_brightness);
-      //lineTracerWalker.turnControl.setPid(0.49999, 0.0, 0.0, target_brightness);
+      // lineTracerWalker.turnControl.setPid(0.49999, 0.0, 0.0, target_brightness);
       break;
 
     case RightStatus::STRAIGHT_SHORT:
@@ -58,11 +59,11 @@ bool RightNormalCourse::runNormalCourse(int16_t target_brightness, int16_t black
 
     case RightStatus::TRANSFER_ZONE:
       lineTracerWalker.speedControl.setPid(10.0, 0.0001, 0.12, 140.0);
-      lineTracerWalker.turnControl.setPid(1.0, 1.6, 0.5, target_brightness);
+      lineTracerWalker.turnControl.setPid(2.0, 1.7, 0.6, target_brightness);
       break;
-    
+
     case RightStatus::SLOW_DOWN:
-      //lineTracerWalker.speedControl.setPid(1.5, 0.01, 0.12, 160.0);
+      // lineTracerWalker.speedControl.setPid(1.5, 0.01, 0.12, 160.0);
       lineTracerWalker.speedControl.setPid(2.0, 1.0, 0.1, 165.0);
       lineTracerWalker.speedControl.setPid(2.0, 0.1, 0.1, target_brightness);
 
@@ -102,8 +103,8 @@ bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR)
     status = RightStatus::STRAIGHT_LONG;
   else if(distance_total < FOR_DECREASE_JACKKNIFE_R)
     status = RightStatus::SLOW_DOWN;
-  //else if(distanse_total < 11607)
-  //  status = RightStatus::SLOW;  
+  // else if(distanse_total < 11607)
+  //  status = RightStatus::SLOW;
   else if(distance_total < AFTER_GOAL_CURVE_R)
     status = RightStatus::TRANSFER_ZONE;
   else if(distance_total < GRAY_FIND_AREA_R)

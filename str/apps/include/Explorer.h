@@ -7,10 +7,10 @@
 #define __EXPLORER__
 
 #include "Node.h"
-#include <vector>
-#include <array>
 #include <algorithm>
+#include <array>
 #include <cstdlib>
+#include <vector>
 
 /**
  * <p> ルート探索クラス <p>
@@ -25,10 +25,12 @@
  * </p>
  *
  * <ul>
- * <li> 隣接ノードIDのリスト (デフォルトコンストラクタ内における {@code neighborsIDList_} の初期化値) </li>
- * <li> 相対的なノード位置のリスト (デフォルトコンストラクタ内における {@code currentPosition} の初期化値)  </li>
- * <li> ブロック並べエリアにおけるノード総数 ({@link #TOTAL_NODE_COUNT}) </li>
- * <li> ブロック並べエリアにおける各ブロック置き場が隣接するブロック置き場の最大数 ({@link #MAX_NEIGHBOR_COUNT}) </li>
+ * <li> 隣接ノードIDのリスト (デフォルトコンストラクタ内における {@code neighborsIDList_}
+ * の初期化値) </li> <li> 相対的なノード位置のリスト (デフォルトコンストラクタ内における {@code
+ * currentPosition} の初期化値)  </li> <li> ブロック並べエリアにおけるノード総数 ({@link
+ * #TOTAL_NODE_COUNT}) </li> <li>
+ * ブロック並べエリアにおける各ブロック置き場が隣接するブロック置き場の最大数 ({@link
+ * #MAX_NEIGHBOR_COUNT}) </li>
  * </ul>
  *
  * <p> Example </p>
@@ -60,8 +62,7 @@ class Explorer {
      * <p> ノード位置のY軸 </p>
      */
     std::int8_t y;
-    Position()
-        : x(0), y(0) {}
+    Position() : x(0), y(0) {}
   };
 
  public:
@@ -73,66 +74,50 @@ class Explorer {
    * </p>
    */
   Explorer()
-      : blockAreaNodeList(nullptr), neighborPtrs(TOTAL_NODE_COUNT), neighborsIDList(TOTAL_NODE_COUNT)
+    : blockAreaNodeList(nullptr), neighborPtrs(TOTAL_NODE_COUNT), neighborsIDList(TOTAL_NODE_COUNT)
   {
     // 隣接ノードIDのリスト
     std::vector<std::array<std::int8_t, MAX_NEIGHBOR_COUNT>> neighborsIDList_{
-        {
-            {1, 4, EMPTY_ID, EMPTY_ID},
-            {0, 2, 5, EMPTY_ID},
-            {1, 3, 6, EMPTY_ID},
-            {2, 7, EMPTY_ID, EMPTY_ID},
+      { { 1, 4, EMPTY_ID, EMPTY_ID },
+        { 0, 2, 5, EMPTY_ID },
+        { 1, 3, 6, EMPTY_ID },
+        { 2, 7, EMPTY_ID, EMPTY_ID },
 
-            {0, 5, 8, EMPTY_ID},
-            {1, 4, 6, 9},
-            {2, 5, 7, 10},
-            {3, 6, 11, EMPTY_ID},
+        { 0, 5, 8, EMPTY_ID },
+        { 1, 4, 6, 9 },
+        { 2, 5, 7, 10 },
+        { 3, 6, 11, EMPTY_ID },
 
-            {4, 9, 12, EMPTY_ID},
-            {5, 8, 10, 13},
-            {6, 9, 11, 14},
-            {7, 10, 15, EMPTY_ID},
+        { 4, 9, 12, EMPTY_ID },
+        { 5, 8, 10, 13 },
+        { 6, 9, 11, 14 },
+        { 7, 10, 15, EMPTY_ID },
 
-            {8, 13, EMPTY_ID, EMPTY_ID},
-            {9, 12, 14, EMPTY_ID},
-            {10, 13, 15, EMPTY_ID},
-            {11, 14, EMPTY_ID, EMPTY_ID}
-        }
+        { 8, 13, EMPTY_ID, EMPTY_ID },
+        { 9, 12, 14, EMPTY_ID },
+        { 10, 13, 15, EMPTY_ID },
+        { 11, 14, EMPTY_ID, EMPTY_ID } }
     };
 
     // 相対的なノード位置のリスト
-    std::vector<std::array<std::int8_t, 2>> currentPosition = {
-        {0, 0},
-        {1, 0},
-        {2, 0},
-        {3, 0},
+    std::vector<std::array<std::int8_t, 2>> currentPosition
+        = { { 0, 0 }, { 1, 0 }, { 2, 0 }, { 3, 0 },
 
-        {0, 1},
-        {1, 1},
-        {2, 1},
-        {3, 1},
+            { 0, 1 }, { 1, 1 }, { 2, 1 }, { 3, 1 },
 
-        {0, 2},
-        {1, 2},
-        {2, 2},
-        {3, 2},
+            { 0, 2 }, { 1, 2 }, { 2, 2 }, { 3, 2 },
 
-        {0, 3},
-        {1, 3},
-        {2, 3},
-        {3, 3}};
+            { 0, 3 }, { 1, 3 }, { 2, 3 }, { 3, 3 } };
 
     //
     // 以降は触れなくてよい
     //
 
-    for (unsigned int i = 0; i < neighborsIDList_.size(); i++)
-    {
+    for(unsigned int i = 0; i < neighborsIDList_.size(); i++) {
       neighborsIDList[i] = neighborsIDList_[i];
     }
 
-    for (unsigned int i = 0; i < neighborsIDList.size(); i++)
-    {
+    for(unsigned int i = 0; i < neighborsIDList.size(); i++) {
       Position position;
       position.x = currentPosition[i][0];
       position.y = currentPosition[i][1];
@@ -205,7 +190,8 @@ class Explorer {
    * @param end 終端ノードのノードID
    * @return 終端ノードのポインタ
    */
-  Node* calculateNeighborCost(Node* parent, std::vector<Node*>* around, std::int32_t realCost, std::int8_t end);
+  Node* calculateNeighborCost(Node* parent, std::vector<Node*>* around, std::int32_t realCost,
+                              std::int8_t end);
 
   /**
    * <p> ブロック置き場のノードのポインタのリストのポインタを取得します </p>
@@ -213,9 +199,6 @@ class Explorer {
    * @return ブロック置き場のノードのポインタのリストのポインタ
    */
   std::vector<Node*>* getBlockAreaNodeList();
-
-
-
 
  private:
   /**
@@ -232,8 +215,9 @@ class Explorer {
    * <p> 隣接ノードが空であることを示すのノードID </p>
    *
    * <p>
-   * {@link #neighborsIDList} の中身が固定長配列のため、隣接ノードが存在しないことを示すIDが必要になりました。
-   * 詳細は {@link #neighborsIDList} を参照してください。
+   * {@link #neighborsIDList}
+   * の中身が固定長配列のため、隣接ノードが存在しないことを示すIDが必要になりました。 詳細は {@link
+   * #neighborsIDList} を参照してください。
    * </p>
    */
   const std::int8_t EMPTY_ID = -1;
@@ -279,7 +263,8 @@ class Explorer {
    * <p> 各ブロック置き場における隣接ノードIDのリスト </p>
    *
    * <p>
-   * コンストラクタおよび {@link #createBlockArea()} でのみ利用していますが、実態を残すためにメンバ変数としています。
+   * コンストラクタおよび {@link #createBlockArea()}
+   * でのみ利用していますが、実態を残すためにメンバ変数としています。
    * </p>
    *
    * <p>
@@ -290,10 +275,11 @@ class Explorer {
    * <ul>
    * <li> 可変長配列の中身を固定長配列にする </li>
    * <li> 中身の固定長配列の長さを {@link #MAX_NEIGHBOR_COUNT} に設定する </li>
-   * <li> 中身の固定長配列に空きが存在するノードについては {@link #EMPTY_ID} を設定して {@link #createBlockArea()} 内で無視する </li>
+   * <li> 中身の固定長配列に空きが存在するノードについては {@link #EMPTY_ID} を設定して {@link
+   * #createBlockArea()} 内で無視する </li>
    * </ul>
    */
   std::vector<std::array<std::int8_t, MAX_NEIGHBOR_COUNT>> neighborsIDList;
 };
 
-#endif // EXPLORER
+#endif  // EXPLORER

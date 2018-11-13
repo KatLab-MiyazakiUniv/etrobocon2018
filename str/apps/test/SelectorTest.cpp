@@ -11,7 +11,7 @@ namespace etrobocon2018_test {
   TEST(SelectorTest, getBlockPositionListTest)
   {
     Selector obj;
-    std::vector<std::int8_t> expected{{0, 1, 2, 3}};
+    std::vector<std::int8_t> expected{ { 0, 1, 2, 3 } };
 
     obj.setBlockPositionList(expected);
     auto actual = obj.getBlockPositionList();
@@ -23,14 +23,13 @@ namespace etrobocon2018_test {
   TEST(SelectorTest, searchRouteByExplorerTest)
   {
     Selector obj;
-    std::vector<int> expected{{11, 7, 3, 2, 1, 5}};
-    std::vector<std::int8_t> nodeHadBlockList{{6, 9, 10}};
+    std::vector<int> expected{ { 11, 7, 3, 2, 1, 5 } };
+    std::vector<std::int8_t> nodeHadBlockList{ { 6, 9, 10 } };
 
     obj.prepareSearching(nodeHadBlockList);
     auto actual = obj.searchRoute(11, 5);
 
-    for (unsigned int i = 0; i < actual.size(); i++)
-    {
+    for(unsigned int i = 0; i < actual.size(); i++) {
       EXPECT_EQ(actual[i], expected[i]);
     }
 
@@ -41,7 +40,7 @@ namespace etrobocon2018_test {
   TEST(SelectorTest, searchNode8Test)
   {
     Selector obj;
-    std::vector<std::int8_t> blockList{{0, 1, 2, 8}};
+    std::vector<std::int8_t> blockList{ { 0, 1, 2, 8 } };
     std::int8_t expected = 8;
 
     obj.setBlockPositionList(blockList);
@@ -54,7 +53,7 @@ namespace etrobocon2018_test {
   TEST(SelectorTest, searchNode9Test)
   {
     Selector obj;
-    std::vector<std::int8_t> blockList{{0, 1, 2, 9}};
+    std::vector<std::int8_t> blockList{ { 0, 1, 2, 9 } };
     std::int8_t expected = 9;
 
     obj.setBlockPositionList(blockList);
@@ -67,7 +66,7 @@ namespace etrobocon2018_test {
   TEST(SelectorTest, searchNode1Test)
   {
     Selector obj;
-    std::vector<std::int8_t> blockList{{1, 2, 3, 7}};
+    std::vector<std::int8_t> blockList{ { 1, 2, 3, 7 } };
     std::int8_t expected = 1;
 
     obj.setBlockPositionList(blockList);
@@ -80,7 +79,7 @@ namespace etrobocon2018_test {
   TEST(SelectorTest, searchNode10Test)
   {
     Selector obj;
-    std::vector<std::int8_t> blockList{{0, 2, 10, 14}};
+    std::vector<std::int8_t> blockList{ { 0, 2, 10, 14 } };
     std::int8_t expected = 10;
 
     obj.setBlockPositionList(blockList);
@@ -93,7 +92,7 @@ namespace etrobocon2018_test {
   TEST(SelectorTest, searchNode6Test)
   {
     Selector obj;
-    std::vector<std::int8_t> blockList{{6, 7, 10, 11}};
+    std::vector<std::int8_t> blockList{ { 6, 7, 10, 11 } };
     std::int8_t expected = 6;
 
     obj.addMovedBlockPosition(10);
@@ -107,7 +106,7 @@ namespace etrobocon2018_test {
   TEST(SelectorTest, searchNode0Test)
   {
     Selector obj;
-    std::vector<std::int8_t> blockList{{0, 2, 3, 15}};
+    std::vector<std::int8_t> blockList{ { 0, 2, 3, 15 } };
     std::int8_t expected = 0;
 
     obj.setBlockPositionList(blockList);
@@ -173,7 +172,7 @@ namespace etrobocon2018_test {
     unsigned int expected = 0;
 
     // あってもなくても関係なし
-    obj.setBlockPositionList(std::vector<std::int8_t>({1, 2, 3}));
+    obj.setBlockPositionList(std::vector<std::int8_t>({ 1, 2, 3 }));
 
     auto actual = obj.extractRoute();
 
@@ -184,24 +183,20 @@ namespace etrobocon2018_test {
   TEST(SelectorTest, getSomeNodeInRouteWhenRouteIsSetTest)
   {
     Selector obj;
-    std::vector<int> expectedList = {0, 1, 2, 3, 7, 11, 15, 14, 13, 12, 8, 4, 5, 6, 10, 9};
-
+    std::vector<int> expectedList = { 0, 1, 2, 3, 7, 11, 15, 14, 13, 12, 8, 4, 5, 6, 10, 9 };
 
     obj.updateRoute(expectedList);
     auto actual = obj.extractRoute();
 
     ASSERT_EQ(expectedList.size(), actual.size());
-    for (unsigned int i = 0; i < actual.size(); i++)
-        EXPECT_EQ(expectedList[i], actual[i]);
+    for(unsigned int i = 0; i < actual.size(); i++) EXPECT_EQ(expectedList[i], actual[i]);
 
-
-    expectedList = {8, 9, 10, 11};
+    expectedList = { 8, 9, 10, 11 };
     obj.updateRoute(expectedList);
     actual = obj.extractRoute();
 
     ASSERT_EQ(expectedList.size(), actual.size());
-    for (unsigned int i = 0; i < actual.size(); i++)
-        EXPECT_EQ(expectedList[i], actual[i]);
+    for(unsigned int i = 0; i < actual.size(); i++) EXPECT_EQ(expectedList[i], actual[i]);
   }
 
   // 色を設定すると中央四角形における次に置くべき位置コードを取得する
@@ -251,7 +246,7 @@ namespace etrobocon2018_test {
   TEST(SelectorTest, searchNodeInSenarioTest)
   {
     Selector obj;
-    std::vector<std::int8_t> blockList{{8, 9, 11, 15}};
+    std::vector<std::int8_t> blockList{ { 8, 9, 11, 15 } };
 
     obj.setBlockPositionList(blockList);
 
@@ -260,21 +255,21 @@ namespace etrobocon2018_test {
     ASSERT_EQ(8, actual8);
 
     // 9を探す
-    blockList = {9, 10, 11, 15};
+    blockList = { 9, 10, 11, 15 };
     obj.setBlockPositionList(blockList);
     obj.addMovedBlockPosition(10);
     auto actual9 = obj.searchBlockPosition(14);
     ASSERT_EQ(9, actual9);
 
     // 11を探す
-    blockList = {6, 10, 11, 15};
+    blockList = { 6, 10, 11, 15 };
     obj.setBlockPositionList(blockList);
     obj.addMovedBlockPosition(6);
     auto actual11 = obj.searchBlockPosition(5);
     ASSERT_EQ(11, actual11);
 
     // 15を探す
-    blockList = {6, 9, 10, 15};
+    blockList = { 6, 9, 10, 15 };
     obj.setBlockPositionList(blockList);
     obj.addMovedBlockPosition(5);
     auto actual15 = obj.searchBlockPosition(15);
@@ -285,17 +280,17 @@ namespace etrobocon2018_test {
   TEST(SelectorTest, searchRouteInSenarioTest)
   {
     Selector obj;
-    std::vector<std::int8_t> blockList{{8, 9, 11, 15}};
+    std::vector<std::int8_t> blockList{ { 8, 9, 11, 15 } };
     // 8->Blue, 9->Red, 11->Yellow, 15->Green
-    std::vector<int> expectedMovingToBlue = {8};
-    std::vector<int> expectedCarryingBlue = {8, 12, 13, 14, 10};
-    std::vector<int> expectedMovingToRed = {14, 13, 9};
-    std::vector<int> expectedCarryingRed = {9, 5, 6};
-    std::vector<int> expectedMovingToYellow = {5, 1, 2, 3, 7, 11};
-    std::vector<int> expectedCarryingYellow = {11, 7, 3, 2, 1, 5, 9};
-    std::vector<int> expectedMovingToGreen = {5, 4, 8, 12, 13, 14, 15};
-    std::vector<int> expectedCarryingGreen = {15, 14, 13, 12, 8, 4, 5};
-    std::vector<int> expectedMovingTo11 = {4, 0, 1, 2, 3, 7, 11};
+    std::vector<int> expectedMovingToBlue = { 8 };
+    std::vector<int> expectedCarryingBlue = { 8, 12, 13, 14, 10 };
+    std::vector<int> expectedMovingToRed = { 14, 13, 9 };
+    std::vector<int> expectedCarryingRed = { 9, 5, 6 };
+    std::vector<int> expectedMovingToYellow = { 5, 1, 2, 3, 7, 11 };
+    std::vector<int> expectedCarryingYellow = { 11, 7, 3, 2, 1, 5, 9 };
+    std::vector<int> expectedMovingToGreen = { 5, 4, 8, 12, 13, 14, 15 };
+    std::vector<int> expectedCarryingGreen = { 15, 14, 13, 12, 8, 4, 5 };
+    std::vector<int> expectedMovingTo11 = { 4, 0, 1, 2, 3, 7, 11 };
 
     obj.setBlockPositionList(blockList);
 
@@ -304,8 +299,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToBlue.size(), actualMovingToBlue.size());
-    for (unsigned int i = 0; i < actualMovingToBlue.size(); i++)
-        EXPECT_EQ(actualMovingToBlue[i], expectedMovingToBlue[i]);
+    for(unsigned int i = 0; i < actualMovingToBlue.size(); i++)
+      EXPECT_EQ(actualMovingToBlue[i], expectedMovingToBlue[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -321,8 +316,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingBlue.size(), actualCarryingBlue.size());
-    for (unsigned int i = 0; i < actualCarryingBlue.size(); i++)
-        EXPECT_EQ(actualCarryingBlue[i], expectedCarryingBlue[i]);
+    for(unsigned int i = 0; i < actualCarryingBlue.size(); i++)
+      EXPECT_EQ(actualCarryingBlue[i], expectedCarryingBlue[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -338,8 +333,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToRed.size(), actualMovingToRed.size());
-    for (unsigned int i = 0; i < actualMovingToRed.size(); i++)
-        EXPECT_EQ(actualMovingToRed[i], expectedMovingToRed[i]);
+    for(unsigned int i = 0; i < actualMovingToRed.size(); i++)
+      EXPECT_EQ(actualMovingToRed[i], expectedMovingToRed[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -355,8 +350,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingRed.size(), actualCarryingRed.size());
-    for (unsigned int i = 0; i < actualCarryingRed.size(); i++)
-        EXPECT_EQ(actualCarryingRed[i], expectedCarryingRed[i]);
+    for(unsigned int i = 0; i < actualCarryingRed.size(); i++)
+      EXPECT_EQ(actualCarryingRed[i], expectedCarryingRed[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -372,8 +367,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToYellow.size(), actualMovingToYellow.size());
-    for (unsigned int i = 0; i < actualMovingToYellow.size(); i++)
-        EXPECT_EQ(actualMovingToYellow[i], expectedMovingToYellow[i]);
+    for(unsigned int i = 0; i < actualMovingToYellow.size(); i++)
+      EXPECT_EQ(actualMovingToYellow[i], expectedMovingToYellow[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -389,8 +384,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingYellow.size(), actualCarryingYellow.size());
-    for (unsigned int i = 0; i < actualCarryingYellow.size(); i++)
-        EXPECT_EQ(actualCarryingYellow[i], expectedCarryingYellow[i]);
+    for(unsigned int i = 0; i < actualCarryingYellow.size(); i++)
+      EXPECT_EQ(actualCarryingYellow[i], expectedCarryingYellow[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -406,8 +401,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToGreen.size(), actualMovingToGreen.size());
-    for (unsigned int i = 0; i < actualMovingToGreen.size(); i++)
-        EXPECT_EQ(actualMovingToGreen[i], expectedMovingToGreen[i]);
+    for(unsigned int i = 0; i < actualMovingToGreen.size(); i++)
+      EXPECT_EQ(actualMovingToGreen[i], expectedMovingToGreen[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -423,8 +418,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingGreen.size(), actualCarryingGreen.size());
-    for (unsigned int i = 0; i < actualCarryingGreen.size(); i++)
-        EXPECT_EQ(actualCarryingGreen[i], expectedCarryingGreen[i]);
+    for(unsigned int i = 0; i < actualCarryingGreen.size(); i++)
+      EXPECT_EQ(actualCarryingGreen[i], expectedCarryingGreen[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -440,8 +435,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingTo11.size(), actualMovingTo11.size());
-    for (unsigned int i = 0; i < actualMovingTo11.size(); i++)
-        EXPECT_EQ(actualMovingTo11[i], expectedMovingTo11[i]);
+    for(unsigned int i = 0; i < actualMovingTo11.size(); i++)
+      EXPECT_EQ(actualMovingTo11[i], expectedMovingTo11[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -457,19 +452,19 @@ namespace etrobocon2018_test {
   TEST(SelectorTest, searchRouteWhenPathBlocked)
   {
     Selector obj;
-    std::vector<std::int8_t> blockList{{4, 8, 9, 13}};
+    std::vector<std::int8_t> blockList{ { 4, 8, 9, 13 } };
     // 8->Blue, 9->Red, 13->Yellow, 4->Green
     // std::vector<int> expectedMovingToBlue = {8};
-    std::vector<int> expectedEvacuatingBlue = {8, 12};
-    std::vector<int> expectedMovingToRed = {8, 9};
-    std::vector<int> expectedCarryingRed = {9, 10, 6};
-    std::vector<int> expectedReturningToBlue = {10, 9, 8, 12};
-    std::vector<int> expectedCarryingBlue = {12, 8, 9, 10};
-    std::vector<int> expectedMovingToYellow = {9, 13};
-    std::vector<int> expectedCarryingYellow = {13, 9};
-    std::vector<int> expectedMovingToGreen = {13, 12, 8, 4};
-    std::vector<int> expectedCarryingGreen = {4, 5};
-    std::vector<int> expectedMovingTo11 = {4, 0, 1, 2, 3, 7, 11};
+    std::vector<int> expectedEvacuatingBlue = { 8, 12 };
+    std::vector<int> expectedMovingToRed = { 8, 9 };
+    std::vector<int> expectedCarryingRed = { 9, 10, 6 };
+    std::vector<int> expectedReturningToBlue = { 10, 9, 8, 12 };
+    std::vector<int> expectedCarryingBlue = { 12, 8, 9, 10 };
+    std::vector<int> expectedMovingToYellow = { 9, 13 };
+    std::vector<int> expectedCarryingYellow = { 13, 9 };
+    std::vector<int> expectedMovingToGreen = { 13, 12, 8, 4 };
+    std::vector<int> expectedCarryingGreen = { 4, 5 };
+    std::vector<int> expectedMovingTo11 = { 4, 0, 1, 2, 3, 7, 11 };
 
     obj.setBlockPositionList(blockList);
 
@@ -483,8 +478,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedEvacuatingBlue.size(), actualEvacuatingBlue.size());
-    for (unsigned int i = 0; i < actualEvacuatingBlue.size(); i++)
-        EXPECT_EQ(actualEvacuatingBlue[i], expectedEvacuatingBlue[i]);
+    for(unsigned int i = 0; i < actualEvacuatingBlue.size(); i++)
+      EXPECT_EQ(actualEvacuatingBlue[i], expectedEvacuatingBlue[i]);
     ASSERT_TRUE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -500,8 +495,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToRed.size(), actualMovingToRed.size());
-    for (unsigned int i = 0; i < actualMovingToRed.size(); i++)
-        EXPECT_EQ(actualMovingToRed[i], expectedMovingToRed[i]);
+    for(unsigned int i = 0; i < actualMovingToRed.size(); i++)
+      EXPECT_EQ(actualMovingToRed[i], expectedMovingToRed[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -517,8 +512,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingRed.size(), actualCarryingRed.size());
-    for (unsigned int i = 0; i < actualCarryingRed.size(); i++)
-        EXPECT_EQ(actualCarryingRed[i], expectedCarryingRed[i]);
+    for(unsigned int i = 0; i < actualCarryingRed.size(); i++)
+      EXPECT_EQ(actualCarryingRed[i], expectedCarryingRed[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -534,8 +529,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedReturningToBlue.size(), actualReturningToBlue.size());
-    for (unsigned int i = 0; i < actualReturningToBlue.size(); i++)
-        EXPECT_EQ(actualReturningToBlue[i], expectedReturningToBlue[i]);
+    for(unsigned int i = 0; i < actualReturningToBlue.size(); i++)
+      EXPECT_EQ(actualReturningToBlue[i], expectedReturningToBlue[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -551,8 +546,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingBlue.size(), actualCarryingBlue.size());
-    for (unsigned int i = 0; i < actualCarryingBlue.size(); i++)
-        EXPECT_EQ(actualCarryingBlue[i], expectedCarryingBlue[i]);
+    for(unsigned int i = 0; i < actualCarryingBlue.size(); i++)
+      EXPECT_EQ(actualCarryingBlue[i], expectedCarryingBlue[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -568,8 +563,8 @@ namespace etrobocon2018_test {
 
     ASSERT_EQ(expectedMovingToYellow.size(), actualMovingToYellow.size());
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
-    for (unsigned int i = 0; i < actualMovingToYellow.size(); i++)
-        EXPECT_EQ(actualMovingToYellow[i], expectedMovingToYellow[i]);
+    for(unsigned int i = 0; i < actualMovingToYellow.size(); i++)
+      EXPECT_EQ(actualMovingToYellow[i], expectedMovingToYellow[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -585,8 +580,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingYellow.size(), actualCarryingYellow.size());
-    for (unsigned int i = 0; i < actualCarryingYellow.size(); i++)
-        EXPECT_EQ(actualCarryingYellow[i], expectedCarryingYellow[i]);
+    for(unsigned int i = 0; i < actualCarryingYellow.size(); i++)
+      EXPECT_EQ(actualCarryingYellow[i], expectedCarryingYellow[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -602,8 +597,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToGreen.size(), actualMovingToGreen.size());
-    for (unsigned int i = 0; i < actualMovingToGreen.size(); i++)
-        EXPECT_EQ(actualMovingToGreen[i], expectedMovingToGreen[i]);
+    for(unsigned int i = 0; i < actualMovingToGreen.size(); i++)
+      EXPECT_EQ(actualMovingToGreen[i], expectedMovingToGreen[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -619,8 +614,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingGreen.size(), actualCarryingGreen.size());
-    for (unsigned int i = 0; i < actualCarryingGreen.size(); i++)
-        EXPECT_EQ(actualCarryingGreen[i], expectedCarryingGreen[i]);
+    for(unsigned int i = 0; i < actualCarryingGreen.size(); i++)
+      EXPECT_EQ(actualCarryingGreen[i], expectedCarryingGreen[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -636,8 +631,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingTo11.size(), actualMovingTo11.size());
-    for (unsigned int i = 0; i < actualMovingTo11.size(); i++)
-        EXPECT_EQ(actualMovingTo11[i], expectedMovingTo11[i]);
+    for(unsigned int i = 0; i < actualMovingTo11.size(); i++)
+      EXPECT_EQ(actualMovingTo11[i], expectedMovingTo11[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -653,19 +648,19 @@ namespace etrobocon2018_test {
   TEST(SelectorTest, searchRouteWhenNextMovedPositionIsBuried)
   {
     Selector obj;
-    std::vector<std::int8_t> blockList{{3, 6, 8, 10}};
+    std::vector<std::int8_t> blockList{ { 3, 6, 8, 10 } };
     // 8->Blue, 3->Red, 6->Yellow, 10->Green
     // std::vector<int> expectedMovingToBlue = {8};
-    std::vector<int> expectedEvacuatingBlue = {8, 12};
-    std::vector<int> expectedMovingToGreen = {8, 9, 10};
-    std::vector<int> expectedCarryingGreen = {10, 9, 5};
-    std::vector<int> expectedReturningToBlue = {9, 13, 12};
-    std::vector<int> expectedCarryingBlue = {12, 13, 14, 10};
-    std::vector<int> expectedMovingToYellow = {14, 15, 11, 7, 6};
-    std::vector<int> expectedCarryingYellow = {6, 7, 11, 15, 14, 13, 9};
-    std::vector<int> expectedMovingToRed = {13, 14, 15, 11, 7, 3};
-    std::vector<int> expectedCarryingRed = {3, 7, 6};
-    std::vector<int> expectedMovingTo11 = {7, 11};
+    std::vector<int> expectedEvacuatingBlue = { 8, 12 };
+    std::vector<int> expectedMovingToGreen = { 8, 9, 10 };
+    std::vector<int> expectedCarryingGreen = { 10, 9, 5 };
+    std::vector<int> expectedReturningToBlue = { 9, 13, 12 };
+    std::vector<int> expectedCarryingBlue = { 12, 13, 14, 10 };
+    std::vector<int> expectedMovingToYellow = { 14, 15, 11, 7, 6 };
+    std::vector<int> expectedCarryingYellow = { 6, 7, 11, 15, 14, 13, 9 };
+    std::vector<int> expectedMovingToRed = { 13, 14, 15, 11, 7, 3 };
+    std::vector<int> expectedCarryingRed = { 3, 7, 6 };
+    std::vector<int> expectedMovingTo11 = { 7, 11 };
 
     obj.setBlockPositionList(blockList);
 
@@ -679,8 +674,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedEvacuatingBlue.size(), actualEvacuatingBlue.size());
-    for (unsigned int i = 0; i < actualEvacuatingBlue.size(); i++)
-        EXPECT_EQ(actualEvacuatingBlue[i], expectedEvacuatingBlue[i]);
+    for(unsigned int i = 0; i < actualEvacuatingBlue.size(); i++)
+      EXPECT_EQ(actualEvacuatingBlue[i], expectedEvacuatingBlue[i]);
     ASSERT_TRUE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -696,8 +691,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToGreen.size(), actualMovingToGreen.size());
-    for (unsigned int i = 0; i < actualMovingToGreen.size(); i++)
-        EXPECT_EQ(actualMovingToGreen[i], expectedMovingToGreen[i]);
+    for(unsigned int i = 0; i < actualMovingToGreen.size(); i++)
+      EXPECT_EQ(actualMovingToGreen[i], expectedMovingToGreen[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -713,8 +708,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingGreen.size(), actualCarryingGreen.size());
-    for (unsigned int i = 0; i < actualCarryingGreen.size(); i++)
-        EXPECT_EQ(actualCarryingGreen[i], expectedCarryingGreen[i]);
+    for(unsigned int i = 0; i < actualCarryingGreen.size(); i++)
+      EXPECT_EQ(actualCarryingGreen[i], expectedCarryingGreen[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -730,8 +725,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedReturningToBlue.size(), actualReturningToBlue.size());
-    for (unsigned int i = 0; i < actualReturningToBlue.size(); i++)
-        EXPECT_EQ(actualReturningToBlue[i], expectedReturningToBlue[i]);
+    for(unsigned int i = 0; i < actualReturningToBlue.size(); i++)
+      EXPECT_EQ(actualReturningToBlue[i], expectedReturningToBlue[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -747,8 +742,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingBlue.size(), actualCarryingBlue.size());
-    for (unsigned int i = 0; i < actualCarryingBlue.size(); i++)
-        EXPECT_EQ(actualCarryingBlue[i], expectedCarryingBlue[i]);
+    for(unsigned int i = 0; i < actualCarryingBlue.size(); i++)
+      EXPECT_EQ(actualCarryingBlue[i], expectedCarryingBlue[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -764,8 +759,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToYellow.size(), actualMovingToYellow.size());
-    for (unsigned int i = 0; i < actualMovingToYellow.size(); i++)
-        EXPECT_EQ(actualMovingToYellow[i], expectedMovingToYellow[i]);
+    for(unsigned int i = 0; i < actualMovingToYellow.size(); i++)
+      EXPECT_EQ(actualMovingToYellow[i], expectedMovingToYellow[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -781,8 +776,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingYellow.size(), actualCarryingYellow.size());
-    for (unsigned int i = 0; i < actualCarryingYellow.size(); i++)
-        EXPECT_EQ(actualCarryingYellow[i], expectedCarryingYellow[i]);
+    for(unsigned int i = 0; i < actualCarryingYellow.size(); i++)
+      EXPECT_EQ(actualCarryingYellow[i], expectedCarryingYellow[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -798,8 +793,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToRed.size(), actualMovingToRed.size());
-    for (unsigned int i = 0; i < actualMovingToRed.size(); i++)
-        EXPECT_EQ(actualMovingToRed[i], expectedMovingToRed[i]);
+    for(unsigned int i = 0; i < actualMovingToRed.size(); i++)
+      EXPECT_EQ(actualMovingToRed[i], expectedMovingToRed[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -815,8 +810,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingRed.size(), actualCarryingRed.size());
-    for (unsigned int i = 0; i < actualCarryingRed.size(); i++)
-        EXPECT_EQ(actualCarryingRed[i], expectedCarryingRed[i]);
+    for(unsigned int i = 0; i < actualCarryingRed.size(); i++)
+      EXPECT_EQ(actualCarryingRed[i], expectedCarryingRed[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -831,8 +826,8 @@ namespace etrobocon2018_test {
     auto actualMovingTo11 = obj.exploreNextOperation(7, Selector::Undefined);
 
     ASSERT_EQ(expectedMovingTo11.size(), actualMovingTo11.size());
-    for (unsigned int i = 0; i < actualMovingTo11.size(); i++)
-        EXPECT_EQ(actualMovingTo11[i], expectedMovingTo11[i]);
+    for(unsigned int i = 0; i < actualMovingTo11.size(); i++)
+      EXPECT_EQ(actualMovingTo11[i], expectedMovingTo11[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -848,21 +843,21 @@ namespace etrobocon2018_test {
   TEST(SelectorTest, searchRouteWhenNextOfNextOfNextMovedPositionIsBuried)
   {
     Selector obj;
-    std::vector<std::int8_t> blockList{{5, 6, 8, 10}};
+    std::vector<std::int8_t> blockList{ { 5, 6, 8, 10 } };
     // 8->Blue, 10->Red, 5->Yellow, 6->Green
     // std::vector<int> expectedMovingToBlue = {8};
     // std::vector<int> expectedEvacuatingBlue = {8, 12};
     // std::vector<int> expectedMovingToRed = {8, 9, 10};
-    std::vector<int> expectedMovingToGreen = {9, 13, 14, 15, 11, 7, 6};
-    std::vector<int> expectedMovingToYellow = {7, 3, 2, 1, 5};
-    std::vector<int> expectedCarryingYellow = {5, 9};
-    std::vector<int> expectedReturningToGreen = {5, 6};
-    std::vector<int> expectedCarryingGreen = {6, 5};
-    std::vector<int> expectedReturningToRed = {6, 10};
-    std::vector<int> expectedCarryingRed = {10, 6};
-    std::vector<int> expectedReturningToBlue = {10, 14, 13, 12};
-    std::vector<int> expectedCarryingBlue = {12, 13, 14, 10};
-    std::vector<int> expectedMovingTo11 = {14, 15, 11};
+    std::vector<int> expectedMovingToGreen = { 9, 13, 14, 15, 11, 7, 6 };
+    std::vector<int> expectedMovingToYellow = { 7, 3, 2, 1, 5 };
+    std::vector<int> expectedCarryingYellow = { 5, 9 };
+    std::vector<int> expectedReturningToGreen = { 5, 6 };
+    std::vector<int> expectedCarryingGreen = { 6, 5 };
+    std::vector<int> expectedReturningToRed = { 6, 10 };
+    std::vector<int> expectedCarryingRed = { 10, 6 };
+    std::vector<int> expectedReturningToBlue = { 10, 14, 13, 12 };
+    std::vector<int> expectedCarryingBlue = { 12, 13, 14, 10 };
+    std::vector<int> expectedMovingTo11 = { 14, 15, 11 };
 
     obj.setBlockPositionList(blockList);
 
@@ -890,8 +885,8 @@ namespace etrobocon2018_test {
 
     ASSERT_TRUE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToGreen.size(), actualMovingToGreen.size());
-    for (unsigned int i = 0; i < actualMovingToGreen.size(); i++)
-        EXPECT_EQ(actualMovingToGreen[i], expectedMovingToGreen[i]);
+    for(unsigned int i = 0; i < actualMovingToGreen.size(); i++)
+      EXPECT_EQ(actualMovingToGreen[i], expectedMovingToGreen[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -907,8 +902,8 @@ namespace etrobocon2018_test {
 
     ASSERT_TRUE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToYellow.size(), actualMovingToYellow.size());
-    for (unsigned int i = 0; i < actualMovingToYellow.size(); i++)
-        EXPECT_EQ(actualMovingToYellow[i], expectedMovingToYellow[i]);
+    for(unsigned int i = 0; i < actualMovingToYellow.size(); i++)
+      EXPECT_EQ(actualMovingToYellow[i], expectedMovingToYellow[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -924,8 +919,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingYellow.size(), actualCarryingYellow.size());
-    for (unsigned int i = 0; i < actualCarryingYellow.size(); i++)
-        EXPECT_EQ(actualCarryingYellow[i], expectedCarryingYellow[i]);
+    for(unsigned int i = 0; i < actualCarryingYellow.size(); i++)
+      EXPECT_EQ(actualCarryingYellow[i], expectedCarryingYellow[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -941,8 +936,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedReturningToGreen.size(), actualReturningToGreen.size());
-    for (unsigned int i = 0; i < actualReturningToGreen.size(); i++)
-        EXPECT_EQ(actualReturningToGreen[i], expectedReturningToGreen[i]);
+    for(unsigned int i = 0; i < actualReturningToGreen.size(); i++)
+      EXPECT_EQ(actualReturningToGreen[i], expectedReturningToGreen[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -958,8 +953,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingGreen.size(), actualCarryingGreen.size());
-    for (unsigned int i = 0; i < actualCarryingGreen.size(); i++)
-        EXPECT_EQ(actualCarryingGreen[i], expectedCarryingGreen[i]);
+    for(unsigned int i = 0; i < actualCarryingGreen.size(); i++)
+      EXPECT_EQ(actualCarryingGreen[i], expectedCarryingGreen[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -975,8 +970,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedReturningToRed.size(), actualReturningToRed.size());
-    for (unsigned int i = 0; i < actualReturningToRed.size(); i++)
-        EXPECT_EQ(actualReturningToRed[i], expectedReturningToRed[i]);
+    for(unsigned int i = 0; i < actualReturningToRed.size(); i++)
+      EXPECT_EQ(actualReturningToRed[i], expectedReturningToRed[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -992,8 +987,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingRed.size(), actualCarryingRed.size());
-    for (unsigned int i = 0; i < actualCarryingRed.size(); i++)
-        EXPECT_EQ(actualCarryingRed[i], expectedCarryingRed[i]);
+    for(unsigned int i = 0; i < actualCarryingRed.size(); i++)
+      EXPECT_EQ(actualCarryingRed[i], expectedCarryingRed[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -1009,8 +1004,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedReturningToBlue.size(), actualReturningToBlue.size());
-    for (unsigned int i = 0; i < actualReturningToBlue.size(); i++)
-        EXPECT_EQ(actualReturningToBlue[i], expectedReturningToBlue[i]);
+    for(unsigned int i = 0; i < actualReturningToBlue.size(); i++)
+      EXPECT_EQ(actualReturningToBlue[i], expectedReturningToBlue[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1026,8 +1021,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingBlue.size(), actualCarryingBlue.size());
-    for (unsigned int i = 0; i < actualCarryingBlue.size(); i++)
-        EXPECT_EQ(actualCarryingBlue[i], expectedCarryingBlue[i]);
+    for(unsigned int i = 0; i < actualCarryingBlue.size(); i++)
+      EXPECT_EQ(actualCarryingBlue[i], expectedCarryingBlue[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -1043,8 +1038,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingTo11.size(), actualMovingTo11.size());
-    for (unsigned int i = 0; i < actualMovingTo11.size(); i++)
-        EXPECT_EQ(actualMovingTo11[i], expectedMovingTo11[i]);
+    for(unsigned int i = 0; i < actualMovingTo11.size(); i++)
+      EXPECT_EQ(actualMovingTo11[i], expectedMovingTo11[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1056,21 +1051,21 @@ namespace etrobocon2018_test {
   TEST(SelectorTest, searchRouteWhenEachNextMovedPositionsIsLooped)
   {
     Selector obj;
-    std::vector<std::int8_t> blockList{{0, 5, 9, 10}};
+    std::vector<std::int8_t> blockList{ { 0, 5, 9, 10 } };
     // 9->Blue, 0->Red, 5->Yellow, 10->Green
-    std::vector<int> expectedMovingToBlue = {8, 9};
-    std::vector<int> expectedMovingToGreen = {8, 12, 13, 14, 10};
-    std::vector<int> expectedMovingToYellow = {14, 15, 11, 7, 6, 5};
-    std::vector<int> expectedEvacuatingYellow = {5, 6, 7, 3};
-    std::vector<int> expectedReturningToGreen = {7, 11, 10};
-    std::vector<int> expectedCarryingGreen = {10, 6, 5};
-    std::vector<int> expectedReturningToBlue = {6, 10, 9};
-    std::vector<int> expectedCarryingBlue = {9, 10};
-    std::vector<int> expectedMovingToRed = {9, 8, 4, 0};
-    std::vector<int> expectedCarryingRed = {0, 1, 2, 6};
-    std::vector<int> expectedReturningToYellow = {2, 3};
-    std::vector<int> expectedCarryingYellow = {3, 7, 11, 15, 14, 13, 9};
-    std::vector<int> expectedMovingTo11 = {13, 14, 15, 11};
+    std::vector<int> expectedMovingToBlue = { 8, 9 };
+    std::vector<int> expectedMovingToGreen = { 8, 12, 13, 14, 10 };
+    std::vector<int> expectedMovingToYellow = { 14, 15, 11, 7, 6, 5 };
+    std::vector<int> expectedEvacuatingYellow = { 5, 6, 7, 3 };
+    std::vector<int> expectedReturningToGreen = { 7, 11, 10 };
+    std::vector<int> expectedCarryingGreen = { 10, 6, 5 };
+    std::vector<int> expectedReturningToBlue = { 6, 10, 9 };
+    std::vector<int> expectedCarryingBlue = { 9, 10 };
+    std::vector<int> expectedMovingToRed = { 9, 8, 4, 0 };
+    std::vector<int> expectedCarryingRed = { 0, 1, 2, 6 };
+    std::vector<int> expectedReturningToYellow = { 2, 3 };
+    std::vector<int> expectedCarryingYellow = { 3, 7, 11, 15, 14, 13, 9 };
+    std::vector<int> expectedMovingTo11 = { 13, 14, 15, 11 };
 
     obj.setBlockPositionList(blockList);
 
@@ -1079,8 +1074,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToBlue.size(), actualMovingToBlue.size());
-    for (unsigned int i = 0; i < actualMovingToBlue.size(); i++)
-        EXPECT_EQ(actualMovingToBlue[i], expectedMovingToBlue[i]);
+    for(unsigned int i = 0; i < actualMovingToBlue.size(); i++)
+      EXPECT_EQ(actualMovingToBlue[i], expectedMovingToBlue[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1096,8 +1091,8 @@ namespace etrobocon2018_test {
 
     ASSERT_TRUE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToGreen.size(), actualMovingToGreen.size());
-    for (unsigned int i = 0; i < actualMovingToGreen.size(); i++)
-        EXPECT_EQ(actualMovingToGreen[i], expectedMovingToGreen[i]);
+    for(unsigned int i = 0; i < actualMovingToGreen.size(); i++)
+      EXPECT_EQ(actualMovingToGreen[i], expectedMovingToGreen[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1113,8 +1108,8 @@ namespace etrobocon2018_test {
 
     ASSERT_TRUE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToYellow.size(), actualMovingToYellow.size());
-    for (unsigned int i = 0; i < actualMovingToYellow.size(); i++)
-        EXPECT_EQ(actualMovingToYellow[i], expectedMovingToYellow[i]);
+    for(unsigned int i = 0; i < actualMovingToYellow.size(); i++)
+      EXPECT_EQ(actualMovingToYellow[i], expectedMovingToYellow[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1130,8 +1125,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedEvacuatingYellow.size(), actualEvacuatingYellow.size());
-    for (unsigned int i = 0; i < actualEvacuatingYellow.size(); i++)
-        EXPECT_EQ(actualEvacuatingYellow[i], expectedEvacuatingYellow[i]);
+    for(unsigned int i = 0; i < actualEvacuatingYellow.size(); i++)
+      EXPECT_EQ(actualEvacuatingYellow[i], expectedEvacuatingYellow[i]);
     ASSERT_TRUE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1147,8 +1142,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedReturningToGreen.size(), actualReturningToGreen.size());
-    for (unsigned int i = 0; i < actualReturningToGreen.size(); i++)
-        EXPECT_EQ(actualReturningToGreen[i], expectedReturningToGreen[i]);
+    for(unsigned int i = 0; i < actualReturningToGreen.size(); i++)
+      EXPECT_EQ(actualReturningToGreen[i], expectedReturningToGreen[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1164,8 +1159,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingGreen.size(), actualCarryingGreen.size());
-    for (unsigned int i = 0; i < actualCarryingGreen.size(); i++)
-        EXPECT_EQ(actualCarryingGreen[i], expectedCarryingGreen[i]);
+    for(unsigned int i = 0; i < actualCarryingGreen.size(); i++)
+      EXPECT_EQ(actualCarryingGreen[i], expectedCarryingGreen[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -1181,8 +1176,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedReturningToBlue.size(), actualReturningToBlue.size());
-    for (unsigned int i = 0; i < actualReturningToBlue.size(); i++)
-        EXPECT_EQ(actualReturningToBlue[i], expectedReturningToBlue[i]);
+    for(unsigned int i = 0; i < actualReturningToBlue.size(); i++)
+      EXPECT_EQ(actualReturningToBlue[i], expectedReturningToBlue[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1198,8 +1193,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingBlue.size(), actualCarryingBlue.size());
-    for (unsigned int i = 0; i < actualCarryingBlue.size(); i++)
-        EXPECT_EQ(actualCarryingBlue[i], expectedCarryingBlue[i]);
+    for(unsigned int i = 0; i < actualCarryingBlue.size(); i++)
+      EXPECT_EQ(actualCarryingBlue[i], expectedCarryingBlue[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -1215,8 +1210,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToRed.size(), actualMovingToRed.size());
-    for (unsigned int i = 0; i < actualMovingToRed.size(); i++)
-        EXPECT_EQ(actualMovingToRed[i], expectedMovingToRed[i]);
+    for(unsigned int i = 0; i < actualMovingToRed.size(); i++)
+      EXPECT_EQ(actualMovingToRed[i], expectedMovingToRed[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1232,8 +1227,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingRed.size(), actualCarryingRed.size());
-    for (unsigned int i = 0; i < actualCarryingRed.size(); i++)
-        EXPECT_EQ(actualCarryingRed[i], expectedCarryingRed[i]);
+    for(unsigned int i = 0; i < actualCarryingRed.size(); i++)
+      EXPECT_EQ(actualCarryingRed[i], expectedCarryingRed[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -1249,8 +1244,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedReturningToYellow.size(), actualReturningToYellow.size());
-    for (unsigned int i = 0; i < actualReturningToYellow.size(); i++)
-        EXPECT_EQ(actualReturningToYellow[i], expectedReturningToYellow[i]);
+    for(unsigned int i = 0; i < actualReturningToYellow.size(); i++)
+      EXPECT_EQ(actualReturningToYellow[i], expectedReturningToYellow[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1266,8 +1261,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingYellow.size(), actualCarryingYellow.size());
-    for (unsigned int i = 0; i < actualCarryingYellow.size(); i++)
-        EXPECT_EQ(actualCarryingYellow[i], expectedCarryingYellow[i]);
+    for(unsigned int i = 0; i < actualCarryingYellow.size(); i++)
+      EXPECT_EQ(actualCarryingYellow[i], expectedCarryingYellow[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -1283,8 +1278,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingTo11.size(), actualMovingTo11.size());
-    for (unsigned int i = 0; i < actualMovingTo11.size(); i++)
-        EXPECT_EQ(actualMovingTo11[i], expectedMovingTo11[i]);
+    for(unsigned int i = 0; i < actualMovingTo11.size(); i++)
+      EXPECT_EQ(actualMovingTo11[i], expectedMovingTo11[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1300,22 +1295,22 @@ namespace etrobocon2018_test {
   TEST(SelectorTest, searchRouteWhenAllNodeInitialPositionsIsFromCenterQuadirilateralTest)
   {
     Selector obj;
-    std::vector<std::int8_t> blockList{{5, 6, 9, 10}};
+    std::vector<std::int8_t> blockList{ { 5, 6, 9, 10 } };
     // 6->Blue, 10->Red, 5->Yellow, 9->Green
-    std::vector<int> expectedMovingToGreen = {8, 9};
-    std::vector<int> expectedEvacuatingGreen = {9, 13, 12};
-    std::vector<int> expectedMovingToYellow = {13, 9, 5};
-    std::vector<int> expectedCarryingYellow = {5, 9};
-    std::vector<int> expectedMovingToBlue = {5, 6};
-    std::vector<int> expectedMovingToRed = {5, 1, 2, 3, 7, 11, 10};
-    std::vector<int> expectedEvacuatingRed = {10, 14, 15};
-    std::vector<int> expectedReturningToBlue = {14, 10, 6};
-    std::vector<int> expectedCarryingBlue = {6, 10};
-    std::vector<int> expectedReturningToRed = {6, 7, 11, 15};
-    std::vector<int> expectedCarryingRed = {15, 11, 7, 6};
-    std::vector<int> expectedReturningToGreen = {7, 11, 15, 14, 13, 12};
-    std::vector<int> expectedCarryingGreen = {12, 8, 4, 5};
-    std::vector<int> expectedMovingTo11 = {4, 0, 1, 2, 3, 7, 11};
+    std::vector<int> expectedMovingToGreen = { 8, 9 };
+    std::vector<int> expectedEvacuatingGreen = { 9, 13, 12 };
+    std::vector<int> expectedMovingToYellow = { 13, 9, 5 };
+    std::vector<int> expectedCarryingYellow = { 5, 9 };
+    std::vector<int> expectedMovingToBlue = { 5, 6 };
+    std::vector<int> expectedMovingToRed = { 5, 1, 2, 3, 7, 11, 10 };
+    std::vector<int> expectedEvacuatingRed = { 10, 14, 15 };
+    std::vector<int> expectedReturningToBlue = { 14, 10, 6 };
+    std::vector<int> expectedCarryingBlue = { 6, 10 };
+    std::vector<int> expectedReturningToRed = { 6, 7, 11, 15 };
+    std::vector<int> expectedCarryingRed = { 15, 11, 7, 6 };
+    std::vector<int> expectedReturningToGreen = { 7, 11, 15, 14, 13, 12 };
+    std::vector<int> expectedCarryingGreen = { 12, 8, 4, 5 };
+    std::vector<int> expectedMovingTo11 = { 4, 0, 1, 2, 3, 7, 11 };
 
     obj.setBlockPositionList(blockList);
 
@@ -1324,8 +1319,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToGreen.size(), actualMovingToGreen.size());
-    for (unsigned int i = 0; i < actualMovingToGreen.size(); i++)
-        EXPECT_EQ(actualMovingToGreen[i], expectedMovingToGreen[i]);
+    for(unsigned int i = 0; i < actualMovingToGreen.size(); i++)
+      EXPECT_EQ(actualMovingToGreen[i], expectedMovingToGreen[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1341,8 +1336,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedEvacuatingGreen.size(), actualEvacuatingGreen.size());
-    for (unsigned int i = 0; i < actualEvacuatingGreen.size(); i++)
-        EXPECT_EQ(actualEvacuatingGreen[i], expectedEvacuatingGreen[i]);
+    for(unsigned int i = 0; i < actualEvacuatingGreen.size(); i++)
+      EXPECT_EQ(actualEvacuatingGreen[i], expectedEvacuatingGreen[i]);
     ASSERT_TRUE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1358,8 +1353,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToYellow.size(), actualMovingToYellow.size());
-    for (unsigned int i = 0; i < actualMovingToYellow.size(); i++)
-        EXPECT_EQ(actualMovingToYellow[i], expectedMovingToYellow[i]);
+    for(unsigned int i = 0; i < actualMovingToYellow.size(); i++)
+      EXPECT_EQ(actualMovingToYellow[i], expectedMovingToYellow[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1375,8 +1370,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingYellow.size(), actualCarryingYellow.size());
-    for (unsigned int i = 0; i < actualCarryingYellow.size(); i++)
-        EXPECT_EQ(actualCarryingYellow[i], expectedCarryingYellow[i]);
+    for(unsigned int i = 0; i < actualCarryingYellow.size(); i++)
+      EXPECT_EQ(actualCarryingYellow[i], expectedCarryingYellow[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -1392,8 +1387,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToBlue.size(), actualMovingToBlue.size());
-    for (unsigned int i = 0; i < actualMovingToBlue.size(); i++)
-        EXPECT_EQ(actualMovingToBlue[i], expectedMovingToBlue[i]);
+    for(unsigned int i = 0; i < actualMovingToBlue.size(); i++)
+      EXPECT_EQ(actualMovingToBlue[i], expectedMovingToBlue[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1409,8 +1404,8 @@ namespace etrobocon2018_test {
 
     ASSERT_TRUE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingToRed.size(), actualMovingToRed.size());
-    for (unsigned int i = 0; i < actualMovingToRed.size(); i++)
-        EXPECT_EQ(actualMovingToRed[i], expectedMovingToRed[i]);
+    for(unsigned int i = 0; i < actualMovingToRed.size(); i++)
+      EXPECT_EQ(actualMovingToRed[i], expectedMovingToRed[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1426,8 +1421,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedEvacuatingRed.size(), actualEvacuatingRed.size());
-    for (unsigned int i = 0; i < actualEvacuatingRed.size(); i++)
-        EXPECT_EQ(actualEvacuatingRed[i], expectedEvacuatingRed[i]);
+    for(unsigned int i = 0; i < actualEvacuatingRed.size(); i++)
+      EXPECT_EQ(actualEvacuatingRed[i], expectedEvacuatingRed[i]);
     ASSERT_TRUE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1443,8 +1438,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedReturningToBlue.size(), actualReturningToBlue.size());
-    for (unsigned int i = 0; i < actualReturningToBlue.size(); i++)
-        EXPECT_EQ(actualReturningToBlue[i], expectedReturningToBlue[i]);
+    for(unsigned int i = 0; i < actualReturningToBlue.size(); i++)
+      EXPECT_EQ(actualReturningToBlue[i], expectedReturningToBlue[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1460,8 +1455,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingBlue.size(), actualCarryingBlue.size());
-    for (unsigned int i = 0; i < actualCarryingBlue.size(); i++)
-        EXPECT_EQ(actualCarryingBlue[i], expectedCarryingBlue[i]);
+    for(unsigned int i = 0; i < actualCarryingBlue.size(); i++)
+      EXPECT_EQ(actualCarryingBlue[i], expectedCarryingBlue[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -1477,8 +1472,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedReturningToRed.size(), actualReturningToRed.size());
-    for (unsigned int i = 0; i < actualReturningToRed.size(); i++)
-        EXPECT_EQ(actualReturningToRed[i], expectedReturningToRed[i]);
+    for(unsigned int i = 0; i < actualReturningToRed.size(); i++)
+      EXPECT_EQ(actualReturningToRed[i], expectedReturningToRed[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1494,8 +1489,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingRed.size(), actualCarryingRed.size());
-    for (unsigned int i = 0; i < actualCarryingRed.size(); i++)
-        EXPECT_EQ(actualCarryingRed[i], expectedCarryingRed[i]);
+    for(unsigned int i = 0; i < actualCarryingRed.size(); i++)
+      EXPECT_EQ(actualCarryingRed[i], expectedCarryingRed[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -1511,8 +1506,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedReturningToGreen.size(), actualReturningToGreen.size());
-    for (unsigned int i = 0; i < actualReturningToGreen.size(); i++)
-        EXPECT_EQ(actualReturningToGreen[i], expectedReturningToGreen[i]);
+    for(unsigned int i = 0; i < actualReturningToGreen.size(); i++)
+      EXPECT_EQ(actualReturningToGreen[i], expectedReturningToGreen[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
@@ -1528,8 +1523,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedCarryingGreen.size(), actualCarryingGreen.size());
-    for (unsigned int i = 0; i < actualCarryingGreen.size(); i++)
-        EXPECT_EQ(actualCarryingGreen[i], expectedCarryingGreen[i]);
+    for(unsigned int i = 0; i < actualCarryingGreen.size(); i++)
+      EXPECT_EQ(actualCarryingGreen[i], expectedCarryingGreen[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_FALSE(obj.isMovingWithNext());
     ASSERT_TRUE(obj.isCarryingWithNext());
@@ -1545,8 +1540,8 @@ namespace etrobocon2018_test {
 
     ASSERT_FALSE(obj.isBacksteppingBeforeNextOperation());
     ASSERT_EQ(expectedMovingTo11.size(), actualMovingTo11.size());
-    for (unsigned int i = 0; i < actualMovingTo11.size(); i++)
-        EXPECT_EQ(actualMovingTo11[i], expectedMovingTo11[i]);
+    for(unsigned int i = 0; i < actualMovingTo11.size(); i++)
+      EXPECT_EQ(actualMovingTo11[i], expectedMovingTo11[i]);
     ASSERT_FALSE(obj.isEvacuatingWithNext());
     ASSERT_TRUE(obj.isMovingWithNext());
     ASSERT_FALSE(obj.isCarryingWithNext());
