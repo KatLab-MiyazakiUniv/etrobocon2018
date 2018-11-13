@@ -90,7 +90,6 @@ class Distinguisher {
   const Hsv WHITE{ Color::WHITE, 86, 41, 53, 400, 40, 80 };
   const Hsv BLACK{ Color::BLACK, 80, 42, 6, 400, 0, 20 };
   const Hsv GREY{ Color::BLACK, 83, 15, 20, 400, 10, 30 };
-
 };
 
 #endif

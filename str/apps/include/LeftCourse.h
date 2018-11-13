@@ -9,12 +9,12 @@
 
 #define IS_SHORT_CUT 0
 
+#include "AIAnswer.h"
 #include "BasicWalker.h"
 #include "Controller.h"
 #include "LeftNormalCourse.h"
 #include "Parking.h"
 #include "Walker.h"
-#include "AIAnswer.h"
 
 /**
  * Lコースを走らせるときに呼び出されるクラス
@@ -23,11 +23,7 @@ class LeftCourse {
  public:
   /** コンストラクタ。センサ類の初期化を行う */
   LeftCourse() = default;
-  explicit LeftCourse(Controller& controller_)
-    : walker(controller_),
-      controller(controller_)
-  {
-  }
+  explicit LeftCourse(Controller& controller_) : walker(controller_), controller(controller_) {}
 
   /**
    * このクラスのインスタンスを保持しているインスタンスまたはメンバ関数が、
@@ -53,7 +49,8 @@ class LeftCourse {
    */
   void runParking(int16_t brightness, int16_t black, int16_t white, int16_t gray);
 
-  void solveAiAnser();
+  void aiAnswerGo(std::int16_t brightness, std::int16_t black, std::int16_t white,
+                  std::int16_t gray);
 
   void runGoBlack();
 
@@ -66,6 +63,7 @@ class LeftCourse {
   LineTracerWalker lineTracer;
   BasicWalker basic{ controller };
   MotorAngle motor_angle;
+  // AIAnswer ai_answer;
   // BasicWalker basicWalker;
   // Motor motor;
   // GyroSensor gyro_sensor;

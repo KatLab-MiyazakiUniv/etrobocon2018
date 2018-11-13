@@ -15,58 +15,24 @@ void LeftCourse::setFirstCode(int32_t code)
  */
 void LeftCourse::run(int16_t brightness, int16_t black, int16_t white, int16_t gray)
 {
-  runNormalCourse(brightness);
+  // runNormalCourse(brightness);
 
   controller.printDisplay(3, "Finished NormalArea");
 
+  aiAnswerGo(brightness, black, white, gray);
   // Puzzle
   // runBlockRange();
   // controller.printDisplay(3, "Finished Puzzle");
   target_brightness = brightness;
   // Park
-  solveAiAnser();
+  // solveAiAnser();
   runParking(brightness, black, white, gray);
-  // runGoStraight();
 }
 
-void LeftCourse::solveAiAnser()
+void LeftCourse::aiAnswerGo(int16_t brightness, int16_t black, int16_t white, int16_t gray)
 {
-  controller.printDisplay(3, "aiAnswer Start!!");
-  controller.speakerPlayTone(controller.noteFs4, 200);
-  walker.run(30, 0);
-  controller.speakerPlayTone(controller.noteFs4, 200);
-  controller.tslpTsk(2200);
-  controller.speakerPlayTone(controller.noteFs4, 200);
-  // その場に止まる
-  walker.reset();
-  controller.speakerPlayTone(controller.noteFs4, 200);
-  // 反時計回りに90°回転
-  walker.angleChange(90, 1);
-  controller.speakerPlayTone(controller.noteFs4, 200);
-  walker.run(30, 0);
-  controller.tslpTsk(400);
-  //  walker.run(0, 0);
-  controller.printDisplay(3, "aiAnswer1 Finished");
-  // ここから黒線探しの旅
-  while(1) {
-    // 現在の色取得
-    int16_t luminance = controller.getBrightness();
-    // 黒検知
-    if(luminance <= 11) {
-      runGoBlack();
-      // lineTracer.speedControl.setPid(5.0, 1.0, 0.1, 90.0);
-      // lineTracer.turnControl.setPid(2.0, 1.0, 0.14, target_brightness);
-      break;
-      // それ以外
-    } else {
-      walker.run(10, 0);
-    }
-    if(controller.buttonIsPressedBack()) {
-      walker.reset();
-      break;
-    }
-    controller.tslpTsk(4);
-  }  // whileのおわり
+  AIAnswer ai_answer{ controller, walker, white, black, gray, brightness };
+  ai_answer.run();
 }
 
 // 黒線上を走る

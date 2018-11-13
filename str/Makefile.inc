@@ -21,6 +21,7 @@ LPF.o \
 MotorAngle.o \
 WheelOdometry.o \
 Navigator.o \
+AIAnswerBlock.o \
 FirstCode.o
 
 ifeq ($(side),right)

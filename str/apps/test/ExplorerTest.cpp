@@ -21,39 +21,24 @@ namespace etrobocon2018_test {
   TEST(ExplorerTest, getValueOfBlockAreaNodeListTest)
   {
     Explorer obj;
-    std::vector<Node> expectedList = {
-        Node{}, Node{1}, Node{2}, Node{3},
-        Node{4}, Node{5}, Node{6}, Node{7},
-        Node{8}, Node{9}, Node{10}, Node{11},
-        Node{12}, Node{13}, Node{14}, Node{15}};
-    std::vector<std::vector<int>> expectedPositionList = {
-        {0, 0},
-        {1, 0},
-        {2, 0},
-        {3, 0},
+    std::vector<Node> expectedList
+        = { Node{},     Node{ 1 },  Node{ 2 },  Node{ 3 }, Node{ 4 },  Node{ 5 },
+            Node{ 6 },  Node{ 7 },  Node{ 8 },  Node{ 9 }, Node{ 10 }, Node{ 11 },
+            Node{ 12 }, Node{ 13 }, Node{ 14 }, Node{ 15 } };
+    std::vector<std::vector<int>> expectedPositionList = { { 0, 0 }, { 1, 0 }, { 2, 0 }, { 3, 0 },
 
-        {0, 1},
-        {1, 1},
-        {2, 1},
-        {3, 1},
+                                                           { 0, 1 }, { 1, 1 }, { 2, 1 }, { 3, 1 },
 
-        {0, 2},
-        {1, 2},
-        {2, 2},
-        {3, 2},
+                                                           { 0, 2 }, { 1, 2 }, { 2, 2 }, { 3, 2 },
 
-        {0, 3},
-        {1, 3},
-        {2, 3},
-        {3, 3}};
+                                                           { 0, 3 }, { 1, 3 }, { 2, 3 }, { 3, 3 } };
 
     obj.createBlockArea();
     auto actual = obj.getBlockAreaNodeList();
 
     ASSERT_EQ(expectedList.size(), actual->size());
 
-    for (unsigned int i = 0; i < expectedList.size(); i++)
-    {
+    for(unsigned int i = 0; i < expectedList.size(); i++) {
       ASSERT_EQ(expectedList[i].getNodeID(), actual->at(i)->getNodeID());
       ASSERT_EQ(expectedPositionList[i][0], actual->at(i)->getPositionX());
       ASSERT_EQ(expectedPositionList[i][1], actual->at(i)->getPositionY());
@@ -78,13 +63,12 @@ namespace etrobocon2018_test {
   {
     Explorer obj;
     unsigned long int expectedSize = 2;
-    std::vector<int> expectedList = {0, 1};
+    std::vector<int> expectedList = { 0, 1 };
 
     obj.createBlockArea();
     auto actual = obj.searchRoute(0, 1);
 
-    for (unsigned int i = 0; i < expectedSize; i++)
-    {
+    for(unsigned int i = 0; i < expectedSize; i++) {
       EXPECT_EQ(obj.getBlockAreaNodeList()->at(actual[i])->getNodeID(), expectedList[i]);
     }
 
@@ -96,13 +80,12 @@ namespace etrobocon2018_test {
   {
     Explorer obj;
     unsigned long int expectedSize = 2;
-    std::vector<int> expectedList = {1, 0};
+    std::vector<int> expectedList = { 1, 0 };
 
     obj.createBlockArea();
     auto actual = obj.searchRoute(1, 0);
 
-    for (unsigned int i = 0; i < expectedSize; i++)
-    {
+    for(unsigned int i = 0; i < expectedSize; i++) {
       EXPECT_EQ(obj.getBlockAreaNodeList()->at(actual[i])->getNodeID(), expectedList[i]);
     }
 
@@ -114,13 +97,12 @@ namespace etrobocon2018_test {
   {
     Explorer obj;
     unsigned long int expectedSize = 2;
-    std::vector<int> expectedList = {8, 9};
+    std::vector<int> expectedList = { 8, 9 };
 
     obj.createBlockArea();
     auto actual = obj.searchRoute(8, 9);
 
-    for (unsigned int i = 0; i < expectedSize; i++)
-    {
+    for(unsigned int i = 0; i < expectedSize; i++) {
       EXPECT_EQ(obj.getBlockAreaNodeList()->at(actual[i])->getNodeID(), expectedList[i]);
     }
 
@@ -132,13 +114,12 @@ namespace etrobocon2018_test {
   {
     Explorer obj;
     unsigned long int expectedSize = 2;
-    std::vector<int> expectedList = {11, 10};
+    std::vector<int> expectedList = { 11, 10 };
 
     obj.createBlockArea();
     auto actual = obj.searchRoute(11, 10);
 
-    for (unsigned int i = 0; i < expectedSize; i++)
-    {
+    for(unsigned int i = 0; i < expectedSize; i++) {
       EXPECT_EQ(obj.getBlockAreaNodeList()->at(actual[i])->getNodeID(), expectedList[i]);
     }
 
@@ -150,13 +131,12 @@ namespace etrobocon2018_test {
   {
     Explorer obj;
     unsigned long int expectedSize = 3;
-    std::vector<int> expectedList = {0, 1, 2};
+    std::vector<int> expectedList = { 0, 1, 2 };
 
     obj.createBlockArea();
     auto actual = obj.searchRoute(0, 2);
 
-    for (unsigned int i = 0; i < expectedSize; i++)
-    {
+    for(unsigned int i = 0; i < expectedSize; i++) {
       EXPECT_EQ(obj.getBlockAreaNodeList()->at(actual[i])->getNodeID(), expectedList[i]);
     }
 
@@ -168,13 +148,12 @@ namespace etrobocon2018_test {
   {
     Explorer obj;
     unsigned long int expectedSize = 3;
-    std::vector<int> expectedList = {2, 1, 0};
+    std::vector<int> expectedList = { 2, 1, 0 };
 
     obj.createBlockArea();
     auto actual = obj.searchRoute(2, 0);
 
-    for (unsigned int i = 0; i < expectedSize; i++)
-    {
+    for(unsigned int i = 0; i < expectedSize; i++) {
       EXPECT_EQ(obj.getBlockAreaNodeList()->at(actual[i])->getNodeID(), expectedList[i]);
     }
 
@@ -186,13 +165,12 @@ namespace etrobocon2018_test {
   {
     Explorer obj;
     unsigned long int expectedSize = 4;
-    std::vector<int> expectedList = {11, 10, 9, 5};
+    std::vector<int> expectedList = { 11, 10, 9, 5 };
 
     obj.createBlockArea();
     auto actual = obj.searchRoute(11, 5);
 
-    for (unsigned int i = 0; i < expectedSize; i++)
-    {
+    for(unsigned int i = 0; i < expectedSize; i++) {
       EXPECT_EQ(obj.getBlockAreaNodeList()->at(actual[i])->getNodeID(), expectedList[i]);
     }
 
@@ -204,14 +182,13 @@ namespace etrobocon2018_test {
   {
     Explorer obj;
     unsigned long int expectedSize = 4;
-    std::vector<int> expectedList = {11, 10, 9, 5};
+    std::vector<int> expectedList = { 11, 10, 9, 5 };
 
     obj.createBlockArea();
     obj.getBlockAreaNodeList()->at(6)->setHasBlock(true);
     auto actual = obj.searchRoute(11, 5);
 
-    for (unsigned int i = 0; i < expectedSize; i++)
-    {
+    for(unsigned int i = 0; i < expectedSize; i++) {
       EXPECT_EQ(obj.getBlockAreaNodeList()->at(actual[i])->getNodeID(), expectedList[i]);
     }
 
@@ -222,15 +199,14 @@ namespace etrobocon2018_test {
   TEST(ExplorerTest, searchRouteFrom11To5Circumventing6And10Test)
   {
     Explorer obj;
-    std::vector<int> expected = {11, 15, 14, 13, 9, 5};
+    std::vector<int> expected = { 11, 15, 14, 13, 9, 5 };
 
     obj.createBlockArea();
     obj.getBlockAreaNodeList()->at(6)->setHasBlock(true);
     obj.getBlockAreaNodeList()->at(10)->setHasBlock(true);
     auto actual = obj.searchRoute(11, 5);
 
-    for (unsigned int i = 0; i < expected.size(); i++)
-    {
+    for(unsigned int i = 0; i < expected.size(); i++) {
       EXPECT_EQ(obj.getBlockAreaNodeList()->at(actual[i])->getNodeID(), expected[i]);
     }
 
@@ -241,7 +217,7 @@ namespace etrobocon2018_test {
   TEST(ExplorerTest, searchRouteFrom13To6Circumventing10Test)
   {
     Explorer obj;
-    std::vector<int> expected = {13, 9, 5, 6};
+    std::vector<int> expected = { 13, 9, 5, 6 };
 
     obj.createBlockArea();
     obj.getBlockAreaNodeList()->at(6)->setHasBlock(true);
@@ -250,8 +226,7 @@ namespace etrobocon2018_test {
     obj.getBlockAreaNodeList()->at(11)->setHasBlock(true);
     auto actual = obj.searchRoute(13, 6);
 
-    for (unsigned int i = 0; i < expected.size(); i++)
-    {
+    for(unsigned int i = 0; i < expected.size(); i++) {
       EXPECT_EQ(obj.getBlockAreaNodeList()->at(actual[i])->getNodeID(), expected[i]);
     }
 
@@ -262,7 +237,7 @@ namespace etrobocon2018_test {
   TEST(ExplorerTest, searchRouteFrom11To5Circumventing6And9And10Test)
   {
     Explorer obj;
-    std::vector<int> expected = {11, 7, 3, 2, 1, 5};
+    std::vector<int> expected = { 11, 7, 3, 2, 1, 5 };
 
     obj.createBlockArea();
     obj.getBlockAreaNodeList()->at(6)->setHasBlock(true);
@@ -270,8 +245,7 @@ namespace etrobocon2018_test {
     obj.getBlockAreaNodeList()->at(10)->setHasBlock(true);
     auto actual = obj.searchRoute(11, 5);
 
-    for (unsigned int i = 0; i < expected.size(); i++)
-    {
+    for(unsigned int i = 0; i < expected.size(); i++) {
       EXPECT_EQ(obj.getBlockAreaNodeList()->at(actual[i])->getNodeID(), expected[i]);
     }
 
@@ -283,14 +257,14 @@ namespace etrobocon2018_test {
   {
     Explorer obj;
     // 8->Blue, 9->Red, 11->Yellow, 15->Green
-    std::vector<int> expectedCartingBlue = {8, 12, 13, 14, 10};
-    std::vector<int> expectedMovingToRed = {14, 13, 9};
-    std::vector<int> expectedCartingRed = {9, 5, 6};
-    std::vector<int> expectedMovingToYellow = {5, 1, 2, 3, 7, 11};
-    std::vector<int> expectedCartingYellow = {11, 7, 3, 2, 1, 5, 9};
-    std::vector<int> expectedMovingToGreen = {5, 4, 8, 12, 13, 14, 15};
-    std::vector<int> expectedCartingGreen = {15, 14, 13, 12, 8, 4, 5};
-    std::vector<int> expectedMovingTo11 = {4, 0, 1, 2, 3, 7, 11};
+    std::vector<int> expectedCartingBlue = { 8, 12, 13, 14, 10 };
+    std::vector<int> expectedMovingToRed = { 14, 13, 9 };
+    std::vector<int> expectedCartingRed = { 9, 5, 6 };
+    std::vector<int> expectedMovingToYellow = { 5, 1, 2, 3, 7, 11 };
+    std::vector<int> expectedCartingYellow = { 11, 7, 3, 2, 1, 5, 9 };
+    std::vector<int> expectedMovingToGreen = { 5, 4, 8, 12, 13, 14, 15 };
+    std::vector<int> expectedCartingGreen = { 15, 14, 13, 12, 8, 4, 5 };
+    std::vector<int> expectedMovingTo11 = { 4, 0, 1, 2, 3, 7, 11 };
 
     obj.createBlockArea();
     obj.resetBlockArea();
@@ -302,9 +276,9 @@ namespace etrobocon2018_test {
     // Blue 8->10
     auto actualCartingBlue = obj.searchRoute(8, 10);
 
-    for (unsigned int i = 0; i < expectedCartingBlue.size(); i++)
-    {
-      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualCartingBlue[i])->getNodeID(), expectedCartingBlue[i]);
+    for(unsigned int i = 0; i < expectedCartingBlue.size(); i++) {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualCartingBlue[i])->getNodeID(),
+                expectedCartingBlue[i]);
     }
     EXPECT_EQ(expectedCartingBlue.size(), actualCartingBlue.size());
 
@@ -316,9 +290,9 @@ namespace etrobocon2018_test {
 
     // 14->9
     auto actualMovingToRed = obj.searchRoute(14, 9);
-    for (unsigned int i = 0; i < expectedMovingToRed.size(); i++)
-    {
-      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualMovingToRed[i])->getNodeID(), expectedMovingToRed[i]);
+    for(unsigned int i = 0; i < expectedMovingToRed.size(); i++) {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualMovingToRed[i])->getNodeID(),
+                expectedMovingToRed[i]);
     }
     EXPECT_EQ(expectedMovingToRed.size(), actualMovingToRed.size());
 
@@ -330,9 +304,9 @@ namespace etrobocon2018_test {
 
     // Red 9->6
     auto actualCartingRed = obj.searchRoute(9, 6);
-    for (unsigned int i = 0; i < expectedCartingRed.size(); i++)
-    {
-      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualCartingRed[i])->getNodeID(), expectedCartingRed[i]);
+    for(unsigned int i = 0; i < expectedCartingRed.size(); i++) {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualCartingRed[i])->getNodeID(),
+                expectedCartingRed[i]);
     }
     EXPECT_EQ(expectedCartingRed.size(), actualCartingRed.size());
 
@@ -344,9 +318,9 @@ namespace etrobocon2018_test {
 
     // 5->11
     auto actualMovingToYellow = obj.searchRoute(5, 11);
-    for (unsigned int i = 0; i < expectedMovingToYellow.size(); i++)
-    {
-      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualMovingToYellow[i])->getNodeID(), expectedMovingToYellow[i]);
+    for(unsigned int i = 0; i < expectedMovingToYellow.size(); i++) {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualMovingToYellow[i])->getNodeID(),
+                expectedMovingToYellow[i]);
     }
     EXPECT_EQ(expectedMovingToYellow.size(), actualMovingToYellow.size());
 
@@ -358,9 +332,9 @@ namespace etrobocon2018_test {
 
     // Yellow 11->9
     auto actualCartingYellow = obj.searchRoute(11, 9);
-    for (unsigned int i = 0; i < expectedCartingYellow.size(); i++)
-    {
-      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualCartingYellow[i])->getNodeID(), expectedCartingYellow[i]);
+    for(unsigned int i = 0; i < expectedCartingYellow.size(); i++) {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualCartingYellow[i])->getNodeID(),
+                expectedCartingYellow[i]);
     }
     EXPECT_EQ(expectedCartingYellow.size(), actualCartingYellow.size());
 
@@ -372,9 +346,9 @@ namespace etrobocon2018_test {
 
     // 5->15
     auto actualMovingToGreen = obj.searchRoute(5, 15);
-    for (unsigned int i = 0; i < expectedMovingToGreen.size(); i++)
-    {
-      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualMovingToGreen[i])->getNodeID(), expectedMovingToGreen[i]);
+    for(unsigned int i = 0; i < expectedMovingToGreen.size(); i++) {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualMovingToGreen[i])->getNodeID(),
+                expectedMovingToGreen[i]);
     }
     EXPECT_EQ(expectedMovingToGreen.size(), actualMovingToGreen.size());
 
@@ -386,9 +360,9 @@ namespace etrobocon2018_test {
 
     // Green 15->5
     auto actualCartingGreen = obj.searchRoute(15, 5);
-    for (unsigned int i = 0; i < expectedCartingGreen.size(); i++)
-    {
-      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualCartingGreen[i])->getNodeID(), expectedCartingGreen[i]);
+    for(unsigned int i = 0; i < expectedCartingGreen.size(); i++) {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualCartingGreen[i])->getNodeID(),
+                expectedCartingGreen[i]);
     }
     EXPECT_EQ(expectedCartingYellow.size(), actualCartingGreen.size());
 
@@ -400,9 +374,9 @@ namespace etrobocon2018_test {
 
     // 4->11
     auto actualMovingTo11 = obj.searchRoute(4, 11);
-    for (unsigned int i = 0; i < expectedMovingTo11.size(); i++)
-    {
-      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualMovingTo11[i])->getNodeID(), expectedMovingTo11[i]);
+    for(unsigned int i = 0; i < expectedMovingTo11.size(); i++) {
+      EXPECT_EQ(obj.getBlockAreaNodeList()->at(actualMovingTo11[i])->getNodeID(),
+                expectedMovingTo11[i]);
     }
     EXPECT_EQ(expectedMovingTo11.size(), actualMovingTo11.size());
   }
