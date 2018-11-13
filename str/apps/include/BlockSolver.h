@@ -19,15 +19,16 @@
 class BlockSolver {
  public:
   BlockSolver() = default;
-  explicit BlockSolver(Controller& controller_, Walker& walker_, const std::int32_t& ipc,
+  explicit BlockSolver(Controller& controller_, Walker& walker_, std::int32_t ipc_,
                        const std::int16_t& targetBrightness_)
     : controller(controller_),
       walker(walker_),
       distinguisher(controller_),
       lifter(controller_),
       navigator(controller_, walker_),
-      blockStrategy(ipc),
-      targetBrightness(targetBrightness_)
+      blockStrategy(ipc_),
+      targetBrightness(targetBrightness_),
+      ipc(ipc_)
   {
   }
 
@@ -68,7 +69,6 @@ class BlockSolver {
  private:
   Controller controller;
   Walker walker;
-  Selector selector;
   Distinguisher distinguisher;
   Lifter lifter;
   Navigator navigator;
@@ -77,7 +77,7 @@ class BlockSolver {
   BlockSideBySide::BlockStrategy blockStrategy;
   std::int16_t targetBrightness;
   std::int8_t nowPlace = 8;
-
+  std::int32_t ipc;
   Color convertColor(const BlockSideBySide::GameColor& gameColor);
 };
 

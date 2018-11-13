@@ -1,11 +1,12 @@
 #ifndef __CONTROLLER__
 #define __CONTROLLER__
 
+#include "ev3api.h"
+
 #include "Clock.h"
 #include "ColorSensor.h"
 #include "Motor.h"
 #include "TouchSensor.h"
-#include "ev3api.h"
 #include <stdarg.h>
 
 /*

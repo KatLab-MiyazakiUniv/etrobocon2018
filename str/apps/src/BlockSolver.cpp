@@ -50,8 +50,13 @@ void BlockSolver::run()
   // 最初の8番までのライントレース
   navigator.moveOnLine(500, targetBrightness, 55);
   moveOnLineToColor(45, targetBrightness - 10, Color::RED, false);
-  Selector::BlockColor b_color = Selector::Undefined;
+  Selector selector;
 
+  InitialPositionCodeDecoder ipcd;
+  ipcd.decode(354721);
+  selector.setBlockPositionList(ipcd.getInitialPositionCodeList());
+
+  Selector::BlockColor b_color = Selector::Undefined;
   while(!selector.isAlreadyAllBlockMoved()) {
     auto route = selector.exploreNextOperation(nowPlace, b_color);
 
