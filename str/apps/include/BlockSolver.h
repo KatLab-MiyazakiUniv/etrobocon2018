@@ -11,6 +11,7 @@
 #include "Distinguisher.h"
 #include "Lifter.h"
 #include "Navigator.h"
+#include "Selector.h"
 #include "Walker.h"
 #include <cstdint>
 #include <vector>
@@ -18,23 +19,27 @@
 class BlockSolver {
  public:
   BlockSolver() = default;
-  explicit BlockSolver(Controller& controller_, Walker& walker_, const std::int32_t& ipc,
+  explicit BlockSolver(Controller& controller_, Walker& walker_, std::int32_t ipc_,
                        const std::int16_t& targetBrightness_)
     : controller(controller_),
       walker(walker_),
       distinguisher(controller_),
       lifter(controller_),
       navigator(controller_, walker_),
-      blockStrategy(ipc),
-      targetBrightness(targetBrightness_)
+      blockStrategy(ipc_),
+      targetBrightness(targetBrightness_),
+      ipc(ipc_)
   {
   }
+
+  //! デモです。アリアに従って移動します。
+  void demo();
 
   //! ブロック並べを攻略します。
   void run();
 
   //! ルートを移動します。
-  void moveRoute(std::vector<int8_t> route);
+  void moveRoute(std::vector<int>& route);
 
   //! ブロックの色を取得し、blockColorに格納します。
   void getBlockColor();
@@ -58,6 +63,9 @@ class BlockSolver {
   //! 次に向かうべき方角を切り替えます。
   BlockSideBySide::Direction getChangeDirection(std::int8_t angle);
 
+  Selector::BlockColor convertSelectorColor(const Color& gameColor);
+  void spinParkingArea();
+
  private:
   Controller controller;
   Walker walker;
@@ -69,6 +77,7 @@ class BlockSolver {
   BlockSideBySide::BlockStrategy blockStrategy;
   std::int16_t targetBrightness;
   std::int8_t nowPlace = 8;
+  std::int32_t ipc;
   Color convertColor(const BlockSideBySide::GameColor& gameColor);
 };
 

@@ -90,7 +90,7 @@
  *     std::int8_t currentPosition;
  *     Selector::BlockColor color;
  *
- *     while (selector.isAlreadyAllBlockMoved())
+ *     while (!selector.isAlreadyAllBlockMoved())
  *     {
  *       currentPosition = this->getCurrent();
  *       color = this->getColor();

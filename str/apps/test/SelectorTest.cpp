@@ -24,7 +24,8 @@ namespace etrobocon2018_test {
   {
     Selector obj;
     std::vector<int> expected{ { 11, 7, 3, 2, 1, 5 } };
-    std::vector<std::int8_t> nodeHadBlockList{ { 6, 9, 10 } };
+    std::vector<std::int8_t> nodeHadBlockList{{6, 9, 10}};
+
 
     obj.prepareSearching(nodeHadBlockList);
     auto actual = obj.searchRoute(11, 5);

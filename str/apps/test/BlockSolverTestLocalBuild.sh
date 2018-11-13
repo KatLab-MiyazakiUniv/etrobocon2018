@@ -17,6 +17,9 @@ g++-8 -g BlockSolverTest.cpp \
     ../src/WheelOdometry.cpp  ../src/BlockArea.cpp ./MockController.cpp \
     ../src/Walker.cpp \
     ../src/MotorAngle.cpp \
+    ../src/Selector.cpp \
+    ../src/Explorer.cpp \
+    ../src/Node.cpp \
     gtest_main.o gtest-all.o -I../include -I/Users/Futa/googletest/googletest/include
 
 cd ../../

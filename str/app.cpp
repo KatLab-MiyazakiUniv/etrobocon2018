@@ -5,6 +5,7 @@
  *
  * 注記 : Bluetooth通信リモートスタート機能付き
  */
+
 #include "ev3api.h"
 
 #include "Controller.h"
@@ -39,7 +40,6 @@ void main_task(intptr_t unused)
   assert(g_bluetooth != NULL);
 
   /* Bluetooth通信タスクの起動 */
-  act_tsk(BT_TASK);
   Controller controller;
   controller.printDisplay(1, "ET-Robocon2018");
   controller.printDisplay(2, " create from github.com/korosuke613/etrobocon2018");
@@ -47,7 +47,6 @@ void main_task(intptr_t unused)
   EtRobocon2018 etrobocon;
   etrobocon.start(g_bluetooth_command);
 
-  ter_tsk(BT_TASK);
   fclose(g_bluetooth);
 
   ext_tsk();
@@ -62,8 +61,9 @@ void main_task(intptr_t unused)
  */
 void bt_task(intptr_t unused)
 {
+  /*
   while(1) {
-    uint8_t c = fgetc(g_bluetooth); /* 受信 */
+    uint8_t c = fgetc(g_bluetooth); // 受信
     switch(c) {
       case '1':
         g_bluetooth_command = 1;
@@ -71,8 +71,8 @@ void bt_task(intptr_t unused)
       default:
         break;
     }
-    fputc(c, g_bluetooth); /* エコーバック */
-  }
+    fputc(c, g_bluetooth); /* エコーバック
+  }*/
 }
 rgb_raw_t rgb;
 void sensor_log_task(intptr_t unused)

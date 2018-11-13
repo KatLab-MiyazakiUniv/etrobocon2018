@@ -42,8 +42,7 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
 
     count++;
 
-    if(count > 950) {
-      waitThreeTimes();
+    if(count > 450) {
       break;
     }
     controller.tslpTsk(4);
@@ -51,7 +50,7 @@ void Parking::runParpendicular(int16_t target_brightness, LineTracerWalker lineT
 
   basicWalker.setPidWithoutTarget(5.0, 0.8, 0.2);
   basicWalker.reset();
-  basicWalker.goStraight(30, 380);
+  basicWalker.goStraight(30, 450);
   waitThreeTimes();
 }
 

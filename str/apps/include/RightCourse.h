@@ -10,7 +10,6 @@
 #include "BlockSolver.h"
 #include "Controller.h"
 #include "Distinguisher.h"
-#include "Explorer.h"
 #include "Parking.h"
 #include "RightNormalCourse.h"
 #include "Walker.h"
@@ -43,7 +42,6 @@ class RightCourse {
   LineTracerWalker lineTracer;
   Walker walker;
   Controller controller;
-  Explorer explorer;
   std::int32_t initialPositionCode;
 };
 
